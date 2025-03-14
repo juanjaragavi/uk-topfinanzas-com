@@ -183,7 +183,7 @@ export function Footer() {
         </div>
 
         {/* Disclaimer with updated styling */}
-        <div className="text-center text-sm leading-relaxed max-w-4xl mx-auto mb-8 bg-[#274890]/50 p-4 rounded-lg">
+        <div className="text-jusfity text-sm leading-relaxed max-w-4xl mx-auto mb-8 bg-[#274890]/50 p-4 rounded-lg">
           <p className="text-white/90">
             <span className="font-semibold text-[#7BDC54]">Disclaimer:</span>{" "}
             TopFinanzas strives to keep its information accurate and up to date.
@@ -199,18 +199,19 @@ export function Footer() {
         {/* Bottom Copyright */}
         <div className="text-center text-xs border-t border-white/20 pt-4">
           <p className="text-white/80">
-            A TOP NETWORKS INC. Product |
+            A TOP NETWORKS INC. Product &nbsp; | &nbsp;
             <Link href="/terms" className="text-[#55B9FF] hover:underline mx-2">
               Terms & Conditions
             </Link>{" "}
-            |
+            | &nbsp;
             <Link
               href="/privacy-policy"
               className="text-[#55B9FF] hover:underline mx-2"
             >
               Privacy Policy
             </Link>{" "}
-            | Copyright Top Networks Inc. 2025
+            <span className="block w-full py-2"></span>&nbsp; &copy; Copyright Top
+            Networks Inc. 2025
           </p>
         </div>
       </div>
