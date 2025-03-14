@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { motion } from "framer-motion"
-import Image from "next/image"
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface AnimatedImageProps {
-  src: string
-  alt: string
-  width: number
-  height: number
-  className?: string
-  delay?: number
-  duration?: number
-  once?: boolean
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  className?: string;
+  delay?: number;
+  duration?: number;
+  once?: boolean;
 }
 
 export const AnimatedImage: React.FC<AnimatedImageProps> = ({
@@ -34,7 +34,13 @@ export const AnimatedImage: React.FC<AnimatedImageProps> = ({
       transition={{ duration, delay }}
       className={`rounded-xl shadow-lg p-0 m-0 ${className}`}
     >
-      <Image src={src || "/placeholder.svg"} alt={alt} width={width} height={height} className="w-full h-auto rounded-xl" />
+      <Image
+        src={src || "/placeholder.svg"}
+        alt={alt}
+        width={width}
+        height={height}
+        className="w-full h-auto rounded-xl m-0 p-0"
+      />
     </motion.div>
-  )
-}
+  );
+};
