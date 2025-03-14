@@ -35,7 +35,7 @@ export default function Home() {
 
             <div className="flex justify-center">
               <AnimatedImage
-                src="/placeholder.svg?height=400&width=500"
+                src="https://media.topfinanzas.com/images/generated/1741904486433/sample_0.jpg"
                 alt="Credit Card Recommendation"
                 width={500}
                 height={400}

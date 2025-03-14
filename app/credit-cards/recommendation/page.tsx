@@ -46,7 +46,7 @@ export default function CreditCardRecommendation() {
             <div className="bg-gray-50 p-8 rounded-lg shadow-sm mb-8">
               <div className="flex flex-col md:flex-row gap-8 items-center">
                 <AnimatedImage
-                  src="/placeholder.svg?height=200&width=320"
+                  src="https://media.topfinanzas.com/images/generated/1741659352997/sample_0.jpg"
                   alt="Citi Double Cash Credit Card"
                   width={320}
                   height={200}

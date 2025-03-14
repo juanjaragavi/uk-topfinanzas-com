@@ -57,7 +57,7 @@ export default function CitiDoubleCashCard() {
 
             <div className="flex justify-center">
               <AnimatedImage
-                src="/placeholder.svg?height=300&width=480"
+                src="https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg"
                 alt="Citi Double Cash Credit Card"
                 width={480}
                 height={300}
@@ -203,7 +203,7 @@ export default function CitiDoubleCashCard() {
 
               <div>
                 <AnimatedImage
-                  src="/placeholder.svg?height=300&width=400"
+                  src="https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg"
                   alt="Credit Card Requirements"
                   width={400}
                   height={300}

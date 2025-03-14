@@ -109,7 +109,7 @@ export default function CreditCards() {
               <div className="bg-white p-6 rounded-lg shadow-md mb-6">
                 <div className="flex flex-col md:flex-row gap-6">
                   <AnimatedImage
-                    src="/placeholder.svg?height=200&width=320"
+                    src="https://media.topfinanzas.com/images/generated/1741732471632/sample_0.jpg"
                     alt="Credit Card"
                     width={320}
                     height={200}

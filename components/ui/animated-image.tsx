@@ -32,10 +32,9 @@ export const AnimatedImage: React.FC<AnimatedImageProps> = ({
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once }}
       transition={{ duration, delay }}
-      className={className}
+      className={`rounded-xl shadow-md ${className}`}
     >
       <Image src={src || "/placeholder.svg"} alt={alt} width={width} height={height} className="w-full h-auto" />
     </motion.div>
   )
 }
-
