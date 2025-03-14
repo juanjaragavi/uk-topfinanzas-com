@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { motion } from "framer-motion"
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 export const CreditCardApplicationForm = () => {
-  const [currentStep, setCurrentStep] = useState(1)
+  const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -21,35 +21,41 @@ export const CreditCardApplicationForm = () => {
     employmentStatus: "",
     annualIncome: "",
     cardType: "citi-double-cash",
-  })
+  });
 
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const nextStep = () => {
-    setCurrentStep((prev) => prev + 1)
-    window.scrollTo(0, 0)
-  }
+    setCurrentStep((prev) => prev + 1);
+    window.scrollTo(0, 0);
+  };
 
   const prevStep = () => {
-    setCurrentStep((prev) => prev - 1)
-    window.scrollTo(0, 0)
-  }
+    setCurrentStep((prev) => prev - 1);
+    window.scrollTo(0, 0);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // In a real application, you would submit the form data to your backend here
-    console.log("Form submitted:", formData)
-    setIsSubmitted(true)
-  }
+    console.log("Form submitted:", formData);
+    setIsSubmitted(true);
+  };
 
   if (isSubmitted) {
     return (
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="bg-white p-8 rounded-lg shadow-md">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="bg-white p-8 rounded-lg shadow-md"
+      >
         <div className="text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6">
             <svg
@@ -59,23 +65,34 @@ export const CreditCardApplicationForm = () => {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+              />
             </svg>
           </div>
 
-          <h2 className="text-2xl font-bold text-secondary mb-4">Application Submitted!</h2>
+          <h2 className="text-2xl font-bold text-secondary mb-4">
+            Application Submitted!
+          </h2>
 
           <p className="text-gray-600 mb-6">
-            Thank you for your application. We've received your information and will process it shortly. You'll receive
-            an email confirmation at {formData.email} with further instructions.
+            Thank you for your application. We've received your information and
+            will process it shortly. You'll receive an email confirmation at{" "}
+            {formData.email} with further instructions.
           </p>
 
           <p className="text-gray-600">
-            Application Reference: <span className="font-medium">CC-{Math.floor(Math.random() * 1000000)}</span>
+            Application Reference:{" "}
+            <span className="font-medium">
+              CC-{Math.floor(Math.random() * 1000000)}
+            </span>
           </p>
         </div>
       </motion.div>
-    )
+    );
   }
 
   return (
@@ -85,10 +102,22 @@ export const CreditCardApplicationForm = () => {
           {[1, 2, 3].map((step) => (
             <div
               key={step}
-              className={`flex-1 relative ${step < currentStep ? "text-primary" : step === currentStep ? "text-secondary" : "text-gray-300"}`}
+              className={`flex-1 relative ${
+                step < currentStep
+                  ? "text-primary"
+                  : step === currentStep
+                  ? "text-secondary"
+                  : "text-gray-300"
+              }`}
             >
               <div
-                className={`w-8 h-8 rounded-full flex items-center justify-center border-2 ${step < currentStep ? "bg-primary text-white border-primary" : step === currentStep ? "border-secondary" : "border-gray-300"} mx-auto`}
+                className={`w-8 h-8 rounded-full flex items-center justify-center border-2 ${
+                  step < currentStep
+                    ? "bg-primary text-white border-primary"
+                    : step === currentStep
+                    ? "border-secondary"
+                    : "border-gray-300"
+                } mx-auto`}
               >
                 {step < currentStep ? (
                   <svg
@@ -98,18 +127,29 @@ export const CreditCardApplicationForm = () => {
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
                 ) : (
                   step
                 )}
               </div>
               <div className="text-xs mt-2 text-center">
-                {step === 1 ? "Personal Info" : step === 2 ? "Financial Info" : "Review"}
+                {step === 1
+                  ? "Personal Info"
+                  : step === 2
+                  ? "Financial Info"
+                  : "Review"}
               </div>
               {step < 3 && (
                 <div
-                  className={`absolute top-4 left-1/2 w-full h-0.5 ${step < currentStep ? "bg-primary" : "bg-gray-200"}`}
+                  className={`absolute top-4 left-1/2 w-full h-0.5 ${
+                    step < currentStep ? "bg-primary" : "bg-gray-200"
+                  }`}
                 ></div>
               )}
             </div>
@@ -125,11 +165,16 @@ export const CreditCardApplicationForm = () => {
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <h2 className="text-xl font-semibold mb-6 text-secondary">Personal Information</h2>
+            <h2 className="text-xl font-semibold mb-6 text-secondary">
+              Personal Information
+            </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <div>
-                <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="firstName"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   First Name
                 </label>
                 <input
@@ -144,7 +189,10 @@ export const CreditCardApplicationForm = () => {
               </div>
 
               <div>
-                <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="lastName"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   Last Name
                 </label>
                 <input
@@ -161,7 +209,10 @@ export const CreditCardApplicationForm = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   Email Address
                 </label>
                 <input
@@ -176,7 +227,10 @@ export const CreditCardApplicationForm = () => {
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   Phone Number
                 </label>
                 <input
@@ -192,7 +246,10 @@ export const CreditCardApplicationForm = () => {
             </div>
 
             <div className="mb-6">
-              <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-1">
+              <label
+                htmlFor="address"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
                 Street Address
               </label>
               <input
@@ -208,7 +265,10 @@ export const CreditCardApplicationForm = () => {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
               <div className="col-span-2">
-                <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="city"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   City
                 </label>
                 <input
@@ -223,7 +283,10 @@ export const CreditCardApplicationForm = () => {
               </div>
 
               <div>
-                <label htmlFor="state" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="state"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   State
                 </label>
                 <input
@@ -238,7 +301,10 @@ export const CreditCardApplicationForm = () => {
               </div>
 
               <div>
-                <label htmlFor="zipCode" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="zipCode"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   ZIP Code
                 </label>
                 <input
@@ -255,7 +321,10 @@ export const CreditCardApplicationForm = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <div>
-                <label htmlFor="dateOfBirth" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="dateOfBirth"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   Date of Birth
                 </label>
                 <input
@@ -270,7 +339,10 @@ export const CreditCardApplicationForm = () => {
               </div>
 
               <div>
-                <label htmlFor="ssn" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="ssn"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   Social Security Number
                 </label>
                 <input
@@ -301,10 +373,15 @@ export const CreditCardApplicationForm = () => {
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <h2 className="text-xl font-semibold mb-6 text-secondary">Financial Information</h2>
+            <h2 className="text-xl font-semibold mb-6 text-secondary">
+              Financial Information
+            </h2>
 
             <div className="mb-6">
-              <label htmlFor="employmentStatus" className="block text-sm font-medium text-gray-700 mb-1">
+              <label
+                htmlFor="employmentStatus"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
                 Employment Status
               </label>
               <select
@@ -325,7 +402,10 @@ export const CreditCardApplicationForm = () => {
             </div>
 
             <div className="mb-6">
-              <label htmlFor="annualIncome" className="block text-sm font-medium text-gray-700 mb-1">
+              <label
+                htmlFor="annualIncome"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
                 Annual Income
               </label>
               <input
@@ -341,7 +421,10 @@ export const CreditCardApplicationForm = () => {
             </div>
 
             <div className="mb-6">
-              <label htmlFor="cardType" className="block text-sm font-medium text-gray-700 mb-1">
+              <label
+                htmlFor="cardType"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
                 Credit Card Type
               </label>
               <select
@@ -382,10 +465,14 @@ export const CreditCardApplicationForm = () => {
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.3 }}
           >
-            <h2 className="text-xl font-semibold mb-6 text-secondary">Review Your Application</h2>
+            <h2 className="text-xl font-semibold mb-6 text-secondary">
+              Review Your Application
+            </h2>
 
             <div className="bg-gray-50 p-6 rounded-lg mb-6">
-              <h3 className="text-lg font-medium mb-4 text-secondary">Personal Information</h3>
+              <h3 className="text-lg font-medium mb-4 text-secondary">
+                Personal Information
+              </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
@@ -414,23 +501,30 @@ export const CreditCardApplicationForm = () => {
               <div className="mb-4">
                 <p className="text-sm text-gray-500">Address</p>
                 <p className="font-medium">
-                  {formData.address}, {formData.city}, {formData.state} {formData.zipCode}
+                  {formData.address}, {formData.city}, {formData.state}{" "}
+                  {formData.zipCode}
                 </p>
               </div>
             </div>
 
             <div className="bg-gray-50 p-6 rounded-lg mb-6">
-              <h3 className="text-lg font-medium mb-4 text-secondary">Financial Information</h3>
+              <h3 className="text-lg font-medium mb-4 text-secondary">
+                Financial Information
+              </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <p className="text-sm text-gray-500">Employment Status</p>
-                  <p className="font-medium capitalize">{formData.employmentStatus}</p>
+                  <p className="font-medium capitalize">
+                    {formData.employmentStatus}
+                  </p>
                 </div>
 
                 <div>
                   <p className="text-sm text-gray-500">Annual Income</p>
-                  <p className="font-medium">${Number.parseInt(formData.annualIncome).toLocaleString()}</p>
+                  <p className="font-medium">
+                    ${Number.parseInt(formData.annualIncome).toLocaleString()}
+                  </p>
                 </div>
 
                 <div>
@@ -439,10 +533,10 @@ export const CreditCardApplicationForm = () => {
                     {formData.cardType === "citi-double-cash"
                       ? "Citi Double Cash"
                       : formData.cardType === "chase-freedom"
-                        ? "Chase Freedom"
-                        : formData.cardType === "amex-gold"
-                          ? "American Express Gold"
-                          : "Discover it"}
+                      ? "Chase Freedom"
+                      : formData.cardType === "amex-gold"
+                      ? "American Express Gold"
+                      : "Discover it"}
                   </p>
                 </div>
               </div>
@@ -450,10 +544,16 @@ export const CreditCardApplicationForm = () => {
 
             <div className="mb-6">
               <div className="flex items-start">
-                <input type="checkbox" id="terms" required className="mt-1 mr-2" />
+                <input
+                  type="checkbox"
+                  id="terms"
+                  required
+                  className="mt-1 mr-2"
+                />
                 <label htmlFor="terms" className="text-sm text-gray-600">
-                  I confirm that the information provided is accurate and complete. I authorize TopFinanzas to obtain my
-                  credit report and verify the information provided in this application.
+                  I confirm that the information provided is accurate and
+                  complete. I authorize TopFinanzas to obtain my credit report
+                  and verify the information provided in this application.
                 </label>
               </div>
             </div>
@@ -475,6 +575,5 @@ export const CreditCardApplicationForm = () => {
         )}
       </form>
     </div>
-  )
-}
-
+  );
+};

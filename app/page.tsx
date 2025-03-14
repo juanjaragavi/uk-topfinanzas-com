@@ -4,7 +4,6 @@ import { AnimatedText } from "@/components/ui/animated-text"
 import { AnimatedImage } from "@/components/ui/animated-image"
 import { AdPlaceholder } from "@/components/ui/ad-placeholder"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
 
 export default function Home() {
   return (

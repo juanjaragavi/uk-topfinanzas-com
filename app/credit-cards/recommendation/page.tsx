@@ -1,16 +1,18 @@
-import { Header } from "@/components/layout/header"
-import { Footer } from "@/components/layout/footer"
-import { AnimatedText } from "@/components/ui/animated-text"
-import { AnimatedImage } from "@/components/ui/animated-image"
-import { AdPlaceholder } from "@/components/ui/ad-placeholder"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { AnimatedText } from "@/components/ui/animated-text";
+import { AnimatedImage } from "@/components/ui/animated-image";
+import { AdPlaceholder } from "@/components/ui/ad-placeholder";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export const metadata = {
   title: "Your Credit Card Recommendation - TopFinanzas",
-  description: "View your personalized credit card recommendation based on your financial profile.",
-  keywords: "credit card recommendation, personalized recommendation, credit card match, TopFinanzas",
-}
+  description:
+    "View your personalized credit card recommendation based on your financial profile.",
+  keywords:
+    "credit card recommendation, personalized recommendation, credit card match, TopFinanzas",
+};
 
 export default function CreditCardRecommendation() {
   return (
@@ -23,8 +25,13 @@ export default function CreditCardRecommendation() {
             Your Credit Card Recommendation
           </AnimatedText>
 
-          <AnimatedText as="p" className="text-center mb-12 text-gray-600 max-w-3xl mx-auto" delay={0.1}>
-            Based on your profile, we've selected the best credit card option to match your needs.
+          <AnimatedText
+            as="p"
+            className="text-center mb-12 text-gray-600 max-w-3xl mx-auto"
+            delay={0.1}
+          >
+            Based on your profile, we've selected the best credit card option to
+            match your needs.
           </AnimatedText>
         </div>
       </section>
@@ -46,7 +53,10 @@ export default function CreditCardRecommendation() {
                 />
 
                 <div>
-                  <AnimatedText as="h3" className="text-2xl font-semibold mb-3 text-secondary">
+                  <AnimatedText
+                    as="h3"
+                    className="text-2xl font-semibold mb-3 text-secondary"
+                  >
                     Citi Double Cash Credit Card
                   </AnimatedText>
 
@@ -58,32 +68,46 @@ export default function CreditCardRecommendation() {
                       <span>★</span>
                       <span>★</span>
                     </div>
-                    <span className="text-sm text-gray-600 ml-2">4.7 (2,120 reviews)</span>
+                    <span className="text-sm text-gray-600 ml-2">
+                      4.7 (2,120 reviews)
+                    </span>
                   </div>
 
                   <ul className="space-y-2 mb-6">
                     <li className="flex items-start">
                       <AnimatedText as="div" className="flex" delay={0.1}>
                         <span className="text-primary mr-2 font-bold">✓</span>
-                        <span><strong>Up to 2% Cash Back:</strong> Earn 1% when you buy, plus 1% when you pay.</span>
+                        <span>
+                          <strong>Up to 2% Cash Back:</strong> Earn 1% when you
+                          buy, plus 1% when you pay.
+                        </span>
                       </AnimatedText>
                     </li>
                     <li className="flex items-start">
                       <AnimatedText as="div" className="flex" delay={0.15}>
                         <span className="text-primary mr-2 font-bold">✓</span>
-                        <span><strong>No Restrictions:</strong> Earn cash back on every purchase, with no categories to track.</span>
+                        <span>
+                          <strong>No Restrictions:</strong> Earn cash back on
+                          every purchase, with no categories to track.
+                        </span>
                       </AnimatedText>
                     </li>
                     <li className="flex items-start">
                       <AnimatedText as="div" className="flex" delay={0.2}>
                         <span className="text-primary mr-2 font-bold">✓</span>
-                        <span><strong>No Annual Fee:</strong> Enjoy all the benefits without the cost.</span>
+                        <span>
+                          <strong>No Annual Fee:</strong> Enjoy all the benefits
+                          without the cost.
+                        </span>
                       </AnimatedText>
                     </li>
                     <li className="flex items-start">
                       <AnimatedText as="div" className="flex" delay={0.25}>
                         <span className="text-primary mr-2 font-bold">✓</span>
-                        <span><strong>Intro APR on Balance Transfers:</strong> 0% for 18 months to pay down debt.</span>
+                        <span>
+                          <strong>Intro APR on Balance Transfers:</strong> 0%
+                          for 18 months to pay down debt.
+                        </span>
                       </AnimatedText>
                     </li>
                   </ul>
@@ -118,36 +142,48 @@ export default function CreditCardRecommendation() {
               </AnimatedText>
 
               <AnimatedText as="p" className="mb-4 text-gray-600" delay={0.1}>
-                One of the standout features of the Citi Double Cash Card is its unique cash-back structure. You don't have to worry about quarterly sign-ups, rotating categories, or making specific purchases to earn high rewards. Here's how it breaks down:
+                One of the standout features of the Citi Double Cash Card is its
+                unique cash-back structure. You don't have to worry about
+                quarterly sign-ups, rotating categories, or making specific
+                purchases to earn high rewards. Here's how it breaks down:
               </AnimatedText>
 
               <ul className="list-disc pl-5 space-y-3 mb-6">
                 <li>
                   <AnimatedText as="div" delay={0.15}>
-                    <span className="text-gray-700"><strong>1% when you buy:</strong> On every dollar you spend, you earn 1% cash back right away.</span>
+                    <span className="text-gray-700">
+                      <strong>1% when you buy:</strong> On every dollar you
+                      spend, you earn 1% cash back right away.
+                    </span>
                   </AnimatedText>
                 </li>
                 <li>
                   <AnimatedText as="div" delay={0.2}>
-                    <span className="text-gray-700"><strong>1% when you pay:</strong> The second 1% comes when you make a payment towards your balance.</span>
+                    <span className="text-gray-700">
+                      <strong>1% when you pay:</strong> The second 1% comes when
+                      you make a payment towards your balance.
+                    </span>
                   </AnimatedText>
                 </li>
                 <li>
                   <AnimatedText as="div" delay={0.25}>
-                    <span className="text-gray-700"><strong>No limit on cash back:</strong> You can continue earning rewards no matter how much you spend.</span>
+                    <span className="text-gray-700">
+                      <strong>No limit on cash back:</strong> You can continue
+                      earning rewards no matter how much you spend.
+                    </span>
                   </AnimatedText>
                 </li>
               </ul>
 
               <AnimatedText as="p" className="mb-6 text-gray-600" delay={0.3}>
-                This system is ideal for those who use their credit card for a wide variety of purchases and want to avoid the complexity of other rewards programs. The Citi Double Cash Card ensures that every purchase, no matter how small or large, gives you value.
+                This system is ideal for those who use their credit card for a
+                wide variety of purchases and want to avoid the complexity of
+                other rewards programs. The Citi Double Cash Card ensures that
+                every purchase, no matter how small or large, gives you value.
               </AnimatedText>
 
               <AnimatedText delay={0.35}>
-                <Button
-                  href="/credit-cards/citi-double-cash"
-                  variant="primary"
-                >
+                <Button href="/credit-cards/citi-double-cash" variant="primary">
                   Find Out More
                 </Button>
               </AnimatedText>
@@ -167,7 +203,9 @@ export default function CreditCardRecommendation() {
           </AnimatedText>
 
           <AnimatedText as="p" className="mb-8 max-w-2xl mx-auto" delay={0.1}>
-            Apply for the Citi Double Cash Credit Card today and start earning cash back on every purchase. Our simple application process takes just minutes to complete.
+            Apply for the Citi Double Cash Credit Card today and start earning
+            cash back on every purchase. Our simple application process takes
+            just minutes to complete.
           </AnimatedText>
 
           <AnimatedText delay={0.2}>
@@ -183,5 +221,5 @@ export default function CreditCardRecommendation() {
 
       <Footer />
     </main>
-  )
+  );
 }

@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { motion, AnimatePresence } from "framer-motion"
-import { Search, Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { Search, Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Header() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
@@ -18,7 +18,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LOGO-EnglishUS-COLOR-yTAETH4SVJ7JuY5Jgd306C2qMSTjft.png"
+              src="https://media.topfinanzas.com/images/logo-english-color.png"
               alt="TopFinance Logo"
               width={200}
               height={53}
@@ -38,7 +38,12 @@ export function Header() {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
               <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -64,10 +69,16 @@ export function Header() {
                 </div>
               </div>
             </div>
-            <Link href="/credit-cards" className="text-gray-600 hover:text-primary">
+            <Link
+              href="/credit-cards"
+              className="text-gray-600 hover:text-primary"
+            >
               CREDIT CARDS
             </Link>
-            <Link href="/credit-cards/apply/citi-double-cash" className="text-gray-600 hover:text-primary">
+            <Link
+              href="/credit-cards/apply/citi-double-cash"
+              className="text-gray-600 hover:text-primary"
+            >
               APPLY NOW
             </Link>
             <Button
@@ -80,7 +91,11 @@ export function Header() {
           </nav>
 
           {/* Mobile Menu Button */}
-          <Button variant="secondary" onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2">
+          <Button
+            variant="secondary"
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden p-2"
+          >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </Button>
         </div>
@@ -139,10 +154,16 @@ export function Header() {
                     Citi Double Cash
                   </Link>
                 </div>
-                <Link href="/credit-cards" className="block px-4 py-2 text-gray-600 hover:bg-gray-100">
+                <Link
+                  href="/credit-cards"
+                  className="block px-4 py-2 text-gray-600 hover:bg-gray-100"
+                >
                   CREDIT CARDS
                 </Link>
-                <Link href="/credit-cards/apply/citi-double-cash" className="block px-4 py-2 text-gray-600 hover:bg-gray-100">
+                <Link
+                  href="/credit-cards/apply/citi-double-cash"
+                  className="block px-4 py-2 text-gray-600 hover:bg-gray-100"
+                >
                   APPLY NOW
                 </Link>
               </nav>
@@ -151,5 +172,5 @@ export function Header() {
         </AnimatePresence>
       </div>
     </header>
-  )
+  );
 }
