@@ -11,11 +11,11 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "TopFinanzas - Smart Financial Solutions",
+  title: "TopFinanzas - Smart Credit Card Solutions",
   description:
-    "Find the perfect credit card and loan options tailored to your needs with TopFinanzas expert recommendations.",
-  keywords: "credit cards, loans, financial solutions, personal finance, TopFinanzas",
-    generator: 'v0.dev'
+    "Find the perfect credit card tailored to your needs with TopFinanzas expert recommendations.",
+  keywords: "credit cards, credit card comparison, cash back, rewards, TopFinanzas",
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({

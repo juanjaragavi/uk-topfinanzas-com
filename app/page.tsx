@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/footer"
 import { AnimatedText } from "@/components/ui/animated-text"
 import { AnimatedImage } from "@/components/ui/animated-image"
 import { AdPlaceholder } from "@/components/ui/ad-placeholder"
+import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 export default function Home() {
@@ -24,9 +25,12 @@ export default function Home() {
               </AnimatedText>
 
               <AnimatedText delay={0.2}>
-                <Link href="/credit-cards" className="btn-primary inline-block">
+                <Button
+                  href="/credit-cards/recommendation"
+                  variant="primary"
+                >
                   Accept recommendation
-                </Link>
+                </Button>
               </AnimatedText>
             </div>
 
@@ -99,9 +103,12 @@ export default function Home() {
               </AnimatedText>
 
               <AnimatedText delay={0.3}>
-                <Link href="/credit-cards" className="btn-primary inline-block">
+                <Button
+                  href="/credit-cards/citi-double-cash"
+                  variant="primary"
+                >
                   Learn how to apply
-                </Link>
+                </Button>
               </AnimatedText>
             </div>
 
@@ -173,14 +180,14 @@ export default function Home() {
             match your goals and set you on the path to a brighter financial future.
           </AnimatedText>
 
-          <AnimatedText delay={0.2}>
-            <Link
-              href="/credit-cards"
-              className="bg-white text-primary hover:bg-gray-100 font-medium py-3 px-8 rounded-md transition-colors duration-300 inline-block"
-            >
-              Apply now
-            </Link>
-          </AnimatedText>
+              <AnimatedText delay={0.2}>
+                <Button
+                  href="/credit-cards/apply/citi-double-cash"
+                  variant="secondary"
+                >
+                  Apply now
+                </Button>
+              </AnimatedText>
         </div>
       </section>
 
@@ -188,4 +195,3 @@ export default function Home() {
     </main>
   )
 }
-

@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/footer"
 import { AnimatedText } from "@/components/ui/animated-text"
 import { AnimatedImage } from "@/components/ui/animated-image"
 import { AdPlaceholder } from "@/components/ui/ad-placeholder"
+import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 export const metadata = {
@@ -41,9 +42,12 @@ export default function CitiDoubleCashCard() {
               </div>
 
               <AnimatedText delay={0.2}>
-                <Link href="/credit-cards/apply" className="btn-primary inline-block">
+                <Button
+                  href="/credit-cards/apply/citi-double-cash"
+                  variant="primary"
+                >
                   Apply Now
-                </Link>
+                </Button>
               </AnimatedText>
             </div>
 
@@ -74,75 +78,91 @@ export default function CitiDoubleCashCard() {
                 </AnimatedText>
 
                 <ul className="space-y-4">
-                  <AnimatedText as="li" className="flex items-start" delay={0.1}>
-                    <span className="bg-primary text-white p-1 rounded-full mr-3 flex-shrink-0">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </span>
-                    <div>
-                      <span className="font-medium">Credit Score:</span> A good credit score of at least 670 is
-                      generally recommended.
-                    </div>
-                  </AnimatedText>
+                  <li className="flex items-start">
+                    <AnimatedText as="div" delay={0.1}>
+                      <div className="flex items-start">
+                        <span className="bg-primary text-white p-1 rounded-full mr-3 flex-shrink-0">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </span>
+                        <div>
+                          <span className="font-medium">Credit Score:</span> A good credit score of at least 670 is
+                          generally recommended.
+                        </div>
+                      </div>
+                    </AnimatedText>
+                  </li>
 
-                  <AnimatedText as="li" className="flex items-start" delay={0.15}>
-                    <span className="bg-primary text-white p-1 rounded-full mr-3 flex-shrink-0">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </span>
-                    <div>
-                      <span className="font-medium">Age Requirement:</span> Applicants should be 18 years or older.
-                    </div>
-                  </AnimatedText>
+                  <li className="flex items-start">
+                    <AnimatedText as="div" delay={0.15}>
+                      <div className="flex items-start">
+                        <span className="bg-primary text-white p-1 rounded-full mr-3 flex-shrink-0">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </span>
+                        <div>
+                          <span className="font-medium">Age Requirement:</span> Applicants should be 18 years or older.
+                        </div>
+                      </div>
+                    </AnimatedText>
+                  </li>
 
-                  <AnimatedText as="li" className="flex items-start" delay={0.2}>
-                    <span className="bg-primary text-white p-1 rounded-full mr-3 flex-shrink-0">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </span>
-                    <div>
-                      <span className="font-medium">Social Security Number:</span> Required for identity verification.
-                    </div>
-                  </AnimatedText>
+                  <li className="flex items-start">
+                    <AnimatedText as="div" delay={0.2}>
+                      <div className="flex items-start">
+                        <span className="bg-primary text-white p-1 rounded-full mr-3 flex-shrink-0">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </span>
+                        <div>
+                          <span className="font-medium">Social Security Number:</span> Required for identity verification.
+                        </div>
+                      </div>
+                    </AnimatedText>
+                  </li>
 
-                  <AnimatedText as="li" className="flex items-start" delay={0.25}>
-                    <span className="bg-primary text-white p-1 rounded-full mr-3 flex-shrink-0">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </span>
-                    <div>
-                      <span className="font-medium">Income Documentation:</span> Proof of income or employment details
-                      is often necessary.
-                    </div>
-                  </AnimatedText>
+                  <li className="flex items-start">
+                    <AnimatedText as="div" delay={0.25}>
+                      <div className="flex items-start">
+                        <span className="bg-primary text-white p-1 rounded-full mr-3 flex-shrink-0">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-4 w-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </span>
+                        <div>
+                          <span className="font-medium">Income Documentation:</span> Proof of income or employment details
+                          is often necessary.
+                        </div>
+                      </div>
+                    </AnimatedText>
+                  </li>
                 </ul>
               </div>
 
@@ -230,9 +250,12 @@ export default function CitiDoubleCashCard() {
               </div>
 
               <AnimatedText delay={0.6} className="mt-8">
-                <Link href="/credit-cards/apply" className="btn-primary inline-block">
+                <Button
+                  href="/credit-cards/apply/citi-double-cash"
+                  variant="primary"
+                >
                   Start Application
-                </Link>
+                </Button>
               </AnimatedText>
             </div>
 
@@ -297,12 +320,12 @@ export default function CitiDoubleCashCard() {
           </AnimatedText>
 
           <AnimatedText delay={0.2}>
-            <Link
-              href="/credit-cards/apply"
-              className="bg-white text-primary hover:bg-gray-100 font-medium py-3 px-8 rounded-md transition-colors duration-300 inline-block"
+            <Button
+              href="/credit-cards/apply/citi-double-cash"
+              variant="secondary"
             >
               Apply Now
-            </Link>
+            </Button>
           </AnimatedText>
         </div>
       </section>
@@ -311,4 +334,3 @@ export default function CitiDoubleCashCard() {
     </main>
   )
 }
-
