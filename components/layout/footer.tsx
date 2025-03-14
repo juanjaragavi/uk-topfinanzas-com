@@ -199,19 +199,20 @@ export function Footer() {
         {/* Bottom Copyright */}
         <div className="text-center text-xs border-t border-white/20 pt-4">
           <p className="text-white/80">
-            A TOP NETWORKS INC. Product &nbsp; | &nbsp;
+          <span className="block sm:inline w-full py-4">A TOP NETWORKS INC. Product </span><span className="hidden sm:inline"> &nbsp;&nbsp; | &nbsp; </span>
             <Link href="/terms" className="text-[#55B9FF] hover:underline mx-2">
               Terms & Conditions
             </Link>{" "}
-            | &nbsp;
+            &nbsp; | &nbsp;
             <Link
               href="/privacy-policy"
               className="text-[#55B9FF] hover:underline mx-2"
             >
               Privacy Policy
             </Link>{" "}
-            <span className="block w-full py-2"></span>&nbsp; &copy; Copyright Top
-            Networks Inc. 2025
+            <span className="hidden sm:inline"> &nbsp;&nbsp; | &nbsp; </span>
+            <span className="block sm:inline w-full py-4">&nbsp; &copy; Copyright Top
+            Networks Inc. 2025</span>
           </p>
         </div>
       </div>
