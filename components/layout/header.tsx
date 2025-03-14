@@ -7,6 +7,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// Import content from lib directory
+import { logos } from "@/lib/images/logos";
+import { headerNavigation } from "@/lib/navigation/headerNavigation";
+import { headerContent } from "@/lib/texts/header/content";
+
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -18,10 +23,10 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="https://media.topfinanzas.com/images/logo-english-color.png"
-              alt="TopFinance Logo"
-              width={200}
-              height={53}
+              src={logos.colorLogo.url}
+              alt={logos.colorLogo.alt}
+              width={logos.colorLogo.width}
+              height={logos.colorLogo.height}
               className="h-14 w-auto"
               priority
             />
@@ -31,7 +36,7 @@ export function Header() {
           <nav className="hidden md:flex items-center space-x-8">
             <div className="relative group">
               <button className="text-gray-600 hover:text-primary flex items-center space-x-1">
-                <span>CATEGORIES</span>
+                <span>{headerNavigation.categoryDropdown.text}</span>
                 <svg
                   className="w-4 h-4 transition-transform group-hover:rotate-180"
                   fill="none"
@@ -48,39 +53,27 @@ export function Header() {
               </button>
               <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <div className="py-1">
-                  <Link
-                    href="/credit-cards/recommendation"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Card Recommendations
-                  </Link>
-                  <Link
-                    href="/credit-cards"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Compare Cards
-                  </Link>
-                  <Link
-                    href="/credit-cards/citi-double-cash"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Citi Double Cash
-                  </Link>
+                  {headerNavigation.categoryDropdown.items.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      {item.text}
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
-            <Link
-              href="/credit-cards"
-              className="text-gray-600 hover:text-primary"
-            >
-              CREDIT CARDS
-            </Link>
-            <Link
-              href="/credit-cards/apply/citi-double-cash"
-              className="text-gray-600 hover:text-primary"
-            >
-              APPLY NOW
-            </Link>
+            {headerNavigation.mainNavItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-gray-600 hover:text-primary"
+              >
+                {item.text}
+              </Link>
+            ))}
             <Button
               variant="secondary"
               onClick={() => setIsSearchOpen(!isSearchOpen)}
@@ -113,7 +106,7 @@ export function Header() {
                 <div className="relative">
                   <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder={headerContent.search.placeholder}
                     className="w-full px-4 py-2 pr-10 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                   />
                   <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -134,38 +127,26 @@ export function Header() {
             >
               <nav className="py-4 space-y-4">
                 <div className="space-y-2">
-                  <div className="font-medium px-4">CATEGORIES</div>
-                  <Link
-                    href="/credit-cards/recommendation"
-                    className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
-                  >
-                    Card Recommendations
-                  </Link>
-                  <Link
-                    href="/credit-cards"
-                    className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
-                  >
-                    Compare Cards
-                  </Link>
-                  <Link
-                    href="/credit-cards/citi-double-cash"
-                    className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
-                  >
-                    Citi Double Cash
-                  </Link>
-                </div>
+              <div className="font-medium px-4">{headerContent.mobileMenu.categoriesLabel}</div>
+              {headerNavigation.categoryDropdown.items.map((item) => (
                 <Link
-                  href="/credit-cards"
-                  className="block px-4 py-2 text-gray-600 hover:bg-gray-100"
+                  key={item.href}
+                  href={item.href}
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
-                  CREDIT CARDS
+                  {item.text}
                 </Link>
-                <Link
-                  href="/credit-cards/apply/citi-double-cash"
-                  className="block px-4 py-2 text-gray-600 hover:bg-gray-100"
-                >
-                  APPLY NOW
-                </Link>
+              ))}
+            </div>
+            {headerNavigation.mainNavItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block px-4 py-2 text-gray-600 hover:bg-gray-100"
+              >
+                {item.text}
+              </Link>
+            ))}
               </nav>
             </motion.div>
           )}
