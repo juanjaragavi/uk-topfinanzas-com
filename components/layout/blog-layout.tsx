@@ -32,7 +32,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
     authorImage = "/placeholder-user.jpg",
     readingTime = "6 minute read",
     categories = [{ name: "Personal Finance", slug: "personal-finance" }],
-    featuredImage = "/placeholder.jpg",
+    featuredImage = "https://media.topfinanzas.com/images/favicon.png",
     excerpt = "",
     views = 0,
     commentCount = 0,

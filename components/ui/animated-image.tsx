@@ -35,7 +35,7 @@ export const AnimatedImage: React.FC<AnimatedImageProps> = ({
       className={`rounded-xl shadow-lg p-0 m-0 ${className}`}
     >
       <Image
-        src={src || "/placeholder.svg"}
+        src={src || "https://media.topfinanzas.com/images/favicon.png"}
         alt={alt}
         width={width}
         height={height}
