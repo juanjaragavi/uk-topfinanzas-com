@@ -1,8 +1,8 @@
-docs: add comprehensive documentation for programmatic editing
+feat: add legal pages and blog documentation
 
-- Add README files in key project directories
-- Document MDX blog post structure and frontmatter requirements
-- Provide guidelines for component modifications
-- Document navigation and content configuration
-- Add instructions for WordPress import process
-- Prepare codebase for future API-based content management
+- Create MDX content files for Terms & Conditions and Privacy Policy pages
+- Implement pages using the Next.js app router and MDX rendering
+- Add comprehensive documentation for blog content creation in app/blog/README.md
+- Document MDX rendering system and frontmatter structure for blog posts
+- Provide detailed guidelines for creating and formatting new blog content
+- Ensure proper cross-linking between legal documents and consistent styling
