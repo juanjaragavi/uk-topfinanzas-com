@@ -1,0 +1,130 @@
+/**
+ * Example implementation of API endpoints for managing page content
+ * 
+ * This file demonstrates how content in the lib/pages directory
+ * could be edited programmatically through API endpoints.
+ * 
+ * NOTE: This is an example file and not meant to be used directly
+ */
+
+import fs from 'fs';
+import path from 'path';
+import { NextResponse } from 'next/server';
+
+/**
+ * GET endpoint to retrieve page content
+ * 
+ * Example: GET /api/content/pages?journey=credit-cards&page=main
+ */
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const journey = searchParams.get('journey');
+  const page = searchParams.get('page');
+  
+  if (!journey || !page) {
+    return NextResponse.json(
+      { error: 'Missing journey or page parameter' }, 
+      { status: 400 }
+    );
+  }
+  
+  const filePath = path.join(process.cwd(), `lib/pages/${journey}/${page}.ts`);
+  
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    // Extract the actual content object from the file
+    // This is a simple regex approach - a more robust parser might be needed
+    const objectMatch = content.match(/export const \w+PageContent = ({[\s\S]+});/);
+    if (!objectMatch || !objectMatch[1]) {
+      return NextResponse.json(
+        { error: 'Could not parse content object' }, 
+        { status: 500 }
+      );
+    }
+    
+    // Convert the matched string to an actual object
+    // Note: In a real implementation, you might want to use a safer approach
+    const contentObject = eval(`(${objectMatch[1]})`);
+    
+    return NextResponse.json({ content: contentObject });
+  } catch (error) {
+    console.error('Error reading content file:', error);
+    return NextResponse.json(
+      { error: 'File not found or could not be read' }, 
+      { status: 404 }
+    );
+  }
+}
+
+/**
+ * PUT endpoint to update page content
+ * 
+ * Example body:
+ * {
+ *   "journey": "credit-cards",
+ *   "page": "main",
+ *   "content": { ... content object ... }
+ * }
+ */
+export async function PUT(request: Request) {
+  const { journey, page, content } = await request.json();
+  
+  if (!journey || !page || !content) {
+    return NextResponse.json(
+      { error: 'Missing required parameters' }, 
+      { status: 400 }
+    );
+  }
+  
+  const filePath = path.join(process.cwd(), `lib/pages/${journey}/${page}.ts`);
+  
+  try {
+    // First check if the file exists
+    if (!fs.existsSync(filePath)) {
+      return NextResponse.json(
+        { error: `File not found: ${journey}/${page}.ts` }, 
+        { status: 404 }
+      );
+    }
+    
+    // Read the current file to preserve the structure and interfaces
+    const currentFile = fs.readFileSync(filePath, 'utf8');
+    
+    // Replace only the content object part
+    // This regex finds the content object declaration and replaces it
+    const updatedFile = currentFile.replace(
+      /export const \w+PageContent = {[\s\S]+?};/,
+      `export const ${journey.replace(/-([a-z])/g, (g) => g[1].toUpperCase())}PageContent = ${JSON.stringify(content, null, 2)};`
+    );
+    
+    // Write the updated file
+    fs.writeFileSync(filePath, updatedFile);
+    
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    console.error('Error updating content file:', error);
+    return NextResponse.json(
+      { error: String(error) }, 
+      { status: 500 }
+    );
+  }
+}
+
+/**
+ * Example of how to validate content before saving
+ * This would be used in the PUT method above
+ */
+function validateContent(journey: string, content: any): boolean {
+  // In a real implementation, you would:
+  // 1. Import the correct interface type for the journey
+  // 2. Validate the content object against that interface
+  // 3. Return true if valid, false if not
+  
+  // Example pseudocode:
+  // if (journey === 'credit-cards') {
+  //   return validateAgainstType<CreditCardPageContent>(content);
+  // }
+  
+  return true; // Simplified for this example
+}
