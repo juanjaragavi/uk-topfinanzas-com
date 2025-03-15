@@ -1,0 +1,18 @@
+fix: improve mobile UI for navigation and banner
+
+Header Navigation Improvements:
+- Fix mega menu overflow issue with responsive width constraints
+- Implement proper menu toggle behavior with fixed ref handling
+- Fix TypeScript errors with proper callback implementations
+- Add responsive styling for menu columns and better mobile display
+
+Banner Mobile Optimization:
+- Align background image to the left on mobile devices
+- Use React hooks for responsive background position detection
+- Add stronger text overlay (50% opacity) on mobile for better readability
+- Add text drop-shadows to enhance contrast against the image
+- Implement responsive text sizing and padding adjustments
+
+These changes significantly improve the mobile user experience by
+ensuring menus stay within viewport boundaries, proper image positioning
+for smaller screens, and enhanced text readability across all devices.

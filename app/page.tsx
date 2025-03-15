@@ -7,8 +7,27 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { AdPlaceholder } from "@/components/ui/ad-placeholder";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if we're on mobile
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Initial check
+    checkIfMobile();
+
+    // Add event listener
+    window.addEventListener("resize", checkIfMobile);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", checkIfMobile);
+  }, []);
+
   return (
     <main className="min-h-screen flex flex-col">
       <Header />
@@ -18,7 +37,7 @@ export default function Home() {
         className="relative py-16 md:py-24 lg:py-40 bg-cover bg-no-repeat"
         style={{
           backgroundImage: `url(https://media.topfinanzas.com/images/banner-home.webp)`,
-          backgroundPosition: "center 30%", // Adjusted position for better focus on subjects
+          backgroundPosition: isMobile ? "left 30%" : "center 30%",
           backgroundSize: "cover",
         }}
         initial={{ opacity: 0 }}
@@ -27,7 +46,7 @@ export default function Home() {
       >
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black opacity-50 md:opacity-40"></div>
-        
+
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.h1
             className="text-white text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 drop-shadow-lg"
@@ -387,7 +406,7 @@ export default function Home() {
 
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 px-6">
             <div className="lg:col-span-2">
               <h2 className="mb-6 text-secondary">
                 Finding the right credit card is a key step toward financial
@@ -469,7 +488,7 @@ export default function Home() {
       </section>
 
       <section className="py-12 bg-primary text-white">
-        <div className="container mx-auto text-center">
+        <div className="container mx-auto text-center px-4">
           <h2 className="mb-6">Take control of your finances today</h2>
 
           <p className="mb-8 max-w-2xl mx-auto">
