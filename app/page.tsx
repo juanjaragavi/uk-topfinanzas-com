@@ -43,7 +43,7 @@ export default function Home() {
           </motion.p>
         </div>
         <div className="absolute inset-0 bg-black opacity-40"></div>
-      </motion.section>ß
+      </motion.section>
 
       {/* Blog Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white to-gray-50">
@@ -172,155 +172,163 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Latest articles grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden group">
-              <Link
-                href="/blog/post/what-is-a-home-mortgage"
-                className="block relative h-48 rounded-t-xl overflow-hidden"
-              >
-                <Image
-                  src="https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg"
-                  alt="What Is a Home Mortgage? Your Complete Guide"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  className="transition-transform duration-500 ease-in-out group-hover:scale-105 rounded-t-xl"
-                />
-              </Link>
-              <div className="p-6">
+          {/* Latest articles grid with skyscraper ad */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
+            {/* Square ad instead of skyscraper */}
+            <div className="md:col-span-3 flex justify-center">
+              <AdPlaceholder width={300} height={300} className="sticky top-24" />
+            </div>
+            
+            {/* Articles in 3-column grid */}
+            <div className="md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden group">
                 <Link
-                  href="/blog/category/mortgages"
-                  className="text-blue-600 text-xs font-medium hover:underline inline-block mb-2"
+                  href="/blog/post/what-is-a-home-mortgage"
+                  className="block relative h-48 rounded-t-xl overflow-hidden"
                 >
-                  Mortgages
+                  <Image
+                    src="https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg"
+                    alt="What Is a Home Mortgage? Your Complete Guide"
+                    fill
+                    style={{ objectFit: "cover" }}
+                    className="transition-transform duration-500 ease-in-out group-hover:scale-105 rounded-t-xl"
+                  />
                 </Link>
-                <h3 className="text-xl font-bold mb-2">
+                <div className="p-6">
                   <Link
-                    href="/blog/post/what-is-a-home-mortgage"
-                    className="hover:text-blue-600 transition-colors"
+                    href="/blog/category/mortgages"
+                    className="text-blue-600 text-xs font-medium hover:underline inline-block mb-2"
                   >
-                    What Is a Home Mortgage? Your Complete Guide
+                    Mortgages
                   </Link>
-                </h3>
-                <p className="text-gray-600 mb-4 line-clamp-2">
-                  A comprehensive guide to understanding home mortgages, types
-                  of loans, interest rates, and how to get the best deal.
-                </p>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <Image
-                      src="https://media.topfinanzas.com/images/favicon.png"
-                      alt="Top Finance"
-                      width={32}
-                      height={32}
-                      className="rounded-full mr-2"
-                    />
-                    <div className="text-sm">
-                      <span className="text-gray-900">Top Finance</span>
-                      <div className="text-gray-500">February 25, 2025</div>
+                  <h3 className="text-xl font-bold mb-2">
+                    <Link
+                      href="/blog/post/what-is-a-home-mortgage"
+                      className="hover:text-blue-600 transition-colors"
+                    >
+                      What Is a Home Mortgage? Your Complete Guide
+                    </Link>
+                  </h3>
+                  <p className="text-gray-600 mb-4 line-clamp-2">
+                    A comprehensive guide to understanding home mortgages, types of
+                    loans, interest rates, and how to get the best deal.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <Image
+                        src="https://media.topfinanzas.com/images/favicon.png"
+                        alt="Top Finance"
+                        width={32}
+                        height={32}
+                        className="rounded-full mr-2"
+                      />
+                      <div className="text-sm">
+                        <span className="text-gray-900">Top Finance</span>
+                        <div className="text-gray-500">February 25, 2025</div>
+                      </div>
                     </div>
+                    <div className="text-sm text-gray-500">8 min read</div>
                   </div>
-                  <div className="text-sm text-gray-500">8 min read</div>
                 </div>
               </div>
-            </div>
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden group">
-              <Link
-                href="/blog/post/what-are-online-loans"
-                className="block relative h-48 rounded-t-xl overflow-hidden"
-              >
-                <Image
-                  src="https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg"
-                  alt="What Are Online Loans?: A Key Tool in Personal Finances"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  className="transition-transform duration-500 ease-in-out group-hover:scale-105 rounded-t-xl"
-                />
-              </Link>
-              <div className="p-6">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden group">
                 <Link
-                  href="/blog/category/personal-finance"
-                  className="text-blue-600 text-xs font-medium hover:underline inline-block mb-2"
+                  href="/blog/post/what-are-online-loans"
+                  className="block relative h-48 rounded-t-xl overflow-hidden"
                 >
-                  Personal Finance
+                  <Image
+                    src="https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg"
+                    alt="What Are Online Loans?: A Key Tool in Personal Finances"
+                    fill
+                    style={{ objectFit: "cover" }}
+                    className="transition-transform duration-500 ease-in-out group-hover:scale-105 rounded-t-xl"
+                  />
                 </Link>
-                <h3 className="text-xl font-bold mb-2">
+                <div className="p-6">
                   <Link
-                    href="/blog/post/what-are-online-loans"
-                    className="hover:text-blue-600 transition-colors"
+                    href="/blog/category/personal-finance"
+                    className="text-blue-600 text-xs font-medium hover:underline inline-block mb-2"
                   >
-                    What Are Online Loans?: A Key Tool in Personal Finances
+                    Personal Finance
                   </Link>
-                </h3>
-                <p className="text-gray-600 mb-4 line-clamp-2">
-                  In an increasingly digital world, online loans have emerged as
-                  a fundamental financial option for many Americans.
-                </p>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <Image
-                      src="https://media.topfinanzas.com/images/favicon.png"
-                      alt="Top Finance"
-                      width={32}
-                      height={32}
-                      className="rounded-full mr-2"
-                    />
-                    <div className="text-sm">
-                      <span className="text-gray-900">Top Finance</span>
-                      <div className="text-gray-500">February 25, 2025</div>
+                  <h3 className="text-xl font-bold mb-2">
+                    <Link
+                      href="/blog/post/what-are-online-loans"
+                      className="hover:text-blue-600 transition-colors"
+                    >
+                      What Are Online Loans?: A Key Tool in Personal Finances
+                    </Link>
+                  </h3>
+                  <p className="text-gray-600 mb-4 line-clamp-2">
+                    In an increasingly digital world, online loans have emerged as
+                    a fundamental financial option for many Americans.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <Image
+                        src="https://media.topfinanzas.com/images/favicon.png"
+                        alt="Top Finance"
+                        width={32}
+                        height={32}
+                        className="rounded-full mr-2"
+                      />
+                      <div className="text-sm">
+                        <span className="text-gray-900">Top Finance</span>
+                        <div className="text-gray-500">February 25, 2025</div>
+                      </div>
                     </div>
+                    <div className="text-sm text-gray-500">5 min read</div>
                   </div>
-                  <div className="text-sm text-gray-500">5 min read</div>
                 </div>
               </div>
-            </div>
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden group">
-              <Link
-                href="/blog/post/5-tips-for-choosing-an-online-loan"
-                className="block relative h-48 rounded-t-xl overflow-hidden"
-              >
-                <Image
-                  src="https://media.topfinanzas.com/images/generated/1741732471632/sample_0.jpg"
-                  alt="5 Tips for Choosing an Online Loan: Quick Guide"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  className="transition-transform duration-500 ease-in-out group-hover:scale-105 rounded-t-xl"
-                />
-              </Link>
-              <div className="p-6">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden group">
                 <Link
-                  href="/blog/category/personal-finance"
-                  className="text-blue-600 text-xs font-medium hover:underline inline-block mb-2"
+                  href="/blog/post/5-tips-for-choosing-an-online-loan"
+                  className="block relative h-48 rounded-t-xl overflow-hidden"
                 >
-                  Personal Finance
+                  <Image
+                    src="https://media.topfinanzas.com/images/generated/1741732471632/sample_0.jpg"
+                    alt="5 Tips for Choosing an Online Loan: Quick Guide"
+                    fill
+                    style={{ objectFit: "cover" }}
+                    className="transition-transform duration-500 ease-in-out group-hover:scale-105 rounded-t-xl"
+                  />
                 </Link>
-                <h3 className="text-xl font-bold mb-2">
+                <div className="p-6">
                   <Link
-                    href="/blog/post/5-tips-for-choosing-an-online-loan"
-                    className="hover:text-blue-600 transition-colors"
+                    href="/blog/category/personal-finance"
+                    className="text-blue-600 text-xs font-medium hover:underline inline-block mb-2"
                   >
-                    5 Tips for Choosing an Online Loan: Quick Guide
+                    Personal Finance
                   </Link>
-                </h3>
-                <p className="text-gray-600 mb-4 line-clamp-2">
-                  Navigate the world of online loans with confidence using these
-                  essential tips to find the best rates and terms.
-                </p>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <Image
-                      src="https://media.topfinanzas.com/images/favicon.png"
-                      alt="Top Finance"
-                      width={32}
-                      height={32}
-                      className="rounded-full mr-2"
-                    />
-                    <div className="text-sm">
-                      <span className="text-gray-900">Top Finance</span>
-                      <div className="text-gray-500">February 25, 2025</div>
+                  <h3 className="text-xl font-bold mb-2">
+                    <Link
+                      href="/blog/post/5-tips-for-choosing-an-online-loan"
+                      className="hover:text-blue-600 transition-colors"
+                    >
+                      5 Tips for Choosing an Online Loan: Quick Guide
+                    </Link>
+                  </h3>
+                  <p className="text-gray-600 mb-4 line-clamp-2">
+                    Navigate the world of online loans with confidence using these
+                    essential tips to find the best rates and terms.
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <Image
+                        src="https://media.topfinanzas.com/images/favicon.png"
+                        alt="Top Finance"
+                        width={32}
+                        height={32}
+                        className="rounded-full mr-2"
+                      />
+                      <div className="text-sm">
+                        <span className="text-gray-900">Top Finance</span>
+                        <div className="text-gray-500">February 25, 2025</div>
+                      </div>
                     </div>
+                    <div className="text-sm text-gray-500">4 min read</div>
                   </div>
-                  <div className="text-sm text-gray-500">4 min read</div>
                 </div>
               </div>
             </div>
@@ -396,7 +404,7 @@ export default function Home() {
             </div>
 
             <div>
-              <AdPlaceholder width={300} height={600} className="mx-auto" />
+              <AdPlaceholder width={300} height={300} className="mx-auto" />
             </div>
           </div>
         </div>
