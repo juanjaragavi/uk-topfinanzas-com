@@ -1,7 +1,7 @@
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { AnimatedText } from "@/components/ui/animated-text";
-import { AdPlaceholder } from "@/components/ui/ad-placeholder";
+import { Ad } from "@/components/ui/ad";
 import { CreditCardApplicationForm } from "@/components/forms/credit-card-application-form";
 
 export const metadata = {
@@ -38,7 +38,12 @@ export default function ApplyCitiDoubleCash() {
             </div>
 
             <div className="space-y-6">
-              <AdPlaceholder width={300} height={250} className="mx-auto" />
+              <Ad
+                format="square"
+                fallbackWidth={300}
+                fallbackHeight={250}
+                className="mx-auto"
+              />
 
               <div className="bg-gray-50 p-6 rounded-xl shadow-sm">
                 <AnimatedText
@@ -120,7 +125,12 @@ export default function ApplyCitiDoubleCash() {
                 </ul>
               </div>
 
-              <AdPlaceholder width={300} height={250} className="mx-auto" />
+              <Ad
+                format="square"
+                fallbackWidth={300}
+                fallbackHeight={250}
+                className="mx-auto"
+              />
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { AdPlaceholder } from "@/components/ui/ad-placeholder";
+import { Ad } from "@/components/ui/ad";
 import { Button } from "@/components/ui/button";
 import { AnimatedText } from "@/components/ui/animated-text";
 import Link from "next/link";
@@ -305,7 +305,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
             <div className="lg:col-span-3">
               {/* Ad placeholder */}
               <div className="mb-8">
-                <AdPlaceholder className="mx-auto" width={300} height={250} />
+                <Ad format="square" className="mx-auto" fallbackWidth={300} fallbackHeight={250} />
               </div>
 
               {/* Recent articles */}

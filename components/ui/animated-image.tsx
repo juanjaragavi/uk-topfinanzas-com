@@ -32,14 +32,16 @@ export const AnimatedImage: React.FC<AnimatedImageProps> = ({
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once }}
       transition={{ duration, delay }}
-      className={`rounded-xl shadow-lg p-0 m-0 ${className}`}
+      className={`rounded-lg shadow-lg p-0 m-0 ${className}`}
     >
       <Image
         src={src || "https://media.topfinanzas.com/images/favicon.png"}
         alt={alt}
         width={width}
         height={height}
-        className="w-full h-auto rounded-xl m-0 p-0"
+        className="rounded-lg m-0 p-0"
+        style={{ maxWidth: "100%", width: "auto", height: "auto" }}
+        priority
       />
     </motion.div>
   );

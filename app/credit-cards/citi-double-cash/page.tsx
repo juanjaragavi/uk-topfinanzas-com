@@ -2,17 +2,15 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { AnimatedText } from "@/components/ui/animated-text";
 import { AnimatedImage } from "@/components/ui/animated-image";
-import { AdPlaceholder } from "@/components/ui/ad-placeholder";
+import { Ad } from "@/components/ui/ad";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Citi Double Cash Credit Card - TopFinanzas",
-  description:
-    "Learn about the Citi Double Cash Credit Card benefits, requirements, and application process. Earn cash back on every purchase.",
-  keywords:
-    "Citi Double Cash, credit card, cash back rewards, no annual fee, balance transfer, TopFinanzas",
-};
+// Import the content from our centralized TS file
+import { citiDoubleCashPageContent } from "@/lib/pages/credit-cards/citi-double-cash";
+
+// Use the metadata directly from our content file
+export const metadata = citiDoubleCashPageContent.metadata;
 
 export default function CitiDoubleCashCard() {
   return (
@@ -24,12 +22,11 @@ export default function CitiDoubleCashCard() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <AnimatedText as="h1" className="mb-4 text-secondary">
-                Citi Double Cash Credit Card
+                {citiDoubleCashPageContent.hero.title}
               </AnimatedText>
 
               <AnimatedText as="p" className="mb-6 text-gray-600" delay={0.1}>
-                A card valued for its cash-back rewards, offering earnings on
-                every purchase with no annual fee.
+                {citiDoubleCashPageContent.hero.description}
               </AnimatedText>
 
               <div className="flex items-center mb-6">
@@ -41,26 +38,28 @@ export default function CitiDoubleCashCard() {
                   <span>★</span>
                 </div>
                 <span className="text-sm text-gray-600 ml-2">
-                  4.7 (2,120 reviews)
+                  {citiDoubleCashPageContent.hero.rating.score} (
+                  {citiDoubleCashPageContent.hero.rating.count.toLocaleString()}{" "}
+                  reviews)
                 </span>
               </div>
 
               <AnimatedText delay={0.2}>
                 <Button
-                  href="/credit-cards/apply/citi-double-cash"
+                  href={citiDoubleCashPageContent.hero.applyButtonLink}
                   variant="primary"
                 >
-                  Apply Now
+                  {citiDoubleCashPageContent.hero.applyButtonText}
                 </Button>
               </AnimatedText>
             </div>
 
             <div className="flex justify-center">
               <AnimatedImage
-                src="https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg"
-                alt="Citi Double Cash Credit Card"
-                width={480}
-                height={300}
+                src={citiDoubleCashPageContent.hero.image.src}
+                alt={citiDoubleCashPageContent.hero.image.alt}
+                width={citiDoubleCashPageContent.hero.image.width}
+                height={citiDoubleCashPageContent.hero.image.height}
                 delay={0.3}
               />
             </div>
@@ -71,7 +70,7 @@ export default function CitiDoubleCashCard() {
       <section className="py-12 bg-white">
         <div className="container-custom">
           <AnimatedText as="h2" className="text-center mb-12 text-secondary">
-            Requirements for the Citi Double Cash Credit Card
+            {citiDoubleCashPageContent.requirements.title}
           </AnimatedText>
 
           <div className="max-w-4xl mx-auto bg-gray-50 p-8 rounded-xl shadow-sm">
@@ -85,128 +84,45 @@ export default function CitiDoubleCashCard() {
                 </AnimatedText>
 
                 <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <AnimatedText as="div" delay={0.1}>
-                      <div className="flex items-start">
-                        <span className="bg-primary text-white p-1 rounded-full mr-3 flex-shrink-0">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-4 w-4"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                        </span>
-                        <div>
-                          <span className="font-medium">Credit Score:</span> A
-                          good credit score of at least 670 is generally
-                          recommended.
-                        </div>
-                      </div>
-                    </AnimatedText>
-                  </li>
-
-                  <li className="flex items-start">
-                    <AnimatedText as="div" delay={0.15}>
-                      <div className="flex items-start">
-                        <span className="bg-primary text-white p-1 rounded-full mr-3 flex-shrink-0">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-4 w-4"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                        </span>
-                        <div>
-                          <span className="font-medium">Age Requirement:</span>{" "}
-                          Applicants should be 18 years or older.
-                        </div>
-                      </div>
-                    </AnimatedText>
-                  </li>
-
-                  <li className="flex items-start">
-                    <AnimatedText as="div" delay={0.2}>
-                      <div className="flex items-start">
-                        <span className="bg-primary text-white p-1 rounded-full mr-3 flex-shrink-0">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-4 w-4"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                        </span>
-                        <div>
-                          <span className="font-medium">
-                            Social Security Number:
-                          </span>{" "}
-                          Required for identity verification.
-                        </div>
-                      </div>
-                    </AnimatedText>
-                  </li>
-
-                  <li className="flex items-start">
-                    <AnimatedText as="div" delay={0.25}>
-                      <div className="flex items-start">
-                        <span className="bg-primary text-white p-1 rounded-full mr-3 flex-shrink-0">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-4 w-4"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M5 13l4 4L19 7"
-                            />
-                          </svg>
-                        </span>
-                        <div>
-                          <span className="font-medium">
-                            Income Documentation:
-                          </span>{" "}
-                          Proof of income or employment details is often
-                          necessary.
-                        </div>
-                      </div>
-                    </AnimatedText>
-                  </li>
+                  {citiDoubleCashPageContent.requirements.items.map(
+                    (req, index) => (
+                      <li className="flex items-start" key={index}>
+                        <AnimatedText as="div" delay={0.1 + index * 0.05}>
+                          <div className="flex items-start">
+                            <span className="bg-primary text-white p-1 rounded-full mr-3 flex-shrink-0">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-4 w-4"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M5 13l4 4L19 7"
+                                />
+                              </svg>
+                            </span>
+                            <div>
+                              <span className="font-medium">{req.label}:</span>{" "}
+                              {req.value}
+                            </div>
+                          </div>
+                        </AnimatedText>
+                      </li>
+                    )
+                  )}
                 </ul>
               </div>
 
               <div>
                 <AnimatedImage
-                  src="https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg"
-                  alt="Credit Card Requirements"
-                  width={400}
-                  height={300}
+                  src={citiDoubleCashPageContent.requirements.image.src}
+                  alt={citiDoubleCashPageContent.requirements.image.alt}
+                  width={citiDoubleCashPageContent.requirements.image.width}
+                  height={citiDoubleCashPageContent.requirements.image.height}
                   delay={0.3}
                 />
               </div>
@@ -220,107 +136,47 @@ export default function CitiDoubleCashCard() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               <AnimatedText as="h2" className="mb-8 text-secondary">
-                How to apply for the Citi Double Cash Credit Card
+                {citiDoubleCashPageContent.applicationSteps.title}
               </AnimatedText>
 
               <div className="space-y-6">
-                <AnimatedText
-                  as="div"
-                  className="bg-white p-6 rounded-xl shadow-sm"
-                  delay={0.1}
-                >
-                  <h3 className="text-lg font-semibold mb-3 text-secondary flex items-center">
-                    <span className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                      1
-                    </span>
-                    Visit Citi's official website
-                  </h3>
-                  <p className="text-gray-600 ml-11">
-                    Navigate to Citi's website and locate the Double Cash Card
-                    application page.
-                  </p>
-                </AnimatedText>
-
-                <AnimatedText
-                  as="div"
-                  className="bg-white p-6 rounded-xl shadow-sm"
-                  delay={0.2}
-                >
-                  <h3 className="text-lg font-semibold mb-3 text-secondary flex items-center">
-                    <span className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                      2
-                    </span>
-                    Provide personal details
-                  </h3>
-                  <p className="text-gray-600 ml-11">
-                    Complete fields for name, address, date of birth, and SSN.
-                  </p>
-                </AnimatedText>
-
-                <AnimatedText
-                  as="div"
-                  className="bg-white p-6 rounded-xl shadow-sm"
-                  delay={0.3}
-                >
-                  <h3 className="text-lg font-semibold mb-3 text-secondary flex items-center">
-                    <span className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                      3
-                    </span>
-                    Income verification
-                  </h3>
-                  <p className="text-gray-600 ml-11">
-                    Submit income details as requested to confirm eligibility
-                    and determine credit limits.
-                  </p>
-                </AnimatedText>
-
-                <AnimatedText
-                  as="div"
-                  className="bg-white p-6 rounded-xl shadow-sm"
-                  delay={0.4}
-                >
-                  <h3 className="text-lg font-semibold mb-3 text-secondary flex items-center">
-                    <span className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                      4
-                    </span>
-                    Review terms
-                  </h3>
-                  <p className="text-gray-600 ml-11">
-                    Carefully review the terms and conditions, including
-                    interest rates, fees, and rewards program details.
-                  </p>
-                </AnimatedText>
-
-                <AnimatedText
-                  as="div"
-                  className="bg-white p-6 rounded-xl shadow-sm"
-                  delay={0.5}
-                >
-                  <h3 className="text-lg font-semibold mb-3 text-secondary flex items-center">
-                    <span className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                      5
-                    </span>
-                    Submit the application
-                  </h3>
-                  <p className="text-gray-600 ml-11">
-                    Once all information is confirmed, submit the application
-                    for an immediate decision.
-                  </p>
-                </AnimatedText>
+                {citiDoubleCashPageContent.applicationSteps.steps.map(
+                  (step, index) => (
+                    <AnimatedText
+                      key={index}
+                      as="div"
+                      className="bg-white p-6 rounded-xl shadow-sm"
+                      delay={0.1 + index * 0.1}
+                    >
+                      <h3 className="text-lg font-semibold mb-3 text-secondary flex items-center">
+                        <span className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                          {step.number}
+                        </span>
+                        {step.title}
+                      </h3>
+                      <p className="text-gray-600 ml-11">{step.description}</p>
+                    </AnimatedText>
+                  )
+                )}
               </div>
 
               <AnimatedText delay={0.6} className="mt-8">
                 <Button
-                  href="/credit-cards/apply/citi-double-cash"
+                  href={citiDoubleCashPageContent.applicationSteps.buttonLink}
                   variant="primary"
                 >
-                  Start Application
+                  {citiDoubleCashPageContent.applicationSteps.buttonText}
                 </Button>
               </AnimatedText>
             </div>
 
             <div>
-              <AdPlaceholder width={300} height={600} className="mx-auto" />
+              <Ad
+                format="portrait"
+                fallbackWidth={300}
+                fallbackHeight={600}
+                className="mx-auto"
+              />
             </div>
           </div>
         </div>
@@ -329,68 +185,23 @@ export default function CitiDoubleCashCard() {
       <section className="py-12 bg-white">
         <div className="container-custom">
           <AnimatedText as="h2" className="text-center mb-12 text-secondary">
-            Benefits of the Citi Double Cash Credit Card
+            {citiDoubleCashPageContent.benefits.title}
           </AnimatedText>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <AnimatedText
-              as="div"
-              className="bg-gray-50 p-6 rounded-xl shadow-sm"
-              delay={0.1}
-            >
-              <h3 className="text-xl font-semibold mb-4 text-secondary">
-                Straightforward Cash-Back rewards
-              </h3>
-              <p className="text-gray-600">
-                With the Citi Double Cash Card, earn 1% cash back when you buy
-                and another 1% when you pay off purchases. This unique structure
-                encourages timely payments and offers cash-back simplicity.
-              </p>
-            </AnimatedText>
-
-            <AnimatedText
-              as="div"
-              className="bg-gray-50 p-6 rounded-xl shadow-sm"
-              delay={0.2}
-            >
-              <h3 className="text-xl font-semibold mb-4 text-secondary">
-                No annual fee
-              </h3>
-              <p className="text-gray-600">
-                With no annual fee, you can maximize rewards without worrying
-                about costs. This feature makes it an accessible option for a
-                range of users.
-              </p>
-            </AnimatedText>
-
-            <AnimatedText
-              as="div"
-              className="bg-gray-50 p-6 rounded-xl shadow-sm"
-              delay={0.3}
-            >
-              <h3 className="text-xl font-semibold mb-4 text-secondary">
-                Versatile redemption options
-              </h3>
-              <p className="text-gray-600">
-                Redeem cash-back rewards as statement credits, deposits, or
-                checks, providing flexibility to suit different needs.
-              </p>
-            </AnimatedText>
-
-            <AnimatedText
-              as="div"
-              className="bg-gray-50 p-6 rounded-xl shadow-sm"
-              delay={0.4}
-            >
-              <h3 className="text-xl font-semibold mb-4 text-secondary">
-                Balance transfer feature
-              </h3>
-              <p className="text-gray-600">
-                Citi offers an introductory APR on balance transfers, which can
-                be useful for consolidating debt. Keep in mind, however, that
-                transfer fees may apply.
-              </p>
-            </AnimatedText>
+            {citiDoubleCashPageContent.benefits.items.map((benefit, index) => (
+              <AnimatedText
+                key={index}
+                as="div"
+                className="bg-gray-50 p-6 rounded-xl shadow-sm"
+                delay={0.1 + index * 0.1}
+              >
+                <h3 className="text-xl font-semibold mb-4 text-secondary">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-600">{benefit.description}</p>
+              </AnimatedText>
+            ))}
           </div>
         </div>
       </section>
@@ -398,21 +209,19 @@ export default function CitiDoubleCashCard() {
       <section className="py-12 bg-primary text-white">
         <div className="container-custom text-center">
           <AnimatedText as="h2" className="mb-6">
-            Ready to enjoy these benefits?
+            {citiDoubleCashPageContent.callToAction.title}
           </AnimatedText>
 
           <AnimatedText as="p" className="mb-8 max-w-2xl mx-auto" delay={0.1}>
-            Apply for the Citi Double Cash Credit Card today and start earning
-            cash back on every purchase. Our simple application process takes
-            just minutes to complete.
+            {citiDoubleCashPageContent.callToAction.description}
           </AnimatedText>
 
           <AnimatedText delay={0.2}>
             <Button
-              href="/credit-cards/apply/citi-double-cash"
+              href={citiDoubleCashPageContent.callToAction.buttonLink}
               variant="secondary"
             >
-              Apply Now
+              {citiDoubleCashPageContent.callToAction.buttonText}
             </Button>
           </AnimatedText>
         </div>

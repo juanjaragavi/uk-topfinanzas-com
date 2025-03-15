@@ -2,7 +2,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { AnimatedText } from "@/components/ui/animated-text";
 import { AnimatedImage } from "@/components/ui/animated-image";
-import { AdPlaceholder } from "@/components/ui/ad-placeholder";
+import { Ad } from "@/components/ui/ad";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -193,7 +193,12 @@ export default function CreditCardRecommendation() {
             </div>
 
             <div>
-              <AdPlaceholder width={300} height={600} className="mx-auto" />
+              <Ad
+                format="portrait"
+                fallbackWidth={300}
+                fallbackHeight={600}
+                className="mx-auto"
+              />
             </div>
           </div>
         </div>
