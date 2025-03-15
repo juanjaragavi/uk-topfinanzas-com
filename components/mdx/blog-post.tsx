@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { BlogLayout } from "@/components/layout/blog-layout";
 import { ReactNode } from "react";
@@ -22,9 +22,7 @@ interface BlogPostProps {
 export function BlogPost({ children, metadata }: BlogPostProps) {
   return (
     <BlogLayout metadata={metadata}>
-      <div className="prose prose-lg max-w-none">
-        {children}
-      </div>
+      <div className="prose prose-lg max-w-none">{children}</div>
     </BlogLayout>
   );
 }

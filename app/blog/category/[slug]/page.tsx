@@ -22,14 +22,62 @@ type BlogPostMetadata = {
 
 // Sample categories with post counts
 const CATEGORIES = [
-  { name: "Personal Finance", slug: "personal-finance", count: 12, description: "Practical advice to help you manage your money, build savings, and plan for the future." },
-  { name: "Credit Cards", slug: "credit-cards", count: 8, description: "Tips for choosing the right credit cards, maximizing rewards, and managing credit responsibly." },
-  { name: "Mortgages", slug: "mortgages", count: 6, description: "Everything you need to know about home loans, refinancing, and the mortgage application process." },
-  { name: "Investing", slug: "investing", count: 5, description: "Guidance on investment strategies, portfolio management, and building long-term wealth." },
-  { name: "Budgeting", slug: "budgeting", count: 4, description: "Step-by-step guides for creating and sticking to a budget that works for your lifestyle." },
-  { name: "Student Loans", slug: "student-loans", count: 3, description: "Advice on managing student loan debt, repayment options, and loan forgiveness programs." },
-  { name: "Retirement", slug: "retirement", count: 3, description: "Strategies for retirement planning and making the most of your retirement accounts." },
-  { name: "Taxes", slug: "taxes", count: 2, description: "Information on tax planning, deductions, and maximizing your tax refund." },
+  {
+    name: "Personal Finance",
+    slug: "personal-finance",
+    count: 12,
+    description:
+      "Practical advice to help you manage your money, build savings, and plan for the future.",
+  },
+  {
+    name: "Credit Cards",
+    slug: "credit-cards",
+    count: 8,
+    description:
+      "Tips for choosing the right credit cards, maximizing rewards, and managing credit responsibly.",
+  },
+  {
+    name: "Mortgages",
+    slug: "mortgages",
+    count: 6,
+    description:
+      "Everything you need to know about home loans, refinancing, and the mortgage application process.",
+  },
+  {
+    name: "Investing",
+    slug: "investing",
+    count: 5,
+    description:
+      "Guidance on investment strategies, portfolio management, and building long-term wealth.",
+  },
+  {
+    name: "Budgeting",
+    slug: "budgeting",
+    count: 4,
+    description:
+      "Step-by-step guides for creating and sticking to a budget that works for your lifestyle.",
+  },
+  {
+    name: "Student Loans",
+    slug: "student-loans",
+    count: 3,
+    description:
+      "Advice on managing student loan debt, repayment options, and loan forgiveness programs.",
+  },
+  {
+    name: "Retirement",
+    slug: "retirement",
+    count: 3,
+    description:
+      "Strategies for retirement planning and making the most of your retirement accounts.",
+  },
+  {
+    name: "Taxes",
+    slug: "taxes",
+    count: 2,
+    description:
+      "Information on tax planning, deductions, and maximizing your tax refund.",
+  },
 ];
 
 // This would typically come from a CMS or database - simplified for demo
@@ -41,12 +89,13 @@ const BLOG_POSTS_DATA: { [key: string]: BlogPostMetadata } = {
     authorImage: "https://media.topfinanzas.com/images/favicon.png",
     readingTime: "6 minute read",
     categories: [{ name: "Personal Finance", slug: "personal-finance" }],
-    featuredImage: "https://media.topfinanzas.com/images/generated/1741659352997/sample_0.jpg",
+    featuredImage:
+      "https://media.topfinanzas.com/images/generated/1741659352997/sample_0.jpg",
     excerpt:
       "Welcome to the working world, where your first paycheck marks the start of a new chapter full of opportunities and responsibilities.",
     views: 721,
     commentCount: 0,
-    slug: "your-first-paycheck"
+    slug: "your-first-paycheck",
   },
   "what-is-a-home-mortgage": {
     title: "What Is a Home Mortgage? Your Complete Guide",
@@ -55,12 +104,13 @@ const BLOG_POSTS_DATA: { [key: string]: BlogPostMetadata } = {
     authorImage: "https://media.topfinanzas.com/images/favicon.png",
     readingTime: "8 minute read",
     categories: [{ name: "Mortgages", slug: "mortgages" }],
-    featuredImage: "https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg",
+    featuredImage:
+      "https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg",
     excerpt:
       "A comprehensive guide to understanding home mortgages, types of loans, interest rates, and how to get the best deal.",
     views: 563,
     commentCount: 0,
-    slug: "what-is-a-home-mortgage"
+    slug: "what-is-a-home-mortgage",
   },
   "what-are-online-loans": {
     title: "What Are Online Loans?: A Key Tool in Personal Finances",
@@ -69,31 +119,33 @@ const BLOG_POSTS_DATA: { [key: string]: BlogPostMetadata } = {
     authorImage: "https://media.topfinanzas.com/images/favicon.png",
     readingTime: "5 minute read",
     categories: [{ name: "Personal Finance", slug: "personal-finance" }],
-    featuredImage: "https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg",
+    featuredImage:
+      "https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg",
     excerpt:
       "In an increasingly digital world, online loans have emerged as a fundamental financial option for many Americans.",
     views: 412,
     commentCount: 0,
-    slug: "what-are-online-loans"
+    slug: "what-are-online-loans",
   },
   "5-tips-for-choosing-an-online-loan": {
     title: "5 Tips for Choosing an Online Loan: Quick Guide",
     date: "February 25, 2025",
     author: "Top Finance",
     authorImage: "https://media.topfinanzas.com/images/favicon.png",
-    readingTime: "4 minute read", 
+    readingTime: "4 minute read",
     categories: [{ name: "Personal Finance", slug: "personal-finance" }],
-    featuredImage: "https://media.topfinanzas.com/images/generated/1741732471632/sample_0.jpg",
+    featuredImage:
+      "https://media.topfinanzas.com/images/generated/1741732471632/sample_0.jpg",
     excerpt:
       "Navigate the world of online loans with confidence using these essential tips to find the best rates and terms.",
     views: 345,
     commentCount: 0,
-    slug: "5-tips-for-choosing-an-online-loan"
+    slug: "5-tips-for-choosing-an-online-loan",
   },
 };
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
-  const category = CATEGORIES.find(cat => cat.slug === params.slug);
+  const category = CATEGORIES.find((cat) => cat.slug === params.slug);
 
   if (!category) {
     return {
@@ -117,29 +169,36 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
   const { slug } = params;
 
   // Find the category
-  const category = CATEGORIES.find(cat => cat.slug === slug);
+  const category = CATEGORIES.find((cat) => cat.slug === slug);
   if (!category) {
     notFound();
   }
 
   // Get posts for this category
-  const posts = Object.values(BLOG_POSTS_DATA).filter(post => 
-    post.categories.some(cat => cat.slug === slug)
+  const posts = Object.values(BLOG_POSTS_DATA).filter((post) =>
+    post.categories.some((cat) => cat.slug === slug)
   );
 
   return (
-    <BlogLayout metadata={{
-      title: `${category.name} - Top Finance Blog`,
-      description: category.description,
-    }}>
+    <BlogLayout
+      metadata={{
+        title: `${category.name} - Top Finance Blog`,
+        description: category.description,
+      }}
+    >
       <div className="mb-8">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{category.name}</h1>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          {category.name}
+        </h1>
         <p className="text-gray-600 text-lg">{category.description}</p>
       </div>
 
       <div className="grid grid-cols-1 gap-8">
         {posts.map((post) => (
-          <div key={post.slug} className="bg-white rounded-lg shadow-sm overflow-hidden group">
+          <div
+            key={post.slug}
+            className="bg-white rounded-lg shadow-sm overflow-hidden group"
+          >
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               <div className="md:col-span-2">
                 <div className="relative h-48 md:h-full rounded-t-lg md:rounded-l-lg md:rounded-tr-none overflow-hidden">
@@ -167,9 +226,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                     {post.title}
                   </Link>
                 </h2>
-                <p className="text-gray-600 mb-4">
-                  {post.excerpt}
-                </p>
+                <p className="text-gray-600 mb-4">{post.excerpt}</p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     <Image
@@ -195,10 +252,15 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
 
         {posts.length === 0 && (
           <div className="text-center py-12">
-            <h2 className="text-xl font-semibold mb-4">No posts found in this category</h2>
-            <p className="text-gray-600 mb-6">We haven't published any articles in this category yet. Check back soon!</p>
-            <Link 
-              href="/blog" 
+            <h2 className="text-xl font-semibold mb-4">
+              No posts found in this category
+            </h2>
+            <p className="text-gray-600 mb-6">
+              We haven't published any articles in this category yet. Check back
+              soon!
+            </p>
+            <Link
+              href="/blog"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors"
             >
               Return to blog

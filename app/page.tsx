@@ -176,9 +176,13 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
             {/* Square ad instead of skyscraper */}
             <div className="md:col-span-3 flex justify-center">
-              <AdPlaceholder width={300} height={300} className="sticky top-24" />
+              <AdPlaceholder
+                width={300}
+                height={300}
+                className="sticky top-24"
+              />
             </div>
-            
+
             {/* Articles in 3-column grid */}
             <div className="md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-xl shadow-lg overflow-hidden group">
@@ -210,8 +214,8 @@ export default function Home() {
                     </Link>
                   </h3>
                   <p className="text-gray-600 mb-4 line-clamp-2">
-                    A comprehensive guide to understanding home mortgages, types of
-                    loans, interest rates, and how to get the best deal.
+                    A comprehensive guide to understanding home mortgages, types
+                    of loans, interest rates, and how to get the best deal.
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
@@ -260,8 +264,8 @@ export default function Home() {
                     </Link>
                   </h3>
                   <p className="text-gray-600 mb-4 line-clamp-2">
-                    In an increasingly digital world, online loans have emerged as
-                    a fundamental financial option for many Americans.
+                    In an increasingly digital world, online loans have emerged
+                    as a fundamental financial option for many Americans.
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
@@ -310,8 +314,8 @@ export default function Home() {
                     </Link>
                   </h3>
                   <p className="text-gray-600 mb-4 line-clamp-2">
-                    Navigate the world of online loans with confidence using these
-                    essential tips to find the best rates and terms.
+                    Navigate the world of online loans with confidence using
+                    these essential tips to find the best rates and terms.
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">

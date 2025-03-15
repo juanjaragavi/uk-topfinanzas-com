@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -28,10 +28,8 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             {/* Main content */}
             <div className="lg:col-span-8">
-              <div className="prose prose-lg max-w-none">
-                {children}
-              </div>
-              
+              <div className="prose prose-lg max-w-none">{children}</div>
+
               {/* Bottom ad placeholder */}
               <div className="flex justify-center my-12">
                 <AdPlaceholder width={728} height={90} className="mx-auto" />
@@ -60,7 +58,8 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     <div>
                       <h4 className="font-medium hover:text-blue-600 transition-colors">
                         <a href="/blog/post/your-first-paycheck">
-                          Your First Paycheck: A Complete Guide to Smart Management
+                          Your First Paycheck: A Complete Guide to Smart
+                          Management
                         </a>
                       </h4>
                       <p className="text-sm text-gray-500">February 25, 2025</p>
@@ -92,7 +91,8 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     <div>
                       <h4 className="font-medium hover:text-blue-600 transition-colors">
                         <a href="/blog/post/what-are-online-loans">
-                          What Are Online Loans?: A Key Tool in Personal Finances
+                          What Are Online Loans?: A Key Tool in Personal
+                          Finances
                         </a>
                       </h4>
                       <p className="text-sm text-gray-500">February 25, 2025</p>

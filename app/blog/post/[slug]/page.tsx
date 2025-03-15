@@ -37,7 +37,8 @@ const BLOG_POSTS_DATA: BlogPostsData = {
     authorImage: "https://media.topfinanzas.com/images/favicon.png",
     readingTime: "6 minute read",
     categories: [{ name: "Personal Finance", slug: "personal-finance" }],
-    featuredImage: "https://media.topfinanzas.com/images/generated/1741659352997/sample_0.jpg",
+    featuredImage:
+      "https://media.topfinanzas.com/images/generated/1741659352997/sample_0.jpg",
     excerpt:
       "Welcome to the working world, where your first paycheck marks the start of a new chapter full of opportunities and responsibilities.",
     views: 721,
@@ -50,7 +51,8 @@ const BLOG_POSTS_DATA: BlogPostsData = {
     authorImage: "https://media.topfinanzas.com/images/favicon.png",
     readingTime: "8 minute read",
     categories: [{ name: "Mortgages", slug: "mortgages" }],
-    featuredImage: "https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg",
+    featuredImage:
+      "https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg",
     excerpt:
       "A comprehensive guide to understanding home mortgages, types of loans, interest rates, and how to get the best deal.",
     views: 563,
@@ -63,7 +65,8 @@ const BLOG_POSTS_DATA: BlogPostsData = {
     authorImage: "https://media.topfinanzas.com/images/favicon.png",
     readingTime: "5 minute read",
     categories: [{ name: "Personal Finance", slug: "personal-finance" }],
-    featuredImage: "https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg",
+    featuredImage:
+      "https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg",
     excerpt:
       "In an increasingly digital world, online loans have emerged as a fundamental financial option for many Americans.",
     views: 412,
@@ -74,9 +77,10 @@ const BLOG_POSTS_DATA: BlogPostsData = {
     date: "February 25, 2025",
     author: "Top Finance",
     authorImage: "https://media.topfinanzas.com/images/favicon.png",
-    readingTime: "4 minute read", 
+    readingTime: "4 minute read",
     categories: [{ name: "Personal Finance", slug: "personal-finance" }],
-    featuredImage: "https://media.topfinanzas.com/images/generated/1741732471632/sample_0.jpg",
+    featuredImage:
+      "https://media.topfinanzas.com/images/generated/1741732471632/sample_0.jpg",
     excerpt:
       "Navigate the world of online loans with confidence using these essential tips to find the best rates and terms.",
     views: 345,
@@ -111,21 +115,21 @@ async function getPostContent(slug: string) {
   try {
     // In a real app, this would fetch from a CMS or file system
     // For now, we'll check if a file exists in the content directory
-    const contentDir = path.join(process.cwd(), 'content/blog');
+    const contentDir = path.join(process.cwd(), "content/blog");
     const mdxFilePath = path.join(contentDir, `${slug}.mdx`);
-    
+
     // Check if the file exists
     if (fs.existsSync(mdxFilePath)) {
       // Read and return the file content
-      const source = fs.readFileSync(mdxFilePath, 'utf8');
+      const source = fs.readFileSync(mdxFilePath, "utf8");
       return source;
     }
-    
+
     // If no file exists, return a placeholder content for demo purposes
     return `
-# ${BLOG_POSTS_DATA[slug]?.title || 'Blog Post'}
+# ${BLOG_POSTS_DATA[slug]?.title || "Blog Post"}
 
-${BLOG_POSTS_DATA[slug]?.excerpt || ''}
+${BLOG_POSTS_DATA[slug]?.excerpt || ""}
 
 ## Introduction
 
@@ -147,7 +151,11 @@ Thank you for reading this blog post.
   }
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+export default async function BlogPostPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const { slug } = params;
 
   // Check if we have metadata for this post
@@ -157,20 +165,16 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
 
   // Get the post metadata
   const postMetadata = BLOG_POSTS_DATA[slug];
-  
+
   // Get the MDX content
   const mdxContent = await getPostContent(slug);
-  
+
   // Compile the MDX content
   const { content } = await compileMDX({
     source: mdxContent,
     components: useMDXComponents({}),
-    options: { parseFrontmatter: true }
+    options: { parseFrontmatter: true },
   });
 
-  return (
-    <BlogPost metadata={postMetadata}>
-      {content}
-    </BlogPost>
-  );
+  return <BlogPost metadata={postMetadata}>{content}</BlogPost>;
 }
