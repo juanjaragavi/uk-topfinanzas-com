@@ -1,8 +1,8 @@
-feat: add legal pages and blog documentation
+feat: add legal pages and blog documentation + prep for production
 
 - Create MDX content files for Terms & Conditions and Privacy Policy pages
 - Implement pages using the Next.js app router and MDX rendering
 - Add comprehensive documentation for blog content creation in app/blog/README.md
 - Document MDX rendering system and frontmatter structure for blog posts
-- Provide detailed guidelines for creating and formatting new blog content
+- Remove orphan navigation links from header and footer components
 - Ensure proper cross-linking between legal documents and consistent styling

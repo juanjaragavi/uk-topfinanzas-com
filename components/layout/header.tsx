@@ -230,18 +230,21 @@ export function Header() {
             </div>
 
             {/* Other Nav Items */}
-            {headerNavigation.mainNavItems.map(
-              (item) =>
-                item.text !== "BLOG" && (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="text-gray-600 hover:text-primary"
-                  >
-                    {item.text}
-                  </Link>
-                )
-            )}
+            {headerNavigation.mainNavItems
+              .filter(item => 
+                item.text !== "BLOG" && 
+                (item.href === "/" || item.href.startsWith("/credit-cards"))
+              )
+              .map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-gray-600 hover:text-primary"
+                >
+                  {item.text}
+                </Link>
+              ))
+            }
 
             {/* Search Button */}
             <Button
@@ -351,20 +354,23 @@ export function Header() {
                   )}
                 </div>
 
-                {/* Main nav items */}
-                {headerNavigation.mainNavItems.map(
-                  (item) =>
-                    item.text !== "BLOG" && (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="block px-4 py-2 text-gray-600 hover:bg-gray-100"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {item.text}
-                      </Link>
-                    )
-                )}
+            {/* Main nav items */}
+            {headerNavigation.mainNavItems
+              .filter(item => 
+                item.text !== "BLOG" && 
+                (item.href === "/" || item.href.startsWith("/credit-cards"))
+              )
+              .map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="block px-4 py-2 text-gray-600 hover:bg-gray-100"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.text}
+                </Link>
+              ))
+            }
 
                 {/* Blog Link */}
                 <Link

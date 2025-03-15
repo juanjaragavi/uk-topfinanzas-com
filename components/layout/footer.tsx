@@ -30,16 +30,18 @@ export function Footer() {
               {footerContent.headings.navigate}
             </h2>
             <ul className="space-y-3">
-              {footerNavigation.mainNavItems.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-white hover:text-[#55B9FF] hover:underline transition-colors"
-                  >
-                    {item.text}
-                  </Link>
-                </li>
-              ))}
+              {footerNavigation.mainNavItems
+                .filter(item => item.href === "/" || item.href === "/blog" || item.href.startsWith("/credit-cards"))
+                .map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="text-white hover:text-[#55B9FF] hover:underline transition-colors"
+                    >
+                      {item.text}
+                    </Link>
+                  </li>
+                ))}
             </ul>
 
             {/* Social Media Section - Moved closer to navigation for better visibility */}
