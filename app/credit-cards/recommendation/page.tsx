@@ -112,7 +112,10 @@ export default function CreditCardRecommendation() {
                     </li>
                   </ul>
 
-                  <AnimatedText delay={0.3} className="flex flex-wrap gap-3 md:gap-4">
+                  <AnimatedText
+                    delay={0.3}
+                    className="flex flex-wrap gap-3 md:gap-4"
+                  >
                     <Button
                       href="/credit-cards/citi-double-cash"
                       variant="primary"
