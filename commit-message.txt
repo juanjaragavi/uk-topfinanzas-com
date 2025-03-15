@@ -1,8 +1,8 @@
-feat: add legal pages and blog documentation + prep for production
+docs: add dynamic content management documentation
 
-- Create MDX content files for Terms & Conditions and Privacy Policy pages
-- Implement pages using the Next.js app router and MDX rendering
-- Add comprehensive documentation for blog content creation in app/blog/README.md
-- Document MDX rendering system and frontmatter structure for blog posts
-- Remove orphan navigation links from header and footer components
-- Ensure proper cross-linking between legal documents and consistent styling
+- Create comprehensive guide for centralized content management in lib/README-DYNAMIC-CONTENT.md
+- Document navigation management structure for header and footer components
+- Explain text content organization for dynamic site elements
+- Provide image and logo management details
+- Include examples for programmatically modifying content through interfaces
+- Add implementation examples showing component integration with content files

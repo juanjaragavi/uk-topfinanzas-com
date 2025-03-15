@@ -31,7 +31,12 @@ export function Footer() {
             </h2>
             <ul className="space-y-3">
               {footerNavigation.mainNavItems
-                .filter(item => item.href === "/" || item.href === "/blog" || item.href.startsWith("/credit-cards"))
+                .filter(
+                  (item) =>
+                    item.href === "/" ||
+                    item.href === "/blog" ||
+                    item.href.startsWith("/credit-cards")
+                )
                 .map((item) => (
                   <li key={item.href}>
                     <Link
