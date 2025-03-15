@@ -54,7 +54,7 @@ export const CreditCardApplicationForm = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="bg-white p-8 rounded-lg shadow-md"
+        className="bg-white p-8 rounded-xl shadow-md"
       >
         <div className="text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6">
@@ -96,7 +96,7 @@ export const CreditCardApplicationForm = () => {
   }
 
   return (
-    <div className="bg-white p-6 md:p-8 rounded-lg shadow-md">
+    <div className="bg-white p-6 md:p-8 rounded-xl shadow-md">
       <div className="mb-8">
         <div className="flex items-center justify-between mb-4">
           {[1, 2, 3].map((step) => (
@@ -469,7 +469,7 @@ export const CreditCardApplicationForm = () => {
               Review Your Application
             </h2>
 
-            <div className="bg-gray-50 p-6 rounded-lg mb-6">
+            <div className="bg-gray-50 p-6 rounded-xl mb-6">
               <h3 className="text-lg font-medium mb-4 text-secondary">
                 Personal Information
               </h3>
@@ -507,7 +507,7 @@ export const CreditCardApplicationForm = () => {
               </div>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg mb-6">
+            <div className="bg-gray-50 p-6 rounded-xl mb-6">
               <h3 className="text-lg font-medium mb-4 text-secondary">
                 Financial Information
               </h3>

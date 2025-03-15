@@ -89,7 +89,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         return (
           <span className="block my-6">
             <img
-              className="rounded-lg mx-auto"
+              className="rounded-xl mx-auto"
               alt={props.alt || ""}
               {...props}
             />
@@ -110,7 +110,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             alt={props.alt || ""}
             width={props.width ? Number(props.width) : 800}
             height={props.height ? Number(props.height) : 450}
-            className="rounded-lg mx-auto"
+            className="rounded-xl mx-auto"
           />
           {props.alt && (
             <span className="block text-center text-sm text-gray-500 mt-2">
@@ -142,7 +142,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     pre: ({ className, ...props }) => (
       <pre
         className={cn(
-          "p-4 bg-gray-900 rounded-lg mb-6 overflow-x-auto text-white",
+          "p-4 bg-gray-900 rounded-xl mb-6 overflow-x-auto text-white",
           className
         )}
         {...props}

@@ -1,6 +1,8 @@
-feat(ui): improve image styling and banner display
+feat(ui): replace placeholders with images & improve styling
 
 - Add rounded-xl class to all images, image containers, and card components
-- Remove duplicate ad placement in blog layout for cleaner UI
-- Decrease banner overlay opacity to improve image visibility
+- Replace all placeholder IMG spans with actual Next.js Image components
+- Add real images from media.topfinanzas.com for blog posts and thumbnails
 - Implement separate mobile-specific banner image for better responsive design
+- Decrease banner overlay opacity to improve image visibility
+- Fix banner positioning to properly display people in images

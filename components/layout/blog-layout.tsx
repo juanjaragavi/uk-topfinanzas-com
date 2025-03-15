@@ -240,7 +240,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
               </div>
 
               {/* Author box */}
-              <div className="mt-8 bg-gray-50 p-6 rounded-lg">
+              <div className="mt-8 bg-gray-50 p-6 rounded-xl">
                 <div className="flex flex-col sm:flex-row items-center sm:items-start">
                   <Image
                     src={authorImage}
@@ -292,7 +292,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
               {/* Comments section */}
               <div className="mt-12 pt-8 border-t border-gray-200">
                 <h3 className="text-2xl font-bold mb-6">Comments</h3>
-                <div className="bg-gray-50 p-6 rounded-lg text-center">
+                <div className="bg-gray-50 p-6 rounded-xl text-center">
                   <p className="text-gray-600 mb-4">
                     Be the first to share your thoughts on this article.
                   </p>
@@ -315,10 +315,14 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded-xl mr-4">
-                      <div className="w-full h-full flex items-center justify-center">
-                        <span className="text-gray-400">IMG</span>
-                      </div>
+                    <div className="relative flex-shrink-0 w-16 h-16 rounded-xl mr-4 overflow-hidden">
+                      <Image
+                        src="https://media.topfinanzas.com/images/generated/1741637181173/sample_0.jpg"
+                        alt="What Is a Home Mortgage? Your Complete Guide"
+                        fill
+                        style={{ objectFit: "cover" }}
+                        className="rounded-xl"
+                      />
                     </div>
                     <div>
                       <h4 className="font-medium hover:text-blue-600 transition-colors">
@@ -331,10 +335,14 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded-xl mr-4">
-                      <div className="w-full h-full flex items-center justify-center">
-                        <span className="text-gray-400">IMG</span>
-                      </div>
+                    <div className="relative flex-shrink-0 w-16 h-16 rounded-xl mr-4 overflow-hidden">
+                      <Image
+                        src="https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg"
+                        alt="What Are Online Loans?: A Key Tool in Personal Finances"
+                        fill
+                        style={{ objectFit: "cover" }}
+                        className="rounded-xl"
+                      />
                     </div>
                     <div>
                       <h4 className="font-medium hover:text-blue-600 transition-colors">
@@ -348,10 +356,14 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded-xl mr-4">
-                      <div className="w-full h-full flex items-center justify-center">
-                        <span className="text-gray-400">IMG</span>
-                      </div>
+                    <div className="relative flex-shrink-0 w-16 h-16 rounded-xl mr-4 overflow-hidden">
+                      <Image
+                        src="https://media.topfinanzas.com/images/generated/1741732471632/sample_0.jpg"
+                        alt="5 Tips for Choosing an Online Loan: Quick Guide"
+                        fill
+                        style={{ objectFit: "cover" }}
+                        className="rounded-xl"
+                      />
                     </div>
                     <div>
                       <h4 className="font-medium hover:text-blue-600 transition-colors">
@@ -430,7 +442,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
               </div>
 
               {/* Newsletter signup */}
-              <div className="p-6 bg-blue-50 rounded-lg">
+              <div className="p-6 bg-blue-50 rounded-xl">
                 <h3 className="text-xl font-bold mb-2">
                   Subscribe to our newsletter
                 </h3>

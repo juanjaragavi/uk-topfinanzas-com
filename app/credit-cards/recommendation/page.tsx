@@ -43,7 +43,7 @@ export default function CreditCardRecommendation() {
           </AnimatedText>
 
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gray-50 p-8 rounded-lg shadow-sm mb-8">
+            <div className="bg-gray-50 p-8 rounded-xl shadow-sm mb-8">
               <div className="flex flex-col md:flex-row gap-8 items-center">
                 <AnimatedImage
                   src="https://media.topfinanzas.com/images/generated/1741659352997/sample_0.jpg"

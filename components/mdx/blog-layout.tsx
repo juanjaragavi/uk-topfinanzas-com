@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { AdPlaceholder } from "@/components/ui/ad-placeholder";
 import { ReactNode } from "react";
+import Image from "next/image";
 
 interface BlogLayoutProps {
   children: ReactNode;
@@ -39,16 +40,20 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
               </div>
 
               {/* Recent articles */}
-              <div className="mb-8 bg-white p-6 rounded-lg shadow-sm">
+              <div className="mb-8 bg-white p-6 shadow-sm rounded-xl">
                 <h3 className="text-xl font-bold mb-4 pb-2 border-b border-gray-200">
                   Recent Articles
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded-xl mr-4">
-                      <div className="w-full h-full flex items-center justify-center">
-                        <span className="text-gray-400">IMG</span>
-                      </div>
+                    <div className="relative flex-shrink-0 w-16 h-16 rounded-xl mr-4 overflow-hidden">
+                      <Image
+                        src="https://media.topfinanzas.com/images/generated/1741659352997/sample_0.jpg"
+                        alt="Your First Paycheck: A Complete Guide to Smart Management"
+                        fill
+                        style={{ objectFit: "cover" }}
+                        className="rounded-xl"
+                      />
                     </div>
                     <div>
                       <h4 className="font-medium hover:text-blue-600 transition-colors">
@@ -62,10 +67,14 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded-xl mr-4">
-                      <div className="w-full h-full flex items-center justify-center">
-                        <span className="text-gray-400">IMG</span>
-                      </div>
+                    <div className="relative flex-shrink-0 w-16 h-16 rounded-xl mr-4 overflow-hidden">
+                      <Image
+                        src="https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg"
+                        alt="What Is a Home Mortgage? Your Complete Guide"
+                        fill
+                        style={{ objectFit: "cover" }}
+                        className="rounded-xl"
+                      />
                     </div>
                     <div>
                       <h4 className="font-medium hover:text-blue-600 transition-colors">
@@ -78,10 +87,14 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded-xl mr-4">
-                      <div className="w-full h-full flex items-center justify-center">
-                        <span className="text-gray-400">IMG</span>
-                      </div>
+                    <div className="relative flex-shrink-0 w-16 h-16 rounded-xl mr-4 overflow-hidden">
+                      <Image
+                        src="https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg"
+                        alt="What Are Online Loans?: A Key Tool in Personal Finances"
+                        fill
+                        style={{ objectFit: "cover" }}
+                        className="rounded-xl"
+                      />
                     </div>
                     <div>
                       <h4 className="font-medium hover:text-blue-600 transition-colors">
@@ -97,7 +110,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
               </div>
 
               {/* Categories */}
-              <div className="mb-8 bg-white p-6 rounded-lg shadow-sm">
+              <div className="mb-8 bg-white p-6 rounded-xl shadow-sm">
                 <h3 className="text-xl font-bold mb-4 pb-2 border-b border-gray-200">
                   Categories
                 </h3>
@@ -161,7 +174,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
               </div>
 
               {/* Newsletter signup */}
-              <div className="p-6 bg-blue-50 rounded-lg shadow-sm">
+              <div className="p-6 bg-blue-50 rounded-xl shadow-sm">
                 <h3 className="text-xl font-bold mb-2">
                   Subscribe to our newsletter
                 </h3>

@@ -41,7 +41,7 @@ export default function ApplyCreditCard() {
             <div className="space-y-6">
               <AdPlaceholder width={300} height={250} className="mx-auto" />
 
-              <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+              <div className="bg-gray-50 p-6 rounded-xl shadow-sm">
                 <AnimatedText
                   as="h3"
                   className="text-lg font-semibold mb-4 text-secondary"

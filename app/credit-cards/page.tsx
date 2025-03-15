@@ -56,7 +56,7 @@ export default function CreditCards() {
           </AnimatedText>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <div className="bg-gray-50 p-6 rounded-xl shadow-sm">
               <AnimatedText
                 as="h3"
                 className="text-xl font-semibold mb-3 text-secondary"
@@ -69,7 +69,7 @@ export default function CreditCards() {
               </AnimatedText>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <div className="bg-gray-50 p-6 rounded-xl shadow-sm">
               <AnimatedText
                 as="h3"
                 className="text-xl font-semibold mb-3 text-secondary"
@@ -82,7 +82,7 @@ export default function CreditCards() {
               </AnimatedText>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <div className="bg-gray-50 p-6 rounded-xl shadow-sm">
               <AnimatedText
                 as="h3"
                 className="text-xl font-semibold mb-3 text-secondary"
@@ -106,7 +106,7 @@ export default function CreditCards() {
                 Our Top Pick For You
               </AnimatedText>
 
-              <div className="bg-white p-6 rounded-lg shadow-md mb-6">
+              <div className="bg-white p-6 rounded-xl shadow-md mb-6">
                 <div className="flex flex-col md:flex-row gap-6">
                   <AnimatedImage
                     src="https://media.topfinanzas.com/images/generated/1741732471632/sample_0.jpg"
@@ -208,7 +208,7 @@ export default function CreditCards() {
           </AnimatedText>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="border border-gray-200 rounded-lg p-6">
+            <div className="border border-gray-200 rounded-xl p-6">
               <AnimatedText
                 as="h3"
                 className="text-lg font-semibold mb-3 text-secondary"
@@ -221,7 +221,7 @@ export default function CreditCards() {
               </AnimatedText>
             </div>
 
-            <div className="border border-gray-200 rounded-lg p-6">
+            <div className="border border-gray-200 rounded-xl p-6">
               <AnimatedText
                 as="h3"
                 className="text-lg font-semibold mb-3 text-secondary"
@@ -234,7 +234,7 @@ export default function CreditCards() {
               </AnimatedText>
             </div>
 
-            <div className="border border-gray-200 rounded-lg p-6">
+            <div className="border border-gray-200 rounded-xl p-6">
               <AnimatedText
                 as="h3"
                 className="text-lg font-semibold mb-3 text-secondary"
@@ -248,7 +248,7 @@ export default function CreditCards() {
               </AnimatedText>
             </div>
 
-            <div className="border border-gray-200 rounded-lg p-6">
+            <div className="border border-gray-200 rounded-xl p-6">
               <AnimatedText
                 as="h3"
                 className="text-lg font-semibold mb-3 text-secondary"

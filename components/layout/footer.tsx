@@ -160,7 +160,7 @@ export function Footer() {
         </div>
 
         {/* Disclaimer with updated styling */}
-        <div className="text-jusfity text-sm leading-relaxed max-w-4xl mx-auto mb-8 bg-[#274890]/50 p-4 rounded-lg">
+        <div className="text-jusfity text-sm leading-relaxed max-w-4xl mx-auto mb-8 bg-[#274890]/50 p-4 rounded-xl">
           <p className="text-white/90">
             <span className="font-semibold text-[#7BDC54]">
               {footerContent.legal.disclaimer.label}

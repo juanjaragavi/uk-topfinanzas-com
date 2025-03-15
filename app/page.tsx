@@ -82,7 +82,7 @@ export default function Home() {
           </p>
 
           {/* Featured post */}
-          <div className="bg-white rounded-lg shadow-sm overflow-hidden mb-12">
+          <div className="bg-white rounded-xl shadow-sm overflow-hidden mb-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               <motion.div
                 className="relative h-64 lg:h-full rounded-xl shadow-lg overflow-hidden"
@@ -380,7 +380,7 @@ export default function Home() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <div className="bg-gray-50 p-6 rounded-xl shadow-sm">
               <h3 className="text-xl font-semibold mb-3 text-secondary">
                 Personalized options
               </h3>
@@ -390,7 +390,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <div className="bg-gray-50 p-6 rounded-xl shadow-sm">
               <h3 className="text-xl font-semibold mb-3 text-secondary">
                 100% free to explore
               </h3>
@@ -400,7 +400,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <div className="bg-gray-50 p-6 rounded-xl shadow-sm">
               <h3 className="text-xl font-semibold mb-3 text-secondary">
                 Expert guidance
               </h3>
@@ -451,7 +451,7 @@ export default function Home() {
           <h2 className="text-center mb-8 text-secondary">FAQs</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="border border-gray-200 rounded-lg p-6">
+            <div className="border border-gray-200 rounded-xl p-6">
               <h3 className="text-lg font-semibold mb-3 text-secondary">
                 How can a low APR benefit me?
               </h3>
@@ -461,7 +461,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="border border-gray-200 rounded-lg p-6">
+            <div className="border border-gray-200 rounded-xl p-6">
               <h3 className="text-lg font-semibold mb-3 text-secondary">
                 What are the perks of a no-annual-fee card?
               </h3>
@@ -471,7 +471,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="border border-gray-200 rounded-lg p-6">
+            <div className="border border-gray-200 rounded-xl p-6">
               <h3 className="text-lg font-semibold mb-3 text-secondary">
                 How do points and cashback differ?
               </h3>
@@ -482,7 +482,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="border border-gray-200 rounded-lg p-6">
+            <div className="border border-gray-200 rounded-xl p-6">
               <h3 className="text-lg font-semibold mb-3 text-secondary">
                 What factors should I consider when choosing a credit card?
               </h3>

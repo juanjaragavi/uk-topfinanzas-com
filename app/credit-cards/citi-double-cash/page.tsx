@@ -74,7 +74,7 @@ export default function CitiDoubleCashCard() {
             Requirements for the Citi Double Cash Credit Card
           </AnimatedText>
 
-          <div className="max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg shadow-sm">
+          <div className="max-w-4xl mx-auto bg-gray-50 p-8 rounded-xl shadow-sm">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <AnimatedText
@@ -226,7 +226,7 @@ export default function CitiDoubleCashCard() {
               <div className="space-y-6">
                 <AnimatedText
                   as="div"
-                  className="bg-white p-6 rounded-lg shadow-sm"
+                  className="bg-white p-6 rounded-xl shadow-sm"
                   delay={0.1}
                 >
                   <h3 className="text-lg font-semibold mb-3 text-secondary flex items-center">
@@ -243,7 +243,7 @@ export default function CitiDoubleCashCard() {
 
                 <AnimatedText
                   as="div"
-                  className="bg-white p-6 rounded-lg shadow-sm"
+                  className="bg-white p-6 rounded-xl shadow-sm"
                   delay={0.2}
                 >
                   <h3 className="text-lg font-semibold mb-3 text-secondary flex items-center">
@@ -259,7 +259,7 @@ export default function CitiDoubleCashCard() {
 
                 <AnimatedText
                   as="div"
-                  className="bg-white p-6 rounded-lg shadow-sm"
+                  className="bg-white p-6 rounded-xl shadow-sm"
                   delay={0.3}
                 >
                   <h3 className="text-lg font-semibold mb-3 text-secondary flex items-center">
@@ -276,7 +276,7 @@ export default function CitiDoubleCashCard() {
 
                 <AnimatedText
                   as="div"
-                  className="bg-white p-6 rounded-lg shadow-sm"
+                  className="bg-white p-6 rounded-xl shadow-sm"
                   delay={0.4}
                 >
                   <h3 className="text-lg font-semibold mb-3 text-secondary flex items-center">
@@ -293,7 +293,7 @@ export default function CitiDoubleCashCard() {
 
                 <AnimatedText
                   as="div"
-                  className="bg-white p-6 rounded-lg shadow-sm"
+                  className="bg-white p-6 rounded-xl shadow-sm"
                   delay={0.5}
                 >
                   <h3 className="text-lg font-semibold mb-3 text-secondary flex items-center">
@@ -335,7 +335,7 @@ export default function CitiDoubleCashCard() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <AnimatedText
               as="div"
-              className="bg-gray-50 p-6 rounded-lg shadow-sm"
+              className="bg-gray-50 p-6 rounded-xl shadow-sm"
               delay={0.1}
             >
               <h3 className="text-xl font-semibold mb-4 text-secondary">
@@ -350,7 +350,7 @@ export default function CitiDoubleCashCard() {
 
             <AnimatedText
               as="div"
-              className="bg-gray-50 p-6 rounded-lg shadow-sm"
+              className="bg-gray-50 p-6 rounded-xl shadow-sm"
               delay={0.2}
             >
               <h3 className="text-xl font-semibold mb-4 text-secondary">
@@ -365,7 +365,7 @@ export default function CitiDoubleCashCard() {
 
             <AnimatedText
               as="div"
-              className="bg-gray-50 p-6 rounded-lg shadow-sm"
+              className="bg-gray-50 p-6 rounded-xl shadow-sm"
               delay={0.3}
             >
               <h3 className="text-xl font-semibold mb-4 text-secondary">
@@ -379,7 +379,7 @@ export default function CitiDoubleCashCard() {
 
             <AnimatedText
               as="div"
-              className="bg-gray-50 p-6 rounded-lg shadow-sm"
+              className="bg-gray-50 p-6 rounded-xl shadow-sm"
               delay={0.4}
             >
               <h3 className="text-xl font-semibold mb-4 text-secondary">

@@ -178,7 +178,7 @@ export function Header() {
                                 className="group block"
                                 onClick={() => setActiveMegaMenu(null)}
                               >
-                                <div className="relative aspect-video rounded-lg overflow-hidden mb-2">
+                                <div className="relative aspect-video rounded-xl overflow-hidden mb-2">
                                   <Image
                                     src={post.image}
                                     alt={post.title}
