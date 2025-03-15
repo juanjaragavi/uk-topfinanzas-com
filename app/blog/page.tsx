@@ -20,11 +20,12 @@ const blogPosts = [
     title: "Your First Paycheck: A Complete Guide to Smart Management",
     excerpt:
       "Welcome to the working world, where your first paycheck marks the start of a new chapter full of opportunities and responsibilities.",
-    coverImage: "/placeholder.jpg",
+    coverImage:
+      "https://media.topfinanzas.com/images/generated/1741659352997/sample_0.jpg",
     category: { name: "Personal Finance", slug: "personal-finance" },
     date: "February 25, 2025",
     author: "Top Finance",
-    authorImage: "/placeholder-user.jpg",
+    authorImage: "https://media.topfinanzas.com/images/favicon.png",
     readingTime: "6 min read",
     views: 721,
   },
@@ -33,11 +34,12 @@ const blogPosts = [
     title: "What Is a Home Mortgage? Your Complete Guide",
     excerpt:
       "A comprehensive guide to understanding home mortgages, types of loans, interest rates, and how to get the best deal.",
-    coverImage: "/placeholder.jpg",
+    coverImage:
+      "https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg",
     category: { name: "Mortgages", slug: "mortgages" },
     date: "February 25, 2025",
     author: "Top Finance",
-    authorImage: "/placeholder-user.jpg",
+    authorImage: "https://media.topfinanzas.com/images/favicon.png",
     readingTime: "8 min read",
     views: 563,
   },
@@ -46,11 +48,12 @@ const blogPosts = [
     title: "What Are Online Loans?: A Key Tool in Personal Finances",
     excerpt:
       "In an increasingly digital world, online loans have emerged as a fundamental financial option for many Americans.",
-    coverImage: "/placeholder.jpg",
+    coverImage:
+      "https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg",
     category: { name: "Personal Finance", slug: "personal-finance" },
     date: "February 25, 2025",
     author: "Top Finance",
-    authorImage: "/placeholder-user.jpg",
+    authorImage: "https://media.topfinanzas.com/images/favicon.png",
     readingTime: "5 min read",
     views: 412,
   },
@@ -59,11 +62,12 @@ const blogPosts = [
     title: "5 Tips for Choosing an Online Loan: Quick Guide",
     excerpt:
       "Navigate the world of online loans with confidence using these essential tips to find the best rates and terms.",
-    coverImage: "/placeholder.jpg",
+    coverImage:
+      "https://media.topfinanzas.com/images/generated/1741732471632/sample_0.jpg",
     category: { name: "Personal Finance", slug: "personal-finance" },
     date: "February 25, 2025",
     author: "Top Finance",
-    authorImage: "/placeholder-user.jpg",
+    authorImage: "https://media.topfinanzas.com/images/favicon.png",
     readingTime: "4 min read",
     views: 345,
   },
@@ -73,11 +77,12 @@ const blogPosts = [
       "5 Steps to a Successful Family Budget: Your Route to Financial Stability",
     excerpt:
       "Create a sustainable family budget that works with these five proven steps to achieve financial stability and peace of mind.",
-    coverImage: "/placeholder.jpg",
+    coverImage:
+      "https://storage.googleapis.com/media-topfinanzas-com/images/generated/1741659988009/sample_0.jpg",
     category: { name: "Budgeting", slug: "budgeting" },
     date: "February 24, 2025",
     author: "Top Finance",
-    authorImage: "/placeholder-user.jpg",
+    authorImage: "https://media.topfinanzas.com/images/favicon.png",
     readingTime: "7 min read",
     views: 287,
   },
@@ -86,11 +91,12 @@ const blogPosts = [
     title: "Understanding Credit Card Interest Rates: A Guide for Consumers",
     excerpt:
       "Demystify credit card interest rates and learn how to minimize interest charges to make smarter financial decisions.",
-    coverImage: "/placeholder.jpg",
+    coverImage:
+      "https://media.topfinanzas.com/images/generated/1741904486433/sample_0.jpg",
     category: { name: "Credit Cards", slug: "credit-cards" },
     date: "February 18, 2025",
     author: "Top Finance",
-    authorImage: "/placeholder-user.jpg",
+    authorImage: "https://media.topfinanzas.com/images/favicon.png",
     readingTime: "6 min read",
     views: 456,
   },
