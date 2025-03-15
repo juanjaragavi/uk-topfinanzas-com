@@ -15,17 +15,22 @@ export default function Home() {
 
       {/* Banner Section */}
       <motion.section
-        className="relative py-24 md:py-32 lg:py-40 bg-cover bg-center"
+        className="relative py-16 md:py-24 lg:py-40 bg-cover bg-no-repeat"
         style={{
           backgroundImage: `url(https://media.topfinanzas.com/images/banner-home.webp)`,
+          backgroundPosition: "center 30%", // Adjusted position for better focus on subjects
+          backgroundSize: "cover",
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black opacity-50 md:opacity-40"></div>
+        
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.h1
-            className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+            className="text-white text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 drop-shadow-lg"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
@@ -33,7 +38,7 @@ export default function Home() {
             Welcome to Top Finance
           </motion.h1>
           <motion.p
-            className="text-white text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-8"
+            className="text-white text-base md:text-xl lg:text-2xl max-w-3xl mx-auto mb-6 md:mb-8 drop-shadow-md"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.5 }}
@@ -42,7 +47,6 @@ export default function Home() {
             live fully.
           </motion.p>
         </div>
-        <div className="absolute inset-0 bg-black opacity-40"></div>
       </motion.section>
 
       {/* Blog Section */}
