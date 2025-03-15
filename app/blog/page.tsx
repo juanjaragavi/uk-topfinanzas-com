@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import Link from "next/link";
@@ -138,7 +139,12 @@ export default function BlogPage() {
           {/* Featured post */}
           <div className="bg-white rounded-lg shadow-sm overflow-hidden mb-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-              <div className="relative h-64 lg:h-full">
+              <motion.div
+                className="relative h-64 lg:h-full rounded-xl shadow-lg overflow-hidden"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
                 <Image
                   src={featuredPost.coverImage}
                   alt={featuredPost.title}
@@ -158,7 +164,7 @@ export default function BlogPage() {
                     {featuredPost.title}
                   </h2>
                 </div>
-              </div>
+              </motion.div>
               <div className="p-6 lg:p-8">
                 <div className="hidden lg:block">
                   <Link
@@ -227,20 +233,23 @@ export default function BlogPage() {
           {/* Latest articles grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {otherPosts.map((post) => (
-              <div
+              <motion.div
                 key={post.slug}
-                className="bg-white rounded-lg shadow-sm overflow-hidden group"
+                className="bg-white rounded-xl shadow-lg overflow-hidden group"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
               >
                 <Link
                   href={`/blog/post/${post.slug}`}
-                  className="block relative h-48"
+                  className="block relative h-48 rounded-t-xl overflow-hidden"
                 >
                   <Image
                     src={post.coverImage}
                     alt={post.title}
                     fill
                     style={{ objectFit: "cover" }}
-                    className="transition-transform duration-500 ease-in-out group-hover:scale-105"
+                    className="transition-transform duration-500 ease-in-out group-hover:scale-105 rounded-t-xl"
                   />
                 </Link>
                 <div className="p-6">
@@ -280,7 +289,7 @@ export default function BlogPage() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
