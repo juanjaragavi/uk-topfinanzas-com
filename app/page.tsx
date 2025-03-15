@@ -73,7 +73,7 @@ export default function Home() {
       {/* Blog Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4">
+          <h1 className="text-blue-700 text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4">
             Finance Blog
           </h1>
           <p className="text-gray-600 text-lg text-center max-w-3xl mx-auto mb-10">
@@ -200,7 +200,7 @@ export default function Home() {
           {/* Latest articles grid with skyscraper ad */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
             {/* Square ad instead of skyscraper */}
-            <div className="md:col-span-3 flex justify-center">
+            <div className="hidden md:col-span-3 sm:flex justify-center">
               <AdPlaceholder
                 width={300}
                 height={300}
@@ -360,6 +360,13 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="sm:hidden md:col-span-3 flex justify-center">
+              <AdPlaceholder
+                width={300}
+                height={300}
+                className="sticky top-24"
+              />
             </div>
           </div>
         </div>
