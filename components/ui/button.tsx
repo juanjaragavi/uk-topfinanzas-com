@@ -25,7 +25,7 @@ export type ButtonProps = ButtonAsButtonProps | ButtonAsLinkProps
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ variant = "primary", showArrow = false, fullWidth = false, className, children, ...props }, ref) => {
     const buttonStyles = cn(
-      "inline-flex items-center justify-center px-8 py-3 text-base font-medium transition-colors duration-200 rounded-full",
+      "inline-flex items-center justify-center px-5 md:px-6 py-2 md:py-2.5 text-sm md:text-base font-medium transition-colors duration-200 rounded-full whitespace-nowrap",
       {
         "bg-[#4ADE80] hover:bg-[#22C55E] text-white": variant === "primary",
         "bg-white hover:bg-gray-100 text-gray-900 border border-gray-300": variant === "secondary",
