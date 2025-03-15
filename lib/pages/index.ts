@@ -5,11 +5,11 @@
  */
 
 // Credit Cards journey content
-export * from './credit-cards/main';
-export * from './credit-cards/citi-double-cash';
-export * from './credit-cards/recommendation';
-export * from './credit-cards/apply';
-export * from './credit-cards/apply-citi-double-cash';
+export * from "./credit-cards/main";
+export * from "./credit-cards/citi-double-cash";
+export * from "./credit-cards/recommendation";
+export * from "./credit-cards/apply";
+export * from "./credit-cards/apply-citi-double-cash";
 
 // Add other journeys here as they are created
 // Example:

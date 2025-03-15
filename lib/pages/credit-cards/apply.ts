@@ -24,34 +24,35 @@ export interface CreditCardApplicationPageContent {
 }
 
 // Page content implementation
-export const creditCardApplicationPageContent: CreditCardApplicationPageContent = {
-  metadata: {
-    title: "Apply for a Credit Card - TopFinanzas",
-    description:
-      "Apply for a credit card online. Quick and secure application process with fast approval.",
-    keywords:
-      "credit card application, apply for credit card, online application, TopFinanzas",
-  },
-  hero: {
-    title: "Credit Card Application",
-    description:
-      "Complete the form below to apply for your selected credit card. Your information is secure and will only be used for processing your application.",
-  },
-  benefits: {
-    title: "Why Choose TopFinanzas?",
-    items: [
-      {
-        text: "Secure application process",
-      },
-      {
-        text: "Fast approval decisions",
-      },
-      {
-        text: "No impact on credit score to check rates",
-      },
-      {
-        text: "Expert support throughout the process",
-      },
-    ],
-  },
-};
+export const creditCardApplicationPageContent: CreditCardApplicationPageContent =
+  {
+    metadata: {
+      title: "Apply for a Credit Card - TopFinanzas",
+      description:
+        "Apply for a credit card online. Quick and secure application process with fast approval.",
+      keywords:
+        "credit card application, apply for credit card, online application, TopFinanzas",
+    },
+    hero: {
+      title: "Credit Card Application",
+      description:
+        "Complete the form below to apply for your selected credit card. Your information is secure and will only be used for processing your application.",
+    },
+    benefits: {
+      title: "Why Choose TopFinanzas?",
+      items: [
+        {
+          text: "Secure application process",
+        },
+        {
+          text: "Fast approval decisions",
+        },
+        {
+          text: "No impact on credit score to check rates",
+        },
+        {
+          text: "Expert support throughout the process",
+        },
+      ],
+    },
+  };

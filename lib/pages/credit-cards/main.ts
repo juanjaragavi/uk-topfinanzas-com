@@ -98,7 +98,8 @@ export const creditCardsPageContent: CreditCardPageContent = {
   },
   featuredCard: {
     title: "Our Top Pick For You",
-    image: "https://media.topfinanzas.com/images/generated/1741732471632/sample_0.jpg",
+    image:
+      "https://media.topfinanzas.com/images/generated/1741732471632/sample_0.jpg",
     cardName: "Citi Double Cash Credit Card",
     rating: {
       score: 4.7,
