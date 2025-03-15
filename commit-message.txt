@@ -1,14 +1,6 @@
-fix(navigation): improve header mega menu behavior and responsiveness
+feat(ui): improve image styling and banner display
 
-- Fix menu overflow issue by repositioning and setting max width/height
-- Add scroll capability for tall menus with viewport constraints
-- Implement robust toggle behavior with proper ref management
-- Fix TypeScript errors related to ref callbacks
-- Update responsive grid for better mobile menu behavior
-- Ensure proper closure of menus when clicking toggle buttons
-- Add responsive styling for mega menu columns
-- Maintain menu state with improved event handling
-
-This commit resolves the issues with menu overflow and toggle behavior,
-ensuring proper menu interactions across viewport sizes while maintaining
-accessibility and responsiveness throughout the navigation system.
+- Add rounded-xl class to all images, image containers, and card components
+- Remove duplicate ad placement in blog layout for cleaner UI
+- Decrease banner overlay opacity to improve image visibility
+- Implement separate mobile-specific banner image for better responsive design

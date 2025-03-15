@@ -29,11 +29,6 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
             {/* Main content */}
             <div className="lg:col-span-8">
               <div className="prose prose-lg max-w-none">{children}</div>
-
-              {/* Bottom ad placeholder */}
-              <div className="flex justify-center my-12">
-                <AdPlaceholder width={728} height={90} className="mx-auto" />
-              </div>
             </div>
 
             {/* Sidebar */}
@@ -50,7 +45,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded mr-4">
+                    <div className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded-xl mr-4">
                       <div className="w-full h-full flex items-center justify-center">
                         <span className="text-gray-400">IMG</span>
                       </div>
@@ -67,7 +62,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded mr-4">
+                    <div className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded-xl mr-4">
                       <div className="w-full h-full flex items-center justify-center">
                         <span className="text-gray-400">IMG</span>
                       </div>
@@ -83,7 +78,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded mr-4">
+                    <div className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded-xl mr-4">
                       <div className="w-full h-full flex items-center justify-center">
                         <span className="text-gray-400">IMG</span>
                       </div>

@@ -36,8 +36,10 @@ export default function Home() {
       <motion.section
         className="relative py-16 md:py-24 lg:py-40 bg-cover bg-no-repeat"
         style={{
-          backgroundImage: `url(https://media.topfinanzas.com/images/banner-home.webp)`,
-          backgroundPosition: isMobile ? "left 30%" : "center 30%",
+          backgroundImage: isMobile
+            ? `url(https://media.topfinanzas.com/images/banner-home-mobile.webp)`
+            : `url(https://media.topfinanzas.com/images/banner-home.webp)`,
+          backgroundPosition: "center center",
           backgroundSize: "cover",
         }}
         initial={{ opacity: 0 }}
@@ -45,7 +47,7 @@ export default function Home() {
         transition={{ duration: 1 }}
       >
         {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black opacity-50 md:opacity-40"></div>
+        <div className="absolute inset-0 bg-black opacity-30 md:opacity-25"></div>
 
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.h1
@@ -93,7 +95,7 @@ export default function Home() {
                   alt="Your First Paycheck: A Complete Guide to Smart Management"
                   fill
                   style={{ objectFit: "cover" }}
-                  className="transition-transform duration-500 ease-in-out group-hover:scale-105"
+                  className="transition-transform duration-500 ease-in-out group-hover:scale-105 rounded-xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 lg:hidden"></div>
                 <div className="absolute bottom-0 left-0 p-4 lg:hidden">
@@ -136,7 +138,7 @@ export default function Home() {
                     alt="Top Finance"
                     width={40}
                     height={40}
-                    className="rounded-full mr-3"
+                    className="rounded-xl mr-3"
                   />
                   <div>
                     <div className="font-medium">Top Finance</div>
@@ -247,7 +249,7 @@ export default function Home() {
                         alt="Top Finance"
                         width={32}
                         height={32}
-                        className="rounded-full mr-2"
+                        className="rounded-xl mr-2"
                       />
                       <div className="text-sm">
                         <span className="text-gray-900">Top Finance</span>
@@ -297,7 +299,7 @@ export default function Home() {
                         alt="Top Finance"
                         width={32}
                         height={32}
-                        className="rounded-full mr-2"
+                        className="rounded-xl mr-2"
                       />
                       <div className="text-sm">
                         <span className="text-gray-900">Top Finance</span>
@@ -347,7 +349,7 @@ export default function Home() {
                         alt="Top Finance"
                         width={32}
                         height={32}
-                        className="rounded-full mr-2"
+                        className="rounded-xl mr-2"
                       />
                       <div className="text-sm">
                         <span className="text-gray-900">Top Finance</span>

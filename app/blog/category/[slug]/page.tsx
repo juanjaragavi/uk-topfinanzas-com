@@ -197,17 +197,17 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
         {posts.map((post) => (
           <div
             key={post.slug}
-            className="bg-white rounded-lg shadow-sm overflow-hidden group"
+            className="bg-white rounded-xl shadow-sm overflow-hidden group"
           >
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
               <div className="md:col-span-2">
-                <div className="relative h-48 md:h-full rounded-t-lg md:rounded-l-lg md:rounded-tr-none overflow-hidden">
+                <div className="relative h-48 md:h-full rounded-xl md:rounded-l-xl md:rounded-tr-none overflow-hidden">
                   <Image
                     src={post.featuredImage}
                     alt={post.title}
                     fill
                     style={{ objectFit: "cover" }}
-                    className="transition-transform duration-500 ease-in-out group-hover:scale-105"
+                    className="transition-transform duration-500 ease-in-out group-hover:scale-105 rounded-xl"
                   />
                 </div>
               </div>
@@ -234,7 +234,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                       alt={post.author}
                       width={32}
                       height={32}
-                      className="rounded-full mr-2"
+                      className="rounded-xl mr-2"
                     />
                     <div className="text-sm">
                       <span className="text-gray-900">{post.author}</span>

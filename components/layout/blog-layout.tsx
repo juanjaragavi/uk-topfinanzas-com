@@ -96,7 +96,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
               alt={author}
               width={48}
               height={48}
-              className="rounded-full mr-4"
+              className="rounded-xl mr-4"
             />
             <div>
               <div className="font-medium text-gray-900">{author}</div>
@@ -247,7 +247,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     alt={author}
                     width={80}
                     height={80}
-                    className="rounded-full mb-4 sm:mb-0 sm:mr-6"
+                    className="rounded-xl mb-4 sm:mb-0 sm:mr-6"
                   />
                   <div className="text-center sm:text-left">
                     <h3 className="text-xl font-bold mb-2">{author}</h3>
@@ -315,7 +315,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded mr-4">
+                    <div className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded-xl mr-4">
                       <div className="w-full h-full flex items-center justify-center">
                         <span className="text-gray-400">IMG</span>
                       </div>
@@ -331,7 +331,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded mr-4">
+                    <div className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded-xl mr-4">
                       <div className="w-full h-full flex items-center justify-center">
                         <span className="text-gray-400">IMG</span>
                       </div>
@@ -348,7 +348,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded mr-4">
+                    <div className="flex-shrink-0 w-16 h-16 bg-gray-200 rounded-xl mr-4">
                       <div className="w-full h-full flex items-center justify-center">
                         <span className="text-gray-400">IMG</span>
                       </div>
