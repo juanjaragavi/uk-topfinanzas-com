@@ -6,13 +6,11 @@ import { Ad } from "@/components/ui/ad";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Your Credit Card Recommendation - TopFinanzas",
-  description:
-    "View your personalized credit card recommendation based on your financial profile.",
-  keywords:
-    "credit card recommendation, personalized recommendation, credit card match, TopFinanzas",
-};
+// Import the content from our centralized TS file
+import { creditCardRecommendationPageContent } from "@/lib/pages/credit-cards/recommendation";
+
+// Use the metadata directly from our content file
+export const metadata = creditCardRecommendationPageContent.metadata;
 
 export default function CreditCardRecommendation() {
   return (
@@ -22,7 +20,7 @@ export default function CreditCardRecommendation() {
       <section className="py-12 md:py-16 bg-gradient-to-b from-white to-gray-50">
         <div className="container-custom">
           <AnimatedText as="h1" className="text-center mb-6 text-secondary">
-            Your Credit Card Recommendation
+            {creditCardRecommendationPageContent.hero.title}
           </AnimatedText>
 
           <AnimatedText
@@ -30,8 +28,7 @@ export default function CreditCardRecommendation() {
             className="text-center mb-12 text-gray-600 max-w-3xl mx-auto"
             delay={0.1}
           >
-            Based on your profile, we've selected the best credit card option to
-            match your needs.
+            {creditCardRecommendationPageContent.hero.description}
           </AnimatedText>
         </div>
       </section>
@@ -39,17 +36,30 @@ export default function CreditCardRecommendation() {
       <section className="py-12 bg-white">
         <div className="container-custom">
           <AnimatedText as="h2" className="text-center mb-12 text-secondary">
-            Our Top Pick For You
+            {creditCardRecommendationPageContent.recommendedCard.title}
           </AnimatedText>
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-gray-50 p-8 rounded-xl shadow-sm mb-8">
               <div className="flex flex-col md:flex-row gap-8 items-center">
                 <AnimatedImage
-                  src="https://media.topfinanzas.com/images/generated/1741659352997/sample_0.jpg"
-                  alt="Citi Double Cash Credit Card"
-                  width={320}
-                  height={200}
+                  src={
+                    creditCardRecommendationPageContent.recommendedCard.card
+                      .image.src
+                  }
+                  alt={
+                    creditCardRecommendationPageContent.recommendedCard.card
+                      .image.alt
+                  }
+                  width={
+                    creditCardRecommendationPageContent.recommendedCard.card
+                      .image.width
+                  }
+                  height={
+                    creditCardRecommendationPageContent.recommendedCard.card
+                      .image.height
+                  }
+                  className="max-w-[320px] rounded-full overflow-hidden shadow-md"
                 />
 
                 <div>
@@ -57,7 +67,10 @@ export default function CreditCardRecommendation() {
                     as="h3"
                     className="text-2xl font-semibold mb-3 text-secondary"
                   >
-                    Citi Double Cash Credit Card
+                    {
+                      creditCardRecommendationPageContent.recommendedCard.card
+                        .name
+                    }
                   </AnimatedText>
 
                   <div className="flex items-center mb-4">
@@ -69,47 +82,36 @@ export default function CreditCardRecommendation() {
                       <span>★</span>
                     </div>
                     <span className="text-sm text-gray-600 ml-2">
-                      4.7 (2,120 reviews)
+                      {
+                        creditCardRecommendationPageContent.recommendedCard.card
+                          .rating.score
+                      }{" "}
+                      (
+                      {creditCardRecommendationPageContent.recommendedCard.card.rating.count.toLocaleString()}{" "}
+                      reviews)
                     </span>
                   </div>
 
                   <ul className="space-y-2 mb-6">
-                    <li className="flex items-start">
-                      <AnimatedText as="div" className="flex" delay={0.1}>
-                        <span className="text-primary mr-2 font-bold">✓</span>
-                        <span>
-                          <strong>Up to 2% Cash Back:</strong> Earn 1% when you
-                          buy, plus 1% when you pay.
-                        </span>
-                      </AnimatedText>
-                    </li>
-                    <li className="flex items-start">
-                      <AnimatedText as="div" className="flex" delay={0.15}>
-                        <span className="text-primary mr-2 font-bold">✓</span>
-                        <span>
-                          <strong>No Restrictions:</strong> Earn cash back on
-                          every purchase, with no categories to track.
-                        </span>
-                      </AnimatedText>
-                    </li>
-                    <li className="flex items-start">
-                      <AnimatedText as="div" className="flex" delay={0.2}>
-                        <span className="text-primary mr-2 font-bold">✓</span>
-                        <span>
-                          <strong>No Annual Fee:</strong> Enjoy all the benefits
-                          without the cost.
-                        </span>
-                      </AnimatedText>
-                    </li>
-                    <li className="flex items-start">
-                      <AnimatedText as="div" className="flex" delay={0.25}>
-                        <span className="text-primary mr-2 font-bold">✓</span>
-                        <span>
-                          <strong>Intro APR on Balance Transfers:</strong> 0%
-                          for 18 months to pay down debt.
-                        </span>
-                      </AnimatedText>
-                    </li>
+                    {creditCardRecommendationPageContent.recommendedCard.card.benefits.map(
+                      (benefit, index) => (
+                        <li className="flex items-start" key={index}>
+                          <AnimatedText
+                            as="div"
+                            className="flex"
+                            delay={0.1 + index * 0.05}
+                          >
+                            <span className="text-primary mr-2 font-bold">
+                              ✓
+                            </span>
+                            <span>
+                              <strong>{benefit.label}:</strong>{" "}
+                              {benefit.description}
+                            </span>
+                          </AnimatedText>
+                        </li>
+                      )
+                    )}
                   </ul>
 
                   <AnimatedText
@@ -117,16 +119,30 @@ export default function CreditCardRecommendation() {
                     className="flex flex-wrap gap-3 md:gap-4"
                   >
                     <Button
-                      href="/credit-cards/citi-double-cash"
+                      href={
+                        creditCardRecommendationPageContent.recommendedCard.card
+                          .learnMoreButton.link
+                      }
                       variant="primary"
+                      className="rounded-full"
                     >
-                      Learn More
+                      {
+                        creditCardRecommendationPageContent.recommendedCard.card
+                          .learnMoreButton.text
+                      }
                     </Button>
                     <Button
-                      href="/credit-cards/apply/citi-double-cash"
+                      href={
+                        creditCardRecommendationPageContent.recommendedCard.card
+                          .applyButton.link
+                      }
                       variant="secondary"
+                      className="rounded-full"
                     >
-                      Apply Now
+                      {
+                        creditCardRecommendationPageContent.recommendedCard.card
+                          .applyButton.text
+                      }
                     </Button>
                   </AnimatedText>
                 </div>
@@ -141,54 +157,54 @@ export default function CreditCardRecommendation() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               <AnimatedText as="h2" className="mb-6 text-secondary">
-                How the Cash Back Works
+                {creditCardRecommendationPageContent.cashBackExplanation.title}
               </AnimatedText>
 
               <AnimatedText as="p" className="mb-4 text-gray-600" delay={0.1}>
-                One of the standout features of the Citi Double Cash Card is its
-                unique cash-back structure. You don't have to worry about
-                quarterly sign-ups, rotating categories, or making specific
-                purchases to earn high rewards. Here's how it breaks down:
+                {
+                  creditCardRecommendationPageContent.cashBackExplanation
+                    .introduction
+                }
               </AnimatedText>
 
               <ul className="list-disc pl-5 space-y-3 mb-6">
-                <li>
-                  <AnimatedText as="div" delay={0.15}>
-                    <span className="text-gray-700">
-                      <strong>1% when you buy:</strong> On every dollar you
-                      spend, you earn 1% cash back right away.
-                    </span>
-                  </AnimatedText>
-                </li>
-                <li>
-                  <AnimatedText as="div" delay={0.2}>
-                    <span className="text-gray-700">
-                      <strong>1% when you pay:</strong> The second 1% comes when
-                      you make a payment towards your balance.
-                    </span>
-                  </AnimatedText>
-                </li>
-                <li>
-                  <AnimatedText as="div" delay={0.25}>
-                    <span className="text-gray-700">
-                      <strong>No limit on cash back:</strong> You can continue
-                      earning rewards no matter how much you spend.
-                    </span>
-                  </AnimatedText>
-                </li>
+                {creditCardRecommendationPageContent.cashBackExplanation.features.map(
+                  (feature, index) => (
+                    <li key={index}>
+                      <AnimatedText as="div" delay={0.15 + index * 0.05}>
+                        <span className="text-gray-700">
+                          <strong>{feature.title}:</strong>{" "}
+                          {feature.description}
+                        </span>
+                      </AnimatedText>
+                    </li>
+                  )
+                )}
               </ul>
 
               <AnimatedText as="p" className="mb-6 text-gray-600" delay={0.3}>
-                This system is ideal for those who use their credit card for a
-                wide variety of purchases and want to avoid the complexity of
-                other rewards programs. The Citi Double Cash Card ensures that
-                every purchase, no matter how small or large, gives you value.
+                {
+                  creditCardRecommendationPageContent.cashBackExplanation
+                    .conclusion
+                }
               </AnimatedText>
 
               <AnimatedText delay={0.35}>
-                <Button href="/credit-cards/citi-double-cash" variant="primary">
-                  Find Out More
-                </Button>
+                <div className="text-center lg:text-left">
+                  <Button
+                    href={
+                      creditCardRecommendationPageContent.cashBackExplanation
+                        .buttonLink
+                    }
+                    variant="primary"
+                    className="text-lg py-4 px-8 rounded-full text-center"
+                  >
+                    {
+                      creditCardRecommendationPageContent.cashBackExplanation
+                        .buttonText
+                    }
+                  </Button>
+                </div>
               </AnimatedText>
             </div>
 
@@ -207,21 +223,20 @@ export default function CreditCardRecommendation() {
       <section className="py-12 bg-primary text-white">
         <div className="container-custom text-center">
           <AnimatedText as="h2" className="mb-6">
-            Ready to take advantage of these benefits?
+            {creditCardRecommendationPageContent.callToAction.title}
           </AnimatedText>
 
           <AnimatedText as="p" className="mb-8 max-w-2xl mx-auto" delay={0.1}>
-            Apply for the Citi Double Cash Credit Card today and start earning
-            cash back on every purchase. Our simple application process takes
-            just minutes to complete.
+            {creditCardRecommendationPageContent.callToAction.description}
           </AnimatedText>
 
           <AnimatedText delay={0.2}>
             <Button
-              href="/credit-cards/apply/citi-double-cash"
+              href={creditCardRecommendationPageContent.callToAction.buttonLink}
               variant="secondary"
+              className="text-lg py-4 px-10 rounded-full text-center"
             >
-              Apply Now
+              {creditCardRecommendationPageContent.callToAction.buttonText}
             </Button>
           </AnimatedText>
         </div>

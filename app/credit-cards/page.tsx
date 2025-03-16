@@ -89,7 +89,7 @@ export default function CreditCards() {
                     alt={creditCardsPageContent.featuredCard.cardName}
                     width={320}
                     height={200}
-                    className="max-w-[320px] rounded-xl overflow-hidden"
+                    className="max-w-[320px] rounded-xl overflow-hidden shadow-md"
                   />
 
                   <div>
