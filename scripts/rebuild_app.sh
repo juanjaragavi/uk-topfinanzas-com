@@ -8,7 +8,7 @@
 # Variables
 APP_DIR="/var/www/topfinanzas-pages" # Application directory
 LOG_DIR="/var/log/app-rebuilds"         # Directory for log files
-LOG_FILE="${LOG_DIR}/rebuild_app.log"   # Absolute path to log file
+LOG_FILE="${LOG_DIR}/pages_rebuild_app.log"   # Absolute path to log file
 
 # Functions
 
