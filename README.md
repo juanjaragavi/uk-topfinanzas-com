@@ -6,7 +6,7 @@ This is a Next.js project for Top Finanzas, a financial services website. It inc
 
 The project follows a standard Next.js App Router structure with additional organization:
 
-```
+```markdown
 /app                   - Next.js app router directory
   /blog                - Blog pages 
     /category/[slug]   - Category pages
