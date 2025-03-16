@@ -40,7 +40,7 @@ export default function CreditCardRecommendation() {
           </AnimatedText>
 
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gray-50 p-8 rounded-xl shadow-sm mb-8">
+            <div className="bg-gray-50 p-8 mb-8">
               <div className="flex flex-col md:flex-row gap-8 items-center">
                 <AnimatedImage
                   src={
@@ -59,7 +59,7 @@ export default function CreditCardRecommendation() {
                     creditCardRecommendationPageContent.recommendedCard.card
                       .image.height
                   }
-                  className="max-w-[320px] rounded-full overflow-hidden shadow-md"
+                  className="max-w-[320px] rounded-xl overflow-hidden shadow-md"
                 />
 
                 <div>
