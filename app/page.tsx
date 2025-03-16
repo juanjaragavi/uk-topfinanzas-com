@@ -374,7 +374,7 @@ export default function Home() {
 
       {/* Credit Card Recommender Section */}
       <section className="py-12 bg-white">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           <h2 className="text-center mb-12 text-secondary">
             Why Choose Our Card Recommender?
           </h2>
@@ -434,9 +434,15 @@ export default function Home() {
                 fees, we make choosing the right card simple and confident.
               </p>
 
-              <Button href="/credit-cards/citi-double-cash" variant="primary">
-                Learn how to apply
-              </Button>
+              <div className="flex justify-center mt-8">
+                <Button
+                  href="/credit-cards/citi-double-cash"
+                  variant="primary"
+                  className="text-lg py-4 px-6 text-center"
+                >
+                  Learn how to apply
+                </Button>
+              </div>
             </div>
 
             <div>
@@ -509,6 +515,7 @@ export default function Home() {
           <Button
             href="/credit-cards/apply/citi-double-cash"
             variant="secondary"
+            className="text-lg py-4 px-6 text-center"
           >
             Apply now
           </Button>

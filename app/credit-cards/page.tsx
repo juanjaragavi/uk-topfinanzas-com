@@ -19,7 +19,7 @@ export default function CreditCards() {
       <section className="py-12 md:py-16 bg-gradient-to-b from-white to-gray-50">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
+            <div className="text-center lg:text-left">
               <AnimatedText as="h1" className="mb-4 text-secondary">
                 {creditCardsPageContent.hero.title}
               </AnimatedText>
@@ -31,7 +31,7 @@ export default function CreditCards() {
               <AnimatedText delay={0.2}>
                 <Link
                   href={creditCardsPageContent.hero.ctaLink}
-                  className="btn-primary inline-block"
+                  className="btn-primary inline-block text-lg py-4 px-8 rounded-full text-center"
                 >
                   {creditCardsPageContent.hero.ctaText}
                 </Link>
@@ -58,7 +58,7 @@ export default function CreditCards() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {creditCardsPageContent.benefits.items.map((benefit, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-lg shadow-sm">
+              <div key={index} className="bg-gray-50 p-6 rounded-xl shadow-sm">
                 <AnimatedText
                   as="h3"
                   className="text-xl font-semibold mb-3 text-secondary"
@@ -82,14 +82,14 @@ export default function CreditCards() {
                 {creditCardsPageContent.featuredCard.title}
               </AnimatedText>
 
-              <div className="bg-white p-6 rounded-lg shadow-md mb-6">
+              <div className="bg-white p-6 rounded-xl shadow-md mb-6">
                 <div className="flex flex-col md:flex-row gap-6">
                   <AnimatedImage
                     src={creditCardsPageContent.featuredCard.image}
                     alt={creditCardsPageContent.featuredCard.cardName}
                     width={320}
                     height={200}
-                    className="max-w-[320px]"
+                    className="max-w-[320px] rounded-xl overflow-hidden"
                   />
 
                   <div>
@@ -126,7 +126,7 @@ export default function CreditCards() {
                     <AnimatedText delay={0.2}>
                       <Link
                         href={creditCardsPageContent.featuredCard.ctaLink}
-                        className="btn-primary inline-block"
+                        className="btn-primary inline-block text-lg py-4 px-8 rounded-full text-center"
                       >
                         {creditCardsPageContent.featuredCard.ctaText}
                       </Link>
@@ -156,17 +156,18 @@ export default function CreditCards() {
                   )
                 )}
               </ul>
-
-              <AnimatedText delay={0.3}>
-                <Link
-                  href={
-                    creditCardsPageContent.featuredCard.requirements.ctaLink
-                  }
-                  className="btn-primary inline-block"
-                >
-                  {creditCardsPageContent.featuredCard.requirements.ctaText}
-                </Link>
-              </AnimatedText>
+              <div className="text-center sm:text-left flex flex-col lg:flex-row gap-8">
+                <AnimatedText delay={0.3}>
+                  <Link
+                    href={
+                      creditCardsPageContent.featuredCard.requirements.ctaLink
+                    }
+                    className="btn-primary inline-block text-lg py-4 px-8 rounded-full text-center"
+                  >
+                    {creditCardsPageContent.featuredCard.requirements.ctaText}
+                  </Link>
+                </AnimatedText>
+              </div>
             </div>
 
             <div>
@@ -191,7 +192,7 @@ export default function CreditCards() {
             {creditCardsPageContent.faq.questions.map((faq, index) => (
               <div
                 key={index}
-                className="border border-gray-200 rounded-lg p-6"
+                className="border border-gray-200 rounded-xl p-6"
               >
                 <AnimatedText
                   as="h3"
@@ -221,7 +222,7 @@ export default function CreditCards() {
           <AnimatedText delay={0.2}>
             <Link
               href={creditCardsPageContent.callToAction.buttonLink}
-              className="bg-white text-primary hover:bg-gray-100 font-medium py-3 px-8 rounded-md transition-colors duration-300 inline-block"
+              className="bg-white text-primary hover:bg-gray-100 font-medium py-4 px-10 rounded-full transition-colors duration-300 inline-block text-lg"
             >
               {creditCardsPageContent.callToAction.buttonText}
             </Link>
