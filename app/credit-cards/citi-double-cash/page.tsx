@@ -45,12 +45,15 @@ export default function CitiDoubleCashCard() {
               </div>
 
               <AnimatedText delay={0.2}>
-                <Button
-                  href={citiDoubleCashPageContent.hero.applyButtonLink}
-                  variant="primary"
-                >
-                  {citiDoubleCashPageContent.hero.applyButtonText}
-                </Button>
+                <div className="text-center lg:text-left">
+                  <Button
+                    href={citiDoubleCashPageContent.hero.applyButtonLink}
+                    variant="primary"
+                    className="text-lg py-4 px-6 text-center"
+                  >
+                    {citiDoubleCashPageContent.hero.applyButtonText}
+                  </Button>
+                </div>
               </AnimatedText>
             </div>
 
@@ -61,6 +64,7 @@ export default function CitiDoubleCashCard() {
                 width={citiDoubleCashPageContent.hero.image.width}
                 height={citiDoubleCashPageContent.hero.image.height}
                 delay={0.3}
+                className="max-w-[320px] rounded-xl overflow-hidden shadow-md"
               />
             </div>
           </div>
@@ -124,6 +128,7 @@ export default function CitiDoubleCashCard() {
                   width={citiDoubleCashPageContent.requirements.image.width}
                   height={citiDoubleCashPageContent.requirements.image.height}
                   delay={0.3}
+                  className="max-w-[320px] rounded-xl overflow-hidden shadow-md"
                 />
               </div>
             </div>
@@ -161,12 +166,15 @@ export default function CitiDoubleCashCard() {
               </div>
 
               <AnimatedText delay={0.6} className="mt-8">
-                <Button
-                  href={citiDoubleCashPageContent.applicationSteps.buttonLink}
-                  variant="primary"
-                >
-                  {citiDoubleCashPageContent.applicationSteps.buttonText}
-                </Button>
+                <div className="text-center lg:text-left">
+                  <Button
+                    href={citiDoubleCashPageContent.applicationSteps.buttonLink}
+                    variant="primary"
+                    className="text-lg py-4 px-6 text-center"
+                  >
+                    {citiDoubleCashPageContent.applicationSteps.buttonText}
+                  </Button>
+                </div>
               </AnimatedText>
             </div>
 
@@ -217,12 +225,15 @@ export default function CitiDoubleCashCard() {
           </AnimatedText>
 
           <AnimatedText delay={0.2}>
-            <Button
-              href={citiDoubleCashPageContent.callToAction.buttonLink}
-              variant="secondary"
-            >
-              {citiDoubleCashPageContent.callToAction.buttonText}
-            </Button>
+            <div className="text-center lg:text-left">
+              <Button
+                href={citiDoubleCashPageContent.callToAction.buttonLink}
+                variant="secondary"
+                className="text-lg py-4 px-6 text-center"
+              >
+                {citiDoubleCashPageContent.callToAction.buttonText}
+              </Button>
+            </div>
           </AnimatedText>
         </div>
       </section>
