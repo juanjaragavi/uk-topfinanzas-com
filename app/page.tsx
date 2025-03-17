@@ -8,6 +8,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { AdPlaceholder } from "@/components/ui/ad-placeholder";
 import { useEffect, useState } from "react";
+import { AnimatedText } from "@/components/ui/animated-text";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -512,13 +513,14 @@ export default function Home() {
             on the path to a brighter financial future.
           </p>
 
-          <Button
-            href="/credit-cards/apply/citi-double-cash"
-            variant="secondary"
-            className="text-lg py-4 px-6 text-center"
-          >
-            Apply now
-          </Button>
+          <AnimatedText delay={0.2}>
+            <Link
+              href="/credit-cards/apply/citi-double-cash"
+              className="bg-white text-primary hover:bg-gray-100 font-medium py-4 px-10 rounded-full transition-colors duration-300 inline-block text-lg"
+            >
+              Apply now
+            </Link>
+          </AnimatedText>
         </div>
       </section>
 
