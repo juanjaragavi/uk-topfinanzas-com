@@ -33,7 +33,10 @@ const nextConfig = {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
+    optimizeCss: true,
+    optimizePackageImports: ["next/font"],
   },
+  optimizeFonts: true,
 };
 
 const withMDX = createMDX({

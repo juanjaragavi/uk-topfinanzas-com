@@ -5,9 +5,18 @@ import "./globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-poppins",
+  weight: ["400", "500", "600"],
   display: "swap",
+  variable: "--font-poppins",
+  preload: false, // Change to false to avoid network requests during build
+  fallback: [
+    "system-ui",
+    "Segoe UI",
+    "Roboto",
+    "Helvetica",
+    "Arial",
+    "sans-serif",
+  ],
 });
 
 export const metadata: Metadata = {
@@ -30,5 +39,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-import "./globals.css";

@@ -19,13 +19,16 @@ export default function ApplyCreditCard() {
 
       <section className="py-12 md:py-16 bg-gradient-to-b from-white to-gray-50">
         <div className="container-custom">
-          <AnimatedText as="h1" className="text-center mb-6 text-secondary">
+          <AnimatedText
+            as="h1"
+            className="text-center mb-6 text-secondary leading-tight"
+          >
             Credit Card Application
           </AnimatedText>
 
           <AnimatedText
             as="p"
-            className="text-center mb-12 text-gray-600 max-w-3xl mx-auto"
+            className="text-center mb-12 text-gray-600 max-w-3xl mx-auto leading-tight"
             delay={0.1}
           >
             Complete the form below to apply for your selected credit card. Your
@@ -49,7 +52,7 @@ export default function ApplyCreditCard() {
               <div className="bg-gray-50 p-6 rounded-xl shadow-sm">
                 <AnimatedText
                   as="h3"
-                  className="text-lg font-semibold mb-4 text-secondary"
+                  className="text-lg font-semibold mb-4 text-secondary leading-tight"
                 >
                   Why Choose TopFinanzas?
                 </AnimatedText>
@@ -61,7 +64,9 @@ export default function ApplyCreditCard() {
                     delay={0.1}
                   >
                     <span className="text-primary mr-2">✓</span>
-                    <span>Secure application process</span>
+                    <span className="leading-tight">
+                      Secure application process
+                    </span>
                   </AnimatedText>
 
                   <AnimatedText
@@ -70,7 +75,9 @@ export default function ApplyCreditCard() {
                     delay={0.15}
                   >
                     <span className="text-primary mr-2">✓</span>
-                    <span>Fast approval decisions</span>
+                    <span className="leading-tight">
+                      Fast approval decisions
+                    </span>
                   </AnimatedText>
 
                   <AnimatedText
@@ -79,7 +86,9 @@ export default function ApplyCreditCard() {
                     delay={0.2}
                   >
                     <span className="text-primary mr-2">✓</span>
-                    <span>No impact on credit score to check rates</span>
+                    <span className="leading-tight">
+                      No impact on credit score to check rates
+                    </span>
                   </AnimatedText>
 
                   <AnimatedText
@@ -88,7 +97,9 @@ export default function ApplyCreditCard() {
                     delay={0.25}
                   >
                     <span className="text-primary mr-2">✓</span>
-                    <span>Expert support throughout the process</span>
+                    <span className="leading-tight">
+                      Expert support throughout the process
+                    </span>
                   </AnimatedText>
                 </ul>
               </div>
