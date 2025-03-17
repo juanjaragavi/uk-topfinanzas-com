@@ -1,10 +1,10 @@
-const {GoogleAuth} = require('google-auth-library');
+const { GoogleAuth } = require("google-auth-library");
 
 async function getAccessToken() {
   // Create a new GoogleAuth instance with the key file path
   const auth = new GoogleAuth({
-    keyFile: '/usr/gcp-sa-key/TopFinanzas-Vertex-AI-Service-Account.json',
-    scopes: ['https://www.googleapis.com/auth/cloud-platform'],
+    keyFile: "/usr/gcp-sa-key/TopFinanzas-Vertex-AI-Service-Account.json",
+    scopes: ["https://www.googleapis.com/auth/cloud-platform"],
   });
 
   // Get the access token
@@ -16,15 +16,18 @@ async function getAccessToken() {
 // Example usage
 async function makeAuthenticatedRequest() {
   const token = await getAccessToken();
-  
+
   // Use the token in your API requests
-  const response = await fetch('https://media.topfinanzas.com/certs/TopFinanzas-Vertex-AI-Service-Account.json', {
-    headers: {
-      'Authorization': `Bearer ${token}`,
-      'Content-Type': 'application/json'
+  const response = await fetch(
+    "https://media.topfinanzas.com/certs/TopFinanzas-Vertex-AI-Service-Account.json",
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
     }
-  });
-  
+  );
+
   const data = await response.json();
   console.log(data);
 }
