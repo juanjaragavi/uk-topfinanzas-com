@@ -209,7 +209,7 @@ export default function CreditCards() {
       </section>
 
       <section className="py-12 bg-primary text-white">
-        <div className="container-custom text-center">
+        <div className="container-custom text-center justify-center items-center">
           <AnimatedText as="h2" className="mb-6">
             {creditCardsPageContent.callToAction.title}
           </AnimatedText>

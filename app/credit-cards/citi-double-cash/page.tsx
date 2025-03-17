@@ -225,14 +225,13 @@ export default function CitiDoubleCashCard() {
           </AnimatedText>
 
           <AnimatedText delay={0.2}>
-            <div className="text-center lg:text-left">
-              <Button
+            <div className="text-center">
+              <Link
                 href={citiDoubleCashPageContent.callToAction.buttonLink}
-                variant="secondary"
-                className="text-lg py-4 px-6 text-center"
+                className="bg-white text-primary hover:bg-gray-100 font-medium py-4 px-10 rounded-full transition-colors duration-300 inline-block text-xl"
               >
                 {citiDoubleCashPageContent.callToAction.buttonText}
-              </Button>
+              </Link>
             </div>
           </AnimatedText>
         </div>
