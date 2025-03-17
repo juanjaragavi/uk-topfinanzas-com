@@ -1,11 +1,12 @@
-feat(deployment): Add automation scripts for Next.js deployment
+fix: optimize font loading and build pipeline
 
-Add a comprehensive set of bash scripts to automate the deployment process:
-- Create scripts for rebuilding the Next.js application
-- Add PM2 service management scripts
-- Implement a unified deployment workflow
-- Organize scripts in a dedicated 'scripts' directory
-- Add a convenience wrapper script in project root
+- Replace deprecated @next/font with built-in next/font
+- Remove @next/font dependency from package.json
+- Remove explicit @next/font installation from deployment scripts
+- Optimize font configuration to use fewer weights (400, 500, 600)
+- Enable optimizeFonts and optimizeCss in Next.js config
+- Add critters package for CSS optimization
+- Fix duplicate import statement in layout.tsx
 
-These scripts follow bash best practices with proper error handling,
-logging, and documentation to ensure reliable and maintainable deployments.
+This commit resolves the font loading errors during builds, improves build 
+performance, and ensures compatibility with future Next.js versions.

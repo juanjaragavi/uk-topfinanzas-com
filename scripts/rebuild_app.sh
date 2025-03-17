@@ -6,9 +6,9 @@
 # It includes error handling and logging for each operation.
 
 # Variables
-APP_DIR="/var/www/topfinanzas-pages" # Application directory
-LOG_DIR="/var/log/app-rebuilds"         # Directory for log files
-LOG_FILE="${LOG_DIR}/pages_rebuild_app.log"   # Absolute path to log file
+APP_DIR="/var/www/topfinanzas-pages"        # Application directory
+LOG_DIR="/var/log/app-rebuilds"             # Directory for log files
+LOG_FILE="${LOG_DIR}/pages_rebuild_app.log" # Absolute path to log file
 
 # Functions
 
@@ -52,12 +52,7 @@ log_message "Installing dependencies with npm"
 sudo npm install
 check_error "Failed to install dependencies"
 
-# Step 4: Add font package
-log_message "Adding @next/font package"
-sudo npm install @next/font
-check_error "Failed to add @next/font package"
-
-# Step 5: Build the application
+# Step 4: Build the application
 log_message "Building the application"
 sudo npm run build
 check_error "Failed to build the application"
