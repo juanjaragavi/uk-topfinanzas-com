@@ -73,7 +73,7 @@ export const creditCardsPageContent: CreditCardPageContent = {
     title: "The Smart Way to Choose a Credit Card",
     description:
       "Ready to take charge of your finances? You may qualify for a credit card with the tools and flexibility you need. Here's why now is the perfect time to explore your options:",
-    ctaText: "Accept recommendation",
+    ctaText: "View our recommendation",
     ctaLink: "/credit-cards/recommendation",
   },
   benefits: {
@@ -107,7 +107,7 @@ export const creditCardsPageContent: CreditCardPageContent = {
     },
     description:
       "Unlock Financial Freedom with our top-rated card. No Credit Check Required and Flexible Cashback between 1% and 20%.",
-    ctaText: "Find Out More",
+    ctaText: "See comparison results",
     ctaLink: "/credit-cards/citi-double-cash",
     requirements: {
       title: "Requirements for the Citi Double Cash Credit Card",
@@ -129,7 +129,7 @@ export const creditCardsPageContent: CreditCardPageContent = {
           value: "Proof of income or employment details may be necessary",
         },
       ],
-      ctaText: "Learn how to apply",
+      ctaText: "Check eligibility requirements",
       ctaLink: "/credit-cards/apply",
     },
   },
@@ -162,7 +162,7 @@ export const creditCardsPageContent: CreditCardPageContent = {
     title: "Take control of your finances today",
     description:
       "Find the credit card that fits your needs with our expert guidance. We'll help you make informed choices to match your goals and set you on the path to a brighter financial future.",
-    buttonText: "Apply now",
+    buttonText: "Discover your options",
     buttonLink: "/credit-cards/apply",
   },
 };

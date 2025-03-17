@@ -1,5 +1,5 @@
 import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+import { CompactFooter } from "@/components/layout/compact-footer";
 import { AnimatedText } from "@/components/ui/animated-text";
 import { Ad } from "@/components/ui/ad";
 import { CreditCardApplicationForm } from "@/components/forms/credit-card-application-form";
@@ -115,7 +115,7 @@ export default function ApplyCreditCard() {
         </div>
       </section>
 
-      <Footer />
+      <CompactFooter />
     </main>
   );
 }

@@ -111,11 +111,11 @@ export const creditCardRecommendationPageContent: CreditCardRecommendationPageCo
           },
         ],
         learnMoreButton: {
-          text: "Learn More",
+          text: "View Card Details",
           link: "/credit-cards/citi-double-cash",
         },
         applyButton: {
-          text: "Apply Now",
+          text: "Check Eligibility Requirements",
           link: "/credit-cards/apply/citi-double-cash",
         },
       },
@@ -143,14 +143,14 @@ export const creditCardRecommendationPageContent: CreditCardRecommendationPageCo
       ],
       conclusion:
         "This system is ideal for those who use their credit card for a wide variety of purchases and want to avoid the complexity of other rewards programs. The Citi Double Cash Card ensures that every purchase, no matter how small or large, gives you value.",
-      buttonText: "Find Out More",
+      buttonText: "See Comparison Results",
       buttonLink: "/credit-cards/citi-double-cash",
     },
     callToAction: {
       title: "Ready to take advantage of these benefits?",
       description:
         "Apply for the Citi Double Cash Credit Card today and start earning cash back on every purchase. Our simple application process takes just minutes to complete.",
-      buttonText: "Apply Now",
+      buttonText: "Discover Your Options",
       buttonLink: "/credit-cards/apply/citi-double-cash",
     },
   };

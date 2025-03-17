@@ -82,7 +82,7 @@ export const citiDoubleCashPageContent: CitiDoubleCashPageContent = {
       score: 4.7,
       count: 2120,
     },
-    applyButtonText: "Apply Now",
+    applyButtonText: "Check Eligibility Requirements",
     applyButtonLink: "/credit-cards/apply/citi-double-cash",
     image: {
       src: "https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg",
@@ -152,7 +152,7 @@ export const citiDoubleCashPageContent: CitiDoubleCashPageContent = {
           "Once all information is confirmed, submit the application for an immediate decision.",
       },
     ],
-    buttonText: "Start Application",
+    buttonText: "View Card Benefits",
     buttonLink: "/credit-cards/apply/citi-double-cash",
   },
   benefits: {
@@ -184,7 +184,7 @@ export const citiDoubleCashPageContent: CitiDoubleCashPageContent = {
     title: "Ready to enjoy these benefits?",
     description:
       "Apply for the Citi Double Cash Credit Card today and start earning cash back on every purchase. Our simple application process takes just minutes to complete.",
-    buttonText: "Apply Now",
+    buttonText: "Discover Your Options",
     buttonLink: "/credit-cards/apply/citi-double-cash",
   },
 };

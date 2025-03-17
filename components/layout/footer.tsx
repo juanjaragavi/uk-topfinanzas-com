@@ -9,7 +9,7 @@ import { footerContent } from "@/lib/texts/footer/content";
 export function Footer() {
   return (
     <footer className="bg-gradient-to-b from-[#3354AF] to-[#274890] text-white">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-6 py-12">
         {/* Logo Section - Added at the top for mobile */}
         <div className="flex justify-center md:justify-start mb-8">
           <Image
@@ -23,13 +23,13 @@ export function Footer() {
         </div>
 
         {/* Main Footer Sections - Reordered for better mobile experience */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           {/* Navigation Links - Most important for mobile users */}
           <div className="order-1 md:order-1">
             <h2 className="text-xl font-semibold mb-5 text-[#7BDC54]">
               {footerContent.headings.navigate}
             </h2>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {footerNavigation.mainNavItems
                 .filter(
                   (item) =>
@@ -50,7 +50,7 @@ export function Footer() {
             </ul>
 
             {/* Social Media Section - Moved closer to navigation for better visibility */}
-            <div className="mt-6">
+            <div className="mt-8">
               <p className="mb-3 text-[#55B9FF]">
                 {footerNavigation.socialMedia.title}
               </p>
@@ -83,7 +83,7 @@ export function Footer() {
             <h2 className="text-xl font-semibold mb-5 text-[#7BDC54]">
               {footerContent.headings.categories}
             </h2>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {footerNavigation.categoryItems.map((item) => (
                 <li key={item.href}>
                   <Link
@@ -102,7 +102,7 @@ export function Footer() {
             <h2 className="text-xl font-semibold mb-5 text-[#7BDC54]">
               Popular Articles
             </h2>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {footerNavigation.blogItems.map((item) => (
                 <li key={item.href}>
                   <Link
@@ -121,7 +121,7 @@ export function Footer() {
             <h2 className="text-xl font-semibold mb-5 text-[#7BDC54]">
               {footerContent.headings.contact}
             </h2>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {footerNavigation.contactInfo.map((contact, index) => (
                 <li
                   key={index}
@@ -167,7 +167,7 @@ export function Footer() {
         </div>
 
         {/* Disclaimer with updated styling */}
-        <div className="text-jusfity text-sm leading-relaxed max-w-4xl mx-auto mb-8 bg-[#274890]/50 p-4 rounded-xl">
+        <div className="text-jusfity text-sm leading-relaxed max-w-4xl mx-auto mb-10 bg-[#274890]/50 p-6 rounded-xl">
           <p className="text-white/90">
             <span className="font-semibold text-[#7BDC54]">
               {footerContent.legal.disclaimer.label}
@@ -177,7 +177,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="text-center text-xs border-t border-white/20 pt-4">
+        <div className="text-center text-xs border-t border-white/20 pt-6">
           <p className="text-white/80">
             <span className="block sm:inline w-full py-4">
               {footerContent.companyInfo.productLabel}

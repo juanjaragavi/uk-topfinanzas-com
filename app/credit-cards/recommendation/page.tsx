@@ -1,5 +1,5 @@
 import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+import { CompactFooter } from "@/components/layout/compact-footer";
 import { AnimatedText } from "@/components/ui/animated-text";
 import { AnimatedImage } from "@/components/ui/animated-image";
 import { Ad } from "@/components/ui/ad";
@@ -263,7 +263,7 @@ export default function CreditCardRecommendation() {
         </div>
       </section>
 
-      <Footer />
+      <CompactFooter />
     </main>
   );
 }
