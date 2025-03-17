@@ -52,7 +52,7 @@ export default function Home() {
 
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.h1
-            className="text-white text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 drop-shadow-lg"
+            className="text-white text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 drop-shadow-lg leading-tight"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
@@ -60,7 +60,7 @@ export default function Home() {
             Welcome to Top Finance
           </motion.h1>
           <motion.p
-            className="text-white text-base md:text-xl lg:text-2xl max-w-3xl mx-auto mb-6 md:mb-8 drop-shadow-md"
+            className="text-white text-base md:text-xl lg:text-2xl max-w-3xl mx-auto mb-6 md:mb-8 drop-shadow-md leading-tight"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.5 }}
@@ -74,10 +74,10 @@ export default function Home() {
       {/* Blog Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
-          <h1 className="text-blue-700 text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4">
+          <h1 className="text-blue-700 text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 leading-tight">
             Finance Blog
           </h1>
-          <p className="text-gray-600 text-lg text-center max-w-3xl mx-auto mb-10">
+          <p className="text-gray-600 text-lg text-center max-w-3xl mx-auto mb-10 leading-tight">
             Expert financial advice, practical tips, and insightful strategies
             to help you make better financial decisions and secure your future.
           </p>
@@ -106,7 +106,7 @@ export default function Home() {
                   >
                     Personal Finance
                   </Link>
-                  <h2 className="text-white text-2xl font-bold">
+                  <h2 className="text-white text-2xl font-bold leading-tight">
                     Your First Paycheck: A Complete Guide to Smart Management
                   </h2>
                 </div>
@@ -123,12 +123,12 @@ export default function Home() {
                 <h2 className="hidden lg:block text-2xl md:text-3xl font-bold mb-4">
                   <Link
                     href="/blog/post/your-first-paycheck"
-                    className="hover:text-blue-600 transition-colors"
+                    className="hover:text-blue-600 transition-colors leading-tight"
                   >
                     Your First Paycheck: A Complete Guide to Smart Management
                   </Link>
                 </h2>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4 leading-tight">
                   Welcome to the working world, where your first paycheck marks
                   the start of a new chapter full of opportunities and
                   responsibilities.
@@ -234,12 +234,12 @@ export default function Home() {
                   <h3 className="text-xl font-bold mb-2">
                     <Link
                       href="/blog/post/what-is-a-home-mortgage"
-                      className="hover:text-blue-600 transition-colors"
+                      className="hover:text-blue-600 transition-colors leading-tight"
                     >
                       What Is a Home Mortgage? Your Complete Guide
                     </Link>
                   </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-2">
+                  <p className="text-gray-600 mb-4 line-clamp-2 leading-tight">
                     A comprehensive guide to understanding home mortgages, types
                     of loans, interest rates, and how to get the best deal.
                   </p>
@@ -289,7 +289,7 @@ export default function Home() {
                       What Are Online Loans?: A Key Tool in Personal Finances
                     </Link>
                   </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-2">
+                  <p className="text-gray-600 mb-4 line-clamp-2 leading-tight">
                     In an increasingly digital world, online loans have emerged
                     as a fundamental financial option for many Americans.
                   </p>
@@ -339,7 +339,7 @@ export default function Home() {
                       5 Tips for Choosing an Online Loan: Quick Guide
                     </Link>
                   </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-2">
+                  <p className="text-gray-600 mb-4 line-clamp-2 leading-tight">
                     Navigate the world of online loans with confidence using
                     these essential tips to find the best rates and terms.
                   </p>
@@ -385,7 +385,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-3 text-secondary">
                 Personalized options
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 leading-tight">
                 Get tailored recommendations based on your financial profile and
                 needs.
               </p>
@@ -395,7 +395,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-3 text-secondary">
                 100% free to explore
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 leading-tight">
                 No fees or commitments to browse our recommendations and find
                 your perfect match.
               </p>
@@ -405,7 +405,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-3 text-secondary">
                 Expert guidance
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 leading-tight">
                 Make smarter choices with our data-driven insights and financial
                 expertise.
               </p>
@@ -418,18 +418,18 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 px-6">
             <div className="lg:col-span-2">
-              <h2 className="mb-6 text-secondary">
+              <h2 className="mb-6 text-secondary leading-tight">
                 Finding the right credit card is a key step toward financial
                 success
               </h2>
 
-              <p className="mb-4 text-gray-600">
+              <p className="mb-4 text-gray-600 leading-tight">
                 With our recommender, you'll gain access to tailored suggestions
                 that match your needs—helping you save money and build a
                 brighter financial future.
               </p>
 
-              <p className="mb-6 text-gray-600">
+              <p className="mb-6 text-gray-600 leading-tight">
                 Our recommender connects you with tailored options to fit your
                 needs. From saving on interest to earning rewards or avoiding
                 fees, we make choosing the right card simple and confident.
@@ -462,7 +462,7 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-3 text-secondary">
                 How can a low APR benefit me?
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 leading-tight">
                 A low APR means you'll pay less interest on your balance, saving
                 you money over time if you carry a balance from month to month.
               </p>
@@ -472,7 +472,7 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-3 text-secondary">
                 What are the perks of a no-annual-fee card?
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 leading-tight">
                 No-annual-fee cards save you money each year and are often ideal
                 for occasional users or those building credit.
               </p>
@@ -482,7 +482,7 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-3 text-secondary">
                 How do points and cashback differ?
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 leading-tight">
                 Points can be redeemed for various rewards like travel or
                 merchandise, while cashback gives you a percentage of your
                 spending back as cash.
@@ -493,7 +493,7 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-3 text-secondary">
                 What factors should I consider when choosing a credit card?
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 leading-tight">
                 Consider your spending habits, credit score, fees, interest
                 rates, rewards programs, and any additional benefits that align
                 with your lifestyle.
@@ -503,11 +503,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 bg-primary text-white">
+      <section className="hidden sm:hidden py-12 bg-primary text-white">
         <div className="container mx-auto text-center px-4">
           <h2 className="mb-6">Take control of your finances today</h2>
 
-          <p className="mb-8 max-w-2xl mx-auto">
+          <p className="mb-8 max-w-2xl mx-auto leading-tight">
             Find the credit card that fits your needs with our expert guidance.
             We'll help you make informed choices to match your goals and set you
             on the path to a brighter financial future.

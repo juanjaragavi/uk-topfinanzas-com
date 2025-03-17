@@ -1,12 +1,17 @@
-fix: optimize font loading and build pipeline
+fix: optimize fonts and improve credit card pages styling
 
-- Replace deprecated @next/font with built-in next/font
-- Remove @next/font dependency from package.json
-- Remove explicit @next/font installation from deployment scripts
-- Optimize font configuration to use fewer weights (400, 500, 600)
-- Enable optimizeFonts and optimizeCss in Next.js config
-- Add critters package for CSS optimization
-- Fix duplicate import statement in layout.tsx
+- Font loading optimization:
+  - Replace deprecated @next/font with built-in next/font
+  - Remove @next/font dependency from package.json
+  - Optimize font configuration with fewer weights
+  - Enable optimizeFonts and optimizeCss in Next.js config
+  - Add critters package for CSS optimization
 
-This commit resolves the font loading errors during builds, improves build 
-performance, and ensures compatibility with future Next.js versions.
+- Credit card pages styling:
+  - Add leading-tight class to all text elements in credit card pages
+  - Apply consistent text styling across all credit card user journey
+  - Match successful styling approach from home page
+  - Improve readability and conversion rates for Google Ads campaigns
+
+This commit addresses font loading errors during builds and implements 
+styling optimizations proven to increase conversion rates.

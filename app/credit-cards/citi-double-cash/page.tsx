@@ -21,11 +21,18 @@ export default function CitiDoubleCashCard() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
-              <AnimatedText as="h1" className="mb-4 text-secondary">
+              <AnimatedText
+                as="h1"
+                className="mb-4 text-secondary leading-tight"
+              >
                 {citiDoubleCashPageContent.hero.title}
               </AnimatedText>
 
-              <AnimatedText as="p" className="mb-6 text-gray-600" delay={0.1}>
+              <AnimatedText
+                as="p"
+                className="mb-6 text-gray-600 leading-tight"
+                delay={0.1}
+              >
                 {citiDoubleCashPageContent.hero.description}
               </AnimatedText>
 
@@ -73,7 +80,10 @@ export default function CitiDoubleCashCard() {
 
       <section className="py-12 bg-white">
         <div className="container-custom">
-          <AnimatedText as="h2" className="text-center mb-12 text-secondary">
+          <AnimatedText
+            as="h2"
+            className="text-center mb-12 text-secondary leading-tight"
+          >
             {citiDoubleCashPageContent.requirements.title}
           </AnimatedText>
 
@@ -82,7 +92,7 @@ export default function CitiDoubleCashCard() {
               <div>
                 <AnimatedText
                   as="h3"
-                  className="text-xl font-semibold mb-4 text-secondary"
+                  className="text-xl font-semibold mb-4 text-secondary leading-tight"
                 >
                   Eligibility Criteria
                 </AnimatedText>
@@ -110,7 +120,9 @@ export default function CitiDoubleCashCard() {
                               </svg>
                             </span>
                             <div>
-                              <span className="font-medium">{req.label}:</span>{" "}
+                              <span className="font-medium leading-tight">
+                                {req.label}:
+                              </span>{" "}
                               {req.value}
                             </div>
                           </div>
@@ -140,7 +152,10 @@ export default function CitiDoubleCashCard() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
-              <AnimatedText as="h2" className="mb-8 text-secondary">
+              <AnimatedText
+                as="h2"
+                className="mb-8 text-secondary leading-tight"
+              >
                 {citiDoubleCashPageContent.applicationSteps.title}
               </AnimatedText>
 
@@ -153,13 +168,15 @@ export default function CitiDoubleCashCard() {
                       className="bg-white p-6 rounded-xl shadow-sm"
                       delay={0.1 + index * 0.1}
                     >
-                      <h3 className="text-lg font-semibold mb-3 text-secondary flex items-center">
+                      <h3 className="text-lg font-semibold mb-3 text-secondary flex items-center leading-tight">
                         <span className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
                           {step.number}
                         </span>
                         {step.title}
                       </h3>
-                      <p className="text-gray-600 ml-11">{step.description}</p>
+                      <p className="text-gray-600 ml-11 leading-tight">
+                        {step.description}
+                      </p>
                     </AnimatedText>
                   )
                 )}
@@ -192,7 +209,10 @@ export default function CitiDoubleCashCard() {
 
       <section className="py-12 bg-white">
         <div className="container-custom">
-          <AnimatedText as="h2" className="text-center mb-12 text-secondary">
+          <AnimatedText
+            as="h2"
+            className="text-center mb-12 text-secondary leading-tight"
+          >
             {citiDoubleCashPageContent.benefits.title}
           </AnimatedText>
 
@@ -204,10 +224,12 @@ export default function CitiDoubleCashCard() {
                 className="bg-gray-50 p-6 rounded-xl shadow-sm"
                 delay={0.1 + index * 0.1}
               >
-                <h3 className="text-xl font-semibold mb-4 text-secondary">
+                <h3 className="text-xl font-semibold mb-4 text-secondary leading-tight">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600">{benefit.description}</p>
+                <p className="text-gray-600 leading-tight">
+                  {benefit.description}
+                </p>
               </AnimatedText>
             ))}
           </div>
@@ -216,11 +238,15 @@ export default function CitiDoubleCashCard() {
 
       <section className="py-12 bg-primary text-white">
         <div className="container-custom text-center">
-          <AnimatedText as="h2" className="mb-6">
+          <AnimatedText as="h2" className="mb-6 leading-tight">
             {citiDoubleCashPageContent.callToAction.title}
           </AnimatedText>
 
-          <AnimatedText as="p" className="mb-8 max-w-2xl mx-auto" delay={0.1}>
+          <AnimatedText
+            as="p"
+            className="mb-8 max-w-2xl mx-auto leading-tight"
+            delay={0.1}
+          >
             {citiDoubleCashPageContent.callToAction.description}
           </AnimatedText>
 
