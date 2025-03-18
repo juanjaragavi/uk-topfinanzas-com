@@ -1,61 +1,47 @@
 #!/bin/bash
 
-# Description:
-# This script rebuilds a Next.js application by removing existing build artifacts,
-# installing dependencies, and rebuilding the application.
-# It includes error handling and logging for each operation.
+# This script rebuilds the Next.js application after content updates
+# It is designed to be called by the n8n workflow
 
-# Variables
-APP_DIR="/var/www/topfinanzas-pages"        # Application directory
-LOG_DIR="/var/log/app-rebuilds"             # Directory for log files
-LOG_FILE="${LOG_DIR}/pages_rebuild_app.log" # Absolute path to log file
+# Log file for tracking rebuild process
+LOG_FILE="/var/log/topfinanzas-rebuilds.log"
 
-# Functions
+# Project directory
+PROJECT_DIR="/var/www/topfinanzas-pages"
 
-# Log messages to a file
-log_message() {
-    # Create log directory if it doesn't exist
-    mkdir -p "$(dirname "$LOG_FILE")"
-    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >>"$LOG_FILE"
-}
+# Log start time
+echo "$(date): Starting rebuild process" >>$LOG_FILE
 
-# Check if a command executed successfully
-check_error() {
-    local exit_code=$?
-    local error_message="$1"
+# Navigate to project directory
+cd $PROJECT_DIR
 
-    if [ $exit_code -ne 0 ]; then
-        log_message "Error: $error_message (Exit code: $exit_code)"
-        echo "Error: $error_message (Exit code: $exit_code)"
-        exit $exit_code
+# Pull latest changes if using git (optional)
+# git pull origin main
+
+# Install dependencies (if needed)
+# npm install
+
+# Build the Next.js application
+echo "$(date): Building Next.js application" >>$LOG_FILE
+npm run build
+
+# Check if build was successful
+if [ $? -eq 0 ]; then
+    echo "$(date): Build successful" >>$LOG_FILE
+
+    # Restart the service (adjust based on your deployment setup)
+    echo "$(date): Restarting service" >>$LOG_FILE
+    pm2 restart topfinanzas
+
+    # Check if restart was successful
+    if [ $? -eq 0 ]; then
+        echo "$(date): Service restart successful" >>$LOG_FILE
+        exit 0
+    else
+        echo "$(date): ERROR - Service restart failed" >>$LOG_FILE
+        exit 1
     fi
-}
-
-# Main Script Execution
-log_message "Starting application rebuild process."
-
-# Step 1: Navigate to application directory
-if ! cd "$APP_DIR"; then
-    log_message "Error: Failed to change directory to $APP_DIR"
-    echo "Error: Failed to change directory to $APP_DIR"
+else
+    echo "$(date): ERROR - Build failed" >>$LOG_FILE
     exit 1
 fi
-log_message "Successfully changed to application directory: $APP_DIR"
-
-# Step 2: Clean up existing build files
-log_message "Removing existing node_modules and .next directories"
-sudo rm -rf node_modules .next
-check_error "Failed to remove existing build artifacts"
-
-# Step 3: Install dependencies
-log_message "Installing dependencies with npm"
-sudo npm install
-check_error "Failed to install dependencies"
-
-# Step 4: Build the application
-log_message "Building the application"
-sudo npm run build
-check_error "Failed to build the application"
-
-log_message "Application rebuild completed successfully."
-echo "Script executed successfully. Check the log file ($LOG_FILE) for details."
