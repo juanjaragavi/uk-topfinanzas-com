@@ -2,80 +2,24 @@
  * Content for the Citi Double Cash Card Application page
  * This file centralizes all text, links, and metadata for the page,
  * allowing for programmatic editing without changing component structure
+ *
+ * IMPORTANT: This file acts as a bridge between the JSON content files
+ * and the page components. The actual content is stored in a separate JSON file
+ * that can be programmatically edited by LLM-based agents.
  */
 
-// Define the interface for the Citi Double Cash application page content
-export interface CitiDoubleCashApplicationPageContent {
-  metadata: {
-    title: string;
-    description: string;
-    keywords: string;
-  };
-  hero: {
-    title: string;
-    description: string;
-  };
-  benefits: {
-    title: string;
-    items: Array<{
-      text: string;
-    }>;
-  };
-  requirements: {
-    title: string;
-    items: Array<{
-      text: string;
-    }>;
-  };
-}
+// Import the type definitions
+import { CitiDoubleCashApplicationPageContent } from "./types/apply-citi-double-cash.types";
 
-// Page content implementation
+// Import the content loader utility
+import { loadContent } from "./utils/content-loader";
+
+// Load the content from the JSON file
+// This content is stored separately so it can be updated by agents
 export const citiDoubleCashApplicationPageContent: CitiDoubleCashApplicationPageContent =
-  {
-    metadata: {
-      title: "Apply for Citi Double Cash Card - TopFinanzas",
-      description:
-        "Apply for the Citi Double Cash Card online. Earn up to 2% cash back on every purchase with no annual fee.",
-      keywords:
-        "Citi Double Cash Card, credit card application, 2% cash back, no annual fee, TopFinanzas",
-    },
-    hero: {
-      title: "Citi Double Cash Card Application",
-      description:
-        "Apply for the Citi Double Cash Card today and start earning up to 2% cash back on every purchase: 1% when you buy, 1% when you pay.",
-    },
-    benefits: {
-      title: "Why Apply for the Citi Double Cash Card?",
-      items: [
-        {
-          text: "Up to 2% cash back on all purchases",
-        },
-        {
-          text: "No annual fee",
-        },
-        {
-          text: "0% intro APR on balance transfers for 18 months",
-        },
-        {
-          text: "Flexible redemption options",
-        },
-      ],
-    },
-    requirements: {
-      title: "Application Requirements",
-      items: [
-        {
-          text: "Credit score of at least 670",
-        },
-        {
-          text: "Must be 18 years or older",
-        },
-        {
-          text: "Valid Social Security Number",
-        },
-        {
-          text: "Proof of income",
-        },
-      ],
-    },
-  };
+  loadContent<CitiDoubleCashApplicationPageContent>(
+    "lib/pages/credit-cards/content/apply-citi-double-cash.content.json"
+  );
+
+// Re-export the interface for use in other files
+export type { CitiDoubleCashApplicationPageContent } from "./types/apply-citi-double-cash.types";

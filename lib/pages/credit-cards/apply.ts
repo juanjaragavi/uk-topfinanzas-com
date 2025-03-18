@@ -2,57 +2,24 @@
  * Content for the Credit Card Application page
  * This file centralizes all text, links, and metadata for the page,
  * allowing for programmatic editing without changing component structure
+ *
+ * IMPORTANT: This file acts as a bridge between the JSON content files
+ * and the page components. The actual content is stored in a separate JSON file
+ * that can be programmatically edited by LLM-based agents.
  */
 
-// Define the interface for the application page content
-export interface CreditCardApplicationPageContent {
-  metadata: {
-    title: string;
-    description: string;
-    keywords: string;
-  };
-  hero: {
-    title: string;
-    description: string;
-  };
-  benefits: {
-    title: string;
-    items: Array<{
-      text: string;
-    }>;
-  };
-}
+// Import the type definitions
+import { CreditCardApplicationPageContent } from "./types/apply.types";
 
-// Page content implementation
+// Import the content loader utility
+import { loadContent } from "./utils/content-loader";
+
+// Load the content from the JSON file
+// This content is stored separately so it can be updated by agents
 export const creditCardApplicationPageContent: CreditCardApplicationPageContent =
-  {
-    metadata: {
-      title: "Apply for a Credit Card - TopFinanzas",
-      description:
-        "Apply for a credit card online. Quick and secure application process with fast approval.",
-      keywords:
-        "credit card application, apply for credit card, online application, TopFinanzas",
-    },
-    hero: {
-      title: "Credit Card Application",
-      description:
-        "Complete the form below to apply for your selected credit card. Your information is secure and will only be used for processing your application.",
-    },
-    benefits: {
-      title: "Why Choose TopFinanzas?",
-      items: [
-        {
-          text: "Secure application process",
-        },
-        {
-          text: "Fast approval decisions",
-        },
-        {
-          text: "No impact on credit score to check rates",
-        },
-        {
-          text: "Expert support throughout the process",
-        },
-      ],
-    },
-  };
+  loadContent<CreditCardApplicationPageContent>(
+    "lib/pages/credit-cards/content/apply.content.json"
+  );
+
+// Re-export the interface for use in other files
+export type { CreditCardApplicationPageContent } from "./types/apply.types";

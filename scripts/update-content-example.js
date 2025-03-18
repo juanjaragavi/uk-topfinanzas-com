@@ -17,7 +17,7 @@ const execPromise = util.promisify(exec);
 
 // Configuration
 const CONFIG = {
-  API_URL: "http://localhost:3000/api/content/pages",
+  API_URL: "http://localhost:3003/api/content/pages",
   CONTENT_PATH: "lib/pages/credit-cards/content/recommendation.content.json",
 };
 
