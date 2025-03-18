@@ -1,22 +1,13 @@
-feat(content): implement Dynamic Content Management System across Credit Cards User Journey
+fix(workflows): update port configuration and fix API endpoint validation
 
-- Refactored all Credit Cards User Journey pages to follow the Dynamic Content Management System pattern:
-  - Created TypeScript interfaces in /types directory for type safety
-  - Moved content to JSON files in /content directory for programmatic editing
-  - Updated bridge modules to use the content-loader utility
+- Update port configuration from 3000 to 3003 for production server in all workflow files
+- Fix API endpoint validation errors by adding required path query parameter to HTTP requests
+- Create fixed versions of all n8n workflow files:
+  * TF_TOPFINANZAS_Recommendation_Page_Deployer_Fixed.json
+  * TF_TOPFINANZAS_Main_Credit_Cards_Page_Deployer_Fixed.json
+  * TF_TOPFINANZAS_Citi_Double_Cash_Page_Deployer_Fixed.json
+  * TF_TOPFINANZAS_Application_Page_Deployer_Fixed.json
+  * TF_TOPFINANZAS_Citi_Double_Cash_Application_Page_Deployer_Fixed.json
 
-- Updated port configuration from 3000 to 3003 for production server
-
-- Created n8n workflow files for programmatic content management:
-  - TF_TOPFINANZAS_Recommendation_Page_Deployer_Updated.json
-  - TF_TOPFINANZAS_Main_Credit_Cards_Page_Deployer.json
-  - TF_TOPFINANZAS_Citi_Double_Cash_Page_Deployer.json
-  - TF_TOPFINANZAS_Application_Page_Deployer.json
-  - TF_TOPFINANZAS_Citi_Double_Cash_Application_Page_Deployer.json
-
-- Enhanced documentation in README-DYNAMIC-CONTENT-MANAGEMENT.md with:
-  - Complete directory structure details
-  - New section for Credit Cards User Journey implementation
-  - Expanded best practices for content management
-
-This restructuring enables LLM-based agents to programmatically update page content via API endpoints without modifying component code, improving maintainability and separating concerns between content and presentation.
+These changes ensure proper functioning of the API endpoints for content manipulation
+and fix the "Missing required query parameter: path" validation error.
