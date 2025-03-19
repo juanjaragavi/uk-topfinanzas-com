@@ -16,14 +16,24 @@ echo "$(date): Starting rebuild process" >>$LOG_FILE
 cd $PROJECT_DIR
 
 # Pull latest changes if using git (optional)
-# git pull origin main
+sudo git fetch --all
+sudo git merge origin/main
+# Check if pull was successful
+if [ $? -ne 0 ]; then
+    echo "$(date): ERROR - Git pull failed" >>$LOG_FILE
+    exit 1
+fi
+
+# Purge cache
+sudo rm -rf .next
+sudo npm cache clean --force
 
 # Install dependencies (if needed)
-# npm install
+sudo npm install
 
 # Build the Next.js application
 echo "$(date): Building Next.js application" >>$LOG_FILE
-npm run build
+sudo npm run build
 
 # Check if build was successful
 if [ $? -eq 0 ]; then
@@ -31,7 +41,7 @@ if [ $? -eq 0 ]; then
 
     # Restart the service (adjust based on your deployment setup)
     echo "$(date): Restarting service" >>$LOG_FILE
-    pm2 restart topfinanzas
+    sudo pm2 restart topfinanzas-pages
 
     # Check if restart was successful
     if [ $? -eq 0 ]; then

@@ -7,10 +7,10 @@
 # Includes error handling and logging for each operation.
 
 # Variables
-APP_DIR="/var/www/topfinanzas-pages"   # Application directory
-LOG_DIR="/var/log/app-rebuilds"           # Directory for log files
+APP_DIR="/var/www/topfinanzas-pages"            # Application directory
+LOG_DIR="/var/log/app-rebuilds"                 # Directory for log files
 LOG_FILE="${LOG_DIR}/pages_restart_service.log" # Absolute path to log file
-SERVICE_NAME="topfinanzas-pages"       # PM2 service name
+SERVICE_NAME="topfinanzas-pages"                # PM2 service name
 
 # Functions
 
@@ -45,38 +45,24 @@ fi
 log_message "Successfully changed to application directory: $APP_DIR"
 
 # Step 2: Stop the existing PM2 service
-log_message "Stopping PM2 service: $SERVICE_NAME"
-sudo pm2 stop "$SERVICE_NAME"
-check_error "Failed to stop PM2 service"
+log_message "Restarting PM2 service: $SERVICE_NAME"
+sudo pm2 restart "$SERVICE_NAME"
+check_error "Failed to restart PM2 service"
 
-# Step 3: Delete the PM2 service
-log_message "Deleting PM2 service: $SERVICE_NAME"
-sudo pm2 delete "$SERVICE_NAME"
-check_error "Failed to delete PM2 service"
-
-# Step 4: Wait for processes to clean up
-log_message "Waiting for processes to clean up"
-sleep 5
-
-# Step 5: Start the PM2 service
-log_message "Starting new PM2 service: $SERVICE_NAME"
-sudo pm2 start npm --name "$SERVICE_NAME" -- start
-check_error "Failed to start PM2 service"
-
-# Step 6: Wait for service to initialize
-log_message "Waiting for service to initialize"
+# Step 3: Wait for service to restart
+log_message "Waiting for processes to restart"
 sleep 2
 
-# Step 7: Save the PM2 configuration
+# Step 3: Save the PM2 configuration
 log_message "Saving PM2 configuration"
 sudo pm2 save
 check_error "Failed to save PM2 configuration"
 
-# Step 8: Wait for save to complete
+# Step 4: Wait for save to complete
 log_message "Waiting for save to complete"
 sleep 2
 
-# Step 9: Configure PM2 to start on system boot
+# Step 5: Configure PM2 to start on system boot
 log_message "Configuring PM2 to start on system boot"
 sudo pm2 startup
 check_error "Failed to configure PM2 startup"
