@@ -18,6 +18,7 @@ cd $PROJECT_DIR
 # Pull latest changes if using git (optional)
 sudo git fetch --all
 sudo git merge origin/main
+
 # Check if pull was successful
 if [ $? -ne 0 ]; then
     echo "$(date): ERROR - Git pull failed" >>$LOG_FILE
