@@ -30,7 +30,7 @@ sudo rm -rf .next
 sudo npm cache clean --force
 
 # Install dependencies (if needed)
-sudo npm install
+# sudo npm install
 
 # Build the Next.js application
 echo "$(date): Building Next.js application" >>$LOG_FILE
@@ -44,18 +44,13 @@ if [ $? -eq 0 ]; then
     echo "$(date): Restarting service" >>$LOG_FILE
     sudo pm2 restart topfinanzas-pages
     # Wait for service to restart
-    log_message "Waiting for processes to restart"
     sleep 2
 
     # Save the PM2 configuration
-    log_message "Saving PM2 configuration"
     sudo pm2 save
-    check_error "Failed to save PM2 configuration"
 
-    # Step 5: Configure PM2 to start on system boot
-    log_message "Configuring PM2 to start on system boot"
+    # Configure PM2 to start on system boot
     sudo pm2 startup
-    check_error "Failed to configure PM2 startup"
 
     # Check if restart was successful
     if [ $? -eq 0 ]; then
