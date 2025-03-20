@@ -11,7 +11,7 @@ export function Footer() {
     <footer className="bg-gradient-to-b from-[#3354AF] to-[#274890] text-white">
       <div className="container mx-auto px-6 py-12">
         {/* Logo Section - Added at the top for mobile */}
-        <div className="flex justify-center md:justify-start mb-8">
+        <div className="flex flex-col items-center md:items-start mb-8">
           <Image
             src={logos.whiteLogo.url}
             alt={logos.whiteLogo.alt}
@@ -20,6 +20,11 @@ export function Footer() {
             className="h-20 w-auto"
             priority
           />
+          <p className="text-[10px] mt-2 text-left max-w-[250px] leading-tight text-white font-normal">
+            ALL RIGHTS RESERVED, ©TOP NETWORKS INC 2025. TOTAL OR PARTIAL
+            REPRODUCTION BY ANY MEANS OR FORM IS PROHIBITED WITHOUT THE WRITTEN
+            AND EXPRESS AUTHORIZATION OF THE COPYRIGHT HOLDER.
+          </p>
         </div>
 
         {/* Main Footer Sections - Reordered for better mobile experience */}
@@ -167,9 +172,9 @@ export function Footer() {
         </div>
 
         {/* Disclaimer with updated styling */}
-        <div className="text-jusfity text-sm leading-relaxed max-w-4xl mx-auto mb-10 bg-[#274890]/50 p-6 rounded-xl">
-          <p className="text-white/90">
-            <span className="font-semibold text-[#7BDC54]">
+        <div className="text-jusfity text-[8px] leading-relaxed max-w-4xl mx-auto mb-10">
+          <p className="text-white/80">
+            <span className="font-semibold">
               {footerContent.legal.disclaimer.label}
             </span>{" "}
             {footerContent.legal.disclaimer.text}
@@ -177,26 +182,24 @@ export function Footer() {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="text-center text-xs border-t border-white/20 pt-6">
+        <div className="text-center text-[8px] border-t border-white/20 pt-6">
           <p className="text-white/80">
-            <span className="block sm:inline w-full py-4">
+            <span className="block w-full pb-2">
               {footerContent.companyInfo.productLabel}
             </span>
-            <span className="hidden sm:inline"> &nbsp;&nbsp; | &nbsp; </span>
             {footerNavigation.legalLinks.map((link, index) => (
               <span key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-[#55B9FF] hover:underline mx-2"
+                  className="text-white hover:underline mx-1"
                 >
                   {link.text}
                 </Link>
                 {index < footerNavigation.legalLinks.length - 1 ? " | " : ""}
               </span>
             ))}
-            <span className="hidden sm:inline"> &nbsp;&nbsp; | &nbsp; </span>
-            <span className="block sm:inline w-full py-4">
-              &nbsp; &copy; {footerContent.legal.copyright.text}
+            <span className="block w-full pt-2">
+              &copy; {footerContent.legal.copyright.text}
             </span>
           </p>
         </div>

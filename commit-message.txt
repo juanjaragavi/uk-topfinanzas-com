@@ -1,13 +1,10 @@
-fix(workflows): update port configuration and fix API endpoint validation
+refactor: standardize typography across blog and credit card pages
 
-- Update port configuration from 3000 to 3003 for production server in all workflow files
-- Fix API endpoint validation errors by adding required path query parameter to HTTP requests
-- Create fixed versions of all n8n workflow files:
-  * TF_TOPFINANZAS_Recommendation_Page_Deployer_Fixed.json
-  * TF_TOPFINANZAS_Main_Credit_Cards_Page_Deployer_Fixed.json
-  * TF_TOPFINANZAS_Citi_Double_Cash_Page_Deployer_Fixed.json
-  * TF_TOPFINANZAS_Application_Page_Deployer_Fixed.json
-  * TF_TOPFINANZAS_Citi_Double_Cash_Application_Page_Deployer_Fixed.json
+- Set h1 titles to 16px bold with #234043 color
+- Change h2/h3 headings to 12px with #234043 color
+- Adjust paragraph and list text to 10px with #234043 color
+- Update links to use #222442 color
+- Apply consistent typography across components and pages
+- Ensure visual consistency in both blog content and credit card user journey
 
-These changes ensure proper functioning of the API endpoints for content manipulation
-and fix the "Missing required query parameter: path" validation error.
+This change implements the new article template guidelines for typography, creating a more consistent visual hierarchy throughout the application.

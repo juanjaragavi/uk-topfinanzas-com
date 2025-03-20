@@ -23,14 +23,14 @@ export default function CitiDoubleCashCard() {
             <div>
               <AnimatedText
                 as="h1"
-                className="mb-4 text-secondary leading-tight"
+                className="mb-4 text-[16px] font-bold text-[#234043] leading-tight"
               >
                 {citiDoubleCashPageContent.hero.title}
               </AnimatedText>
 
               <AnimatedText
                 as="p"
-                className="mb-6 text-gray-600 leading-tight"
+                className="mb-6 text-[10px] text-[#234043] leading-tight"
                 delay={0.1}
               >
                 {citiDoubleCashPageContent.hero.description}
@@ -82,7 +82,7 @@ export default function CitiDoubleCashCard() {
         <div className="container-custom">
           <AnimatedText
             as="h2"
-            className="text-center mb-12 text-secondary leading-tight"
+            className="text-center mb-12 text-[12px] text-[#234043] leading-tight"
           >
             {citiDoubleCashPageContent.requirements.title}
           </AnimatedText>
@@ -92,7 +92,7 @@ export default function CitiDoubleCashCard() {
               <div>
                 <AnimatedText
                   as="h3"
-                  className="text-xl font-semibold mb-4 text-secondary leading-tight"
+                  className="text-[12px] font-semibold mb-4 text-[#234043] leading-tight"
                 >
                   Eligibility Criteria
                 </AnimatedText>
@@ -120,10 +120,12 @@ export default function CitiDoubleCashCard() {
                               </svg>
                             </span>
                             <div>
-                              <span className="font-medium leading-tight">
+                              <span className="font-medium text-[10px] text-[#234043] leading-tight">
                                 {req.label}:
                               </span>{" "}
-                              {req.value}
+                              <span className="text-[10px] text-[#234043]">
+                                {req.value}
+                              </span>
                             </div>
                           </div>
                         </AnimatedText>
@@ -154,7 +156,7 @@ export default function CitiDoubleCashCard() {
             <div className="lg:col-span-2">
               <AnimatedText
                 as="h2"
-                className="mb-8 text-secondary leading-tight"
+                className="mb-8 text-[12px] text-[#234043] leading-tight"
               >
                 {citiDoubleCashPageContent.applicationSteps.title}
               </AnimatedText>
@@ -168,13 +170,13 @@ export default function CitiDoubleCashCard() {
                       className="bg-white p-6 rounded-xl shadow-sm"
                       delay={0.1 + index * 0.1}
                     >
-                      <h3 className="text-lg font-semibold mb-3 text-secondary flex items-center leading-tight">
-                        <span className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <h3 className="text-[12px] font-semibold mb-3 text-[#234043] flex items-center leading-tight">
+                        <span className="bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
                           {step.number}
                         </span>
                         {step.title}
                       </h3>
-                      <p className="text-gray-600 ml-11 leading-tight">
+                      <p className="text-[10px] text-[#234043] ml-11 leading-tight">
                         {step.description}
                       </p>
                     </AnimatedText>
@@ -211,7 +213,7 @@ export default function CitiDoubleCashCard() {
         <div className="container-custom">
           <AnimatedText
             as="h2"
-            className="text-center mb-12 text-secondary leading-tight"
+            className="text-center mb-12 text-[12px] text-[#234043] leading-tight"
           >
             {citiDoubleCashPageContent.benefits.title}
           </AnimatedText>
@@ -224,10 +226,10 @@ export default function CitiDoubleCashCard() {
                 className="bg-gray-50 p-6 rounded-xl shadow-sm"
                 delay={0.1 + index * 0.1}
               >
-                <h3 className="text-xl font-semibold mb-4 text-secondary leading-tight">
+                <h3 className="text-[12px] font-semibold mb-4 text-[#234043] leading-tight">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600 leading-tight">
+                <p className="text-[10px] text-[#234043] leading-tight">
                   {benefit.description}
                 </p>
               </AnimatedText>
@@ -238,13 +240,13 @@ export default function CitiDoubleCashCard() {
 
       <section className="py-12 bg-primary text-white">
         <div className="container-custom text-center">
-          <AnimatedText as="h2" className="mb-6 leading-tight">
+          <AnimatedText as="h2" className="mb-6 text-[12px] leading-tight">
             {citiDoubleCashPageContent.callToAction.title}
           </AnimatedText>
 
           <AnimatedText
             as="p"
-            className="mb-8 max-w-2xl mx-auto leading-tight"
+            className="mb-8 text-[10px] max-w-2xl mx-auto leading-tight"
             delay={0.1}
           >
             {citiDoubleCashPageContent.callToAction.description}

@@ -85,9 +85,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
           </div>
 
           {/* Title */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            {title}
-          </h1>
+          <h1 className="text-[16px] font-bold text-[#234043] mb-4">{title}</h1>
 
           {/* Author and date */}
           <div className="flex items-center mb-8">
@@ -222,16 +220,22 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
 
             {/* Main content */}
             <div className="lg:col-span-8">
-              <div className="prose prose-lg max-w-none">{children}</div>
+              {/* Ad space for GAM */}
+              <div className="mb-6">
+                <Ad format="horizontal" className="mx-auto mb-6" />
+              </div>
+
+              {/* Content */}
+              <div>{children}</div>
 
               {/* Tags */}
-              <div className="mt-12 pt-6 border-t border-gray-200">
+              <div className="mt-8 pt-4 border-t border-gray-200">
                 <div className="flex flex-wrap">
                   {categories.map((category, index) => (
                     <Link
                       key={index}
                       href={`/blog/category/${category.slug}`}
-                      className="bg-gray-100 text-gray-800 rounded-full px-3 py-1 text-sm mr-2 mb-2 hover:bg-gray-200 transition-colors"
+                      className="bg-gray-100 text-[#234043] rounded-full px-2 py-1 text-[10px] mr-2 mb-2 hover:bg-gray-200 transition-colors"
                     >
                       {category.name}
                     </Link>
@@ -240,18 +244,20 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
               </div>
 
               {/* Author box */}
-              <div className="mt-8 bg-gray-50 p-6 rounded-xl">
+              <div className="mt-6 bg-gray-50 p-4 rounded-xl">
                 <div className="flex flex-col sm:flex-row items-center sm:items-start">
                   <Image
                     src={authorImage}
                     alt={author}
-                    width={80}
-                    height={80}
-                    className="rounded-xl mb-4 sm:mb-0 sm:mr-6"
+                    width={60}
+                    height={60}
+                    className="rounded-xl mb-4 sm:mb-0 sm:mr-4"
                   />
                   <div className="text-center sm:text-left">
-                    <h3 className="text-xl font-bold mb-2">{author}</h3>
-                    <p className="text-gray-600 mb-4">
+                    <h3 className="text-[12px] font-bold mb-1 text-[#234043]">
+                      {author}
+                    </h3>
+                    <p className="text-[10px] text-[#234043] mb-2">
                       Financial expert with over 10 years of experience in
                       personal finance, investment strategies, and credit
                       management.
@@ -290,13 +296,17 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
               </div>
 
               {/* Comments section */}
-              <div className="mt-12 pt-8 border-t border-gray-200">
-                <h3 className="text-2xl font-bold mb-6">Comments</h3>
-                <div className="bg-gray-50 p-6 rounded-xl text-center">
-                  <p className="text-gray-600 mb-4">
+              <div className="mt-8 pt-4 border-t border-gray-200">
+                <h3 className="text-[12px] font-bold mb-4 text-[#234043]">
+                  Comments
+                </h3>
+                <div className="bg-gray-50 p-4 rounded-xl text-center">
+                  <p className="text-[10px] text-[#234043] mb-3">
                     Be the first to share your thoughts on this article.
                   </p>
-                  <Button>Leave a Comment</Button>
+                  <Button className="text-[10px] py-1.5">
+                    Leave a Comment
+                  </Button>
                 </div>
               </div>
             </div>
@@ -315,7 +325,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
 
               {/* Recent articles */}
               <div className="mb-8">
-                <h3 className="text-xl font-bold mb-4 pb-2 border-b border-gray-200">
+                <h3 className="text-[12px] font-bold mb-3 pb-2 border-b border-gray-200 text-[#234043]">
                   Recent Articles
                 </h3>
                 <div className="space-y-4">
@@ -323,7 +333,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     href="/blog/post/what-is-a-home-mortgage"
                     className="block"
                   >
-                    <div className="relative h-48 rounded-xl overflow-hidden">
+                    <div className="relative h-32 rounded-xl overflow-hidden">
                       <Image
                         src="https://media.topfinanzas.com/images/generated/1741637181173/sample_0.jpg"
                         alt="What Is a Home Mortgage? Your Complete Guide"
@@ -331,11 +341,13 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                         style={{ objectFit: "cover" }}
                         className="brightness-75"
                       />
-                      <div className="absolute inset-0 flex flex-col justify-end p-4 text-white">
-                        <h4 className="font-medium text-lg leading-tight mb-1">
+                      <div className="absolute inset-0 flex flex-col justify-end p-3 text-white">
+                        <h4 className="font-medium text-[10px] leading-tight mb-1">
                           What Is a Home Mortgage? Your Complete Guide
                         </h4>
-                        <p className="text-sm opacity-90">February 25, 2025</p>
+                        <p className="text-[8px] opacity-90">
+                          February 25, 2025
+                        </p>
                       </div>
                     </div>
                   </Link>
@@ -344,7 +356,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     href="/blog/post/what-are-online-loans"
                     className="block"
                   >
-                    <div className="relative h-48 rounded-xl overflow-hidden">
+                    <div className="relative h-32 rounded-xl overflow-hidden">
                       <Image
                         src="https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg"
                         alt="What Are Online Loans?: A Key Tool in Personal Finances"
@@ -352,12 +364,14 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                         style={{ objectFit: "cover" }}
                         className="brightness-75"
                       />
-                      <div className="absolute inset-0 flex flex-col justify-end p-4 text-white">
-                        <h4 className="font-medium text-lg leading-tight mb-1">
+                      <div className="absolute inset-0 flex flex-col justify-end p-3 text-white">
+                        <h4 className="font-medium text-[10px] leading-tight mb-1">
                           What Are Online Loans?: A Key Tool in Personal
                           Finances
                         </h4>
-                        <p className="text-sm opacity-90">February 25, 2025</p>
+                        <p className="text-[8px] opacity-90">
+                          February 25, 2025
+                        </p>
                       </div>
                     </div>
                   </Link>
@@ -366,7 +380,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     href="/blog/post/5-tips-for-choosing-an-online-loan"
                     className="block"
                   >
-                    <div className="relative h-48 rounded-xl overflow-hidden">
+                    <div className="relative h-32 rounded-xl overflow-hidden">
                       <Image
                         src="https://media.topfinanzas.com/images/generated/1741732471632/sample_0.jpg"
                         alt="5 Tips for Choosing an Online Loan: Quick Guide"
@@ -374,11 +388,13 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                         style={{ objectFit: "cover" }}
                         className="brightness-75"
                       />
-                      <div className="absolute inset-0 flex flex-col justify-end p-4 text-white">
-                        <h4 className="font-medium text-lg leading-tight mb-1">
+                      <div className="absolute inset-0 flex flex-col justify-end p-3 text-white">
+                        <h4 className="font-medium text-[10px] leading-tight mb-1">
                           5 Tips for Choosing an Online Loan: Quick Guide
                         </h4>
-                        <p className="text-sm opacity-90">February 25, 2025</p>
+                        <p className="text-[8px] opacity-90">
+                          February 25, 2025
+                        </p>
                       </div>
                     </div>
                   </Link>
@@ -387,17 +403,17 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
 
               {/* Categories */}
               <div className="mb-8">
-                <h3 className="text-xl font-bold mb-4 pb-2 border-b border-gray-200">
+                <h3 className="text-[12px] font-bold mb-3 pb-2 border-b border-gray-200 text-[#234043]">
                   Categories
                 </h3>
                 <ul className="space-y-2">
                   <li>
                     <Link
                       href="/blog/category/personal-finance"
-                      className="flex items-center justify-between hover:text-blue-600 transition-colors"
+                      className="flex items-center justify-between text-[10px] text-[#234043] hover:text-[#222442] transition-colors"
                     >
                       <span>Personal Finance</span>
-                      <span className="bg-gray-100 text-gray-600 rounded-full px-2 py-1 text-xs">
+                      <span className="bg-gray-100 text-[#234043] rounded-full px-2 py-1 text-[8px]">
                         12
                       </span>
                     </Link>
@@ -405,10 +421,10 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   <li>
                     <Link
                       href="/blog/category/credit-cards"
-                      className="flex items-center justify-between hover:text-blue-600 transition-colors"
+                      className="flex items-center justify-between text-[10px] text-[#234043] hover:text-[#222442] transition-colors"
                     >
                       <span>Credit Cards</span>
-                      <span className="bg-gray-100 text-gray-600 rounded-full px-2 py-1 text-xs">
+                      <span className="bg-gray-100 text-[#234043] rounded-full px-2 py-1 text-[8px]">
                         8
                       </span>
                     </Link>
@@ -416,10 +432,10 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   <li>
                     <Link
                       href="/blog/category/mortgages"
-                      className="flex items-center justify-between hover:text-blue-600 transition-colors"
+                      className="flex items-center justify-between text-[10px] text-[#234043] hover:text-[#222442] transition-colors"
                     >
                       <span>Mortgages</span>
-                      <span className="bg-gray-100 text-gray-600 rounded-full px-2 py-1 text-xs">
+                      <span className="bg-gray-100 text-[#234043] rounded-full px-2 py-1 text-[8px]">
                         6
                       </span>
                     </Link>
@@ -427,10 +443,10 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   <li>
                     <Link
                       href="/blog/category/investing"
-                      className="flex items-center justify-between hover:text-blue-600 transition-colors"
+                      className="flex items-center justify-between text-[10px] text-[#234043] hover:text-[#222442] transition-colors"
                     >
                       <span>Investing</span>
-                      <span className="bg-gray-100 text-gray-600 rounded-full px-2 py-1 text-xs">
+                      <span className="bg-gray-100 text-[#234043] rounded-full px-2 py-1 text-[8px]">
                         5
                       </span>
                     </Link>
@@ -438,10 +454,10 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   <li>
                     <Link
                       href="/blog/category/student-loans"
-                      className="flex items-center justify-between hover:text-blue-600 transition-colors"
+                      className="flex items-center justify-between text-[10px] text-[#234043] hover:text-[#222442] transition-colors"
                     >
                       <span>Student Loans</span>
-                      <span className="bg-gray-100 text-gray-600 rounded-full px-2 py-1 text-xs">
+                      <span className="bg-gray-100 text-[#234043] rounded-full px-2 py-1 text-[8px]">
                         4
                       </span>
                     </Link>
@@ -450,11 +466,11 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
               </div>
 
               {/* Newsletter signup */}
-              <div className="p-6 bg-blue-50 rounded-xl">
-                <h3 className="text-xl font-bold mb-2">
+              <div className="p-4 bg-blue-50 rounded-xl">
+                <h3 className="text-[12px] font-bold mb-2 text-[#234043]">
                   Subscribe to our newsletter
                 </h3>
-                <p className="text-sm text-gray-600 mb-4">
+                <p className="text-[10px] text-[#234043] mb-3">
                   Get the latest financial tips and insights delivered straight
                   to your inbox.
                 </p>
@@ -462,9 +478,11 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   <input
                     type="email"
                     placeholder="Your email address"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-1.5 text-[10px] border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
                   />
-                  <Button className="w-full">Subscribe</Button>
+                  <Button className="w-full text-[10px] py-1.5">
+                    Subscribe
+                  </Button>
                 </div>
               </div>
             </div>

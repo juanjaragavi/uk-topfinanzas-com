@@ -22,14 +22,14 @@ export default function CreditCards() {
             <div className="text-center lg:text-left">
               <AnimatedText
                 as="h1"
-                className="mb-4 text-secondary leading-tight"
+                className="mb-4 text-[16px] font-bold text-[#234043] leading-tight"
               >
                 {creditCardsPageContent.hero.title}
               </AnimatedText>
 
               <AnimatedText
                 as="p"
-                className="mb-6 text-gray-600 leading-tight"
+                className="mb-6 text-[10px] text-[#234043] leading-tight"
                 delay={0.1}
               >
                 {creditCardsPageContent.hero.description}
@@ -61,7 +61,7 @@ export default function CreditCards() {
         <div className="container-custom">
           <AnimatedText
             as="h2"
-            className="text-center mb-12 text-secondary leading-tight"
+            className="text-center mb-12 text-[12px] text-[#234043] leading-tight"
           >
             {creditCardsPageContent.benefits.title}
           </AnimatedText>
@@ -71,13 +71,13 @@ export default function CreditCards() {
               <div key={index} className="bg-gray-50 p-6 rounded-xl shadow-sm">
                 <AnimatedText
                   as="h3"
-                  className="text-xl font-semibold mb-3 text-secondary leading-tight"
+                  className="text-[12px] font-semibold mb-3 text-[#234043] leading-tight"
                 >
                   {benefit.title}
                 </AnimatedText>
                 <AnimatedText
                   as="p"
-                  className="text-gray-600 leading-tight"
+                  className="text-[10px] text-[#234043] leading-tight"
                   delay={0.1}
                 >
                   {benefit.description}
@@ -94,7 +94,7 @@ export default function CreditCards() {
             <div className="lg:col-span-2">
               <AnimatedText
                 as="h2"
-                className="mb-6 text-secondary leading-tight"
+                className="mb-6 text-[12px] text-[#234043] leading-tight"
               >
                 {creditCardsPageContent.featuredCard.title}
               </AnimatedText>
@@ -111,7 +111,7 @@ export default function CreditCards() {
                   <div>
                     <AnimatedText
                       as="h3"
-                      className="text-xl font-semibold mb-2 text-secondary leading-tight"
+                      className="text-[12px] font-semibold mb-2 text-[#234043] leading-tight"
                     >
                       {creditCardsPageContent.featuredCard.cardName}
                     </AnimatedText>
@@ -133,7 +133,7 @@ export default function CreditCards() {
 
                     <AnimatedText
                       as="p"
-                      className="text-gray-600 mb-4 leading-tight"
+                      className="text-[10px] text-[#234043] mb-4 leading-tight"
                       delay={0.1}
                     >
                       {creditCardsPageContent.featuredCard.description}
@@ -153,7 +153,7 @@ export default function CreditCards() {
 
               <AnimatedText
                 as="h3"
-                className="text-xl font-semibold mb-4 text-secondary leading-tight"
+                className="text-[12px] font-semibold mb-4 text-[#234043] leading-tight"
               >
                 {creditCardsPageContent.featuredCard.requirements.title}
               </AnimatedText>
@@ -202,7 +202,7 @@ export default function CreditCards() {
         <div className="container-custom">
           <AnimatedText
             as="h2"
-            className="text-center mb-8 text-secondary leading-tight"
+            className="text-center mb-8 text-[12px] text-[#234043] leading-tight"
           >
             {creditCardsPageContent.faq.title}
           </AnimatedText>
@@ -215,13 +215,13 @@ export default function CreditCards() {
               >
                 <AnimatedText
                   as="h3"
-                  className="text-lg font-semibold mb-3 text-secondary leading-tight"
+                  className="text-[12px] font-semibold mb-3 text-[#234043] leading-tight"
                 >
                   {faq.question}
                 </AnimatedText>
                 <AnimatedText
                   as="p"
-                  className="text-gray-600 leading-tight"
+                  className="text-[10px] text-[#234043] leading-tight"
                   delay={0.1}
                 >
                   {faq.answer}
@@ -234,13 +234,13 @@ export default function CreditCards() {
 
       <section className="py-12 bg-primary text-white">
         <div className="container-custom text-center justify-center items-center">
-          <AnimatedText as="h2" className="mb-6 leading-tight">
+          <AnimatedText as="h2" className="mb-6 text-[12px] leading-tight">
             {creditCardsPageContent.callToAction.title}
           </AnimatedText>
 
           <AnimatedText
             as="p"
-            className="mb-8 max-w-2xl mx-auto leading-tight"
+            className="mb-8 text-[10px] max-w-2xl mx-auto leading-tight"
             delay={0.1}
           >
             {creditCardsPageContent.callToAction.description}

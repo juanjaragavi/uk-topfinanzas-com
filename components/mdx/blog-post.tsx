@@ -22,7 +22,16 @@ interface BlogPostProps {
 export function BlogPost({ children, metadata }: BlogPostProps) {
   return (
     <BlogLayout metadata={metadata}>
-      <div className="prose prose-lg max-w-none">{children}</div>
+      <div
+        className="prose max-w-none text-[#234043]
+        prose-h1:text-[16px] prose-h1:font-bold prose-h1:text-[#234043]
+        prose-h2:text-[12px] prose-h2:text-[#234043]
+        prose-p:text-[10px] prose-p:text-[#234043]
+        prose-li:text-[10px] prose-li:text-[#234043]
+        prose-a:text-[#222442]"
+      >
+        {children}
+      </div>
     </BlogLayout>
   );
 }

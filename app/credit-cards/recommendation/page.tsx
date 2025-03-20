@@ -21,14 +21,14 @@ export default function CreditCardRecommendation() {
         <div className="container-custom">
           <AnimatedText
             as="h1"
-            className="text-center mb-6 text-secondary leading-tight"
+            className="text-center mb-6 text-[16px] font-bold text-[#234043] leading-tight"
           >
             {creditCardRecommendationPageContent.hero.title}
           </AnimatedText>
 
           <AnimatedText
             as="p"
-            className="text-center mb-12 text-gray-600 max-w-3xl mx-auto leading-tight"
+            className="text-center mb-12 text-[10px] text-[#234043] max-w-3xl mx-auto leading-tight"
             delay={0.1}
           >
             {creditCardRecommendationPageContent.hero.description}
@@ -40,7 +40,7 @@ export default function CreditCardRecommendation() {
         <div className="container-custom">
           <AnimatedText
             as="h2"
-            className="text-center mb-12 text-secondary leading-tight"
+            className="text-center mb-12 text-[12px] text-[#234043] leading-tight"
           >
             {creditCardRecommendationPageContent.recommendedCard.title}
           </AnimatedText>
@@ -71,7 +71,7 @@ export default function CreditCardRecommendation() {
                 <div>
                   <AnimatedText
                     as="h3"
-                    className="text-2xl font-semibold mb-3 text-secondary leading-tight"
+                    className="text-[12px] font-semibold mb-3 text-[#234043] leading-tight"
                   >
                     {
                       creditCardRecommendationPageContent.recommendedCard.card
@@ -110,7 +110,7 @@ export default function CreditCardRecommendation() {
                             <span className="text-primary mr-2 font-bold">
                               ✓
                             </span>
-                            <span className="leading-tight">
+                            <span className="text-[10px] text-[#234043] leading-tight">
                               <strong>{benefit.label}:</strong>{" "}
                               {benefit.description}
                             </span>
@@ -164,14 +164,14 @@ export default function CreditCardRecommendation() {
             <div className="lg:col-span-2">
               <AnimatedText
                 as="h2"
-                className="mb-6 text-secondary leading-tight"
+                className="mb-6 text-[12px] text-[#234043] leading-tight"
               >
                 {creditCardRecommendationPageContent.cashBackExplanation.title}
               </AnimatedText>
 
               <AnimatedText
                 as="p"
-                className="mb-4 text-gray-600 leading-tight"
+                className="mb-4 text-[10px] text-[#234043] leading-tight"
                 delay={0.1}
               >
                 {
@@ -185,7 +185,7 @@ export default function CreditCardRecommendation() {
                   (feature, index) => (
                     <li key={index}>
                       <AnimatedText as="div" delay={0.15 + index * 0.05}>
-                        <span className="text-gray-700 leading-tight">
+                        <span className="text-[10px] text-[#234043] leading-tight">
                           <strong>{feature.title}:</strong>{" "}
                           {feature.description}
                         </span>
@@ -197,7 +197,7 @@ export default function CreditCardRecommendation() {
 
               <AnimatedText
                 as="p"
-                className="mb-6 text-gray-600 leading-tight"
+                className="mb-6 text-[10px] text-[#234043] leading-tight"
                 delay={0.3}
               >
                 {
@@ -239,13 +239,13 @@ export default function CreditCardRecommendation() {
 
       <section className="py-12 bg-primary text-white">
         <div className="container-custom text-center">
-          <AnimatedText as="h2" className="mb-6 leading-tight">
+          <AnimatedText as="h2" className="mb-6 text-[12px] leading-tight">
             {creditCardRecommendationPageContent.callToAction.title}
           </AnimatedText>
 
           <AnimatedText
             as="p"
-            className="mb-8 max-w-2xl mx-auto leading-tight"
+            className="mb-8 text-[10px] max-w-2xl mx-auto leading-tight"
             delay={0.1}
           >
             {creditCardRecommendationPageContent.callToAction.description}

@@ -21,14 +21,14 @@ export default function ApplyCitiDoubleCash() {
         <div className="container-custom">
           <AnimatedText
             as="h1"
-            className="text-center mb-6 text-secondary leading-tight"
+            className="text-center mb-6 text-[16px] font-bold text-[#234043] leading-tight"
           >
             Citi Double Cash Card Application
           </AnimatedText>
 
           <AnimatedText
             as="p"
-            className="text-center mb-12 text-gray-600 max-w-3xl mx-auto leading-tight"
+            className="text-center mb-12 text-[10px] text-[#234043] max-w-3xl mx-auto leading-tight"
             delay={0.1}
           >
             Apply for the Citi Double Cash Card today and start earning up to 2%
@@ -51,7 +51,7 @@ export default function ApplyCitiDoubleCash() {
               <div className="bg-gray-50 p-6 rounded-xl shadow-sm">
                 <AnimatedText
                   as="h3"
-                  className="text-lg font-semibold mb-4 text-secondary leading-tight"
+                  className="text-[12px] font-semibold mb-4 text-[#234043] leading-tight"
                 >
                   Why Apply for the Citi Double Cash Card?
                 </AnimatedText>
@@ -60,7 +60,7 @@ export default function ApplyCitiDoubleCash() {
                   <li className="flex items-start">
                     <AnimatedText as="div" className="flex" delay={0.1}>
                       <span className="text-primary mr-2">✓</span>
-                      <span className="leading-tight">
+                      <span className="text-[10px] text-[#234043] leading-tight">
                         Up to 2% cash back on all purchases
                       </span>
                     </AnimatedText>
@@ -69,14 +69,16 @@ export default function ApplyCitiDoubleCash() {
                   <li className="flex items-start">
                     <AnimatedText as="div" className="flex" delay={0.15}>
                       <span className="text-primary mr-2">✓</span>
-                      <span className="leading-tight">No annual fee</span>
+                      <span className="text-[10px] text-[#234043] leading-tight">
+                        No annual fee
+                      </span>
                     </AnimatedText>
                   </li>
 
                   <li className="flex items-start">
                     <AnimatedText as="div" className="flex" delay={0.2}>
                       <span className="text-primary mr-2">✓</span>
-                      <span className="leading-tight">
+                      <span className="text-[10px] text-[#234043] leading-tight">
                         0% intro APR on balance transfers for 18 months
                       </span>
                     </AnimatedText>
@@ -85,7 +87,7 @@ export default function ApplyCitiDoubleCash() {
                   <li className="flex items-start">
                     <AnimatedText as="div" className="flex" delay={0.25}>
                       <span className="text-primary mr-2">✓</span>
-                      <span className="leading-tight">
+                      <span className="text-[10px] text-[#234043] leading-tight">
                         Flexible redemption options
                       </span>
                     </AnimatedText>
@@ -96,7 +98,7 @@ export default function ApplyCitiDoubleCash() {
               <div className="bg-gray-50 p-6 rounded-xl shadow-sm">
                 <AnimatedText
                   as="h3"
-                  className="text-lg font-semibold mb-4 text-secondary leading-tight"
+                  className="text-[12px] font-semibold mb-4 text-[#234043] leading-tight"
                 >
                   Application Requirements
                 </AnimatedText>
@@ -105,7 +107,7 @@ export default function ApplyCitiDoubleCash() {
                   <li className="flex items-start">
                     <AnimatedText as="div" className="flex" delay={0.1}>
                       <span className="text-primary mr-2">•</span>
-                      <span className="leading-tight">
+                      <span className="text-[10px] text-[#234043] leading-tight">
                         Credit score of at least 670
                       </span>
                     </AnimatedText>
@@ -114,7 +116,7 @@ export default function ApplyCitiDoubleCash() {
                   <li className="flex items-start">
                     <AnimatedText as="div" className="flex" delay={0.15}>
                       <span className="text-primary mr-2">•</span>
-                      <span className="leading-tight">
+                      <span className="text-[10px] text-[#234043] leading-tight">
                         Must be 18 years or older
                       </span>
                     </AnimatedText>
@@ -123,7 +125,7 @@ export default function ApplyCitiDoubleCash() {
                   <li className="flex items-start">
                     <AnimatedText as="div" className="flex" delay={0.2}>
                       <span className="text-primary mr-2">•</span>
-                      <span className="leading-tight">
+                      <span className="text-[10px] text-[#234043] leading-tight">
                         Valid Social Security Number
                       </span>
                     </AnimatedText>
@@ -132,7 +134,9 @@ export default function ApplyCitiDoubleCash() {
                   <li className="flex items-start">
                     <AnimatedText as="div" className="flex" delay={0.25}>
                       <span className="text-primary mr-2">•</span>
-                      <span className="leading-tight">Proof of income</span>
+                      <span className="text-[10px] text-[#234043] leading-tight">
+                        Proof of income
+                      </span>
                     </AnimatedText>
                   </li>
                 </ul>
