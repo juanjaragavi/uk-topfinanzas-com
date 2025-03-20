@@ -11,11 +11,9 @@ export default function BlogNotFound() {
       <section className="flex-grow bg-gradient-to-b from-white to-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Page Not Found
-            </h1>
-            <div className="text-8xl font-bold text-blue-600 mb-6">404</div>
-            <p className="text-xl text-gray-600 mb-8">
+            <h1 className="text-h1 mb-6">Page Not Found</h1>
+            <div className="text-[24px] font-bold text-link mb-6">404</div>
+            <p className="text-body mb-8">
               We couldn't find the page you're looking for. The article might
               have been moved, deleted, or never existed.
             </p>
@@ -29,7 +27,7 @@ export default function BlogNotFound() {
             </div>
 
             <div className="mt-16 border-t border-gray-200 pt-8">
-              <h2 className="text-2xl font-bold mb-4">Popular Categories</h2>
+              <h2 className="text-h2 mb-4">Popular Categories</h2>
               <div className="flex flex-wrap justify-center gap-2 mb-6">
                 <Link
                   href="/blog/category/personal-finance"

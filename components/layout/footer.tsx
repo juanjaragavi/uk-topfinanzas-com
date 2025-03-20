@@ -20,7 +20,7 @@ export function Footer() {
             className="h-20 w-auto"
             priority
           />
-          <p className="text-[10px] mt-2 text-left max-w-[250px] leading-tight text-white font-normal">
+          <p className="text-meta mt-2 text-left max-w-[250px] leading-tight text-white font-normal">
             ALL RIGHTS RESERVED, ©TOP NETWORKS INC 2025. TOTAL OR PARTIAL
             REPRODUCTION BY ANY MEANS OR FORM IS PROHIBITED WITHOUT THE WRITTEN
             AND EXPRESS AUTHORIZATION OF THE COPYRIGHT HOLDER.
@@ -31,7 +31,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           {/* Navigation Links - Most important for mobile users */}
           <div className="order-1 md:order-1">
-            <h2 className="text-xl font-semibold mb-5 text-[#7BDC54]">
+            <h2 className="footer-h2 mb-5 text-white">
               {footerContent.headings.navigate}
             </h2>
             <ul className="space-y-4">
@@ -46,7 +46,7 @@ export function Footer() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="text-white hover:text-[#55B9FF] hover:underline transition-colors"
+                      className="footer-text hover:text-[#55B9FF] hover:underline transition-colors"
                     >
                       {item.text}
                     </Link>
@@ -56,7 +56,7 @@ export function Footer() {
 
             {/* Social Media Section - Moved closer to navigation for better visibility */}
             <div className="mt-8">
-              <p className="mb-3 text-[#55B9FF]">
+              <p className="mb-3 text-white">
                 {footerNavigation.socialMedia.title}
               </p>
               <div className="flex space-x-4">
@@ -85,7 +85,7 @@ export function Footer() {
 
           {/* Blog Categories Section */}
           <div className="order-2 md:order-2">
-            <h2 className="text-xl font-semibold mb-5 text-[#7BDC54]">
+            <h2 className="footer-h2 mb-5 text-white">
               {footerContent.headings.categories}
             </h2>
             <ul className="space-y-4">
@@ -93,7 +93,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-white hover:text-[#55B9FF] hover:underline transition-colors"
+                    className="footer-text hover:text-[#55B9FF] hover:underline transition-colors"
                   >
                     {item.text}
                   </Link>
@@ -104,15 +104,13 @@ export function Footer() {
 
           {/* Popular Blog Posts Section */}
           <div className="order-3 md:order-3">
-            <h2 className="text-xl font-semibold mb-5 text-[#7BDC54]">
-              Popular Articles
-            </h2>
+            <h2 className="footer-h2 mb-5 text-white">Popular Articles</h2>
             <ul className="space-y-4">
               {footerNavigation.blogItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-white hover:text-[#55B9FF] hover:underline transition-colors"
+                    className="footer-text hover:text-[#55B9FF] hover:underline transition-colors"
                   >
                     {item.text}
                   </Link>
@@ -123,7 +121,7 @@ export function Footer() {
 
           {/* Contact Section */}
           <div className="order-4 md:order-4">
-            <h2 className="text-xl font-semibold mb-5 text-[#7BDC54]">
+            <h2 className="footer-h2 mb-5 text-white">
               {footerContent.headings.contact}
             </h2>
             <ul className="space-y-4">
@@ -156,12 +154,12 @@ export function Footer() {
                   {contact.type === "email" ? (
                     <a
                       href={contact.href}
-                      className="text-white hover:text-[#55B9FF] hover:underline transition-colors"
+                      className="footer-text hover:text-[#55B9FF] hover:underline transition-colors"
                     >
                       {contact.value}
                     </a>
                   ) : (
-                    <span className="text-sm leading-tight">
+                    <span className="footer-text leading-tight">
                       {contact.value}
                     </span>
                   )}
@@ -172,8 +170,8 @@ export function Footer() {
         </div>
 
         {/* Disclaimer with updated styling */}
-        <div className="text-jusfity text-[8px] leading-relaxed max-w-4xl mx-auto mb-10">
-          <p className="text-white/80">
+        <div className="text-jusfity leading-relaxed max-w-4xl mx-auto mb-10">
+          <p className="footer-meta">
             <span className="font-semibold">
               {footerContent.legal.disclaimer.label}
             </span>{" "}
@@ -182,17 +180,14 @@ export function Footer() {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="text-center text-[8px] border-t border-white/20 pt-6">
-          <p className="text-white/80">
+        <div className="text-center border-t border-white/20 pt-6">
+          <p className="footer-meta">
             <span className="block w-full pb-2">
               {footerContent.companyInfo.productLabel}
             </span>
             {footerNavigation.legalLinks.map((link, index) => (
               <span key={link.href}>
-                <Link
-                  href={link.href}
-                  className="text-white hover:underline mx-1"
-                >
+                <Link href={link.href} className="footer-link mx-1">
                   {link.text}
                 </Link>
                 {index < footerNavigation.legalLinks.length - 1 ? " | " : ""}

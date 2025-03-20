@@ -31,33 +31,139 @@ body {
 
 @layer base {
   h1 {
-    @apply text-3xl font-bold md:text-4xl lg:text-5xl text-gray-900;
+    @apply text-h1;
   }
 
   h2 {
-    @apply text-2xl font-semibold md:text-3xl lg:text-4xl text-gray-900;
+    @apply text-h2;
   }
 
   h3 {
-    @apply text-xl font-semibold md:text-2xl lg:text-3xl text-gray-900;
-  }
-
-  h4,
-  h5,
-  h6 {
-    @apply text-gray-900 font-bold;
+    @apply text-h3;
   }
 
   p {
-    @apply text-base md:text-lg text-gray-700;
+    @apply text-body;
+  }
+
+  a {
+    @apply text-link;
+  }
+
+  li {
+    @apply text-list;
   }
 
   .text-muted {
-    @apply text-gray-500;
+    @apply text-meta;
   }
 }
 
 @layer components {
+
+  /* Heading Typography */
+  .text-h1 {
+    @apply text-[16px] font-bold text-[#234043] leading-tight;
+  }
+
+  .text-h2 {
+    @apply text-[12px] text-[#234043] leading-tight;
+  }
+
+  .text-h3 {
+    @apply text-[12px] font-semibold text-[#234043] leading-tight;
+  }
+
+  /* Paragraph Typography */
+  .text-body {
+    @apply text-[10px] text-[#234043] leading-normal;
+  }
+
+  /* List Item Typography */
+  .text-list {
+    @apply text-[10px] text-[#234043] leading-normal;
+  }
+
+  /* Link Typography */
+  .text-link {
+    @apply text-[#222442] hover:underline;
+  }
+
+  /* Caption/Meta Typography */
+  .text-meta {
+    @apply text-[8px] text-[#234043] leading-tight;
+  }
+
+  /* Special Text Elements */
+  .text-cta {
+    @apply text-[12px] font-medium;
+  }
+
+  /* Button Text */
+  .btn-text {
+    @apply text-[10px] py-1.5;
+  }
+
+  /* Card Elements */
+  .card-title {
+    @apply font-medium text-[10px] leading-tight mb-1;
+  }
+
+  .card-meta {
+    @apply text-[8px] opacity-90;
+  }
+
+  /* Badge Elements */
+  .badge-text {
+    @apply bg-gray-100 text-[#234043] rounded-full px-2 py-1 text-[8px];
+  }
+
+  /* Special Sizes */
+  .text-large {
+    @apply text-[24px] font-bold;
+  }
+
+  /* Navigation Elements */
+  .nav-link {
+    @apply text-[10px] text-[#234043] hover:text-[#222442] transition-colors;
+  }
+
+  /* Footer Typography - All White Text */
+  .footer-h2 {
+    @apply text-[12px] text-white leading-tight;
+  }
+
+  .footer-h3 {
+    @apply text-[12px] font-semibold text-white leading-tight;
+  }
+
+  .footer-text {
+    @apply text-[10px] text-white leading-normal;
+  }
+
+  .footer-meta {
+    @apply text-[8px] text-white leading-tight;
+  }
+
+  .footer-link {
+    @apply text-white hover:text-[#55B9FF] hover:underline;
+  }
+
+  /* Default background for text overlay sections */
+  .bg-text-overlay {
+    @apply bg-white/90 p-3 rounded-md;
+  }
+
+  /* Container for article content with appropriate spacing */
+  .article-container {
+    @apply space-y-4 max-w-3xl mx-auto;
+  }
+
+  /* Special container for the GAM ad iframe */
+  .gam-ad-container {
+    @apply my-6 mx-auto flex justify-center;
+  }
+
   .container-custom {
     @apply container mx-auto px-4 md:px-6 lg:px-8;
   }

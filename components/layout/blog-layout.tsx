@@ -50,7 +50,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
               <Link
                 key={index}
                 href={`/blog/category/${category.slug}`}
-                className="uppercase text-blue-600 text-sm font-medium mr-2 hover:underline"
+                className="uppercase text-link text-sm font-medium mr-2 hover:underline"
               >
                 {category.name}
               </Link>
@@ -85,7 +85,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
           </div>
 
           {/* Title */}
-          <h1 className="text-[16px] font-bold text-[#234043] mb-4">{title}</h1>
+          <h1 className="text-h1 mb-4">{title}</h1>
 
           {/* Author and date */}
           <div className="flex items-center mb-8">
@@ -254,10 +254,8 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     className="rounded-xl mb-4 sm:mb-0 sm:mr-4"
                   />
                   <div className="text-center sm:text-left">
-                    <h3 className="text-[12px] font-bold mb-1 text-[#234043]">
-                      {author}
-                    </h3>
-                    <p className="text-[10px] text-[#234043] mb-2">
+                    <h3 className="text-h3 mb-1">{author}</h3>
+                    <p className="text-body mb-2">
                       Financial expert with over 10 years of experience in
                       personal finance, investment strategies, and credit
                       management.
@@ -297,11 +295,9 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
 
               {/* Comments section */}
               <div className="mt-8 pt-4 border-t border-gray-200">
-                <h3 className="text-[12px] font-bold mb-4 text-[#234043]">
-                  Comments
-                </h3>
+                <h3 className="text-h3 mb-4">Comments</h3>
                 <div className="bg-gray-50 p-4 rounded-xl text-center">
-                  <p className="text-[10px] text-[#234043] mb-3">
+                  <p className="text-body mb-3">
                     Be the first to share your thoughts on this article.
                   </p>
                   <Button className="text-[10px] py-1.5">

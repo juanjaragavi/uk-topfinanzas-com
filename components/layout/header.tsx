@@ -79,7 +79,7 @@ export function Header() {
             <div className="relative">
               <button
                 ref={(el) => setMenuButtonRef(el, "categories")}
-                className="text-gray-600 hover:text-primary flex items-center space-x-1"
+                className="text-link hover:text-primary flex items-center space-x-1"
                 onClick={() => toggleMegaMenu("categories")}
                 aria-expanded={activeMegaMenu === "categories"}
               >
@@ -101,7 +101,7 @@ export function Header() {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        className="block px-4 py-2 text-body hover:bg-gray-100"
                         onClick={() => setActiveMegaMenu(null)}
                       >
                         {item.text}
@@ -116,7 +116,7 @@ export function Header() {
             <div className="relative">
               <button
                 ref={(el) => setMenuButtonRef(el, "blog")}
-                className="text-gray-600 hover:text-primary flex items-center space-x-1"
+                className="text-link hover:text-primary flex items-center space-x-1"
                 onClick={() => toggleMegaMenu("blog")}
                 aria-expanded={activeMegaMenu === "blog"}
               >
@@ -143,7 +143,7 @@ export function Header() {
                     {headerNavigation.blogMegaMenu.columns.map(
                       (column, idx) => (
                         <div key={idx} className="col-span-12 md:col-span-2">
-                          <h3 className="font-bold text-gray-900 mb-3 uppercase text-sm tracking-wide">
+                          <h3 className="text-h3 uppercase tracking-wide mb-3">
                             {column.title}
                           </h3>
                           <ul className="space-y-2">
@@ -151,7 +151,7 @@ export function Header() {
                               <li key={itemIdx}>
                                 <Link
                                   href={item.href}
-                                  className="text-gray-600 hover:text-primary text-sm block py-1"
+                                  className="text-body hover:text-primary block py-1"
                                   onClick={() => setActiveMegaMenu(null)}
                                 >
                                   {item.text}
@@ -166,7 +166,7 @@ export function Header() {
                     {/* Featured Posts */}
                     {headerNavigation.blogMegaMenu.featuredPosts && (
                       <div className="col-span-12 md:col-span-8">
-                        <h3 className="font-bold text-gray-900 mb-3 uppercase text-sm tracking-wide">
+                        <h3 className="text-h3 uppercase tracking-wide mb-3">
                           {headerNavigation.blogMegaMenu.featuredPosts.title}
                         </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -187,12 +187,12 @@ export function Header() {
                                   />
                                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                                   <div className="absolute bottom-2 left-2">
-                                    <span className="inline-block bg-blue-600 text-white px-2 py-0.5 rounded text-xs">
+                                    <span className="inline-block bg-blue-600 text-white px-2 py-0.5 rounded text-meta">
                                       {post.category}
                                     </span>
                                   </div>
                                 </div>
-                                <h4 className="font-medium text-gray-900 group-hover:text-primary transition-colors">
+                                <h4 className="text-h3 group-hover:text-primary transition-colors">
                                   {post.title}
                                 </h4>
                               </Link>
@@ -202,7 +202,7 @@ export function Header() {
                         <div className="mt-4 text-right">
                           <Link
                             href="/blog"
-                            className="text-blue-600 hover:text-blue-800 font-medium text-sm inline-flex items-center"
+                            className="text-link font-medium inline-flex items-center"
                             onClick={() => setActiveMegaMenu(null)}
                           >
                             {headerContent.blogMegaMenu.viewAllText}
@@ -240,7 +240,7 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-gray-600 hover:text-primary"
+                  className="text-link hover:text-primary"
                 >
                   {item.text}
                 </Link>
@@ -301,14 +301,14 @@ export function Header() {
               <nav className="py-4 space-y-4">
                 {/* Categories Section */}
                 <div className="space-y-2">
-                  <div className="font-medium px-4">
+                  <div className="text-h3 px-4">
                     {headerContent.mobileMenu.categoriesLabel}
                   </div>
                   {headerNavigation.categoryDropdown.items.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                      className="block px-4 py-2 text-body hover:bg-gray-100"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.text}
@@ -318,7 +318,7 @@ export function Header() {
 
                 {/* Blog Categories */}
                 <div className="space-y-2">
-                  <div className="font-medium px-4">
+                  <div className="text-h3 px-4">
                     {headerContent.mobileMenu.blogCategories}
                   </div>
                   {headerNavigation.blogMegaMenu.columns[0].items.map(
@@ -326,7 +326,7 @@ export function Header() {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                        className="block px-4 py-2 text-body hover:bg-gray-100"
                         onClick={() => setIsOpen(false)}
                       >
                         {item.text}
@@ -337,7 +337,7 @@ export function Header() {
 
                 {/* Popular Articles */}
                 <div className="space-y-2">
-                  <div className="font-medium px-4">
+                  <div className="text-h3 px-4">
                     {headerContent.mobileMenu.popularArticles}
                   </div>
                   {headerNavigation.blogMegaMenu.columns[1].items.map(
@@ -345,7 +345,7 @@ export function Header() {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                        className="block px-4 py-2 text-body hover:bg-gray-100"
                         onClick={() => setIsOpen(false)}
                       >
                         {item.text}
@@ -366,7 +366,7 @@ export function Header() {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="block px-4 py-2 text-gray-600 hover:bg-gray-100"
+                      className="block px-4 py-2 text-body hover:bg-gray-100"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.text}
@@ -376,7 +376,7 @@ export function Header() {
                 {/* Blog Link */}
                 <Link
                   href="/blog"
-                  className="block px-4 py-2 text-gray-600 hover:bg-gray-100 font-medium"
+                  className="block px-4 py-2 text-body hover:bg-gray-100 font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {headerContent.mobileMenu.allArticles}

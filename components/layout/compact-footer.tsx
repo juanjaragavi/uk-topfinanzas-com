@@ -23,18 +23,15 @@ export function CompactFooter() {
         </div>
 
         {/* Bottom Copyright with Legal Links Only */}
-        <div className="text-center text-xs border-t border-white/20 pt-4">
-          <p className="text-white/80">
+        <div className="text-center border-t border-white/20 pt-4">
+          <p className="footer-meta">
             <span className="block sm:inline w-full py-3">
               {footerContent.companyInfo.productLabel}
             </span>
             <span className="hidden sm:inline"> &nbsp;&nbsp; | &nbsp; </span>
             {footerNavigation.legalLinks.map((link, index) => (
               <span key={link.href}>
-                <Link
-                  href={link.href}
-                  className="text-[#55B9FF] hover:underline mx-2"
-                >
+                <Link href={link.href} className="footer-link mx-2">
                   {link.text}
                 </Link>
                 {index < footerNavigation.legalLinks.length - 1 ? " | " : ""}
