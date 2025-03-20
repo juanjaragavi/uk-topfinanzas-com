@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -32,14 +33,10 @@ export default function Home() {
 
       {/* Banner Section */}
       <section
-        className="relative py-16 md:py-24 lg:py-40 bg-cover bg-no-repeat"
-        style={{
-          backgroundImage: isMobile
-            ? `url(https://media.topfinanzas.com/images/banner-home-mobile.webp)`
-            : `url(https://media.topfinanzas.com/images/banner-home.webp)`,
-          backgroundPosition: "center center",
-          backgroundSize: "cover",
-        }}
+        className={cn(
+          "banner-section",
+          isMobile ? "banner-section-mobile" : "banner-section-desktop"
+        )}
       >
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black opacity-30 md:opacity-25"></div>

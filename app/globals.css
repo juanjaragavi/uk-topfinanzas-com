@@ -179,4 +179,18 @@ body {
   .btn-full {
     @apply w-full;
   }
+
+  .banner-section {
+    @apply relative py-16 md:py-24 lg:py-40 bg-cover bg-no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .banner-section-mobile {
+    background-image: url(https://media.topfinanzas.com/images/banner-home-mobile.webp);
+  }
+
+  .banner-section-desktop {
+    background-image: url(https://media.topfinanzas.com/images/banner-home.webp);
+  }
 }

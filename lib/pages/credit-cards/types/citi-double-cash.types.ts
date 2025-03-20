@@ -38,6 +38,15 @@ export interface CitiDoubleCashPageContent {
       height: number;
     };
   };
+  eligibilityCriteria: string;
+  applicationRequirements: string;
+  benefitsList: {
+    title: string;
+    items: string[];
+  };
+  requirementsList: {
+    items: string[];
+  };
   applicationSteps: {
     title: string;
     steps: Array<{

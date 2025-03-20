@@ -1,9 +1,4 @@
-/**
- * Type definitions for the Citi Double Cash Card Application page
- * These interfaces define the structure of content used by the page component
- */
-
-export interface CitiDoubleCashApplicationPageContent {
+export interface ApplyCitiDoubleCashPageContent {
   metadata: {
     title: string;
     description: string;
@@ -13,16 +8,8 @@ export interface CitiDoubleCashApplicationPageContent {
     title: string;
     description: string;
   };
-  benefits: {
-    title: string;
-    items: Array<{
-      text: string;
-    }>;
-  };
-  requirements: {
-    title: string;
-    items: Array<{
-      text: string;
-    }>;
-  };
+  whyApply: string;
+  benefits: string[];
+  applicationRequirements: string;
+  requirements: string[];
 }

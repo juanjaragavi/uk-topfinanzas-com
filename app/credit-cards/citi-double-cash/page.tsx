@@ -94,7 +94,7 @@ export default function CitiDoubleCashCard() {
                   as="h3"
                   className="text-[12px] font-semibold mb-4 text-[#234043] leading-tight"
                 >
-                  Eligibility Criteria
+                  {citiDoubleCashPageContent.eligibilityCriteria}
                 </AnimatedText>
 
                 <ul className="space-y-4">

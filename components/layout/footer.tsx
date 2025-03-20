@@ -21,9 +21,7 @@ export function Footer() {
             priority
           />
           <p className="text-meta mt-2 text-left max-w-[250px] leading-tight text-white font-normal">
-            ALL RIGHTS RESERVED, ©TOP NETWORKS INC 2025. TOTAL OR PARTIAL
-            REPRODUCTION BY ANY MEANS OR FORM IS PROHIBITED WITHOUT THE WRITTEN
-            AND EXPRESS AUTHORIZATION OF THE COPYRIGHT HOLDER.
+            {footerContent.legal.fullCopyright.text}
           </p>
         </div>
 

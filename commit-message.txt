@@ -1,10 +1,8 @@
-refactor: standardize typography across blog and credit card pages
+feat: Centralize content management for apply pages
 
-- Set h1 titles to 16px bold with #234043 color
-- Change h2/h3 headings to 12px with #234043 color
-- Adjust paragraph and list text to 10px with #234043 color
-- Update links to use #222442 color
-- Apply consistent typography across components and pages
-- Ensure visual consistency in both blog content and credit card user journey
+This commit centralizes the content management for the apply pages in the credit-cards section.
 
-This change implements the new article template guidelines for typography, creating a more consistent visual hierarchy throughout the application.
+- Created content files (apply.content.json, apply-citi-double-cash.content.json) in lib/pages/credit-cards/content/
+- Created type definition files (apply.types.ts, apply-citi-double-cash.types.ts) in lib/pages/credit-cards/types/
+- Updated app/credit-cards/apply/page.tsx to use dynamic content
+- Updated app/credit-cards/apply/citi-double-cash/page.tsx to use dynamic content

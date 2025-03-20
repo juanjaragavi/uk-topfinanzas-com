@@ -30,6 +30,9 @@ export const footerContent = {
       text: "Copyright Top Networks Inc. 2025",
       year: "2025",
     },
+    fullCopyright: {
+      text: "ALL RIGHTS RESERVED, ©TOP NETWORKS INC 2025. TOTAL OR PARTIAL\nREPRODUCTION BY ANY MEANS OR FORM IS PROHIBITED WITHOUT THE WRITTEN\nAND EXPRESS AUTHORIZATION OF THE COPYRIGHT HOLDER.",
+    },
   },
 
   /** Theme colors for easier updating */

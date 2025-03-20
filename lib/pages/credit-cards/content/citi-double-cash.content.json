@@ -47,6 +47,25 @@
             "height": 300
         }
     },
+    "eligibilityCriteria": "Eligibility Criteria",
+    "applicationRequirements": "Application Requirements",
+    "benefitsList": {
+        "title": "Why Apply for the Citi Double Cash Card?",
+        "items": [
+            "Up to 2% cash back on all purchases",
+            "No annual fee",
+            "0% intro APR on balance transfers for 18 months",
+            "Flexible redemption options"
+        ]
+    },
+    "requirementsList": {
+        "items": [
+            "Credit score of at least 670",
+            "Must be 18 years or older",
+            "Valid Social Security Number",
+            "Proof of income"
+        ]
+    },
     "applicationSteps": {
         "title": "How to apply for the Citi Double Cash Credit Card",
         "steps": [

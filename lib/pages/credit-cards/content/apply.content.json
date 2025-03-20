@@ -8,21 +8,11 @@
         "title": "Credit Card Application",
         "description": "Complete the form below to apply for your selected credit card. Your information is secure and will only be used for processing your application."
     },
-    "benefits": {
-        "title": "Why Choose TopFinanzas?",
-        "items": [
-            {
-                "text": "Secure application process"
-            },
-            {
-                "text": "Fast approval decisions"
-            },
-            {
-                "text": "No impact on credit score to check rates"
-            },
-            {
-                "text": "Expert support throughout the process"
-            }
-        ]
-    }
+    "whyChooseTitle": "Why Choose TopFinanzas?",
+    "benefits": [
+        "Secure application process",
+        "Fast approval decisions",
+        "No impact on credit score to check rates",
+        "Expert support throughout the process"
+    ]
 }

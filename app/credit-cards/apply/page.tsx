@@ -3,14 +3,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AnimatedText } from "@/components/ui/animated-text";
 import { Ad } from "@/components/ui/ad";
 import { CreditCardApplicationForm } from "@/components/forms/credit-card-application-form";
+import { applyPageContent } from "@/lib/pages/credit-cards/apply";
 
-export const metadata = {
-  title: "Apply for a Credit Card - TopFinanzas",
-  description:
-    "Apply for a credit card online. Quick and secure application process with fast approval.",
-  keywords:
-    "credit card application, apply for credit card, online application, TopFinanzas",
-};
+export const metadata = applyPageContent.metadata;
 
 export default function ApplyCreditCard() {
   return (
@@ -23,7 +18,7 @@ export default function ApplyCreditCard() {
             as="h1"
             className="text-center mb-6 text-[16px] font-bold text-[#234043] leading-tight"
           >
-            Credit Card Application
+            {applyPageContent.hero.title}
           </AnimatedText>
 
           <AnimatedText
@@ -31,9 +26,7 @@ export default function ApplyCreditCard() {
             className="text-center mb-12 text-[10px] text-[#234043] max-w-3xl mx-auto leading-tight"
             delay={0.1}
           >
-            Complete the form below to apply for your selected credit card. Your
-            information is secure and will only be used for processing your
-            application.
+            {applyPageContent.hero.description}
           </AnimatedText>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -54,53 +47,23 @@ export default function ApplyCreditCard() {
                   as="h3"
                   className="text-[12px] font-semibold mb-4 text-[#234043] leading-tight"
                 >
-                  Why Choose TopFinanzas?
+                  {applyPageContent.whyChooseTitle}
                 </AnimatedText>
 
                 <ul className="space-y-3">
-                  <AnimatedText
-                    as="div"
-                    className="flex items-start"
-                    delay={0.1}
-                  >
-                    <span className="text-primary mr-2">✓</span>
-                    <span className="text-[10px] text-[#234043] leading-tight">
-                      Secure application process
-                    </span>
-                  </AnimatedText>
-
-                  <AnimatedText
-                    as="div"
-                    className="flex items-start"
-                    delay={0.15}
-                  >
-                    <span className="text-primary mr-2">✓</span>
-                    <span className="text-[10px] text-[#234043] leading-tight">
-                      Fast approval decisions
-                    </span>
-                  </AnimatedText>
-
-                  <AnimatedText
-                    as="div"
-                    className="flex items-start"
-                    delay={0.2}
-                  >
-                    <span className="text-primary mr-2">✓</span>
-                    <span className="text-[10px] text-[#234043] leading-tight">
-                      No impact on credit score to check rates
-                    </span>
-                  </AnimatedText>
-
-                  <AnimatedText
-                    as="div"
-                    className="flex items-start"
-                    delay={0.25}
-                  >
-                    <span className="text-primary mr-2">✓</span>
-                    <span className="text-[10px] text-[#234043] leading-tight">
-                      Expert support throughout the process
-                    </span>
-                  </AnimatedText>
+                  {applyPageContent.benefits.map((benefit, index) => (
+                    <AnimatedText
+                      as="div"
+                      className="flex items-start"
+                      delay={0.1 + index * 0.05}
+                      key={index}
+                    >
+                      <span className="text-primary mr-2">✓</span>
+                      <span className="text-[10px] text-[#234043] leading-tight">
+                        {benefit}
+                      </span>
+                    </AnimatedText>
+                  ))}
                 </ul>
               </div>
 

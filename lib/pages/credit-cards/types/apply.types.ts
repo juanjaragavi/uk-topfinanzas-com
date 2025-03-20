@@ -1,9 +1,4 @@
-/**
- * Type definitions for the Credit Card Application page
- * These interfaces define the structure of content used by the page component
- */
-
-export interface CreditCardApplicationPageContent {
+export interface ApplyPageContent {
   metadata: {
     title: string;
     description: string;
@@ -13,10 +8,6 @@ export interface CreditCardApplicationPageContent {
     title: string;
     description: string;
   };
-  benefits: {
-    title: string;
-    items: Array<{
-      text: string;
-    }>;
-  };
+  whyChooseTitle: string;
+  benefits: string[];
 }
