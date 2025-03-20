@@ -1,0 +1,109 @@
+{
+    "metadata": {
+        "title": "Citi Double Cash Credit Card - TopFinanzas",
+        "description": "Learn about the Citi Double Cash Credit Card benefits, requirements, and application process. Earn cash back on every purchase.",
+        "keywords": "Citi Double Cash, credit card, cash back rewards, no annual fee, balance transfer, TopFinanzas"
+    },
+    "hero": {
+        "title": "Citi Double Cash Credit Card",
+        "description": "A card valued for its cash-back rewards, offering earnings on every purchase with no annual fee.",
+        "rating": {
+            "score": 4.7,
+            "count": 2120
+        },
+        "applyButtonText": "Check Eligibility Requirements",
+        "applyButtonLink": "/credit-cards/apply/citi-double-cash",
+        "image": {
+            "src": "https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg",
+            "alt": "Citi Double Cash Credit Card",
+            "width": 480,
+            "height": 300
+        }
+    },
+    "requirements": {
+        "title": "Requirements for the Citi Double Cash Credit Card",
+        "items": [
+            {
+                "label": "Credit Score",
+                "value": "A good credit score of at least 670 is generally recommended."
+            },
+            {
+                "label": "Age Requirement",
+                "value": "Applicants should be 18 years or older."
+            },
+            {
+                "label": "Social Security Number",
+                "value": "Required for identity verification."
+            },
+            {
+                "label": "Income Documentation",
+                "value": "Proof of income or employment details is often necessary."
+            }
+        ],
+        "image": {
+            "src": "https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg",
+            "alt": "Credit Card Requirements",
+            "width": 400,
+            "height": 300
+        }
+    },
+    "applicationSteps": {
+        "title": "How to apply for the Citi Double Cash Credit Card",
+        "steps": [
+            {
+                "number": 1,
+                "title": "Visit Citi's official website",
+                "description": "Navigate to Citi's website and locate the Double Cash Card application page."
+            },
+            {
+                "number": 2,
+                "title": "Provide personal details",
+                "description": "Complete fields for name, address, date of birth, and SSN."
+            },
+            {
+                "number": 3,
+                "title": "Income verification",
+                "description": "Submit income details as requested to confirm eligibility and determine credit limits."
+            },
+            {
+                "number": 4,
+                "title": "Review terms",
+                "description": "Carefully review the terms and conditions, including interest rates, fees, and rewards program details."
+            },
+            {
+                "number": 5,
+                "title": "Submit the application",
+                "description": "Once all information is confirmed, submit the application for an immediate decision."
+            }
+        ],
+        "buttonText": "View Card Benefits",
+        "buttonLink": "/credit-cards/apply/citi-double-cash"
+    },
+    "benefits": {
+        "title": "Benefits of the Citi Double Cash Credit Card",
+        "items": [
+            {
+                "title": "Straightforward Cash-Back rewards",
+                "description": "With the Citi Double Cash Card, earn 1% cash back when you buy and another 1% when you pay off purchases. This unique structure encourages timely payments and offers cash-back simplicity."
+            },
+            {
+                "title": "No annual fee",
+                "description": "With no annual fee, you can maximize rewards without worrying about costs. This feature makes it an accessible option for a range of users."
+            },
+            {
+                "title": "Versatile redemption options",
+                "description": "Redeem cash-back rewards as statement credits, deposits, or checks, providing flexibility to suit different needs."
+            },
+            {
+                "title": "Balance transfer feature",
+                "description": "Citi offers an introductory APR on balance transfers, which can be useful for consolidating debt. Keep in mind, however, that transfer fees may apply."
+            }
+        ]
+    },
+    "callToAction": {
+        "title": "Ready to enjoy these benefits?",
+        "description": "Apply for the Citi Double Cash Credit Card today and start earning cash back on every purchase. Our simple application process takes just minutes to complete.",
+        "buttonText": "Discover Your Options",
+        "buttonLink": "/credit-cards/apply/citi-double-cash"
+    }
+}
