@@ -46,7 +46,7 @@ export const headerNavigation = {
     },
     {
       text: "SOLICITAR AHORA",
-      href: "/credit-cards/apply/citi-double-cash",
+      href: "/apply/citi-double-cash",
     },
   ],
 
@@ -56,15 +56,15 @@ export const headerNavigation = {
     items: [
       {
         text: "Recomendaciones de Tarjetas",
-        href: "/credit-cards/recommendation",
+        href: "/recommendation",
       },
       {
         text: "Comparar Tarjetas",
-        href: "/credit-cards",
+        href: "/",
       },
       {
         text: "Citi Double Cash",
-        href: "/credit-cards/citi-double-cash",
+        href: "/citi-double-cash",
       },
     ],
   },

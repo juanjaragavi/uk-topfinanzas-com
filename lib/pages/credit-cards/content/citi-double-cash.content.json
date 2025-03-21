@@ -12,7 +12,7 @@
             "count": 2120
         },
         "applyButtonText": "Verificar Requisitos de Elegibilidad",
-        "applyButtonLink": "/credit-cards/apply/citi-double-cash",
+        "applyButtonLink": "/apply/citi-double-cash",
         "image": {
             "src": "https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg",
             "alt": "Tarjeta de Crédito Citi Double Cash",
@@ -96,7 +96,7 @@
             }
         ],
         "buttonText": "Ver Beneficios de la Tarjeta",
-        "buttonLink": "/credit-cards/apply/citi-double-cash"
+        "buttonLink": "/apply/citi-double-cash"
     },
     "benefits": {
         "title": "Beneficios de la Tarjeta de Crédito Citi Double Cash",
@@ -123,6 +123,6 @@
         "title": "¿Listo para disfrutar de estos beneficios?",
         "description": "Solicita la Tarjeta de Crédito Citi Double Cash hoy y comienza a ganar cashback en cada compra. Nuestro simple proceso de solicitud toma solo minutos para completar.",
         "buttonText": "Descubre Tus Opciones",
-        "buttonLink": "/credit-cards/apply/citi-double-cash"
+        "buttonLink": "/apply/citi-double-cash"
     }
 }

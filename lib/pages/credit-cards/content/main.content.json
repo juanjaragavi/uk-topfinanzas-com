@@ -8,7 +8,7 @@
         "title": "La Manera Inteligente de Elegir una Tarjeta de Crédito",
         "description": "¿Listo para tomar el control de tus finanzas? Podrías calificar para una tarjeta de crédito con las herramientas y flexibilidad que necesitas. Aquí te explicamos por qué ahora es el momento perfecto para explorar tus opciones:",
         "ctaText": "Ver nuestra recomendación",
-        "ctaLink": "/credit-cards/recommendation"
+        "ctaLink": "/recommendation"
     },
     "benefits": {
         "title": "¿Por Qué Elegir Nuestro Recomendador de Tarjetas?",
@@ -37,7 +37,7 @@
         },
         "description": "Desbloquea la libertad financiera con nuestra tarjeta mejor calificada. No se requiere verificación de crédito y cashback flexible entre 1% y 20%.",
         "ctaText": "Ver resultados de comparación",
-        "ctaLink": "/credit-cards/citi-double-cash",
+        "ctaLink": "/citi-double-cash",
         "requirements": {
             "title": "Requisitos para la Tarjeta de Crédito Citi Double Cash",
             "items": [
@@ -59,7 +59,7 @@
                 }
             ],
             "ctaText": "Verificar requisitos de elegibilidad",
-            "ctaLink": "/credit-cards/apply"
+            "ctaLink": "/apply"
         }
     },
     "faq": {
@@ -87,6 +87,6 @@
         "title": "Toma el control de tus finanzas hoy",
         "description": "Encuentra la tarjeta de crédito que se adapte a tus necesidades con nuestra orientación experta. Te ayudaremos a tomar decisiones informadas que coincidan con tus objetivos y te encaminen hacia un futuro financiero más brillante.",
         "buttonText": "Descubre tus opciones",
-        "buttonLink": "/credit-cards/apply"
+        "buttonLink": "/apply"
     }
 }

@@ -99,7 +99,7 @@ export const creditCardsPageContent: CreditCardPageContent = {
     title: "The Smart Way to Choose a Credit Card",
     description: "Ready to take charge of your finances? You may qualify for a credit card with the tools and flexibility you need. Here's why now is the perfect time to explore your options:",
     ctaText: "Accept recommendation",
-    ctaLink: "/credit-cards/recommendation",
+    ctaLink: "/recommendation",
   },
   // ... rest of the content
 };
@@ -110,7 +110,7 @@ export const creditCardsPageContent: CreditCardPageContent = {
 Modify the page components to consume content from the TS files:
 
 ```tsx
-// app/credit-cards/page.tsx
+// app/page.tsx
 import { creditCardsPageContent } from "@/lib/pages/credit-cards/main";
 
 export const metadata = creditCardsPageContent.metadata;
