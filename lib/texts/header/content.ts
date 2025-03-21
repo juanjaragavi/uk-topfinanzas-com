@@ -6,15 +6,15 @@
 export const headerContent = {
   /** Placeholder text for search functionality */
   search: {
-    placeholder: "Search...",
+    placeholder: "Buscar...",
   },
 
   /** Mobile menu section labels */
   mobileMenu: {
-    categoriesLabel: "CATEGORIES",
-    blogCategories: "BLOG CATEGORIES",
-    popularArticles: "POPULAR ARTICLES",
-    allArticles: "ALL BLOG ARTICLES",
+    categoriesLabel: "CATEGORÍAS",
+    blogCategories: "CATEGORÍAS DEL BLOG",
+    popularArticles: "ARTÍCULOS POPULARES",
+    allArticles: "TODOS LOS ARTÍCULOS DEL BLOG",
   },
 
   /** Theme colors for easier updating */
@@ -39,7 +39,7 @@ export const headerContent = {
 
   /** Blog mega menu content */
   blogMegaMenu: {
-    viewAllText: "View all articles",
-    featuredArticlesTitle: "FEATURED ARTICLES",
+    viewAllText: "Ver todos los artículos",
+    featuredArticlesTitle: "ARTÍCULOS DESTACADOS",
   },
 };

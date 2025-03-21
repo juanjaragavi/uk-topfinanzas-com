@@ -20,11 +20,11 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "TopFinanzas - Smart Credit Card Solutions",
+  title: "TopFinanzas - Soluciones Inteligentes para Tarjetas de Crédito",
   description:
-    "Find the perfect credit card tailored to your needs with TopFinanzas expert recommendations.",
+    "Encuentra la tarjeta de crédito perfecta adaptada a tus necesidades con las recomendaciones expertas de TopFinanzas.",
   keywords:
-    "credit cards, credit card comparison, cash back, rewards, TopFinanzas",
+    "tarjetas de crédito, comparación de tarjetas de crédito, cashback, recompensas, TopFinanzas, México",
   generator: "v0.dev",
 };
 
@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="es-mx">
       <body className={`${poppins.variable} font-sans`}>{children}</body>
     </html>
   );

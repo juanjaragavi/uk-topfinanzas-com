@@ -1,128 +1,128 @@
 {
     "metadata": {
-        "title": "Citi Double Cash Credit Card - TopFinanzas",
-        "description": "Learn about the Citi Double Cash Credit Card benefits, requirements, and application process. Earn cash back on every purchase.",
-        "keywords": "Citi Double Cash, credit card, cash back rewards, no annual fee, balance transfer, TopFinanzas"
+        "title": "Tarjeta de Crédito Citi Double Cash - TopFinanzas",
+        "description": "Conoce los beneficios, requisitos y proceso de solicitud de la Tarjeta de Crédito Citi Double Cash. Gana cashback en cada compra.",
+        "keywords": "Citi Double Cash, tarjeta de crédito, recompensas cashback, sin anualidad, transferencia de saldo, TopFinanzas, México"
     },
     "hero": {
-        "title": "Citi Double Cash Credit Card",
-        "description": "A card valued for its cash-back rewards, offering earnings on every purchase with no annual fee.",
+        "title": "Tarjeta de Crédito Citi Double Cash",
+        "description": "Una tarjeta valorada por sus recompensas de cashback, ofreciendo ganancias en cada compra sin cuota anual.",
         "rating": {
             "score": 4.7,
             "count": 2120
         },
-        "applyButtonText": "Check Eligibility Requirements",
+        "applyButtonText": "Verificar Requisitos de Elegibilidad",
         "applyButtonLink": "/credit-cards/apply/citi-double-cash",
         "image": {
             "src": "https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg",
-            "alt": "Citi Double Cash Credit Card",
+            "alt": "Tarjeta de Crédito Citi Double Cash",
             "width": 480,
             "height": 300
         }
     },
     "requirements": {
-        "title": "Requirements for the Citi Double Cash Credit Card",
+        "title": "Requisitos para la Tarjeta de Crédito Citi Double Cash",
         "items": [
             {
-                "label": "Credit Score",
-                "value": "A good credit score of at least 670 is generally recommended."
+                "label": "Puntaje de Crédito",
+                "value": "Se recomienda generalmente un buen puntaje crediticio de al menos 670."
             },
             {
-                "label": "Age Requirement",
-                "value": "Applicants should be 18 years or older."
+                "label": "Requisito de Edad",
+                "value": "Los solicitantes deben tener 18 años o más."
             },
             {
-                "label": "Social Security Number",
-                "value": "Required for identity verification."
+                "label": "CURP/RFC",
+                "value": "Requerido para verificación de identidad."
             },
             {
-                "label": "Income Documentation",
-                "value": "Proof of income or employment details is often necessary."
+                "label": "Documentación de Ingresos",
+                "value": "A menudo es necesario presentar comprobante de ingresos o detalles de empleo."
             }
         ],
         "image": {
             "src": "https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg",
-            "alt": "Credit Card Requirements",
+            "alt": "Requisitos de Tarjeta de Crédito",
             "width": 400,
             "height": 300
         }
     },
-    "eligibilityCriteria": "Eligibility Criteria",
-    "applicationRequirements": "Application Requirements",
+    "eligibilityCriteria": "Criterios de Elegibilidad",
+    "applicationRequirements": "Requisitos de Solicitud",
     "benefitsList": {
-        "title": "Why Apply for the Citi Double Cash Card?",
+        "title": "¿Por Qué Solicitar la Tarjeta Citi Double Cash?",
         "items": [
-            "Up to 2% cash back on all purchases",
-            "No annual fee",
-            "0% intro APR on balance transfers for 18 months",
-            "Flexible redemption options"
+            "Hasta 2% de cashback en todas las compras",
+            "Sin cuota anual",
+            "0% de TAE introductoria en transferencias de saldo durante 18 meses",
+            "Opciones de reembolso flexibles"
         ]
     },
     "requirementsList": {
         "items": [
-            "Credit score of at least 670",
-            "Must be 18 years or older",
-            "Valid Social Security Number",
-            "Proof of income"
+            "Puntaje crediticio de al menos 670",
+            "Debes tener 18 años o más",
+            "CURP/RFC válido",
+            "Comprobante de ingresos"
         ]
     },
     "applicationSteps": {
-        "title": "How to apply for the Citi Double Cash Credit Card",
+        "title": "Cómo solicitar la Tarjeta de Crédito Citi Double Cash",
         "steps": [
             {
                 "number": 1,
-                "title": "Visit Citi's official website",
-                "description": "Navigate to Citi's website and locate the Double Cash Card application page."
+                "title": "Visita el sitio web oficial de Citi",
+                "description": "Navega al sitio web de Citi y localiza la página de solicitud de la Tarjeta Double Cash."
             },
             {
                 "number": 2,
-                "title": "Provide personal details",
-                "description": "Complete fields for name, address, date of birth, and SSN."
+                "title": "Proporciona datos personales",
+                "description": "Completa los campos de nombre, dirección, fecha de nacimiento y CURP/RFC."
             },
             {
                 "number": 3,
-                "title": "Income verification",
-                "description": "Submit income details as requested to confirm eligibility and determine credit limits."
+                "title": "Verificación de ingresos",
+                "description": "Envía los detalles de ingresos solicitados para confirmar la elegibilidad y determinar los límites de crédito."
             },
             {
                 "number": 4,
-                "title": "Review terms",
-                "description": "Carefully review the terms and conditions, including interest rates, fees, and rewards program details."
+                "title": "Revisa los términos",
+                "description": "Revisa cuidadosamente los términos y condiciones, incluyendo tasas de interés, comisiones y detalles del programa de recompensas."
             },
             {
                 "number": 5,
-                "title": "Submit the application",
-                "description": "Once all information is confirmed, submit the application for an immediate decision."
+                "title": "Envía la solicitud",
+                "description": "Una vez confirmada toda la información, envía la solicitud para obtener una decisión inmediata."
             }
         ],
-        "buttonText": "View Card Benefits",
+        "buttonText": "Ver Beneficios de la Tarjeta",
         "buttonLink": "/credit-cards/apply/citi-double-cash"
     },
     "benefits": {
-        "title": "Benefits of the Citi Double Cash Credit Card",
+        "title": "Beneficios de la Tarjeta de Crédito Citi Double Cash",
         "items": [
             {
-                "title": "Straightforward Cash-Back rewards",
-                "description": "With the Citi Double Cash Card, earn 1% cash back when you buy and another 1% when you pay off purchases. This unique structure encourages timely payments and offers cash-back simplicity."
+                "title": "Recompensas de Cashback directas",
+                "description": "Con la Tarjeta Citi Double Cash, gana 1% de cashback cuando compras y otro 1% cuando pagas tus compras. Esta estructura única fomenta los pagos puntuales y ofrece simplicidad en el cashback."
             },
             {
-                "title": "No annual fee",
-                "description": "With no annual fee, you can maximize rewards without worrying about costs. This feature makes it an accessible option for a range of users."
+                "title": "Sin cuota anual",
+                "description": "Sin cuota anual, puedes maximizar las recompensas sin preocuparte por los costos. Esta característica la convierte en una opción accesible para diversos usuarios."
             },
             {
-                "title": "Versatile redemption options",
-                "description": "Redeem cash-back rewards as statement credits, deposits, or checks, providing flexibility to suit different needs."
+                "title": "Opciones de reembolso versátiles",
+                "description": "Canjea las recompensas de cashback como créditos en el estado de cuenta, depósitos o cheques, proporcionando flexibilidad para adaptarse a diferentes necesidades."
             },
             {
-                "title": "Balance transfer feature",
-                "description": "Citi offers an introductory APR on balance transfers, which can be useful for consolidating debt. Keep in mind, however, that transfer fees may apply."
+                "title": "Función de transferencia de saldo",
+                "description": "Citi ofrece una TAE introductoria en transferencias de saldo, que puede ser útil para consolidar deudas. Ten en cuenta, sin embargo, que pueden aplicarse comisiones de transferencia."
             }
         ]
     },
     "callToAction": {
-        "title": "Ready to enjoy these benefits?",
-        "description": "Apply for the Citi Double Cash Credit Card today and start earning cash back on every purchase. Our simple application process takes just minutes to complete.",
-        "buttonText": "Discover Your Options",
+        "title": "¿Listo para disfrutar de estos beneficios?",
+        "description": "Solicita la Tarjeta de Crédito Citi Double Cash hoy y comienza a ganar cashback en cada compra. Nuestro simple proceso de solicitud toma solo minutos para completar.",
+        "buttonText": "Descubre Tus Opciones",
         "buttonLink": "/credit-cards/apply/citi-double-cash"
     }
 }

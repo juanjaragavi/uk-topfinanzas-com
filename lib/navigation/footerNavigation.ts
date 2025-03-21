@@ -26,7 +26,7 @@ export const footerNavigation = {
   /** Main navigation section */
   mainNavItems: [
     {
-      text: "Home",
+      text: "Inicio",
       href: "/",
     },
     {
@@ -34,11 +34,11 @@ export const footerNavigation = {
       href: "/blog",
     },
     {
-      text: "About Us",
+      text: "Acerca de",
       href: "/about",
     },
     {
-      text: "Contact Us",
+      text: "Contáctanos",
       href: "/contact",
     },
   ],
@@ -46,23 +46,23 @@ export const footerNavigation = {
   /** Categories section */
   categoryItems: [
     {
-      text: "Personal Finance",
+      text: "Finanzas Personales",
       href: "/blog/category/personal-finance",
     },
     {
-      text: "Credit Cards",
+      text: "Tarjetas de Crédito",
       href: "/blog/category/credit-cards",
     },
     {
-      text: "Mortgages",
+      text: "Hipotecas",
       href: "/blog/category/mortgages",
     },
     {
-      text: "Investing",
+      text: "Inversiones",
       href: "/blog/category/investing",
     },
     {
-      text: "Budgeting",
+      text: "Presupuestos",
       href: "/blog/category/budgeting",
     },
   ],
@@ -70,26 +70,26 @@ export const footerNavigation = {
   /** Blog posts section */
   blogItems: [
     {
-      text: "Your First Paycheck Guide",
+      text: "Guía de tu Primer Sueldo",
       href: "/blog/post/your-first-paycheck",
     },
     {
-      text: "Home Mortgage Guide",
+      text: "Guía de Hipotecas",
       href: "/blog/post/what-is-a-home-mortgage",
     },
     {
-      text: "Understanding Online Loans",
+      text: "Entendiendo los Préstamos en Línea",
       href: "/blog/post/what-are-online-loans",
     },
     {
-      text: "Choosing the Right Online Loan",
+      text: "Cómo Elegir el Préstamo en Línea Correcto",
       href: "/blog/post/5-tips-for-choosing-an-online-loan",
     },
   ],
 
   /** Social media links */
   socialMedia: {
-    title: "Follow us on social media",
+    title: "Síguenos en redes sociales",
     links: [
       {
         platform: "Instagram",
@@ -120,7 +120,7 @@ export const footerNavigation = {
     {
       type: "address",
       value:
-        "AV. AQUILINO DE LA GUARDIA, OCEAN BUSINESS PLAZA BUILDING, FLOOR 12, PANAMA CITY, PANAMA",
+        "AV. AQUILINO DE LA GUARDIA, OCEAN BUSINESS PLAZA BUILDING, PISO 12, CIUDAD DE PANAMÁ, PANAMÁ",
       svgPath:
         "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z|M15 11a3 3 0 11-6 0 3 3 0 016 0z",
     },
@@ -129,11 +129,11 @@ export const footerNavigation = {
   /** Legal links */
   legalLinks: [
     {
-      text: "Terms & Conditions",
+      text: "Términos y Condiciones",
       href: "/terms",
     },
     {
-      text: "Privacy Policy",
+      text: "Política de Privacidad",
       href: "/privacy-policy",
     },
   ],

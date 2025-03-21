@@ -6,23 +6,23 @@
 export const footerContent = {
   /** Section headings */
   headings: {
-    navigate: "Navigate",
-    categories: "Categories",
-    contact: "Contact",
+    navigate: "Navegar",
+    categories: "Categorías",
+    contact: "Contacto",
   },
 
   /** Company information */
   companyInfo: {
     name: "TOP NETWORKS INC",
-    productLabel: "A TOP NETWORKS INC. Product",
+    productLabel: "Un Producto de TOP NETWORKS INC.",
   },
 
   /** Legal content */
   legal: {
     /** Disclaimer content */
     disclaimer: {
-      label: "Disclaimer:",
-      text: "TopFinanzas strives to keep its information accurate and up to date. This information may be different than what you see when you visit a financial institution, service provider or specific product's site. All financial products, shopping products and services are presented without warranty. When evaluating offers, please review the financial institution's Terms and Conditions. Pre-qualified offers are not binding.",
+      label: "Aviso Legal:",
+      text: "TopFinanzas se esfuerza por mantener su información precisa y actualizada. Esta información puede ser diferente a lo que ves cuando visitas la página de una institución financiera, proveedor de servicios o producto específico. Todos los productos financieros, productos comerciales y servicios se presentan sin garantía. Al evaluar ofertas, por favor revisa los Términos y Condiciones de la institución financiera. Las ofertas precalificadas no son vinculantes.",
     },
 
     /** Copyright notice */
@@ -31,7 +31,7 @@ export const footerContent = {
       year: "2025",
     },
     fullCopyright: {
-      text: "ALL RIGHTS RESERVED, ©TOP NETWORKS INC 2025. TOTAL OR PARTIAL\nREPRODUCTION BY ANY MEANS OR FORM IS PROHIBITED WITHOUT THE WRITTEN\nAND EXPRESS AUTHORIZATION OF THE COPYRIGHT HOLDER.",
+      text: "TODOS LOS DERECHOS RESERVADOS, ©TOP NETWORKS INC 2025. SE PROHÍBE LA\nREPRODUCCIÓN TOTAL O PARCIAL POR CUALQUIER MEDIO O FORMA SIN LA AUTORIZACIÓN\nPOR ESCRITO Y EXPRESA DEL TITULAR DEL COPYRIGHT.",
     },
   },
 

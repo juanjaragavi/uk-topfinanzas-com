@@ -37,7 +37,7 @@ export const headerNavigation = {
   /** Main navigation items */
   mainNavItems: [
     {
-      text: "CREDIT CARDS",
+      text: "TARJETAS DE CRÉDITO",
       href: "/credit-cards",
     },
     {
@@ -45,21 +45,21 @@ export const headerNavigation = {
       href: "/blog",
     },
     {
-      text: "APPLY NOW",
+      text: "SOLICITAR AHORA",
       href: "/credit-cards/apply/citi-double-cash",
     },
   ],
 
   /** Categories dropdown */
   categoryDropdown: {
-    text: "CATEGORIES",
+    text: "CATEGORÍAS",
     items: [
       {
-        text: "Card Recommendations",
+        text: "Recomendaciones de Tarjetas",
         href: "/credit-cards/recommendation",
       },
       {
-        text: "Compare Cards",
+        text: "Comparar Tarjetas",
         href: "/credit-cards",
       },
       {
@@ -74,69 +74,69 @@ export const headerNavigation = {
     title: "BLOG",
     columns: [
       {
-        title: "Categories",
+        title: "Categorías",
         items: [
           {
-            text: "Personal Finance",
+            text: "Finanzas Personales",
             href: "/blog/category/personal-finance",
           },
           {
-            text: "Mortgages",
+            text: "Hipotecas",
             href: "/blog/category/mortgages",
           },
           {
-            text: "Credit Cards",
+            text: "Tarjetas de Crédito",
             href: "/blog/category/credit-cards",
           },
           {
-            text: "Investing",
+            text: "Inversiones",
             href: "/blog/category/investing",
           },
           {
-            text: "Budgeting",
+            text: "Presupuestos",
             href: "/blog/category/budgeting",
           },
         ],
       },
       {
-        title: "Popular Topics",
+        title: "Temas Populares",
         items: [
           {
-            text: "First Paycheck Guide",
+            text: "Guía de tu Primer Sueldo",
             href: "/blog/post/your-first-paycheck",
           },
           {
-            text: "Home Mortgage Guide",
+            text: "Guía de Hipotecas",
             href: "/blog/post/what-is-a-home-mortgage",
           },
           {
-            text: "Online Loans Explained",
+            text: "Explicación de Préstamos en Línea",
             href: "/blog/post/what-are-online-loans",
           },
           {
-            text: "Choosing Online Loans",
+            text: "Cómo Elegir Préstamos en Línea",
             href: "/blog/post/5-tips-for-choosing-an-online-loan",
           },
         ],
       },
     ],
     featuredPosts: {
-      title: "Featured Articles",
+      title: "Artículos Destacados",
       posts: [
         {
-          title: "Your First Paycheck: A Complete Guide",
+          title: "Tu Primer Sueldo: Una Guía Completa",
           href: "/blog/post/your-first-paycheck",
           image:
             "https://media.topfinanzas.com/images/generated/1741659352997/sample_0.jpg",
-          category: "Personal Finance",
+          category: "Finanzas Personales",
           categoryHref: "/blog/category/personal-finance",
         },
         {
-          title: "What Is a Home Mortgage?",
+          title: "¿Qué es una Hipoteca?",
           href: "/blog/post/what-is-a-home-mortgage",
           image:
             "https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg",
-          category: "Mortgages",
+          category: "Hipotecas",
           categoryHref: "/blog/category/mortgages",
         },
       ],
