@@ -12,6 +12,13 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  // Output configuration for standalone mode
+  output: "standalone",
+  // Set the asset prefix for static files
+  assetPrefix:
+    process.env.NODE_ENV === "production"
+      ? "https://topfinanzas.com/mx/topfinanzas-pages-mx"
+      : undefined,
   images: {
     unoptimized: true,
     dangerouslyAllowSVG: true,

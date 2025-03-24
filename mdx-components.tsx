@@ -14,20 +14,20 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     // Headers
     h1: ({ className, ...props }) => (
       <h1
-        className={cn("text-4xl font-bold mt-8 mb-4 text-gray-900", className)}
+        className={cn("text-5xl font-bold mt-8 mb-4 text-gray-900", className)}
         {...props}
       />
     ),
     h2: ({ className, ...props }) => (
       <h2
-        className={cn("text-3xl font-bold mt-8 mb-4 text-gray-900", className)}
+        className={cn("text-4xl font-bold mt-8 mb-4 text-gray-900", className)}
         {...props}
       />
     ),
     h3: ({ className, ...props }) => (
       <h3
         className={cn(
-          "text-2xl font-semibold mt-8 mb-4 text-gray-900",
+          "text-3xl font-semibold mt-8 mb-4 text-gray-900",
           className
         )}
         {...props}
