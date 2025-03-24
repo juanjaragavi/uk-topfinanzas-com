@@ -8,7 +8,7 @@ import { footerContent } from "@/lib/texts/footer/content";
 
 export function CompactFooter() {
   return (
-    <footer className="bg-[#4052B4] text-white">
+    <footer className="bg-[#4C59C2] text-white">
       <div className="container mx-auto px-4 py-8">
         {/* Logo Section */}
         <div className="flex justify-center mb-4">
@@ -24,15 +24,13 @@ export function CompactFooter() {
 
         {/* Copyright Text Block */}
         <div className="text-center mb-4">
-          <p className="text-xs uppercase tracking-wide">
-            DERECHOS RESERVADOS, ©TOP NETWORKS INC 2025
-            <br />
-            PROHIBIDA SU REPRODUCCIÓN TOTAL O PARCIAL POR CUALQUIER MEDIO O FORMA, SIN LA AUTORIZACIÓN ESCRITA Y EXPRESA DE SU TITULAR.
+          <p className="text-xs uppercase tracking-wide text-white">
+            DERECHOS RESERVADOS, ©TOP NETWORKS INC 2025. PROHIBIDA SU REPRODUCCIÓN TOTAL O PARCIAL POR CUALQUIER MEDIO O FORMA, SIN LA AUTORIZACIÓN ESCRITA Y EXPRESA DE SU TITULAR.
           </p>
         </div>
 
         {/* Bottom Links */}
-        <div className="text-center text-xs">
+        <div className="text-center text-xs text-white">
           <span>Un Producto TOP NETWORKS INC. | </span>
           {footerNavigation.legalLinks.map((link, index) => (
             <span key={link.href}>
