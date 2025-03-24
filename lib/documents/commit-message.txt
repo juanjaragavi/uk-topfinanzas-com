@@ -12,6 +12,8 @@ Adapt TopFinanzas website for Mexican market
 - Created Tarjeta de Crédito Azul BBVA page with blue-themed styling
 - Added proper formatting with plus bullet points and white background
 - Ensured responsive layout with proper header and footer components
+- Updated the compact footer to match the WordPress version exactly
+- Added copyright text with correct uppercase styling and spacing
 
 This commit is part of the larger effort to adapt the TopFinanzas website for the
 Mexican market, focusing on content translation, navigation updates, and blog-style content pages.
