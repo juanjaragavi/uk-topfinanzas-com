@@ -237,3 +237,18 @@ By adhering to these instructions and utilizing your capabilities, you will ensu
   - Added explicit copyright notice with proper legal text.
   - Adjusted padding, spacing, and text sizes to match the original design.
   - Simplified link styling for better visual alignment with the WordPress version.
+
+### Blog Pages Styling Standardization (2025-03-24)
+
+- **Standardized blog page styling across all card offerings**:
+  - Updated Nu Bank page to match the BBVA Azul template styling while maintaining purple branding
+  - Updated Plata Card page to match the BBVA Azul template styling while maintaining orange branding
+  - Made consistent typography changes across all pages including:
+    - Standardized heading sizes (text-3xl) and line heights (leading-8)
+    - Used consistent text-sm and leading-5 for better readability in main content
+    - Applied font-light to paragraphs for a cleaner appearance
+  - Unified bullet point styling with size-5 rounded indicators and plus symbols
+  - Replaced full Footer with CompactFooter component on all blog-style pages
+  - Standardized button styling with consistent padding, border-radius, and font weights
+  - Improved text contrast by using text-gray-800 instead of text-gray-700
+  - Created a cohesive visual language across different credit card offerings

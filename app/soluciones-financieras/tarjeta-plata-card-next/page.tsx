@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Ad } from "@/components/ui/ad";
+{
+  /*import { Ad } from "@/components/ui/ad";*/
+}
 import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+import { CompactFooter } from "@/components/layout/compact-footer";
 
 export function generateMetadata() {
   return {
@@ -23,40 +25,40 @@ export default function TarjetaPlataCardPage() {
       <article className="bg-white py-8 md:py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            <h1 className="text-3xl md:text-3xl font-bold text-gray-800 mb-4 leading-8">
               Tarjeta Plata Card: maximiza cada compra
             </h1>
 
             <div className="my-8">
-              <p className="text-lg text-gray-700 mb-8">
+              <p className="text-lg text-gray-800 mb-8 leading-5">
                 La Tarjeta de Crédito Plata te ayuda a maximizar tus compras con
                 beneficios únicos y flexibles.
               </p>
 
-              <Ad
+              {/*<Ad
                 format="square"
                 adId="mx_topfinanzas_1"
                 className="my-8"
                 fallbackWidth={300}
                 fallbackHeight={250}
-              />
+              />*/}
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">+</span>
                   </div>
-                  <div>
+                  <div className="text-sm leading-5">
                     <span className="font-semibold">Cashback atractivo:</span>{" "}
                     Hasta 15% en categorías seleccionadas.
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">+</span>
                   </div>
-                  <div>
+                  <div className="text-sm leading-5">
                     <span className="font-semibold">
                       Límite de crédito alto:
                     </span>{" "}
@@ -65,20 +67,20 @@ export default function TarjetaPlataCardPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">+</span>
                   </div>
-                  <div>
+                  <div className="text-sm leading-5">
                     <span className="font-semibold">Sin intereses:</span>{" "}
                     Durante los primeros 2 meses.
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">+</span>
                   </div>
-                  <div>
+                  <div className="text-sm leading-5">
                     <span className="font-semibold">
                       CAT y tasas de interés:
                     </span>{" "}
@@ -90,7 +92,7 @@ export default function TarjetaPlataCardPage() {
 
               <div className="text-center my-8">
                 <Link href="/soluciones-financieras/requisitos-tarjeta-plata-card-next">
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full w-full">
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                     Quiero conocer los requisitos
                   </Button>
                 </Link>
@@ -106,8 +108,8 @@ export default function TarjetaPlataCardPage() {
                 />
               </div>
 
-              <div className="my-10">
-                <p className="text-gray-700 mb-6">
+              <div className="my-6">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
                   La Tarjeta de Crédito Plata es una opción diseñada para
                   quienes buscan maximizar el valor de cada compra. Uno de los
                   aspectos más destacados de esta tarjeta es su atractivo
@@ -119,16 +121,16 @@ export default function TarjetaPlataCardPage() {
                   máximo provecho de su dinero.
                 </p>
 
-                <h2 className="text-3xl font-bold text-gray-800 mb-6">
+                <h2 className="text-xl font-bold text-gray-800 mb-4">
                   ¿Qué hace especial a la Tarjeta de Crédito Plata?
                 </h2>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">+</span>
                     </div>
-                    <div>
+                    <div className="text-sm leading-5">
                       <span className="font-semibold">
                         Cashback de hasta 15%:
                       </span>{" "}
@@ -145,10 +147,10 @@ export default function TarjetaPlataCardPage() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">+</span>
                     </div>
-                    <div>
+                    <div className="text-sm leading-5">
                       <span className="font-semibold">
                         1% de cashback en todas tus compras:
                       </span>{" "}
@@ -160,10 +162,10 @@ export default function TarjetaPlataCardPage() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">+</span>
                     </div>
-                    <div>
+                    <div className="text-sm leading-5">
                       <span className="font-semibold">
                         Límite de crédito de hasta $200,000:
                       </span>{" "}
@@ -178,10 +180,10 @@ export default function TarjetaPlataCardPage() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">+</span>
                     </div>
-                    <div>
+                    <div className="text-sm leading-5">
                       <span className="font-semibold">
                         2 meses sin intereses:
                       </span>{" "}
@@ -193,10 +195,10 @@ export default function TarjetaPlataCardPage() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">+</span>
                     </div>
-                    <div>
+                    <div className="text-sm leading-5">
                       <span className="font-semibold">
                         Difiere tus compras a meses sin intereses:
                       </span>{" "}
@@ -208,11 +210,11 @@ export default function TarjetaPlataCardPage() {
                   </div>
                 </div>
 
-                <h2 className="text-3xl font-bold text-gray-800 mb-6">
+                <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Más que una tarjeta: una experiencia completa
                 </h2>
 
-                <p className="text-gray-700 mb-6">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
                   La Tarjeta de Crédito Plata no solo te ofrece beneficios
                   financieros, sino que también está diseñada para hacerte la
                   vida más fácil y segura:
@@ -220,10 +222,10 @@ export default function TarjetaPlataCardPage() {
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">+</span>
                     </div>
-                    <div>
+                    <div className="text-sm leading-5">
                       <span className="font-semibold">Entrega rápida:</span> Una
                       vez aprobada tu solicitud, recibirás tu tarjeta en menos
                       de 24 horas sin costo adicional. Esta rapidez en la
@@ -233,10 +235,10 @@ export default function TarjetaPlataCardPage() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">+</span>
                     </div>
-                    <div>
+                    <div className="text-sm leading-5">
                       <span className="font-semibold">
                         Gestión desde la app:
                       </span>{" "}
@@ -251,10 +253,10 @@ export default function TarjetaPlataCardPage() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">+</span>
                     </div>
-                    <div>
+                    <div className="text-sm leading-5">
                       <span className="font-semibold">Seguridad 24/7:</span> La
                       seguridad es una prioridad para Plata. Con un sistema
                       antifraude que monitorea tus transacciones en tiempo real
@@ -267,10 +269,10 @@ export default function TarjetaPlataCardPage() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">+</span>
                     </div>
-                    <div>
+                    <div className="text-sm leading-5">
                       <span className="font-semibold">
                         Tarjeta digital y control total:
                       </span>{" "}
@@ -283,11 +285,11 @@ export default function TarjetaPlataCardPage() {
                   </div>
                 </div>
 
-                <h2 className="text-3xl font-bold text-gray-800 mb-6">
+                <h2 className="text-xl font-bold text-gray-800 mb-4">
                   ¿Es la Tarjeta de Crédito Plata para ti?
                 </h2>
 
-                <p className="text-gray-700 mb-6">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
                   Si buscas una tarjeta que te permita maximizar cada peso que
                   gastas, la Tarjeta de Crédito Plata es para ti. Con su
                   atractivo programa de cashback y las ventajas adicionales que
@@ -295,7 +297,7 @@ export default function TarjetaPlataCardPage() {
                   una herramienta para potenciar tu poder adquisitivo.
                 </p>
 
-                <p className="text-gray-700 mb-8">
+                <p className="text-gray-800 text-sm leading-5 mb-4">
                   <Link
                     href="/soluciones-financieras/requisitos-tarjeta-plata-card-next"
                     className="text-blue-600 underline"
@@ -310,7 +312,7 @@ export default function TarjetaPlataCardPage() {
 
                 <div className="text-center my-8">
                   <Link href="/soluciones-financieras/requisitos-tarjeta-plata-card-next">
-                    <Button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full w-full">
+                    <Button className="bg-orange-500 hover:bg-orange-600 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Quiero conocer los requisitos
                     </Button>
                   </Link>
@@ -321,7 +323,7 @@ export default function TarjetaPlataCardPage() {
         </div>
       </article>
 
-      <Footer />
+      <CompactFooter />
     </main>
   );
 }

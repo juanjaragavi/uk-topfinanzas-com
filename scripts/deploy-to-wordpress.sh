@@ -18,8 +18,8 @@ log() {
 
 # Variables
 WP_DIR="/var/www/html/mx"
-NEXT_DIR="$WP_DIR/topfinanzas-pages-mx"
-REPO_URL="[REPLACE_WITH_YOUR_REPO_URL]"
+NEXT_DIR="$WP_DIR/top-finanzas-pages-mx"
+REPO_URL="https://github.com/juanjaragavi/top-finanzas-pages-mx.git"
 BRANCH="main"
 NODE_VERSION="18"
 
@@ -76,7 +76,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 # Route requests to -next paths to the Next.js application
-RewriteRule ^(.+)-next(/.*)?$ topfinanzas-pages-mx/$1-next [L]
+RewriteRule ^(.+)-next(/.*)?$ top-finanzas-pages-mx/$1-next [L]
 
 # Default WordPress handling for all other requests
 RewriteRule . /mx/index.php [L]
@@ -92,7 +92,7 @@ find "$NEXT_DIR" -type f -exec chmod 644 {} \;
 chmod -R 755 "$NEXT_DIR/.next/standalone"
 
 log "Creating symbolic links for static assets"
-ln -sf "$NEXT_DIR/.next/static" "$WP_DIR/topfinanzas-pages-mx-static"
+ln -sf "$NEXT_DIR/.next/static" "$WP_DIR/top-finanzas-pages-mx-static"
 
 # Step 6: Create a script to run the Next.js server using PM2
 log "Creating PM2 startup script"
@@ -115,7 +115,7 @@ if command -v pm2 &>/dev/null; then
     log "Configuring Nginx reverse proxy"
     cat >"/etc/nginx/sites-available/topfinanzas-next.conf" <<'EOF'
 # Proxy configuration for Next.js app
-location ^~ /mx/topfinanzas-pages-mx/ {
+location ^~ /mx/top-finanzas-pages-mx/ {
     proxy_pass http://localhost:3001/;
     proxy_http_version 1.1;
     proxy_set_header Upgrade $http_upgrade;
@@ -125,8 +125,8 @@ location ^~ /mx/topfinanzas-pages-mx/ {
 }
 
 # Static assets
-location ^~ /mx/topfinanzas-pages-mx-static/ {
-    alias /var/www/html/mx/topfinanzas-pages-mx/.next/static/;
+location ^~ /mx/top-finanzas-pages-mx-static/ {
+    alias /var/www/html/mx/top-finanzas-pages-mx/.next/static/;
     expires 30d;
     add_header Cache-Control "public, max-age=2592000";
 }

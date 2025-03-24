@@ -14,6 +14,11 @@ Adapt TopFinanzas website for Mexican market
 - Ensured responsive layout with proper header and footer components
 - Updated the compact footer to match the WordPress version exactly
 - Added copyright text with correct uppercase styling and spacing
+- Standardized styling of Nu Bank and Plata Card pages to match BBVA Azul template
+- Updated text sizes, line heights, and bullet point styles for consistency
+- Replaced Footer with CompactFooter component for blog-style pages
+- Improved text contrast and readability with optimized font weights
 
 This commit is part of the larger effort to adapt the TopFinanzas website for the
-Mexican market, focusing on content translation, navigation updates, and blog-style content pages.
+Mexican market, focusing on content translation, navigation updates, and blog-style content pages
+with consistent styling across card offerings.

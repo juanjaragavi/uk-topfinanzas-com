@@ -1,7 +1,9 @@
 import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+import { CompactFooter } from "@/components/layout/compact-footer";
 import { Button } from "@/components/ui/button";
-import { Ad } from "@/components/ui/ad";
+{
+  /*import { Ad } from "@/components/ui/ad";*/
+}
 import Image from "next/image";
 import Link from "next/link";
 
@@ -26,16 +28,16 @@ export default function NuBankCreditCardPage() {
           {/* Main content */}
           <div className="max-w-4xl mx-auto">
             {/* Ad space */}
-            <div className="mb-8">
+            {/*(<div className="mb-8">
               <Ad format="horizontal" className="mx-auto" />
-            </div>
+            </div>*/}
 
             {/* Hero section */}
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            <h1 className="text-3xl md:text-3xl font-bold text-gray-800 mb-4 leading-8">
               NuBank: La tarjeta de crédito ideal para ti
             </h1>
 
-            <p className="text-lg text-gray-700 mb-8">
+            <p className="text-lg text-gray-800 mb-8 leading-5">
               La Tarjeta de Crédito NuBank, conocida por su accesibilidad y
               transparencia, se adapta a cualquier estilo de vida.
             </p>
@@ -43,40 +45,40 @@ export default function NuBankCreditCardPage() {
             {/* Features with purple bullets */}
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
+                <div className="flex-shrink-0 size-5 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
                   <span className="text-white font-bold">+</span>
                 </div>
-                <div>
+                <div className="text-sm leading-5">
                   <span className="font-semibold">Sin anualidad:</span> tarjeta
                   completamente libre de cuotas anuales.
                 </div>
               </div>
 
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
+                <div className="flex-shrink-0 size-5 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
                   <span className="text-white font-bold">+</span>
                 </div>
-                <div>
+                <div className="text-sm leading-5">
                   <span className="font-semibold">App Intuitiva:</span> control
                   total de tus finanzas desde la comodidad de tu móvil.
                 </div>
               </div>
 
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
+                <div className="flex-shrink-0 size-5 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
                   <span className="text-white font-bold">+</span>
                 </div>
-                <div>
+                <div className="text-sm leading-5">
                   <span className="font-semibold">Tasas competitivas:</span>{" "}
                   tasa anual del 89,76% sin IVA.
                 </div>
               </div>
 
               <div className="flex items-start">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
+                <div className="flex-shrink-0 size-5 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
                   <span className="text-white font-bold">+</span>
                 </div>
-                <div>
+                <div className="text-sm leading-5">
                   <span className="font-semibold">CAT promedio:</span> 139,5%
                   sin IVA.
                 </div>
@@ -85,12 +87,11 @@ export default function NuBankCreditCardPage() {
 
             {/* CTA Button */}
             <div className="mb-10">
-              <Button
-                className="bg-purple-600 hover:bg-purple-700 text-white"
-                href="/soluciones-financieras/requisitos-tarjeta-de-credito-nu-next"
-              >
-                Quiero conocer los requisitos
-              </Button>
+              <Link href="/soluciones-financieras/requisitos-tarjeta-de-credito-nu-next">
+                <Button className="bg-purple-600 hover:bg-purple-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
+                  Quiero conocer los requisitos
+                </Button>
+              </Link>
             </div>
 
             {/* Image */}
@@ -106,11 +107,11 @@ export default function NuBankCreditCardPage() {
 
             {/* Why choose section */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">
+              <h2 className="text-xl font-bold text-gray-800 mb-4">
                 ¿Por qué elegir la tarjeta de crédito NuBank?
               </h2>
 
-              <p className="text-gray-700 mb-6">
+              <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
                 Optar por NuBank significa elegir simplicidad y eficacia en la
                 gestión de tus finanzas. La tarjeta se destaca por su aplicación
                 fácil de usar que permite un control total sobre gastos y
@@ -124,11 +125,11 @@ export default function NuBankCreditCardPage() {
 
             {/* Deep dive section */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">
+              <h2 className="text-xl font-bold text-gray-800 mb-4">
                 Una mirada profunda a NuBank
               </h2>
 
-              <p className="text-gray-700 mb-6">
+              <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
                 Comparada con otras opciones en el mercado, NuBank elimina las
                 complicaciones y costos innecesarios que suelen acompañar a las
                 tarjetas de crédito tradicionales. Este enfoque centrado en la
@@ -143,11 +144,11 @@ export default function NuBankCreditCardPage() {
 
             {/* Mastercard section */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">
+              <h2 className="text-xl font-bold text-gray-800 mb-4">
                 Respaldada por Mastercard®:
               </h2>
 
-              <p className="text-gray-700 mb-6">
+              <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
                 La alianza con Mastercard® no solo asegura la aceptación global
                 de NuBank sino que también enriquece la oferta con seguridad
                 adicional en transacciones y promociones exclusivas. Esta
@@ -159,21 +160,21 @@ export default function NuBankCreditCardPage() {
 
             {/* Benefits section */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">
+              <h2 className="text-xl font-bold text-gray-800 mb-4">
                 Innovación en beneficios:
               </h2>
 
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
                 NuBank va más allá de las funciones estándar de una tarjeta de
                 crédito:
               </p>
 
               <div className="space-y-4 mb-6">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">+</span>
                   </div>
-                  <div>
+                  <div className="text-sm leading-5">
                     <span className="font-semibold">
                       Sin penalizaciones por uso mínimo:
                     </span>{" "}
@@ -183,10 +184,10 @@ export default function NuBankCreditCardPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">+</span>
                   </div>
-                  <div>
+                  <div className="text-sm leading-5">
                     <span className="font-semibold">
                       Sin cobros por reposición:
                     </span>{" "}
@@ -197,7 +198,7 @@ export default function NuBankCreditCardPage() {
                 </div>
               </div>
 
-              <p className="text-gray-700 mb-6">
+              <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
                 Además de estos beneficios, NuBank se esfuerza por mantener una
                 política de cero costos ocultos, reforzando su compromiso con la
                 claridad y la honestidad en todas sus operaciones financieras.
@@ -211,11 +212,11 @@ export default function NuBankCreditCardPage() {
 
             {/* How to apply section */}
             <section className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">
+              <h2 className="text-xl font-bold text-gray-800 mb-4">
                 ¿Cómo solicitar la Tarjeta de Crédito NuBank?
               </h2>
 
-              <p className="text-gray-700 mb-6">
+              <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
                 No esperes más para disfrutar de todas las ventajas y beneficios
                 que NuBank tiene para ofrecer. Solicitar tu Tarjeta de Crédito
                 NuBank es rápido y fácil: simplemente visita el link y conoce
@@ -224,20 +225,19 @@ export default function NuBankCreditCardPage() {
                 ofrecerte!
               </p>
 
-              <div className="mt-8">
-                <Button
-                  className="bg-purple-600 hover:bg-purple-700 text-white"
-                  href="/soluciones-financieras/requisitos-tarjeta-de-credito-nu-next"
-                >
-                  Quiero conocer los requisitos
-                </Button>
+              <div className="text-center my-8">
+                <Link href="/soluciones-financieras/requisitos-tarjeta-de-credito-nu-next">
+                  <Button className="bg-purple-600 hover:bg-purple-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
+                    Quiero conocer los requisitos
+                  </Button>
+                </Link>
               </div>
             </section>
           </div>
         </div>
       </article>
 
-      <Footer />
+      <CompactFooter />
     </main>
   );
 }
