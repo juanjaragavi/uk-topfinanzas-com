@@ -63,25 +63,25 @@ body {
 
   /* Heading Typography */
   .text-h1 {
-    @apply text-[16px] font-bold text-[#234043] leading-tight;
+    @apply text-[16px] font-bold text-gray-800 leading-7;
   }
 
   .text-h2 {
-    @apply text-[12px] text-[#234043] leading-tight;
+    @apply text-[12px] text-gray-800 leading-6;
   }
 
   .text-h3 {
-    @apply text-[12px] font-semibold text-[#234043] leading-tight;
+    @apply text-[12px] font-semibold text-gray-800 leading-6;
   }
 
   /* Paragraph Typography */
   .text-body {
-    @apply text-[10px] text-[#234043] leading-normal;
+    @apply text-sm text-gray-800 leading-5;
   }
 
   /* List Item Typography */
   .text-list {
-    @apply text-[10px] text-[#234043] leading-normal;
+    @apply text-sm text-gray-800 leading-5;
   }
 
   /* Link Typography */
@@ -91,7 +91,7 @@ body {
 
   /* Caption/Meta Typography */
   .text-meta {
-    @apply text-[8px] text-[#234043] leading-tight;
+    @apply text-sm text-gray-800 leading-5;
   }
 
   /* Special Text Elements */
@@ -101,21 +101,21 @@ body {
 
   /* Button Text */
   .btn-text {
-    @apply text-[10px] py-1.5;
+    @apply text-sm py-1.5;
   }
 
   /* Card Elements */
   .card-title {
-    @apply font-medium text-[10px] leading-tight mb-1;
+    @apply font-medium text-sm leading-5 mb-1;
   }
 
   .card-meta {
-    @apply text-[8px] opacity-90;
+    @apply text-sm opacity-90 leading-5;
   }
 
   /* Badge Elements */
   .badge-text {
-    @apply bg-gray-100 text-[#234043] rounded-full px-2 py-1 text-[8px];
+    @apply bg-gray-100 text-gray-800 rounded-full px-2 py-1 leading-5 text-sm;
   }
 
   /* Special Sizes */
@@ -125,7 +125,7 @@ body {
 
   /* Navigation Elements */
   .nav-link {
-    @apply text-[10px] text-[#234043] hover:text-[#222442] transition-colors;
+    @apply text-sm text-gray-800 hover:text-[#222442] transition-colors leading-5;
   }
 
   /* Footer Typography - All White Text */
@@ -138,11 +138,11 @@ body {
   }
 
   .footer-text {
-    @apply text-[10px] text-white leading-normal;
+    @apply text-sm text-white leading-5;
   }
 
   .footer-meta {
-    @apply text-[8px] text-white leading-tight;
+    @apply text-sm text-white leading-5;
   }
 
   .footer-link {
