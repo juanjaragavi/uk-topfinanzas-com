@@ -1,140 +1,327 @@
-import fs from "fs";
-import path from "path";
-import { notFound } from "next/navigation";
-import { BlogPost } from "@/components/mdx/blog-post";
-import { compileMDX } from "next-mdx-remote/rsc";
-import { useMDXComponents } from "@/mdx-components";
-
-// Metadata for the blog post
-const POST_METADATA = {
-  title: "Tarjeta Plata Card: La Tarjeta de Crédito Ideal para Principiantes",
-  date: "24 de marzo de 2025",
-  author: "Top Finanzas",
-  authorImage: "https://media.topfinanzas.com/images/favicon.png",
-  readingTime: "7 minutos de lectura",
-  categories: [
-    { name: "Soluciones Financieras", slug: "soluciones-financieras" },
-  ],
-  featuredImage:
-    "https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg",
-  excerpt:
-    "Conoce la Tarjeta Plata Card, una opción accesible para quienes están comenzando a construir su historial crediticio o buscan una tarjeta con requisitos flexibles.",
-  views: 486,
-  commentCount: 0,
-};
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Ad } from "@/components/ui/ad";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 
 export function generateMetadata() {
   return {
-    title: `${POST_METADATA.title} - Top Finanzas México`,
-    description: POST_METADATA.excerpt,
+    title: "Tarjeta Plata Card: maximiza cada compra - TopFinanzas México",
+    description:
+      "La Tarjeta de Crédito Plata te ayuda a maximizar tus compras con beneficios únicos y flexibles.",
     keywords:
-      "tarjeta de crédito, Plata Card, historial crediticio, finanzas personales, crédito para principiantes",
+      "Tarjeta Plata Card, cashback, tarjeta de crédito, México, límite de crédito, sin intereses, beneficios financieros",
   };
 }
 
-async function getPostContent() {
-  try {
-    // Path to a potential MDX file for this blog post
-    const contentDir = path.join(process.cwd(), "content/blog");
-    const mdxFilePath = path.join(contentDir, "tarjeta-plata-card.mdx");
+export default function TarjetaPlataCardPage() {
+  return (
+    <main className="min-h-screen flex flex-col">
+      <Header />
 
-    // Check if an MDX file exists for this post
-    if (fs.existsSync(mdxFilePath)) {
-      // Read and return the file content
-      const source = fs.readFileSync(mdxFilePath, "utf8");
-      return source;
-    }
+      <article className="bg-white py-8 md:py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              Tarjeta Plata Card: maximiza cada compra
+            </h1>
 
-    // If no MDX file exists, return default content
-    return `
-<div class='code-block code-block-1' style='margin: 30px 0;'>
-<div id="mx_topfinanzas_1"></div></div>
+            <div className="my-8">
+              <p className="text-lg text-gray-700 mb-8">
+                La Tarjeta de Crédito Plata te ayuda a maximizar tus compras con
+                beneficios únicos y flexibles.
+              </p>
 
-# ${POST_METADATA.title}
+              <Ad
+                format="square"
+                adId="mx_topfinanzas_1"
+                className="my-8"
+                fallbackWidth={300}
+                fallbackHeight={250}
+              />
 
-${POST_METADATA.excerpt}
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                    <span className="text-white font-bold">+</span>
+                  </div>
+                  <div>
+                    <span className="font-semibold">Cashback atractivo:</span>{" "}
+                    Hasta 15% en categorías seleccionadas.
+                  </div>
+                </div>
 
-## ¿Qué es la Tarjeta Plata Card?
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                    <span className="text-white font-bold">+</span>
+                  </div>
+                  <div>
+                    <span className="font-semibold">
+                      Límite de crédito alto:
+                    </span>{" "}
+                    Hasta $200,000.
+                  </div>
+                </div>
 
-La Tarjeta Plata Card es un producto financiero diseñado específicamente para personas que están iniciando su vida crediticia o que tienen un historial limitado. Esta tarjeta se posiciona como una excelente alternativa para quienes encuentran difícil acceder a las tarjetas de crédito tradicionales debido a los estrictos requisitos que suelen imponer los bancos convencionales.
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                    <span className="text-white font-bold">+</span>
+                  </div>
+                  <div>
+                    <span className="font-semibold">Sin intereses:</span>{" "}
+                    Durante los primeros 2 meses.
+                  </div>
+                </div>
 
-## Características Principales
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                    <span className="text-white font-bold">+</span>
+                  </div>
+                  <div>
+                    <span className="font-semibold">
+                      CAT y tasas de interés:
+                    </span>{" "}
+                    Conoce todos los detalles dando clic{" "}
+                    <span className="font-bold">Requisitos</span>.
+                  </div>
+                </div>
+              </div>
 
-- **Línea de crédito inicial**: Desde $2,000 hasta $8,000 MXN, dependiendo de tu perfil financiero.
-- **Aceptación flexible**: Consideración de múltiples factores más allá del historial crediticio tradicional.
-- **Sin comisión por apertura**: Comienza a utilizar tu tarjeta sin costos iniciales.
-- **Programa de recompensas**: Acumula puntos por cada compra que realices.
-- **Aumento de línea de crédito**: Posibilidad de incrementar tu línea de crédito después de 6 meses de buen comportamiento de pago.
+              <div className="text-center my-8">
+                <Link href="/soluciones-financieras/requisitos-tarjeta-plata-card-next">
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full w-full">
+                    Quiero conocer los requisitos
+                  </Button>
+                </Link>
+              </div>
 
-## Ventajas de la Tarjeta Plata Card
+              <div className="my-8">
+                <Image
+                  src="/images/tarjeta-plata-card.webp"
+                  alt="Tarjeta Plata Card - Hombre con tarjeta de crédito"
+                  width={1000}
+                  height={563}
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
 
-### Para Quienes Comienzan
+              <div className="my-10">
+                <p className="text-gray-700 mb-6">
+                  La Tarjeta de Crédito Plata es una opción diseñada para
+                  quienes buscan maximizar el valor de cada compra. Uno de los
+                  aspectos más destacados de esta tarjeta es su atractivo
+                  programa de cashback, que permite a los usuarios recibir hasta
+                  un 15% de reembolso en efectivo en las categorías que elijan
+                  cada mes. Respaldada por Mastercard, la Tarjeta de Crédito
+                  Plata combina flexibilidad, recompensas y seguridad, lo que la
+                  convierte en una opción ideal para quienes desean sacar el
+                  máximo provecho de su dinero.
+                </p>
 
-Si eres nuevo en el mundo del crédito, la Tarjeta Plata Card ofrece varias ventajas:
+                <h2 className="text-3xl font-bold text-gray-800 mb-6">
+                  ¿Qué hace especial a la Tarjeta de Crédito Plata?
+                </h2>
 
-- Oportunidad de comenzar a construir un historial crediticio positivo
-- Requisitos menos exigentes que los bancos tradicionales
-- Proceso de solicitud 100% en línea
-- Aprobación rápida (generalmente en menos de 24 horas)
+                <div className="space-y-6 my-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">+</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold">
+                        Cashback de hasta 15%:
+                      </span>{" "}
+                      La Tarjeta de Crédito Plata destaca por su programa de
+                      recompensas, que ofrece hasta un 15% de reembolso en
+                      efectivo en compras realizadas en categorías
+                      seleccionadas. Cada mes, los usuarios pueden elegir hasta
+                      cuatro categorías diferentes en la aplicación móvil para
+                      optimizar sus recompensas. Este cashback se refleja en el
+                      saldo de la tarjeta el primer día de cada mes,
+                      convirtiéndose en un incentivo real para un manejo
+                      inteligente de las finanzas.
+                    </div>
+                  </div>
 
-### Para Quienes Buscan Reconstruir su Crédito
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">+</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold">
+                        1% de cashback en todas tus compras:
+                      </span>{" "}
+                      Además del cashback en categorías específicas, la tarjeta
+                      te permite obtener un 1% de cashback en todas tus compras,
+                      sin importar la categoría, lo que significa que siempre
+                      estás ganando algo con cada gasto.
+                    </div>
+                  </div>
 
-Si has tenido dificultades crediticias en el pasado, esta tarjeta también puede ser una buena opción:
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">+</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold">
+                        Límite de crédito de hasta $200,000:
+                      </span>{" "}
+                      La Tarjeta de Crédito Plata ofrece un generoso límite de
+                      crédito que puede alcanzar hasta $200,000, dependiendo del
+                      perfil crediticio del solicitante. Esto permite a los
+                      usuarios contar con un margen considerable para hacer
+                      frente a gastos imprevistos o para realizar compras
+                      importantes, siempre dentro de un marco de responsabilidad
+                      financiera.
+                    </div>
+                  </div>
 
-- Consideración de tu situación financiera actual, no solo tu historial
-- Reportes mensuales a las principales burós de crédito
-- Herramientas educativas sobre finanzas personales
-- Alertas y recordatorios de pago para ayudarte a mantener un buen comportamiento
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">+</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold">
+                        2 meses sin intereses:
+                      </span>{" "}
+                      Disfruta de la flexibilidad de realizar compras y pagarlas
+                      sin intereses durante los primeros dos meses. Este
+                      beneficio es ideal para planificar grandes adquisiciones
+                      sin preocuparte por los costos adicionales.
+                    </div>
+                  </div>
 
-## Costos y Comisiones
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">+</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold">
+                        Difiere tus compras a meses sin intereses:
+                      </span>{" "}
+                      Si realizas una compra grande, puedes optar por diferir el
+                      pago a meses sin intereses directamente desde la app de
+                      Plata. Esta flexibilidad te permite ajustar los pagos a tu
+                      capacidad financiera, eligiendo plazos de 3 a 12 meses.
+                    </div>
+                  </div>
+                </div>
 
-| Concepto | Costo |
-|---------|-------|
-| Anualidad | $699 MXN (cobrada en 12 mensualidades de $58.25) |
-| Tasa de interés | 70.8% anual (CAT promedio) |
-| Comisión por disposición de efectivo | 6% del monto + IVA |
-| Reposición de tarjeta | $150 MXN |
-| Pago tardío | $400 MXN |
+                <h2 className="text-3xl font-bold text-gray-800 mb-6">
+                  Más que una tarjeta: una experiencia completa
+                </h2>
 
-## Cómo Solicitar la Tarjeta Plata Card
+                <p className="text-gray-700 mb-6">
+                  La Tarjeta de Crédito Plata no solo te ofrece beneficios
+                  financieros, sino que también está diseñada para hacerte la
+                  vida más fácil y segura:
+                </p>
 
-El proceso para solicitar la Tarjeta Plata Card es totalmente digital:
+                <div className="space-y-6 my-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">+</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold">Entrega rápida:</span> Una
+                      vez aprobada tu solicitud, recibirás tu tarjeta en menos
+                      de 24 horas sin costo adicional. Esta rapidez en la
+                      entrega te permite comenzar a disfrutar de los beneficios
+                      casi de inmediato.
+                    </div>
+                  </div>
 
-1. Ingresa al [sitio oficial de Plata Card](https://platacard.mx/es/)
-2. Completa el formulario de pre-aprobación con tus datos básicos
-3. Si eres pre-aprobado, deberás proporcionar información adicional y documentación
-4. Firma electrónicamente tu contrato
-5. Recibe tu tarjeta en tu domicilio en un plazo de 7 a 10 días hábiles
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">+</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold">
+                        Gestión desde la app:
+                      </span>{" "}
+                      La aplicación móvil de Plata es una herramienta poderosa
+                      que te permite manejar todos los aspectos de tu tarjeta
+                      desde la comodidad de tu teléfono. Ya sea que necesites
+                      diferir una compra, verificar tu saldo o recibir
+                      notificaciones en tiempo real de tus transacciones, la app
+                      está diseñada para que tengas un control total de tus
+                      finanzas.
+                    </div>
+                  </div>
 
-## Consejos para Aprovechar al Máximo tu Tarjeta Plata Card
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">+</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold">Seguridad 24/7:</span> La
+                      seguridad es una prioridad para Plata. Con un sistema
+                      antifraude que monitorea tus transacciones en tiempo real
+                      y te notifica inmediatamente sobre cualquier actividad
+                      sospechosa, puedes estar tranquilo sabiendo que tu dinero
+                      está protegido. Además, si llegas a perder tu tarjeta,
+                      puedes congelarla al instante desde la app, evitando así
+                      cualquier uso no autorizado.
+                    </div>
+                  </div>
 
-- **Paga siempre el total de tu deuda**: Evita los intereses pagando el saldo completo cada mes
-- **Establece límites personales**: No utilices más del 30% de tu línea de crédito
-- **Programa pagos automáticos**: Evita olvidos y pagos tardíos
-- **Revisa regularmente tu estado de cuenta**: Detecta cualquier cargo no reconocido
-- **Aprovecha las promociones**: Mantente atento a ofertas especiales para tarjetahabientes
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">+</span>
+                    </div>
+                    <div>
+                      <span className="font-semibold">
+                        Tarjeta digital y control total:
+                      </span>{" "}
+                      Desde el primer día, tienes acceso a una tarjeta digital
+                      para realizar compras en línea de forma segura. Además,
+                      puedes personalizar los límites de gasto y controlar el
+                      uso de la tarjeta, como activar o desactivar las compras
+                      online o los retiros de efectivo, todo desde la app.
+                    </div>
+                  </div>
+                </div>
 
-## Conclusión
+                <h2 className="text-3xl font-bold text-gray-800 mb-6">
+                  ¿Es la Tarjeta de Crédito Plata para ti?
+                </h2>
 
-La Tarjeta Plata Card representa una oportunidad valiosa para quienes desean iniciar o reconstruir su vida crediticia con un producto financiero accesible y transparente. Si estás interesado en conocer más detalles sobre los requisitos específicos, te recomendamos visitar nuestra página de [requisitos para la Tarjeta Plata Card](/mx/soluciones-financieras/requisitos-tarjeta-plata-card-next).
-`;
-  } catch (error) {
-    console.error("Error reading MDX file:", error);
-    return "# Error al Cargar el Contenido\n\nLo sentimos, hubo un error al cargar este contenido.";
-  }
-}
+                <p className="text-gray-700 mb-6">
+                  Si buscas una tarjeta que te permita maximizar cada peso que
+                  gastas, la Tarjeta de Crédito Plata es para ti. Con su
+                  atractivo programa de cashback y las ventajas adicionales que
+                  ofrece, esta tarjeta es más que un simple medio de pago: es
+                  una herramienta para potenciar tu poder adquisitivo.
+                </p>
 
-export default async function BlogPostPage() {
-  // Get the MDX content
-  const mdxContent = await getPostContent();
+                <p className="text-gray-700 mb-8">
+                  <Link
+                    href="/soluciones-financieras/requisitos-tarjeta-plata-card-next"
+                    className="text-blue-600 underline"
+                  >
+                    Si deseas conocer más sobre los costos, tasas de interés y
+                    comisiones asociados con esta tarjeta, haz clic aquí para
+                    obtener todos los detalles.
+                  </Link>{" "}
+                  Evaluar estos aspectos te ayudará a tomar una decisión
+                  informada y a gestionar tu tarjeta de manera responsable.
+                </p>
 
-  // Compile the MDX content
-  const { content } = await compileMDX({
-    source: mdxContent,
-    components: useMDXComponents({}),
-    options: { parseFrontmatter: true },
-  });
+                <div className="text-center my-8">
+                  <Link href="/soluciones-financieras/requisitos-tarjeta-plata-card-next">
+                    <Button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full w-full">
+                      Quiero conocer los requisitos
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
 
-  // Use the BlogPost component to render the content
-  return <BlogPost metadata={POST_METADATA}>{content}</BlogPost>;
+      <Footer />
+    </main>
+  );
 }
