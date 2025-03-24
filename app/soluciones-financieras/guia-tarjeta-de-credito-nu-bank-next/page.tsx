@@ -1,127 +1,243 @@
-import fs from "fs";
-import path from "path";
-import { notFound } from "next/navigation";
-import { BlogPost } from "@/components/mdx/blog-post";
-import { compileMDX } from "next-mdx-remote/rsc";
-import { useMDXComponents } from "@/mdx-components";
-
-// Metadata for the blog post
-const POST_METADATA = {
-  title: "Guía Tarjeta de Crédito Nu Bank: Todo lo que necesitas saber",
-  date: "24 de marzo de 2025",
-  author: "Top Finanzas",
-  authorImage: "https://media.topfinanzas.com/images/favicon.png",
-  readingTime: "8 minutos de lectura",
-  categories: [
-    { name: "Soluciones Financieras", slug: "soluciones-financieras" },
-  ],
-  featuredImage:
-    "https://media.topfinanzas.com/images/generated/1741659352997/sample_0.jpg",
-  excerpt:
-    "Descubre todo lo que necesitas saber sobre la tarjeta de crédito Nu: beneficios, requisitos, costos y cómo solicitar este producto financiero innovador.",
-  views: 542,
-  commentCount: 0,
-};
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { Button } from "@/components/ui/button";
+import { Ad } from "@/components/ui/ad";
+import Image from "next/image";
+import Link from "next/link";
 
 export function generateMetadata() {
   return {
-    title: `${POST_METADATA.title} - Top Finanzas México`,
-    description: POST_METADATA.excerpt,
+    title:
+      "Guía Tarjeta de Crédito Nu Bank: Todo lo que necesitas saber - Top Finanzas México",
+    description:
+      "Descubre todo lo que necesitas saber sobre la tarjeta de crédito Nu: beneficios, requisitos, costos y cómo solicitar este producto financiero innovador.",
     keywords:
       "tarjeta de crédito, Nu Bank, nu bank, solicitar tarjeta, crédito, finanzas personales",
   };
 }
 
-async function getPostContent() {
-  try {
-    // Path to a potential MDX file for this blog post
-    const contentDir = path.join(process.cwd(), "content/blog");
-    const mdxFilePath = path.join(
-      contentDir,
-      "guia-tarjeta-de-credito-nu-bank.mdx"
-    );
+export default function NuBankCreditCardPage() {
+  return (
+    <main className="min-h-screen flex flex-col">
+      <Header />
 
-    // Check if an MDX file exists for this post
-    if (fs.existsSync(mdxFilePath)) {
-      // Read and return the file content
-      const source = fs.readFileSync(mdxFilePath, "utf8");
-      return source;
-    }
+      <article className="bg-white py-8 md:py-12">
+        <div className="container mx-auto px-4">
+          {/* Main content */}
+          <div className="max-w-4xl mx-auto">
+            {/* Ad space */}
+            <div className="mb-8">
+              <Ad format="horizontal" className="mx-auto" />
+            </div>
 
-    // If no MDX file exists, return default content
-    return `
-<div class='code-block code-block-1' style='margin: 30px 0;'>
-<div id="mx_topfinanzas_1"></div></div>
+            {/* Hero section */}
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              NuBank: La tarjeta de crédito ideal para ti
+            </h1>
 
-# ${POST_METADATA.title}
+            <p className="text-lg text-gray-700 mb-8">
+              La Tarjeta de Crédito NuBank, conocida por su accesibilidad y
+              transparencia, se adapta a cualquier estilo de vida.
+            </p>
 
-${POST_METADATA.excerpt}
+            {/* Features with purple bullets */}
+            <div className="space-y-4 mb-8">
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
+                  <span className="text-white font-bold">+</span>
+                </div>
+                <div>
+                  <span className="font-semibold">Sin anualidad:</span> tarjeta
+                  completamente libre de cuotas anuales.
+                </div>
+              </div>
 
-## ¿Qué es la Tarjeta de Crédito Nu?
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
+                  <span className="text-white font-bold">+</span>
+                </div>
+                <div>
+                  <span className="font-semibold">App Intuitiva:</span> control
+                  total de tus finanzas desde la comodidad de tu móvil.
+                </div>
+              </div>
 
-La tarjeta de crédito Nu es un producto financiero innovador ofrecido por Nu Bank, una entidad financiera digital que ha revolucionado el mercado bancario en México. A diferencia de los bancos tradicionales, Nu ofrece una experiencia completamente digital, sin sucursales físicas y con un enfoque centrado en la experiencia del usuario.
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
+                  <span className="text-white font-bold">+</span>
+                </div>
+                <div>
+                  <span className="font-semibold">Tasas competitivas:</span>{" "}
+                  tasa anual del 89,76% sin IVA.
+                </div>
+              </div>
 
-## Beneficios Principales
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
+                  <span className="text-white font-bold">+</span>
+                </div>
+                <div>
+                  <span className="font-semibold">CAT promedio:</span> 139,5%
+                  sin IVA.
+                </div>
+              </div>
+            </div>
 
-- **Sin comisión anual**: La tarjeta Nu no cobra comisión anual, lo que la convierte en una opción atractiva para quienes buscan reducir costos.
-- **100% digital**: Todo el proceso, desde la solicitud hasta la gestión diaria, se realiza a través de la aplicación móvil.
-- **Seguridad avanzada**: Puedes bloquear y desbloquear tu tarjeta al instante desde la app.
-- **Transparencia total**: Sin letras pequeñas ni costos ocultos.
-- **Servicio al cliente 24/7**: Asistencia disponible todos los días a través de la aplicación.
+            {/* CTA Button */}
+            <div className="mb-10">
+              <Button
+                className="bg-purple-600 hover:bg-purple-700 text-white"
+                href="/soluciones-financieras/requisitos-tarjeta-de-credito-nu-next"
+              >
+                Quiero conocer los requisitos
+              </Button>
+            </div>
 
-## Requisitos para Solicitar la Tarjeta
+            {/* Image */}
+            <div className="mb-12">
+              <Image
+                src="https://topfinanzas.com/mx/wp-content/uploads/2024/06/download-9-1.webp"
+                alt="Tarjeta de crédito Nubank"
+                width={800}
+                height={450}
+                className="rounded-xl w-full"
+              />
+            </div>
 
-Para solicitar la tarjeta de crédito Nu necesitas:
+            {/* Why choose section */}
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">
+                ¿Por qué elegir la tarjeta de crédito NuBank?
+              </h2>
 
-1. Ser mayor de 18 años
-2. Residir en México
-3. Tener un smartphone con sistema operativo iOS o Android
-4. Contar con una identificación oficial vigente (INE/IFE o pasaporte)
-5. Tener un historial crediticio aceptable
+              <p className="text-gray-700 mb-6">
+                Optar por NuBank significa elegir simplicidad y eficacia en la
+                gestión de tus finanzas. La tarjeta se destaca por su aplicación
+                fácil de usar que permite un control total sobre gastos y
+                límites de crédito, simplificando enormemente la administración
+                de tus recursos financieros. Esta conveniencia se extiende a
+                todos los aspectos de la experiencia del usuario, desde la
+                configuración inicial hasta el uso diario, asegurando que cada
+                interacción con NuBank sea intuitiva y enriquecedora.
+              </p>
+            </section>
 
-## Proceso de Solicitud
+            {/* Deep dive section */}
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">
+                Una mirada profunda a NuBank
+              </h2>
 
-El proceso para solicitar la tarjeta Nu es rápido y sencillo:
+              <p className="text-gray-700 mb-6">
+                Comparada con otras opciones en el mercado, NuBank elimina las
+                complicaciones y costos innecesarios que suelen acompañar a las
+                tarjetas de crédito tradicionales. Este enfoque centrado en la
+                experiencia del usuario y la transparencia convierte a NuBank en
+                una opción superior para el consumidor moderno. Además de
+                simplificar la gestión financiera, NuBank está respaldada por
+                Mastercard®, lo que garantiza una aceptación global y acceso a
+                una serie de beneficios exclusivos en una amplia gama de
+                comercios afiliados alrededor del mundo.
+              </p>
+            </section>
 
-1. Descarga la aplicación Nu desde la App Store o Google Play
-2. Regístrate con tus datos personales
-3. Toma una foto de tu identificación oficial
-4. Espera la aprobación (generalmente en minutos)
-5. Si tu solicitud es aprobada, recibirás la tarjeta en tu domicilio en 7-10 días hábiles
+            {/* Mastercard section */}
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">
+                Respaldada por Mastercard®:
+              </h2>
 
-## Costos y Comisiones
+              <p className="text-gray-700 mb-6">
+                La alianza con Mastercard® no solo asegura la aceptación global
+                de NuBank sino que también enriquece la oferta con seguridad
+                adicional en transacciones y promociones exclusivas. Esta
+                colaboración brinda a los titulares de la tarjeta tranquilidad
+                al viajar y comprar, con protecciones integradas y ofertas
+                especiales a nivel internacional.
+              </p>
+            </section>
 
-| Concepto | Costo |
-|---------|-------|
-| Anualidad | $0 |
-| Tasa de interés | Variable (CAT promedio: 65.7%) |
-| Comisión por disposición de efectivo | 5% del monto retirado |
-| Reposición de tarjeta | $0 |
-| Pago tardío | $0 (pero afecta historial crediticio) |
+            {/* Benefits section */}
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">
+                Innovación en beneficios:
+              </h2>
 
-## Conclusión
+              <p className="text-gray-700 mb-4">
+                NuBank va más allá de las funciones estándar de una tarjeta de
+                crédito:
+              </p>
 
-La tarjeta de crédito Nu representa una alternativa moderna a las tarjetas de crédito tradicionales, con un enfoque en la transparencia, bajos costos y una experiencia totalmente digital. Si buscas una tarjeta sin anualidad y con una interfaz fácil de usar, Nu podría ser una excelente opción para ti.
+              <div className="space-y-4 mb-6">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
+                    <span className="text-white font-bold">+</span>
+                  </div>
+                  <div>
+                    <span className="font-semibold">
+                      Sin penalizaciones por uso mínimo:
+                    </span>{" "}
+                    Puedes usar tu tarjeta según tus necesidades, sin la presión
+                    de cumplir con un mínimo de gastos.
+                  </div>
+                </div>
 
-Para conocer más detalles sobre los requisitos específicos, te recomendamos visitar nuestra página de [requisitos para la tarjeta Nu](/mx/soluciones-financieras/requisitos-tarjeta-de-credito-nu-next) o ir directamente al [sitio oficial de Nu](https://nu.com.mx/credito/).
-`;
-  } catch (error) {
-    console.error("Error reading MDX file:", error);
-    return "# Error al Cargar el Contenido\n\nLo sentimos, hubo un error al cargar este contenido.";
-  }
-}
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
+                    <span className="text-white font-bold">+</span>
+                  </div>
+                  <div>
+                    <span className="font-semibold">
+                      Sin cobros por reposición:
+                    </span>{" "}
+                    En caso de pérdida o robo, la reposición es totalmente
+                    gratuita, lo que reduce la preocupación en situaciones de
+                    estrés.
+                  </div>
+                </div>
+              </div>
 
-export default async function BlogPostPage() {
-  // Get the MDX content
-  const mdxContent = await getPostContent();
+              <p className="text-gray-700 mb-6">
+                Además de estos beneficios, NuBank se esfuerza por mantener una
+                política de cero costos ocultos, reforzando su compromiso con la
+                claridad y la honestidad en todas sus operaciones financieras.
+                Esta política asegura que siempre sabrás exactamente lo que
+                estás pagando, sin sorpresas desagradables. Adicionalmente, la
+                tarjeta ofrece una plataforma robusta de seguridad que protege
+                tus datos y transacciones en todo momento, dándote la
+                tranquilidad que necesitas en cada uso.
+              </p>
+            </section>
 
-  // Compile the MDX content
-  const { content } = await compileMDX({
-    source: mdxContent,
-    components: useMDXComponents({}),
-    options: { parseFrontmatter: true },
-  });
+            {/* How to apply section */}
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold text-gray-800 mb-6">
+                ¿Cómo solicitar la Tarjeta de Crédito NuBank?
+              </h2>
 
-  // Use the BlogPost component to render the content
-  return <BlogPost metadata={POST_METADATA}>{content}</BlogPost>;
+              <p className="text-gray-700 mb-6">
+                No esperes más para disfrutar de todas las ventajas y beneficios
+                que NuBank tiene para ofrecer. Solicitar tu Tarjeta de Crédito
+                NuBank es rápido y fácil: simplemente visita el link y conoce
+                los requisitos. ¡Empieza hoy mismo y experimenta la libertad
+                financiera que solo tu tarjeta de crédito NuBank puede
+                ofrecerte!
+              </p>
+
+              <div className="mt-8">
+                <Button
+                  className="bg-purple-600 hover:bg-purple-700 text-white"
+                  href="/soluciones-financieras/requisitos-tarjeta-de-credito-nu-next"
+                >
+                  Quiero conocer los requisitos
+                </Button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </article>
+
+      <Footer />
+    </main>
+  );
 }
