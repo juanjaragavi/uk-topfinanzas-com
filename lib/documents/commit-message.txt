@@ -22,6 +22,11 @@ Adapt TopFinanzas website for Mexican market
 - Added missing images from WordPress site (BBVA card images, Nu Bank card, call-to-action banner)
 - Re-enabled ad components that were previously commented out in BBVA Azul pages
 - Fixed metadata formatting issues for better SEO performance
+- Created Recomendador de Tarjetas de Crédito page to match WordPress version
+- Fixed client-side rendering issue by adding "use client" directive
+- Implemented interactive FAQ accordion with proper styling
+- Added BBVA card recommendation box with star rating
+- Created proper metadata.ts file for SEO optimization
 
 This commit is part of the larger effort to adapt the TopFinanzas website for the
 Mexican market, focusing on content translation, navigation updates, and blog-style content pages
