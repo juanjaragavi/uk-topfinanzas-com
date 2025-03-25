@@ -36,8 +36,8 @@ export default function RecomendadorTarjetasPage() {
             </p>
 
             <div className="my-8">
-              <Link href="/recommendation">
-                <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-3 w-full rounded-full inline-flex items-center justify-center">
+              <Link href="/soluciones-financieras/guia-tarjeta-de-credito-nu-bank-next">
+                <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
                   <div className="flex items-center space-x-1">
                     <span>Aceptar recomendación</span>
                     <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
@@ -95,10 +95,10 @@ export default function RecomendadorTarjetasPage() {
             </p>
 
             <div className="mt-6 mb-4">
-              <Link href="/recommendation">
-                <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-3 w-full rounded-full inline-flex items-center justify-center">
+              <Link href="/soluciones-financieras/tarjeta-de-credito-azul-bbva-next">
+                <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
                   <div className="flex items-center space-x-1">
-                    <span>Aceptar recomendación</span>
+                    <span>Nuestra mejor recomendación</span>
                     <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
                       <span className="text-[#80E67D] text-xs">➔</span>
                     </div>
@@ -110,7 +110,7 @@ export default function RecomendadorTarjetasPage() {
             <p className="text-center text-sm mb-6">
               <Link
                 className="text-blue-500"
-                href="/soluciones-financieras/aprende-como-solicitarla"
+                href="/soluciones-financieras/requisitos-tarjeta-de-credito-azul-bbva-next"
               >
                 Aprende cómo solicitarla
               </Link>
@@ -250,14 +250,16 @@ export default function RecomendadorTarjetasPage() {
             </p>
 
             <div className="my-8">
-              <Image
-                src="/images/Tobanner-02-1.webp"
-                alt="Recomendador de tarjetas de crédito"
-                width={800}
-                height={450}
-                className="w-full h-auto rounded-lg"
-                priority
-              />
+              <Link href="/soluciones-financieras/tarjeta-de-credito-azul-bbva-next">
+                <Image
+                  src="/images/Tobanner-02-1.webp"
+                  alt="Recomendador de tarjetas de crédito"
+                  width={800}
+                  height={450}
+                  className="w-full h-auto rounded-lg"
+                  priority
+                />
+              </Link>
             </div>
           </div>
         </div>
