@@ -232,7 +232,7 @@ By adhering to these instructions and utilizing your capabilities, you will ensu
   - Maintained consistent component structure with other financial solution pages.
 
 - **Updated Compact Footer Component**:
-  - Modified the footer background color to match WordPress version (#4C59C2).
+  - Modified the footer background color to match WordPress version (#3F67B9).
   - Updated copyright text format with uppercase styling.
   - Added explicit copyright notice with proper legal text.
   - Adjusted padding, spacing, and text sizes to match the original design.

@@ -8,7 +8,7 @@ import { footerContent } from "@/lib/texts/footer/content";
 
 export function CompactFooter() {
   return (
-    <footer className="bg-[#4C59C2] text-white">
+    <footer className="bg-[#3F67B9] text-white">
       <div className="container mx-auto px-4 py-8">
         {/* Logo Section */}
         <div className="flex justify-center mb-4">
@@ -32,7 +32,7 @@ export function CompactFooter() {
         </div>
 
         {/* Bottom Links */}
-        <div className="text-center text-xs text-white">
+        <div className="mt-20 text-center text-xs text-white">
           <span className="text-white">Un Producto TOP NETWORKS INC. | </span>
           <span className="text-white">
             {footerNavigation.legalLinks.map((link, index) => (
