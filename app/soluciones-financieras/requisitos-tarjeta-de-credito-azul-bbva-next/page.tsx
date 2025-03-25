@@ -67,7 +67,7 @@ export default function RequisitosAzulBBVAPage() {
                 <div className="space-y-6 mb-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">Edad y residencia:</span>{" "}
@@ -80,7 +80,7 @@ export default function RequisitosAzulBBVAPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">Ingresos mínimos:</span>{" "}
@@ -112,7 +112,7 @@ export default function RequisitosAzulBBVAPage() {
                 <div className="space-y-6 mb-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">
@@ -124,7 +124,7 @@ export default function RequisitosAzulBBVAPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">
@@ -137,7 +137,7 @@ export default function RequisitosAzulBBVAPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">
@@ -150,7 +150,7 @@ export default function RequisitosAzulBBVAPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">
@@ -198,7 +198,7 @@ export default function RequisitosAzulBBVAPage() {
                 <div className="space-y-6 mb-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">Comisión Anual:</span>{" "}
@@ -209,7 +209,7 @@ export default function RequisitosAzulBBVAPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">
@@ -222,7 +222,7 @@ export default function RequisitosAzulBBVAPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">
@@ -265,7 +265,7 @@ export default function RequisitosAzulBBVAPage() {
                 <div className="space-y-6 mb-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">Puntos BBVA:</span> Gana
@@ -278,7 +278,7 @@ export default function RequisitosAzulBBVAPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">Seguridad Avanzada:</span>{" "}
@@ -290,7 +290,7 @@ export default function RequisitosAzulBBVAPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">Sostenibilidad:</span> La

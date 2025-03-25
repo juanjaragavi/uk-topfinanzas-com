@@ -47,7 +47,7 @@ export default function NuBankCreditCardPage() {
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
-                    <span className="text-white font-bold">+</span>
+                    <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
                     <span className="font-semibold">Sin anualidad:</span>{" "}
@@ -57,7 +57,7 @@ export default function NuBankCreditCardPage() {
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
-                    <span className="text-white font-bold">+</span>
+                    <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
                     <span className="font-semibold">App Intuitiva:</span>{" "}
@@ -68,7 +68,7 @@ export default function NuBankCreditCardPage() {
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
-                    <span className="text-white font-bold">+</span>
+                    <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
                     <span className="font-semibold">Tasas competitivas:</span>{" "}
@@ -78,7 +78,7 @@ export default function NuBankCreditCardPage() {
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
-                    <span className="text-white font-bold">+</span>
+                    <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
                     <span className="font-semibold">CAT promedio:</span> 139,5%
@@ -164,7 +164,7 @@ export default function NuBankCreditCardPage() {
                 <div className="space-y-6 mb-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">
@@ -177,7 +177,7 @@ export default function NuBankCreditCardPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">

@@ -50,7 +50,7 @@ export default function TarjetaBBVAAzulPage() {
               <div className="space-y-2 mb-8">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3">
-                    <span className="text-white font-bold">+</span>
+                    <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-md leading-5">
                     <span className="font-semibold">Accesibilidad:</span>{" "}
@@ -60,7 +60,7 @@ export default function TarjetaBBVAAzulPage() {
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3">
-                    <span className="text-white font-bold">+</span>
+                    <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-md leading-5">
                     <span className="font-semibold">Recompensas:</span> Acumula
@@ -70,7 +70,7 @@ export default function TarjetaBBVAAzulPage() {
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3">
-                    <span className="text-white font-bold">+</span>
+                    <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-md leading-5">
                     <span className="font-semibold">Seguridad:</span> Incorpora
@@ -80,7 +80,7 @@ export default function TarjetaBBVAAzulPage() {
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3">
-                    <span className="text-white font-bold">+</span>
+                    <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-md leading-5">
                     <span className="font-semibold">Compromiso ambiental:</span>{" "}
@@ -168,7 +168,7 @@ export default function TarjetaBBVAAzulPage() {
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">
@@ -182,7 +182,7 @@ export default function TarjetaBBVAAzulPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">
@@ -195,7 +195,7 @@ export default function TarjetaBBVAAzulPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">Pagos sin contacto:</span>{" "}
@@ -206,7 +206,7 @@ export default function TarjetaBBVAAzulPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">
@@ -231,7 +231,7 @@ export default function TarjetaBBVAAzulPage() {
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">
@@ -244,7 +244,7 @@ export default function TarjetaBBVAAzulPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">

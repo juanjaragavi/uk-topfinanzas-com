@@ -46,7 +46,7 @@ export default function TarjetaPlataCardPage() {
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
-                    <span className="text-white font-bold">+</span>
+                    <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
                     <span className="font-semibold">Cashback atractivo:</span>{" "}
@@ -56,7 +56,7 @@ export default function TarjetaPlataCardPage() {
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
-                    <span className="text-white font-bold">+</span>
+                    <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
                     <span className="font-semibold">
@@ -68,7 +68,7 @@ export default function TarjetaPlataCardPage() {
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
-                    <span className="text-white font-bold">+</span>
+                    <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
                     <span className="font-semibold">Sin intereses:</span>{" "}
@@ -78,7 +78,7 @@ export default function TarjetaPlataCardPage() {
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
-                    <span className="text-white font-bold">+</span>
+                    <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
                     <span className="font-semibold">
@@ -129,7 +129,7 @@ export default function TarjetaPlataCardPage() {
                 <div className="space-y-6 mb-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">
@@ -149,7 +149,7 @@ export default function TarjetaPlataCardPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">
@@ -164,7 +164,7 @@ export default function TarjetaPlataCardPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">
@@ -182,7 +182,7 @@ export default function TarjetaPlataCardPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">
@@ -197,7 +197,7 @@ export default function TarjetaPlataCardPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">
@@ -224,7 +224,7 @@ export default function TarjetaPlataCardPage() {
                 <div className="space-y-6 mb-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">Entrega rápida:</span> Una
@@ -237,7 +237,7 @@ export default function TarjetaPlataCardPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">
@@ -255,7 +255,7 @@ export default function TarjetaPlataCardPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">Seguridad 24/7:</span> La
@@ -271,7 +271,7 @@ export default function TarjetaPlataCardPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
-                      <span className="text-white font-bold">+</span>
+                      <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
                       <span className="font-semibold">
