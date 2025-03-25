@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Ad } from "@/components/ui/ad";
+{
+  /*import { Ad } from "@/components/ui/ad";*/
+}
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 
@@ -24,18 +26,18 @@ export default function TarjetaBBVAAzulPage() {
       <article className="bg-white py-8 md:py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-3xl font-bold text-gray-800 mb-4 leading-8">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-8">
               Tarjeta de crédito Azul de BBVA: Tu aliado en cada transacción
             </h1>
 
             <div className="my-8">
-              <p className="text-lg text-gray-800 mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 La Tarjeta de Crédito Azul de BBVA es perfecta tanto para nuevos
                 usuarios del crédito como para compradores y viajeros
                 frecuentes.
               </p>
 
-              <div className="my-6">
+              {/*<div className="my-6">
                 <Ad
                   format="square"
                   adId="mx_topfinanzas_1"
@@ -43,44 +45,44 @@ export default function TarjetaBBVAAzulPage() {
                   fallbackWidth={300}
                   fallbackHeight={250}
                 />
-              </div>
+              </div>*/}
 
-              <div className="space-y-4 mb-8">
+              <div className="space-y-2 mb-8">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">+</span>
                   </div>
-                  <div className="text-sm leading-5">
+                  <div className="text-md leading-5">
                     <span className="font-semibold">Accesibilidad:</span>{" "}
                     Requisito de ingreso mínimo de solo $6,000 mensuales.
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">+</span>
                   </div>
-                  <div className="text-sm leading-5">
+                  <div className="text-md leading-5">
                     <span className="font-semibold">Recompensas:</span> Acumula
                     el 9% de tus compras en puntos BBVA.
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">+</span>
                   </div>
-                  <div className="text-sm leading-5">
+                  <div className="text-md leading-5">
                     <span className="font-semibold">Seguridad:</span> Incorpora
                     un CVV dinámico para transacciones en línea.
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9E] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">+</span>
                   </div>
-                  <div className="text-sm leading-5">
+                  <div className="text-md leading-5">
                     <span className="font-semibold">Compromiso ambiental:</span>{" "}
                     Fabricada con más del 85% de plástico reciclado.
                   </div>
@@ -97,7 +99,7 @@ export default function TarjetaBBVAAzulPage() {
 
               <div className="my-8">
                 <Image
-                  src="/images/TC_bbva-azul.jpg"
+                  src="/images/download-5-2.webp"
                   alt="Tarjeta de crédito Azul BBVA"
                   width={1000}
                   height={563}
@@ -107,7 +109,7 @@ export default function TarjetaBBVAAzulPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
                   La Tarjeta de Crédito Azul de BBVA se destaca por su fácil
                   acceso, con un umbral de ingresos bajos que la hace accesible
                   para una amplia gama de consumidores. Esta tarjeta es
@@ -121,7 +123,7 @@ export default function TarjetaBBVAAzulPage() {
                   Maximiza tus recompensas
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
                   Con la Tarjeta Azul, cada compra se convierte en una
                   oportunidad para acumular puntos valiosos. Estos puntos se
                   ganan a una tasa generosa del 9% del total de tus compras,
@@ -136,7 +138,7 @@ export default function TarjetaBBVAAzulPage() {
                   Seguridad innovadora
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
                   BBVA ha incorporado medidas de seguridad de vanguardia en la
                   Tarjeta Azul, incluyendo el CVV dinámico que cambia con cada
                   transacción en línea. Este enfoque no solo combate el fraude
@@ -149,7 +151,7 @@ export default function TarjetaBBVAAzulPage() {
                   Responsabilidad ambiental
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
                   En línea con una creciente conciencia ecológica, la Tarjeta
                   Azul de BBVA no solo ayuda a gestionar tus finanzas sino que
                   también cuida el planeta. Hecha de plástico reciclado, esta
