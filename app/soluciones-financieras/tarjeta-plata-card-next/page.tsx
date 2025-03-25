@@ -100,7 +100,7 @@ export default function TarjetaPlataCardPage() {
 
               <div className="my-8">
                 <Image
-                  src="/images/tarjeta-plata-card.webp"
+                  src="https://media.topfinanzas.com/images/tarjeta-plata-card.webp"
                   alt="Tarjeta Plata Card - Hombre con tarjeta de crédito"
                   width={1000}
                   height={563}

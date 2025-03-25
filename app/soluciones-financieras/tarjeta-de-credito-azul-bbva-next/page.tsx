@@ -99,7 +99,7 @@ export default function TarjetaBBVAAzulPage() {
 
               <div className="my-8">
                 <Image
-                  src="/images/download-5-2.webp"
+                  src="https://media.topfinanzas.com/images/download-5-2.webp"
                   alt="Tarjeta de crédito Azul BBVA"
                   width={1000}
                   height={563}

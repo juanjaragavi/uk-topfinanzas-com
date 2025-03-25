@@ -252,7 +252,7 @@ export default function RecomendadorTarjetasPage() {
             <div className="my-8">
               <Link href="/soluciones-financieras/tarjeta-de-credito-azul-bbva-next">
                 <Image
-                  src="/images/Tobanner-02-1.webp"
+                  src="https://media.topfinanzas.com/images/Tobanner-02-1.webp"
                   alt="Recomendador de tarjetas de crédito"
                   width={800}
                   height={450}

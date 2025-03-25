@@ -97,7 +97,7 @@ export default function NuBankCreditCardPage() {
 
               <div className="my-8">
                 <Image
-                  src="/images/download-9-1-820x462.webp"
+                  src="https://media.topfinanzas.com/images/download-9-1-820x462.webp"
                   alt="Tarjeta de crédito Nubank"
                   width={800}
                   height={450}

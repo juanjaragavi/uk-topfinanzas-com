@@ -39,7 +39,7 @@ export default function RequisitosAzulBBVAPage() {
 
               <div className="my-8">
                 <Image
-                  src="/images/TC_bbva-azul.jpg"
+                  src="https://media.topfinanzas.com/images/TC_bbva-azul.jpg"
                   alt="Tarjeta de crédito Azul BBVA"
                   width={1000}
                   height={563}
@@ -96,7 +96,7 @@ export default function RequisitosAzulBBVAPage() {
                 <div className="my-6 text-center">
                   <Link href="/credit-cards">
                     <Image
-                      src="/images/call-to-ACTION-4.jpg"
+                      src="https://media.topfinanzas.com/images/call-to-ACTION-4.jpg"
                       alt="Comparador de tarjetas de crédito"
                       width={320}
                       height={100}
@@ -166,7 +166,7 @@ export default function RequisitosAzulBBVAPage() {
                 <div className="my-6 text-center">
                   <Link href="/credit-cards">
                     <Image
-                      src="/images/call-to-ACTION-1.jpg"
+                      src="https://media.topfinanzas.com/images/call-to-ACTION-1.jpg"
                       alt="Comparador de tarjetas de crédito"
                       width={320}
                       height={100}
@@ -238,7 +238,7 @@ export default function RequisitosAzulBBVAPage() {
                 <div className="my-6 text-center">
                   <Link href="/credit-cards">
                     <Image
-                      src="/images/call-to-ACTION-3.jpg"
+                      src="https://media.topfinanzas.com/images/call-to-ACTION-3.jpg"
                       alt="Comparador de tarjetas de crédito"
                       width={320}
                       height={100}
@@ -304,7 +304,7 @@ export default function RequisitosAzulBBVAPage() {
                 <div className="my-6 text-center">
                   <Link href="/credit-cards">
                     <Image
-                      src="/images/call-to-ACTION-2.jpg"
+                      src="https://media.topfinanzas.com/images/call-to-ACTION-2.jpg"
                       alt="Comparador de tarjetas de crédito"
                       width={320}
                       height={100}
