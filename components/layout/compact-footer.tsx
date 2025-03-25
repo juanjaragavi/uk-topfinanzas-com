@@ -25,22 +25,29 @@ export function CompactFooter() {
         {/* Copyright Text Block */}
         <div className="text-center mb-4">
           <p className="text-xs uppercase tracking-wide text-white">
-            DERECHOS RESERVADOS, ©TOP NETWORKS INC 2025. PROHIBIDA SU REPRODUCCIÓN TOTAL O PARCIAL POR CUALQUIER MEDIO O FORMA, SIN LA AUTORIZACIÓN ESCRITA Y EXPRESA DE SU TITULAR.
+            DERECHOS RESERVADOS, ©TOP NETWORKS INC 2025. PROHIBIDA SU
+            REPRODUCCIÓN TOTAL O PARCIAL POR CUALQUIER MEDIO O FORMA, SIN LA
+            AUTORIZACIÓN ESCRITA Y EXPRESA DE SU TITULAR.
           </p>
         </div>
 
         {/* Bottom Links */}
         <div className="text-center text-xs text-white">
-          <span>Un Producto TOP NETWORKS INC. | </span>
-          {footerNavigation.legalLinks.map((link, index) => (
-            <span key={link.href}>
-              <Link href={link.href} className="hover:underline">
-                {link.text}
-              </Link>
-              {index < footerNavigation.legalLinks.length - 1 ? " | " : ""}
-            </span>
-          ))}
-          <span> | Copyright Top Networks Inc. 2025</span>
+          <span className="text-white">Un Producto TOP NETWORKS INC. | </span>
+          <span className="text-white">
+            {footerNavigation.legalLinks.map((link, index) => (
+              <span className="text-white" key={link.href}>
+                <Link href={link.href} className="hover:underline text-white">
+                  {link.text}
+                </Link>
+                {index < footerNavigation.legalLinks.length - 1 ? " | " : ""}
+              </span>
+            ))}
+          </span>
+          <span className="text-white">
+            {" "}
+            | Copyright Top Networks Inc. 2025
+          </span>
         </div>
       </div>
     </footer>

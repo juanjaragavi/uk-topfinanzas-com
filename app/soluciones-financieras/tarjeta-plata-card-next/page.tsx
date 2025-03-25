@@ -105,10 +105,11 @@ export default function TarjetaPlataCardPage() {
                   width={1000}
                   height={563}
                   className="w-full h-auto rounded-lg"
+                  priority
                 />
               </div>
 
-              <div className="my-6">
+              <section className="my-6">
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
                   La Tarjeta de Crédito Plata es una opción diseñada para
                   quienes buscan maximizar el valor de cada compra. Uno de los
@@ -125,7 +126,7 @@ export default function TarjetaPlataCardPage() {
                   ¿Qué hace especial a la Tarjeta de Crédito Plata?
                 </h2>
 
-                <div className="space-y-6 my-8">
+                <div className="space-y-6 mb-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">+</span>
@@ -220,7 +221,7 @@ export default function TarjetaPlataCardPage() {
                   vida más fácil y segura:
                 </p>
 
-                <div className="space-y-6 my-8">
+                <div className="space-y-6 mb-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">+</span>
@@ -317,7 +318,7 @@ export default function TarjetaPlataCardPage() {
                     </Button>
                   </Link>
                 </div>
-              </div>
+              </section>
             </div>
           </div>
         </div>

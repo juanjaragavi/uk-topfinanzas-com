@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-{
-  /*import { Ad } from "@/components/ui/ad";*/
-}
+import { Ad } from "@/components/ui/ad";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 
@@ -37,13 +35,15 @@ export default function TarjetaBBVAAzulPage() {
                 frecuentes.
               </p>
 
-              {/*<Ad
-                format="square"
-                adId="mx_topfinanzas_1"
-                className="my-8"
-                fallbackWidth={300}
-                fallbackHeight={250}
-              />*/}
+              <div className="my-6">
+                <Ad
+                  format="square"
+                  adId="mx_topfinanzas_1"
+                  className="my-8"
+                  fallbackWidth={300}
+                  fallbackHeight={250}
+                />
+              </div>
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
@@ -97,11 +97,12 @@ export default function TarjetaBBVAAzulPage() {
 
               <div className="my-8">
                 <Image
-                  src="/images/download-5-2.webp"
-                  alt="Tarjeta de crédito Azul BBVA - Mujer con tarjeta de crédito"
+                  src="/images/TC_bbva-azul.jpg"
+                  alt="Tarjeta de crédito Azul BBVA"
                   width={1000}
                   height={563}
                   className="w-full h-auto rounded-lg"
+                  priority
                 />
               </div>
 

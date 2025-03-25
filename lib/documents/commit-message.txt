@@ -3,7 +3,7 @@ Adapt TopFinanzas website for Mexican market
 - Created detailed codebase analysis document (topfinanzas-pages-mx-codebase-analysis.md)
 - Created wrapper prompt for future adaptations (topfinanzas-pages-mx-wrapper-prompt.md)
 - Translated apply-citi-double-cash.content.json from English to Mexican Spanish
-- Adapted financial terminology for Mexican market (e.g., changed SSN to CURP/RFC)
+- Adapted financial terminology for Mexican market (e.g. changed SSN to CURP/RFC)
 - Updated SEO keywords to include Mexico-specific terms
 - Updated "TARJETAS DE CRÉDITO" navigation link in header
 - Fixed header component filter to display "TARJETAS DE CRÉDITO" link
@@ -15,9 +15,13 @@ Adapt TopFinanzas website for Mexican market
 - Updated the compact footer to match the WordPress version exactly
 - Added copyright text with correct uppercase styling and spacing
 - Standardized styling of Nu Bank and Plata Card pages to match BBVA Azul template
-- Updated text sizes, line heights, and bullet point styles for consistency
+- Updated text sizes line heights and bullet point styles for consistency
 - Replaced Footer with CompactFooter component for blog-style pages
 - Improved text contrast and readability with optimized font weights
+- Fixed BBVA branding colors to use correct corporate blue (#004C9E, #1464a5) instead of purple
+- Added missing images from WordPress site (BBVA card images, Nu Bank card, call-to-action banner)
+- Re-enabled ad components that were previously commented out in BBVA Azul pages
+- Fixed metadata formatting issues for better SEO performance
 
 This commit is part of the larger effort to adapt the TopFinanzas website for the
 Mexican market, focusing on content translation, navigation updates, and blog-style content pages
