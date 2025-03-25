@@ -297,3 +297,12 @@ By adhering to these instructions and utilizing your capabilities, you will ensu
   - Implemented the "2,300 calificaciones" display
   - Added "Accesible", "Segura", "Sostenible" labels as in the original
   - Created the "Beneficios a tu alcance" section with proper categories
+
+### UI Improvements for Button Alignment (2025-03-25)
+
+- **Fixed button layout in Recomendador de Tarjetas de Crédito page**:
+  - Resolved issue where button text and arrow icon were displaying on different lines
+  - Implemented a nested container structure with proper flex layout properties
+  - Used `inline-flex` and `space-x-1` utilities to correctly align elements horizontally
+  - Added proper text and icon sizing to ensure consistent appearance
+  - Maintained original styling and visual design while improving component structure

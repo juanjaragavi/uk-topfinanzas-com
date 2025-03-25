@@ -27,6 +27,7 @@ Adapt TopFinanzas website for Mexican market
 - Implemented interactive FAQ accordion with proper styling
 - Added BBVA card recommendation box with star rating
 - Created proper metadata.ts file for SEO optimization
+- Fixed button text and arrow icon alignment in Recomendador page to ensure they appear on one line
 
 This commit is part of the larger effort to adapt the TopFinanzas website for the
 Mexican market, focusing on content translation, navigation updates, and blog-style content pages

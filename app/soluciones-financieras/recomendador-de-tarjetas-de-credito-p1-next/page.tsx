@@ -25,86 +25,93 @@ export default function RecomendadorTarjetasPage() {
       <article className="bg-white py-8 md:py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h1 className="text-2xl md:text-2xl font-bold text-gray-800 mb-4">
+            <h1 className="text-lg md:text-2xl font-bold text-gray-800 mb-4 leading-5">
               Descubre tu tarjeta de crédito ideal
             </h1>
 
-            <p className="text-base text-gray-800 mb-5">
+            <p className="text-xs leading-4 text-gray-800 mb-5">
               Encontrar la tarjeta adecuada es sencillo. Maximiza recompensas,
               organiza tus gastos y disfruta beneficios exclusivos. ¡Explora y
               elige la tarjeta ideal para ti!
             </p>
 
-            <div className="mt-5 mb-8">
+            <div className="my-8">
               <Link href="/recommendation">
-                <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-3 w-full rounded-full flex items-center justify-center">
-                  Aceptar recomendación
-                  <span className="ml-1 bg-white rounded-full w-4 h-4 flex items-center justify-center">
-                    <span className="text-[#80E67D] text-xs">➔</span>
-                  </span>
+                <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-3 w-full rounded-full inline-flex items-center justify-center">
+                  <div className="flex items-center space-x-1">
+                    <span>Aceptar recomendación</span>
+                    <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
+                      <span className="text-[#80E67D] text-xs">➔</span>
+                    </div>
+                  </div>
                 </Button>
               </Link>
             </div>
 
-            <h2 className="text-xl font-bold text-gray-800 mb-6">
+            <h2 className="text-lg leading-5 font-bold text-gray-800 mb-6">
               ¿Por qué elegir nuestro recomendador de tarjetas de crédito?
             </h2>
 
-            <div className="space-y-4 mb-6">
+            <div className="space-y-1 mb-6">
               <div className="flex items-start">
-                <div className="flex-shrink-0 rounded-full bg-[#80E67D] p-1 flex items-center justify-center mr-3 mt-0.5">
+                <div className="flex-shrink-0 rounded-full bg-[#80E67D] px-1 flex items-center justify-center mr-2">
                   <span className="text-white font-bold text-sm">✓</span>
                 </div>
-                <div className="text-md">
+                <div className="text-sm">
                   <span className="font-bold">Opciones personalizadas</span>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <div className="flex-shrink-0 rounded-full bg-[#80E67D] p-1 flex items-center justify-center mr-3 mt-0.5">
+                <div className="flex-shrink-0 rounded-full bg-[#80E67D] px-1 flex items-center justify-center mr-2">
                   <span className="text-white font-bold text-sm">✓</span>
                 </div>
-                <div className="text-md">
+                <div className="text-sm">
                   <span className="font-bold">Completamente gratuito</span>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <div className="flex-shrink-0 rounded-full bg-[#80E67D] p-1 flex items-center justify-center mr-3 mt-0.5">
+                <div className="flex-shrink-0 rounded-full bg-[#80E67D] px-1 flex items-center justify-center mr-2">
                   <span className="text-white font-bold text-sm">✓</span>
                 </div>
-                <div className="text-md">
+                <div className="text-sm">
                   <span className="font-bold">Asesoría experta</span>
                 </div>
               </div>
             </div>
 
-            <p className="text-base text-gray-800 mb-4">
+            <p className="text-sm leading-5 text-gray-800 mb-4">
               Nuestras recomendaciones están diseñadas para conectar tus metas
               financieras con tarjetas que se ajusten a tus necesidades. Desde
               cashback hasta recompensas en viajes, te damos opciones claras y
               fáciles de entender para que tomes decisiones informadas.
             </p>
 
-            <p className="text-base text-gray-800 mb-5">
+            <p className="text-sm leading-5 text-gray-800 mb-5">
               Con nuestra guía, transformarás tu tarjeta de crédito en una
               herramienta que simplifique tus finanzas y te ayude a alcanzar tus
               metas sin complicaciones.
             </p>
 
-            <div className="mt-5 mb-2">
+            <div className="mt-6 mb-4">
               <Link href="/recommendation">
-                <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-3 w-full rounded-full flex items-center justify-center">
-                  Nuestra mejor recomendación
-                  <span className="ml-1 bg-white rounded-full w-4 h-4 flex items-center justify-center">
-                    <span className="text-[#80E67D] text-xs">➔</span>
-                  </span>
+                <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-3 w-full rounded-full inline-flex items-center justify-center">
+                  <div className="flex items-center space-x-1">
+                    <span>Aceptar recomendación</span>
+                    <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
+                      <span className="text-[#80E67D] text-xs">➔</span>
+                    </div>
+                  </div>
                 </Button>
               </Link>
             </div>
 
-            <p className="text-center text-sm text-blue-600 mb-6">
-              <Link href="/soluciones-financieras/aprende-como-solicitarla">
+            <p className="text-center text-sm mb-6">
+              <Link
+                className="text-blue-500"
+                href="/soluciones-financieras/aprende-como-solicitarla"
+              >
                 Aprende cómo solicitarla
               </Link>
             </p>
@@ -115,8 +122,8 @@ export default function RecomendadorTarjetasPage() {
                 onClick={() => toggleFaq("benefits")}
               >
                 <h3
-                  className={`font-medium text-md ${
-                    openFaq === "benefits" ? "text-green-500" : "text-gray-800"
+                  className={`font-medium text-lg leading-5 ${
+                    openFaq === "benefits" ? "text-green-500" : "text-sky-600"
                   }`}
                 >
                   ¿Qué beneficios tiene una tarjeta sin anualidad?
@@ -124,8 +131,8 @@ export default function RecomendadorTarjetasPage() {
                 <span
                   className={`text-xl transition-transform ${
                     openFaq === "benefits"
-                      ? "transform -rotate-90 text-green-500"
-                      : ""
+                      ? "transform text-green-500"
+                      : "text-sky-700"
                   }`}
                 >
                   {openFaq === "benefits" ? "−" : "+"}
@@ -146,8 +153,8 @@ export default function RecomendadorTarjetasPage() {
                 onClick={() => toggleFaq("cashback")}
               >
                 <h3
-                  className={`font-medium text-md ${
-                    openFaq === "cashback" ? "text-green-500" : "text-gray-800"
+                  className={`font-medium text-lg leading-5 ${
+                    openFaq === "cashback" ? "text-green-500" : "text-sky-600"
                   }`}
                 >
                   ¿Cómo funciona el cashback?
@@ -155,8 +162,8 @@ export default function RecomendadorTarjetasPage() {
                 <span
                   className={`text-xl transition-transform ${
                     openFaq === "cashback"
-                      ? "transform -rotate-90 text-green-500"
-                      : ""
+                      ? "transform text-green-500"
+                      : "text-sky-700"
                   }`}
                 >
                   {openFaq === "cashback" ? "−" : "+"}
@@ -176,8 +183,8 @@ export default function RecomendadorTarjetasPage() {
                 onClick={() => toggleFaq("travelers")}
               >
                 <h3
-                  className={`font-medium text-md ${
-                    openFaq === "travelers" ? "text-green-500" : "text-gray-800"
+                  className={`font-medium text-lg leading-5 ${
+                    openFaq === "travelers" ? "text-green-500" : "text-sky-600"
                   }`}
                 >
                   ¿Cuál es la mejor opción para viajeros?
@@ -185,8 +192,8 @@ export default function RecomendadorTarjetasPage() {
                 <span
                   className={`text-xl transition-transform ${
                     openFaq === "travelers"
-                      ? "transform -rotate-90 text-green-500"
-                      : ""
+                      ? "transform text-green-500"
+                      : "text-sky-700"
                   }`}
                 >
                   {openFaq === "travelers" ? "−" : "+"}
@@ -207,8 +214,8 @@ export default function RecomendadorTarjetasPage() {
                 onClick={() => toggleFaq("online")}
               >
                 <h3
-                  className={`font-medium text-md ${
-                    openFaq === "online" ? "text-green-500" : "text-gray-800"
+                  className={`font-medium text-lg leading-6 ${
+                    openFaq === "online" ? "text-green-500" : "text-sky-600"
                   }`}
                 >
                   ¿Es seguro usar tarjetas de crédito en línea?
@@ -217,7 +224,7 @@ export default function RecomendadorTarjetasPage() {
                   className={`text-xl transition-transform ${
                     openFaq === "online"
                       ? "transform -rotate-90 text-green-500"
-                      : ""
+                      : "text-sky-700"
                   }`}
                 >
                   {openFaq === "online" ? "−" : "+"}
@@ -234,7 +241,7 @@ export default function RecomendadorTarjetasPage() {
               )}
             </div>
 
-            <p className="text-base text-gray-800 mb-8">
+            <p className="text-sm leading-5 text-gray-800 mb-8">
               Haz de tu tarjeta de crédito una aliada para alcanzar tus metas
               financieras. Desde cashback hasta recompensas de viaje, elige una
               opción que simplifique tu vida y maximice tus beneficios. Explora
@@ -243,15 +250,15 @@ export default function RecomendadorTarjetasPage() {
             </p>
 
             <div className="my-8">
-                <Image
-                  src="/images/Tobanner-02-1.webp"
-                  alt="Recomendador de tarjetas de crédito"
-                  width={800}
-                  height={450}
-                  className="w-full h-auto rounded-lg"
-                  priority
-                />
-              </div>
+              <Image
+                src="/images/Tobanner-02-1.webp"
+                alt="Recomendador de tarjetas de crédito"
+                width={800}
+                height={450}
+                className="w-full h-auto rounded-lg"
+                priority
+              />
+            </div>
           </div>
         </div>
       </article>
