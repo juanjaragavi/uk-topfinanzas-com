@@ -112,32 +112,43 @@ if command -v pm2 &>/dev/null; then
     pm2 start "$NEXT_DIR/start-nextjs.sh" --name "topfinanzas-next"
     pm2 save
 
-    log "Configuring Nginx reverse proxy"
-    cat >"/etc/nginx/sites-available/topfinanzas-next.conf" <<'EOF'
+    log "Configuring Apache proxy for Next.js"
+    # Create an Apache VirtualHost configuration file
+    cat >"/etc/apache2/conf-available/topfinanzas-next.conf" <<'EOF'
 # Proxy configuration for Next.js app
-location ^~ /mx/top-finanzas-pages-mx/ {
-    proxy_pass http://localhost:3001/;
-    proxy_http_version 1.1;
-    proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection 'upgrade';
-    proxy_set_header Host $host;
-    proxy_cache_bypass $http_upgrade;
-}
-
-# Static assets
-location ^~ /mx/top-finanzas-pages-mx-static/ {
-    alias /var/www/html/mx/top-finanzas-pages-mx/.next/static/;
-    expires 30d;
-    add_header Cache-Control "public, max-age=2592000";
-}
+<IfModule mod_proxy.c>
+    ProxyRequests Off
+    ProxyPreserveHost On
+    
+    # Proxy for Next.js app
+    <Location /mx/top-finanzas-pages-mx/>
+        ProxyPass http://localhost:3001/
+        ProxyPassReverse http://localhost:3001/
+    </Location>
+    
+    # Static assets
+    Alias /mx/top-finanzas-pages-mx-static/ /var/www/html/mx/top-finanzas-pages-mx/.next/static/
+    <Directory /var/www/html/mx/top-finanzas-pages-mx/.next/static/>
+        Options FollowSymLinks
+        AllowOverride None
+        Require all granted
+        Header set Cache-Control "public, max-age=2592000"
+        ExpiresActive On
+        ExpiresDefault "access plus 30 days"
+    </Directory>
+</IfModule>
 EOF
 
-    log "Testing Nginx configuration"
-    nginx -t && systemctl reload nginx
+    log "Enabling Apache modules and configuration"
+    a2enmod proxy proxy_http expires headers
+    a2enconf topfinanzas-next
+
+    log "Testing Apache configuration"
+    apache2ctl configtest && systemctl reload apache2
 else
     log "PM2 not installed. Manual setup required"
     echo "To start the Next.js app, run: $NEXT_DIR/start-nextjs.sh"
-    echo "You'll need to set up a process manager and configure Nginx manually"
+    echo "You'll need to set up a process manager and configure Apache manually"
 fi
 
 log "Deployment completed successfully!"
