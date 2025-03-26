@@ -23,7 +23,18 @@ After analyzing the codebase, we've chosen to implement **option a: Pages in Sub
       page.tsx
     /tarjeta-plata-card-next/
       page.tsx
+    /requisitos-tarjeta-de-credito-nu-next/
+      page.tsx
+    /requisitos-tarjeta-de-credito-azul-bbva-next/
+      page.tsx
+    /tarjeta-de-credito-azul-bbva-next/
+      page.tsx
+  /recomendador-de-tarjetas-de-credito-p1-next/
+    page.tsx
+    metadata.ts
 ```
+
+**Note (March 25, 2025)**: As part of cleanup from the American project, the `/app/credit-cards/` directory and its subdirectories (`/apply` and `/recommendation`) have been removed. All functionality has been migrated to the blog-style URL structure shown above.
 
 ### URL Mapping
 

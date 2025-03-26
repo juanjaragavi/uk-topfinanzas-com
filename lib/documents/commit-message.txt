@@ -1,4 +1,4 @@
-Adapt TopFinanzas website for Mexican market
+Adapt TopFinanzas website for Mexican market: Directory cleanup and legal pages translation
 
 - Created detailed codebase analysis document (topfinanzas-pages-mx-codebase-analysis.md)
 - Created wrapper prompt for future adaptations (topfinanzas-pages-mx-wrapper-prompt.md)
@@ -28,6 +28,17 @@ Adapt TopFinanzas website for Mexican market
 - Added BBVA card recommendation box with star rating
 - Created proper metadata.ts file for SEO optimization
 - Fixed button text and arrow icon alignment in Recomendador page to ensure they appear on one line
+- Removed `/app/credit-cards/` directory and subdirectories from American project
+- Created documentation tracking directory structure changes in `/lib/documents/directory-structure-changes.md`
+- Translated legal page directories from English to Spanish:
+  - `/app/privacy-policy/` → `/app/politica-de-privacidad/`
+  - `/app/terms/` → `/app/terminos/`
+- Translated content in legal page files, including metadata and error messages
+- Updated documentation files to reflect directory changes:
+  - `/app/README.md`
+  - `/README.md`
+  - `/blog-functionality-report.md`
+  - `/IMPLEMENTATION.md`
 
 This commit is part of the larger effort to adapt the TopFinanzas website for the
 Mexican market, focusing on content translation, navigation updates, and blog-style content pages

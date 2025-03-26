@@ -6,24 +6,30 @@ import { compileMDX } from "next-mdx-remote/rsc";
 import { useMDXComponents } from "@/mdx-components";
 
 export const metadata = {
-  title: "Privacy Policy - Top Finance",
+  title: "Términos y Condiciones - Top Finance",
   description:
-    "Learn how Top Finance protects your personal information and the rights you have over your data.",
+    "Lea los Términos y Condiciones para el uso de los servicios y el sitio web de Top Finance.",
 };
 
-export default async function PrivacyPolicyPage() {
+export default async function TermsPage() {
   // Read the MDX file
-  const filePath = path.join(process.cwd(), "content/legal/privacy-policy.mdx");
-  let source = "# Privacy Policy\n\nContent not found.";
+  const filePath = path.join(
+    process.cwd(),
+    "content/legal/terms-conditions.mdx"
+  );
+  let source = "# Términos y Condiciones\n\nContenido no encontrado.";
 
   try {
     if (fs.existsSync(filePath)) {
       source = fs.readFileSync(filePath, "utf8");
     }
   } catch (error) {
-    console.error("Error reading privacy policy file:", error);
+    console.error(
+      "Error al cargar el archivo de términos y condiciones:",
+      error
+    );
     source =
-      "# Error Loading Content\n\nSorry, there was an error loading this content.";
+      "# Error al Cargar el Contenido\n\nLo sentimos, hubo un error al cargar este contenido.";
   }
 
   // Compile MDX content, properly handling frontmatter

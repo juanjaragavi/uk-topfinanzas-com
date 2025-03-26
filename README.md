@@ -11,9 +11,11 @@ The project follows a standard Next.js App Router structure with additional orga
   /blog                - Blog pages 
     /category/[slug]   - Category pages
     /post/[slug]       - Individual blog post pages
-  /credit-cards        - Credit card pages
-    /apply             - Application pages
-    /recommendation    - Recommendation pages
+  /politica-de-privacidad - Privacy policy page
+  /recomendador-de-tarjetas-de-credito-p1-next - Card recommendation page
+  /soluciones-financieras - Financial solutions pages
+  /style-guide         - Style guide components
+  /terminos            - Terms and conditions page
 /components            - React components
   /forms               - Form components
   /layout              - Layout components

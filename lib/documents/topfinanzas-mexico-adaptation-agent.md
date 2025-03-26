@@ -306,3 +306,20 @@ By adhering to these instructions and utilizing your capabilities, you will ensu
   - Used `inline-flex` and `space-x-1` utilities to correctly align elements horizontally
   - Added proper text and icon sizing to ensure consistent appearance
   - Maintained original styling and visual design while improving component structure
+
+### Directory Cleanup and Localization (2025-03-25)
+
+- **Removed American project directories**:
+  - Cleaned up the `/app/credit-cards/` directory and subdirectories (`/apply` and `/recommendation`)
+  - These pages were fully replaced by the blog-style URL structure under `/app/soluciones-financieras/`
+  - Created detailed documentation in `/lib/documents/directory-structure-changes.md` to track these changes
+
+- **Translated legal pages to Spanish**:
+  - Renamed directories to Spanish equivalents:
+    - `/app/privacy-policy/` → `/app/politica-de-privacidad/`
+    - `/app/terms/` → `/app/terminos/`
+  - Translated page content, including:
+    - Page titles ("Terms & Conditions" → "Términos y Condiciones")
+    - Metadata descriptions for better SEO in Spanish
+    - Error messages and fallback content
+  - Updated documentation in multiple files to reflect these changes

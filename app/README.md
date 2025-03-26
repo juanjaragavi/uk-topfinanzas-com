@@ -7,12 +7,25 @@ This directory contains the Next.js app router pages and routing structure for t
 - `/blog` - Blog-related pages
   - `/category/[slug]` - Dynamic category pages
   - `/post/[slug]` - Dynamic blog post pages
-- `/credit-cards` - Credit card pages
-  - `/apply` - Credit card application pages
-  - `/recommendation` - Card recommendation pages
+- `/politica-de-privacidad` - Privacy policy page (translated from `/privacy-policy`)
+- `/recomendador-de-tarjetas-de-credito-p1-next` - Card recommendation page (A/B testing variant)
+- `/soluciones-financieras` - Financial solutions content
+  - Various credit card guides and information pages with "-next" suffix
+- `/style-guide` - Style guide and reference components
+- `/terminos` - Terms and conditions page (translated from `/terms`)
 - `globals.css` - Global CSS styles
 - `layout.tsx` - Root layout component
 - `page.tsx` - Homepage
+
+## Cleanup Updates (March 25, 2025)
+
+The following directories have been removed as part of cleanup from the American project:
+
+- `/credit-cards` - Credit card pages
+  - `/apply` - Credit card application pages
+  - `/recommendation` - Card recommendation pages
+
+These pages have been replaced with the blog-style URL structure implemented under `/soluciones-financieras/` and `/recomendador-de-tarjetas-de-credito-p1-next/` as described in IMPLEMENTATION.md.
 
 ## Page Types
 

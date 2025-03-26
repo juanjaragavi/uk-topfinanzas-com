@@ -9,7 +9,9 @@ This report details the functionality of the blog system in the TopFinanzas Mexi
 The TopFinanzas Mexico website implements a hybrid blog system with two distinct approaches:
 
 1. **Traditional MDX-based Blog System**: Located in `/app/blog/` with content stored as MDX files
-2. **Blog-Style URL Structure**: A newer implementation in `/app/soluciones-financieras/` for A/B testing with Google Ads
+2. **Blog-Style URL Structure**: A newer implementation in `/app/soluciones-financieras/` and `/app/recomendador-de-tarjetas-de-credito-p1-next/` for A/B testing with Google Ads
+
+**Note (March 25, 2025)**: As part of cleanup from the American project, the `/app/credit-cards/` directory and its subdirectories (`/apply` and `/recommendation`) have been removed. These pages have been fully replaced by the blog-style URL structure described below.
 
 ### 1. Traditional MDX-based Blog System
 
