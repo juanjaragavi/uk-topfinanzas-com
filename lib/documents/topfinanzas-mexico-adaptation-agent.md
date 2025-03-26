@@ -397,6 +397,32 @@ By adhering to these instructions and utilizing your capabilities, you will ensu
   - Maintained backward compatibility with WordPress integration URLs
   - Added support for direct access to blog-style URLs without redirection
 
+### WordPress Integration Setup (2025-03-26)
+
+- **Created WordPress Integration Framework**:
+  - Implemented comprehensive integration for A/B testing between WordPress and Next.js
+  - Set up Apache proxy configuration to route specific URLs to Next.js application
+  - Created .htaccess rules to direct "-next" suffix URLs to the Next.js app
+  - Maintained all existing WordPress functionality while enabling A/B testing
+
+- **Developed Deployment Scripts**:
+  - Created `deployment/wordpress-integration.sh` for server-side setup
+  - Added `deployment/scripts/fix-permissions.sh` to handle proper file ownership
+  - Implemented `deployment/scripts/fix-integration-advanced.sh` with comprehensive diagnostics
+  - Developed `deployment/scripts/verify-integration.sh` for validation testing
+
+- **Configured Process Management**:
+  - Set up PM2 to manage the Next.js process with proper permissions
+  - Created a SystemD service for enhanced reliability and automatic restart
+  - Implemented robust logging and error handling
+  - Added process monitoring with status reporting
+
+- **Added Google Ads A/B Testing Framework**:
+  - Created detailed documentation for running parallel campaigns
+  - Set up URL structure to differentiate between WordPress and Next.js versions
+  - Enabled proper analytics tracking for both versions
+  - Created `/deployment/FRONTEND_TESTING.md` with comprehensive testing instructions
+
 ### Commit 2025-03-26 13:31:05 on branch dev
 Created new script to keep all of the branches up to date.
 
@@ -416,3 +442,19 @@ Created new script to keep all of the branches up to date.
 ### Commit 2025-03-26 13:34:36 on branch dev
 Created new script to keep all of the branches up to date.
 
+
+### Commit 2025-03-26 14:19:04 on branch dev
+feat: WordPress Integration for A/B Testing with Google Ads
+
+This commit adds comprehensive WordPress integration for A/B testing the Next.js pages:
+
+- Created deployment framework for WordPress integration
+- Set up Apache configuration for URL routing with "-next" suffix
+- Added scripts for troubleshooting and maintenance
+- Implemented PM2 process management for Next.js
+- Created detailed documentation for testing and verification
+- Added frontend testing guide for comparing WordPress and Next.js versions
+- Set up Google Ads A/B testing infrastructure
+
+The integration allows running parallel campaigns pointing to WordPress and Next.js
+versions of the same pages for direct performance comparison.
