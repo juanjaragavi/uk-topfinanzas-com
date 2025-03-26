@@ -33,8 +33,24 @@ const pathMappings = {
 const blogStylePathMappings = {
   "/mx/soluciones-financieras/guia-tarjeta-de-credito-nu-bank-next":
     "/soluciones-financieras/guia-tarjeta-de-credito-nu-bank-next",
+  "/soluciones-financieras/guia-tarjeta-de-credito-nu-bank-next":
+    "/soluciones-financieras/guia-tarjeta-de-credito-nu-bank-next",
   "/mx/soluciones-financieras/tarjeta-plata-card-next":
     "/soluciones-financieras/tarjeta-plata-card-next",
+  "/soluciones-financieras/tarjeta-plata-card-next":
+    "/soluciones-financieras/tarjeta-plata-card-next",
+  "/mx/soluciones-financieras/requisitos-tarjeta-de-credito-nu-next":
+    "/soluciones-financieras/requisitos-tarjeta-de-credito-nu-next",
+  "/soluciones-financieras/requisitos-tarjeta-de-credito-nu-next":
+    "/soluciones-financieras/requisitos-tarjeta-de-credito-nu-next",
+  "/mx/soluciones-financieras/tarjeta-de-credito-azul-bbva-next":
+    "/soluciones-financieras/tarjeta-de-credito-azul-bbva-next",
+  "/soluciones-financieras/tarjeta-de-credito-azul-bbva-next":
+    "/soluciones-financieras/tarjeta-de-credito-azul-bbva-next",
+  "/mx/soluciones-financieras/requisitos-tarjeta-de-credito-azul-bbva-next":
+    "/soluciones-financieras/requisitos-tarjeta-de-credito-azul-bbva-next",
+  "/soluciones-financieras/requisitos-tarjeta-de-credito-azul-bbva-next":
+    "/soluciones-financieras/requisitos-tarjeta-de-credito-azul-bbva-next",
 };
 
 // Next.js middleware function

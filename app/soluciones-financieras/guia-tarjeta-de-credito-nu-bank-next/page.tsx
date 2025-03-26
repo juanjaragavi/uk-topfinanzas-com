@@ -6,17 +6,7 @@ import { Button } from "@/components/ui/button";
 }
 import Image from "next/image";
 import Link from "next/link";
-
-export function generateMetadata() {
-  return {
-    title:
-      "Guía Tarjeta de Crédito Nu Bank: Todo lo que necesitas saber - Top Finanzas México",
-    description:
-      "Descubre todo lo que necesitas saber sobre la tarjeta de crédito Nu: beneficios, requisitos, costos y cómo solicitar este producto financiero innovador.",
-    keywords:
-      "tarjeta de crédito, Nu Bank, nu bank, solicitar tarjeta, crédito, finanzas personales",
-  };
-}
+// Metadata is now imported from metadata.ts
 
 export default function NuBankCreditCardPage() {
   return (
