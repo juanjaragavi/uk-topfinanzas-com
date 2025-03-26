@@ -4,7 +4,7 @@ This document outlines a comprehensive plan for integrating the Next.js applicat
 
 ## Integration Architecture
 
-```
+```markdown
                       ┌───────────────────────┐
                       │                       │
                       │    Apache Server      │
@@ -534,11 +534,13 @@ After implementing the integration, use the following verification checklist:
    - Confirm images load properly
 
 4. **PM2 process is running**:
+
    ```bash
    sudo pm2 status topfinanzas-next
    ```
 
 5. **Apache is properly configured**:
+
    ```bash
    sudo apache2ctl configtest
    ```
@@ -607,18 +609,21 @@ sudo netstat -tuln | grep ":3003"
 When updating the Next.js application:
 
 1. Pull the latest changes
+
    ```bash
    cd /var/www/html/mx/topfinanzas-pages-mx
    git pull origin main
    ```
 
 2. Rebuild the application
+
    ```bash
    npm ci
    NODE_ENV=production npm run build
    ```
 
 3. Restart the PM2 process
+
    ```bash
    sudo pm2 restart topfinanzas-next
    ```
