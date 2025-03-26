@@ -323,3 +323,39 @@ By adhering to these instructions and utilizing your capabilities, you will ensu
     - Metadata descriptions for better SEO in Spanish
     - Error messages and fallback content
   - Updated documentation in multiple files to reflect these changes
+
+### Analytics and Tracking Integration (2025-03-26)
+
+- **Added Google Tag Manager (GTM) integration**:
+  - Created `components/analytics/gtm.tsx` component with Next.js best practices
+  - Implemented using Next.js Script component with afterInteractive strategy
+  - Added GTM script to the `<head>` section in root layout
+  - Added GTM noscript iframe immediately after the `<body>` tag
+  - Used container ID GTM-MR76NXR3 as provided by marketing partner
+
+- **Implemented UTM parameter persistence system**:
+  - Created `components/analytics/utm-persister.tsx` component for tracking marketing campaigns
+  - Enhanced the original script with sessionStorage persistence for cross-page navigation
+  - Added special handling for Next.js Link components to avoid conflicts
+  - Implemented MutationObserver to handle dynamically added links
+  - Added optimizations to only run when UTM parameters are present
+  - Ensured proper security with validation of URLs and target hosts
+
+- **Created Soluciones Financieras category page**:
+  - Implemented `app/soluciones-financieras/page.tsx` as a content hub for financial solutions
+  - Added proper metadata in `app/soluciones-financieras/metadata.ts` for SEO
+  - Listed card products with their actual images from individual product pages
+  - Added featured article section with Tarjeta Plata Card
+  - Implemented responsive grid layout for card listings
+  - Created call-to-action section linking to the Recomendador de Tarjetas
+  
+- **Updated navigation structure**:
+  - Added "SOLUCIONES FINANCIERAS" to main navigation items in `headerNavigation.ts`
+  - Added the category to the dropdown menu for better discoverability
+  - Ensured all links correctly point to the new category page
+
+- **Added comprehensive documentation**:
+  - Created `lib/documents/analytics-tracking-implementation.md` with detailed implementation notes
+  - Documented testing procedures for GTM and UTM tracking
+  - Added maintenance guidance for future updates
+  - Included special considerations for Next.js Link components
