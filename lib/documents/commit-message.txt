@@ -46,6 +46,13 @@ Adapt TopFinanzas website for Mexican market: Analytics integration, directory c
   - `/README.md`
   - `/blog-functionality-report.md`
   - `/IMPLEMENTATION.md`
+- Translated sidebar component text strings to Spanish
+- Added SidebarAd component that uses BBVA Azul card banner image
+- Created specialized sidebar components for blog layout:
+  - SidebarRecentArticles: Shows recent posts in Spanish
+  - SidebarCategories: Lists categories with Spanish names
+  - SidebarNewsletter: Subscription form with Spanish text
+- Updated BlogLayout component to use new sidebar components with Spanish content
 
 This commit is part of the larger effort to adapt the TopFinanzas website for the
 Mexican market, focusing on content translation, navigation updates, and blog-style content pages

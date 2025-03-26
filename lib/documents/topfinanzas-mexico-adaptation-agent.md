@@ -324,6 +324,26 @@ By adhering to these instructions and utilizing your capabilities, you will ensu
     - Error messages and fallback content
   - Updated documentation in multiple files to reflect these changes
 
+### Sidebar Component Localization (2025-03-26)
+
+- **Translated user-facing sidebar text**:
+  - Updated all text strings in the sidebar components to Spanish
+  - Translated "Toggle Sidebar" to "Alternar Barra Lateral" for screen readers and hover text
+  - Created new specialized sidebar components with Spanish text:
+    - `SidebarRecentArticles`: Shows "Artículos Recientes" with translated titles
+    - `SidebarCategories`: Lists categories like "Finanzas Personales", "Tarjetas de Crédito", etc.
+    - `SidebarNewsletter`: Newsletter subscription form with "Suscríbete a nuestro boletín"
+
+- **Added BBVA card advertisement**:
+  - Created `SidebarAd` component with BBVA Azul card banner
+  - Set up the ad to link to the card's dedicated page at `/soluciones-financieras/requisitos-tarjeta-de-credito-azul-bbva-next/`
+  - Ensured responsive design and proper image loading
+
+- **Updated BlogLayout with new components**:
+  - Refactored `BlogLayout` component to use the new Spanish sidebar components
+  - Improved structure with proper component hierarchy
+  - Added client-side form handling for newsletter subscriptions
+
 ### Analytics and Tracking Integration (2025-03-26)
 
 - **Added Google Tag Manager (GTM) integration**:

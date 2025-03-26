@@ -4,7 +4,21 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Ad } from "@/components/ui/ad";
 import { ReactNode } from "react";
+import Link from "next/link";
 import Image from "next/image";
+import {
+  Sidebar,
+  SidebarAd,
+  SidebarCategories,
+  SidebarContent,
+  SidebarFooter,
+  SidebarHeader,
+  SidebarInput,
+  SidebarNewsletter,
+  SidebarProvider,
+  SidebarRecentArticles,
+  SidebarSeparator,
+} from "@/components/ui/sidebar";
 
 interface BlogLayoutProps {
   children: ReactNode;
@@ -16,9 +30,15 @@ interface BlogLayoutProps {
 
 export function BlogLayout({ children, metadata }: BlogLayoutProps) {
   const {
-    title = "Blog - Top Finance",
-    description = "Stay informed with the latest financial tips, strategies, and insights from Top Finance experts.",
+    title = "Blog - TopFinanzas",
+    description = "Mantente informado con los últimos consejos financieros, estrategias e información de los expertos de TopFinanzas.",
   } = metadata || {};
+
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Aquí iría la lógica de suscripción
+    console.log("Formulario enviado");
+  };
 
   return (
     <main className="min-h-screen flex flex-col">
@@ -34,165 +54,146 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
 
             {/* Sidebar */}
             <div className="lg:col-span-4">
-              {/* Ad placeholder */}
-              <div className="mb-8">
-                <Ad format="square" className="mx-auto" fallbackWidth={300} fallbackHeight={250} />
-              </div>
-
-              {/* Recent articles */}
-              <div className="mb-8 bg-white p-6 shadow-sm rounded-xl">
-                <h3 className="text-xl font-bold mb-4 pb-2 border-b border-gray-200">
-                  Recent Articles
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <div className="relative flex-shrink-0 w-16 h-16 rounded-xl mr-4 overflow-hidden">
+              <SidebarProvider>
+                <SidebarContent>
+                  ‰{/* Ad banner */}
+                  <SidebarAd />
+                  <SidebarSeparator />
+                  {/* Recent Articles */}
+                  <SidebarRecentArticles>
+                    <div className="flex items-center gap-3">
                       <Image
                         src="https://media.topfinanzas.com/images/generated/1741659352997/sample_0.jpg"
-                        alt="Your First Paycheck: A Complete Guide to Smart Management"
-                        fill
-                        style={{ objectFit: "cover" }}
-                        className="rounded-xl"
+                        alt="Tu Primer Sueldo: Una Guía Completa para Gestión Inteligente"
+                        width={50}
+                        height={50}
+                        className="rounded-md"
                       />
+                      <div>
+                        <Link
+                          href="/blog/post/your-first-paycheck"
+                          className="text-sm font-medium hover:underline"
+                        >
+                          Tu Primer Sueldo: Una Guía Completa para Gestión
+                          Inteligente
+                        </Link>
+                        <p className="text-xs text-gray-500">
+                          25 Febrero, 2025
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-medium hover:text-blue-600 transition-colors">
-                        <a href="/blog/post/your-first-paycheck">
-                          Your First Paycheck: A Complete Guide to Smart
-                          Management
-                        </a>
-                      </h4>
-                      <p className="text-sm text-gray-500">February 25, 2025</p>
-                    </div>
-                  </div>
 
-                  <div className="flex items-start">
-                    <div className="relative flex-shrink-0 w-16 h-16 rounded-xl mr-4 overflow-hidden">
+                    <div className="flex items-center gap-3">
                       <Image
                         src="https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg"
-                        alt="What Is a Home Mortgage? Your Complete Guide"
-                        fill
-                        style={{ objectFit: "cover" }}
-                        className="rounded-xl"
+                        alt="¿Qué Es una Hipoteca? Tu Guía Completa"
+                        width={50}
+                        height={50}
+                        className="rounded-md"
                       />
+                      <div>
+                        <Link
+                          href="/blog/post/what-is-a-home-mortgage"
+                          className="text-sm font-medium hover:underline"
+                        >
+                          ¿Qué Es una Hipoteca? Tu Guía Completa
+                        </Link>
+                        <p className="text-xs text-gray-500">
+                          25 Febrero, 2025
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-medium hover:text-blue-600 transition-colors">
-                        <a href="/blog/post/what-is-a-home-mortgage">
-                          What Is a Home Mortgage? Your Complete Guide
-                        </a>
-                      </h4>
-                      <p className="text-sm text-gray-500">February 25, 2025</p>
-                    </div>
-                  </div>
 
-                  <div className="flex items-start">
-                    <div className="relative flex-shrink-0 w-16 h-16 rounded-xl mr-4 overflow-hidden">
+                    <div className="flex items-center gap-3">
                       <Image
                         src="https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg"
-                        alt="What Are Online Loans?: A Key Tool in Personal Finances"
-                        fill
-                        style={{ objectFit: "cover" }}
-                        className="rounded-xl"
+                        alt="¿Qué Son los Préstamos en Línea? Una Herramienta Clave en Finanzas Personales"
+                        width={50}
+                        height={50}
+                        className="rounded-md"
                       />
+                      <div>
+                        <Link
+                          href="/blog/post/what-are-online-loans"
+                          className="text-sm font-medium hover:underline"
+                        >
+                          ¿Qué Son los Préstamos en Línea? Una Herramienta Clave
+                          en Finanzas Personales
+                        </Link>
+                        <p className="text-xs text-gray-500">
+                          25 Febrero, 2025
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-medium hover:text-blue-600 transition-colors">
-                        <a href="/blog/post/what-are-online-loans">
-                          What Are Online Loans?: A Key Tool in Personal
-                          Finances
-                        </a>
-                      </h4>
-                      <p className="text-sm text-gray-500">February 25, 2025</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Categories */}
-              <div className="mb-8 bg-white p-6 rounded-xl shadow-sm">
-                <h3 className="text-xl font-bold mb-4 pb-2 border-b border-gray-200">
-                  Categories
-                </h3>
-                <ul className="space-y-2">
-                  <li>
-                    <a
-                      href="/blog/category/personal-finance"
-                      className="flex items-center justify-between hover:text-blue-600 transition-colors"
-                    >
-                      <span>Personal Finance</span>
-                      <span className="bg-gray-100 text-gray-600 rounded-full px-2 py-1 text-xs">
+                  </SidebarRecentArticles>
+                  <SidebarSeparator />
+                  {/* Categories */}
+                  <SidebarCategories>
+                    <div className="flex items-center justify-between">
+                      <Link
+                        href="/blog/category/personal-finance"
+                        className="text-sm hover:underline"
+                      >
+                        Finanzas Personales
+                      </Link>
+                      <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
                         12
                       </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/blog/category/credit-cards"
-                      className="flex items-center justify-between hover:text-blue-600 transition-colors"
-                    >
-                      <span>Credit Cards</span>
-                      <span className="bg-gray-100 text-gray-600 rounded-full px-2 py-1 text-xs">
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <Link
+                        href="/blog/category/credit-cards"
+                        className="text-sm hover:underline"
+                      >
+                        Tarjetas de Crédito
+                      </Link>
+                      <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
                         8
                       </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/blog/category/mortgages"
-                      className="flex items-center justify-between hover:text-blue-600 transition-colors"
-                    >
-                      <span>Mortgages</span>
-                      <span className="bg-gray-100 text-gray-600 rounded-full px-2 py-1 text-xs">
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <Link
+                        href="/blog/category/mortgages"
+                        className="text-sm hover:underline"
+                      >
+                        Hipotecas
+                      </Link>
+                      <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
                         6
                       </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/blog/category/investing"
-                      className="flex items-center justify-between hover:text-blue-600 transition-colors"
-                    >
-                      <span>Investing</span>
-                      <span className="bg-gray-100 text-gray-600 rounded-full px-2 py-1 text-xs">
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <Link
+                        href="/blog/category/investing"
+                        className="text-sm hover:underline"
+                      >
+                        Inversiones
+                      </Link>
+                      <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
                         5
                       </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/blog/category/budgeting"
-                      className="flex items-center justify-between hover:text-blue-600 transition-colors"
-                    >
-                      <span>Budgeting</span>
-                      <span className="bg-gray-100 text-gray-600 rounded-full px-2 py-1 text-xs">
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <Link
+                        href="/blog/category/budgeting"
+                        className="text-sm hover:underline"
+                      >
+                        Presupuestos
+                      </Link>
+                      <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
                         4
                       </span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Newsletter signup */}
-              <div className="p-6 bg-blue-50 rounded-xl shadow-sm">
-                <h3 className="text-xl font-bold mb-2">
-                  Subscribe to our newsletter
-                </h3>
-                <p className="text-sm text-gray-600 mb-4">
-                  Get the latest financial tips and insights delivered straight
-                  to your inbox.
-                </p>
-                <div className="space-y-2">
-                  <input
-                    type="email"
-                    placeholder="Your email address"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition-colors">
-                    Subscribe
-                  </button>
-                </div>
-              </div>
+                    </div>
+                  </SidebarCategories>
+                  <SidebarSeparator />
+                  {/* Newsletter */}
+                  <SidebarNewsletter onSubmit={handleNewsletterSubmit} />
+                </SidebarContent>
+              </SidebarProvider>
             </div>
           </div>
         </div>
