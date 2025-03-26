@@ -55,16 +55,20 @@ export const headerNavigation = {
     text: "CATEGORÍAS",
     items: [
       {
-        text: "Recomendaciones de Tarjetas",
-        href: "/recommendation",
+        text: "Recomendador de Tarjetas",
+        href: "/recomendador-de-tarjetas-de-credito-p1-next",
       },
       {
         text: "Comparar Tarjetas",
         href: "/",
       },
       {
-        text: "Citi Double Cash",
-        href: "/citi-double-cash",
+        text: "Tarjeta Plata Card",
+        href: "/soluciones-financieras/tarjeta-plata-card-next",
+      },
+      {
+        text: "Tarjeta de Crédito Azul BBVA",
+        href: "/soluciones-financieras/tarjeta-de-credito-azul-bbva-next",
       },
     ],
   },

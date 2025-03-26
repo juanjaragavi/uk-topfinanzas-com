@@ -74,16 +74,20 @@ export const footerNavigation = {
       href: "/blog/post/your-first-paycheck",
     },
     {
-      text: "Guía de Hipotecas",
-      href: "/blog/post/what-is-a-home-mortgage",
+      text: "Tarjeta Plata Card",
+      href: "/soluciones-financieras/tarjeta-plata-card-next",
     },
     {
-      text: "Entendiendo los Préstamos en Línea",
-      href: "/blog/post/what-are-online-loans",
+      text: "Tarjeta de Crédito Azul BBVA",
+      href: "/soluciones-financieras/tarjeta-de-credito-azul-bbva-next",
     },
     {
-      text: "Cómo Elegir el Préstamo en Línea Correcto",
-      href: "/blog/post/5-tips-for-choosing-an-online-loan",
+      text: "Guía Tarjeta de Crédito Nu Bank",
+      href: "/soluciones-financieras/guia-tarjeta-de-credito-nu-bank-next",
+    },
+    {
+      text: "Recomendador de Tarjetas",
+      href: "/recomendador-de-tarjetas-de-credito-p1-next",
     },
   ],
 
