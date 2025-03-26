@@ -42,39 +42,47 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const url = request.nextUrl.clone();
 
+  // Vercel deployment - handle direct access to blog-style URLs
+  // For Vercel, we don't need the /mx prefix since we're on a separate domain
+  const cleanPathname = pathname.startsWith("/mx")
+    ? pathname.slice(3)
+    : pathname;
+
   // Handle direct access to blog-style URLs with -next suffix
-  // Example: /mx/soluciones-financieras/guia-tarjeta-de-credito-nu-bank-next -> /soluciones-financieras/guia-tarjeta-de-credito-nu-bank-next
-  if (Object.prototype.hasOwnProperty.call(blogStylePathMappings, pathname)) {
+  // Example: /soluciones-financieras/guia-tarjeta-de-credito-nu-bank-next -> /soluciones-financieras/guia-tarjeta-de-credito-nu-bank-next
+  const directBlogStyleKey = Object.keys(blogStylePathMappings).find(
+    (key) => key === pathname || key === cleanPathname
+  );
+
+  if (directBlogStyleKey) {
     const nextJsPath =
-      blogStylePathMappings[pathname as keyof typeof blogStylePathMappings];
+      blogStylePathMappings[
+        directBlogStyleKey as keyof typeof blogStylePathMappings
+      ];
     url.pathname = nextJsPath;
     return NextResponse.rewrite(url);
   }
 
   // If the URL ends with '-next', serve the Next.js page for the original site structure
-  // Example: /mx/recomendador-de-tarjetas-de-credito-next -> /recommendation
-  if (pathname.endsWith("-next")) {
-    // Extract the WordPress path without the '-next' suffix
-    const originalPath = pathname.slice(0, -5);
+  // Example: /recomendador-de-tarjetas-de-credito-next -> /recommendation
+  if (cleanPathname.endsWith("-next")) {
+    // Extract the path without the '-next' suffix
+    const originalPath = cleanPathname.slice(0, -5);
 
-    // Check if the originalPath is a key in our pathMappings using type-safe approach
-    if (Object.prototype.hasOwnProperty.call(pathMappings, originalPath)) {
-      const nextJsPath =
-        pathMappings[originalPath as keyof typeof pathMappings];
+    // Find the matching path with or without /mx prefix
+    const pathKey = Object.keys(pathMappings).find(
+      (key) => key === originalPath || key === `/mx${originalPath}`
+    );
+
+    if (pathKey) {
+      const nextJsPath = pathMappings[pathKey as keyof typeof pathMappings];
       url.pathname = nextJsPath;
       return NextResponse.rewrite(url);
     }
   }
 
-  // For direct path access to the Next.js pages, redirect to the WordPress URL with '-next' suffix
-  // This is only for Google Ads A/B testing purposes
-  // Example: /recommendation -> /mx/recomendador-de-tarjetas-de-credito-next
-  for (const [wpPath, nextJsPath] of Object.entries(pathMappings)) {
-    if (pathname === nextJsPath) {
-      url.pathname = `${wpPath}-next`;
-      return NextResponse.redirect(url);
-    }
-  }
+  // For direct path access to the Next.js pages, we'll just serve them directly in Vercel
+  // instead of redirecting to WordPress paths as we did in the WordPress integration
 
   // Continue normal Next.js routing for all other paths
   return NextResponse.next();

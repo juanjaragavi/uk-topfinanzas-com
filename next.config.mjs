@@ -14,11 +14,11 @@ const nextConfig = {
   },
   // Output configuration for standalone mode
   output: "standalone",
-  // Set the asset prefix for static files
-  assetPrefix:
-    process.env.NODE_ENV === "production"
-      ? "https://topfinanzas.com/mx/topfinanzas-pages-mx"
-      : undefined,
+  // Remove the hardcoded assetPrefix for Vercel deployment
+  // assetPrefix:
+  //   process.env.NODE_ENV === "production"
+  //     ? "https://topfinanzas.com/mx/topfinanzas-pages-mx"
+  //     : undefined,
   images: {
     unoptimized: true,
     dangerouslyAllowSVG: true,

@@ -379,3 +379,20 @@ By adhering to these instructions and utilizing your capabilities, you will ensu
   - Documented testing procedures for GTM and UTM tracking
   - Added maintenance guidance for future updates
   - Included special considerations for Next.js Link components
+
+### Vercel Deployment Fixes (2025-03-26)
+
+- **Fixed asset loading for Vercel deployment**:
+  - Removed hardcoded `assetPrefix` in `next.config.mjs` that was pointing to the WordPress integration path
+  - This was causing CSS and JavaScript assets to load from the wrong domain on Vercel
+
+- **Updated middleware for Vercel compatibility**:
+  - Modified `middleware.ts` to handle paths with or without the `/mx` prefix
+  - Added special handling for Vercel's domain structure which differs from WordPress integration
+  - Implemented more flexible path matching to support both environments
+  - Enhanced error handling for blog-style URL routing
+
+- **Improved routing flexibility**:
+  - Updated the path detection logic to work with clean URLs in Vercel environment
+  - Maintained backward compatibility with WordPress integration URLs
+  - Added support for direct access to blog-style URLs without redirection
