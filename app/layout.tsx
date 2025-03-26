@@ -2,6 +2,10 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import GoogleTagManager, {
+  GoogleTagManagerNoScript,
+} from "@/components/analytics/gtm";
+import UtmPersister from "@/components/analytics/utm-persister";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -35,7 +39,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es-mx">
-      <body className={`${poppins.variable} font-sans`}>{children}</body>
+      <head>
+        <GoogleTagManager />
+      </head>
+      <body className={`${poppins.variable} font-sans`}>
+        <GoogleTagManagerNoScript />
+        <UtmPersister />
+        {children}
+      </body>
     </html>
   );
 }

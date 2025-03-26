@@ -37,8 +37,12 @@ export const headerNavigation = {
   /** Main navigation items */
   mainNavItems: [
     {
-      text: "TARJETAS DE CRÉDITO",
-      href: "/credit-cards",
+      text: "RECOMENDADOR DE TARJETAS",
+      href: "/recomendador-de-tarjetas-de-credito-p1-next",
+    },
+    {
+      text: "SOLUCIONES FINANCIERAS",
+      href: "/soluciones-financieras",
     },
     {
       text: "BLOG",
@@ -46,7 +50,7 @@ export const headerNavigation = {
     },
     {
       text: "SOLICITAR AHORA",
-      href: "/apply/citi-double-cash",
+      href: "/soluciones-financieras/requisitos-tarjeta-de-credito-azul-bbva-next",
     },
   ],
 
@@ -54,6 +58,10 @@ export const headerNavigation = {
   categoryDropdown: {
     text: "CATEGORÍAS",
     items: [
+      {
+        text: "Soluciones Financieras",
+        href: "/soluciones-financieras",
+      },
       {
         text: "Recomendador de Tarjetas",
         href: "/recomendador-de-tarjetas-de-credito-p1-next",
