@@ -1,8 +1,9 @@
-fix: Resolve Vercel deployment CSS and routing issues
+fix: Add missing blog page routes and fix middleware path mapping
 
-This commit fixes critical issues that prevented the website from rendering correctly when deployed to Vercel:
+This commit resolves 404 errors for blog-style pages:
 
-- Fixed assetPrefix configuration in next.config.mjs to allow proper loading of CSS and JS files
-- Updated middleware.ts to handle path routing properly in the Vercel environment
-- Added support for URL paths with and without the /mx prefix for better compatibility
-- Improved error handling for blog-style URL routes
+- Updated middleware.ts to properly handle all blog-style URLs with and without /mx prefix
+- Added direct path mappings for all blog post routes including guia-tarjeta-de-credito-nu-bank-next
+- Created separate metadata.ts file for the Nu Bank guide page to follow Next.js best practices
+- Removed generateMetadata function from page component to use the separate metadata file
+- Improved path detection logic for clean URLs in both local and Vercel environments
