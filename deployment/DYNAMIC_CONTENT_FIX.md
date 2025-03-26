@@ -39,6 +39,7 @@ To verify the fix is working properly, please visit the following URLs and check
 2. [Tarjeta Plata Card Next.js Page](https://topfinanzas.com/mx/soluciones-financieras/tarjeta-plata-card-next)
 
 The pages should now correctly display:
+
 - Dynamic content components
 - Proper styling and layout
 - Interactive elements functioning correctly
@@ -49,21 +50,25 @@ The pages should now correctly display:
 If issues persist after applying this fix:
 
 1. **Check Next.js Logs:**
+
    ```bash
    sudo pm2 logs topfinanzas-next --lines 100
    ```
 
 2. **Check Apache Error Logs:**
+
    ```bash
    sudo tail -f /var/log/apache2/error.log
    ```
 
 3. **Verify Apache Modules:**
+
    ```bash
    sudo apachectl -M | grep proxy
    ```
-   
+
 4. **Test .htaccess Rules:**
+
    ```bash
    curl -I https://topfinanzas.com/mx/soluciones-financieras/tarjeta-plata-card-next
    ```
