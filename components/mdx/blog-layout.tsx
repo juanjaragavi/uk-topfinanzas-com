@@ -56,7 +56,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
             <div className="lg:col-span-4">
               <SidebarProvider>
                 <SidebarContent>
-                  ‰{/* Ad banner */}
+                  z{/* Ad banner */}
                   <SidebarAd />
                   <SidebarSeparator />
                   {/* Recent Articles */}
