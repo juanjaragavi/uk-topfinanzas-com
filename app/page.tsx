@@ -43,11 +43,11 @@ export default function Home() {
 
         <div className="container mx-auto px-4 text-left relative z-10">
           <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 drop-shadow-lg leading-tight">
-            Welcome to Top Finance
+            Bienvenidos a Top Finanzas
           </h1>
           <p className="text-white text-base md:text-lg lg:text-xl max-w-3xl  mb-6 md:mb-8 drop-shadow-md leading-tight">
-            Where every financial decision expands your world. <br />
-            Choose wisely, live fully.
+            Donde cada decisión financiera amplía tu mundo. <br />
+            Decide sabiamente, vive plenamente.
           </p>
         </div>
       </section>
@@ -64,34 +64,35 @@ export default function Home() {
               <div className="relative h-[300px] md:h-[350px] w-full">
                 <Image
                   src="https://media.topfinanzas.com/images/generated/1741659352997/sample_0.jpg"
-                  alt="Your First Paycheck: A Complete Guide to Smart Management"
+                  alt="Tu primer sueldo: Una guía completa para gestionarlo inteligentemente"
                   fill
                   style={{ objectFit: "cover" }}
                   className="brightness-75"
                 />
                 <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-white">
                   <h2 className="text-white text-xl md:text-2xl font-medium leading-tight">
-                    Your First Paycheck: A Complete Guide to Smart Management
+                    Tu primer sueldo: Una guía completa para gestionarlo
+                    inteligentemente
                   </h2>
                   <div className="flex items-center space-x-2 mb-2">
                     <div className="size-5 overflow-hidden bg-blue-600 rounded-full flex items-center justify-center">
                       <Image
                         src="https://media.topfinanzas.com/images/favicon.png"
-                        alt="Top Finance"
+                        alt="Top Finanzas"
                         width={16}
                         height={16}
                       />
                     </div>
                     <span className="text-xs font-normal text-gray-200">
-                      TOP FINANCE
+                      TOP FINANZAS
                     </span>
                     <span className="text-xs">•</span>
                     <span className="text-[10px] font-normal text-gray-200">
-                      February 25, 2025
+                      febrero 25, 2025
                     </span>
                   </div>
                   <div className="flex items-center font-light mt-1 text-xs opacity-90 text-gray-200">
-                    <span>{721} views</span>
+                    <span>{721} vistas</span>
                   </div>
                 </div>
               </div>
@@ -107,34 +108,34 @@ export default function Home() {
               <div className="relative h-[220px] w-full">
                 <Image
                   src="https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg"
-                  alt="What Is a Home Mortgage? Your Complete Guide"
+                  alt="¿Qué es una hipoteca? Tu guía completa"
                   fill
                   style={{ objectFit: "cover" }}
                   className="brightness-75"
                 />
                 <div className="absolute inset-0 flex flex-col justify-end p-4 text-white">
                   <h3 className="text-white text-xl md:text-2xl font-medium leading-tight">
-                    What Is a Home Mortgage? Your Complete Guide
+                    ¿Qué es una hipoteca? Tu guía completa
                   </h3>
                   <div className="flex items-center space-x-2 mb-2">
                     <div className="size-5 overflow-hidden bg-blue-600 rounded-full flex items-center justify-center">
                       <Image
                         src="https://media.topfinanzas.com/images/favicon.png"
-                        alt="Top Finance"
+                        alt="Top Finanzas"
                         width={16}
                         height={16}
                       />
                     </div>
                     <span className="text-xs font-normal text-gray-200">
-                      TOP FINANCE
+                      TOP FINANZAS
                     </span>
                     <span className="text-xs">•</span>
                     <span className="text-[10px] font-normal text-gray-200">
-                      February 25, 2025
+                      febrero 25, 2025
                     </span>
                   </div>
                   <div className="flex items-center font-light mt-1 text-xs opacity-90 text-gray-200">
-                    <span>{563} views</span>
+                    <span>{563} vistas</span>
                   </div>
                 </div>
               </div>
@@ -147,34 +148,35 @@ export default function Home() {
               <div className="relative h-[220px] w-full">
                 <Image
                   src="https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg"
-                  alt="What Are Online Loans?: A Key Tool in Personal Finances"
+                  alt="¿Qué son los préstamos en línea?: Una herramienta clave en las finanzas personales"
                   fill
                   style={{ objectFit: "cover" }}
                   className="brightness-75"
                 />
                 <div className="absolute inset-0 flex flex-col justify-end p-4 text-white">
                   <h3 className="text-white text-xl md:text-2xl font-medium leading-tight">
-                    What Are Online Loans?: A Key Tool in Personal Finances
+                    ¿Qué son los préstamos en línea?: Una herramienta clave en
+                    las finanzas personales
                   </h3>
                   <div className="flex items-center space-x-2 mb-2">
                     <div className="size-5 overflow-hidden bg-blue-600 rounded-full flex items-center justify-center">
                       <Image
                         src="https://media.topfinanzas.com/images/favicon.png"
-                        alt="Top Finance"
+                        alt="Top Finanzas"
                         width={16}
                         height={16}
                       />
                     </div>
                     <span className="text-xs font-normal text-gray-200">
-                      TOP FINANCE
+                      TOP FINANZAS
                     </span>
                     <span className="text-xs">•</span>
                     <span className="text-[10px] font-normal text-gray-200">
-                      February 25, 2025
+                      febrero 25, 2025
                     </span>
                   </div>
                   <div className="flex items-center font-light mt-1 text-xs opacity-90 text-gray-200">
-                    <span>{412} views</span>
+                    <span>{412} vistas</span>
                   </div>
                 </div>
               </div>
@@ -187,34 +189,34 @@ export default function Home() {
               <div className="relative h-[220px] w-full">
                 <Image
                   src="https://media.topfinanzas.com/images/generated/1741732471632/sample_0.jpg"
-                  alt="5 Tips for Choosing an Online Loan: Quick Guide"
+                  alt="5 consejos para elegir un préstamo en línea: Guía rápida"
                   fill
                   style={{ objectFit: "cover" }}
                   className="brightness-75"
                 />
                 <div className="absolute inset-0 flex flex-col justify-end p-4 text-white">
                   <h3 className="text-white text-xl md:text-2xl font-medium leading-tight">
-                    5 Tips for Choosing an Online Loan: Quick Guide
+                    5 consejos para elegir un préstamo en línea: Guía rápida
                   </h3>
                   <div className="flex items-center space-x-2 mb-2">
                     <div className="size-5 overflow-hidden bg-blue-600 rounded-full flex items-center justify-center">
                       <Image
                         src="https://media.topfinanzas.com/images/favicon.png"
-                        alt="Top Finance"
+                        alt="Top Finanzas"
                         width={16}
                         height={16}
                       />
                     </div>
                     <span className="text-xs font-normal text-gray-200">
-                      TOP FINANCE
+                      TOP FINANZAS
                     </span>
                     <span className="text-xs">•</span>
                     <span className="text-[10px] font-normal text-gray-200">
-                      February 25, 2025
+                      febrero 25, 2025
                     </span>
                   </div>
                   <div className="flex items-center font-light mt-1 text-xs opacity-90 text-gray-200">
-                    <span>{345} views</span>
+                    <span>{345} vistas</span>
                   </div>
                 </div>
               </div>
