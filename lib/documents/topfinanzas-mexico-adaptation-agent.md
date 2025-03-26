@@ -459,3 +459,23 @@ This commit adds comprehensive WordPress integration for A/B testing the Next.js
 
 The integration allows running parallel campaigns pointing to WordPress and Next.js
 versions of the same pages for direct performance comparison.
+
+### URL Routing and Middleware Improvements (2025-03-26)
+
+- **Fixed blog page routing in middleware.ts**:
+  - Updated middleware.ts to properly handle all blog-style URLs with and without the /mx prefix
+  - Added direct path mappings for all blog post routes including guia-tarjeta-de-credito-nu-bank-next
+  - Improved path detection logic for clean URLs in both local and Vercel environments
+  - Resolved 404 errors that were occurring on certain blog pages
+
+- **Created separate metadata components**:
+  - Created dedicated metadata.ts files for blog pages following Next.js best practices
+  - Removed generateMetadata functions from page components to use separate metadata files
+  - Improved SEO by ensuring consistent metadata structure across all pages
+  - Simplified components by separating concerns between content and metadata
+
+- **Enhanced route handling flexibility**:
+  - Implemented more robust route matching patterns to accommodate different URL structures
+  - Added support for both WordPress integration URLs and native Next.js routes
+  - Improved error handling with better fallback mechanisms for missing routes
+  - Created comprehensive testing procedures for verifying route integrity
