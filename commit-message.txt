@@ -1,8 +1,0 @@
-feat: Centralize content management for apply pages
-
-This commit centralizes the content management for the apply pages in the credit-cards section.
-
-- Created content files (apply.content.json, apply-citi-double-cash.content.json) in lib/pages/credit-cards/content/
-- Created type definition files (apply.types.ts, apply-citi-double-cash.types.ts) in lib/pages/credit-cards/types/
-- Updated app/credit-cards/apply/page.tsx to use dynamic content
-- Updated app/credit-cards/apply/citi-double-cash/page.tsx to use dynamic content

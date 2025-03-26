@@ -1,59 +1,8 @@
-Adapt TopFinanzas website for Mexican market: Analytics integration, directory cleanup and page localization
+feat: Centralize content management for apply pages
 
-- Added Google Tag Manager (GTM) integration with Next.js best practices
-- Created UTM parameter persistence system for tracking marketing campaigns
-- Implemented optimized analytics workflow with proper sessionStorage-based tracking
-- Created new Soluciones Financieras category page with proper card listing
-- Added Soluciones Financieras to main navigation and category dropdown
-- Used actual card product images from individual product pages
-- Added comprehensive analytics documentation in lib/documents/analytics-tracking-implementation.md
-- Created detailed codebase analysis document (topfinanzas-pages-mx-codebase-analysis.md)
-- Created wrapper prompt for future adaptations (topfinanzas-pages-mx-wrapper-prompt.md)
-- Translated apply-citi-double-cash.content.json from English to Mexican Spanish
-- Adapted financial terminology for Mexican market (e.g. changed SSN to CURP/RFC)
-- Updated SEO keywords to include Mexico-specific terms
-- Updated "TARJETAS DE CRÉDITO" navigation link in header
-- Fixed header component filter to display "TARJETAS DE CRÉDITO" link
-- Created blog-style URL structure for financial solutions content
-- Implemented Tarjeta Plata Card page with orange-themed styling
-- Created Tarjeta de Crédito Azul BBVA page with blue-themed styling
-- Added proper formatting with plus bullet points and white background
-- Ensured responsive layout with proper header and footer components
-- Updated the compact footer to match the WordPress version exactly
-- Added copyright text with correct uppercase styling and spacing
-- Standardized styling of Nu Bank and Plata Card pages to match BBVA Azul template
-- Updated text sizes line heights and bullet point styles for consistency
-- Replaced Footer with CompactFooter component for blog-style pages
-- Improved text contrast and readability with optimized font weights
-- Fixed BBVA branding colors to use correct corporate blue (#004C9E, #1464a5) instead of purple
-- Added missing images from WordPress site (BBVA card images, Nu Bank card, call-to-action banner)
-- Re-enabled ad components that were previously commented out in BBVA Azul pages
-- Fixed metadata formatting issues for better SEO performance
-- Created Recomendador de Tarjetas de Crédito page to match WordPress version
-- Fixed client-side rendering issue by adding "use client" directive
-- Implemented interactive FAQ accordion with proper styling
-- Added BBVA card recommendation box with star rating
-- Created proper metadata.ts file for SEO optimization
-- Fixed button text and arrow icon alignment in Recomendador page to ensure they appear on one line
-- Removed `/app/credit-cards/` directory and subdirectories from American project
-- Created documentation tracking directory structure changes in `/lib/documents/directory-structure-changes.md`
-- Translated legal page directories from English to Spanish:
-  - `/app/privacy-policy/` → `/app/politica-de-privacidad/`
-  - `/app/terms/` → `/app/terminos/`
-- Translated content in legal page files, including metadata and error messages
-- Updated documentation files to reflect directory changes:
-  - `/app/README.md`
-  - `/README.md`
-  - `/blog-functionality-report.md`
-  - `/IMPLEMENTATION.md`
-- Translated sidebar component text strings to Spanish
-- Added SidebarAd component that uses BBVA Azul card banner image
-- Created specialized sidebar components for blog layout:
-  - SidebarRecentArticles: Shows recent posts in Spanish
-  - SidebarCategories: Lists categories with Spanish names
-  - SidebarNewsletter: Subscription form with Spanish text
-- Updated BlogLayout component to use new sidebar components with Spanish content
+This commit centralizes the content management for the apply pages in the credit-cards section.
 
-This commit is part of the larger effort to adapt the TopFinanzas website for the
-Mexican market, focusing on content translation, navigation updates, and blog-style content pages
-with consistent styling across card offerings.
+- Created content files (apply.content.json, apply-citi-double-cash.content.json) in lib/pages/credit-cards/content/
+- Created type definition files (apply.types.ts, apply-citi-double-cash.types.ts) in lib/pages/credit-cards/types/
+- Updated app/credit-cards/apply/page.tsx to use dynamic content
+- Updated app/credit-cards/apply/citi-double-cash/page.tsx to use dynamic content
