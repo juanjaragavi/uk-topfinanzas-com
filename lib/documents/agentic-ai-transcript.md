@@ -1,11 +1,12 @@
-Mar 18, 2025 | Revisión Plantillas TOP \- Agentic AI  
-**Invited Guests**: Francis Lock, juan.jaramillo@topnetworks.co, sebastian.ramirez@digital57.co, francis.lock@topnetworks.co, juan.hoyos@topnetworks.co, Juan Hoyos, manuel.sanchez@digital57.co  
+# Mar 18, 2025 | Revisión Plantillas TOP \- Agentic AI
+
+**Invited Guests**: Francis Lock, <juan.jaramillo@topnetworks.co>, <sebastian.ramirez@digital57.co>, <francis.lock@topnetworks.co>, <juan.hoyos@topnetworks.co>, Juan Hoyos, <manuel.sanchez@digital57.co>  
 [Live Notes](https://docs.google.com/document/d/1c9uV9b14OXaW0UUNOSJ1KDgwwZ_qz5795DS_cWMdZA8) | [Read Meeting Report](https://app.read.ai/analytics/meetings/01JPMW6X4AKBQYW054VYBJ1Z76)
 
 ————————
 
 **Live Transcript**  
- (11:49 AM):   
+ (11:49 AM):
 **Juan Hoyos** (11:47 AM): porque no presionas por eso. Bueno. y armando eso.  
 **Francis Lock** (11:46 AM): No, hemos vuelto a hablar con él. A mí le iba a hablar con él, pero no sé si al fin habló con él. Pero no creo que sea verdad.  
 **Juan Hoyos** (11:46 AM): Bueno, pues ahí les dejo ese trompo en la uña. en cuenta, y no sé si hemos podido hablar. con el otro mano. A ver si hay alguna… consideración al respecto. la conversión hasta el anuncio.  
@@ -2505,4 +2506,3 @@ Mar 18, 2025 | Revisión Plantillas TOP \- Agentic AI
 **Juan Miguel Jaramillo Gaviria** (10:00 AM): Hello, partner. Good, good. And you?  
 **Francis Lock** (10:00 AM): Hello Francis, how are you? How are you?  
 **UNKNOWN\_SPEAKER** (09:59 AM): Oh.
-
