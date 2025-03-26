@@ -1,6 +1,7 @@
 import type React from "react";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { Suspense } from "react";
 import "./globals.css";
 import GoogleTagManager, {
   GoogleTagManagerNoScript,
@@ -44,7 +45,9 @@ export default function RootLayout({
       </head>
       <body className={`${poppins.variable} font-sans`}>
         <GoogleTagManagerNoScript />
-        <UtmPersister />
+        <Suspense fallback={null}>
+          <UtmPersister />
+        </Suspense>
         {children}
       </body>
     </html>
