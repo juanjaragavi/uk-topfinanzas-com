@@ -1,83 +1,83 @@
-# Content Directory
+# Directorio de Contenido
 
-This directory contains the content for the Top Finanzas website, organized by type.
+Este directorio contiene el contenido para el sitio web Top Finanzas, organizado por tipo.
 
-## Blog Content (`/blog`)
+## Contenido del Blog (`/blog`)
 
-The `/blog` directory contains MDX files for blog posts. Each file represents a single blog post.
+El directorio `/blog` contiene archivos MDX para entradas de blog. Cada archivo representa una entrada de blog individual.
 
-### Blog Post Format
+### Formato de Entrada de Blog
 
-Blog posts are written in MDX format, which combines Markdown with JSX (React components). Each blog post should have the following structure:
+Las entradas de blog están escritas en formato MDX, que combina Markdown con JSX (componentes de React). Cada entrada de blog debe tener la siguiente estructura:
 
 ```mdx
 ---
-title: "Post Title"
-date: "Month Day, Year"
-author: "Author Name"
-authorImage: "URL to author image"
-readingTime: "X minute read"
+title: "Título de la Entrada"
+date: "Día de Mes, Año"
+author: "Nombre del Autor"
+authorImage: "URL de la imagen del autor"
+readingTime: "X minutos de lectura"
 categories:
-  - name: "Category Name"
-    slug: "category-slug"
-featuredImage: "URL to featured image"
-excerpt: "A brief summary of the post for previews and SEO"
+  - name: "Nombre de la Categoría"
+    slug: "slug-de-categoria"
+featuredImage: "URL de la imagen destacada"
+excerpt: "Un breve resumen de la entrada para vistas previas y SEO"
 ---
 
-# Post content starts here
+# El contenido de la entrada comienza aquí
 
-Your blog post content in Markdown format with optional JSX components.
+El contenido de tu entrada de blog en formato Markdown con componentes JSX opcionales.
 
-## H2 Heading
+## Encabezado H2
 
-### H3 Heading
+### Encabezado H3
 
-- List items
-- Another item
+- Elementos de lista
+- Otro elemento
 
-[Links](https://example.com)
+[Enlaces](https://ejemplo.com)
 
-![Image Alt Text](image-url.jpg)
+![Texto Alternativo de Imagen](url-imagen.jpg)
 
-And so on...
+Y así sucesivamente...
 
 ```
 
-### Frontmatter Fields
+### Campos de Frontmatter
 
-The frontmatter section (between the `---` markers) contains metadata about the post:
+La sección frontmatter (entre los marcadores `---`) contiene metadatos sobre la entrada:
 
-- **title**: The post title (required)
-- **date**: Publication date in "Month Day, Year" format (required)
-- **author**: Author name (required)
-- **authorImage**: URL to author's profile image (required)
-- **readingTime**: Estimated reading time, e.g., "6 minute read" (required)
-- **categories**: Array of category objects, each with `name` and `slug` (required)
-- **featuredImage**: URL to featured image (required)
-- **excerpt**: Brief summary of the post (required)
-- **views**: View count (optional, defaults to 0)
-- **commentCount**: Comment count (optional, defaults to 0)
+- **title**: Título de la entrada (requerido)
+- **date**: Fecha de publicación en formato "Día de Mes, Año" (requerido)
+- **author**: Nombre del autor (requerido)
+- **authorImage**: URL a la imagen de perfil del autor (requerido)
+- **readingTime**: Tiempo estimado de lectura, ej., "6 minutos de lectura" (requerido)
+- **categories**: Array de objetos de categoría, cada uno con `name` y `slug` (requerido)
+- **featuredImage**: URL a la imagen destacada (requerido)
+- **excerpt**: Breve resumen de la entrada (requerido)
+- **views**: Conteo de vistas (opcional, por defecto es 0)
+- **commentCount**: Conteo de comentarios (opcional, por defecto es 0)
 
-### Images
+### Imágenes
 
-For images in blog posts, use the following format:
+Para imágenes en entradas de blog, usa el siguiente formato:
 
 ```mdx
-![Alt text](https://media.topfinanzas.com/images/generated/TIMESTAMP/sample_0.jpg)
+![Texto alternativo](https://media.topfinanzas.com/images/generated/TIMESTAMP/sample_0.jpg)
 ```
 
-Replace `TIMESTAMP` with the appropriate timestamp identifier.
+Reemplaza `TIMESTAMP` con el identificador de marca de tiempo apropiado.
 
-## Adding New Blog Posts
+## Añadir Nuevas Entradas de Blog
 
-To add a new blog post:
+Para añadir una nueva entrada de blog:
 
-1. Create a new MDX file in the `/blog` directory
-2. Name it using kebab-case based on the post title (e.g., `your-first-paycheck.mdx`)
-3. Include all required frontmatter fields
-4. Write your post content in MDX format
-5. The post will be automatically available at `/blog/post/[filename-without-extension]`
+1. Crea un nuevo archivo MDX en el directorio `/blog`
+2. Nómbralo usando kebab-case basado en el título de la entrada (ej., `tu-primer-sueldo.mdx`)
+3. Incluye todos los campos de frontmatter requeridos
+4. Escribe el contenido de tu entrada en formato MDX
+5. La entrada estará automáticamente disponible en `/blog/post/[nombre-del-archivo-sin-extensión]`
 
-## WordPress Import
+## Importación desde WordPress
 
-The `lib/documents/TopFinance_WordPress_Export_Mar_15_2025.xml` file contains exported WordPress posts that can be converted to MDX format. Future tools may be developed to automate this conversion process.
+El archivo `lib/documents/TopFinance_WordPress_Export_Mar_15_2025.xml` contiene entradas de WordPress exportadas que pueden ser convertidas a formato MDX. Herramientas futuras podrían desarrollarse para automatizar este proceso de conversión.

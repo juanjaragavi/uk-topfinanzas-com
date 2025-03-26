@@ -1,48 +1,48 @@
-# Legal Content Directory
+# Directorio de Contenido Legal
 
-This directory contains legal documents for the Top Finanzas website in MDX format.
+Este directorio contiene documentos legales para el sitio web Top Finanzas en formato MDX.
 
-## Files
+## Archivos
 
-- `privacy-policy.mdx` - Privacy Policy document
-- `terms-conditions.mdx` - Terms and Conditions document
+- `privacy-policy.mdx` - Documento de Política de Privacidad
+- `terms-conditions.mdx` - Documento de Términos y Condiciones
 
-## Content Format
+## Formato de Contenido
 
-Each legal document is written in MDX format with frontmatter metadata:
+Cada documento legal está escrito en formato MDX con metadatos de frontmatter:
 
 ```mdx
 ---
-title: "Document Title"
-effectiveDate: "Date when the policy/terms came into effect"
-lastUpdated: "Date when the document was last updated"
+title: "Título del Documento"
+effectiveDate: "Fecha en que la política/términos entraron en vigor"
+lastUpdated: "Fecha en que el documento fue actualizado por última vez"
 ---
 
-# Main Content
+# Contenido Principal
 
-Document content in Markdown format...
+Contenido del documento en formato Markdown...
 ```
 
-## Updating Legal Documents
+## Actualización de Documentos Legales
 
-When updating legal documents:
+Al actualizar documentos legales:
 
-1. Update the `lastUpdated` field in the frontmatter
-2. Make necessary changes to the document content
-3. Consider adding a "Change Log" section if making significant changes
+1. Actualiza el campo `lastUpdated` en el frontmatter
+2. Realiza los cambios necesarios al contenido del documento
+3. Considera añadir una sección de "Registro de Cambios" si haces cambios significativos
 
-## Pages
+## Páginas
 
-These MDX files are rendered at the following routes:
+Estos archivos MDX se renderizan en las siguientes rutas:
 
-- Privacy Policy: `/privacy-policy`
-- Terms & Conditions: `/terms`
+- Política de Privacidad: `/politica-de-privacidad`
+- Términos y Condiciones: `/terminos`
 
-The rendering is handled by:
+El renderizado es gestionado por:
 
-- `app/privacy-policy/page.tsx`
-- `app/terms/page.tsx`
+- `app/politica-de-privacidad/page.tsx`
+- `app/terminos/page.tsx`
 
-## Navigation
+## Navegación
 
-The links to these pages are defined in `lib/navigation/footerNavigation.ts` under the `legalLinks` array.
+Los enlaces a estas páginas están definidos en `lib/navigation/footerNavigation.ts` bajo el array `legalLinks`.
