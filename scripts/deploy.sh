@@ -6,7 +6,7 @@
 
 # Configuration
 LOG_FILE="/var/log/topfinanzas-rebuilds.log"
-PROJECT_DIR="/var/www/topfinanzas-pages"
+PROJECT_DIR="/var/www/html/mx/topfinanzas-pages-mx"
 CONTENT_DIR="${PROJECT_DIR}/lib/pages/credit-cards/content"
 BACKUP_DIR="${PROJECT_DIR}/lib/pages/backups/$(date +%Y%m%d_%H%M%S)"
 UPDATE_TYPE="${1:-full}" # Default to full update if not specified
@@ -135,13 +135,13 @@ if [ $? -eq 0 ]; then
 
     # Update application - restart PM2 service
     log_message "INFO" "Restarting application service"
-    sudo pm2 restart topfinanzas-pages
+    sudo pm2 restart topfinanzas-next
 
     # Wait for service to restart
     sleep 3
 
     # Check if service is running properly
-    sudo pm2 show topfinanzas-pages | grep -q "online"
+    sudo pm2 show topfinanzas-next | grep -q "online"
 
     if [ $? -eq 0 ]; then
         # Save PM2 configuration
