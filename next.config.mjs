@@ -14,14 +14,9 @@ const nextConfig = {
   },
   // Output configuration for standalone mode
   output: "standalone",
-  // Set the correct asset prefix for WordPress integration
-  assetPrefix:
-    process.env.NODE_ENV === "production"
-      ? "/mx/topfinanzas-pages-mx"
-      : undefined,
-  // Enable production base path for subpath integration
-  basePath:
-    process.env.NODE_ENV === "production" ? "/mx/topfinanzas-pages-mx" : "",
+  // Asset prefix and base path for Vercel deployment
+  assetPrefix: undefined,
+  basePath: "",
   images: {
     unoptimized: true,
     dangerouslyAllowSVG: true,

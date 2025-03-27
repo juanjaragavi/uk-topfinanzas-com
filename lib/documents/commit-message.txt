@@ -1,12 +1,10 @@
-fix: Add missing blog page routes and fix middleware path mapping for Vercel deployments
+fix: Simplify deployment configuration for Vercel
 
-This commit resolves 404 errors for blog-style pages:
+This commit removes the complex middleware rewriting and WordPress integration:
 
-- Updated middleware.ts to properly handle all blog-style URLs with and without /mx prefix
-- Added direct path mappings for all blog post routes including guia-tarjeta-de-credito-nu-bank-next
-- Created separate metadata.ts file for the Nu Bank guide page to follow Next.js best practices
-- Removed generateMetadata function from page component to use the separate metadata file
-- Fixed Vercel deployment by improving middleware to handle Vercel environment
-- Added special matcher pattern for Vercel deployments to catch all content routes
-- Added specific detection for Vercel environment using process.env.VERCEL
-- Improved path detection logic for clean URLs in both local and Vercel environments
+- Removed middleware path mappings and rewriting logic
+- Simplified middleware.ts to just pass through all requests
+- Removed basePath and assetPrefix configurations from next.config.mjs
+- Eliminated all /mx/ subdirectory references to simplify deployment
+- Created a direct routing approach that works consistently on Vercel
+- Fixed 404 errors by eliminating path translation complexity
