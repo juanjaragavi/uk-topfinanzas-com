@@ -1,10 +1,13 @@
-fix: Simplify deployment configuration for Vercel
+chore: Clean up deployment files and simplify configuration
 
-This commit removes the complex middleware rewriting and WordPress integration:
+This commit includes several cleanup actions:
 
-- Removed middleware path mappings and rewriting logic
-- Simplified middleware.ts to just pass through all requests
-- Removed basePath and assetPrefix configurations from next.config.mjs
-- Eliminated all /mx/ subdirectory references to simplify deployment
-- Created a direct routing approach that works consistently on Vercel
-- Fixed 404 errors by eliminating path translation complexity
+- Removed all backup configuration files including next.config.mjs.bak
+- Removed unused Git commit message templates
+- Removed legacy script merge_dev_to_stable.sh
+- Removed ts-pages-sa.json configuration file
+- Simplified deployment process with streamlined middleware
+- Enhanced Vercel deployment stability with cleaner configuration
+
+These changes improve maintainability by removing redundant files and
+simplifying the deployment process across all environments.

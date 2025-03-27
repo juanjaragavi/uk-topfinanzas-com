@@ -1,6 +1,0 @@
-Update legal page navigation links to Spanish routes
-
-- Changed link for "Términos y Condiciones" from "/terms" to "/terminos"
-- Changed link for "Política de Privacidad" from "/privacy-policy" to "/politica-de-privacidad"
-- Updated footerNavigation.ts to reflect the new Spanish directory structure
-- These changes ensure that the navigation links point to the new Spanish paths
