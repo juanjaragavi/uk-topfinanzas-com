@@ -51,6 +51,7 @@ export function middleware(request: NextRequest) {
   // Detect if we're in WordPress integration or direct Vercel access
   // WordPress integration will have URLs like /mx/topfinanzas-pages-mx/...
   const isWordPressIntegration = pathname.includes("/mx/topfinanzas-pages-mx");
+  const isVercel = process.env.VERCEL === "1";
 
   // Handle direct access to blog-style URLs with -next suffix
   // Clean the pathname for checking against our mappings
@@ -62,6 +63,9 @@ export function middleware(request: NextRequest) {
   } else if (pathname.startsWith("/mx")) {
     // For direct access through Apache, remove just the /mx prefix
     cleanPathname = pathname.slice(3);
+  } else if (isVercel) {
+    // For Vercel deployments, use the pathname as is
+    cleanPathname = pathname;
   }
 
   // Find a matching path in our mappings
@@ -93,6 +97,8 @@ export function middleware(request: NextRequest) {
 // Configure which paths the middleware should run on
 export const config = {
   matcher: [
+    // Run on all paths for Vercel deployments
+    "/((?!api|_next/static|_next/image|favicon.ico).*)",
     // Run on blog-style routes
     "/recomendador-de-tarjetas-de-credito-p1-next",
     "/soluciones-financieras/:path*",
