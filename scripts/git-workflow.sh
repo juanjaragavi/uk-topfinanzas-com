@@ -8,7 +8,7 @@ set -u
 # Define branch names
 DEV_BRANCH="dev"
 MAIN_BRANCH="main"
-BACKUP_BRANCH="master"
+BACKUP_BRANCH="backup"
 
 # Generic Git workflow script for TopFinanzas Pages MX
 # This script automates common Git operations for deployment
