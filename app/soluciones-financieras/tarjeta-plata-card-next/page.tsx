@@ -7,16 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 
-export function generateMetadata() {
-  return {
-    title: "Tarjeta Plata Card: maximiza cada compra - TopFinanzas México",
-    description:
-      "La Tarjeta de Crédito Plata te ayuda a maximizar tus compras con beneficios únicos y flexibles.",
-    keywords:
-      "Tarjeta Plata Card, cashback, tarjeta de crédito, México, límite de crédito, sin intereses, beneficios financieros",
-  };
-}
-
 export default function TarjetaPlataCardPage() {
   return (
     <main className="min-h-screen flex flex-col">
