@@ -36,7 +36,7 @@ export default function NuBankCreditCardPage() {
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-purple-700 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
@@ -46,7 +46,7 @@ export default function NuBankCreditCardPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-purple-700 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
@@ -57,7 +57,7 @@ export default function NuBankCreditCardPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-purple-600 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-purple-700 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">

@@ -24,7 +24,7 @@ export default function VisaSignatureUSCurrentCreditCardBenefitsPage() {
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-blue-600 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-gray-900 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
@@ -34,7 +34,7 @@ export default function VisaSignatureUSCurrentCreditCardBenefitsPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-blue-600 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-gray-900 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
@@ -44,7 +44,7 @@ export default function VisaSignatureUSCurrentCreditCardBenefitsPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-blue-600 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-gray-900 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
@@ -70,7 +70,7 @@ export default function VisaSignatureUSCurrentCreditCardBenefitsPage() {
 
               <div className="text-center my-8">
                 <Link href="/financial-solutions/visa-signature-us-current-build-requirements">
-                  <Button className="bg-blue-600 hover:bg-blue-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
+                  <Button className="bg-gray-900 hover:bg-gray-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                     View Requirements
                   </Button>
                 </Link>
@@ -205,7 +205,7 @@ export default function VisaSignatureUSCurrentCreditCardBenefitsPage() {
 
                 <div className="text-center my-8">
                   <Link href="/financial-solutions/visa-signature-us-current-build-requirements">
-                    <Button className="bg-blue-600 hover:bg-blue-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
+                    <Button className="bg-gray-900 hover:bg-gray-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       View Requirements
                     </Button>
                   </Link>

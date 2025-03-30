@@ -26,7 +26,7 @@ export default function CapitalOneQuicksilverStudentCreditCardRequirementsPage()
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-blue-600 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-red-800 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
@@ -38,7 +38,7 @@ export default function CapitalOneQuicksilverStudentCreditCardRequirementsPage()
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-blue-600 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-red-800 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
@@ -50,7 +50,7 @@ export default function CapitalOneQuicksilverStudentCreditCardRequirementsPage()
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-blue-600 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-red-800 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
@@ -60,7 +60,7 @@ export default function CapitalOneQuicksilverStudentCreditCardRequirementsPage()
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-blue-600 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-red-800 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">

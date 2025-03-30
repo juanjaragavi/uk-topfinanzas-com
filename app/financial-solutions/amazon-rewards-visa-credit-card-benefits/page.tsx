@@ -24,7 +24,7 @@ export default function AmazonRewardsVisaCreditCardBenefitsPage() {
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-blue-900 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
@@ -36,7 +36,7 @@ export default function AmazonRewardsVisaCreditCardBenefitsPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-blue-900 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
@@ -48,7 +48,7 @@ export default function AmazonRewardsVisaCreditCardBenefitsPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-blue-900 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
@@ -58,7 +58,7 @@ export default function AmazonRewardsVisaCreditCardBenefitsPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-orange-500 flex items-center justify-center mr-3 mt-0.5">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-blue-900 flex items-center justify-center mr-3 mt-0.5">
                     <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-sm leading-5">
@@ -69,7 +69,7 @@ export default function AmazonRewardsVisaCreditCardBenefitsPage() {
 
               <div className="text-center my-8">
                 <Link href="/financial-solutions/amazon-rewards-visa-credit-card-requirements">
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-white font-medium text-md py-2 px-8 rounded-full w-full">
+                  <Button className="bg-blue-900 hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                     View Requirements
                   </Button>
                 </Link>
@@ -196,7 +196,7 @@ export default function AmazonRewardsVisaCreditCardBenefitsPage() {
 
                 <div className="text-center my-8">
                   <Link href="/financial-solutions/amazon-rewards-visa-credit-card-requirements">
-                    <Button className="bg-orange-500 hover:bg-orange-600 text-white font-medium text-md py-2 px-8 rounded-full w-full">
+                    <Button className="bg-blue-900 hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       View Requirements
                     </Button>
                   </Link>
