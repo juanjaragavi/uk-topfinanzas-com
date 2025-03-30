@@ -72,7 +72,7 @@ export default function Step3({
       return false;
     }
 
-    // Regex para validar el formato básico de correo electrónico
+    // Basic email format validation regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       setErrors((prev) => ({
@@ -82,10 +82,10 @@ export default function Step3({
       return false;
     }
 
-    // Validar dominios comunes en México
+    // Check for incomplete domains
     const domainPart = email.split("@")[1]?.toLowerCase();
     if (domainPart) {
-      // Validar dominios que parecen incompletos o inválidos
+      // Check for domains that appear incomplete or invalid
       if (domainPart.split(".").length < 2 || domainPart.endsWith(".")) {
         setErrors((prev) => ({
           ...prev,
@@ -173,11 +173,16 @@ export default function Step3({
       return false;
     }
 
-    // Mexican phone numbers should be 10 digits
-    // This regex checks for 10 consecutive digits
-    const mexicanPhoneRegex = /^\d{10}$/;
+    // UK mobile numbers are 11 digits, typically starting with '07'
+    const ukPhoneRegex = /^07\d{9}$/;
 
-    if (!mexicanPhoneRegex.test(phoneNumber)) {
+    // Alternative format with spaces or dashes
+    const ukPhoneRegexAlt = /^(07[0-9]{3})[- ]?([0-9]{6})$/;
+
+    // Remove any spaces or dashes for validation
+    const cleanPhone = phoneNumber.replace(/[- ]/g, "");
+
+    if (!ukPhoneRegex.test(cleanPhone) && !ukPhoneRegexAlt.test(phoneNumber)) {
       setErrors((prev) => ({
         ...prev,
         phone: step3Texts.validationErrors.phoneFormat,
@@ -185,36 +190,12 @@ export default function Step3({
       return false;
     }
 
-    // Check for common Mexican LADA (area) codes
-    // First 2-3 digits of mobile numbers often start with these
-    const firstThreeDigits = phoneNumber.substring(0, 3);
-    const validLadaCodes = [
-      // Mobile prefixes
-      "55",
-      "56",
-      "33",
-      "81",
-      "44",
-      "45",
-      "55",
-      "56",
-      "222",
-      "221",
-      "442",
-      "477",
-      "664",
-      "998",
-      "999",
-    ];
-
-    const firstTwoDigits = phoneNumber.substring(0, 2);
-    if (
-      !validLadaCodes.includes(firstThreeDigits) &&
-      !validLadaCodes.includes(firstTwoDigits)
-    ) {
+    // Check that it starts with valid UK mobile prefix (07)
+    const firstTwoDigits = cleanPhone.substring(0, 2);
+    if (firstTwoDigits !== "07") {
       setErrors((prev) => ({
         ...prev,
-        phone: step3Texts.validationErrors.phoneLada,
+        phone: step3Texts.validationErrors.phonePrefix,
       }));
       return false;
     }
@@ -224,13 +205,13 @@ export default function Step3({
   };
 
   const validateForm = (): boolean => {
-    // Validar todos los campos
+    // Validate all fields
     const isEmailValid = validateEmail(email);
     const isNameValid = validateName(name);
     const isLastNameValid = validateLastName(lastName);
     const isPhoneValid = validatePhone(phone);
 
-    // Si no está marcado el checkbox de recibir mensajes
+    // Check terms checkbox
     if (!receiveMessages) {
       setErrors((prev) => ({
         ...prev,
@@ -253,7 +234,7 @@ export default function Step3({
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Validar todo el formulario
+    // Validate the entire form
     if (validateForm()) {
       onSubmit();
     }
@@ -295,7 +276,7 @@ export default function Step3({
                 ? "border-red-500 focus-visible:ring-red-500"
                 : "border-[#2E74B5] focus-visible:ring-[#8DC63F]"
             }`}
-            placeholder="ejemplo@correo.com"
+            placeholder={step3Strings.placeholders.email}
             aria-describedby="email-error"
           />
           {errors.email && (
@@ -321,7 +302,7 @@ export default function Step3({
                 ? "border-red-500 focus-visible:ring-red-500"
                 : "border-[#2E74B5] focus-visible:ring-[#8DC63F]"
             }`}
-            placeholder="Tu nombre"
+            placeholder={step3Strings.placeholders.name}
             aria-describedby="name-error"
           />
           {errors.name && (
@@ -333,7 +314,7 @@ export default function Step3({
 
         <div className="space-y-1.5">
           <Label htmlFor="lastName" className="text-sm">
-            Apellido
+            {step3Strings.fields.lastName}
           </Label>
           <Input
             id="lastName"
@@ -352,7 +333,7 @@ export default function Step3({
                 ? "border-red-500 focus-visible:ring-red-500"
                 : "border-[#2E74B5] focus-visible:ring-[#8DC63F]"
             }`}
-            placeholder="Tu apellido"
+            placeholder={step3Strings.placeholders.lastName}
             aria-describedby="lastName-error"
           />
           {errors.lastName && (
@@ -364,7 +345,7 @@ export default function Step3({
 
         <div className="space-y-1.5">
           <Label htmlFor="phone" className="text-sm">
-            Celular
+            {step3Strings.fields.phone}
           </Label>
           <Input
             id="phone"
@@ -383,8 +364,8 @@ export default function Step3({
                 ? "border-red-500 focus-visible:ring-red-500"
                 : "border-[#2E74B5] focus-visible:ring-[#8DC63F]"
             }`}
-            placeholder="10 dígitos (ej. 5512345678)"
-            maxLength={10}
+            placeholder={step3Strings.placeholders.phone}
+            maxLength={11}
             aria-describedby="phone-error"
           />
           {errors.phone && (
@@ -403,11 +384,8 @@ export default function Step3({
           />
           <Label htmlFor="receiveMessages" className="text-xs">
             {step3Strings.checkbox}{" "}
-            <a
-              href="https://topfinanzas.com/mx/politica-privacidad"
-              className="underline"
-            >
-              acá
+            <a href="/terms" className="underline">
+              here
             </a>
           </Label>
         </div>

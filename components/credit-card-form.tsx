@@ -3,6 +3,7 @@
 import type React from "react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
 import Step1 from "./steps/step1";
 import Step2 from "./steps/step2";
 import Step3 from "./steps/step3";
@@ -41,11 +42,13 @@ export default function CreditCardForm() {
     }
   }, [formData, step]);
 
+  const router = useRouter();
+
   const handleSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
     console.log("Form submitted with data:", formData);
-    window.location.href =
-      "https://topfinanzas.com/mx/recomendador-de-tarjetas-de-credito-p1/";
+    // Redirect to UK results page using Next.js router
+    router.push("/credit-card-recommender-p1");
   };
 
   const handleLastNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
