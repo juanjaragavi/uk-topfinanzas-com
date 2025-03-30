@@ -93,7 +93,7 @@ export default function HalifaxWorldEliteMastercardPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/halifax-world-elite-mastercard.jpg"
+                  src="https://media.topfinanzas.com/images/halifax-world-elite-mastercard.webp"
                   alt="Halifax World Elite Mastercard"
                   width={1000}
                   height={563}
