@@ -146,15 +146,14 @@ export const headerNavigation = {
         {
           title: "Amazon Rewards Visa Card Benefits",
           href: "/financial-solutions/amazon-rewards-visa-credit-card-benefits",
-          image: "https://media.topfinanzas.com/images/Amazon1.webp",
+          image: "/images/financial-solutions/amazon-rewards-visa.webp",
           category: "Credit Cards",
           categoryHref: "/financial-solutions",
         },
         {
           title: "Best Personal Loans in the UK",
           href: "/financial-solutions/best-personal-loans",
-          image:
-            "https://media.topfinanzas.com/images/personal-loans-guide.webp",
+          image: "/images/financial-solutions/best-personal-loans.webp",
           category: "Loans",
           categoryHref: "/financial-solutions",
         },

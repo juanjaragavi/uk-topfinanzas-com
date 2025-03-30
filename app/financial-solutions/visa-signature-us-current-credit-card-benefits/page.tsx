@@ -78,7 +78,7 @@ export default function VisaSignatureUSCurrentCreditCardBenefitsPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/visa-signature-card.webp"
+                  src="/images/financial-solutions/visa-signature-card.webp"
                   alt="Visa Signature US Current Credit Card"
                   width={800}
                   height={450}

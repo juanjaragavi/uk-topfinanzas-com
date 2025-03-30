@@ -104,7 +104,7 @@ export default function Home() {
             >
               <div className="relative h-[220px] w-full">
                 <Image
-                  src="https://media.topfinanzas.com/images/Amazon1.webp"
+                  src="/images/financial-solutions/amazon-rewards-visa.webp"
                   alt="Amazon Rewards Visa Credit Card Benefits"
                   fill
                   style={{ objectFit: "cover" }}
@@ -128,7 +128,7 @@ export default function Home() {
             >
               <div className="relative h-[220px] w-full">
                 <Image
-                  src="https://media.topfinanzas.com/images/visa-signature-card.webp"
+                  src="/images/financial-solutions/visa-signature-card.webp"
                   alt="Visa Signature US Current Credit Card Benefits"
                   fill
                   style={{ objectFit: "cover" }}
@@ -160,7 +160,7 @@ export default function Home() {
               >
                 <div className="relative h-[180px] w-full">
                   <Image
-                    src="https://media.topfinanzas.com/images/personal-loans-guide.webp"
+                    src="/images/financial-solutions/best-personal-loans.webp"
                     alt="Best Personal Loans in the UK"
                     fill
                     style={{ objectFit: "cover" }}
@@ -186,7 +186,7 @@ export default function Home() {
               >
                 <div className="relative h-[180px] w-full">
                   <Image
-                    src="https://media.topfinanzas.com/images/choosing-online-loan.webp"
+                    src="/images/financial-solutions/choosing-online-loan.jpg"
                     alt="Tips for Choosing an Online Loan"
                     fill
                     style={{ objectFit: "cover" }}
@@ -212,7 +212,7 @@ export default function Home() {
               >
                 <div className="relative h-[180px] w-full">
                   <Image
-                    src="https://media.topfinanzas.com/images/capital-one-quicksilver-student-card.webp"
+                    src="/images/financial-solutions/capital-one-quicksilver.jpg"
                     alt="Capital One Quicksilver Student Credit Card"
                     fill
                     style={{ objectFit: "cover" }}

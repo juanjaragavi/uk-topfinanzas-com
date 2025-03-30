@@ -73,7 +73,7 @@ export default function BestPersonalLoansPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/personal-loans-guide.webp"
+                  src="/images/financial-solutions/best-personal-loans.webp"
                   alt="Personal Loans Guide"
                   width={800}
                   height={450}
