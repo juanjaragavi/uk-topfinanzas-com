@@ -36,7 +36,7 @@ export default function CreditCardRecommenderPage() {
             </p>
 
             <div className="my-8">
-              <Link href="/financial-solutions/nu-bank-credit-card-guide">
+              <Link href="/financial-solutions/barclaycard-avios-plus">
                 <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
                   <div className="flex items-center space-x-1">
                     <span>Accept Recommendation</span>
@@ -95,7 +95,7 @@ export default function CreditCardRecommenderPage() {
             </p>
 
             <div className="mt-6 mb-4">
-              <Link href="/financial-solutions/bbva-blue-credit-card">
+              <Link href="/financial-solutions/halifax-world-elite-mastercard">
                 <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
                   <div className="flex items-center space-x-1">
                     <span>Our Top Recommendation</span>
@@ -110,7 +110,7 @@ export default function CreditCardRecommenderPage() {
             <p className="text-center text-sm mb-6">
               <Link
                 className="text-blue-500"
-                href="/financial-solutions/bbva-blue-credit-card-requirements"
+                href="/financial-solutions/halifax-world-elite-mastercard-requirements"
               >
                 Learn How to Apply
               </Link>
@@ -248,10 +248,10 @@ export default function CreditCardRecommenderPage() {
             </p>
 
             <div className="my-8">
-              <Link href="/financial-solutions/bbva-blue-credit-card">
+              <Link href="/financial-solutions/barclaycard-avios-plus">
                 <Image
                   src="https://media.topfinanzas.com/images/Tobanner-02-1.webp"
-                  alt="Credit Card Recommender"
+                  alt="UK Credit Card Recommender"
                   width={800}
                   height={450}
                   className="w-full h-auto rounded-lg"

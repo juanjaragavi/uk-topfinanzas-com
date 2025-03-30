@@ -30,6 +30,20 @@ type BlogPostsData = {
 // This would typically come from a CMS, database, or file system
 // For this demo, we'll use a hardcoded map of sample blog posts
 const BLOG_POSTS_DATA: BlogPostsData = {
+  "uk-credit-card-guide": {
+    title: "Guide to UK Credit Cards: Finding the Best Option for Your Needs",
+    date: "March 30, 2025",
+    author: "Top Finance",
+    authorImage: "https://media.topfinanzas.com/images/favicon.png",
+    readingTime: "8 minute read",
+    categories: [{ name: "Credit Cards", slug: "credit-cards" }],
+    featuredImage:
+      "https://media.topfinanzas.com/images/uk-credit-cards-guide.jpg",
+    excerpt:
+      "Navigate the UK credit card market with confidence using our comprehensive guide to selecting the best card for your financial situation and lifestyle needs.",
+    views: 423,
+    commentCount: 0,
+  },
   "your-first-paycheck": {
     title: "Your First Paycheck: A Complete Guide to Smart Management",
     date: "February 25, 2025",
