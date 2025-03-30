@@ -37,11 +37,11 @@ export const headerNavigation = {
   /** Main navigation items */
   mainNavItems: [
     {
-      text: "RECOMENDADOR DE TARJETAS",
+      text: "CARD RECOMMENDER",
       href: "/recomendador-de-tarjetas-de-credito-p1-next",
     },
     {
-      text: "SOLUCIONES FINANCIERAS",
+      text: "FINANCIAL SOLUTIONS",
       href: "/soluciones-financieras",
     },
     {
@@ -49,33 +49,33 @@ export const headerNavigation = {
       href: "/blog",
     },
     {
-      text: "SOLICITAR AHORA",
+      text: "APPLY NOW",
       href: "/soluciones-financieras/requisitos-tarjeta-de-credito-azul-bbva-next",
     },
   ],
 
   /** Categories dropdown */
   categoryDropdown: {
-    text: "CATEGORÍAS",
+    text: "CATEGORIES",
     items: [
       {
-        text: "Soluciones Financieras",
+        text: "Financial Solutions",
         href: "/soluciones-financieras",
       },
       {
-        text: "Recomendador de Tarjetas",
+        text: "Card Recommender",
         href: "/recomendador-de-tarjetas-de-credito-p1-next",
       },
       {
-        text: "Comparar Tarjetas",
+        text: "Compare Cards",
         href: "/",
       },
       {
-        text: "Tarjeta Plata Card",
+        text: "Plata Card",
         href: "/soluciones-financieras/tarjeta-plata-card-next",
       },
       {
-        text: "Tarjeta de Crédito Azul BBVA",
+        text: "BBVA Blue Credit Card",
         href: "/soluciones-financieras/tarjeta-de-credito-azul-bbva-next",
       },
     ],
@@ -86,69 +86,69 @@ export const headerNavigation = {
     title: "BLOG",
     columns: [
       {
-        title: "Categorías",
+        title: "Categories",
         items: [
           {
-            text: "Finanzas Personales",
+            text: "Personal Finance",
             href: "/blog/category/personal-finance",
           },
           {
-            text: "Hipotecas",
+            text: "Mortgages",
             href: "/blog/category/mortgages",
           },
           {
-            text: "Tarjetas de Crédito",
+            text: "Credit Cards",
             href: "/blog/category/credit-cards",
           },
           {
-            text: "Inversiones",
+            text: "Investments",
             href: "/blog/category/investing",
           },
           {
-            text: "Presupuestos",
+            text: "Budgeting",
             href: "/blog/category/budgeting",
           },
         ],
       },
       {
-        title: "Temas Populares",
+        title: "Popular Topics",
         items: [
           {
-            text: "Guía de tu Primer Sueldo",
+            text: "Your First Salary Guide",
             href: "/blog/post/your-first-paycheck",
           },
           {
-            text: "Guía de Hipotecas",
+            text: "Mortgage Guide",
             href: "/blog/post/what-is-a-home-mortgage",
           },
           {
-            text: "Explicación de Préstamos en Línea",
+            text: "Online Loans Explained",
             href: "/blog/post/what-are-online-loans",
           },
           {
-            text: "Cómo Elegir Préstamos en Línea",
+            text: "How to Choose Online Loans",
             href: "/blog/post/5-tips-for-choosing-an-online-loan",
           },
         ],
       },
     ],
     featuredPosts: {
-      title: "Artículos Destacados",
+      title: "Featured Articles",
       posts: [
         {
-          title: "Tu Primer Sueldo: Una Guía Completa",
+          title: "Your First Salary: A Complete Guide",
           href: "/blog/post/your-first-paycheck",
           image:
             "https://media.topfinanzas.com/images/generated/1741659352997/sample_0.jpg",
-          category: "Finanzas Personales",
+          category: "Personal Finance",
           categoryHref: "/blog/category/personal-finance",
         },
         {
-          title: "¿Qué es una Hipoteca?",
+          title: "What is a Mortgage?",
           href: "/blog/post/what-is-a-home-mortgage",
           image:
             "https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg",
-          category: "Hipotecas",
+          category: "Mortgages",
           categoryHref: "/blog/category/mortgages",
         },
       ],

@@ -6,23 +6,23 @@
 export const footerContent = {
   /** Section headings */
   headings: {
-    navigate: "Navegar",
-    categories: "Categorías",
-    contact: "Contacto",
+    navigate: "Navigate",
+    categories: "Categories",
+    contact: "Contact",
   },
 
   /** Company information */
   companyInfo: {
     name: "TOP NETWORKS INC",
-    productLabel: "Un Producto de TOP NETWORKS INC.",
+    productLabel: "A Product of TOP NETWORKS INC.",
   },
 
   /** Legal content */
   legal: {
     /** Disclaimer content */
     disclaimer: {
-      label: "Aviso Legal:",
-      text: "TopFinanzas se esfuerza por mantener su información precisa y actualizada. Esta información puede ser diferente a lo que ves cuando visitas la página de una institución financiera, proveedor de servicios o producto específico. Todos los productos financieros, productos comerciales y servicios se presentan sin garantía. Al evaluar ofertas, por favor revisa los Términos y Condiciones de la institución financiera. Las ofertas precalificadas no son vinculantes.",
+      label: "Legal Disclaimer:",
+      text: "TopFinance strives to maintain accurate and up-to-date information. This information may differ from what you see when visiting the website of a financial institution, service provider or specific product. All financial products, commercial products and services are presented without warranty. When evaluating offers, please review the Terms and Conditions of the financial institution. Pre-qualified offers are not binding.",
     },
 
     /** Copyright notice */
@@ -31,7 +31,7 @@ export const footerContent = {
       year: "2025",
     },
     fullCopyright: {
-      text: "TODOS LOS DERECHOS RESERVADOS, ©TOP NETWORKS INC 2025. SE PROHÍBE LA\nREPRODUCCIÓN TOTAL O PARCIAL POR CUALQUIER MEDIO O FORMA SIN LA AUTORIZACIÓN\nPOR ESCRITO Y EXPRESA DEL TITULAR DEL COPYRIGHT.",
+      text: "ALL RIGHTS RESERVED, ©TOP NETWORKS INC 2025. REPRODUCTION IN WHOLE OR IN PART BY ANY MEANS OR FORM WITHOUT WRITTEN AND EXPRESS AUTHORIZATION FROM THE COPYRIGHT HOLDER IS PROHIBITED.",
     },
   },
 

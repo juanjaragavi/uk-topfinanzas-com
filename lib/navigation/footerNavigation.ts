@@ -26,7 +26,7 @@ export const footerNavigation = {
   /** Main navigation section */
   mainNavItems: [
     {
-      text: "Inicio",
+      text: "Home",
       href: "/",
     },
     {
@@ -34,11 +34,11 @@ export const footerNavigation = {
       href: "/blog",
     },
     {
-      text: "Acerca de",
+      text: "About",
       href: "/about",
     },
     {
-      text: "Contáctanos",
+      text: "Contact Us",
       href: "/contact",
     },
   ],
@@ -46,23 +46,23 @@ export const footerNavigation = {
   /** Categories section */
   categoryItems: [
     {
-      text: "Finanzas Personales",
+      text: "Personal Finance",
       href: "/blog/category/personal-finance",
     },
     {
-      text: "Tarjetas de Crédito",
+      text: "Credit Cards",
       href: "/blog/category/credit-cards",
     },
     {
-      text: "Hipotecas",
+      text: "Mortgages",
       href: "/blog/category/mortgages",
     },
     {
-      text: "Inversiones",
+      text: "Investments",
       href: "/blog/category/investing",
     },
     {
-      text: "Presupuestos",
+      text: "Budgeting",
       href: "/blog/category/budgeting",
     },
   ],
@@ -70,30 +70,30 @@ export const footerNavigation = {
   /** Blog posts section */
   blogItems: [
     {
-      text: "Guía de tu Primer Sueldo",
+      text: "Your First Salary Guide",
       href: "/blog/post/your-first-paycheck",
     },
     {
-      text: "Tarjeta Plata Card",
+      text: "Plata Card",
       href: "/soluciones-financieras/tarjeta-plata-card-next",
     },
     {
-      text: "Tarjeta de Crédito Azul BBVA",
+      text: "BBVA Blue Credit Card",
       href: "/soluciones-financieras/tarjeta-de-credito-azul-bbva-next",
     },
     {
-      text: "Guía Tarjeta de Crédito Nu Bank",
+      text: "Nu Bank Credit Card Guide",
       href: "/soluciones-financieras/guia-tarjeta-de-credito-nu-bank-next",
     },
     {
-      text: "Recomendador de Tarjetas",
+      text: "Card Recommender",
       href: "/recomendador-de-tarjetas-de-credito-p1-next",
     },
   ],
 
   /** Social media links */
   socialMedia: {
-    title: "Síguenos en redes sociales",
+    title: "Follow us on social media",
     links: [
       {
         platform: "Instagram",
@@ -116,15 +116,15 @@ export const footerNavigation = {
   contactInfo: [
     {
       type: "email",
-      value: "info@topfinanzas.com",
-      href: "mailto:info@topfinanzas.com",
+      value: "info@topfinance.co.uk",
+      href: "mailto:info@topfinance.co.uk",
       svgPath:
         "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
     },
     {
       type: "address",
       value:
-        "AV. AQUILINO DE LA GUARDIA, OCEAN BUSINESS PLAZA BUILDING, PISO 12, CIUDAD DE PANAMÁ, PANAMÁ",
+        "1 FINSBURY AVENUE, LONDON, EC2M 2PF, UNITED KINGDOM",
       svgPath:
         "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z|M15 11a3 3 0 11-6 0 3 3 0 016 0z",
     },
@@ -133,11 +133,11 @@ export const footerNavigation = {
   /** Legal links */
   legalLinks: [
     {
-      text: "Términos y Condiciones",
+      text: "Terms and Conditions",
       href: "/terminos",
     },
     {
-      text: "Política de Privacidad",
+      text: "Privacy Policy",
       href: "/politica-de-privacidad",
     },
   ],
