@@ -94,7 +94,7 @@ export default function BarclayCardAviosPlusPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus.jpg"
+                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
                   alt="Barclaycard Avios Plus Credit Card"
                   width={1000}
                   height={563}

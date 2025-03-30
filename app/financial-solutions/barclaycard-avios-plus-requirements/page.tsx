@@ -36,7 +36,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus-requirements.jpg"
+                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus-requirements.webp"
                   alt="Barclaycard Avios Plus Credit Card"
                   width={1000}
                   height={563}
@@ -76,18 +76,6 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                       and features.
                     </div>
                   </div>
-                </div>
-
-                <div className="my-6 text-center">
-                  <Link href="/credit-cards">
-                    <Image
-                      src="https://media.topfinanzas.com/images/uk-credit-card-comparison.jpg"
-                      alt="Compare UK credit cards"
-                      width={320}
-                      height={100}
-                      className="mx-auto rounded-lg"
-                    />
-                  </Link>
                 </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
@@ -142,16 +130,15 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="my-6 text-center">
-                  <Link href="/credit-cards">
-                    <Image
-                      src="https://media.topfinanzas.com/images/uk-travel-rewards-cards.jpg"
-                      alt="UK Travel Rewards Credit Cards"
-                      width={320}
-                      height={100}
-                      className="mx-auto rounded-lg"
-                    />
-                  </Link>
+                <div className="my-8">
+                  <Image
+                    src="https://media.topfinanzas.com/images/download-5-2.webp"
+                    alt="Tarjeta de crédito Azul BBVA"
+                    width={1000}
+                    height={563}
+                    className="w-full h-auto rounded-lg"
+                    priority
+                  />
                 </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
@@ -201,18 +188,6 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="my-6 text-center">
-                  <Link href="/credit-cards">
-                    <Image
-                      src="https://media.topfinanzas.com/images/uk-premium-credit-cards.jpg"
-                      alt="UK Premium Credit Cards"
-                      width={320}
-                      height={100}
-                      className="mx-auto rounded-lg"
-                    />
-                  </Link>
-                </div>
-
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
                   Benefits and Features
                 </h2>
@@ -256,18 +231,6 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                       experience on British Airways flights.
                     </div>
                   </div>
-                </div>
-
-                <div className="my-6 text-center">
-                  <Link href="/credit-cards">
-                    <Image
-                      src="https://media.topfinanzas.com/images/uk-avios-rewards.jpg"
-                      alt="UK Avios Rewards"
-                      width={320}
-                      height={100}
-                      className="mx-auto rounded-lg"
-                    />
-                  </Link>
                 </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
