@@ -43,7 +43,7 @@ export const step3Strings = {
     phone: "Mobile",
   },
   checkbox: "I accept the data policy and terms & conditions",
-  button: "VIEW CARD OPTIONS",
+  button: "VIEW MY OPTIONS",
   placeholders: {
     email: "example@email.com",
     name: "Your first name",

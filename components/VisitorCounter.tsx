@@ -11,7 +11,7 @@ export default function VisitorCounter() {
 
   return (
     <span className="text-xs">
-      <span className="font-bold">{count}</span> solicitudes exitosas hoy
+      <span className="font-bold">{count}</span> successful requests today
     </span>
   );
 }
