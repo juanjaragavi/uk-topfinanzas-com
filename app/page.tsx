@@ -71,7 +71,8 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-white">
                   <h2 className="text-white text-xl md:text-2xl font-medium leading-tight">
-                    Your first salary: A complete guide to managing it intelligently
+                    Your first salary: A complete guide to managing it
+                    intelligently
                   </h2>
                   <div className="flex items-center space-x-2 mb-2">
                     <div className="size-5 overflow-hidden bg-blue-600 rounded-full flex items-center justify-center">
