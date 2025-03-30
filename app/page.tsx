@@ -63,7 +63,7 @@ export default function Home() {
             >
               <div className="relative h-[300px] md:h-[350px] w-full">
                 <Image
-                  src="/images/homepage/featured-post.jpg" // Updated image path
+                  src="https://media.topfinanzas.com/images/featured-post.jpg" // Updated image path
                   alt="Your first salary: A complete guide to managing it intelligently"
                   fill
                   style={{ objectFit: "cover" }}
@@ -104,7 +104,7 @@ export default function Home() {
             >
               <div className="relative h-[220px] w-full">
                 <Image
-                  src="/images/homepage/secondary-post-1.jpg" // Updated image path
+                  src="https://media.topfinanzas.com/images/secondary-post-1.jpg" // Updated image path
                   alt="What is a mortgage? Your complete guide"
                   fill
                   style={{ objectFit: "cover" }}
@@ -128,7 +128,7 @@ export default function Home() {
             >
               <div className="relative h-[220px] w-full">
                 <Image
-                  src="/images/homepage/secondary-post-2.jpg" // Updated image path
+                  src="https://media.topfinanzas.com/images/secondary-post-2.jpg" // Updated image path
                   alt="What are online loans?: A key tool in personal finance"
                   fill
                   style={{ objectFit: "cover" }}
