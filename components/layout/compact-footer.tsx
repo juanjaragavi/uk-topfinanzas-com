@@ -25,15 +25,15 @@ export function CompactFooter() {
         {/* Copyright Text Block */}
         <div className="text-center mb-4">
           <p className="text-xs uppercase tracking-wide text-white">
-            DERECHOS RESERVADOS, ©TOP NETWORKS INC 2025. PROHIBIDA SU
-            REPRODUCCIÓN TOTAL O PARCIAL POR CUALQUIER MEDIO O FORMA, SIN LA
-            AUTORIZACIÓN ESCRITA Y EXPRESA DE SU TITULAR.
+            ALL RIGHTS RESERVED, ©TOP NETWORKS INC 2025. REPRODUCTION IN WHOLE
+            OR IN PART BY ANY MEANS OR FORM WITHOUT WRITTEN AND EXPRESS
+            AUTHORIZATION FROM THE COPYRIGHT HOLDER IS PROHIBITED.
           </p>
         </div>
 
         {/* Bottom Links */}
         <div className="mt-20 text-center text-xs text-white">
-          <span className="text-white">Un Producto TOP NETWORKS INC. | </span>
+          <span className="text-white">A Product of TOP NETWORKS INC. | </span>
           <span className="text-white">
             {footerNavigation.legalLinks.map((link, index) => (
               <span className="text-white" key={link.href}>

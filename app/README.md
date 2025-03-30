@@ -1,31 +1,32 @@
 # App Directory
 
-This directory contains the Next.js app router pages and routing structure for the Top Finanzas website. The app directory follows the Next.js app router conventions, where each folder represents a route segment.
+This directory contains the Next.js app router pages and routing structure for the Top Finance website. The app directory follows the Next.js app router conventions, where each folder represents a route segment.
 
 ## Directory Structure
 
 - `/blog` - Blog-related pages
   - `/category/[slug]` - Dynamic category pages
   - `/post/[slug]` - Dynamic blog post pages
-- `/politica-de-privacidad` - Privacy policy page (translated from `/privacy-policy`)
-- `/recomendador-de-tarjetas-de-credito-p1-next` - Card recommendation page (A/B testing variant)
-- `/soluciones-financieras` - Financial solutions content
-  - Various credit card guides and information pages with "-next" suffix
+- `/privacy-policy` - Privacy policy page
+- `/credit-card-recommender-p1` - Card recommendation page
+- `/financial-solutions` - Financial solutions content
+  - Various credit card guides and information pages
 - `/style-guide` - Style guide and reference components
-- `/terminos` - Terms and conditions page (translated from `/terms`)
+- `/terms` - Terms and conditions page
 - `globals.css` - Global CSS styles
 - `layout.tsx` - Root layout component
 - `page.tsx` - Homepage
 
-## Cleanup Updates (March 25, 2025)
+## Cleanup Updates (March 30, 2025)
 
-The following directories have been removed as part of cleanup from the American project:
+The following directories have been renamed as part of the UK localization project:
 
-- `/credit-cards` - Credit card pages
-  - `/apply` - Credit card application pages
-  - `/recommendation` - Card recommendation pages
+- `/politica-de-privacidad` → `/privacy-policy` - Privacy policy page
+- `/recomendador-de-tarjetas-de-credito-p1-next` → `/credit-card-recommender-p1` - Card recommendation page
+- `/soluciones-financieras` → `/financial-solutions` - Financial solutions content
+- `/terminos` → `/terms` - Terms and conditions page
 
-These pages have been replaced with the blog-style URL structure implemented under `/soluciones-financieras/` and `/recomendador-de-tarjetas-de-credito-p1-next/` as described in IMPLEMENTATION.md.
+Additionally, the "-next" suffix has been removed from all page directory names to maintain a cleaner URL structure.
 
 ## Page Types
 

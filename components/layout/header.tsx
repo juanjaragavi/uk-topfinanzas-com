@@ -235,9 +235,9 @@ export function Header() {
                 (item) =>
                   item.text !== "BLOG" &&
                   (item.href === "/" ||
-                    item.href.startsWith("/soluciones-financieras") ||
+                    item.href.startsWith("/financial-solutions") ||
                     item.href.startsWith("/apply") ||
-                    item.href.startsWith("/recomendador") ||
+                    item.href.startsWith("/credit-card-recommender") ||
                     item.href.startsWith("/credit-cards"))
               )
               .map((item) => (
@@ -364,9 +364,9 @@ export function Header() {
                     (item) =>
                       item.text !== "BLOG" &&
                       (item.href === "/" ||
-                        item.href.startsWith("/soluciones-financieras") ||
+                        item.href.startsWith("/financial-solutions") ||
                         item.href.startsWith("/apply") ||
-                        item.href.startsWith("/recomendador") ||
+                        item.href.startsWith("/credit-card-recommender") ||
                         item.href.startsWith("/credit-cards"))
                   )
                   .map((item) => (

@@ -75,19 +75,19 @@ export const footerNavigation = {
     },
     {
       text: "Plata Card",
-      href: "/soluciones-financieras/tarjeta-plata-card-next",
+      href: "/financial-solutions/plata-card",
     },
     {
       text: "BBVA Blue Credit Card",
-      href: "/soluciones-financieras/tarjeta-de-credito-azul-bbva-next",
+      href: "/financial-solutions/bbva-blue-credit-card",
     },
     {
       text: "Nu Bank Credit Card Guide",
-      href: "/soluciones-financieras/guia-tarjeta-de-credito-nu-bank-next",
+      href: "/financial-solutions/nu-bank-credit-card-guide",
     },
     {
       text: "Card Recommender",
-      href: "/recomendador-de-tarjetas-de-credito-p1-next",
+      href: "/credit-card-recommender-p1",
     },
   ],
 
@@ -133,11 +133,11 @@ export const footerNavigation = {
   legalLinks: [
     {
       text: "Terms and Conditions",
-      href: "/terminos",
+      href: "/terms",
     },
     {
       text: "Privacy Policy",
-      href: "/politica-de-privacidad",
+      href: "/privacy-policy",
     },
   ],
 };

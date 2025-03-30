@@ -38,11 +38,11 @@ export const headerNavigation = {
   mainNavItems: [
     {
       text: "CARD RECOMMENDER",
-      href: "/recomendador-de-tarjetas-de-credito-p1-next",
+      href: "/credit-card-recommender-p1",
     },
     {
       text: "FINANCIAL SOLUTIONS",
-      href: "/soluciones-financieras",
+      href: "/financial-solutions",
     },
     {
       text: "BLOG",
@@ -50,7 +50,7 @@ export const headerNavigation = {
     },
     {
       text: "APPLY NOW",
-      href: "/soluciones-financieras/requisitos-tarjeta-de-credito-azul-bbva-next",
+      href: "/financial-solutions/bbva-blue-credit-card-requirements",
     },
   ],
 
@@ -60,11 +60,11 @@ export const headerNavigation = {
     items: [
       {
         text: "Financial Solutions",
-        href: "/soluciones-financieras",
+        href: "/financial-solutions",
       },
       {
         text: "Card Recommender",
-        href: "/recomendador-de-tarjetas-de-credito-p1-next",
+        href: "/credit-card-recommender-p1",
       },
       {
         text: "Compare Cards",
@@ -72,11 +72,11 @@ export const headerNavigation = {
       },
       {
         text: "Plata Card",
-        href: "/soluciones-financieras/tarjeta-plata-card-next",
+        href: "/financial-solutions/plata-card",
       },
       {
         text: "BBVA Blue Credit Card",
-        href: "/soluciones-financieras/tarjeta-de-credito-azul-bbva-next",
+        href: "/financial-solutions/bbva-blue-credit-card",
       },
     ],
   },
