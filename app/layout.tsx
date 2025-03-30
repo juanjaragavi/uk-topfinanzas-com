@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "Find the perfect credit card tailored to your needs with expert recommendations from TopFinance.",
   keywords:
     "credit cards, credit card comparison, cashback, rewards, TopFinance, UK",
-  generator: "v0.dev",
+  generator: "topfinanzas.com",
 };
 
 export default function RootLayout({
