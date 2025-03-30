@@ -77,7 +77,7 @@ export default function AmazonRewardsVisaCreditCardBenefitsPage() {
 
               <div className="my-8">
                 <Image
-                  src="/images/financial-solutions/amazon-rewards-visa.webp"
+                  src="https://media.topfinanzas.com/images/amazon-rewards-visa.webp"
                   alt="Amazon Rewards Visa Credit Card"
                   width={800}
                   height={450}

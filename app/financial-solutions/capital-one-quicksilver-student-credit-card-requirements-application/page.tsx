@@ -72,7 +72,7 @@ export default function CapitalOneQuicksilverStudentCreditCardRequirementsPage()
 
               <div className="my-8">
                 <Image
-                  src="/images/financial-solutions/capital-one-quicksilver.jpg"
+                  src="https://media.topfinanzas.com/images/capital-one-quicksilver.jpg"
                   alt="Capital One Quicksilver Student Credit Card"
                   width={800}
                   height={450}
