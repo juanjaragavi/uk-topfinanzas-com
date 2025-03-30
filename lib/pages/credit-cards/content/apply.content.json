@@ -1,18 +1,18 @@
 {
     "metadata": {
-        "title": "Solicitar una Tarjeta de Crédito - TopFinanzas",
-        "description": "Solicita una tarjeta de crédito en línea. Proceso de solicitud rápido y seguro con aprobación rápida.",
-        "keywords": "solicitud de tarjeta de crédito, solicitar tarjeta de crédito, solicitud en línea, TopFinanzas, México"
+        "title": "Apply for a Credit Card - TopFinanzas",
+        "description": "Apply for a credit card online. Fast and secure application process with quick approval.",
+        "keywords": "credit card application, apply for credit card, online application, TopFinanzas, UK"
     },
     "hero": {
-        "title": "Solicitud de Tarjeta de Crédito",
-        "description": "Completa el formulario a continuación para solicitar tu tarjeta de crédito seleccionada. Tu información está segura y solo se utilizará para procesar tu solicitud."
+        "title": "Credit Card Application",
+        "description": "Complete the form below to apply for your selected credit card. Your information is secure and will only be used to process your application."
     },
-    "whyChooseTitle": "¿Por Qué Elegir TopFinanzas?",
+    "whyChooseTitle": "Why Choose TopFinanzas?",
     "benefits": [
-        "Proceso de solicitud seguro",
-        "Decisiones de aprobación rápidas",
-        "Sin impacto en tu puntaje crediticio al verificar tarifas",
-        "Soporte experto durante todo el proceso"
+        "Secure application process",
+        "Quick approval decisions",
+        "No impact on your credit score when checking rates",
+        "Expert support throughout the process"
     ]
 }
