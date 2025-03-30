@@ -117,8 +117,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                           href="/blog/post/what-are-online-loans"
                           className="text-sm font-medium hover:underline"
                         >
-                          What Are Online Loans? A Key Tool in Personal
-                          Finance
+                          What Are Online Loans? A Key Tool in Personal Finance
                         </Link>
                         <p className="text-xs text-gray-500">
                           25 February, 2025

@@ -54,9 +54,9 @@ export default function FinancialSolutionsPage() {
     <div>
       <h1 className="text-4xl font-bold mb-6">Financial Solutions</h1>
       <p className="text-lg text-gray-700 mb-8">
-        Find detailed information about the best credit cards
-        available in the UK, requirements for applying, and comprehensive guides
-        to help you choose the best option based on your financial needs.
+        Find detailed information about the best credit cards available in the
+        UK, requirements for applying, and comprehensive guides to help you
+        choose the best option based on your financial needs.
       </p>
 
       {/* Featured article */}
@@ -81,10 +81,9 @@ export default function FinancialSolutionsPage() {
               Plata Card: The Ideal Option for Your Finances
             </Link>
             <p className="mt-2 text-gray-600">
-              Discover why the Plata Card has become one of
-              the most popular options among those looking for a
-              credit card with excellent benefits and favourable
-              conditions.
+              Discover why the Plata Card has become one of the most popular
+              options among those looking for a credit card with excellent
+              benefits and favourable conditions.
             </p>
             <div className="mt-4">
               <Link
@@ -124,10 +123,10 @@ export default function FinancialSolutionsPage() {
               <p className="mt-2 text-gray-600">{post.description}</p>
               <div className="mt-4">
                 <Link
-                href={`/financial-solutions/${post.slug}`}
-                className="text-blue-600 hover:text-blue-800 font-medium"
-              >
-                Read more →
+                  href={`/financial-solutions/${post.slug}`}
+                  className="text-blue-600 hover:text-blue-800 font-medium"
+                >
+                  Read more →
                 </Link>
               </div>
             </div>
@@ -141,9 +140,8 @@ export default function FinancialSolutionsPage() {
           Looking for the ideal card for you?
         </h2>
         <p className="text-gray-700 mb-6">
-          Use our credit card recommender and find the
-          option that best suits your financial profile and specific
-          needs.
+          Use our credit card recommender and find the option that best suits
+          your financial profile and specific needs.
         </p>
         <Link
           href="/credit-card-recommender-p1"

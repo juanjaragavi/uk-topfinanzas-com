@@ -6,9 +6,9 @@ import { compileMDX } from "next-mdx-remote/rsc";
 import { useMDXComponents } from "@/mdx-components";
 
 export const metadata = {
-  title: "Términos y Condiciones - Top Finance",
+  title: "Terms and Conditions - TopFinance UK",
   description:
-    "Lea los Términos y Condiciones para el uso de los servicios y el sitio web de Top Finance.",
+    "Read the Terms and Conditions for the use of TopFinance UK services and website.",
 };
 
 export default async function TermsPage() {
@@ -17,19 +17,16 @@ export default async function TermsPage() {
     process.cwd(),
     "content/legal/terms-conditions.mdx"
   );
-  let source = "# Términos y Condiciones\n\nContenido no encontrado.";
+  let source = "# Terms and Conditions\n\nContent not found.";
 
   try {
     if (fs.existsSync(filePath)) {
       source = fs.readFileSync(filePath, "utf8");
     }
   } catch (error) {
-    console.error(
-      "Error al cargar el archivo de términos y condiciones:",
-      error
-    );
+    console.error("Error loading terms and conditions file:", error);
     source =
-      "# Error al Cargar el Contenido\n\nLo sentimos, hubo un error al cargar este contenido.";
+      "# Error Loading Content\n\nWe apologise, there was an error loading this content.";
   }
 
   // Compile MDX content, properly handling frontmatter

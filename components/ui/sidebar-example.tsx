@@ -27,7 +27,7 @@ export default function SidebarExample() {
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Implement subscription logic
-    alert("¡Gracias por suscribirte!");
+    alert("Thank you for subscribing!");
   };
 
   return (
@@ -35,7 +35,7 @@ export default function SidebarExample() {
       <div className="flex">
         <Sidebar>
           <SidebarHeader>
-            <SidebarInput placeholder="Buscar..." />
+            <SidebarInput placeholder="Search..." />
           </SidebarHeader>
 
           <SidebarContent>
@@ -47,58 +47,57 @@ export default function SidebarExample() {
               <div className="flex items-center gap-3">
                 <Image
                   src="/images/article-thumbnail-1.jpg"
-                  alt="Artículo sobre finanzas personales"
+                  alt="Article about personal finance"
                   width={50}
                   height={50}
                   className="rounded-md"
                 />
                 <div>
                   <Link
-                    href="/articulo-1"
+                    href="/article-1"
                     className="text-sm font-medium hover:underline"
                   >
-                    Tu Primer Sueldo: Una Guía Completa para Gestión Inteligente
+                    Your First Salary: A Complete Guide to Smart Management
                   </Link>
-                  <p className="text-xs text-gray-500">25 Febrero, 2025</p>
+                  <p className="text-xs text-gray-500">25 February, 2025</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
                 <Image
                   src="/images/article-thumbnail-2.jpg"
-                  alt="Artículo sobre hipotecas"
+                  alt="Article about mortgages"
                   width={50}
                   height={50}
                   className="rounded-md"
                 />
                 <div>
                   <Link
-                    href="/articulo-2"
+                    href="/article-2"
                     className="text-sm font-medium hover:underline"
                   >
-                    ¿Qué Es una Hipoteca? Tu Guía Completa
+                    What Is a Mortgage? Your Complete Guide
                   </Link>
-                  <p className="text-xs text-gray-500">25 Febrero, 2025</p>
+                  <p className="text-xs text-gray-500">25 February, 2025</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
                 <Image
                   src="/images/article-thumbnail-3.jpg"
-                  alt="Artículo sobre préstamos"
+                  alt="Article about loans"
                   width={50}
                   height={50}
                   className="rounded-md"
                 />
                 <div>
                   <Link
-                    href="/articulo-3"
+                    href="/article-3"
                     className="text-sm font-medium hover:underline"
                   >
-                    ¿Qué Son los Préstamos en Línea? Una Herramienta Clave en
-                    Finanzas Personales
+                    What Are Online Loans? A Key Tool in Personal Finance
                   </Link>
-                  <p className="text-xs text-gray-500">25 Febrero, 2025</p>
+                  <p className="text-xs text-gray-500">25 February, 2025</p>
                 </div>
               </div>
             </SidebarRecentArticles>
@@ -109,10 +108,10 @@ export default function SidebarExample() {
             <SidebarCategories>
               <div className="flex items-center justify-between">
                 <Link
-                  href="/finanzas-personales"
+                  href="/personal-finance"
                   className="text-sm hover:underline"
                 >
-                  Finanzas Personales
+                  Personal Finance
                 </Link>
                 <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
                   12
@@ -120,11 +119,8 @@ export default function SidebarExample() {
               </div>
 
               <div className="flex items-center justify-between">
-                <Link
-                  href="/tarjetas-de-credito"
-                  className="text-sm hover:underline"
-                >
-                  Tarjetas de Crédito
+                <Link href="/credit-cards" className="text-sm hover:underline">
+                  Credit Cards
                 </Link>
                 <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
                   8
@@ -132,8 +128,8 @@ export default function SidebarExample() {
               </div>
 
               <div className="flex items-center justify-between">
-                <Link href="/hipotecas" className="text-sm hover:underline">
-                  Hipotecas
+                <Link href="/mortgages" className="text-sm hover:underline">
+                  Mortgages
                 </Link>
                 <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
                   6
@@ -141,8 +137,8 @@ export default function SidebarExample() {
               </div>
 
               <div className="flex items-center justify-between">
-                <Link href="/inversiones" className="text-sm hover:underline">
-                  Inversiones
+                <Link href="/investments" className="text-sm hover:underline">
+                  Investments
                 </Link>
                 <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
                   5
@@ -150,8 +146,8 @@ export default function SidebarExample() {
               </div>
 
               <div className="flex items-center justify-between">
-                <Link href="/presupuestos" className="text-sm hover:underline">
-                  Presupuestos
+                <Link href="/budgeting" className="text-sm hover:underline">
+                  Budgeting
                 </Link>
                 <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
                   4
@@ -167,7 +163,7 @@ export default function SidebarExample() {
 
           <SidebarFooter>
             <small className="text-xs text-center block text-gray-500">
-              © 2025 TopFinanzas México
+              © 2025 TopFinance UK
             </small>
           </SidebarFooter>
         </Sidebar>
@@ -176,13 +172,13 @@ export default function SidebarExample() {
         <div className="flex-1 p-6">
           <div className="flex items-center mb-6">
             <SidebarTrigger className="mr-4" />
-            <h1 className="text-2xl font-bold">Contenido Principal</h1>
+            <h1 className="text-2xl font-bold">Main Content</h1>
           </div>
 
           <p className="text-gray-700">
-            Esta es una implementación de ejemplo del sidebar con todos los
-            componentes traducidos y el anuncio que apunta a la página de la
-            Tarjeta de Crédito Azul BBVA.
+            This is an example implementation of the sidebar with all components
+            translated and the advertisement pointing to the BBVA Blue Credit
+            Card page.
           </p>
         </div>
       </div>

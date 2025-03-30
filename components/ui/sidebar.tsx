@@ -821,8 +821,7 @@ const SidebarNewsletter = React.forwardRef<
         Subscribe to our newsletter
       </h3>
       <p className="text-sm mb-4">
-        Get the latest financial tips and insights directly to your
-        inbox.
+        Get the latest financial tips and insights directly to your inbox.
       </p>
 
       <form onSubmit={onSubmit} className="space-y-2">

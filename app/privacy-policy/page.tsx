@@ -6,27 +6,24 @@ import { compileMDX } from "next-mdx-remote/rsc";
 import { useMDXComponents } from "@/mdx-components";
 
 export const metadata = {
-  title: "Política de Privacidad - Top Finance",
+  title: "Privacy Policy - TopFinance UK",
   description:
-    "Conozca cómo Top Finance protege su información personal y los derechos que tiene sobre sus datos.",
+    "Learn how TopFinance UK protects your personal information and what rights you have over your data.",
 };
 
 export default async function PrivacyPolicyPage() {
   // Read the MDX file
   const filePath = path.join(process.cwd(), "content/legal/privacy-policy.mdx");
-  let source = "# Política de Privacidad\n\nContenido no encontrado.";
+  let source = "# Privacy Policy\n\nContent not found.";
 
   try {
     if (fs.existsSync(filePath)) {
       source = fs.readFileSync(filePath, "utf8");
     }
   } catch (error) {
-    console.error(
-      "Error al cargar el archivo de política de privacidad:",
-      error
-    );
+    console.error("Error loading privacy policy file:", error);
     source =
-      "# Error al Cargar el Contenido\n\nLo sentimos, hubo un error al cargar este contenido.";
+      "# Error Loading Content\n\nWe apologise, there was an error loading this content.";
   }
 
   // Compile MDX content, properly handling frontmatter
