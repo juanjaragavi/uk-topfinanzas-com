@@ -70,24 +70,24 @@ export const footerNavigation = {
   /** Blog posts section */
   blogItems: [
     {
-      text: "Your First Salary Guide",
-      href: "/blog/post/your-first-paycheck",
+      text: "Amazon Rewards Visa Benefits",
+      href: "/financial-solutions/amazon-rewards-visa-credit-card-benefits",
     },
     {
-      text: "Plata Card",
-      href: "/financial-solutions/plata-card",
+      text: "Visa Signature Card Guide",
+      href: "/financial-solutions/visa-signature-us-current-credit-card-benefits",
     },
     {
-      text: "BBVA Blue Credit Card",
-      href: "/financial-solutions/bbva-blue-credit-card",
+      text: "Best Personal Loans UK",
+      href: "/financial-solutions/best-personal-loans",
     },
     {
-      text: "Nu Bank Credit Card Guide",
-      href: "/financial-solutions/nu-bank-credit-card-guide",
+      text: "Tips for Online Loans",
+      href: "/financial-solutions/tips-for-choosing-an-online-loan",
     },
     {
-      text: "Card Recommender",
-      href: "/credit-card-recommender-p1",
+      text: "Student Credit Cards",
+      href: "/financial-solutions/capital-one-quicksilver-student-credit-card-requirements-application",
     },
   ],
 

@@ -63,20 +63,24 @@ export const headerNavigation = {
         href: "/financial-solutions",
       },
       {
+        text: "Credit Cards",
+        href: "/financial-solutions",
+      },
+      {
+        text: "Personal Loans",
+        href: "/financial-solutions/best-personal-loans",
+      },
+      {
         text: "Card Recommender",
         href: "/credit-card-recommender-p1",
       },
       {
-        text: "Compare Cards",
-        href: "/",
+        text: "Amazon Rewards Visa",
+        href: "/financial-solutions/amazon-rewards-visa-credit-card-benefits",
       },
       {
-        text: "Plata Card",
-        href: "/financial-solutions/plata-card",
-      },
-      {
-        text: "BBVA Blue Credit Card",
-        href: "/financial-solutions/bbva-blue-credit-card",
+        text: "Visa Signature US Current",
+        href: "/financial-solutions/visa-signature-us-current-credit-card-benefits",
       },
     ],
   },
@@ -126,8 +130,12 @@ export const headerNavigation = {
             href: "/blog/post/what-are-online-loans",
           },
           {
-            text: "How to Choose Online Loans",
-            href: "/blog/post/5-tips-for-choosing-an-online-loan",
+            text: "Choosing Online Loans",
+            href: "/financial-solutions/tips-for-choosing-an-online-loan",
+          },
+          {
+            text: "Best Personal Loans UK",
+            href: "/financial-solutions/best-personal-loans",
           },
         ],
       },
@@ -136,20 +144,19 @@ export const headerNavigation = {
       title: "Featured Articles",
       posts: [
         {
-          title: "Your First Salary: A Complete Guide",
-          href: "/blog/post/your-first-paycheck",
-          image:
-            "https://media.topfinanzas.com/images/generated/1741659352997/sample_0.jpg",
-          category: "Personal Finance",
-          categoryHref: "/blog/category/personal-finance",
+          title: "Amazon Rewards Visa Card Benefits",
+          href: "/financial-solutions/amazon-rewards-visa-credit-card-benefits",
+          image: "https://media.topfinanzas.com/images/Amazon1.webp",
+          category: "Credit Cards",
+          categoryHref: "/financial-solutions",
         },
         {
-          title: "What is a Mortgage?",
-          href: "/blog/post/what-is-a-home-mortgage",
+          title: "Best Personal Loans in the UK",
+          href: "/financial-solutions/best-personal-loans",
           image:
-            "https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg",
-          category: "Mortgages",
-          categoryHref: "/blog/category/mortgages",
+            "https://media.topfinanzas.com/images/personal-loans-guide.webp",
+          category: "Loans",
+          categoryHref: "/financial-solutions",
         },
       ],
     },

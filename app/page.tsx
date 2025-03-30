@@ -95,57 +95,143 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Secondary articles grid - Refactored to 2 columns */}
+          {/* Secondary articles grid - Updated to showcase Financial Solutions posts */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {/* Secondary Post 1 */}
+            {/* Financial Solutions Post 1 */}
             <Link
-              href="/blog/post/what-is-a-home-mortgage" // Assuming this link is correct
+              href="/financial-solutions/amazon-rewards-visa-credit-card-benefits"
               className="block relative overflow-hidden group"
             >
               <div className="relative h-[220px] w-full">
                 <Image
-                  src="https://media.topfinanzas.com/images/secondary-post-1.jpg" // Updated image path
-                  alt="What is a mortgage? Your complete guide"
+                  src="https://media.topfinanzas.com/images/Amazon1.webp"
+                  alt="Amazon Rewards Visa Credit Card Benefits"
                   fill
                   style={{ objectFit: "cover" }}
                   className="brightness-75 group-hover:brightness-90 transition-all duration-300"
                 />
                 <div className="absolute inset-0 flex flex-col justify-end p-4 text-white bg-gradient-to-t from-black/60 via-black/30 to-transparent">
                   <h3 className="text-white text-lg font-medium leading-tight mb-1">
-                    What Is a Home Mortgage? Your Complete Guide
+                    Amazon Rewards Visa Credit Card: Ideal Benefits for You
                   </h3>
                   <div className="flex items-center space-x-2 text-xs text-gray-200">
-                    <span className="font-normal">February 25, 2025</span>
+                    <span className="font-normal">March 30, 2025</span>
                   </div>
                 </div>
               </div>
             </Link>
 
-            {/* Secondary Post 2 */}
+            {/* Financial Solutions Post 2 */}
             <Link
-              href="/blog/post/what-are-online-loans" // Assuming this link is correct
+              href="/financial-solutions/visa-signature-us-current-credit-card-benefits"
               className="block relative overflow-hidden group"
             >
               <div className="relative h-[220px] w-full">
                 <Image
-                  src="https://media.topfinanzas.com/images/secondary-post-2.jpg" // Updated image path
-                  alt="What are online loans?: A key tool in personal finance"
+                  src="https://media.topfinanzas.com/images/visa-signature-card.webp"
+                  alt="Visa Signature US Current Credit Card Benefits"
                   fill
                   style={{ objectFit: "cover" }}
                   className="brightness-75 group-hover:brightness-90 transition-all duration-300"
                 />
                 <div className="absolute inset-0 flex flex-col justify-end p-4 text-white bg-gradient-to-t from-black/60 via-black/30 to-transparent">
                   <h3 className="text-white text-lg font-medium leading-tight mb-1">
-                    What Are Online Loans?: A Key Tool in Personal Finances
+                    Visa Signature US Current Credit Card: Complete Benefits
+                    Guide
                   </h3>
                   <div className="flex items-center space-x-2 text-xs text-gray-200">
-                    <span className="font-normal">February 25, 2025</span>
+                    <span className="font-normal">March 30, 2025</span>
                   </div>
                 </div>
               </div>
             </Link>
+          </div>
 
-            {/* Removed the third post block */}
+          {/* More Financial Solutions posts - 3 columns */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold mb-6">
+              More Financial Solutions
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Financial Solutions Post 3 */}
+              <Link
+                href="/financial-solutions/best-personal-loans"
+                className="block relative overflow-hidden group bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+              >
+                <div className="relative h-[180px] w-full">
+                  <Image
+                    src="https://media.topfinanzas.com/images/personal-loans-guide.webp"
+                    alt="Best Personal Loans in the UK"
+                    fill
+                    style={{ objectFit: "cover" }}
+                    className="rounded-t-lg"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-gray-800 text-lg font-medium leading-tight mb-2">
+                    Best Personal Loans in the UK: Your Complete Guide
+                  </h3>
+                  <p className="text-gray-600 text-sm line-clamp-2">
+                    Find the perfect personal loan for your needs with our
+                    comprehensive guide to the UK's top lenders, rates, and
+                    application requirements.
+                  </p>
+                </div>
+              </Link>
+
+              {/* Financial Solutions Post 4 */}
+              <Link
+                href="/financial-solutions/tips-for-choosing-an-online-loan"
+                className="block relative overflow-hidden group bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+              >
+                <div className="relative h-[180px] w-full">
+                  <Image
+                    src="https://media.topfinanzas.com/images/choosing-online-loan.webp"
+                    alt="Tips for Choosing an Online Loan"
+                    fill
+                    style={{ objectFit: "cover" }}
+                    className="rounded-t-lg"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-gray-800 text-lg font-medium leading-tight mb-2">
+                    5 Essential Tips for Choosing an Online Loan
+                  </h3>
+                  <p className="text-gray-600 text-sm line-clamp-2">
+                    Navigate the world of online loans with confidence using
+                    these essential tips to find the best rates and terms for
+                    your financial needs.
+                  </p>
+                </div>
+              </Link>
+
+              {/* Financial Solutions Post 5 */}
+              <Link
+                href="/financial-solutions/capital-one-quicksilver-student-credit-card-requirements-application"
+                className="block relative overflow-hidden group bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+              >
+                <div className="relative h-[180px] w-full">
+                  <Image
+                    src="https://media.topfinanzas.com/images/capital-one-quicksilver-student-card.webp"
+                    alt="Capital One Quicksilver Student Credit Card"
+                    fill
+                    style={{ objectFit: "cover" }}
+                    className="rounded-t-lg"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-gray-800 text-lg font-medium leading-tight mb-2">
+                    Capital One Quicksilver Student Credit Card: Requirements
+                    Guide
+                  </h3>
+                  <p className="text-gray-600 text-sm line-clamp-2">
+                    Learn everything you need to know about qualifying for the
+                    Capital One Quicksilver Student Credit Card, designed for UK
+                    students.
+                  </p>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

@@ -8,6 +8,47 @@ export default function FinancialSolutionsPage() {
   // List of content in this category
   const cardsContent = [
     {
+      title: "Amazon Rewards Visa Credit Card Benefits",
+      slug: "amazon-rewards-visa-credit-card-benefits",
+      description:
+        "Maximise your rewards with cashback at Amazon and Whole Foods plus no annual fee!",
+      image: "https://media.topfinanzas.com/images/Amazon1.webp",
+      date: "30 March 2025",
+    },
+    {
+      title: "Visa Signature US Current Credit Card Benefits",
+      slug: "visa-signature-us-current-credit-card-benefits",
+      description:
+        "Enjoy a credit card that combines accessibility, rewards and credit-building tools—without any hidden fees or surprises.",
+      image: "https://media.topfinanzas.com/images/visa-signature-card.webp",
+      date: "30 March 2025",
+    },
+    {
+      title: "Capital One Quicksilver Student Credit Card Requirements",
+      slug: "capital-one-quicksilver-student-credit-card-requirements-application",
+      description:
+        "Learn everything you need to know about qualifying for the Capital One Quicksilver Student Credit Card, designed to help UK students build credit while earning cashback.",
+      image:
+        "https://media.topfinanzas.com/images/capital-one-quicksilver-student-card.webp",
+      date: "30 March 2025",
+    },
+    {
+      title: "Best Personal Loans in the UK",
+      slug: "best-personal-loans",
+      description:
+        "Find the perfect personal loan for your needs with our comprehensive guide to the UK's top lenders, rates, and application requirements.",
+      image: "https://media.topfinanzas.com/images/personal-loans-guide.webp",
+      date: "30 March 2025",
+    },
+    {
+      title: "Tips for Choosing an Online Loan",
+      slug: "tips-for-choosing-an-online-loan",
+      description:
+        "Navigate the world of online loans with confidence using these essential tips to find the best rates and terms for your financial needs.",
+      image: "https://media.topfinanzas.com/images/choosing-online-loan.webp",
+      date: "30 March 2025",
+    },
+    {
       title: "Plata Card",
       slug: "plata-card",
       description:
