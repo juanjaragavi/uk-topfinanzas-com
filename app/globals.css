@@ -188,9 +188,11 @@ body {
 
   .banner-section-mobile {
     background-image: url(https://media.topfinanzas.com/images/banner-home-mobile.webp);
+    background-position: center center; /* Reset position */
   }
 
   .banner-section-desktop {
     background-image: url(https://media.topfinanzas.com/images/banner-home.webp);
+    background-position: center center; /* Keep centered for desktop */
   }
 }
