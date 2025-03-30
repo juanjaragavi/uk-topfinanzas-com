@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function RecomendadorTarjetasPage() {
+export default function CreditCardRecommenderPage() {
   const [openFaq, setOpenFaq] = useState<string | null>("benefits");
 
   const toggleFaq = (id: string) => {
@@ -26,20 +26,20 @@ export default function RecomendadorTarjetasPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-lg md:text-2xl font-bold text-gray-800 mb-4 leading-5">
-              Descubre tu tarjeta de crédito ideal
+              Discover Your Ideal Credit Card
             </h1>
 
             <p className="text-xs leading-4 text-gray-800 mb-5">
-              Encontrar la tarjeta adecuada es sencillo. Maximiza recompensas,
-              organiza tus gastos y disfruta beneficios exclusivos. ¡Explora y
-              elige la tarjeta ideal para ti!
+              Finding the right card is simple. Maximise rewards, organise your
+              spending and enjoy exclusive benefits. Explore and choose the
+              ideal card for you!
             </p>
 
             <div className="my-8">
-              <Link href="/soluciones-financieras/guia-tarjeta-de-credito-nu-bank-next">
+              <Link href="/financial-solutions/nu-bank-credit-card-guide">
                 <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
                   <div className="flex items-center space-x-1">
-                    <span>Aceptar recomendación</span>
+                    <span>Accept Recommendation</span>
                     <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
                       <span className="text-[#80E67D] text-xs">➔</span>
                     </div>
@@ -49,7 +49,7 @@ export default function RecomendadorTarjetasPage() {
             </div>
 
             <h2 className="text-lg leading-5 font-bold text-gray-800 mb-6">
-              ¿Por qué elegir nuestro recomendador de tarjetas de crédito?
+              Why Choose Our Credit Card Recommender?
             </h2>
 
             <div className="space-y-1 mb-6">
@@ -58,7 +58,7 @@ export default function RecomendadorTarjetasPage() {
                   <span className="text-white font-bold text-sm">✓</span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-bold">Opciones personalizadas</span>
+                  <span className="font-bold">Personalised Options</span>
                 </div>
               </div>
 
@@ -67,7 +67,7 @@ export default function RecomendadorTarjetasPage() {
                   <span className="text-white font-bold text-sm">✓</span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-bold">Completamente gratuito</span>
+                  <span className="font-bold">Completely Free</span>
                 </div>
               </div>
 
@@ -76,29 +76,29 @@ export default function RecomendadorTarjetasPage() {
                   <span className="text-white font-bold text-sm">✓</span>
                 </div>
                 <div className="text-sm">
-                  <span className="font-bold">Asesoría experta</span>
+                  <span className="font-bold">Expert Advice</span>
                 </div>
               </div>
             </div>
 
             <p className="text-sm leading-5 text-gray-800 mb-4">
-              Nuestras recomendaciones están diseñadas para conectar tus metas
-              financieras con tarjetas que se ajusten a tus necesidades. Desde
-              cashback hasta recompensas en viajes, te damos opciones claras y
-              fáciles de entender para que tomes decisiones informadas.
+              Our recommendations are designed to connect your financial goals
+              with cards that suit your needs. From cashback to travel rewards,
+              we give you clear, easy-to-understand options so you can make
+              informed decisions.
             </p>
 
             <p className="text-sm leading-5 text-gray-800 mb-5">
-              Con nuestra guía, transformarás tu tarjeta de crédito en una
-              herramienta que simplifique tus finanzas y te ayude a alcanzar tus
-              metas sin complicaciones.
+              With our guide, you'll transform your credit card into a tool that
+              simplifies your finances and helps you achieve your goals without
+              complications.
             </p>
 
             <div className="mt-6 mb-4">
-              <Link href="/soluciones-financieras/tarjeta-de-credito-azul-bbva-next">
+              <Link href="/financial-solutions/bbva-blue-credit-card">
                 <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
                   <div className="flex items-center space-x-1">
-                    <span>Nuestra mejor recomendación</span>
+                    <span>Our Top Recommendation</span>
                     <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
                       <span className="text-[#80E67D] text-xs">➔</span>
                     </div>
@@ -110,9 +110,9 @@ export default function RecomendadorTarjetasPage() {
             <p className="text-center text-sm mb-6">
               <Link
                 className="text-blue-500"
-                href="/soluciones-financieras/requisitos-tarjeta-de-credito-azul-bbva-next"
+                href="/financial-solutions/bbva-blue-credit-card-requirements"
               >
-                Aprende cómo solicitarla
+                Learn How to Apply
               </Link>
             </p>
 
@@ -126,7 +126,7 @@ export default function RecomendadorTarjetasPage() {
                     openFaq === "benefits" ? "text-green-500" : "text-sky-600"
                   }`}
                 >
-                  ¿Qué beneficios tiene una tarjeta sin anualidad?
+                  What are the benefits of a card with no annual fee?
                 </h3>
                 <span
                   className={`text-xl transition-transform ${
@@ -141,9 +141,9 @@ export default function RecomendadorTarjetasPage() {
               {openFaq === "benefits" && (
                 <div className="p-4 text-gray-700">
                   <p>
-                    Una tarjeta sin anualidad te ayuda a ahorrar costos
-                    recurrentes mientras disfrutas de beneficios clave como
-                    cashback o puntos por compras.
+                    A card with no annual fee helps you save on recurring costs
+                    while enjoying key benefits such as cashback or points for
+                    purchases.
                   </p>
                 </div>
               )}
@@ -157,7 +157,7 @@ export default function RecomendadorTarjetasPage() {
                     openFaq === "cashback" ? "text-green-500" : "text-sky-600"
                   }`}
                 >
-                  ¿Cómo funciona el cashback?
+                  How does cashback work?
                 </h3>
                 <span
                   className={`text-xl transition-transform ${
@@ -172,8 +172,8 @@ export default function RecomendadorTarjetasPage() {
               {openFaq === "cashback" && (
                 <div className="p-4 text-gray-700">
                   <p>
-                    Recibes un porcentaje de tus compras como efectivo que
-                    puedes usar para reducir saldos o gastar como prefieras.
+                    You receive a percentage of your purchases as cash that you
+                    can use to reduce balances or spend as you prefer.
                   </p>
                 </div>
               )}
@@ -187,7 +187,7 @@ export default function RecomendadorTarjetasPage() {
                     openFaq === "travelers" ? "text-green-500" : "text-sky-600"
                   }`}
                 >
-                  ¿Cuál es la mejor opción para viajeros?
+                  What's the best option for travellers?
                 </h3>
                 <span
                   className={`text-xl transition-transform ${
@@ -202,9 +202,9 @@ export default function RecomendadorTarjetasPage() {
               {openFaq === "travelers" && (
                 <div className="p-4 text-gray-700">
                   <p>
-                    Las tarjetas con acumulación de millas o acceso a salones
-                    VIP son ideales para viajeros frecuentes, permitiéndote
-                    ahorrar en vuelos y disfrutar de beneficios exclusivos.
+                    Cards with air miles accumulation or access to VIP lounges
+                    are ideal for frequent travellers, allowing you to save on
+                    flights and enjoy exclusive benefits.
                   </p>
                 </div>
               )}
@@ -218,7 +218,7 @@ export default function RecomendadorTarjetasPage() {
                     openFaq === "online" ? "text-green-500" : "text-sky-600"
                   }`}
                 >
-                  ¿Es seguro usar tarjetas de crédito en línea?
+                  Is it safe to use credit cards online?
                 </h3>
                 <span
                   className={`text-xl transition-transform ${
@@ -233,27 +233,25 @@ export default function RecomendadorTarjetasPage() {
               {openFaq === "online" && (
                 <div className="p-4 text-gray-700">
                   <p>
-                    Sí, muchas tarjetas ofrecen tecnología avanzada como CVV
-                    dinámico y alertas instantáneas para proteger tus
-                    transacciones.
+                    Yes, many cards offer advanced technology such as dynamic
+                    CVV and instant alerts to protect your transactions.
                   </p>
                 </div>
               )}
             </div>
 
             <p className="text-sm leading-5 text-gray-800 mb-8">
-              Haz de tu tarjeta de crédito una aliada para alcanzar tus metas
-              financieras. Desde cashback hasta recompensas de viaje, elige una
-              opción que simplifique tu vida y maximice tus beneficios. Explora
-              nuestras recomendaciones y encuentra la tarjeta que mejor se
-              adapta a ti.
+              Make your credit card an ally in achieving your financial goals.
+              From cashback to travel rewards, choose an option that simplifies
+              your life and maximises your benefits. Explore our recommendations
+              and find the card that best suits you.
             </p>
 
             <div className="my-8">
-              <Link href="/soluciones-financieras/tarjeta-de-credito-azul-bbva-next">
+              <Link href="/financial-solutions/bbva-blue-credit-card">
                 <Image
                   src="https://media.topfinanzas.com/images/Tobanner-02-1.webp"
-                  alt="Recomendador de tarjetas de crédito"
+                  alt="Credit Card Recommender"
                   width={800}
                   height={450}
                   className="w-full h-auto rounded-lg"

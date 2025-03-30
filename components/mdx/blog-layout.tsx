@@ -30,8 +30,8 @@ interface BlogLayoutProps {
 
 export function BlogLayout({ children, metadata }: BlogLayoutProps) {
   const {
-    title = "Blog - TopFinanzas",
-    description = "Mantente informado con los últimos consejos financieros, estrategias e información de los expertos de TopFinanzas.",
+    title = "Blog - TopFinance",
+    description = "Stay informed with the latest financial tips, strategies and information from TopFinance experts.",
   } = metadata || {};
 
   const handleNewsletterSubmit = (e: React.FormEvent) => {
@@ -56,7 +56,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
             <div className="lg:col-span-4">
               <SidebarProvider>
                 <SidebarContent>
-                  z{/* Ad banner */}
+                  {/* Ad banner */}
                   <SidebarAd />
                   <SidebarSeparator />
                   {/* Recent Articles */}
@@ -74,11 +74,11 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                           href="/blog/post/your-first-paycheck"
                           className="text-sm font-medium hover:underline"
                         >
-                          Tu Primer Sueldo: Una Guía Completa para Gestión
-                          Inteligente
+                          Your First Salary: A Complete Guide to Smart
+                          Management
                         </Link>
                         <p className="text-xs text-gray-500">
-                          25 Febrero, 2025
+                          25 February, 2025
                         </p>
                       </div>
                     </div>
@@ -96,10 +96,10 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                           href="/blog/post/what-is-a-home-mortgage"
                           className="text-sm font-medium hover:underline"
                         >
-                          ¿Qué Es una Hipoteca? Tu Guía Completa
+                          What Is a Mortgage? Your Complete Guide
                         </Link>
                         <p className="text-xs text-gray-500">
-                          25 Febrero, 2025
+                          25 February, 2025
                         </p>
                       </div>
                     </div>
@@ -107,7 +107,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     <div className="flex items-center gap-3">
                       <Image
                         src="https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg"
-                        alt="¿Qué Son los Préstamos en Línea? Una Herramienta Clave en Finanzas Personales"
+                        alt="What Are Online Loans? A Key Tool in Personal Finance"
                         width={50}
                         height={50}
                         className="rounded-md"
@@ -117,11 +117,11 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                           href="/blog/post/what-are-online-loans"
                           className="text-sm font-medium hover:underline"
                         >
-                          ¿Qué Son los Préstamos en Línea? Una Herramienta Clave
-                          en Finanzas Personales
+                          What Are Online Loans? A Key Tool in Personal
+                          Finance
                         </Link>
                         <p className="text-xs text-gray-500">
-                          25 Febrero, 2025
+                          25 February, 2025
                         </p>
                       </div>
                     </div>
@@ -134,7 +134,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                         href="/blog/category/personal-finance"
                         className="text-sm hover:underline"
                       >
-                        Finanzas Personales
+                        Personal Finance
                       </Link>
                       <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
                         12
@@ -146,7 +146,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                         href="/blog/category/credit-cards"
                         className="text-sm hover:underline"
                       >
-                        Tarjetas de Crédito
+                        Credit Cards
                       </Link>
                       <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
                         8
@@ -158,7 +158,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                         href="/blog/category/mortgages"
                         className="text-sm hover:underline"
                       >
-                        Hipotecas
+                        Mortgages
                       </Link>
                       <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
                         6
@@ -170,7 +170,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                         href="/blog/category/investing"
                         className="text-sm hover:underline"
                       >
-                        Inversiones
+                        Investments
                       </Link>
                       <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
                         5
@@ -182,7 +182,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                         href="/blog/category/budgeting"
                         className="text-sm hover:underline"
                       >
-                        Presupuestos
+                        Budgeting
                       </Link>
                       <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
                         4

@@ -4,60 +4,59 @@ import { BlogLayout } from "@/components/mdx/blog-layout";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function SolucionesFinancierasPage() {
+export default function FinancialSolutionsPage() {
   // List of content in this category
-  const tarjetasContent = [
+  const cardsContent = [
     {
-      title: "Tarjeta Plata Card",
-      slug: "tarjeta-plata-card-next",
+      title: "Plata Card",
+      slug: "plata-card",
       description:
-        "Descubre todos los beneficios y requisitos para obtener la Tarjeta Plata Card, una excelente opción para usuarios que buscan flexibilidad.",
+        "Discover all the benefits and requirements for obtaining the Plata Card, an excellent option for users seeking flexibility.",
       image: "https://media.topfinanzas.com/images/tarjeta-plata-card.webp",
-      date: "Marzo 20, 2025",
+      date: "20 March 2025",
     },
     {
-      title: "Tarjeta de Crédito Azul BBVA",
-      slug: "tarjeta-de-credito-azul-bbva-next",
+      title: "BBVA Blue Credit Card",
+      slug: "bbva-blue-credit-card",
       description:
-        "Todo lo que necesitas saber sobre la Tarjeta Azul de BBVA, sus beneficios y cómo puedes aprovecharla al máximo.",
+        "Everything you need to know about the BBVA Blue Card, its benefits and how you can make the most of it.",
       image: "https://media.topfinanzas.com/images/download-5-2.webp",
-      date: "Marzo 18, 2025",
+      date: "18 March 2025",
     },
     {
-      title: "Guía Tarjeta de Crédito Nu Bank",
-      slug: "guia-tarjeta-de-credito-nu-bank-next",
+      title: "Nu Bank Credit Card Guide",
+      slug: "nu-bank-credit-card-guide",
       description:
-        "Guía completa sobre la tarjeta Nu Bank, sus características, beneficios exclusivos y proceso de solicitud.",
+        "Complete guide to the Nu Bank card, its features, exclusive benefits and application process.",
       image: "https://media.topfinanzas.com/images/download-9-1-820x462.webp",
-      date: "Marzo 15, 2025",
+      date: "15 March 2025",
     },
     {
-      title: "Requisitos Tarjeta de Crédito Nu",
-      slug: "requisitos-tarjeta-de-credito-nu-next",
+      title: "Nu Credit Card Requirements",
+      slug: "nu-credit-card-requirements",
       description:
-        "Conoce los requisitos necesarios para solicitar la tarjeta de crédito Nu y cómo completar el proceso de solicitud.",
+        "Learn about the requirements for applying for the Nu credit card and how to complete the application process.",
       image: "https://media.topfinanzas.com/images/download-2-1.webp",
-      date: "Marzo 12, 2025",
+      date: "12 March 2025",
     },
     {
-      title: "Requisitos Tarjeta de Crédito Azul BBVA",
-      slug: "requisitos-tarjeta-de-credito-azul-bbva-next",
+      title: "BBVA Blue Credit Card Requirements",
+      slug: "bbva-blue-credit-card-requirements",
       description:
-        "Guía detallada sobre los requisitos para obtener la Tarjeta Azul de BBVA y el proceso de solicitud paso a paso.",
+        "Detailed guide on the requirements for obtaining the BBVA Blue Card and the step-by-step application process.",
       image: "https://media.topfinanzas.com/images/download-5-2.webp",
-      date: "Marzo 10, 2025",
+      date: "10 March 2025",
     },
   ];
 
   // Custom content for this category page
   const content = (
     <div>
-      <h1 className="text-4xl font-bold mb-6">Soluciones Financieras</h1>
+      <h1 className="text-4xl font-bold mb-6">Financial Solutions</h1>
       <p className="text-lg text-gray-700 mb-8">
-        Encuentra información detallada sobre las mejores tarjetas de crédito
-        disponibles en México, requisitos para solicitarlas y guías completas
-        para ayudarte a elegir la mejor opción según tus necesidades
-        financieras.
+        Find detailed information about the best credit cards
+        available in the UK, requirements for applying, and comprehensive guides
+        to help you choose the best option based on your financial needs.
       </p>
 
       {/* Featured article */}
@@ -66,33 +65,33 @@ export default function SolucionesFinancierasPage() {
           <div className="md:flex-shrink-0 relative h-64 md:h-auto md:w-48">
             <Image
               src="https://media.topfinanzas.com/images/tarjeta-plata-card.webp"
-              alt="Tarjeta Plata Card"
+              alt="Plata Card"
               fill
               style={{ objectFit: "cover" }}
             />
           </div>
           <div className="p-8">
             <div className="uppercase tracking-wide text-sm text-blue-600 font-semibold">
-              Destacado
+              Featured
             </div>
             <Link
-              href={`/soluciones-financieras/tarjeta-plata-card-next`}
+              href={`/financial-solutions/plata-card`}
               className="block mt-1 text-2xl font-medium text-black hover:text-blue-600 transition-colors"
             >
-              Tarjeta Plata Card: La Opción Ideal para Tus Finanzas
+              Plata Card: The Ideal Option for Your Finances
             </Link>
             <p className="mt-2 text-gray-600">
-              Descubre por qué la Tarjeta Plata Card se ha convertido en una de
-              las opciones más populares entre los mexicanos que buscan una
-              tarjeta de crédito con excelentes beneficios y condiciones
-              favorables.
+              Discover why the Plata Card has become one of
+              the most popular options among those looking for a
+              credit card with excellent benefits and favourable
+              conditions.
             </p>
             <div className="mt-4">
               <Link
-                href={`/soluciones-financieras/tarjeta-plata-card-next`}
+                href={`/financial-solutions/plata-card`}
                 className="text-blue-600 hover:text-blue-800 font-medium"
               >
-                Leer más →
+                Read more →
               </Link>
             </div>
           </div>
@@ -101,7 +100,7 @@ export default function SolucionesFinancierasPage() {
 
       {/* Category articles */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-        {tarjetasContent.map((post, index) => (
+        {cardsContent.map((post, index) => (
           <div
             key={index}
             className="bg-white rounded-xl shadow-sm overflow-hidden"
@@ -117,7 +116,7 @@ export default function SolucionesFinancierasPage() {
             <div className="p-6">
               <p className="text-sm text-gray-500 mb-2">{post.date}</p>
               <Link
-                href={`/soluciones-financieras/${post.slug}`}
+                href={`/financial-solutions/${post.slug}`}
                 className="text-xl font-semibold hover:text-blue-600 transition-colors"
               >
                 {post.title}
@@ -125,10 +124,10 @@ export default function SolucionesFinancierasPage() {
               <p className="mt-2 text-gray-600">{post.description}</p>
               <div className="mt-4">
                 <Link
-                  href={`/soluciones-financieras/${post.slug}`}
-                  className="text-blue-600 hover:text-blue-800 font-medium"
-                >
-                  Leer más →
+                href={`/financial-solutions/${post.slug}`}
+                className="text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Read more →
                 </Link>
               </div>
             </div>
@@ -139,18 +138,18 @@ export default function SolucionesFinancierasPage() {
       {/* CTA section */}
       <div className="bg-blue-50 p-8 rounded-xl shadow-sm mb-10">
         <h2 className="text-2xl font-bold mb-4">
-          ¿Buscando la tarjeta ideal para ti?
+          Looking for the ideal card for you?
         </h2>
         <p className="text-gray-700 mb-6">
-          Utiliza nuestro recomendador de tarjetas de crédito y encuentra la
-          opción que mejor se adapte a tu perfil financiero y necesidades
-          específicas.
+          Use our credit card recommender and find the
+          option that best suits your financial profile and specific
+          needs.
         </p>
         <Link
-          href="/recomendador-de-tarjetas-de-credito-p1-next"
+          href="/credit-card-recommender-p1"
           className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 inline-block transition-colors rounded-full"
         >
-          Ir al Recomendador
+          Go to Recommender
         </Link>
       </div>
     </div>
@@ -159,9 +158,9 @@ export default function SolucionesFinancierasPage() {
   return (
     <BlogLayout
       metadata={{
-        title: "Soluciones Financieras - TopFinanzas",
+        title: "Financial Solutions - TopFinance",
         description:
-          "Descubra información sobre las mejores tarjetas de crédito, requisitos y guías completas para elegir la opción adecuada para sus necesidades financieras.",
+          "Discover information about the best credit cards, requirements and comprehensive guides to choose the right option for your financial needs.",
       }}
     >
       {content}
