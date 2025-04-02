@@ -239,7 +239,8 @@ export default function FinancialSolutionsPage() {
       slug: "lloyds-bank-credit-card",
       description:
         "Explore the Lloyds Bank Credit Card with competitive rates, no annual fees, and Everyday Offers cashback program for existing Lloyds customers.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/credit-cards/719906900-top_prestamos-y-tarjetas-uk_v1-16.jpg",
       date: "2 April 2025",
       type: "traditional",
     },
@@ -248,7 +249,8 @@ export default function FinancialSolutionsPage() {
       slug: "natwest-credit-card",
       description:
         "Discover the NatWest Credit Card with MyRewards program, mobile banking integration, and flexible payment options for everyday spending.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/credit-cards/718644866-top_prestamos-y-tarjetas-uk_v1_mesa-de-trabajo-1-copia.jpg",
       date: "2 April 2025",
       type: "traditional",
     },
@@ -257,7 +259,8 @@ export default function FinancialSolutionsPage() {
       slug: "santander-uk-credit-card",
       description:
         "Learn about the Santander UK Credit Card with All in One cashback, no foreign transaction fees, and balance transfer options for smart financial management.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/credit-cards/718644935-top_prestamos-y-tarjetas-uk_v1-03.jpg",
       date: "2 April 2025",
       type: "traditional",
     },
@@ -266,7 +269,8 @@ export default function FinancialSolutionsPage() {
       slug: "tsb-credit-card",
       description:
         "Explore the TSB Credit Card with everyday value, low fees, and seamless integration with TSB's mobile and online banking platforms.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/credit-cards/718645155-top_prestamos-y-tarjetas-uk_v1-06.jpg",
       date: "2 April 2025",
       type: "traditional",
     },
@@ -275,7 +279,7 @@ export default function FinancialSolutionsPage() {
       slug: "virgin-money-credit-card",
       description:
         "Discover the Virgin Money Credit Card with lifestyle-focused rewards, Virgin Points, and exclusive offers across the Virgin Group ecosystem.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image: "https://media.topfinanzas.com/images/uk/credit-cards/718645561-top_prestamos-y-tarjetas-uk_v1-08.jpg",
       date: "2 April 2025",
       type: "traditional",
     },
@@ -284,7 +288,7 @@ export default function FinancialSolutionsPage() {
       slug: "monzo-credit-card",
       description:
         "Learn about the Monzo Credit Card with real-time spending notifications, smart budgeting tools, and seamless integration with Monzo's digital banking services.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image: "https://media.topfinanzas.com/images/uk/credit-cards/719907302-top_prestamos-y-tarjetas-uk_v1-18.jpg",
       date: "2 April 2025",
       type: "neobank",
     },
@@ -293,7 +297,7 @@ export default function FinancialSolutionsPage() {
       slug: "revolut-credit-card",
       description:
         "Explore the Revolut Credit Card with multi-currency capabilities, competitive exchange rates, and real-time control for modern international lifestyles.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image: "https://media.topfinanzas.com/images/uk/credit-cards/718645626-top_prestamos-y-tarjetas-uk_v1-10.jpg",
       date: "2 April 2025",
       type: "fintech",
     },
@@ -302,7 +306,7 @@ export default function FinancialSolutionsPage() {
       slug: "starling-bank-credit-card",
       description:
         "Discover the Starling Bank Credit Card with transparent pricing, ethical banking practices, and advanced digital features for modern financial management.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image: "https://media.topfinanzas.com/images/uk/credit-cards/719907598-top_prestamos-y-tarjetas-uk_v1-20.jpg",
       date: "2 April 2025",
       type: "neobank",
     },
@@ -311,7 +315,7 @@ export default function FinancialSolutionsPage() {
       slug: "curve-credit-card",
       description:
         "Learn about the innovative Curve Card that consolidates all your existing cards into a single smart card with time-travel functionality and enhanced rewards.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image: "https://media.topfinanzas.com/images/uk/credit-cards/719907701-top_prestamos-y-tarjetas-uk_v1-22.jpg",
       date: "2 April 2025",
       type: "fintech",
     },

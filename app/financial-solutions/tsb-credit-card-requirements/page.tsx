@@ -36,7 +36,7 @@ export default function TSBCreditCardRequirementsPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus-requirements.webp"
+                  src="https://media.topfinanzas.com/images/uk/credit-cards/718645161-top_prestamos-y-tarjetas-uk_v1-07.jpg"
                   alt="TSB Credit Card"
                   width={1000}
                   height={563}
@@ -150,17 +150,6 @@ export default function TSBCreditCardRequirementsPage() {
                       additional credit.
                     </div>
                   </div>
-                </div>
-
-                <div className="my-8">
-                  <Image
-                    src="https://media.topfinanzas.com/images/download-5-2.webp"
-                    alt="TSB Credit Card Application"
-                    width={1000}
-                    height={563}
-                    className="w-full h-auto rounded-lg"
-                    priority
-                  />
                 </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">

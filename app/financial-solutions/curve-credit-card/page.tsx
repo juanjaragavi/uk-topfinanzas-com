@@ -96,7 +96,7 @@ export default function CurveCreditCardPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
+                  src="https://media.topfinanzas.com/images/uk/credit-cards/719907701-top_prestamos-y-tarjetas-uk_v1-22.jpg"
                   alt="Curve Credit Card"
                   width={1000}
                   height={563}

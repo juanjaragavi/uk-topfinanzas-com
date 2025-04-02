@@ -97,7 +97,7 @@ export default function SantanderUKCreditCardPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
+                  src="https://media.topfinanzas.com/images/uk/credit-cards/718644935-top_prestamos-y-tarjetas-uk_v1-03.jpg"
                   alt="Santander UK Credit Card"
                   width={1000}
                   height={563}

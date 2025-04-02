@@ -36,7 +36,7 @@ export default function StarlingBankCreditCardRequirementsPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus-requirements.webp"
+                  src="https://media.topfinanzas.com/images/uk/credit-cards/719907598-top_prestamos-y-tarjetas-uk_v1-20.jpg"
                   alt="Starling Bank Credit Card"
                   width={1000}
                   height={563}
@@ -171,17 +171,6 @@ export default function StarlingBankCreditCardRequirementsPage() {
                       your ability to manage credit responsibly.
                     </div>
                   </div>
-                </div>
-
-                <div className="my-8">
-                  <Image
-                    src="https://media.topfinanzas.com/images/download-5-2.webp"
-                    alt="Starling Bank Credit Card Application"
-                    width={1000}
-                    height={563}
-                    className="w-full h-auto rounded-lg"
-                    priority
-                  />
                 </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">

@@ -130,17 +130,6 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="my-8">
-                  <Image
-                    src="https://media.topfinanzas.com/images/download-5-2.webp"
-                    alt="Tarjeta de crédito Azul BBVA"
-                    width={1000}
-                    height={563}
-                    className="w-full h-auto rounded-lg"
-                    priority
-                  />
-                </div>
-
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
                   Understanding the Costs
                 </h2>

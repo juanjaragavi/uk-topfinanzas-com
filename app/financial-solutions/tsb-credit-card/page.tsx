@@ -97,7 +97,7 @@ export default function TSBCreditCardPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
+                  src="https://media.topfinanzas.com/images/uk/credit-cards/718645155-top_prestamos-y-tarjetas-uk_v1-06.jpg"
                   alt="TSB Credit Card"
                   width={1000}
                   height={563}

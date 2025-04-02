@@ -101,7 +101,7 @@ export default function StarlingBankCreditCardPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
+                  src="https://media.topfinanzas.com/images/uk/credit-cards/719907598-top_prestamos-y-tarjetas-uk_v1-20.jpg"
                   alt="Starling Bank Credit Card"
                   width={1000}
                   height={563}

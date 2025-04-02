@@ -36,7 +36,7 @@ export default function LloydsBankCreditCardRequirementsPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus-requirements.webp"
+                  src="https://media.topfinanzas.com/images/uk/credit-cards/719906904-top_prestamos-y-tarjetas-uk_v1-17.jpg"
                   alt="Lloyds Bank Credit Card"
                   width={1000}
                   height={563}
@@ -132,17 +132,6 @@ export default function LloydsBankCreditCardRequirementsPage() {
                       stability and ability to manage credit.
                     </div>
                   </div>
-                </div>
-
-                <div className="my-8">
-                  <Image
-                    src="https://media.topfinanzas.com/images/download-5-2.webp"
-                    alt="Lloyds Bank Credit Card Application"
-                    width={1000}
-                    height={563}
-                    className="w-full h-auto rounded-lg"
-                    priority
-                  />
                 </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">

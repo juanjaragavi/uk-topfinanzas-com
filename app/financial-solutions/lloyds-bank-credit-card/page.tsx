@@ -92,7 +92,7 @@ export default function LloydsBankCreditCardPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
+                  src="https://media.topfinanzas.com/images/uk/credit-cards/719906900-top_prestamos-y-tarjetas-uk_v1-16.jpg"
                   alt="Lloyds Bank Credit Card"
                   width={1000}
                   height={563}

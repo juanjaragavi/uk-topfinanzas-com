@@ -36,7 +36,7 @@ export default function SantanderUKCreditCardRequirementsPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus-requirements.webp"
+                  src="https://media.topfinanzas.com/images/uk/credit-cards/718644940-top_prestamos-y-tarjetas-uk_v1-04.jpg"
                   alt="Santander UK Credit Card"
                   width={1000}
                   height={563}
@@ -150,17 +150,6 @@ export default function SantanderUKCreditCardRequirementsPage() {
                       your application and account.
                     </div>
                   </div>
-                </div>
-
-                <div className="my-8">
-                  <Image
-                    src="https://media.topfinanzas.com/images/download-5-2.webp"
-                    alt="Santander UK Credit Card Application"
-                    width={1000}
-                    height={563}
-                    className="w-full h-auto rounded-lg"
-                    priority
-                  />
                 </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">

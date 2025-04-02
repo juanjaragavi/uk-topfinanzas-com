@@ -88,7 +88,7 @@ export default function MonzoCreditCardPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
+                  src="https://media.topfinanzas.com/images/uk/credit-cards/719907302-top_prestamos-y-tarjetas-uk_v1-18.jpg"
                   alt="Monzo Credit Card"
                   width={1000}
                   height={563}
