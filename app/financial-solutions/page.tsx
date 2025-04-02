@@ -284,6 +284,16 @@ export default function FinancialSolutionsPage() {
       type: "traditional",
     },
     {
+      title: "Halifax World Elite MasterCard",
+      slug: "halifax-world-elite-mastercard",
+      description:
+        "Explore the Halifax World Elite MasterCard, offering premium travel benefits, comprehensive insurance, and exclusive rewards.",
+      image:
+        "https://media.topfinanzas.com/images/uk/credit-cards/719906900-top_prestamos-y-tarjetas-uk_v1-16.jpg", // Placeholder image
+      date: "4 April 2025",
+      type: "traditional",
+    },
+    {
       title: "Monzo Credit Card",
       slug: "monzo-credit-card",
       description:
