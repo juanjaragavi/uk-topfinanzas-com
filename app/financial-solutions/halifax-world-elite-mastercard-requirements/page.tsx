@@ -36,7 +36,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/halifax-world-elite-mastercard-requirements-1.webp"
+                  src="https://media.topfinanzas.com/images/uk/credit-cards/719906765-top_prestamos-y-tarjetas-uk_v1-15.jpg"
                   alt="Halifax World Elite Mastercard"
                   width={1000}
                   height={563}
@@ -95,18 +95,6 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="my-6 text-center">
-                  <Link href="/credit-cards">
-                    <Image
-                      src="https://media.topfinanzas.com/images/halifax-world-elite-mastercard-requirements-2.webp"
-                      alt="Compare UK credit cards"
-                      width={320}
-                      height={100}
-                      className="mx-auto rounded-lg"
-                    />
-                  </Link>
-                </div>
-
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
                   Required Documentation:
                 </h2>
@@ -162,18 +150,6 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                       this premium product.
                     </div>
                   </div>
-                </div>
-
-                <div className="my-6 text-center">
-                  <Link href="/credit-cards">
-                    <Image
-                      src="https://media.topfinanzas.com/images/halifax-world-elite-mastercard-requirements-3.webp"
-                      alt="UK Premium Banking"
-                      width={320}
-                      height={100}
-                      className="mx-auto rounded-lg"
-                    />
-                  </Link>
                 </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">

@@ -279,7 +279,8 @@ export default function FinancialSolutionsPage() {
       slug: "virgin-money-credit-card",
       description:
         "Discover the Virgin Money Credit Card with lifestyle-focused rewards, Virgin Points, and exclusive offers across the Virgin Group ecosystem.",
-      image: "https://media.topfinanzas.com/images/uk/credit-cards/718645561-top_prestamos-y-tarjetas-uk_v1-08.jpg",
+      image:
+        "https://media.topfinanzas.com/images/uk/credit-cards/718645561-top_prestamos-y-tarjetas-uk_v1-08.jpg",
       date: "2 April 2025",
       type: "traditional",
     },
@@ -289,7 +290,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Explore the Halifax World Elite MasterCard, offering premium travel benefits, comprehensive insurance, and exclusive rewards.",
       image:
-        "https://media.topfinanzas.com/images/uk/credit-cards/719906900-top_prestamos-y-tarjetas-uk_v1-16.jpg", // Placeholder image
+        "https://media.topfinanzas.com/images/uk/credit-cards/719906760-top_prestamos-y-tarjetas-uk_v1-14.jpg", // Placeholder image
       date: "4 April 2025",
       type: "traditional",
     },
@@ -298,7 +299,8 @@ export default function FinancialSolutionsPage() {
       slug: "monzo-credit-card",
       description:
         "Learn about the Monzo Credit Card with real-time spending notifications, smart budgeting tools, and seamless integration with Monzo's digital banking services.",
-      image: "https://media.topfinanzas.com/images/uk/credit-cards/719907302-top_prestamos-y-tarjetas-uk_v1-18.jpg",
+      image:
+        "https://media.topfinanzas.com/images/uk/credit-cards/719907302-top_prestamos-y-tarjetas-uk_v1-18.jpg",
       date: "2 April 2025",
       type: "neobank",
     },
@@ -307,7 +309,8 @@ export default function FinancialSolutionsPage() {
       slug: "revolut-credit-card",
       description:
         "Explore the Revolut Credit Card with multi-currency capabilities, competitive exchange rates, and real-time control for modern international lifestyles.",
-      image: "https://media.topfinanzas.com/images/uk/credit-cards/718645626-top_prestamos-y-tarjetas-uk_v1-10.jpg",
+      image:
+        "https://media.topfinanzas.com/images/uk/credit-cards/718645626-top_prestamos-y-tarjetas-uk_v1-10.jpg",
       date: "2 April 2025",
       type: "fintech",
     },
@@ -316,7 +319,8 @@ export default function FinancialSolutionsPage() {
       slug: "starling-bank-credit-card",
       description:
         "Discover the Starling Bank Credit Card with transparent pricing, ethical banking practices, and advanced digital features for modern financial management.",
-      image: "https://media.topfinanzas.com/images/uk/credit-cards/719907598-top_prestamos-y-tarjetas-uk_v1-20.jpg",
+      image:
+        "https://media.topfinanzas.com/images/uk/credit-cards/719907598-top_prestamos-y-tarjetas-uk_v1-20.jpg",
       date: "2 April 2025",
       type: "neobank",
     },
@@ -325,7 +329,8 @@ export default function FinancialSolutionsPage() {
       slug: "curve-credit-card",
       description:
         "Learn about the innovative Curve Card that consolidates all your existing cards into a single smart card with time-travel functionality and enhanced rewards.",
-      image: "https://media.topfinanzas.com/images/uk/credit-cards/719907701-top_prestamos-y-tarjetas-uk_v1-22.jpg",
+      image:
+        "https://media.topfinanzas.com/images/uk/credit-cards/719907701-top_prestamos-y-tarjetas-uk_v1-22.jpg",
       date: "2 April 2025",
       type: "fintech",
     },
