@@ -8,36 +8,11 @@ export default function FinancialSolutionsPage() {
   // List of content in this category
   const cardsContent = [
     {
-      title: "Amazon Rewards Visa Credit Card Benefits",
-      slug: "amazon-rewards-visa-credit-card-benefits",
-      description:
-        "Maximise your rewards with cashback at Amazon and Whole Foods plus no annual fee!",
-      image: "https://media.topfinanzas.com/images/Amazon1.webp",
-      date: "30 March 2025",
-    },
-    {
-      title: "Visa Signature US Current Credit Card Benefits",
-      slug: "visa-signature-us-current-credit-card-benefits",
-      description:
-        "Enjoy a credit card that combines accessibility, rewards and credit-building tools—without any hidden fees or surprises.",
-      image: "https://media.topfinanzas.com/images/visa-signature-card.webp",
-      date: "30 March 2025",
-    },
-    {
-      title: "Capital One Quicksilver Student Credit Card Requirements",
-      slug: "capital-one-quicksilver-student-credit-card-requirements-application",
-      description:
-        "Learn everything you need to know about qualifying for the Capital One Quicksilver Student Credit Card, designed to help UK students build credit while earning cashback.",
-      image:
-        "https://media.topfinanzas.com/images/capital-one-quicksilver-student-card.webp",
-      date: "30 March 2025",
-    },
-    {
       title: "Best Personal Loans in the UK",
       slug: "best-personal-loans",
       description:
         "Find the perfect personal loan for your needs with our comprehensive guide to the UK's top lenders, rates, and application requirements.",
-      image: "https://media.topfinanzas.com/images/personal-loans-guide.webp",
+      image: "https://media.topfinanzas.com/images/best-personal-loans.webp",
       date: "30 March 2025",
     },
     {
@@ -45,48 +20,8 @@ export default function FinancialSolutionsPage() {
       slug: "tips-for-choosing-an-online-loan",
       description:
         "Navigate the world of online loans with confidence using these essential tips to find the best rates and terms for your financial needs.",
-      image: "https://media.topfinanzas.com/images/choosing-online-loan.webp",
+      image: "https://media.topfinanzas.com/images/choosing-online-loan.jpg",
       date: "30 March 2025",
-    },
-    {
-      title: "Plata Card",
-      slug: "plata-card",
-      description:
-        "Discover all the benefits and requirements for obtaining the Plata Card, an excellent option for users seeking flexibility.",
-      image: "https://media.topfinanzas.com/images/tarjeta-plata-card.webp",
-      date: "20 March 2025",
-    },
-    {
-      title: "BBVA Blue Credit Card",
-      slug: "bbva-blue-credit-card",
-      description:
-        "Everything you need to know about the BBVA Blue Card, its benefits and how you can make the most of it.",
-      image: "https://media.topfinanzas.com/images/download-5-2.webp",
-      date: "18 March 2025",
-    },
-    {
-      title: "Nu Bank Credit Card Guide",
-      slug: "nu-bank-credit-card-guide",
-      description:
-        "Complete guide to the Nu Bank card, its features, exclusive benefits and application process.",
-      image: "https://media.topfinanzas.com/images/download-9-1-820x462.webp",
-      date: "15 March 2025",
-    },
-    {
-      title: "Nu Credit Card Requirements",
-      slug: "nu-credit-card-requirements",
-      description:
-        "Learn about the requirements for applying for the Nu credit card and how to complete the application process.",
-      image: "https://media.topfinanzas.com/images/download-2-1.webp",
-      date: "12 March 2025",
-    },
-    {
-      title: "BBVA Blue Credit Card Requirements",
-      slug: "bbva-blue-credit-card-requirements",
-      description:
-        "Detailed guide on the requirements for obtaining the BBVA Blue Card and the step-by-step application process.",
-      image: "https://media.topfinanzas.com/images/download-5-2.webp",
-      date: "10 March 2025",
     },
   ];
 
@@ -94,7 +29,7 @@ export default function FinancialSolutionsPage() {
   const content = (
     <div>
       <h1 className="text-4xl font-bold mb-6">Financial Solutions</h1>
-      <p className="text-lg text-gray-700 mb-8">
+      <p className="text-lg text-gray-700 mb-8 leading-tight">
         Find detailed information about the best credit cards available in the
         UK, requirements for applying, and comprehensive guides to help you
         choose the best option based on your financial needs.
@@ -105,8 +40,8 @@ export default function FinancialSolutionsPage() {
         <div className="md:flex">
           <div className="md:flex-shrink-0 relative h-64 md:h-auto md:w-48">
             <Image
-              src="https://media.topfinanzas.com/images/tarjeta-plata-card.webp"
-              alt="Plata Card"
+              src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
+              alt="Barclaycard Avios Plus Credit Card: Premium Travel Rewards"
               fill
               style={{ objectFit: "cover" }}
             />
@@ -119,16 +54,16 @@ export default function FinancialSolutionsPage() {
               href={`/financial-solutions/plata-card`}
               className="block mt-1 text-2xl font-medium text-black hover:text-blue-600 transition-colors"
             >
-              Plata Card: The Ideal Option for Your Finances
+              Barclaycard Avios Plus Credit Card: Premium Travel Rewards.
             </Link>
             <p className="mt-2 text-gray-600">
-              Discover why the Plata Card has become one of the most popular
-              options among those looking for a credit card with excellent
-              benefits and favourable conditions.
+              Discover why the Barclaycard Avios Plus Credit Card has become one
+              of the most popular options among those looking for a credit card
+              with excellent benefits and favourable conditions.
             </p>
             <div className="mt-4">
               <Link
-                href={`/financial-solutions/plata-card`}
+                href={`/financial-solutions/barclaycard-avios-plus`}
                 className="text-blue-600 hover:text-blue-800 font-medium"
               >
                 Read more →
