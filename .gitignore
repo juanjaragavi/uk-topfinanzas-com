@@ -43,3 +43,6 @@ public/images/**/*.png
 public/images/**/*.gif
 public/images/**/*.svg
 public/images/**/*.webp
+
+# Placeholder Markdown Document
+lib/documents/placeholder-markdown.md
