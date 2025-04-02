@@ -1,0 +1,457 @@
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Header } from "@/components/layout/header";
+import { CompactFooter } from "@/components/layout/compact-footer";
+
+export function generateMetadata() {
+  return {
+    title:
+      "MarketFinance Requirements: Business Loan & Invoice Finance Guide - Top Finance UK",
+    description:
+      "Learn about MarketFinance eligibility criteria for UK SMEs seeking business loans or invoice finance, the application process, and required information.",
+    keywords:
+      "MarketFinance requirements, SME finance eligibility, business loan criteria UK, invoice finance requirements, fintech lending application, MarketFinance documentation",
+  };
+}
+
+export default function MarketFinancePersonalLoanRequirementsPage() {
+  // Note: Adjusting component name and content for MarketFinance's Business Finance focus
+  return (
+    <main className="min-h-screen flex flex-col">
+      <Header />
+
+      <article className="bg-white py-8 md:py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-3xl md:text-3xl font-bold text-gray-800 mb-4 leading-8">
+              Requirements for MarketFinance Business Solutions
+            </h1>
+
+            <div className="my-8">
+              <p className="text-lg text-gray-800 mb-8 leading-5">
+                MarketFinance offers fast business loans and invoice finance.
+                Understanding their eligibility criteria helps UK SMEs access
+                the right funding.
+              </p>
+
+              <div className="my-8">
+                <Image
+                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus-requirements.webp"
+                  alt="MarketFinance Requirements"
+                  width={1000}
+                  height={563}
+                  className="w-full h-auto rounded-lg"
+                  priority
+                />
+              </div>
+
+              <section className="my-6">
+                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                  General Eligibility Criteria for SMEs
+                </h2>
+
+                <div className="space-y-6 mb-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">Business Type:</span>{" "}
+                      Primarily serves Limited Companies and LLPs registered in
+                      the UK.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">Trading History:</span>{" "}
+                      Businesses typically need a minimum trading history, often
+                      at least 12 months, with established revenue streams.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">Turnover:</span> Minimum
+                      annual turnover requirements apply, often starting from
+                      £100,000, varying by product (e.g., invoice finance vs.
+                      loans).
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">Creditworthiness:</span>{" "}
+                      MarketFinance assesses the business's financial health and
+                      credit history, as well as potentially the directors'
+                      credit profiles.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        Invoice Finance Specifics:
+                      </span>{" "}
+                      For invoice finance, businesses must issue invoices to
+                      other businesses (B2B) with standard payment terms.
+                    </div>
+                  </div>
+                </div>
+
+                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                  Information & Documentation Needed:
+                </h2>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  The online application is streamlined, but be prepared to
+                  provide:
+                </p>
+
+                <div className="space-y-6 mb-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        Company Information:
+                      </span>{" "}
+                      Registered name, company number, address, director
+                      details.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">Financial Data:</span>{" "}
+                      Option to securely link accounting software (Xero, Sage,
+                      QuickBooks etc.) or business bank accounts via Open
+                      Banking for faster assessment. Alternatively, upload
+                      recent management accounts, filed accounts, and bank
+                      statements.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        Invoice Details (for Invoice Finance):
+                      </span>{" "}
+                      Information about your sales ledger, customer payment
+                      terms, and examples of invoices may be required.
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        Loan Purpose (for Business Loans):
+                      </span>{" "}
+                      Clear details on how the loan funds will be utilized.
+                    </div>
+                  </div>
+                </div>
+
+                <div className="my-8">
+                  <Image
+                    src="https://media.topfinanzas.com/images/download-5-2.webp"
+                    alt="MarketFinance Application Process"
+                    width={1000}
+                    height={563}
+                    className="w-full h-auto rounded-lg"
+                    priority
+                  />
+                </div>
+
+                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                  Application Process
+                </h2>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  MarketFinance offers a fast, technology-driven application:
+                </p>
+
+                <div className="space-y-6 mb-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        1. Online Application:
+                      </span>{" "}
+                      Complete a short online form on the MarketFinance website,
+                      indicating the type of finance needed and basic business
+                      details.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        2. Data Connection/Upload:
+                      </span>{" "}
+                      Securely link your business bank account or accounting
+                      software, or upload necessary financial documents.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        3. Rapid Assessment:
+                      </span>{" "}
+                      MarketFinance's platform analyzes the provided data
+                      quickly to assess eligibility and determine potential
+                      offers.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        4. Decision & Offer:
+                      </span>{" "}
+                      Receive a decision, often within 24-48 hours. Approved
+                      businesses get a clear offer outlining terms, rates, and
+                      fees.
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">5. Funding:</span> Upon
+                      acceptance and final checks, funds are transferred quickly
+                      – often within 24 hours for invoice finance drawdowns or a
+                      few days for loans.
+                    </div>
+                  </div>
+                </div>
+
+                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                  Finance Terms and Conditions
+                </h2>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  Key terms vary between Business Loans and Invoice Finance:
+                </p>
+
+                <div className="space-y-6 mb-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">Business Loans:</span>{" "}
+                      Amounts £10k-£500k, terms 1-4 years, fixed interest rates
+                      + potential arrangement fee. Early repayment options may
+                      be available (check terms).
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">Invoice Finance:</span>{" "}
+                      Advance up to 90% of invoice value. Fees typically include
+                      a discount charge (interest on funds advanced) and a
+                      service fee. Flexible drawdown and repayment linked to
+                      invoice payments.
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">Security:</span> Business
+                      loans are typically unsecured but may require personal
+                      guarantees. Invoice finance is secured against the
+                      business's sales ledger (invoices).
+                    </div>
+                  </div>
+                </div>
+
+                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                  Who Is MarketFinance Best For?
+                </h2>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  MarketFinance solutions are particularly suitable for:
+                </p>
+
+                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                  B2B Businesses needing cash flow:
+                </h3>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  Companies that invoice other businesses and face delays in
+                  payment can use invoice finance to bridge cash flow gaps
+                  quickly and reliably.
+                </p>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5">
+                  <span className="font-bold">Learn more:</span>{" "}
+                  <Link
+                    href="/blog/post/invoice-finance-explained"
+                    className="text-blue-600 underline"
+                  >
+                    Understanding invoice finance for SMEs
+                  </Link>
+                </p>
+
+                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                  Established SMEs seeking growth capital:
+                </h3>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  Businesses with a solid trading history looking for fast,
+                  unsecured loans to fund expansion, new projects, or
+                  investments.
+                </p>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5">
+                  <span className="font-bold">Learn more:</span>{" "}
+                  <Link
+                    href="/blog/post/funding-sme-growth"
+                    className="text-blue-600 underline"
+                  >
+                    Funding strategies for SME growth
+                  </Link>
+                </p>
+
+                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                  Companies using modern accounting software:
+                </h3>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  Businesses using platforms like Xero, Sage, or QuickBooks can
+                  benefit from seamless data integration, speeding up the
+                  application and ongoing management.
+                </p>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5">
+                  <span className="font-bold">Learn more:</span>{" "}
+                  <Link
+                    href="/blog/post/accounting-software-integration-finance"
+                    className="text-blue-600 underline"
+                  >
+                    Benefits of accounting software integration for finance
+                  </Link>
+                </p>
+
+                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                  Tips for a Successful Application
+                </h2>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  To enhance your chances of approval with MarketFinance:
+                </p>
+
+                <div className="space-y-6 mb-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        Utilize Data Linking:
+                      </span>{" "}
+                      Connecting your bank accounts and accounting software
+                      provides the richest data for assessment and typically
+                      leads to the fastest decisions.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        Maintain Good Financial Records:
+                      </span>{" "}
+                      Ensure your accounts and bank statements are accurate,
+                      up-to-date, and clearly reflect your business's
+                      performance.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        Check Business Credit Health:
+                      </span>{" "}
+                      Review your business credit report and address any issues
+                      before applying.
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        Be Clear on Funding Use:
+                      </span>{" "}
+                      Articulate clearly how the requested finance (loan or
+                      invoice finance facility) will be used to support or grow
+                      the business.
+                    </div>
+                  </div>
+                </div>
+
+                <div className="text-center my-8">
+                  <Link href="https://marketfinance.com/" target="_blank">
+                    <Button className="bg-[#003DA5] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
+                      Visit MarketFinance Website
+                    </Button>
+                  </Link>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <CompactFooter />
+    </main>
+  );
+}

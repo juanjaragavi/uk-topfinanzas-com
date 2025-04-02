@@ -9,7 +9,7 @@ export default function FinancialSolutionsPage() {
   // Category definitions
   const categories = {
     creditCards: "Credit Cards",
-    loans: "Loans"
+    loans: "Loans",
   };
 
   // Content type definitions
@@ -17,15 +17,27 @@ export default function FinancialSolutionsPage() {
     all: "All",
     traditional: "Traditional Banks",
     neobank: "Neobanks",
-    fintech: "Fintech Solutions"
+    fintech: "Fintech Solutions",
   };
 
-  // State for active category and filter
+  // Loan type definitions
+  const loanTypes = {
+    all: "All",
+    personal: "Personal Loans",
+    sme_fintech: "SME Fintech",
+    neobank: "Neobank Loans",
+    marketplace: "Marketplaces",
+    guide: "Guides",
+  };
+
+  // State for active category and filters
   const [activeCategory, setActiveCategory] = useState("creditCards");
   const [activeCreditCardType, setActiveCreditCardType] = useState("all");
+  const [activeLoanType, setActiveLoanType] = useState("all");
 
-  // List of loan content
-  const loansContent = [
+  // List of all loan content with types
+  const allLoansContent = [
+    // Guides
     {
       title: "Best Personal Loans in the UK",
       slug: "best-personal-loans",
@@ -33,7 +45,7 @@ export default function FinancialSolutionsPage() {
         "Find the perfect personal loan for your needs with our comprehensive guide to the UK's top lenders, rates, and application requirements.",
       image: "https://media.topfinanzas.com/images/best-personal-loans.webp",
       date: "30 March 2025",
-      type: "Guide"
+      type: "guide",
     },
     {
       title: "Tips for Choosing an Online Loan",
@@ -42,7 +54,181 @@ export default function FinancialSolutionsPage() {
         "Navigate the world of online loans with confidence using these essential tips to find the best rates and terms for your financial needs.",
       image: "https://media.topfinanzas.com/images/choosing-online-loan.jpg",
       date: "30 March 2025",
-      type: "Guide"
+      type: "guide",
+    },
+    // Personal Loans (Traditional Banks)
+    {
+      title: "HSBC Personal Loan",
+      slug: "hsbc-personal-loan",
+      description:
+        "Discover HSBC Personal Loans with competitive rates, flexible repayment terms, and quick application process.",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      date: "4 April 2025",
+      type: "personal",
+    },
+    {
+      title: "Barclays Personal Loan",
+      slug: "barclays-personal-loan",
+      description:
+        "Explore Barclays Personal Loans with competitive rates, flexible terms, and a streamlined application process.",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      date: "4 April 2025",
+      type: "personal",
+    },
+    {
+      title: "Lloyds Bank Personal Loan",
+      slug: "lloyds-bank-personal-loan",
+      description:
+        "Explore Lloyds Bank Personal Loans with competitive rates, flexible repayment options, and trusted service.",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      date: "4 April 2025",
+      type: "personal",
+    },
+    {
+      title: "NatWest Personal Loan",
+      slug: "natwest-personal-loan",
+      description:
+        "Explore NatWest Personal Loans with competitive rates, flexible repayment terms, and a straightforward application process.",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      date: "4 April 2025",
+      type: "personal",
+    },
+    {
+      title: "Santander UK Personal Loan",
+      slug: "santander-uk-personal-loan",
+      description:
+        "Explore Santander UK Personal Loans with competitive rates, flexible repayment terms, and potential benefits for 1|2|3 World customers.",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      date: "4 April 2025",
+      type: "personal",
+    },
+    {
+      title: "TSB Personal Loan",
+      slug: "tsb-personal-loan",
+      description:
+        "Explore TSB Personal Loans with competitive rates, flexible repayment options, and a focus on clear, simple banking solutions.",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      date: "4 April 2025",
+      type: "personal",
+    },
+    {
+      title: "Virgin Money Personal Loan",
+      slug: "virgin-money-personal-loan",
+      description:
+        "Explore Virgin Money Personal Loans with competitive rates, flexible terms, and potential benefits linked to the Virgin Red rewards program.",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      date: "4 April 2025",
+      type: "personal",
+    },
+    {
+      title: "Halifax Personal Loan",
+      slug: "halifax-personal-loan",
+      description:
+        "Explore Halifax Personal Loans with competitive rates, flexible repayment options, and the trusted service of a major UK bank.",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      date: "4 April 2025",
+      type: "personal",
+    },
+    {
+      title: "Nationwide Personal Loan",
+      slug: "nationwide-personal-loan",
+      description:
+        "Explore Nationwide Personal Loans with competitive rates, flexible terms, and benefits for existing members.",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      date: "4 April 2025",
+      type: "personal",
+    },
+    // Personal Loans (Fintech/Neobank)
+    {
+      title: "Revolut Personal Loan",
+      slug: "revolut-personal-loan",
+      description:
+        "Explore Revolut Personal Loans offering quick decisions, flexible terms, and seamless management through the Revolut app.",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      date: "4 April 2025",
+      type: "fintech", // Could also be 'personal' depending on desired filter logic
+    },
+    {
+      title: "Monzo Personal Loan",
+      slug: "monzo-personal-loan",
+      description:
+        "Explore Monzo Personal Loans offering quick decisions, clear terms, and seamless management through the Monzo app.",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      date: "4 April 2025",
+      type: "neobank", // Could also be 'personal'
+    },
+    {
+      title: "Starling Bank Personal Loan",
+      slug: "starling-bank-personal-loan",
+      description:
+        "Explore Starling Bank Personal Loans offering competitive rates, clear terms, and seamless management via the Starling app.",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      date: "4 April 2025",
+      type: "neobank", // Could also be 'personal'
+    },
+    // SME Fintech Loans
+    {
+      title: "Funding Circle Business Loan",
+      slug: "funding-circle-personal-loan", // Keep slug as created
+      description:
+        "Explore Funding Circle's business loans offering fast, flexible financing solutions designed specifically for UK SMEs.",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      date: "4 April 2025",
+      type: "sme_fintech",
+    },
+    {
+      title: "Funding Options Marketplace",
+      slug: "funding-options-personal-loan", // Keep slug as created
+      description:
+        "Explore Funding Options, a leading UK platform connecting SMEs with a wide range of business finance solutions.",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      date: "4 April 2025",
+      type: "marketplace", // Specific type for marketplaces
+    },
+    {
+      title: "iwoca Flexi-Loan",
+      slug: "iwoca-personal-loan", // Keep slug as created
+      description:
+        "Explore iwoca's Flexi-Loan, offering fast, flexible working capital solutions designed for UK SMEs.",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      date: "4 April 2025",
+      type: "sme_fintech",
+    },
+    {
+      title: "MarketFinance Business Finance",
+      slug: "marketfinance-personal-loan", // Keep slug as created
+      description:
+        "Explore MarketFinance's solutions for UK SMEs, including fast business loans and flexible invoice finance.",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      date: "4 April 2025",
+      type: "sme_fintech",
+    },
+    {
+      title: "Funding Xchange Platform",
+      slug: "funding-xchange-personal-loan", // Keep slug as created
+      description:
+        "Explore Funding Xchange, a smart platform helping UK SMEs compare and access business finance options.",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      date: "4 April 2025",
+      type: "marketplace", // Specific type for marketplaces
+    },
+    {
+      title: "Capify Business Finance",
+      slug: "capify-personal-loan", // Keep slug as created
+      description:
+        "Explore Capify's financing solutions for UK SMEs, including Merchant Cash Advances and Business Loans.",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      date: "4 April 2025",
+      type: "sme_fintech",
+    },
+    {
+      title: "Fleximize Business Loans",
+      slug: "fleximize-personal-loan", // Keep slug as created
+      description:
+        "Explore Fleximize's flexible business loans (Flexiloan & Flexiloan Lite) offering tailored repayment options for UK SMEs.",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      date: "4 April 2025",
+      type: "sme_fintech",
     },
   ];
 
@@ -55,7 +241,7 @@ export default function FinancialSolutionsPage() {
         "Explore the Lloyds Bank Credit Card with competitive rates, no annual fees, and Everyday Offers cashback program for existing Lloyds customers.",
       image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
       date: "2 April 2025",
-      type: "traditional"
+      type: "traditional",
     },
     {
       title: "NatWest Credit Card",
@@ -64,7 +250,7 @@ export default function FinancialSolutionsPage() {
         "Discover the NatWest Credit Card with MyRewards program, mobile banking integration, and flexible payment options for everyday spending.",
       image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
       date: "2 April 2025",
-      type: "traditional"
+      type: "traditional",
     },
     {
       title: "Santander UK Credit Card",
@@ -73,7 +259,7 @@ export default function FinancialSolutionsPage() {
         "Learn about the Santander UK Credit Card with All in One cashback, no foreign transaction fees, and balance transfer options for smart financial management.",
       image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
       date: "2 April 2025",
-      type: "traditional"
+      type: "traditional",
     },
     {
       title: "TSB Credit Card",
@@ -82,7 +268,7 @@ export default function FinancialSolutionsPage() {
         "Explore the TSB Credit Card with everyday value, low fees, and seamless integration with TSB's mobile and online banking platforms.",
       image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
       date: "2 April 2025",
-      type: "traditional"
+      type: "traditional",
     },
     {
       title: "Virgin Money Credit Card",
@@ -91,7 +277,7 @@ export default function FinancialSolutionsPage() {
         "Discover the Virgin Money Credit Card with lifestyle-focused rewards, Virgin Points, and exclusive offers across the Virgin Group ecosystem.",
       image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
       date: "2 April 2025",
-      type: "traditional"
+      type: "traditional",
     },
     {
       title: "Monzo Credit Card",
@@ -100,7 +286,7 @@ export default function FinancialSolutionsPage() {
         "Learn about the Monzo Credit Card with real-time spending notifications, smart budgeting tools, and seamless integration with Monzo's digital banking services.",
       image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
       date: "2 April 2025",
-      type: "neobank"
+      type: "neobank",
     },
     {
       title: "Revolut Credit Card",
@@ -109,7 +295,7 @@ export default function FinancialSolutionsPage() {
         "Explore the Revolut Credit Card with multi-currency capabilities, competitive exchange rates, and real-time control for modern international lifestyles.",
       image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
       date: "2 April 2025",
-      type: "fintech"
+      type: "fintech",
     },
     {
       title: "Starling Bank Credit Card",
@@ -118,7 +304,7 @@ export default function FinancialSolutionsPage() {
         "Discover the Starling Bank Credit Card with transparent pricing, ethical banking practices, and advanced digital features for modern financial management.",
       image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
       date: "2 April 2025",
-      type: "neobank"
+      type: "neobank",
     },
     {
       title: "Curve Credit Card",
@@ -127,14 +313,20 @@ export default function FinancialSolutionsPage() {
         "Learn about the innovative Curve Card that consolidates all your existing cards into a single smart card with time-travel functionality and enhanced rewards.",
       image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
       date: "2 April 2025",
-      type: "fintech"
+      type: "fintech",
     },
   ];
 
-  // Filter credit cards based on type
-  const filteredCreditCards = activeCreditCardType === "all" 
-    ? creditCardsContent 
-    : creditCardsContent.filter(card => card.type === activeCreditCardType);
+  // Filter content based on selected category and type
+  const filteredCreditCards =
+    activeCreditCardType === "all"
+      ? creditCardsContent
+      : creditCardsContent.filter((card) => card.type === activeCreditCardType);
+
+  const filteredLoans =
+    activeLoanType === "all"
+      ? allLoansContent
+      : allLoansContent.filter((loan) => loan.type === activeLoanType);
 
   // Custom content for this category page
   const content = (
@@ -191,12 +383,11 @@ export default function FinancialSolutionsPage() {
             key={key}
             onClick={() => {
               setActiveCategory(key);
-              // Reset filter when changing categories
-              if (key === "creditCards") {
-                setActiveCreditCardType("all");
-              }
+              // Reset filters when changing main categories
+              setActiveCreditCardType("all");
+              setActiveLoanType("all");
             }}
-            className={`px-8 py-3 font-medium text-md transition-colors ${
+            className={`px-6 py-3 font-medium text-md transition-colors focus:outline-none ${
               activeCategory === key
                 ? "text-blue-600 border-b-2 border-blue-600"
                 : "text-gray-500 hover:text-gray-800"
@@ -241,7 +432,11 @@ export default function FinancialSolutionsPage() {
                     style={{ objectFit: "cover" }}
                   />
                   <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-2 py-1 uppercase">
-                    {post.type === "traditional" ? "Traditional" : post.type === "neobank" ? "Neobank" : "Fintech"}
+                    {post.type === "traditional"
+                      ? "Traditional"
+                      : post.type === "neobank"
+                      ? "Neobank"
+                      : "Fintech"}
                   </div>
                 </div>
                 <div className="p-6">
@@ -270,9 +465,26 @@ export default function FinancialSolutionsPage() {
 
       {activeCategory === "loans" && (
         <div className="mb-8">
+          {/* Subcategory filter for loans */}
+          <div className="flex flex-wrap gap-2 mb-6">
+            {Object.entries(loanTypes).map(([key, value]) => (
+              <button
+                key={key}
+                onClick={() => setActiveLoanType(key)}
+                className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
+                  activeLoanType === key
+                    ? "bg-green-600 text-white" // Use a different color for loan filters
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                }`}
+              >
+                {value}
+              </button>
+            ))}
+          </div>
+
           {/* Loans grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {loansContent.map((post, index) => (
+            {filteredLoans.map((post, index) => (
               <div
                 key={index}
                 className="bg-white rounded-xl shadow-sm overflow-hidden"
@@ -284,8 +496,22 @@ export default function FinancialSolutionsPage() {
                     fill
                     style={{ objectFit: "cover" }}
                   />
-                  <div className="absolute top-0 right-0 bg-green-600 text-white text-xs font-bold px-2 py-1 uppercase">
-                    {post.type}
+                  {/* Dynamic Badge based on type */}
+                  <div
+                    className={`absolute top-0 right-0 text-white text-xs font-bold px-2 py-1 uppercase ${
+                      post.type === "personal"
+                        ? "bg-blue-600"
+                        : post.type === "sme_fintech"
+                        ? "bg-purple-600"
+                        : post.type === "neobank"
+                        ? "bg-pink-600"
+                        : post.type === "marketplace"
+                        ? "bg-yellow-600"
+                        : "bg-gray-600" // Default for Guide etc.
+                    }`}
+                  >
+                    {loanTypes[post.type as keyof typeof loanTypes] ||
+                      post.type}
                   </div>
                 </div>
                 <div className="p-6">

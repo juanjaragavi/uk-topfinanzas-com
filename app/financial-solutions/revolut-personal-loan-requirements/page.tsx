@@ -1,0 +1,462 @@
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Header } from "@/components/layout/header";
+import { CompactFooter } from "@/components/layout/compact-footer";
+
+export function generateMetadata() {
+  return {
+    title:
+      "Revolut Personal Loan Requirements: Fintech Application Guide - Top Finance UK",
+    description:
+      "Learn about Revolut Personal Loan eligibility criteria, the fully digital application process, and required information for approval.",
+    keywords:
+      "Revolut Personal Loan requirements, UK fintech loan application, loan eligibility, Revolut loan criteria, personal loan documentation, Revolut app",
+  };
+}
+
+export default function RevolutPersonalLoanRequirementsPage() {
+  return (
+    <main className="min-h-screen flex flex-col">
+      <Header />
+
+      <article className="bg-white py-8 md:py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-3xl md:text-3xl font-bold text-gray-800 mb-4 leading-8">
+              Requirements for Revolut Personal Loans
+            </h1>
+
+            <div className="my-8">
+              <p className="text-lg text-gray-800 mb-8 leading-5">
+                Revolut Personal Loans offer a fast, app-based borrowing
+                experience. Understanding the eligibility criteria and digital
+                application process is key for existing Revolut users.
+              </p>
+
+              <div className="my-8">
+                <Image
+                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus-requirements.webp"
+                  alt="Revolut Personal Loan Requirements"
+                  width={1000}
+                  height={563}
+                  className="w-full h-auto rounded-lg"
+                  priority
+                />
+              </div>
+
+              <section className="my-6">
+                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                  Basic Eligibility Criteria
+                </h2>
+
+                <div className="space-y-6 mb-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        Existing Revolut Customer:
+                      </span>{" "}
+                      You must have an active and verified Revolut account to
+                      apply for a personal loan. Loan availability may also
+                      depend on your account usage and history.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">Age requirement:</span>{" "}
+                      You must be at least 18 years old.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">Residency:</span> You must
+                      be a legal resident of a country where Revolut offers
+                      personal loans (primarily UK and select EEA countries).
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        Income and Affordability:
+                      </span>{" "}
+                      You need to demonstrate sufficient regular income to
+                      afford the loan repayments. Revolut may assess this using
+                      your account activity and information provided during the
+                      application.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">Credit History:</span>{" "}
+                      Revolut will perform a credit check. A good credit history
+                      improves your chances of approval and securing a favorable
+                      rate, although Revolut may also consider your internal
+                      customer data.
+                    </div>
+                  </div>
+                </div>
+
+                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                  Required Information (In-App):
+                </h2>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  The application is fully digital within the Revolut app.
+                  You'll typically need to provide or confirm:
+                </p>
+
+                <div className="space-y-6 mb-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">Loan Purpose:</span>{" "}
+                      Specify the reason for the loan (e.g., debt consolidation,
+                      home improvement, car purchase).
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">Employment Details:</span>{" "}
+                      Information about your employment status, employer, and
+                      job title.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">Income Information:</span>{" "}
+                      Details of your regular income and potentially
+                      confirmation of monthly expenses or existing debts.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        Consent for Credit Check:
+                      </span>{" "}
+                      You will need to provide consent for Revolut to perform a
+                      credit check with credit reference agencies.
+                    </div>
+                  </div>
+                </div>
+
+                <div className="my-8">
+                  <Image
+                    src="https://media.topfinanzas.com/images/download-5-2.webp"
+                    alt="Revolut Personal Loan Application In-App"
+                    width={1000}
+                    height={563}
+                    className="w-full h-auto rounded-lg"
+                    priority
+                  />
+                </div>
+
+                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                  Digital Application Process
+                </h2>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  Revolut's loan application is designed for speed and
+                  convenience within their app:
+                </p>
+
+                <div className="space-y-6 mb-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">In-App Access:</span>{" "}
+                      Navigate to the 'Credit' or 'Loans' section within the
+                      Revolut app to check eligibility and start the
+                      application.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        Quick Form Completion:
+                      </span>{" "}
+                      The application form is typically short, leveraging
+                      information already held in your Revolut profile. You'll
+                      confirm details and provide specifics about the loan
+                      request.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">Fast Decision:</span>{" "}
+                      Revolut uses automated systems and potentially your
+                      account data to provide a quick lending decision, often
+                      within minutes or hours.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        Instant Funding (if approved):
+                      </span>{" "}
+                      Once approved and the digital agreement is signed within
+                      the app, funds are typically credited instantly to your
+                      Revolut account.
+                    </div>
+                  </div>
+                </div>
+
+                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                  Loan Terms and Conditions
+                </h2>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  Key terms associated with Revolut Personal Loans:
+                </p>
+
+                <div className="space-y-6 mb-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">Representative APR:</span>{" "}
+                      Revolut's representative APR typically starts from around
+                      4.9%. The actual rate offered is personalized based on
+                      your profile, credit check, and potentially your Revolut
+                      usage history.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">Loan Amounts:</span>{" "}
+                      Typically borrow between £1,000 and £25,000, subject to
+                      eligibility.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">Repayment Terms:</span>{" "}
+                      Choose repayment periods usually from 1 to 5 years (12 to
+                      60 months).
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">Early Repayment:</span>{" "}
+                      Revolut generally allows early repayment, often without
+                      significant penalties, offering good flexibility. Always
+                      check the specific terms in your loan agreement.
+                    </div>
+                  </div>
+                </div>
+
+                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                  Who Is This Loan Best For?
+                </h2>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  Revolut Personal Loans are particularly suitable for:
+                </p>
+
+                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                  Existing Revolut users:
+                </h3>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  The seamless in-app application and management process makes
+                  it highly convenient for those already using Revolut for their
+                  day-to-day banking. Your existing relationship may also
+                  influence eligibility and rates.
+                </p>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5">
+                  <span className="font-bold">Learn more:</span>{" "}
+                  <Link
+                    href="/blog/post/benefits-of-fintech-ecosystems"
+                    className="text-blue-600 underline"
+                  >
+                    Benefits of integrated fintech ecosystems
+                  </Link>
+                </p>
+
+                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                  Tech-savvy borrowers:
+                </h3>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  Individuals comfortable with managing their finances entirely
+                  through a mobile app and who value speed and digital
+                  convenience will appreciate Revolut's approach.
+                </p>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5">
+                  <span className="font-bold">Learn more:</span>{" "}
+                  <Link
+                    href="/blog/post/digital-lending-trends"
+                    className="text-blue-600 underline"
+                  >
+                    Trends in digital lending
+                  </Link>
+                </p>
+
+                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                  Those needing quick access to funds:
+                </h3>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  The fast application, decision, and funding process makes
+                  Revolut loans suitable for situations where quick access to
+                  borrowed funds is important.
+                </p>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5">
+                  <span className="font-bold">Learn more:</span>{" "}
+                  <Link
+                    href="/blog/post/fast-loan-options"
+                    className="text-blue-600 underline"
+                  >
+                    Comparing fast loan options
+                  </Link>
+                </p>
+
+                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                  Tips for a Successful Application
+                </h2>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  To enhance your chances of approval for a Revolut Personal
+                  Loan:
+                </p>
+
+                <div className="space-y-6 mb-8">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        Maintain a healthy Revolut account:
+                      </span>{" "}
+                      Regular activity, responsible usage, and potentially
+                      holding a paid subscription plan might positively
+                      influence Revolut's internal assessment.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        Check your credit score:
+                      </span>{" "}
+                      While Revolut uses its own data, your traditional credit
+                      score remains important. Ensure your credit report is
+                      accurate before applying.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        Ensure profile information is up-to-date:
+                      </span>{" "}
+                      Make sure your personal and employment details within the
+                      Revolut app are current before starting the loan
+                      application.
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
+                      <span className="text-white font-bold">➔</span>
+                    </div>
+                    <div className="text-sm leading-5">
+                      <span className="font-semibold">
+                        Be realistic about affordability:
+                      </span>{" "}
+                      Only apply for an amount you can comfortably repay based
+                      on your income and expenses. Revolut's affordability
+                      checks are designed to prevent over-borrowing.
+                    </div>
+                  </div>
+                </div>
+
+                <div className="text-center my-8">
+                  <Link
+                    href="https://www.revolut.com/personal-loans/"
+                    target="_blank"
+                  >
+                    <Button className="bg-[#191C33] hover:bg-blue-900 text-white font-medium text-md py-2 px-8 rounded-full w-full">
+                      Visit Official Website (Check Availability)
+                    </Button>
+                  </Link>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <CompactFooter />
+    </main>
+  );
+}
