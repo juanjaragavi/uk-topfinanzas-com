@@ -36,7 +36,7 @@ export default function LloydsBankPersonalLoanRequirementsPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus-requirements.webp"
+                  src="https://media.topfinanzas.com/images/uk/loans/718136062-fotosprestamo-lloyds2uk.jpg"
                   alt="Lloyds Bank Personal Loan Requirements"
                   width={1000}
                   height={563}
@@ -170,17 +170,6 @@ export default function LloydsBankPersonalLoanRequirementsPage() {
                       disbursement and setting up direct debit repayments.
                     </div>
                   </div>
-                </div>
-
-                <div className="my-8">
-                  <Image
-                    src="https://media.topfinanzas.com/images/download-5-2.webp"
-                    alt="Lloyds Bank Personal Loan Application"
-                    width={1000}
-                    height={563}
-                    className="w-full h-auto rounded-lg"
-                    priority
-                  />
                 </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">

@@ -102,7 +102,7 @@ export default function BarclaysPersonalLoanPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
+                  src="https://media.topfinanzas.com/images/uk/loans/718136012-fotosprestamo-barclays2uk.jpg"
                   alt="Barclays Personal Loan"
                   width={1000}
                   height={563}

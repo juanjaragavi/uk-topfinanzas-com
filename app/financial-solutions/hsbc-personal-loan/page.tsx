@@ -103,7 +103,7 @@ export default function HSBCPersonalLoanPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
+                  src="https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.jpg"
                   alt="HSBC Personal Loan"
                   width={1000}
                   height={563}

@@ -62,7 +62,8 @@ export default function FinancialSolutionsPage() {
       slug: "hsbc-personal-loan",
       description:
         "Discover HSBC Personal Loans with competitive rates, flexible repayment terms, and quick application process.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.jpg",
       date: "4 April 2025",
       type: "personal",
     },
@@ -71,7 +72,7 @@ export default function FinancialSolutionsPage() {
       slug: "barclays-personal-loan",
       description:
         "Explore Barclays Personal Loans with competitive rates, flexible terms, and a streamlined application process.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image: "https://media.topfinanzas.com/images/uk/loans/718136012-fotosprestamo-barclays2uk.jpg",
       date: "4 April 2025",
       type: "personal",
     },
@@ -80,7 +81,7 @@ export default function FinancialSolutionsPage() {
       slug: "lloyds-bank-personal-loan",
       description:
         "Explore Lloyds Bank Personal Loans with competitive rates, flexible repayment options, and trusted service.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image: "https://media.topfinanzas.com/images/uk/loans/718136057-fotosprestamo-lloyds1uk.jpg",
       date: "4 April 2025",
       type: "personal",
     },
@@ -89,7 +90,7 @@ export default function FinancialSolutionsPage() {
       slug: "natwest-personal-loan",
       description:
         "Explore NatWest Personal Loans with competitive rates, flexible repayment terms, and a straightforward application process.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image: "https://media.topfinanzas.com/images/uk/loans/718136156-fotosprestamo-nawest1uk.jpg",
       date: "4 April 2025",
       type: "personal",
     },
