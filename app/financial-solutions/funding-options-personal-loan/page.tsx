@@ -104,7 +104,7 @@ export default function FundingOptionsPersonalLoanPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
+                  src="https://media.topfinanzas.com/images/uk/loans/718138018-fotosprestamo-fundingoption1uk.jpg"
                   alt="Funding Options Business Finance Marketplace"
                   width={1000}
                   height={563}

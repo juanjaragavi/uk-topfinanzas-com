@@ -99,7 +99,7 @@ export default function MonzoPersonalLoanPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
+                  src="https://media.topfinanzas.com/images/uk/loans/718136607-fotosprestamo-monzo2uk.jpg"
                   alt="Monzo Personal Loan"
                   width={1000}
                   height={563}

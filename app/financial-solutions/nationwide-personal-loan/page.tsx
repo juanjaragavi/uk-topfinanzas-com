@@ -99,7 +99,7 @@ export default function NationwidePersonalLoanPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
+                  src="https://media.topfinanzas.com/images/uk/loans/718136476-fotosprestamo-nationwide1uk.jpg"
                   alt="Nationwide Personal Loan"
                   width={1000}
                   height={563}

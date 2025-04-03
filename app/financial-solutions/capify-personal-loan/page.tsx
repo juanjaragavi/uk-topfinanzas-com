@@ -101,7 +101,7 @@ export default function CapifyPersonalLoanPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
+                  src="https://media.topfinanzas.com/images/uk/loans/718137374-fotosprestamo-capify1uk.jpg"
                   alt="Capify Business Finance Solutions"
                   width={1000}
                   height={563}

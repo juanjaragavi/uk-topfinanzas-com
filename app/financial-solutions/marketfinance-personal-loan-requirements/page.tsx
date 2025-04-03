@@ -37,7 +37,7 @@ export default function MarketFinancePersonalLoanRequirementsPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus-requirements.webp"
+                  src="https://media.topfinanzas.com/images/uk/loans/718137317-fotosprestamo-fundingchange1uk.jpg"
                   alt="MarketFinance Requirements"
                   width={1000}
                   height={563}
@@ -171,17 +171,6 @@ export default function MarketFinancePersonalLoanRequirementsPage() {
                       Clear details on how the loan funds will be utilized.
                     </div>
                   </div>
-                </div>
-
-                <div className="my-8">
-                  <Image
-                    src="https://media.topfinanzas.com/images/download-5-2.webp"
-                    alt="MarketFinance Application Process"
-                    width={1000}
-                    height={563}
-                    className="w-full h-auto rounded-lg"
-                    priority
-                  />
                 </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">

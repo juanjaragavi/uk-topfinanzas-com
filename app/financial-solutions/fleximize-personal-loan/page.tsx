@@ -103,7 +103,7 @@ export default function FleximizePersonalLoanPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
+                  src="https://media.topfinanzas.com/images/uk/loans/718137416-fotosprestamo-fleximize1uk.jpg"
                   alt="Fleximize Business Loans"
                   width={1000}
                   height={563}

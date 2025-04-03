@@ -36,7 +36,7 @@ export default function RevolutPersonalLoanRequirementsPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus-requirements.webp"
+                  src="https://media.topfinanzas.com/images/uk/loans/718136531-fotosprestamo-revoult2uk.jpg"
                   alt="Revolut Personal Loan Requirements"
                   width={1000}
                   height={563}
@@ -170,17 +170,6 @@ export default function RevolutPersonalLoanRequirementsPage() {
                       credit check with credit reference agencies.
                     </div>
                   </div>
-                </div>
-
-                <div className="my-8">
-                  <Image
-                    src="https://media.topfinanzas.com/images/download-5-2.webp"
-                    alt="Revolut Personal Loan Application In-App"
-                    width={1000}
-                    height={563}
-                    className="w-full h-auto rounded-lg"
-                    priority
-                  />
                 </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">

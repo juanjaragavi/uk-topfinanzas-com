@@ -72,7 +72,8 @@ export default function FinancialSolutionsPage() {
       slug: "barclays-personal-loan",
       description:
         "Explore Barclays Personal Loans with competitive rates, flexible terms, and a streamlined application process.",
-      image: "https://media.topfinanzas.com/images/uk/loans/718136012-fotosprestamo-barclays2uk.jpg",
+      image:
+        "https://media.topfinanzas.com/images/uk/loans/718136012-fotosprestamo-barclays2uk.jpg",
       date: "4 April 2025",
       type: "personal",
     },
@@ -81,7 +82,8 @@ export default function FinancialSolutionsPage() {
       slug: "lloyds-bank-personal-loan",
       description:
         "Explore Lloyds Bank Personal Loans with competitive rates, flexible repayment options, and trusted service.",
-      image: "https://media.topfinanzas.com/images/uk/loans/718136057-fotosprestamo-lloyds1uk.jpg",
+      image:
+        "https://media.topfinanzas.com/images/uk/loans/718136057-fotosprestamo-lloyds1uk.jpg",
       date: "4 April 2025",
       type: "personal",
     },
@@ -90,7 +92,8 @@ export default function FinancialSolutionsPage() {
       slug: "natwest-personal-loan",
       description:
         "Explore NatWest Personal Loans with competitive rates, flexible repayment terms, and a straightforward application process.",
-      image: "https://media.topfinanzas.com/images/uk/loans/718136156-fotosprestamo-nawest1uk.jpg",
+      image:
+        "https://media.topfinanzas.com/images/uk/loans/718136156-fotosprestamo-nawest1uk.jpg",
       date: "4 April 2025",
       type: "personal",
     },
@@ -99,7 +102,8 @@ export default function FinancialSolutionsPage() {
       slug: "santander-uk-personal-loan",
       description:
         "Explore Santander UK Personal Loans with competitive rates, flexible repayment terms, and potential benefits for 1|2|3 World customers.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/loans/718136214-fotosprestamo-santander1uk.jpg",
       date: "4 April 2025",
       type: "personal",
     },
@@ -108,7 +112,8 @@ export default function FinancialSolutionsPage() {
       slug: "tsb-personal-loan",
       description:
         "Explore TSB Personal Loans with competitive rates, flexible repayment options, and a focus on clear, simple banking solutions.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/loans/718136271-fotosprestamo-tbs1uk.jpg",
       date: "4 April 2025",
       type: "personal",
     },
@@ -117,7 +122,8 @@ export default function FinancialSolutionsPage() {
       slug: "virgin-money-personal-loan",
       description:
         "Explore Virgin Money Personal Loans with competitive rates, flexible terms, and potential benefits linked to the Virgin Red rewards program.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/loans/718136330-fotosprestamo-virginmoney1uk.jpg",
       date: "4 April 2025",
       type: "personal",
     },
@@ -126,7 +132,8 @@ export default function FinancialSolutionsPage() {
       slug: "halifax-personal-loan",
       description:
         "Explore Halifax Personal Loans with competitive rates, flexible repayment options, and the trusted service of a major UK bank.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/loans/718136403-fotosprestamo-halifax1uk.jpg",
       date: "4 April 2025",
       type: "personal",
     },
@@ -135,7 +142,8 @@ export default function FinancialSolutionsPage() {
       slug: "nationwide-personal-loan",
       description:
         "Explore Nationwide Personal Loans with competitive rates, flexible terms, and benefits for existing members.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/loans/718136476-fotosprestamo-nationwide1uk.jpg",
       date: "4 April 2025",
       type: "personal",
     },
@@ -145,7 +153,8 @@ export default function FinancialSolutionsPage() {
       slug: "revolut-personal-loan",
       description:
         "Explore Revolut Personal Loans offering quick decisions, flexible terms, and seamless management through the Revolut app.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/loans/718136529-fotosprestamo-revoult1uk.jpg",
       date: "4 April 2025",
       type: "fintech", // Could also be 'personal' depending on desired filter logic
     },
@@ -154,7 +163,8 @@ export default function FinancialSolutionsPage() {
       slug: "monzo-personal-loan",
       description:
         "Explore Monzo Personal Loans offering quick decisions, clear terms, and seamless management through the Monzo app.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/loans/718136607-fotosprestamo-monzo2uk.jpg",
       date: "4 April 2025",
       type: "neobank", // Could also be 'personal'
     },
@@ -163,7 +173,7 @@ export default function FinancialSolutionsPage() {
       slug: "starling-bank-personal-loan",
       description:
         "Explore Starling Bank Personal Loans offering competitive rates, clear terms, and seamless management via the Starling app.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image: "https://media.topfinanzas.com/images/uk/loans/718136704-fotosprestamo-starlinkbanck1uk.jpg",
       date: "4 April 2025",
       type: "neobank", // Could also be 'personal'
     },
@@ -173,7 +183,7 @@ export default function FinancialSolutionsPage() {
       slug: "funding-circle-personal-loan", // Keep slug as created
       description:
         "Explore Funding Circle's business loans offering fast, flexible financing solutions designed specifically for UK SMEs.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image: "https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.jpg",
       date: "4 April 2025",
       type: "sme_fintech",
     },
@@ -182,7 +192,7 @@ export default function FinancialSolutionsPage() {
       slug: "funding-options-personal-loan", // Keep slug as created
       description:
         "Explore Funding Options, a leading UK platform connecting SMEs with a wide range of business finance solutions.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image: "https://media.topfinanzas.com/images/uk/loans/718138018-fotosprestamo-fundingoption1uk.jpg",
       date: "4 April 2025",
       type: "marketplace", // Specific type for marketplaces
     },
@@ -191,7 +201,7 @@ export default function FinancialSolutionsPage() {
       slug: "iwoca-personal-loan", // Keep slug as created
       description:
         "Explore iwoca's Flexi-Loan, offering fast, flexible working capital solutions designed for UK SMEs.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image: "https://media.topfinanzas.com/images/uk/loans/718137033-fotosprestamo-iwoca1uk.jpg",
       date: "4 April 2025",
       type: "sme_fintech",
     },
@@ -200,7 +210,7 @@ export default function FinancialSolutionsPage() {
       slug: "marketfinance-personal-loan", // Keep slug as created
       description:
         "Explore MarketFinance's solutions for UK SMEs, including fast business loans and flexible invoice finance.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image: "https://media.topfinanzas.com/images/uk/loans/718137315-fotosprestamo-fundingchange2uk.jpg",
       date: "4 April 2025",
       type: "sme_fintech",
     },
@@ -209,7 +219,7 @@ export default function FinancialSolutionsPage() {
       slug: "funding-xchange-personal-loan", // Keep slug as created
       description:
         "Explore Funding Xchange, a smart platform helping UK SMEs compare and access business finance options.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image: "https://media.topfinanzas.com/images/uk/loans/718136896-fotosprestamo-fundingchange1uk.jpg",
       date: "4 April 2025",
       type: "marketplace", // Specific type for marketplaces
     },
@@ -218,7 +228,7 @@ export default function FinancialSolutionsPage() {
       slug: "capify-personal-loan", // Keep slug as created
       description:
         "Explore Capify's financing solutions for UK SMEs, including Merchant Cash Advances and Business Loans.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image: "https://media.topfinanzas.com/images/uk/loans/718137374-fotosprestamo-capify1uk.jpg",
       date: "4 April 2025",
       type: "sme_fintech",
     },
@@ -227,7 +237,7 @@ export default function FinancialSolutionsPage() {
       slug: "fleximize-personal-loan", // Keep slug as created
       description:
         "Explore Fleximize's flexible business loans (Flexiloan & Flexiloan Lite) offering tailored repayment options for UK SMEs.",
-      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image: "https://media.topfinanzas.com/images/uk/loans/718137416-fotosprestamo-fleximize1uk.jpg",
       date: "4 April 2025",
       type: "sme_fintech",
     },
@@ -519,13 +529,13 @@ export default function FinancialSolutionsPage() {
                   {/* Dynamic Badge based on type */}
                   <div
                     className={`absolute top-0 right-0 text-white text-xs font-bold px-2 py-1 uppercase ${
-                      post.type === "personal"
-                        ? "bg-blue-600"
-                        : post.type === "sme_fintech"
-                        ? "bg-purple-600"
-                        : post.type === "neobank"
-                        ? "bg-pink-600"
-                        : post.type === "marketplace"
+                post.type === "personal"
+                  ? "bg-blue-600"
+                  : post.type === "sme_fintech"
+                  ? "bg-red-600" // Changed purple to red for SME Fintech (like Iwoca)
+                  : post.type === "neobank"
+                  ? "bg-pink-600"
+                  : post.type === "marketplace"
                         ? "bg-yellow-600"
                         : "bg-gray-600" // Default for Guide etc.
                     }`}

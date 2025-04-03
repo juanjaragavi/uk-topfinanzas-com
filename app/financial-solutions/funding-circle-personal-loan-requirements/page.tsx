@@ -37,7 +37,7 @@ export default function FundingCirclePersonalLoanRequirementsPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus-requirements.webp"
+                  src="https://media.topfinanzas.com/images/uk/loans/718136831-fotosprestamo-fundingcircle2uk.jpg"
                   alt="Funding Circle Business Loan Requirements"
                   width={1000}
                   height={563}
@@ -167,17 +167,6 @@ export default function FundingCirclePersonalLoanRequirementsPage() {
                       benefit the business.
                     </div>
                   </div>
-                </div>
-
-                <div className="my-8">
-                  <Image
-                    src="https://media.topfinanzas.com/images/download-5-2.webp"
-                    alt="Funding Circle Business Loan Application"
-                    width={1000}
-                    height={563}
-                    className="w-full h-auto rounded-lg"
-                    priority
-                  />
                 </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">

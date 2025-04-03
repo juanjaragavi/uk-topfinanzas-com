@@ -36,7 +36,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus-requirements.webp"
+                  src="https://media.topfinanzas.com/images/uk/loans/718136220-fotosprestamo-santander2uk.jpg"
                   alt="Santander UK Personal Loan Requirements"
                   width={1000}
                   height={563}
@@ -172,17 +172,6 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                       disbursement and setting up direct debit repayments.
                     </div>
                   </div>
-                </div>
-
-                <div className="my-8">
-                  <Image
-                    src="https://media.topfinanzas.com/images/download-5-2.webp"
-                    alt="Santander UK Personal Loan Application"
-                    width={1000}
-                    height={563}
-                    className="w-full h-auto rounded-lg"
-                    priority
-                  />
                 </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">

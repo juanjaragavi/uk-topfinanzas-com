@@ -36,7 +36,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus-requirements.webp"
+                  src="https://media.topfinanzas.com/images/uk/loans/718136477-fotosprestamo-nationwide2uk.jpg"
                   alt="Nationwide Personal Loan Requirements"
                   width={1000}
                   height={563}
@@ -171,17 +171,6 @@ export default function NationwidePersonalLoanRequirementsPage() {
                       disbursement and setting up direct debit repayments.
                     </div>
                   </div>
-                </div>
-
-                <div className="my-8">
-                  <Image
-                    src="https://media.topfinanzas.com/images/download-5-2.webp"
-                    alt="Nationwide Personal Loan Application"
-                    width={1000}
-                    height={563}
-                    className="w-full h-auto rounded-lg"
-                    priority
-                  />
                 </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">

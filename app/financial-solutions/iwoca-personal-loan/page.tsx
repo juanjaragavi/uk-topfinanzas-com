@@ -38,7 +38,7 @@ export default function IwocaPersonalLoanPage() {
 
               <div className="space-y-2 mb-8">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-[#00B5A3] flex items-center justify-center mr-3">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3">
                     {" "}
                     {/* iwoca Teal */}
                     <span className="text-white font-bold">➔</span>
@@ -52,7 +52,7 @@ export default function IwocaPersonalLoanPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-[#00B5A3] flex items-center justify-center mr-3">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-md leading-5">
@@ -64,7 +64,7 @@ export default function IwocaPersonalLoanPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-[#00B5A3] flex items-center justify-center mr-3">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-md leading-5">
@@ -78,7 +78,7 @@ export default function IwocaPersonalLoanPage() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-[#00B5A3] flex items-center justify-center mr-3">
+                  <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
                   <div className="text-md leading-5">
@@ -93,7 +93,7 @@ export default function IwocaPersonalLoanPage() {
 
               <div className="text-center my-8">
                 <Link href="/financial-solutions/iwoca-personal-loan-requirements">
-                  <Button className="bg-[#00B5A3] hover:bg-teal-600 text-white font-medium text-md py-2 px-8 rounded-full w-full">
+                  <Button className="bg-red-400 hover:bg-teal-600 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                     View Requirements
                   </Button>
                 </Link>
@@ -101,7 +101,7 @@ export default function IwocaPersonalLoanPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
+                  src="https://media.topfinanzas.com/images/uk/loans/718137033-fotosprestamo-iwoca1uk.jpg"
                   alt="iwoca Business Finance"
                   width={1000}
                   height={563}
@@ -168,7 +168,7 @@ export default function IwocaPersonalLoanPage() {
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 size-5 rounded-full bg-[#00B5A3] flex items-center justify-center mr-3 mt-0.5">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
@@ -180,7 +180,7 @@ export default function IwocaPersonalLoanPage() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 size-5 rounded-full bg-[#00B5A3] flex items-center justify-center mr-3 mt-0.5">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
@@ -194,7 +194,7 @@ export default function IwocaPersonalLoanPage() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 size-5 rounded-full bg-[#00B5A3] flex items-center justify-center mr-3 mt-0.5">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
@@ -208,7 +208,7 @@ export default function IwocaPersonalLoanPage() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 size-5 rounded-full bg-[#00B5A3] flex items-center justify-center mr-3 mt-0.5">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
@@ -232,7 +232,7 @@ export default function IwocaPersonalLoanPage() {
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 size-5 rounded-full bg-[#00B5A3] flex items-center justify-center mr-3 mt-0.5">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
@@ -243,7 +243,7 @@ export default function IwocaPersonalLoanPage() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 size-5 rounded-full bg-[#00B5A3] flex items-center justify-center mr-3 mt-0.5">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
@@ -258,7 +258,7 @@ export default function IwocaPersonalLoanPage() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="flex-shrink-0 size-5 rounded-full bg-[#00B5A3] flex items-center justify-center mr-3 mt-0.5">
+                    <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5">
@@ -294,7 +294,7 @@ export default function IwocaPersonalLoanPage() {
 
                 <div className="text-center my-8">
                   <Link href="/financial-solutions/iwoca-personal-loan-requirements">
-                    <Button className="bg-[#00B5A3] hover:bg-teal-600 text-white font-medium text-md py-2 px-8 rounded-full w-full">
+                    <Button className="bg-red-400 hover:bg-teal-600 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       View Requirements
                     </Button>
                   </Link>

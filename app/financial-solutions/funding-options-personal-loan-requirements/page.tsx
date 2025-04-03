@@ -37,7 +37,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus-requirements.webp"
+                  src="https://media.topfinanzas.com/images/uk/loans/718138020-fotosprestamo-fundingoption2uk.jpg"
                   alt="Funding Options Process"
                   width={1000}
                   height={563}
@@ -179,17 +179,6 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                   requirements if you proceed with a full application (e.g.,
                   detailed accounts, bank statements, business plans).
                 </p>
-
-                <div className="my-8">
-                  <Image
-                    src="https://media.topfinanzas.com/images/download-5-2.webp"
-                    alt="Funding Options SME Finance Process"
-                    width={1000}
-                    height={563}
-                    className="w-full h-auto rounded-lg"
-                    priority
-                  />
-                </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
                   How the Funding Options Process Works

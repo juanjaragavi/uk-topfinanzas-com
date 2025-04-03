@@ -100,7 +100,7 @@ export default function VirginMoneyPersonalLoanPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
+                  src="https://media.topfinanzas.com/images/uk/loans/718136330-fotosprestamo-virginmoney1uk.jpg"
                   alt="Virgin Money Personal Loan"
                   width={1000}
                   height={563}

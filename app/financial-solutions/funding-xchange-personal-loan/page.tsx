@@ -103,7 +103,7 @@ export default function FundingXchangePersonalLoanPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
+                  src="https://media.topfinanzas.com/images/uk/loans/718136896-fotosprestamo-fundingchange1uk.jpg"
                   alt="Funding Xchange Business Finance Platform"
                   width={1000}
                   height={563}

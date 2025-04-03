@@ -35,7 +35,7 @@ export default function TSBPersonalLoanRequirementsPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/barclaycard-avios-plus-requirements.webp"
+                  src="https://media.topfinanzas.com/images/uk/loans/718136277-fotosprestamo-tbs2uk.jpg"
                   alt="TSB Personal Loan Requirements"
                   width={1000}
                   height={563}
@@ -168,17 +168,6 @@ export default function TSBPersonalLoanRequirementsPage() {
                       disbursement and setting up direct debit repayments.
                     </div>
                   </div>
-                </div>
-
-                <div className="my-8">
-                  <Image
-                    src="https://media.topfinanzas.com/images/download-5-2.webp"
-                    alt="TSB Personal Loan Application"
-                    width={1000}
-                    height={563}
-                    className="w-full h-auto rounded-lg"
-                    priority
-                  />
                 </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
