@@ -178,7 +178,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                 </div>
 
                 <div className="my-8">
-                  <Link href="/financial-solutions/barclaycard-avios-plus-requirements">
+                  <Link href="/personal-finance/best-personal-loans">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Personal-loans-1.png"
                       alt="Barclaycard Avios Plus Credit Card"
@@ -315,7 +315,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                 </p>
 
                 <div className="my-8">
-                  <Link href="/financial-solutions/barclaycard-avios-plus-requirements">
+                  <Link href="/personal-finance/getting-out-of-debt">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Debt-management-1.png"
                       alt="Barclaycard Avios Plus Credit Card"

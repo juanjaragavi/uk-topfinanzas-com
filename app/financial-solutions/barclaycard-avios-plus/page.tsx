@@ -159,7 +159,7 @@ export default function BarclayCardAviosPlusPage() {
                 </p>
 
                 <div className="my-8">
-                  <Link href="/financial-solutions/barclaycard-avios-plus-requirements">
+                  <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.png"
                       alt="Barclaycard Avios Plus Credit Card"
