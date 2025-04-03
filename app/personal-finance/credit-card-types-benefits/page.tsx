@@ -104,15 +104,15 @@ export default function CreditCardTypesBenefitsPage() {
                       large items.
                     </li>
                     <li>
-                      <strong>Credit Builder Cards:</strong> Aimed at those
-                      with limited or poor credit history, helping them build or
+                      <strong>Credit Builder Cards:</strong> Aimed at those with
+                      limited or poor credit history, helping them build or
                       rebuild their credit score. They typically have higher
                       APRs and lower credit limits.
                     </li>
                     <li>
                       <strong>Travel Cards:</strong> Offer benefits like low or
-                      no foreign transaction fees when used abroad, and sometimes
-                      travel rewards or insurance.
+                      no foreign transaction fees when used abroad, and
+                      sometimes travel rewards or insurance.
                     </li>
                     <li>
                       <strong>Premium/Charge Cards:</strong> Often come with
@@ -122,9 +122,9 @@ export default function CreditCardTypesBenefitsPage() {
                       full each month.
                     </li>
                     <li>
-                      <strong>Store Cards:</strong> Offer discounts and
-                      benefits at specific retail chains but tend to have higher
-                      interest rates than standard credit cards.
+                      <strong>Store Cards:</strong> Offer discounts and benefits
+                      at specific retail chains but tend to have higher interest
+                      rates than standard credit cards.
                     </li>
                   </ul>
                 </div>
@@ -140,14 +140,14 @@ export default function CreditCardTypesBenefitsPage() {
                   </p>
                   <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800 space-y-2">
                     <li>
-                      <strong>Credit Limit:</strong> This is the maximum
-                      amount you can spend with your card. It’s important not to
-                      spend close to the limit (high credit utilisation) as this
-                      can negatively impact your credit score.
+                      <strong>Credit Limit:</strong> This is the maximum amount
+                      you can spend with your card. It’s important not to spend
+                      close to the limit (high credit utilisation) as this can
+                      negatively impact your credit score.
                     </li>
                     <li>
-                      <strong>Interest Rate (APR):</strong> This is the cost
-                      of borrowing, expressed as an annual rate. If you pay your
+                      <strong>Interest Rate (APR):</strong> This is the cost of
+                      borrowing, expressed as an annual rate. If you pay your
                       full statement balance by the due date each month, you
                       typically won’t pay interest on purchases. APRs vary
                       depending on the type of card and your credit profile.
@@ -179,7 +179,9 @@ export default function CreditCardTypesBenefitsPage() {
                   </p>
                   <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800 space-y-2">
                     <li>
-                      <strong>Growth of Contactless and Mobile Payments:</strong>
+                      <strong>
+                        Growth of Contactless and Mobile Payments:
+                      </strong>
                       Increasing use of cards via mobile wallets (Apple Pay,
                       Google Pay) for convenience and security.
                     </li>
@@ -232,8 +234,8 @@ export default function CreditCardTypesBenefitsPage() {
                       liable with the retailer if something goes wrong.
                     </li>
                     <li>
-                      <strong>Rewards and Benefits:</strong> Can offer
-                      cashback, points, or miles for travel, plus other perks.
+                      <strong>Rewards and Benefits:</strong> Can offer cashback,
+                      points, or miles for travel, plus other perks.
                     </li>
                     <li>
                       <strong>Building Credit History:</strong> Using a credit
@@ -247,8 +249,8 @@ export default function CreditCardTypesBenefitsPage() {
                       expenses between paydays (if paid off in full).
                     </li>
                     <li>
-                      <strong>Emergencies:</strong> Can provide a safety net
-                      for unexpected costs.
+                      <strong>Emergencies:</strong> Can provide a safety net for
+                      unexpected costs.
                     </li>
                   </ul>
 
@@ -304,13 +306,14 @@ export default function CreditCardTypesBenefitsPage() {
                       damage to your credit score (but aim to pay more).
                     </li>
                     <li>
-                      <strong>Stick to a Budget:</strong> Treat your credit
-                      card like cash – only spend what you know you can afford
-                      to repay.
+                      <strong>Stick to a Budget:</strong> Treat your credit card
+                      like cash – only spend what you know you can afford to
+                      repay.
                     </li>
                     <li>
                       <strong>Monitor Your Statements:</strong> Check your
-                      statements regularly for errors or fraudulent transactions.
+                      statements regularly for errors or fraudulent
+                      transactions.
                     </li>
                     <li>
                       <strong>Keep Credit Utilisation Low:</strong> Try not to
@@ -340,9 +343,9 @@ export default function CreditCardTypesBenefitsPage() {
                       you're likely to be eligible for.
                     </li>
                     <li>
-                      <strong>Your Spending Habits:</strong> Choose rewards
-                      that match where you spend most (e.g., supermarket points,
-                      air miles).
+                      <strong>Your Spending Habits:</strong> Choose rewards that
+                      match where you spend most (e.g., supermarket points, air
+                      miles).
                     </li>
                     <li>
                       <strong>Your Repayment Plans:</strong> If you need to

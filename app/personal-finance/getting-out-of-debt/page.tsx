@@ -37,11 +37,10 @@ export default function GettingOutOfDebtPage() {
                 <p className="text-gray-800 text-sm leading-5 font-light">
                   Do you feel overwhelmed by debt and don’t know where to start
                   to free yourself from it? You’re not alone. Many people face
-                  the same situation, but the good news is that it’s possible
-                  to get out of debt and regain control of your finances. In
-                  this practical guide, I’ll share effective strategies and
-                  useful tips so you can start your path toward a debt-free
-                  life today.
+                  the same situation, but the good news is that it’s possible to
+                  get out of debt and regain control of your finances. In this
+                  practical guide, I’ll share effective strategies and useful
+                  tips so you can start your path toward a debt-free life today.
                 </p>
 
                 <div>
@@ -116,9 +115,9 @@ export default function GettingOutOfDebtPage() {
                           and insurance.
                         </li>
                         <li>
-                          <strong>Non-essential expenses:</strong> This
-                          includes subscriptions, entertainment, dining out,
-                          impulse purchases, etc.
+                          <strong>Non-essential expenses:</strong> This includes
+                          subscriptions, entertainment, dining out, impulse
+                          purchases, etc.
                         </li>
                       </ul>
                     </li>
@@ -134,20 +133,22 @@ export default function GettingOutOfDebtPage() {
                   </p>
                   <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800 space-y-2">
                     <li>
-                      <strong>Reduce or eliminate non-essential expenses:</strong>
+                      <strong>
+                        Reduce or eliminate non-essential expenses:
+                      </strong>
                       Do you have several streaming subscriptions you don’t use
                       often? Could you reduce dining out or takeaways?
                     </li>
                     <li>
-                      <strong>Practical example:</strong> If you currently
-                      spend £100 on entertainment, try reducing it to £50 and
-                      allocate the other £50 toward your debt payments.
+                      <strong>Practical example:</strong> If you currently spend
+                      £100 on entertainment, try reducing it to £50 and allocate
+                      the other £50 toward your debt payments.
                     </li>
                     <li>
-                      <strong>Negotiate lower rates:</strong> Call your
-                      service providers, such as phone, internet, or insurance.
-                      They may offer discounts or more economical packages if
-                      you ask. Use comparison sites regularly.
+                      <strong>Negotiate lower rates:</strong> Call your service
+                      providers, such as phone, internet, or insurance. They may
+                      offer discounts or more economical packages if you ask.
+                      Use comparison sites regularly.
                     </li>
                   </ul>
 
@@ -288,19 +289,19 @@ export default function GettingOutOfDebtPage() {
                       Upwork, Fiverr, or PeoplePerHour are good places to start.
                     </li>
                     <li>
-                      <strong>Sell items you don’t need:</strong> Take some
-                      time to go through your home and sell items you don’t use.
+                      <strong>Sell items you don’t need:</strong> Take some time
+                      to go through your home and sell items you don’t use.
                       Websites like eBay, Facebook Marketplace, Vinted, or
                       Gumtree can help you sell clothing, electronics,
                       furniture, or any item you no longer need. Every pound
                       counts.
                     </li>
                     <li>
-                      <strong>Sharing economy:</strong> Participate in
-                      platforms like Uber, Deliveroo, or Airbnb to generate
-                      extra income. If you have free time, driving, delivering,
-                      or renting out a room can help you dedicate more money to
-                      paying off your debts.
+                      <strong>Sharing economy:</strong> Participate in platforms
+                      like Uber, Deliveroo, or Airbnb to generate extra income.
+                      If you have free time, driving, delivering, or renting out
+                      a room can help you dedicate more money to paying off your
+                      debts.
                     </li>
                   </ul>
                   <h3 className="text-lg font-semibold text-gray-800 mb-3">
@@ -389,11 +390,11 @@ export default function GettingOutOfDebtPage() {
                       </ul>
                     </li>
                     <li>
-                      <strong>Document everything:</strong> Keep a record of
-                      all communications (dates, times, names). Any agreement
-                      you reach should be confirmed in writing to prevent
-                      future misunderstandings. Save emails, letters, and any
-                      proof of the new agreed-upon terms.
+                      <strong>Document everything:</strong> Keep a record of all
+                      communications (dates, times, names). Any agreement you
+                      reach should be confirmed in writing to prevent future
+                      misunderstandings. Save emails, letters, and any proof of
+                      the new agreed-upon terms.
                     </li>
                   </ul>
 
@@ -431,8 +432,8 @@ export default function GettingOutOfDebtPage() {
                   </h3>
                   <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800 space-y-2">
                     <li>
-                      <strong>Start with a small goal:</strong> You don’t need
-                      a large amount at first. Set an achievable initial goal,
+                      <strong>Start with a small goal:</strong> You don’t need a
+                      large amount at first. Set an achievable initial goal,
                       like saving £500 or £1,000. This will give you a cushion
                       for emergencies without diverting too much money from your
                       debt payments.

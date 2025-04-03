@@ -153,6 +153,19 @@ export default function HalifaxWorldEliteMastercardPage() {
                   who specialise in creating exceptional experiences.
                 </p>
 
+                <div className="my-8">
+                  <Link href="/personal-finance/credit-card-types-benefits/">
+                    <Image
+                      src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.png"
+                      alt="Barclaycard Avios Plus Credit Card"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-lg"
+                      priority
+                    />
+                  </Link>
+                </div>
+
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Additional Features:
                 </h2>
