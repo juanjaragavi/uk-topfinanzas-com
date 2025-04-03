@@ -316,6 +316,20 @@ export default function CurveCreditCardRequirementsPage() {
                   </div>
                 </div>
 
+                {/* Ad Block 1: Personal Loans */}
+                <div className="my-8">
+                  <Link href="/personal-finance/best-personal-loans">
+                    <Image
+                      src="https://media.topfinanzas.com/images/ads/Top-Blog-Personal-loans-1.png"
+                      alt="Curve Credit Card"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-lg"
+                      priority
+                    />
+                  </Link>
+                </div>
+
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
                   Key Benefits and Features
                 </h2>
@@ -450,6 +464,20 @@ export default function CurveCreditCardRequirementsPage() {
                     Advanced techniques for maximizing credit card rewards
                   </Link>
                 </p>
+
+                {/* Ad Block 2: Debt Management */}
+                <div className="my-8">
+                  <Link href="/personal-finance/getting-out-of-debt">
+                    <Image
+                      src="https://media.topfinanzas.com/images/ads/Top-Blog-Debt-management-1.png"
+                      alt="Curve Credit Card"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-lg"
+                      priority
+                    />
+                  </Link>
+                </div>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Is the Curve Card Right for You?
