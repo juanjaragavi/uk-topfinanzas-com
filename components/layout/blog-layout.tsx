@@ -462,7 +462,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
               </div>
 
               {/* Newsletter signup */}
-              <div className="p-4 bg-blue-50 rounded-xl">
+              <div className="p-4 bg-blue-50 rounded-2xl">
                 <h3 className="text-[12px] font-bold mb-2 text-[#234043]">
                   Subscribe to our newsletter
                 </h3>
@@ -474,9 +474,9 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   <input
                     type="email"
                     placeholder="Your email address"
-                    className="w-full px-3 py-1.5 text-[10px] border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    className="w-full px-3 py-1.5 text-[10px] border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500"
                   />
-                  <Button className="w-full text-[10px] py-1.5">
+                  <Button className="w-full text-[10px] py-1.5 rounded-full">
                     Subscribe
                   </Button>
                 </div>

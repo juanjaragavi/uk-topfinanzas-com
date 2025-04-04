@@ -814,7 +814,7 @@ const SidebarNewsletter = React.forwardRef<
     <div
       ref={ref}
       data-sidebar="newsletter"
-      className={cn("px-2 my-4 bg-blue-50 p-4 rounded-lg", className)}
+      className={cn("px-2 my-4 bg-blue-50 p-4 rounded-2xl", className)}
       {...props}
     >
       <h3 className="font-semibold text-lg mb-2">
@@ -828,12 +828,12 @@ const SidebarNewsletter = React.forwardRef<
         <input
           type="email"
           placeholder="Your email address"
-          className="w-full px-3 py-2 border rounded-md text-sm"
+          className="w-full px-3 py-2 border rounded-lg text-sm"
           required
         />
         <button
           type="submit"
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md"
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-full"
         >
           Subscribe
         </button>
