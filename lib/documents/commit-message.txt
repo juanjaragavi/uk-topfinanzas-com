@@ -1,8 +1,3 @@
-feat(seo): Improve root layout metadata and SEO configuration
+feat(deployment): add deployment automation script
 
-- Update root metadata in `app/layout.tsx` for UK focus (title, description, keywords).
-- Add Open Graph and Twitter card metadata to `app/layout.tsx`.
-- Update OG/Twitter image URL in `app/layout.tsx` to use 'your-first-paycheck.webp'.
-- Create `public/robots.txt` with standard directives and AI bot controls.
-- Create basic static `public/sitemap.xml` including main pages and new categories.
-- Confirm `llms.txt` is not standard; `robots.txt` is used for LLM bot control.
+- Create `scripts/deploy_update.sh` to automate pulling changes, rebuilding the Next.js app, and restarting the PM2 process.

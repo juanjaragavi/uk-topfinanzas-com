@@ -1,3 +1,5 @@
+"use client"; // Add this directive
+
 import { BlogLayout } from "@/components/mdx/blog-layout";
 import Link from "next/link";
 import Image from "next/image";
