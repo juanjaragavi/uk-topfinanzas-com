@@ -1,7 +1,5 @@
-feat(localization): Implement UK credit card content
+feat(localization): Add UK personal loan content
 
-- Add new UK credit card product pages for Barclaycard Avios Plus and Halifax World Elite Mastercard
-- Create corresponding requirements pages for each credit card
-- Add comprehensive UK credit card guide blog post
-- Update credit card recommender to link to UK card products
-- Modify .gitignore to manage image files properly
+- Add new UK personal loan product pages for multiple providers (e.g., TSB, Barclays, Santander, Starling, HSBC, Lloyds, NatWest, etc.)
+- Create corresponding requirements pages for each personal loan product
+- Expand financial solutions section with UK personal loan options

@@ -259,6 +259,19 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
+                <div className="my-8">
+                  <Link href="/personal-finance/best-personal-loans">
+                    <Image
+                      src="https://media.topfinanzas.com/images/ads/Top-Blog-Personal-loans-1.png"
+                      alt="Funding Options Business Finance"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-lg"
+                      priority
+                    />
+                  </Link>
+                </div>
+
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
                   Types of Finance Available
                 </h2>
@@ -348,6 +361,19 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     Searching for business finance efficiently
                   </Link>
                 </p>
+
+                <div className="my-8">
+                  <Link href="/personal-finance/getting-out-of-debt">
+                    <Image
+                      src="https://media.topfinanzas.com/images/ads/Top-Blog-Debt-management-1.png"
+                      alt="Funding Options Business Finance"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-lg"
+                      priority
+                    />
+                  </Link>
+                </div>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Tips for Using Funding Options Effectively

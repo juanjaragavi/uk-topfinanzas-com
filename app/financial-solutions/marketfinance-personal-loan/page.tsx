@@ -160,6 +160,19 @@ export default function MarketFinancePersonalLoanPage() {
                   bank processes.
                 </p>
 
+                <div className="my-8">
+                  <Link href="/personal-finance/credit-card-types-benefits/">
+                    <Image
+                      src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.png"
+                      alt="MarketFinance Business Finance"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-lg"
+                      priority
+                    />
+                  </Link>
+                </div>
+
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Additional Features:
                 </h2>
