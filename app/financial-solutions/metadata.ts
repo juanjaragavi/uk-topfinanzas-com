@@ -1,30 +1,35 @@
 import type { Metadata } from "next";
 
+// Metadata specifically for the /financial-solutions landing page
 export const metadata: Metadata = {
-  title: "Soluciones Financieras - TopFinanzas",
+  title: "UK Financial Solutions: Credit Cards & Loans | TopFinance UK",
   description:
-    "Descubra información sobre las mejores tarjetas de crédito, requisitos y guías completas para elegir la opción adecuada para sus necesidades financieras.",
+    "Explore comprehensive guides and comparisons of the best UK credit cards and personal loans. Find requirements, benefits, and apply for the right financial solution.",
   keywords:
-    "soluciones financieras, tarjetas de crédito, BBVA, Nu Bank, Plata Card, comparación de tarjetas, México",
+    "UK financial solutions, credit cards UK, personal loans UK, compare credit cards, compare loans, Barclays, HSBC, Lloyds, NatWest, Santander, Monzo, Starling, best UK finance",
   openGraph: {
-    title: "Soluciones Financieras - TopFinanzas",
+    title: "UK Financial Solutions: Credit Cards & Loans | TopFinance UK",
     description:
-      "Descubra información sobre las mejores tarjetas de crédito disponibles en México.",
+      "Your guide to the top credit cards and personal loans available in the UK. Compare options and find the best fit for your needs.",
     images: [
       {
-        url: "https://media.topfinanzas.com/images/tarjeta-plata-card.webp",
-        width: 1000,
-        height: 563,
-        alt: "Soluciones Financieras TopFinanzas",
+        // Using a relevant UK product image
+        url: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+        width: 1200, // Adjust if necessary
+        height: 630, // Adjust if necessary
+        alt: "UK Financial Solutions from TopFinance UK",
       },
     ],
     type: "website",
+    url: "https://uk.topfinanzas.com/financial-solutions", // Assuming this is the correct URL
   },
   twitter: {
     card: "summary_large_image",
-    title: "Soluciones Financieras - TopFinanzas",
+    title: "UK Financial Solutions: Credit Cards & Loans | TopFinance UK",
     description:
-      "Descubra información sobre las mejores tarjetas de crédito disponibles en México.",
-    images: ["https://media.topfinanzas.com/images/tarjeta-plata-card.webp"],
+      "Your guide to the top credit cards and personal loans available in the UK. Compare options and find the best fit for your needs.",
+    images: [
+      "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+    ],
   },
 };

@@ -176,9 +176,10 @@ export default function SidebarExample() {
           </div>
 
           <p className="text-gray-700">
-            This is an example implementation of the sidebar with all components
-            translated and the advertisement pointing to the BBVA Blue Credit
-            Card page.
+            This is an example implementation of the sidebar components. The
+            advertisement component (SidebarAd) would typically point to a
+            relevant product page, such as the Barclaycard Avios Plus
+            requirements page.
           </p>
         </div>
       </div>

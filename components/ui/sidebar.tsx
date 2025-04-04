@@ -736,7 +736,6 @@ const SidebarMenuSubButton = React.forwardRef<
 });
 SidebarMenuSubButton.displayName = "SidebarMenuSubButton";
 
-// Sidebar Ad component that links to the BBVA credit card page
 const SidebarAd = React.forwardRef<HTMLDivElement, React.ComponentProps<"div">>(
   ({ className, ...props }, ref) => {
     return (
@@ -746,14 +745,15 @@ const SidebarAd = React.forwardRef<HTMLDivElement, React.ComponentProps<"div">>(
         className={cn("px-2 my-4", className)}
         {...props}
       >
-        <Link href="/financial-solutions/bbva-blue-credit-card-requirements/">
+        <Link href="/personal-finance/credit-card-types-benefits/">
           <div className="overflow-hidden rounded-lg border shadow hover:shadow-md transition-shadow">
             <Image
-              src="https://media.topfinanzas.com/images/Tobanner-02-1.webp"
-              alt="BBVA Blue Credit Card"
-              width={300}
-              height={250}
-              className="w-full h-auto"
+              src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.png"
+              alt="Barclaycard Avios Plus Credit Card"
+              width={1000}
+              height={563}
+              className="mx-auto w-full md:w-full h-auto rounded-lg"
+              priority
             />
           </div>
         </Link>

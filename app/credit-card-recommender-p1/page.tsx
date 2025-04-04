@@ -250,11 +250,11 @@ export default function CreditCardRecommenderPage() {
             <div className="my-8">
               <Link href="/financial-solutions/barclaycard-avios-plus">
                 <Image
-                  src="https://media.topfinanzas.com/images/Tobanner-02-1.webp"
-                  alt="UK Credit Card Recommender"
-                  width={800}
-                  height={450}
-                  className="w-full h-auto rounded-lg"
+                  src="https://media.topfinanzas.com/images/ads/Top-Blog-Debt-management-1.png"
+                  alt="Barclaycard Avios Plus Credit Card"
+                  width={1000}
+                  height={563}
+                  className="mx-auto w-full md:w-8/12 h-auto rounded-lg"
                   priority
                 />
               </Link>

@@ -1,6 +1,6 @@
-feat(blog): Add category archive pages and update navigation
+refactor(localization): Update metadata and links for UK market
 
-- Add 'Financial Solutions' to blog categories in header navigation data (`lib/navigation/headerNavigation.ts`).
-- Create category archive page: `app/blog/category/personal-finance/page.tsx`.
-- Create category archive page: `app/blog/category/financial-solutions/page.tsx`.
-- Implement static post listings for both new category pages based on existing content structure.
+- Update `app/financial-solutions/metadata.ts` with UK-specific titles, descriptions, keywords, and image references.
+- Change "APPLY NOW" link in `lib/navigation/headerNavigation.ts` to point to a UK product requirements page (Barclaycard Avios Plus).
+- Update example text in `components/ui/sidebar-example.tsx` to reference a UK product instead of BBVA.
+- Remove outdated Mexico/BBVA references from active code components.

@@ -50,7 +50,8 @@ export const headerNavigation = {
     },
     {
       text: "APPLY NOW",
-      href: "/financial-solutions/bbva-blue-credit-card-requirements",
+      // Updated to a relevant UK product application page
+      href: "/financial-solutions/barclaycard-avios-plus-requirements",
     },
   ],
 
