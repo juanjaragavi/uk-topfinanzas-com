@@ -34,6 +34,19 @@ export default function BarclayCardAviosPlusPage() {
                 spending with premium travel benefits.
               </p>
 
+              <div className="my-8">
+                <Link href="/personal-finance/credit-card-types-benefits/">
+                  <Image
+                    src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.png"
+                    alt="Barclays Personal Loan"
+                    width={1000}
+                    height={563}
+                    className="mx-auto w-full md:w-8/12 h-auto rounded-lg"
+                    priority
+                  />
+                </Link>
+              </div>
+
               <div className="space-y-2 mb-8">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3">
@@ -160,16 +173,33 @@ export default function BarclayCardAviosPlusPage() {
 
                 {/* Related Articles Section */}
                 <div className="my-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3">Learn More About Credit Cards:</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                    Learn More About Credit Cards:
+                  </h3>
                   <ul className="space-y-2 list-disc list-inside text-blue-700">
                     <li>
-                      <Link href="/personal-finance/travel-credit-cards/" className="hover:underline hover:text-blue-900 transition-colors">Top Travel Credit Cards</Link>
+                      <Link
+                        href="/personal-finance/travel-credit-cards/"
+                        className="hover:underline hover:text-blue-900 transition-colors"
+                      >
+                        Top Travel Credit Cards
+                      </Link>
                     </li>
                     <li>
-                      <Link href="/personal-finance/best-rewards-credit-cards/" className="hover:underline hover:text-blue-900 transition-colors">Maximising Credit Card Rewards</Link>
+                      <Link
+                        href="/personal-finance/best-rewards-credit-cards/"
+                        className="hover:underline hover:text-blue-900 transition-colors"
+                      >
+                        Maximising Credit Card Rewards
+                      </Link>
                     </li>
                     <li>
-                      <Link href="/personal-finance/understanding-credit-card-interest-rates/" className="hover:underline hover:text-blue-900 transition-colors">Understanding Interest Rates</Link>
+                      <Link
+                        href="/personal-finance/understanding-credit-card-interest-rates/"
+                        className="hover:underline hover:text-blue-900 transition-colors"
+                      >
+                        Understanding Interest Rates
+                      </Link>
                     </li>
                   </ul>
                 </div>

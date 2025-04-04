@@ -1,3 +1,4 @@
-feat(deployment): add deployment automation script
+refactor(ui): optimize styles and ad placements
 
-- Create `scripts/deploy_update.sh` to automate pulling changes, rebuilding the Next.js app, and restarting the PM2 process.
+- Modified styles for improved visual consistency and performance.
+- Adjusted ad placements for better user experience and visibility.
