@@ -1,6 +1,6 @@
-feat(content): Enhance 'Getting Out of Debt' guide
+feat(blog): Add category archive pages and update navigation
 
-- Add section on Debt Consolidation strategies (balance transfer, personal loans)
-- Suggest table format for listing debts
-- Add internal links to related personal finance pages
-- Refine conclusion for stronger call to action
+- Add 'Financial Solutions' to blog categories in header navigation data (`lib/navigation/headerNavigation.ts`).
+- Create category archive page: `app/blog/category/personal-finance/page.tsx`.
+- Create category archive page: `app/blog/category/financial-solutions/page.tsx`.
+- Implement static post listings for both new category pages based on existing content structure.

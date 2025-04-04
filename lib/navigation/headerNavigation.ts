@@ -97,6 +97,10 @@ export const headerNavigation = {
             href: "/blog/category/personal-finance",
           },
           {
+            text: "Financial Solutions",
+            href: "/blog/category/financial-solutions",
+          },
+          {
             text: "Mortgages",
             href: "/blog/category/mortgages",
           },
@@ -146,14 +150,16 @@ export const headerNavigation = {
         {
           title: "Amazon Rewards Visa Card Benefits",
           href: "/financial-solutions/amazon-rewards-visa-credit-card-benefits",
-          image: "https://media.topfinanzas.com/images/amazon-rewards-visa.webp",
+          image:
+            "https://media.topfinanzas.com/images/amazon-rewards-visa.webp",
           category: "Credit Cards",
           categoryHref: "/financial-solutions",
         },
         {
           title: "Best Personal Loans in the UK",
           href: "/financial-solutions/best-personal-loans",
-          image: "https://media.topfinanzas.com/images/best-personal-loans.webp",
+          image:
+            "https://media.topfinanzas.com/images/best-personal-loans.webp",
           category: "Loans",
           categoryHref: "/financial-solutions",
         },
