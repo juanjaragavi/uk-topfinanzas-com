@@ -1,0 +1,22 @@
+# Allow all friendly crawlers full access
+User-agent: *
+Allow: /
+
+# Disallow access to API routes (example)
+Disallow: /api/
+
+# Specific directives for AI crawlers (examples)
+User-agent: Google-Extended
+Disallow: / # Disallow Google's Bard/Vertex AI
+
+User-agent: GPTBot
+Disallow: / # Disallow OpenAI's GPTBot
+
+User-agent: CCBot
+Disallow: / # Disallow Common Crawl
+
+User-agent: Anthropic-AI
+Disallow: / # Disallow Anthropic AI
+
+# Sitemap location
+Sitemap: https://uk.topfinanzas.com/sitemap.xml

@@ -1,6 +1,8 @@
-refactor(localization): Update metadata and links for UK market
+feat(seo): Improve root layout metadata and SEO configuration
 
-- Update `app/financial-solutions/metadata.ts` with UK-specific titles, descriptions, keywords, and image references.
-- Change "APPLY NOW" link in `lib/navigation/headerNavigation.ts` to point to a UK product requirements page (Barclaycard Avios Plus).
-- Update example text in `components/ui/sidebar-example.tsx` to reference a UK product instead of BBVA.
-- Remove outdated Mexico/BBVA references from active code components.
+- Update root metadata in `app/layout.tsx` for UK focus (title, description, keywords).
+- Add Open Graph and Twitter card metadata to `app/layout.tsx`.
+- Update OG/Twitter image URL in `app/layout.tsx` to use 'your-first-paycheck.webp'.
+- Create `public/robots.txt` with standard directives and AI bot controls.
+- Create basic static `public/sitemap.xml` including main pages and new categories.
+- Confirm `llms.txt` is not standard; `robots.txt` is used for LLM bot control.
