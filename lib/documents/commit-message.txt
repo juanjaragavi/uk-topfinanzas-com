@@ -1,9 +1,5 @@
-feat(blog): refactor blog structure and enhance homepage
+feat(dev): add QUnit testing scaffold to example.html
 
-- Refactored blog post handling to use dynamic routes (`/blog/post/[slug]`) and fetch content/metadata from MDX files in `/content/blog/`.
-- Created API route `/api/posts` to serve blog data.
-- Enhanced homepage (`/app/page.tsx`) with dynamic post loading, category filtering, and pagination.
-- Fixed various build errors related to MDX processing and missing frontmatter.
-- Resolved runtime errors ("Rendered more hooks") on the homepage.
-- Addressed broken image issues by updating frontmatter and Next.js image configuration.
-- Styled pagination buttons on the homepage.
+- Updated `lib/documents/example.html` to include QUnit framework via CDN.
+- Added necessary HTML structure for QUnit test runner.
+- Included example tests and instructions for browser-based testing.

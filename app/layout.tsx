@@ -68,12 +68,12 @@ export const metadata: Metadata = {
   },
 
   // Optional: Add icons and manifest for PWA/better bookmarking
-  // icons: {
-  //   icon: '/favicon.ico',
-  //   shortcut: '/favicon-16x16.png',
-  //   apple: '/apple-touch-icon.png',
-  // },
-  // manifest: `${baseUrl}/site.webmanifest`,
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: `${baseUrl}/site.webmanifest`,
 
   // Optional: Define metadataBase for resolving relative image URLs
   metadataBase: new URL(baseUrl),
@@ -87,17 +87,39 @@ export default function RootLayout({
   return (
     <html lang="en-gb">
       <head>
-        {/* Optional: Add Organization Schema JSON-LD here */}
-        {/* <script
+        <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "url": baseUrl,
-            "logo": `${baseUrl}/images/logo.png` // Replace with actual logo URL
-            // Add other properties like name, contactPoint, sameAs (social profiles)
-          }) }}
-        /> */}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "TopFinance UK", // Replace with your actual name
+                url: baseUrl, // Uses the variable defined above
+                logo: "https://uk.topfinanzas.com/images/logo-english-color.png",
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress: "1 Financial Square", // Replace with your address
+                  addressLocality: "London",
+                  postalCode: "SW1A 0AA",
+                  addressCountry: "GB",
+                },
+                contactPoint: {
+                  "@type": "ContactPoint",
+                  telephone: "+44-20-1234-5678", // Replace with your phone
+                  contactType: "customer support", // Adjust as needed
+                  email: "info@topfinanzas.com", // Replace with your email
+                },
+                sameAs: [
+                  "https://www.linkedin.com/company/top-networks-inc", // Replace with your actual social links
+                  "https://www.instagram.com/topfinance_en/",
+                ],
+              },
+              null,
+              2
+            ),
+          }} // Added null, 2 for pretty printing in source (optional)
+        />
         <GoogleTagManager />
       </head>
       <body className={`${poppins.variable} font-sans`}>

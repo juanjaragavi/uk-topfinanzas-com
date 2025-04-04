@@ -45,4 +45,7 @@ public/images/**/*.svg
 public/images/**/*.webp
 
 # Placeholder Markdown Document
-lib/documents/placeholder-markdown.md
+lib/documents/placeholder-markdown-document.md
+
+# Placeholder HTML Document
+lib/documents/example.html
