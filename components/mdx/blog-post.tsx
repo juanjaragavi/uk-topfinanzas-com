@@ -6,14 +6,14 @@ import { ReactNode } from "react";
 interface BlogPostProps {
   children: ReactNode;
   metadata: {
-    title: string;
-    date: string;
-    author: string;
-    authorImage: string;
-    readingTime: string;
-    categories: Array<{ name: string; slug: string }>;
-    featuredImage: string;
-    excerpt: string;
+    title: string; // Keep required
+    date: string; // Keep required
+    author?: string; // Make optional
+    authorImage?: string; // Make optional
+    readingTime?: string; // Make optional
+    categories?: Array<{ name: string; slug: string }>; // Make optional
+    featuredImage?: string; // Make optional
+    excerpt?: string; // Make optional
     views?: number;
     commentCount?: number;
   };

@@ -18,20 +18,26 @@ const nextConfig = {
   assetPrefix: undefined,
   basePath: "",
   images: {
-    unoptimized: true,
+    unoptimized: false, // Enable Next.js image optimization
     dangerouslyAllowSVG: true,
     remotePatterns: [
       {
         protocol: "https",
         hostname: "media.topfinanzas.com",
         port: "",
-        pathname: "/images/**",
+        pathname: "/**", // Make pathname more permissive
+      },
+      {
+        protocol: "https",
+        hostname: "us.topfinanzas.com", // Added new hostname
+        port: "",
+        pathname: "/**", // Allow any path under this hostname
       },
     ],
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    domains: ["media.topfinanzas.com"],
+    // domains: ["media.topfinanzas.com"], // Remove potentially conflicting domains array
     minimumCacheTTL: 60,
   },
   experimental: {

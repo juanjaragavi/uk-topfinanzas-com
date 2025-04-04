@@ -4,166 +4,135 @@ import { notFound } from "next/navigation";
 import { BlogPost } from "@/components/mdx/blog-post";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { useMDXComponents } from "@/mdx-components";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import { Ad } from "@/components/ui/ad"; // Import Ad component
+import { Button } from "@/components/ui/button"; // Import Button component (used in index.mdx)
+// MDXRemote might not be needed if content is passed as children
+// import { MDXRemote } from "next-mdx-remote/rsc";
+import matter from "gray-matter"; // Added for frontmatter parsing
 
-export const dynamicParams = true;
+export const dynamicParams = true; // Keep true to allow rendering pages not found during build
 
-// Define a type for the blog post data
-type BlogPostMetadata = {
+// Removed BlogPostMetadata type - will infer from frontmatter or define locally if needed
+// Removed BlogPostsData type
+// Removed BLOG_POSTS_DATA constant
+
+// Example of expected frontmatter structure (can be adjusted)
+interface PostFrontmatter {
   title: string;
-  date: string;
-  author: string;
-  authorImage: string;
-  readingTime: string;
-  categories: Array<{ name: string; slug: string }>;
-  featuredImage: string;
-  excerpt: string;
-  views: number;
-  commentCount: number;
+  date: string; // Consider using Date type if consistency is guaranteed
+  author?: string; // Made optional, provide defaults if needed
+  authorImage?: string; // Made optional
+  readingTime?: string; // Made optional, could be calculated
+  categories?: Array<{ name: string; slug: string }>; // Made optional
+  featuredImage?: string; // Made optional
+  description: string; // Keep description for metadata
+  excerpt?: string; // Added excerpt, make optional as it might fallback to description
+  views?: number; // Made optional
+  commentCount?: number; // Made optional
+  [key: string]: any; // Allow other fields
+}
+
+// Placeholder for the actual data fetching logic
+const getPostBySlug = (
+  slug: string
+): { frontmatter: PostFrontmatter; content: string } | null => {
+  const postsDirectory = path.join(process.cwd(), "content/blog");
+  const fullPath = path.join(postsDirectory, `${slug}.mdx`);
+  try {
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const { data, content } = matter(fileContents);
+
+    // Basic validation/defaults for required fields
+    if (!data.title || !data.description || !data.date) {
+      console.warn(
+        `Post ${slug} is missing required frontmatter (title, description, date)`
+      );
+      // Optionally return null or throw error if strict validation is needed
+    }
+
+    // Provide default values for optional fields if necessary
+    const frontmatter: PostFrontmatter = {
+      title: data.title || "Untitled Post",
+      description: data.description || "No description provided.",
+      date: data.date || new Date().toISOString(), // Default to now if date missing
+      author: data.author || "Top Finance", // Default author
+      authorImage:
+        data.authorImage || "https://media.topfinanzas.com/images/favicon.png", // Default image
+      readingTime: data.readingTime, // Keep undefined if not present
+      categories: data.categories || [
+        { name: "Uncategorized", slug: "uncategorized" },
+      ], // Default category
+      featuredImage: data.featuredImage, // Keep undefined if not present
+      excerpt: data.excerpt || data.description || "No excerpt provided.", // Add excerpt, fallback to description
+      views: data.views || 0,
+      commentCount: data.commentCount || 0,
+      ...data, // Include any other fields from frontmatter
+    };
+
+    return { frontmatter, content };
+  } catch (err) {
+    // File not found or other read error
+    // console.error(`Error reading post ${slug}:`, err); // Optional logging
+    return null;
+  }
 };
 
-// Define a type for our blog posts object with string keys
-type BlogPostsData = {
-  [key: string]: BlogPostMetadata;
+const getAllPostSlugs = (): string[] => {
+  const postsDirectory = path.join(process.cwd(), "content/blog");
+  try {
+    const filenames = fs.readdirSync(postsDirectory);
+    return filenames
+      .filter((filename) => filename.endsWith(".mdx"))
+      .map((filename) => filename.replace(/\.mdx$/, ""));
+  } catch (err) {
+    console.error("Error reading content/blog directory:", err);
+    return [];
+  }
 };
 
 // This would typically come from a CMS, database, or file system
 // For this demo, we'll use a hardcoded map of sample blog posts
-const BLOG_POSTS_DATA: BlogPostsData = {
-  "uk-credit-card-guide": {
-    title: "Guide to UK Credit Cards: Finding the Best Option for Your Needs",
-    date: "March 30, 2025",
-    author: "Top Finance",
-    authorImage: "https://media.topfinanzas.com/images/favicon.png",
-    readingTime: "8 minute read",
-    categories: [{ name: "Credit Cards", slug: "credit-cards" }],
-    featuredImage:
-      "https://media.topfinanzas.com/images/uk-credit-cards-guide.jpg",
-    excerpt:
-      "Navigate the UK credit card market with confidence using our comprehensive guide to selecting the best card for your financial situation and lifestyle needs.",
-    views: 423,
-    commentCount: 0,
-  },
-  "your-first-paycheck": {
-    title: "Your First Paycheck: A Complete Guide to Smart Management",
-    date: "February 25, 2025",
-    author: "Top Finance",
-    authorImage: "https://media.topfinanzas.com/images/favicon.png",
-    readingTime: "6 minute read",
-    categories: [{ name: "Personal Finance", slug: "personal-finance" }],
-    featuredImage:
-      "https://media.topfinanzas.com/images/generated/1741659352997/sample_0.jpg",
-    excerpt:
-      "Welcome to the working world, where your first paycheck marks the start of a new chapter full of opportunities and responsibilities.",
-    views: 721,
-    commentCount: 0,
-  },
-  "what-is-a-home-mortgage": {
-    title: "What Is a Home Mortgage? Your Complete Guide",
-    date: "February 25, 2025",
-    author: "Top Finance",
-    authorImage: "https://media.topfinanzas.com/images/favicon.png",
-    readingTime: "8 minute read",
-    categories: [{ name: "Mortgages", slug: "mortgages" }],
-    featuredImage:
-      "https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg",
-    excerpt:
-      "A comprehensive guide to understanding home mortgages, types of loans, interest rates, and how to get the best deal.",
-    views: 563,
-    commentCount: 0,
-  },
-  "what-are-online-loans": {
-    title: "What Are Online Loans?: A Key Tool in Personal Finances",
-    date: "February 25, 2025",
-    author: "Top Finance",
-    authorImage: "https://media.topfinanzas.com/images/favicon.png",
-    readingTime: "5 minute read",
-    categories: [{ name: "Personal Finance", slug: "personal-finance" }],
-    featuredImage:
-      "https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg",
-    excerpt:
-      "In an increasingly digital world, online loans have emerged as a fundamental financial option for many Americans.",
-    views: 412,
-    commentCount: 0,
-  },
-  "5-tips-for-choosing-an-online-loan": {
-    title: "5 Tips for Choosing an Online Loan: Quick Guide",
-    date: "February 25, 2025",
-    author: "Top Finance",
-    authorImage: "https://media.topfinanzas.com/images/favicon.png",
-    readingTime: "4 minute read",
-    categories: [{ name: "Personal Finance", slug: "personal-finance" }],
-    featuredImage:
-      "https://media.topfinanzas.com/images/generated/1741732471632/sample_0.jpg",
-    excerpt:
-      "Navigate the world of online loans with confidence using these essential tips to find the best rates and terms.",
-    views: 345,
-    commentCount: 0,
-  },
-};
+// --- Removed BLOG_POSTS_DATA ---
+// Removed orphaned comment opener /*
+// Removed leftover const definition below
+// Removed the entire invalid block of leftover object data.
 
+// Updated generateMetadata to use getPostBySlug
 export function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = BLOG_POSTS_DATA[params.slug];
+  const postData = getPostBySlug(params.slug);
 
-  if (!post) {
+  if (!postData) {
     return {
       title: "Blog Post Not Found",
       description: "The requested blog post could not be found.",
     };
   }
 
+  const { frontmatter } = postData;
+
+  // Generate keywords from categories if they exist
+  const categoryKeywords = frontmatter.categories
+    ?.map((cat: { name: string; slug: string }) => cat.name) // Added type annotation
+    .join(", ");
+  const baseKeywords = "finance, blog, advice";
+  const keywords = categoryKeywords
+    ? `${categoryKeywords}, ${baseKeywords}`
+    : baseKeywords;
+
   return {
-    title: `${post.title} - Top Finance Blog`,
-    description: post.excerpt,
-    keywords:
-      post.categories.map((cat) => cat.name).join(", ") +
-      ", finance, blog, advice",
+    title: `${frontmatter.title} - Top Finance Blog`,
+    description: frontmatter.description, // Use description from frontmatter
+    keywords: keywords,
   };
 }
 
+// Updated generateStaticParams to use getAllPostSlugs
 export function generateStaticParams() {
-  return Object.keys(BLOG_POSTS_DATA).map((slug) => ({ slug }));
+  const slugs = getAllPostSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
-async function getPostContent(slug: string) {
-  try {
-    // In a real app, this would fetch from a CMS or file system
-    // For now, we'll check if a file exists in the content directory
-    const contentDir = path.join(process.cwd(), "content/blog");
-    const mdxFilePath = path.join(contentDir, `${slug}.mdx`);
-
-    // Check if the file exists
-    if (fs.existsSync(mdxFilePath)) {
-      // Read and return the file content
-      const source = fs.readFileSync(mdxFilePath, "utf8");
-      return source;
-    }
-
-    // If no file exists, return a placeholder content for demo purposes
-    return `
-# ${BLOG_POSTS_DATA[slug]?.title || "Blog Post"}
-
-${BLOG_POSTS_DATA[slug]?.excerpt || ""}
-
-## Introduction
-
-Welcome to this blog post! This is a placeholder content for demonstration purposes.
-
-## Key Points
-
-- This is point 1
-- This is point 2
-- This is point 3
-
-## Conclusion
-
-Thank you for reading this blog post.
-`;
-  } catch (error) {
-    console.error("Error reading MDX file:", error);
-    return "# Error Loading Content\n\nSorry, there was an error loading this content.";
-  }
-}
+// Removed getPostContent function as its logic is now in getPostBySlug
 
 export default async function BlogPostPage({
   params,
@@ -172,23 +141,31 @@ export default async function BlogPostPage({
 }) {
   const { slug } = params;
 
-  // Check if we have metadata for this post
-  if (!BLOG_POSTS_DATA[slug]) {
+  // Get post data (frontmatter and content)
+  const postData = getPostBySlug(slug);
+
+  // If post doesn't exist (file not found or invalid frontmatter), show 404
+  if (!postData) {
     notFound();
   }
 
-  // Get the post metadata
-  const postMetadata = BLOG_POSTS_DATA[slug];
+  const { frontmatter, content: mdxSource } = postData;
 
-  // Get the MDX content
-  const mdxContent = await getPostContent(slug);
-
-  // Compile the MDX content
+  // Compile the MDX source, passing custom components
   const { content } = await compileMDX({
-    source: mdxContent,
-    components: useMDXComponents({}),
-    options: { parseFrontmatter: true },
+    source: mdxSource,
+    components: { ...useMDXComponents({}), Ad, Button }, // Pass Ad and Button components
+    options: {
+      // No need to parse frontmatter here again, already done by gray-matter
+      // parseFrontmatter: true,
+      mdxOptions: {
+        remarkPlugins: [], // Add remark plugins here
+        rehypePlugins: [], // Add rehype plugins here
+      },
+    },
   });
 
-  return <BlogPost metadata={postMetadata}>{content}</BlogPost>;
+  // Pass the extracted frontmatter as metadata to the BlogPost component
+  // Ensure BlogPost component expects the structure provided by PostFrontmatter
+  return <BlogPost metadata={frontmatter}>{content}</BlogPost>;
 }

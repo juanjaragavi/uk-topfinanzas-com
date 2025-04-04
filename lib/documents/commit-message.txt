@@ -1,4 +1,9 @@
-refactor(ui): optimize styles and ad placements
+feat(blog): refactor blog structure and enhance homepage
 
-- Modified styles for improved visual consistency and performance.
-- Adjusted ad placements for better user experience and visibility.
+- Refactored blog post handling to use dynamic routes (`/blog/post/[slug]`) and fetch content/metadata from MDX files in `/content/blog/`.
+- Created API route `/api/posts` to serve blog data.
+- Enhanced homepage (`/app/page.tsx`) with dynamic post loading, category filtering, and pagination.
+- Fixed various build errors related to MDX processing and missing frontmatter.
+- Resolved runtime errors ("Rendered more hooks") on the homepage.
+- Addressed broken image issues by updating frontmatter and Next.js image configuration.
+- Styled pagination buttons on the homepage.
