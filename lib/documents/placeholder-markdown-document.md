@@ -1,50 +1,31 @@
 # Placeholder Markdown Document
 
-## **Task: Replicate Ad Placement Across Credit Card Blog Posts**
+## **Project Objective:**
 
-**Context:**
+Migrate relevant content from the US TopFinanzas blog (`us.topfinanzas.com`) to the new UK-specific site (`uk.topfinanzas.com`), implementing the defined content strategy and fixing broken internal links, starting with Credit Card product pages.
 
-* We have implemented a specific ad placement strategy for blog posts detailing credit card products.
-* Each credit card product is covered by two separate pages:
+**Background:**
 
-1. An **information page** (e.g., product details, benefits).
-2. A **requirements page** (e.g., eligibility criteria, application process).
+* The TopFinanzas blog provides personal finance advice, unbiased financial product recommendations, and expert articles.
+* A UK-tailored version of the blog is being launched.
+* Content migration from the US WordPress site is required.
+* A TOFU/MOFU/BOFU (Top/Middle/Bottom of Funnel) content strategy will be employed moving forward.
 
-* Three distinct advertisement units have been strategically integrated across these two pages for each product.
+**Key Resources:**
 
-**Reference Implementation:**
+1. **Content Strategy Document:** @/lib/documents/marketing-funnel-framework-tofu-mofu-and-bofu-summary-and-analysis.md
+    * Provides an overview of the TOFU, MOFU, and BOFU content framework.
+2. **Content Export File:** @/lib/documents/TopFinance_WordPress_Export_Mar_15_2025.xml
+    * Contains the full export of articles from the US WordPress blog.
 
-The ad placement is already complete for the following two credit card products:
+**Tasks:**
 
-1. **Barclaycard Avios Plus:**
-
-    * Information Page: @/app/financial-solutions/barclaycard-avios-plus/page.tsx
-    * Requirements Page: @/app/financial-solutions/barclaycard-avios-plus-requirements/page.tsx
-
-2. **Halifax World Elite Mastercard:**
-
-    * Information Page: @/app/financial-solutions/halifax-world-elite-mastercard/page.tsx
-    * Requirements Page: @/app/financial-solutions/halifax-world-elite-mastercard-requirements/page.tsx
-
-**Objective:**
-
-* Apply the identical three-advertisement placement strategy used in the reference examples above to the remaining nine credit card blog posts.
-* These posts are located within the @/app/financial-solutions/ directory. Ensure each of the nine products (represented by their respective information and requirements pages) receives the same ad treatment.
-
-**Important:**
-
-Below, is an example of a complete ad. These are the elements that should be copied and pasted in the remaining blog posts:
-
-```jsx
-<div className="my-8">
-<Link href="/personal-finance/credit-card-types-benefits/">
-<Image
-src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.png"
-alt="Barclaycard Avios Plus Credit Card"
-width={1000}
-height={563}
-className="mx-auto w-full md:w-8/12 h-auto rounded-lg"
-priority
-/>
-</Link>
-</div>
+1. **Review Documentation:** Familiarize yourself with the content strategy outlined in the `.md` file and the structure of the content within the `.xml` export file.
+2. **Analyze BOFU Content:** Examine the existing financial product pages within the @/app/financial-solutions/ directory. These pages serve as our Bottom-of-Funnel (BOFU) content, intended for monetization.
+3. **Identify Broken Links:** Within these BOFU product pages, identify any broken or dead links that are intended to point to informational blog posts or articles (TOFU content).
+4. **Locate Missing TOFU Content:** Cross-reference the identified broken links against the content available in the `TopFinance_WordPress_Export_Mar_15_2025.xml` file. Locate the source articles corresponding to the broken links.
+5. **Create Missing TOFU Articles:**
+    * Extract the relevant content for the missing articles from the XML export.
+    * Create these articles as new content entries (e.g., blog posts/pages) on the UK site, placing them in their appropriate categories as per the site structure and content strategy.
+6. **Prioritize Credit Cards:** Begin this process by focusing specifically on the initial **9 Credit Card product pages** found within @/app/financial-solutions/.
+7. **Implement Internal Linking:** Update the BOFU Credit Card product pages by adding or correcting links to point to the newly created TOFU articles. Ensure these links are functional and contextually relevant.
