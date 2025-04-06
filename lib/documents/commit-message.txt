@@ -1,5 +1,5 @@
-feat(dev): add QUnit testing scaffold to example.html
+fix(links): correct internal link causing 404 error
 
-- Updated `lib/documents/example.html` to include QUnit framework via CDN.
-- Added necessary HTML structure for QUnit test runner.
-- Included example tests and instructions for browser-based testing.
+- Updated link in `app/personal-finance/tips-for-choosing-an-online-loan/page.tsx`
+- Changed incorrect path `/financial-solutions/best-personal-loans` to `/blog/post/best-personal-loans`.
+- This addresses one of the 404 errors identified in the site analysis (lib/documents/top-uk-ajustes.xlsx-404.csv).
