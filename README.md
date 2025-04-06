@@ -8,14 +8,15 @@ The project follows a standard Next.js App Router structure with additional orga
 
 ```markdown
 /app                   - Next.js app router directory
-  /blog                - Blog pages 
-    /category/[slug]   - Category pages
+  /blog                - Blog pages
+    /category/[slug]   - Category pages (Note: Category definitions might be managed elsewhere)
     /post/[slug]       - Individual blog post pages
-  /politica-de-privacidad - Privacy policy page
-  /recomendador-de-tarjetas-de-credito-p1-next - Card recommendation page
-  /soluciones-financieras - Financial solutions pages
+  /cookie-policy       - Cookie Policy page
+  /credit-card-recommender-p1 - Card recommendation page
+  /financial-solutions - Financial solutions pages (including product details)
+  /privacy-policy      - Privacy Policy page
   /style-guide         - Style guide components
-  /terminos            - Terms and conditions page
+  /terms               - Terms and Conditions page
 /components            - React components
   /forms               - Form components
   /layout              - Layout components
@@ -24,14 +25,14 @@ The project follows a standard Next.js App Router structure with additional orga
 /content               - Content files
   /blog                - Blog content in MDX format
 /hooks                 - Custom React hooks
-/lib                   - Utility libraries 
+/lib                   - Utility libraries
   /ads                 - Advertisement configuration
-  /documents           - Document files (WordPress exports, etc.)
-  /images              - Image configuration
-  /navigation          - Navigation configuration
-  /texts               - Text content
-/public                - Static assets
-/styles                - Global styles
+  /documents           - Document files (e.g., commit messages, 404 logs)
+  /images              - Image configuration (e.g., logos)
+  /navigation          - Navigation configuration (header, footer)
+  /texts               - Static text content configuration (header, footer)
+/public                - Static assets (e.g., robots.txt, sitemap.xml, favicon)
+/scripts               - Shell scripts (e.g., deployment, git workflow)
 ```
 
 ## Content Structure
@@ -66,9 +67,10 @@ Site navigation is configured in:
 
 ### Images
 
-- Images should use the format: `https://media.topfinanzas.com/images/generated/[timestamp]/sample_0.jpg`
-- Blog post featured images are specified in the MDX frontmatter
-- The banner image on the homepage can be changed in the page component
+- Most images are hosted externally (e.g., `https://media.topfinanzas.com/images/...`). Refer to existing components for typical paths (e.g., `uk/credit-cards/`, `ads/`).
+- Blog post featured images are specified in the MDX frontmatter (`featuredImage`).
+- Logo images are configured in `/lib/images/logos.ts`.
+- The banner image on the homepage is set in `app/page.tsx`.
 
 ## MDX Components
 
@@ -83,10 +85,10 @@ To add a new blog post:
 3. Write the post content in MDX format
 4. The post will be automatically rendered via the dynamic route
 
-## Modifying Credit Card Information
+## Modifying Financial Product Information
 
-Credit card information is stored in page components in the `/app/credit-cards` directory.
+Financial product details (like credit cards, loans) are primarily managed within their respective page components under `/app/financial-solutions/[product-slug]/page.tsx` and potentially requirement pages `/app/financial-solutions/[product-slug]-requirements/page.tsx`.
 
 ## Adding/Modifying Categories
 
-Blog categories are currently defined in the array in `app/blog/category/[slug]/page.tsx`.
+Blog categories used for navigation and filtering are defined in configuration files like `/lib/navigation/headerNavigation.ts`, `/lib/navigation/footerNavigation.ts`, and potentially within page components like `app/page.tsx` for filtering logic. Ensure consistency when adding or modifying categories across these files.

@@ -4,12 +4,18 @@ This directory contains utilities, data, and configuration files for the Top Fin
 
 ## Directory Structure
 
-- `/ads` - Advertisement configuration
-- `/documents` - Document files (WordPress exports, etc.)
-- `/images` - Image configuration
-- `/navigation` - Navigation configuration
-- `/texts` - Text content
-- `utils.ts` - Utility functions
+- `/ads` - Advertisement configuration files.
+- `/documents` - Supporting document files (e.g., `commit-message.txt`, 404 logs).
+- `/images` - Image configuration (e.g., `logos.ts`).
+- `/navigation` - Navigation configuration files (`headerNavigation.ts`, `footerNavigation.ts`).
+- `/pages` - (Potentially outdated or specific use - needs verification)
+- `/texts` - Static text content configuration (`header/content.ts`, `footer/content.ts`).
+- `/uk` - UK-specific configurations or utilities.
+- `constants.ts` - Project-wide constants.
+- `README-DYNAMIC-CONTENT.md` - Documentation for dynamic content handling.
+- `README.md` - This file.
+- `strings.ts` - String constants or localization strings.
+- `utils.ts` - Utility functions (e.g., `cn` for class names).
 
 ## Navigation Configuration (`/navigation`)
 
@@ -68,9 +74,11 @@ Contains references to logo images used throughout the site.
 
 ## Documents (`/documents`)
 
-Contains document files used by the application:
+Contains supporting document files used by developers or scripts:
 
-- `TopFinance_WordPress_Export_Mar_15_2025.xml` - WordPress export file containing blog posts to be imported
+- `commit-message.txt` - Template for Git commit messages used by `git-workflow.sh`.
+- `top-uk-ajustes.xlsx-404.csv` - Log of 404 errors identified on the site.
+- (May contain other historical or temporary documents like WordPress exports).
 
 ## Utilities (`utils.ts`)
 
@@ -88,10 +96,9 @@ These files are designed to be easily modified programmatically, either through 
 
 ## Image URLs
 
-When adding or updating image references, use the following URL pattern:
+Most images are hosted externally. When referencing images within configuration or content files, use the full URL, typically following patterns like:
 
-```
-https://media.topfinanzas.com/images/generated/[timestamp]/sample_0.jpg
-```
+- `https://media.topfinanzas.com/images/uk/credit-cards/[image-name].jpg`
+- `https://media.topfinanzas.com/images/ads/[ad-image-name].png`
 
-Replace `[timestamp]` with the appropriate timestamp identifier.
+Refer to existing configurations and content for specific path examples.

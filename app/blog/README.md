@@ -37,7 +37,8 @@ readingTime: "X minute read"
 categories:
   - name: "Category Name"
     slug: "category-slug"
-featuredImage: "https://media.topfinanzas.com/images/generated/TIMESTAMP/sample_0.jpg"
+# Example: featuredImage: "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.jpg"
+featuredImage: "URL_TO_YOUR_FEATURED_IMAGE"
 excerpt: "A brief summary of your post that will appear in previews and search results."
 ---
 ```
@@ -120,10 +121,10 @@ You can also use React components directly in your MDX:
    - Use H3 (`###`) for subsections
 
 2. **Images**:
-   - Always include a featured image
-   - Use additional images throughout the post where relevant
-   - All images should use the standard format: `https://media.topfinanzas.com/images/generated/TIMESTAMP/sample_X.jpg`
-   - Always include alt text for accessibility
+   - Always include a featured image in the frontmatter.
+   - Use additional images throughout the post where relevant.
+   - Most images are hosted externally (e.g., `https://media.topfinanzas.com/images/...`). Refer to existing components/posts for typical paths (e.g., `uk/credit-cards/`, `ads/`).
+   - Always include descriptive alt text for accessibility.
 
 3. **Content Structure**:
    - Start with an introduction that explains what the reader will learn
@@ -132,8 +133,9 @@ You can also use React components directly in your MDX:
    - Aim for 1000-2000 words for most posts
 
 4. **Categories**:
-   - Only use existing categories (personal-finance, credit-cards, mortgages, investing, budgeting)
-   - If a new category is needed, it must be added to the category system first
+   - Only use existing category slugs defined in the navigation/site configuration (e.g., `personal-finance`, `financial-solutions`, `mortgages`, `credit-cards`, `investing`, `budgeting`).
+   - Ensure the `name` field matches the display name used elsewhere.
+   - If a new category is needed, it must be added consistently across relevant configuration files (e.g., `lib/navigation/headerNavigation.ts`, `lib/navigation/footerNavigation.ts`) and potentially filtering logic in page components.
 
 5. **SEO Optimization**:
    - Include relevant keywords in the title, headings, and content

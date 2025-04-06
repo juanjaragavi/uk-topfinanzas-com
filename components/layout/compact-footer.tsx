@@ -43,6 +43,16 @@ export function CompactFooter() {
                 {index < footerNavigation.legalLinks.length - 1 ? " | " : ""}
               </span>
             ))}
+            {/* Added Cookie Policy Link */}
+            <span className="text-white">
+              {" | "}
+              <Link
+                href="/cookie-policy"
+                className="hover:underline text-white"
+              >
+                Cookie Policy
+              </Link>
+            </span>
           </span>
           <span className="text-white">
             {" "}

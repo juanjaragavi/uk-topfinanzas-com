@@ -346,7 +346,7 @@ npm run update-content -- --type=navigation --file=headerNavigation --path=mainN
 2. **Validate against interfaces**: Check that content updates conform to the TypeScript interfaces
 3. **Test changes**: Verify that content displays correctly after updates
 4. **Document changes**: Keep track of content modifications for reference
-5. **Use standard URL patterns**: For images, use the standard format `https://media.topfinanzas.com/images/generated/[timestamp]/sample_0.jpg`
+5. **Use standard URL patterns**: For images, use full URLs, typically hosted on `https://media.topfinanzas.com/images/...`. Refer to existing configurations or content for specific path examples (e.g., `uk/credit-cards/`, `ads/`).
 
 ## Extending the System
 

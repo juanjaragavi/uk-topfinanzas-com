@@ -7,10 +7,11 @@ This directory contains the Next.js app router pages and routing structure for t
 - `/blog` - Blog-related pages
   - `/category/[slug]` - Dynamic category pages
   - `/post/[slug]` - Dynamic blog post pages
-- `/privacy-policy` - Privacy policy page
+- `/cookie-policy` - Cookie Policy page
 - `/credit-card-recommender-p1` - Card recommendation page
 - `/financial-solutions` - Financial solutions content
   - Various credit card guides and information pages
+- `/privacy-policy` - Privacy policy page
 - `/style-guide` - Style guide and reference components
 - `/terms` - Terms and conditions page
 - `globals.css` - Global CSS styles
@@ -86,15 +87,15 @@ export default function Home() {
 
 To add a new static page:
 
-1. Create a new folder in the app directory, e.g., `/app/about`
+1. Create a new folder in the app directory, e.g., `/app/new-feature`
 2. Add a `page.tsx` file inside that folder:
 
 ```tsx
-// app/about/page.tsx
-export default function AboutPage() {
+// app/new-feature/page.tsx
+export default function NewFeaturePage() {
   return (
     <main>
-      <h1>About Us</h1>
+      <h1>New Feature</h1>
       <p>About page content...</p>
     </main>
   );
