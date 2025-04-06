@@ -311,7 +311,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/merchant-cash-advance-explained"
+                    href="/personal-finance/best-personal-loans" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Understanding Merchant Cash Advances
@@ -331,7 +331,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/when-speed-matters-business-finance"
+                    href="/personal-finance/tips-for-choosing-an-online-loan" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     When speed matters in business finance
@@ -351,7 +351,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/alternative-lending-criteria"
+                    href="/personal-finance/best-personal-loans" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     How alternative lenders assess businesses

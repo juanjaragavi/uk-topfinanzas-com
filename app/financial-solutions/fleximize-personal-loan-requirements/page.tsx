@@ -358,7 +358,7 @@ export default function FleximizePersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/importance-flexible-business-loans"
+                    href="/personal-finance/best-personal-loans" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     The importance of flexibility in business loans
@@ -378,7 +378,7 @@ export default function FleximizePersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/financing-sme-expansion"
+                    href="/personal-finance/best-personal-loans" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Financing strategies for SME expansion
@@ -398,7 +398,7 @@ export default function FleximizePersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/relationship-banking-sme"
+                    href="/personal-finance/best-rewards-credit-cards" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     The role of relationship management in SME banking

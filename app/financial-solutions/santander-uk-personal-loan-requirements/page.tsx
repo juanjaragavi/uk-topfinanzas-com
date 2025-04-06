@@ -330,7 +330,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/santander-customer-benefits"
+                    href="/personal-finance/best-rewards-credit-cards" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Benefits for Santander customers
@@ -350,7 +350,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/debt-consolidation-guide"
+                    href="/personal-finance/personal-loans-debt-strategy" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     A guide to debt consolidation
@@ -371,7 +371,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/choosing-loan-term"
+                    href="/personal-finance/best-personal-loans" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Choosing the right loan term

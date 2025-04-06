@@ -325,7 +325,7 @@ export default function HalifaxPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/benefits-early-loan-repayment"
+                    href="/personal-finance/best-personal-loans" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Benefits of early loan repayment
@@ -345,7 +345,7 @@ export default function HalifaxPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/debt-consolidation-halifax"
+                    href="/personal-finance/personal-loans-debt-strategy" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Using Halifax loans for debt consolidation
@@ -365,7 +365,7 @@ export default function HalifaxPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/halifax-customer-advantages"
+                    href="/personal-finance/best-rewards-credit-cards" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Advantages for Halifax customers

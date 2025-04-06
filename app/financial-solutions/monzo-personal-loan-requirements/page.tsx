@@ -341,10 +341,10 @@ export default function MonzoPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/monzo-ecosystem-benefits"
+                    href="/personal-finance/tips-for-choosing-an-online-loan" // Replaced dead link
                     className="text-blue-600 underline"
                   >
-                    Benefits of the Monzo ecosystem
+                    The digital banking revolution
                   </Link>
                 </p>
 
@@ -361,10 +361,10 @@ export default function MonzoPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/neobanks-vs-traditional-banks"
+                    href="/personal-finance/credit-card-types-benefits" // Replaced dead link
                     className="text-blue-600 underline"
                   >
-                    Neobanks vs. Traditional Banks
+                    Benefits of a unified banking approach
                   </Link>
                 </p>
 
@@ -381,10 +381,10 @@ export default function MonzoPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/flexible-loan-repayment"
+                    href="/personal-finance/getting-out-of-debt" // Replaced dead link
                     className="text-blue-600 underline"
                   >
-                    The advantage of flexible loan repayments
+                    Effective digital budgeting strategies
                   </Link>
                 </p>
 

@@ -324,7 +324,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/funding-home-renovations"
+                    href="/personal-finance/best-personal-loans" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Funding your home renovation project
@@ -344,7 +344,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/debt-consolidation-pros-cons"
+                    href="/personal-finance/personal-loans-debt-strategy" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Pros and cons of debt consolidation
@@ -364,7 +364,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/loyalty-rewards-banking"
+                    href="/personal-finance/best-rewards-credit-cards" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Loyalty rewards in banking

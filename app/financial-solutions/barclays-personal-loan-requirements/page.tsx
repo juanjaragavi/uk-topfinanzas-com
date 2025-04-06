@@ -333,7 +333,7 @@ export default function BarclaysPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/benefits-of-debt-consolidation"
+                    href="/personal-finance/personal-loans-debt-strategy" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Understanding the benefits of debt consolidation
@@ -355,7 +355,7 @@ export default function BarclaysPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/financing-large-purchases"
+                    href="/personal-finance/best-personal-loans" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Smart ways to finance large purchases
@@ -376,7 +376,7 @@ export default function BarclaysPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/banking-loyalty-benefits"
+                    href="/personal-finance/best-rewards-credit-cards" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Leveraging banking loyalty for better deals

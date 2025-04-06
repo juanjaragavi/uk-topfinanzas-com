@@ -315,7 +315,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/comparing-business-loan-offers"
+                    href="/personal-finance/best-personal-loans" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     How to compare business loan offers
@@ -335,7 +335,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/rise-of-alternative-lending"
+                    href="/personal-finance/best-personal-loans" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     The rise of alternative lending for SMEs
@@ -355,7 +355,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/efficient-business-finance-search"
+                    href="/personal-finance/tips-for-choosing-an-online-loan" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Searching for business finance efficiently

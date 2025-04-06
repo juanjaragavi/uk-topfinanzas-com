@@ -70,20 +70,16 @@ export const footerNavigation = {
   /** Blog posts section */
   blogItems: [
     {
-      text: "Amazon Rewards Visa Benefits",
-      href: "/financial-solutions/amazon-rewards-visa-credit-card-benefits",
-    },
-    {
       text: "Visa Signature Card Guide",
       href: "/financial-solutions/visa-signature-us-current-credit-card-benefits",
     },
     {
       text: "Best Personal Loans UK",
-      href: "/financial-solutions/best-personal-loans",
+      href: "/blog/post/best-personal-loans", // Corrected path
     },
     {
       text: "Tips for Online Loans",
-      href: "/financial-solutions/tips-for-choosing-an-online-loan",
+      href: "/blog/post/tips-for-choosing-an-online-loan", // Corrected path
     },
     {
       text: "Student Credit Cards",

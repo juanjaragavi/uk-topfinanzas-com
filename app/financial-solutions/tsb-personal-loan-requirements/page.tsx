@@ -319,7 +319,7 @@ export default function TSBPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/simple-banking-solutions"
+                    href="/personal-finance/tips-for-choosing-an-online-loan" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     The value of simple banking solutions
@@ -339,7 +339,7 @@ export default function TSBPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/debt-consolidation-options-uk"
+                    href="/personal-finance/personal-loans-debt-strategy" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Debt consolidation options in the UK
@@ -359,7 +359,7 @@ export default function TSBPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/financing-life-goals"
+                    href="/personal-finance/best-personal-loans" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Financing your life goals with personal loans

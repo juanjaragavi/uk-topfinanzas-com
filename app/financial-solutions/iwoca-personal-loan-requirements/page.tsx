@@ -360,7 +360,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/managing-sme-cash-flow"
+                    href="/personal-finance/best-personal-loans" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Managing cash flow effectively in SMEs
@@ -379,7 +379,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/fast-business-funding-options"
+                    href="/personal-finance/tips-for-choosing-an-online-loan" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Options for fast business funding
@@ -398,7 +398,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/fintech-impact-on-sme-lending"
+                    href="/personal-finance/best-personal-loans" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     The impact of fintech on SME lending

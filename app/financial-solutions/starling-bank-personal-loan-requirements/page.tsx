@@ -343,7 +343,7 @@ export default function StarlingBankPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/starling-bank-features"
+                    href="/personal-finance/credit-card-types-benefits" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Features of Starling Bank accounts
@@ -363,7 +363,7 @@ export default function StarlingBankPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/choosing-ethical-financial-products"
+                    href="/personal-finance/best-personal-loans" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Choosing ethical financial products
@@ -383,7 +383,7 @@ export default function StarlingBankPersonalLoanRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/future-of-digital-banking-apps"
+                    href="/personal-finance/tips-for-choosing-an-online-loan" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     The future of digital banking apps

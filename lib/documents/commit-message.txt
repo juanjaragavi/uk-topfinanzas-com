@@ -1,5 +1,5 @@
-fix(links): correct internal link causing 404 error
+fix(links): replace dead blog links in financial solution pages
 
-- Updated link in `app/personal-finance/tips-for-choosing-an-online-loan/page.tsx`
-- Changed incorrect path `/financial-solutions/best-personal-loans` to `/blog/post/best-personal-loans`.
-- This addresses one of the 404 errors identified in the site analysis (lib/documents/top-uk-ajustes.xlsx-404.csv).
+- Replaced multiple dead links pointing to non-existent /blog/post/... paths within various /financial-solutions/...-requirements/page.tsx files.
+- Updated links to point to relevant existing content under /personal-finance/.
+- This aims to reduce 404 errors and improve user navigation.
