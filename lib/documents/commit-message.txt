@@ -1,7 +1,3 @@
-feat: add cookie policy, update homepage layout, fix links
+refactor(legal): update legal documents content
 
-- Create Cookie Policy page (content/legal/cookie-policy.mdx, app/cookie-policy/page.tsx).
-- Add Cookie Policy link to footer navigation (components/layout/footer.tsx).
-- Link to Cookie Policy from Privacy Policy (content/legal/privacy-policy.mdx).
-- Refactor homepage featured post to two-column layout on desktop (app/page.tsx).
-- Fix dead blog links in financial solution requirements pages.
+- Updated content within cookie policy, privacy policy, and terms & conditions pages.
