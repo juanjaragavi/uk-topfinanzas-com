@@ -108,7 +108,7 @@ export default function RootLayout({
                   "@type": "ContactPoint",
                   telephone: "+44-20-1234-5678", // Replace with your phone
                   contactType: "customer support", // Adjust as needed
-                  email: "info@topfinanzas.com", // Replace with your email
+                  email: "info@topnetworks.co", // Replace with your email
                 },
                 sameAs: [
                   "https://www.linkedin.com/company/top-networks-inc", // Replace with your actual social links

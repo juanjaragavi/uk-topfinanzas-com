@@ -1,3 +1,4 @@
-refactor(legal): update legal documents content
+style(footer): adjust text styling for desktop view
 
-- Updated content within cookie policy, privacy policy, and terms & conditions pages.
+- Applied Tailwind classes (md:text-lg, font-semibold, text-sm, etc.) to footer elements.
+- Improved visual hierarchy and readability of headings, links, and meta text on desktop.
