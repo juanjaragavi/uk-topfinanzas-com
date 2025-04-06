@@ -1,5 +1,7 @@
-fix(links): replace dead blog links in financial solution pages
+feat: add cookie policy, update homepage layout, fix links
 
-- Replaced multiple dead links pointing to non-existent /blog/post/... paths within various /financial-solutions/...-requirements/page.tsx files.
-- Updated links to point to relevant existing content under /personal-finance/.
-- This aims to reduce 404 errors and improve user navigation.
+- Create Cookie Policy page (content/legal/cookie-policy.mdx, app/cookie-policy/page.tsx).
+- Add Cookie Policy link to footer navigation (components/layout/footer.tsx).
+- Link to Cookie Policy from Privacy Policy (content/legal/privacy-policy.mdx).
+- Refactor homepage featured post to two-column layout on desktop (app/page.tsx).
+- Fix dead blog links in financial solution requirements pages.

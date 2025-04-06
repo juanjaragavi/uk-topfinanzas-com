@@ -191,6 +191,13 @@ export function Footer() {
                 {index < footerNavigation.legalLinks.length - 1 ? " | " : ""}
               </span>
             ))}
+            {/* Added Cookie Policy Link */}
+            <span>
+              {" | "}
+              <Link href="/cookie-policy" className="footer-link mx-1">
+                Cookie Policy
+              </Link>
+            </span>
             <span className="block w-full pt-2">
               &copy; {footerContent.legal.copyright.text}
             </span>

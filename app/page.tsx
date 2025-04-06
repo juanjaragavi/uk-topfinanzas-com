@@ -142,7 +142,9 @@ export default function Home() {
               {/* New container for two-column layout */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden md:flex group-hover:shadow-lg transition-shadow duration-300">
                 {/* Left Column: Image */}
-                <div className="md:w-5/12 relative h-64 md:h-auto"> {/* Adjusted width and height */}
+                <div className="md:w-5/12 relative h-64 md:h-auto">
+                  {" "}
+                  {/* Adjusted width and height */}
                   <Image
                     src="https://media.topfinanzas.com/images/featured-post.jpg"
                     alt="Your first salary: A complete guide to managing it intelligently"
@@ -152,11 +154,17 @@ export default function Home() {
                   />
                 </div>
                 {/* Right Column: Text Content */}
-                <div className="md:w-7/12 p-6 md:p-8 flex flex-col justify-center"> {/* Adjusted width and padding */}
-                  <h2 className="text-gray-800 text-xl md:text-2xl font-medium leading-tight mb-3"> {/* Adjusted text color and margin */}
+                <div className="md:w-7/12 p-6 md:p-8 flex flex-col justify-center">
+                  {" "}
+                  {/* Adjusted width and padding */}
+                  <h2 className="text-gray-800 text-xl md:text-2xl font-medium leading-tight mb-3">
+                    {" "}
+                    {/* Adjusted text color and margin */}
                     Your First Paycheck: A Complete Guide to Smart Management
                   </h2>
-                  <div className="flex items-center space-x-2 text-xs text-gray-500"> {/* Adjusted text color */}
+                  <div className="flex items-center space-x-2 text-xs text-gray-500">
+                    {" "}
+                    {/* Adjusted text color */}
                     <div className="size-5 overflow-hidden bg-blue-600 rounded-full flex items-center justify-center">
                       <Image
                         src="https://media.topfinanzas.com/images/favicon.png"
@@ -165,16 +173,25 @@ export default function Home() {
                         height={16}
                       />
                     </div>
-                    <span className="font-medium text-gray-700">TOP FINANCE</span> {/* Adjusted font weight/color */}
+                    <span className="font-medium text-gray-700">
+                      TOP FINANCE
+                    </span>{" "}
+                    {/* Adjusted font weight/color */}
                     <span>•</span>
                     <span className="font-normal">February 25, 2025</span>
                     <span>•</span>
-                    <span className="font-light">798 views</span> {/* Adjusted opacity */}
+                    <span className="font-light">798 views</span>{" "}
+                    {/* Adjusted opacity */}
                   </div>
-                   {/* Optional: Add excerpt here if needed */}
-                   <p className="text-gray-600 text-sm mt-3 line-clamp-3 hidden md:block"> {/* Added excerpt for desktop */}
-                     Starting your career journey comes with the excitement of earning your first paycheck. Learn essential strategies for budgeting, saving, and making smart financial decisions from day one to build a solid foundation for your future.
-                   </p>
+                  {/* Optional: Add excerpt here if needed */}
+                  <p className="text-gray-600 text-sm mt-3 line-clamp-3 hidden md:block">
+                    {" "}
+                    {/* Added excerpt for desktop */}
+                    Starting your career journey comes with the excitement of
+                    earning your first paycheck. Learn essential strategies for
+                    budgeting, saving, and making smart financial decisions from
+                    day one to build a solid foundation for your future.
+                  </p>
                 </div>
               </div>
             </Link>
