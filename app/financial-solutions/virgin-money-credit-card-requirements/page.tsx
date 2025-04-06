@@ -415,7 +415,7 @@ export default function VirginMoneyCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/branded-credit-card-benefits"
+                    href="/personal-finance/best-rewards-credit-cards/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Maximizing value from branded credit cards
@@ -438,7 +438,7 @@ export default function VirginMoneyCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/experience-based-rewards"
+                    href="/personal-finance/best-rewards-credit-cards/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     The rise of experience-based credit card rewards
@@ -461,7 +461,7 @@ export default function VirginMoneyCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/banking-brand-personalities"
+                    href="/personal-finance/credit-card-types-benefits/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     How banking brands are developing distinct personalities

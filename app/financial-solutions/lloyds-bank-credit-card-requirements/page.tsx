@@ -279,7 +279,7 @@ export default function LloydsBankCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/best-everyday-banking-cards"
+                    href="/personal-finance/cashback-credit-cards/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Choosing the best card for everyday spending
@@ -300,7 +300,7 @@ export default function LloydsBankCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/integrated-banking-benefits"
+                    href="/personal-finance/credit-card-types-benefits/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Benefits of integrated banking services
@@ -322,7 +322,7 @@ export default function LloydsBankCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/maximising-cashback-rewards"
+                    href="/personal-finance/cashback-credit-cards/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     How to maximize your cashback rewards

@@ -364,7 +364,7 @@ export default function TSBCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/everyday-banking-essentials"
+                    href="/personal-finance/cashback-credit-cards/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Essential features for everyday banking cards
@@ -387,7 +387,7 @@ export default function TSBCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/consolidating-banking-relationships"
+                    href="/personal-finance/credit-card-types-benefits/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Benefits of consolidating your banking relationship
@@ -410,7 +410,7 @@ export default function TSBCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/cashback-card-strategies"
+                    href="/personal-finance/cashback-credit-cards/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Maximizing your returns with cashback credit cards

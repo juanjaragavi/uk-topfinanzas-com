@@ -420,7 +420,7 @@ export default function RevolutCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/international-spending-strategies"
+                    href="/personal-finance/travel-credit-cards/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Maximizing value for international spending
@@ -443,7 +443,7 @@ export default function RevolutCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/digital-first-banking"
+                    href="/personal-finance/credit-card-types-benefits/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     The rise of digital-first financial services
@@ -465,7 +465,7 @@ export default function RevolutCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/fintech-ecosystem-benefits"
+                    href="/personal-finance/credit-card-types-benefits/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Benefits of integrated fintech ecosystems

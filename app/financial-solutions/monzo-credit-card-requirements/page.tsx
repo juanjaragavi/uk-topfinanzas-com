@@ -401,7 +401,7 @@ export default function MonzoCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/digital-banking-revolution"
+                    href="/personal-finance/credit-card-types-benefits/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     The digital banking revolution
@@ -423,7 +423,7 @@ export default function MonzoCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/unified-banking-approach"
+                    href="/personal-finance/credit-card-types-benefits/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Benefits of a unified banking approach
@@ -446,7 +446,7 @@ export default function MonzoCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/digital-budgeting-strategies"
+                    href="/personal-finance/getting-out-of-debt/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Effective digital budgeting strategies

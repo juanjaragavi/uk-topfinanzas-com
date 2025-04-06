@@ -350,7 +350,7 @@ export default function NatWestCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/benefits-of-banking-relationship"
+                    href="/personal-finance/credit-card-types-benefits/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Advantages of consolidating your banking relationship
@@ -372,7 +372,7 @@ export default function NatWestCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/maximising-credit-card-rewards"
+                    href="/personal-finance/best-rewards-credit-cards/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     How to maximize your credit card rewards
@@ -395,7 +395,7 @@ export default function NatWestCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/digital-banking-advantages"
+                    href="/personal-finance/credit-card-types-benefits/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     The benefits of digital banking in today's world

@@ -287,7 +287,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/maximising-travel-benefits"
+                    href="/personal-finance/travel-credit-cards/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     How to maximise your credit card travel benefits
@@ -309,7 +309,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/credit-card-concierge-services"
+                    href="/personal-finance/credit-card-types-benefits/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Making the most of credit card concierge services
@@ -331,7 +331,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/premium-card-protections"
+                    href="/personal-finance/credit-card-types-benefits/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Understanding premium credit card protections

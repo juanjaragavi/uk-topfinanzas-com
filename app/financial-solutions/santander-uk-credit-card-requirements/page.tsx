@@ -368,7 +368,7 @@ export default function SantanderUKCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/maximising-cashback-cards"
+                    href="/personal-finance/cashback-credit-cards/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     How to maximize your cashback credit card rewards
@@ -391,7 +391,7 @@ export default function SantanderUKCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/travel-credit-cards"
+                    href="/personal-finance/travel-credit-cards/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Choosing the best credit card for international travel
@@ -414,7 +414,7 @@ export default function SantanderUKCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/balance-transfer-strategies"
+                    href="/personal-finance/top-credit-cards-0-intro-apr/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Strategic approaches to balance transfers

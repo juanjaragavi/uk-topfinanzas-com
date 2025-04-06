@@ -413,7 +413,7 @@ export default function CurveCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/managing-multiple-payment-cards"
+                    href="/financial-solutions/curve-credit-card/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Strategies for managing multiple payment cards
@@ -435,7 +435,7 @@ export default function CurveCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/travel-friendly-credit-cards"
+                    href="/personal-finance/travel-credit-cards/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Top features of travel-friendly credit cards
@@ -458,7 +458,7 @@ export default function CurveCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/blog/post/maximizing-credit-card-rewards"
+                    href="/personal-finance/best-rewards-credit-cards/" // Replaced dead link
                     className="text-blue-600 underline"
                   >
                     Advanced techniques for maximizing credit card rewards
