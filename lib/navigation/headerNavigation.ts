@@ -75,10 +75,6 @@ export const headerNavigation = {
         text: "Card Recommender",
         href: "/credit-card-recommender-p1",
       },
-      {
-        text: "Visa Signature US Current",
-        href: "/financial-solutions/visa-signature-us-current-credit-card-benefits",
-      },
     ],
   },
 
