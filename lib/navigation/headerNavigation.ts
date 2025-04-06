@@ -1,6 +1,7 @@
 /**
  * Navigation items for the header component
- * Easily modifiable by agents to update site navigation
+ * Localized for the UK market
+ * Easily modifiable by LLM agents to update site navigation
  */
 
 export interface NavigationItem {
@@ -50,7 +51,6 @@ export const headerNavigation = {
     },
     {
       text: "APPLY NOW",
-      // Updated to a relevant UK product application page
       href: "/financial-solutions/barclaycard-avios-plus-requirements",
     },
   ],
@@ -69,11 +69,15 @@ export const headerNavigation = {
       },
       {
         text: "Personal Loans",
-        href: "/blog/post/best-personal-loans", // Corrected path
+        href: "/blog/post/best-personal-loans-uk",
       },
       {
         text: "Card Recommender",
         href: "/credit-card-recommender-p1",
+      },
+      {
+        text: "Current Accounts",
+        href: "/blog/category/current-accounts",
       },
     ],
   },
@@ -102,7 +106,7 @@ export const headerNavigation = {
             href: "/blog/category/credit-cards",
           },
           {
-            text: "Investments",
+            text: "Investments & ISAs",
             href: "/blog/category/investing",
           },
           {
@@ -119,20 +123,20 @@ export const headerNavigation = {
             href: "/blog/post/your-first-paycheck",
           },
           {
-            text: "Mortgage Guide",
-            href: "/blog/post/what-is-a-home-mortgage",
+            text: "UK Mortgage Guide",
+            href: "/blog/post/what-is-a-home-mortgage-uk",
           },
           {
-            text: "Online Loans Explained",
-            href: "/blog/post/what-are-online-loans",
+            text: "Online Loans in the UK",
+            href: "/blog/post/what-are-online-loans-uk",
           },
           {
-            text: "Choosing Online Loans",
-            href: "/blog/post/tips-for-choosing-an-online-loan", // Corrected path
+            text: "Choosing UK Online Loans",
+            href: "/blog/post/tips-for-choosing-an-online-loan-uk",
           },
           {
             text: "Best Personal Loans UK",
-            href: "/blog/post/best-personal-loans", // Corrected path
+            href: "/blog/post/best-personal-loans-uk",
           },
         ],
       },
@@ -141,11 +145,19 @@ export const headerNavigation = {
       title: "Featured Articles",
       posts: [
         {
-          title: "Best Personal Loans in the UK",
-          href: "/blog/post/best-personal-loans", // Corrected path
+          title: "Best Personal Loans in the UK (2025)",
+          href: "/blog/post/best-personal-loans-uk",
           image:
-            "https://media.topfinanzas.com/images/best-personal-loans.webp",
-          category: "Loans",
+            "https://media.topfinanzas.com/images/uk/loans/best-personal-loans-uk.webp",
+          category: "Personal Loans",
+          categoryHref: "/financial-solutions",
+        },
+        {
+          title: "UK Credit Card Comparison Guide",
+          href: "/blog/post/uk-credit-card-comparison-guide",
+          image:
+            "https://media.topfinanzas.com/images/uk/credit-cards/uk-credit-card-comparison.webp",
+          category: "Credit Cards",
           categoryHref: "/financial-solutions",
         },
       ],

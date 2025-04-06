@@ -1,6 +1,6 @@
 # Blog Directory Guide
 
-This directory contains the Next.js pages for the blog section of the Top Finanzas website. This README provides guidance for Assistants on how to create and manage blog posts.
+This directory contains the Next.js pages for the blog section of the TopFinance UK website. This README provides guidance for LLM agents on how to create and manage blog posts.
 
 ## Directory Structure
 
@@ -16,12 +16,12 @@ This directory contains the Next.js pages for the blog section of the Top Finanz
 
 ## Creating New Blog Posts
 
-All blog posts are stored as MDX files in the `/content/blog/` directory. When creating a new blog post, use the existing `your-first-paycheck.mdx` file as a template.
+All blog posts are stored as MDX files in the `/content/blog/` directory. When creating a new blog post, use the existing UK-market blog posts as templates.
 
 ### Step 1: Create a New MDX File
 
 1. Create a new `.mdx` file in the `/content/blog/` directory
-2. Name the file using kebab-case that matches the URL slug you want (e.g., `investing-basics.mdx` will be accessible at `/blog/post/investing-basics`)
+2. Name the file using kebab-case that matches the URL slug you want (e.g., `investing-basics-uk.mdx` will be accessible at `/blog/post/investing-basics-uk`)
 
 ### Step 2: Add Frontmatter Metadata
 
@@ -32,20 +32,19 @@ Each blog post requires frontmatter metadata at the top of the file:
 title: "Your Blog Post Title"
 date: "Month Day, Year"
 author: "Author Name"
-authorImage: "https://media.topfinanzas.com/images/favicon.png"
+authorImage: "https://media.topfinanzas.com/images/uk/authors/author-profile.jpg"
 readingTime: "X minute read"
 categories:
   - name: "Category Name"
     slug: "category-slug"
-# Example: featuredImage: "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.jpg"
-featuredImage: "URL_TO_YOUR_FEATURED_IMAGE"
+featuredImage: "https://media.topfinanzas.com/images/uk/blog/your-featured-image.jpg"
 excerpt: "A brief summary of your post that will appear in previews and search results."
 ---
 ```
 
 #### Frontmatter Fields Explained
 
-- **title**: The title of your blog post
+- **title**: The title of your blog post (use UK English spelling and terminology)
 - **date**: Publication date in "Month Day, Year" format
 - **author**: Author's name
 - **authorImage**: URL to the author's profile image
@@ -53,7 +52,7 @@ excerpt: "A brief summary of your post that will appear in previews and search r
 - **categories**: Array of category objects, each with:
   - **name**: Display name of the category
   - **slug**: URL slug for that category (must match existing categories)
-- **featuredImage**: URL to the featured image for the post
+- **featuredImage**: URL to the featured image for the post (prefer UK-specific imagery)
 - **excerpt**: A short summary (1-2 sentences) that describes the post
 
 ### Step 3: Write the Blog Content
@@ -79,8 +78,39 @@ Content paragraphs with **bold text**, *italic text*, or [links](https://example
 
 > Blockquote for important information or quotes
 
-![Image alt text](https://media.topfinanzas.com/images/generated/TIMESTAMP/sample_1.jpg)
+![Image alt text](https://media.topfinanzas.com/images/uk/blog/sample_image.jpg)
 ```
+
+## UK Localization Guidelines
+
+When creating or editing blog content, follow these UK localization guidelines:
+
+1. **Use UK English spelling**:
+   - "Organise" instead of "organize"
+   - "Colour" instead of "color"
+   - "Centre" instead of "center"
+
+2. **Use UK financial terminology**:
+   - "Current account" instead of "checking account"
+   - "ISA" instead of "401(k)" or "IRA"
+   - "Contactless payment" is widely used in the UK
+
+3. **Use the pound sterling (£) currency symbol**:
+   - Format as "£1,000" (not "1,000£" or "£ 1,000")
+   - For pence, use "50p" rather than "£0.50" for small amounts
+
+4. **Use UK date format**:
+   - Use "14 April 2025" format (day-month-year)
+   - Avoid MM/DD/YYYY American format
+
+5. **Reference UK financial institutions**:
+   - Mention UK-specific banks like Barclays, HSBC, Lloyds, NatWest
+   - Reference the Financial Conduct Authority (FCA) instead of American regulators
+
+6. **Use UK-specific statistics and data sources**:
+   - Office for National Statistics (ONS)
+   - Bank of England
+   - UK Finance
 
 ## MDX Rendering System
 
@@ -123,7 +153,7 @@ You can also use React components directly in your MDX:
 2. **Images**:
    - Always include a featured image in the frontmatter.
    - Use additional images throughout the post where relevant.
-   - Most images are hosted externally (e.g., `https://media.topfinanzas.com/images/...`). Refer to existing components/posts for typical paths (e.g., `uk/credit-cards/`, `ads/`).
+   - Use UK-specific images when possible (e.g., `https://media.topfinanzas.com/images/uk/credit-cards/`, `uk/loans/`).
    - Always include descriptive alt text for accessibility.
 
 3. **Content Structure**:
@@ -133,12 +163,13 @@ You can also use React components directly in your MDX:
    - Aim for 1000-2000 words for most posts
 
 4. **Categories**:
-   - Only use existing category slugs defined in the navigation/site configuration (e.g., `personal-finance`, `financial-solutions`, `mortgages`, `credit-cards`, `investing`, `budgeting`).
+   - Only use existing category slugs defined in the navigation configuration (e.g., `personal-finance`, `financial-solutions`, `mortgages`, `credit-cards`, `investing`, `budgeting`).
    - Ensure the `name` field matches the display name used elsewhere.
-   - If a new category is needed, it must be added consistently across relevant configuration files (e.g., `lib/navigation/headerNavigation.ts`, `lib/navigation/footerNavigation.ts`) and potentially filtering logic in page components.
+   - If a new category is needed, it must be added consistently across relevant configuration files.
 
 5. **SEO Optimization**:
-   - Include relevant keywords in the title, headings, and content
+   - Include relevant UK-specific keywords in the title, headings, and content
+   - Target UK search terms (e.g., "best current accounts UK" rather than "best checking accounts")
    - Write a compelling excerpt that includes key terms
    - Use descriptive, keyword-rich image alt text
 

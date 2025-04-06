@@ -1,4 +1,7 @@
-style(footer): adjust text styling for desktop view
+docs: update documentation for UK localization
 
-- Applied Tailwind classes (md:text-lg, font-semibold, text-sm, etc.) to footer elements.
-- Improved visual hierarchy and readability of headings, links, and meta text on desktop.
+- Updated Markdown files in app/, components/, content/, and lib/ directories for UK market
+- Updated navigation configs with UK-specific financial products and terminology
+- Added comprehensive UK localization guidelines (spelling, currency, financial terms, dates)
+- Ensured proper references to UK financial institutions and regulatory bodies
+- Maintained company's official Panama address while focusing on UK content
