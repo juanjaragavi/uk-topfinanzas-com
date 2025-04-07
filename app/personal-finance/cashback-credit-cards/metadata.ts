@@ -24,6 +24,6 @@ export const metadata: Metadata = {
       "Best Cashback Credit Cards for Maximizing Your Rewards | Top Finance UK",
     description:
       "Discover the top cashback credit cards! Compare benefits like unlimited rewards, flexible redemption options, and introductory APR offers.",
-    // images: ['URL_to_image'], // Add if featuredImage is available
+    images: ["https://media.topfinanzas.com/images/uk/download-8-1.webp"], // Add if featuredImage is available
   },
 };

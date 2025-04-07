@@ -26,9 +26,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Original site converted to HTML
-lib/us.topfinanzas.com
-
 # Documents and Prompts
 lib/documents/topfinanzas-mexico-adaptation-agent.md
 

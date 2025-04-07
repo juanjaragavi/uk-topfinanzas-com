@@ -9,3 +9,4 @@ feat: implement blog archive and restructure content
 - Switch homepage "Latest Articles" section to use hardcoded data (similar to /blog) to resolve display issues.
 - Update various metadata files for consistency (URLs, sections).
 - Update blog layout sidebar (blog-layout.tsx) with current categories and recent posts.
+- Refactor(img): Update several image URLs from us.topfinanzas.com to media.topfinanzas.com/images/uk/ (Partial).

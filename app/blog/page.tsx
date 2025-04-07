@@ -45,7 +45,7 @@ export default function BlogArchivePage() {
       slug: "best-rewards-credit-cards",
       description: "Discover the best rewards credit cards...",
       image:
-        "https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_tarjeta_de_credito_nu.jpg", // Placeholder
+        "https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjeta_de_credito_nu.jpg", // Placeholder
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
@@ -56,7 +56,7 @@ export default function BlogArchivePage() {
       slug: "cashback-credit-cards",
       description: "Discover the top cashback credit cards!...",
       image:
-        "https://us.topfinanzas.com/wp-content/uploads/2025/02/download-8-1.webp", // Placeholder
+        "https://media.topfinanzas.com/images/uk/download-8-1.webp", // Placeholder
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
@@ -67,7 +67,7 @@ export default function BlogArchivePage() {
       slug: "credit-card-types-benefits",
       description: "Discover everything you need to know about credit cards...",
       image:
-        "https://us.topfinanzas.com/wp-content/uploads/2024/02/Top_Finanzas_Top_tarjeta_de_credito-1.jpg", // Placeholder
+        "https://media.topfinanzas.com/images/uk/Top_Finanzas_Top_tarjeta_de_credito-1.jpg", // Placeholder
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
@@ -77,7 +77,7 @@ export default function BlogArchivePage() {
       slug: "getting-out-of-debt",
       description: "Feeling overwhelmed by debt? Get practical strategies...",
       image:
-        "https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_como_salir_de_deudas.jpg",
+        "https://media.topfinanzas.com/images/uk/Top_Finanzas_como_salir_de_deudas.jpg",
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
@@ -87,7 +87,7 @@ export default function BlogArchivePage() {
       slug: "no-annual-fee-credit-cards",
       description: "Find the best no annual fee credit cards...",
       image:
-        "https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_tarjetas_de_credito_sin_anualidad.jpg", // Placeholder
+        "https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjetas_de_credito_sin_anualidad.jpg", // Placeholder
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
@@ -98,7 +98,7 @@ export default function BlogArchivePage() {
       description:
         "Discover how personal loans can help you consolidate debt...",
       image:
-        "https://us.topfinanzas.com/wp-content/uploads/2018/12/Top-Finanzas_prestamos_personales.jpg", // Placeholder
+        "https://media.topfinanzas.com/images/uk/Top-Finanzas_prestamos_personales.jpg", // Placeholder
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
@@ -119,7 +119,7 @@ export default function BlogArchivePage() {
       slug: "top-credit-cards-0-intro-apr",
       description:
         "Compare the best credit cards offering 0% introductory APR...",
-      image: "https://us.topfinanzas.com/wp-content/uploads/2025/02/APR.webp", // Placeholder
+      image: "https://media.topfinanzas.com/images/uk/APR.webp", // Placeholder
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
@@ -130,7 +130,7 @@ export default function BlogArchivePage() {
       slug: "understanding-credit-card-interest-rates",
       description: "Learn how credit card interest rates work...",
       image:
-        "https://us.topfinanzas.com/wp-content/uploads/2024/12/download-5-2-820x547.webp", // Placeholder
+        "https://media.topfinanzas.com/images/uk/download-5-2.webp", // Placeholder
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",

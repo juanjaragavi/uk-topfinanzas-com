@@ -21,6 +21,6 @@ export const metadata: Metadata = {
     title: "Practical Guide to Getting Out of Debt | Top Finance UK",
     description:
       "Feeling overwhelmed by debt? Get practical strategies for getting out of debt, building an emergency fund, and taking control of your finances.",
-    // images: ['URL_to_image'], // Add if featuredImage is available
+    images: ["https://media.topfinanzas.com/images/uk/Top_Finanzas_como_salir_de_deudas.jpg"], // Add if featuredImage is available
   },
 };

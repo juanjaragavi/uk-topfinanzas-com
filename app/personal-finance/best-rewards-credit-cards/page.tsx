@@ -28,7 +28,7 @@ export default function BestRewardsCreditCardsPage() {
               {/* TODO: Update image if needed */}
               <div className="my-8">
                 <Image
-                  src="https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_tarjeta_de_credito_nu-820x547.jpg"
+                  src="https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjeta_de_credito_nu.jpg"
                   alt="Rewards Credit Cards" // Updated Alt Text
                   width={800}
                   height={450}

@@ -25,7 +25,7 @@ export default function UnderstandingCreditCardInterestRatesPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://us.topfinanzas.com/wp-content/uploads/2024/12/download-5-2-820x547.webp"
+                  src="https://media.topfinanzas.com/images/uk/download-5-2.webp"
                   alt="Understanding Credit Card Interest Rates"
                   width={800}
                   height={450}

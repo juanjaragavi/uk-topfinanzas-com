@@ -27,7 +27,7 @@ export default function CashbackCreditCardsPage() {
               {/* TODO: Update image if needed */}
               <div className="my-8">
                 <Image
-                  src="https://us.topfinanzas.com/wp-content/uploads/2025/02/download-8-1-820x547.webp"
+                  src="https://media.topfinanzas.com/images/uk/download-8-1.webp"
                   alt="Cashback Credit Cards" // Updated Alt Text
                   width={800}
                   height={450}

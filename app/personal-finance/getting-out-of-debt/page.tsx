@@ -25,7 +25,7 @@ export default function GettingOutOfDebtPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_como_salir_de_deudas.jpg" // Keep existing image or update if needed
+                  src="https://media.topfinanzas.com/images/uk/Top_Finanzas_como_salir_de_deudas.jpg" // Keep existing image or update if needed
                   alt="Getting Out of Debt Guide"
                   width={800}
                   height={450}

@@ -24,6 +24,6 @@ export const metadata: Metadata = {
       "Best Credit Cards with 0% Intro APR Offers in the UK | Top Finance UK",
     description:
       "Compare the best credit cards offering 0% introductory APR on purchases and balance transfers in the UK. Save money on interest and manage debt effectively.",
-    // images: ['URL_to_image'], // Add if featuredImage is available
+    images: ["https://media.topfinanzas.com/images/uk/APR.webp"],
   },
 };

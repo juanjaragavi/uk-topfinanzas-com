@@ -25,7 +25,7 @@ export default function PersonalLoansDebtStrategyPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://us.topfinanzas.com/wp-content/uploads/2018/12/Top-Finanzas_prestamos_personales.jpg"
+                  src="https://media.topfinanzas.com/images/uk/Top-Finanzas_prestamos_personales.jpg"
                   alt="Personal Loans Strategy"
                   width={800}
                   height={450}

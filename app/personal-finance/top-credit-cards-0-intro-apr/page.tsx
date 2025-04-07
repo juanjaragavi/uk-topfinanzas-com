@@ -24,8 +24,8 @@ export default function TopCreditCards0IntroAprPage() {
               </p>
               <div className="my-8">
                 <Image
-                  src="https://us.topfinanzas.com/wp-content/uploads/2025/02/APR.webp"
-                  alt="0% Intro APR Credit Cards"
+                  src="https://media.topfinanzas.com/images/uk/APR.webp"
+                  alt="0% Intro APR Credit Cards" // Updated Alt Text
                   width={800}
                   height={450}
                   className="w-full h-auto rounded-lg"

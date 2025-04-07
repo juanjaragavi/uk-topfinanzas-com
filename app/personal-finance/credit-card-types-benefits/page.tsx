@@ -27,7 +27,7 @@ export default function CreditCardTypesBenefitsPage() {
               {/* TODO: Update image if needed */}
               <div className="my-8">
                 <Image
-                  src="https://us.topfinanzas.com/wp-content/uploads/2024/02/Top_Finanzas_Top_tarjeta_de_credito-1-820x547.jpg"
+                  src="https://media.topfinanzas.com/images/uk/Top_Finanzas_Top_tarjeta_de_credito-1.jpg"
                   alt="Credit Card Types" // Updated Alt Text
                   width={800}
                   height={450}

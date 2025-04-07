@@ -178,7 +178,7 @@ export const headerNavigation = {
           title: cleanTitle("Practical Guide to Getting Out of Debt"),
           href: "/personal-finance/getting-out-of-debt",
           image:
-            "https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_como_salir_de_deudas.jpg",
+            "https://media.topfinanzas.com/images/uk/Top_Finanzas_como_salir_de_deudas.jpg",
           category: "Personal Finance",
           categoryHref: "/personal-finance",
         },

@@ -29,42 +29,42 @@ export default function PersonalFinanceArchivePage() {
       title: "Top Rewards Credit Cards to Maximize Your Spending | Top Finance UK",
       slug: "best-rewards-credit-cards",
       description: "Discover the best rewards credit cards that turn your everyday spending into valuable perks. From cashback to points and miles, find the perfect card.",
-      image: "https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_tarjeta_de_credito_nu.jpg", // Placeholder image - UPDATE NEEDED
+      image: "https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjeta_de_credito_nu.jpg", // Placeholder image - UPDATE NEEDED
       date: "3 April 2025", // Example date
     },
     {
       title: "Best Cashback Credit Cards for Maximizing Your Rewards | Top Finance UK",
       slug: "cashback-credit-cards",
       description: "Discover the top cashback credit cards! Compare benefits like unlimited rewards, flexible redemption options, and introductory APR offers.",
-      image: "https://us.topfinanzas.com/wp-content/uploads/2025/02/download-8-1.webp", // Placeholder image - UPDATE NEEDED
+      image: "https://media.topfinanzas.com/images/uk/download-8-1.webp", // Placeholder image - UPDATE NEEDED
       date: "3 April 2025", // Example date
     },
     {
       title: "Credit Cards - Types, Benefits, and Keys to Financial Health | Top Finance UK",
       slug: "credit-card-types-benefits",
       description: "Discover everything you need to know about credit cards, from types and benefits to tips for responsible usage and maintaining healthy finances.",
-      image: "https://us.topfinanzas.com/wp-content/uploads/2024/02/Top_Finanzas_Top_tarjeta_de_credito-1.jpg", // Placeholder image - UPDATE NEEDED
+      image: "https://media.topfinanzas.com/images/uk/Top_Finanzas_Top_tarjeta_de_credito-1.jpg", // Placeholder image - UPDATE NEEDED
       date: "3 April 2025", // Example date
     },
     {
       title: "Practical Guide to Getting Out of Debt | Top Finance UK",
       slug: "getting-out-of-debt",
       description: "Feeling overwhelmed by debt? Get practical strategies for getting out of debt, building an emergency fund, and taking control of your finances.",
-      image: "https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_como_salir_de_deudas.jpg",
+      image: "https://media.topfinanzas.com/images/uk/Top_Finanzas_como_salir_de_deudas.jpg",
       date: "3 April 2025", // Example date
     },
     {
       title: "Top Credit Cards With No Annual Fees | Top Finance UK",
       slug: "no-annual-fee-credit-cards",
       description: "Find the best no annual fee credit cards with great cashback, rewards, and flexible benefits. Perfect for managing expenses while saving on fees.",
-      image: "https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_tarjetas_de_credito_sin_anualidad.jpg", // Placeholder image - UPDATE NEEDED
+      image: "https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjetas_de_credito_sin_anualidad.jpg", // Placeholder image - UPDATE NEEDED
       date: "3 April 2025", // Example date
     },
     {
       title: "Personal Loans - A Strategy for Managing Debt | Top Finance UK",
       slug: "personal-loans-debt-strategy",
       description: "Discover how personal loans can help you consolidate debt and manage your finances efficiently. Learn how to choose the right loan for your needs.",
-      image: "https://us.topfinanzas.com/wp-content/uploads/2018/12/Top-Finanzas_prestamos_personales.jpg", // Placeholder image - UPDATE NEEDED
+      image: "https://media.topfinanzas.com/images/uk/Top-Finanzas_prestamos_personales.jpg", // Placeholder image - UPDATE NEEDED
       date: "3 April 2025", // Example date
     },
     {
@@ -78,14 +78,14 @@ export default function PersonalFinanceArchivePage() {
       title: "Best Credit Cards with 0% Intro APR Offers in the UK | Top Finance UK",
       slug: "top-credit-cards-0-intro-apr",
       description: "Compare the best credit cards offering 0% introductory APR on purchases and balance transfers in the UK. Save money on interest and manage debt effectively.",
-      image: "https://us.topfinanzas.com/wp-content/uploads/2025/02/APR.webp", // Placeholder image - UPDATE NEEDED
+      image: "https://media.topfinanzas.com/images/uk/APR.webp", // Placeholder image - UPDATE NEEDED
       date: "3 April 2025", // Example date
     },
     {
       title: "Understanding Credit Card Interest Rates - A Consumer Guide | Top Finance UK",
       slug: "understanding-credit-card-interest-rates",
       description: "Learn how credit card interest rates work, including APR calculations, and discover ways to manage and minimize your debt effectively.",
-      image: "https://us.topfinanzas.com/wp-content/uploads/2024/12/download-5-2-820x547.webp", // Placeholder image - UPDATE NEEDED
+      image: "https://media.topfinanzas.com/images/uk/download-5-2.webp", // Placeholder image - UPDATE NEEDED
       date: "3 April 2025", // Example date
     },
     // Add other posts here as needed

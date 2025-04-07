@@ -87,7 +87,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     {/* Article 2 */}
                     <div className="flex items-center gap-3">
                       <Image
-                        src="https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_tarjeta_de_credito_nu.jpg" // Placeholder
+                        src="https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjeta_de_credito_nu.jpg" // Placeholder
                         alt="Top Rewards Credit Cards"
                         width={50}
                         height={50}
@@ -131,7 +131,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     {/* Article 4 */}
                     <div className="flex items-center gap-3">
                       <Image
-                        src="https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_como_salir_de_deudas.jpg"
+                        src="https://media.topfinanzas.com/images/uk/Top_Finanzas_como_salir_de_deudas.jpg"
                         alt="Practical Guide to Getting Out of Debt"
                         width={50}
                         height={50}
