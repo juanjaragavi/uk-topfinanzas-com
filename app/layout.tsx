@@ -99,10 +99,10 @@ export default function RootLayout({
                 logo: "https://uk.topfinanzas.com/images/logo-english-color.png",
                 address: {
                   "@type": "PostalAddress",
-                  streetAddress: "1 Financial Square", // Replace with your address
-                  addressLocality: "London",
-                  postalCode: "SW1A 0AA",
-                  addressCountry: "GB",
+                  streetAddress: "PANAMA, PANAMA CITY", // Replace with your address
+                  addressLocality: "AV. AQUILINO DE LA GUARDIA",
+                  postalCode: "OCEAN BUSINESS PLAZA BUILDING, FLOOR 12",
+                  addressCountry: "PA",
                 },
                 contactPoint: {
                   "@type": "ContactPoint",
