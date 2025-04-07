@@ -138,14 +138,17 @@ export function Header() {
                     overflowY: "auto",
                   }}
                 >
-                  <div className="p-5 grid grid-cols-12 gap-4">
-                    {/* Menu Columns */}
-                    {headerNavigation.blogMegaMenu.columns.map(
-                      (column, idx) => (
-                        <div key={idx} className="col-span-12 md:col-span-2">
-                          <h3 className="text-h3 uppercase tracking-wide mb-3">
-                            {column.title}
-                          </h3>
+                  {/* Changed main grid to 3 columns, links left (2/3), featured right (1/3) */}
+                  <div className="p-5 grid grid-cols-3 gap-8">
+                    {/* Left Column: Category Links */}
+                    <div className="col-span-2 space-y-6"> {/* Container for all link columns */}
+                      {headerNavigation.blogMegaMenu.columns.map(
+                        (column, idx) => (
+                          // Removed inner col-span, columns will stack vertically now
+                          <div key={idx}>
+                            <h3 className="text-h3 uppercase tracking-wide mb-3">
+                              {column.title}
+                            </h3>
                           <ul className="space-y-2">
                             {column.items.map((item, itemIdx) => (
                               <li key={itemIdx}>
@@ -166,14 +169,18 @@ export function Header() {
                         </div>
                       )
                     )}
+                    {/* Removed extraneous closing brackets here */}
+                    </div> {/* End Left Column container */}
 
-                    {/* Featured Posts */}
+                    {/* Right Column: Featured Posts */}
                     {headerNavigation.blogMegaMenu.featuredPosts && (
-                      <div className="col-span-12 md:col-span-8">
+                      // Changed to col-span-1 for the right column
+                      <div className="col-span-1">
                         <h3 className="text-h3 uppercase tracking-wide mb-3">
                           {headerNavigation.blogMegaMenu.featuredPosts.title}
                         </h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {/* Changed internal grid to single column */}
+                        <div className="grid grid-cols-1 gap-4">
                           {headerNavigation.blogMegaMenu.featuredPosts.posts.map(
                             (post, idx) => (
                               <Link
