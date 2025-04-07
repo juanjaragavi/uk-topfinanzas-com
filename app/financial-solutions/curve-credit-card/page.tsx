@@ -171,6 +171,19 @@ export default function CurveCreditCardPage() {
                   your existing financial products.
                 </p>
 
+                <div className="my-8">
+                  <Link href="/personal-finance/credit-card-types-benefits/">
+                    <Image
+                      src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.png"
+                      alt="Barclays Personal Loan"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-lg"
+                      priority
+                    />
+                  </Link>
+                </div>
+
                 {/* Related Articles Section */}
                 <div className="my-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
                   <h3 className="text-lg font-semibold text-gray-800 mb-3">

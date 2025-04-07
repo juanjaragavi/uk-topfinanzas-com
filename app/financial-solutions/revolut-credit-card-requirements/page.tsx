@@ -420,7 +420,7 @@ export default function RevolutCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/personal-finance/travel-credit-cards/" // Replaced dead link
+                    href="/personal-finance/understanding-credit-card-interest-rates/" // Updated link
                     className="text-blue-600 underline"
                   >
                     Maximizing value for international spending
@@ -465,7 +465,7 @@ export default function RevolutCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/personal-finance/credit-card-types-benefits/" // Replaced dead link
+                    href="/personal-finance/best-rewards-credit-cards/" // Updated link
                     className="text-blue-600 underline"
                   >
                     Benefits of integrated fintech ecosystems

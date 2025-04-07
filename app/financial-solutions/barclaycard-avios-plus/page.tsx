@@ -34,19 +34,6 @@ export default function BarclayCardAviosPlusPage() {
                 spending with premium travel benefits.
               </p>
 
-              <div className="my-8">
-                <Link href="/personal-finance/credit-card-types-benefits/">
-                  <Image
-                    src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.png"
-                    alt="Barclays Personal Loan"
-                    width={1000}
-                    height={563}
-                    className="mx-auto w-full md:w-8/12 h-auto rounded-lg"
-                    priority
-                  />
-                </Link>
-              </div>
-
               <div className="space-y-2 mb-8">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3">
@@ -170,6 +157,19 @@ export default function BarclayCardAviosPlusPage() {
                   confidence, knowing that you're covered against unexpected
                   situations.
                 </p>
+
+                <div className="my-8">
+                  <Link href="/personal-finance/credit-card-types-benefits/">
+                    <Image
+                      src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.png"
+                      alt="Barclays Personal Loan"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-lg"
+                      priority
+                    />
+                  </Link>
+                </div>
 
                 {/* Related Articles Section */}
                 <div className="my-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
