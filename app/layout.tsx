@@ -1,6 +1,6 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import localFont from "next/font/local";
 import { Suspense } from "react";
 import "./globals.css";
 import GoogleTagManager, {
@@ -9,12 +9,28 @@ import GoogleTagManager, {
 import UtmPersister from "@/components/analytics/utm-persister";
 import UtmMonitor from "@/components/analytics/utm-monitor";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
+// Use local font to avoid external requests during build
+// This improves build time and eliminates network dependency
+const poppins = localFont({
+  src: [
+    {
+      path: '../public/fonts/poppins-regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/poppins-medium.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/poppins-semibold.woff2',
+      weight: '600',
+      style: 'normal',
+    }
+  ],
   display: "swap",
   variable: "--font-poppins",
-  preload: false, // Change to false to avoid network requests during build
   fallback: [
     "system-ui",
     "Segoe UI",

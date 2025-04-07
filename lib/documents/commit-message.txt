@@ -1,5 +1,8 @@
 feat: implement blog archive, UTM parameter persistence, build fixes, GTM updates and performance improvements
 
+- Fix Next.js build process by replacing Google Fonts with local font files
+- Create font downloader script to cache fonts locally and avoid network requests
+- Add build optimization script with memory allocation and caching improvements
 - Improve site performance metrics by fixing 4XX errors and optimizing LCP loading
 - Add new travel-credit-cards page to fix broken internal links
 - Create automated scripts for image optimization and broken link detection/fixing
