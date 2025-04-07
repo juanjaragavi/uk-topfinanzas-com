@@ -7,6 +7,7 @@ import GoogleTagManager, {
   GoogleTagManagerNoScript,
 } from "@/components/analytics/gtm";
 import UtmPersister from "@/components/analytics/utm-persister";
+import UtmMonitor from "@/components/analytics/utm-monitor";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -126,6 +127,7 @@ export default function RootLayout({
         <GoogleTagManagerNoScript />
         <Suspense fallback={null}>
           <UtmPersister />
+          {process.env.NODE_ENV === "development" && <UtmMonitor />}
         </Suspense>
         {children}
       </body>

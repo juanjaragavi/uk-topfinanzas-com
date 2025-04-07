@@ -1,5 +1,8 @@
-feat: implement blog archive and restructure content
+feat: implement blog archive, UTM parameter persistence and restructure content
 
+- Enhance UTM parameter persistence functionality to ensure campaign tracking across site navigation
+- Add UTM parameter monitoring tools for testing and debugging
+- Create UTM test page for verifying cross-page UTM parameter persistence
 - Create main blog archive page (/blog) displaying posts from all categories with pagination.
 - Restructure /personal-finance into a category archive page, moving the 'Best Personal Loans' article to its own subdirectory.
 - Complete MDX to TSX migrations for remaining personal finance articles.
