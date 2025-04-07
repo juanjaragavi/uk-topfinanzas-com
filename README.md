@@ -37,27 +37,6 @@ The project follows a standard Next.js App Router structure with additional orga
 
 ## Content Structure
 
-### Blog Posts
-
-Blog posts are stored as MDX files in the `/content/blog` directory. Each post has a frontmatter section with metadata and MDX content for the body:
-
-```mdx
----
-title: "Post Title"
-date: "Date"
-author: "Author Name"
-authorImage: "Image URL"
-readingTime: "X minute read"
-categories:
-  - name: "Category Name"
-    slug: "category-slug"
-featuredImage: "Featured Image URL"
-excerpt: "Short excerpt of the post"
----
-
-# Post content in Markdown/MDX format
-```
-
 ### Navigation
 
 Site navigation is configured in:
@@ -71,19 +50,6 @@ Site navigation is configured in:
 - Blog post featured images are specified in the MDX frontmatter (`featuredImage`).
 - Logo images are configured in `/lib/images/logos.ts`.
 - The banner image on the homepage is set in `app/page.tsx`.
-
-## MDX Components
-
-Custom MDX components are defined in `mdx-components.tsx` at the root level. These components control how markdown elements are rendered in the blog posts.
-
-## Adding New Blog Posts
-
-To add a new blog post:
-
-1. Create a new `.mdx` file in `/content/blog`
-2. Add the required frontmatter with metadata
-3. Write the post content in MDX format
-4. The post will be automatically rendered via the dynamic route
 
 ## Modifying Financial Product Information
 

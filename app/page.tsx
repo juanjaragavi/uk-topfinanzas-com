@@ -30,113 +30,132 @@ interface PostData {
 // Helper function to clean titles (copied from blog archive)
 const cleanTitle = (title: string): string => {
   // Added safety check for undefined/null title
-  if (!title) return 'Untitled Post';
-  return title.split('|')[0].split(':')[0].split(' - ')[0].trim();
+  if (!title) return "Untitled Post";
+  return title.split("|")[0].split(":")[0].split(" - ")[0].trim();
 };
 
-
-// --- Hardcoded Post Data (Similar to app/blog/page.tsx) ---
+// --- Hardcoded Post Data (Similar to app/page.tsx) ---
 // Using a subset of posts for the homepage, sorted by date descending
 const allPosts: PostData[] = [
-    {
-      slug: "barclaycard-avios-plus",
-       frontmatter: {
-        title: "Barclaycard Avios Plus Credit Card: Premium Travel Rewards",
-        description: "The Barclaycard Avios Plus Credit Card offers premium travel perks...",
-        date: "2025-04-04T00:00:00Z",
-        featuredImage: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
-        categories: [{ name: 'Financial Solutions', slug: 'financial-solutions' }],
-      },
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
+  {
+    slug: "barclaycard-avios-plus",
+    frontmatter: {
+      title: "Barclaycard Avios Plus Credit Card: Premium Travel Rewards",
+      description:
+        "The Barclaycard Avios Plus Credit Card offers premium travel perks...",
+      date: "2025-04-04T00:00:00Z",
+      featuredImage:
+        "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      categories: [
+        { name: "Financial Solutions", slug: "financial-solutions" },
+      ],
     },
-    {
-      slug: "hsbc-personal-loan",
-       frontmatter: {
-        title: "HSBC Personal Loan: Flexible Financing from a Global Banking Leader",
-        description: "Discover HSBC Personal Loans with competitive rates...",
-        date: "2025-04-04T00:00:00Z",
-        featuredImage: "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.jpg",
-        categories: [{ name: 'Financial Solutions', slug: 'financial-solutions' }],
-      },
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
+    category: "Financial Solutions",
+    categoryPath: "/financial-solutions",
+  },
+  {
+    slug: "hsbc-personal-loan",
+    frontmatter: {
+      title:
+        "HSBC Personal Loan: Flexible Financing from a Global Banking Leader",
+      description: "Discover HSBC Personal Loans with competitive rates...",
+      date: "2025-04-04T00:00:00Z",
+      featuredImage:
+        "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.jpg",
+      categories: [
+        { name: "Financial Solutions", slug: "financial-solutions" },
+      ],
     },
-     {
-      slug: "funding-circle-personal-loan", // Example Loan
-       frontmatter: {
-        title: "Funding Circle Business Loan",
-        description: "Explore Funding Circle's business loans offering fast, flexible financing...",
-        date: "2025-04-04T00:00:00Z", // Example Date
-        featuredImage: "https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.jpg",
-        categories: [{ name: 'Financial Solutions', slug: 'financial-solutions' }],
-      },
-      category: "Financial Solutions",
-      categoryPath: "/financial-solutions",
+    category: "Financial Solutions",
+    categoryPath: "/financial-solutions",
+  },
+  {
+    slug: "funding-circle-personal-loan", // Example Loan
+    frontmatter: {
+      title: "Funding Circle Business Loan",
+      description:
+        "Explore Funding Circle's business loans offering fast, flexible financing...",
+      date: "2025-04-04T00:00:00Z", // Example Date
+      featuredImage:
+        "https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.jpg",
+      categories: [
+        { name: "Financial Solutions", slug: "financial-solutions" },
+      ],
     },
-     {
-      slug: "best-rewards-credit-cards",
-       frontmatter: {
-        title: "Top Rewards Credit Cards to Maximize Your Spending | Top Finance UK",
-        description: "Discover the best rewards credit cards...",
-        date: "2025-04-03T00:00:00Z",
-        featuredImage: "https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjeta_de_credito_nu.jpg", // Placeholder
-        categories: [{ name: 'Personal Finance', slug: 'personal-finance' }],
-      },
-      category: "Personal Finance",
-      categoryPath: "/personal-finance",
+    category: "Financial Solutions",
+    categoryPath: "/financial-solutions",
+  },
+  {
+    slug: "best-rewards-credit-cards",
+    frontmatter: {
+      title:
+        "Top Rewards Credit Cards to Maximize Your Spending | Top Finance UK",
+      description: "Discover the best rewards credit cards...",
+      date: "2025-04-03T00:00:00Z",
+      featuredImage:
+        "https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjeta_de_credito_nu.jpg", // Placeholder
+      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
-    {
-      slug: "getting-out-of-debt",
-       frontmatter: {
-        title: "Practical Guide to Getting Out of Debt | Top Finance UK",
-        description: "Feeling overwhelmed by debt? Get practical strategies...",
-        date: "2025-04-03T00:00:00Z",
-        featuredImage: "https://media.topfinanzas.com/images/uk/Top_Finanzas_como_salir_de_deudas.jpg",
-        categories: [{ name: 'Personal Finance', slug: 'personal-finance' }],
-      },
-      category: "Personal Finance",
-      categoryPath: "/personal-finance",
+    category: "Personal Finance",
+    categoryPath: "/personal-finance",
+  },
+  {
+    slug: "getting-out-of-debt",
+    frontmatter: {
+      title: "Practical Guide to Getting Out of Debt | Top Finance UK",
+      description: "Feeling overwhelmed by debt? Get practical strategies...",
+      date: "2025-04-03T00:00:00Z",
+      featuredImage:
+        "https://media.topfinanzas.com/images/uk/Top_Finanzas_como_salir_de_deudas.jpg",
+      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
-    {
-      slug: "top-credit-cards-0-intro-apr",
-       frontmatter: {
-        title: "Best Credit Cards with 0% Intro APR Offers in the UK | Top Finance UK",
-        description: "Compare the best credit cards offering 0% introductory APR...",
-        date: "2025-04-03T00:00:00Z",
-        featuredImage: "https://media.topfinanzas.com/images/uk/APR.webp", // Placeholder
-        categories: [{ name: 'Personal Finance', slug: 'personal-finance' }],
-      },
-      category: "Personal Finance",
-      categoryPath: "/personal-finance",
+    category: "Personal Finance",
+    categoryPath: "/personal-finance",
+  },
+  {
+    slug: "top-credit-cards-0-intro-apr",
+    frontmatter: {
+      title:
+        "Best Credit Cards with 0% Intro APR Offers in the UK | Top Finance UK",
+      description:
+        "Compare the best credit cards offering 0% introductory APR...",
+      date: "2025-04-03T00:00:00Z",
+      featuredImage: "https://media.topfinanzas.com/images/uk/APR.webp", // Placeholder
+      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
-     {
-      slug: "best-personal-loans",
-      frontmatter: {
-        title: "Best Personal Loans in the UK: Your Complete Guide | Top Finance UK",
-        description: "Comprehensive guide to the UK's top personal loans...",
-        date: "2025-03-30T00:00:00Z",
-        featuredImage: "https://media.topfinanzas.com/images/best-personal-loans.webp",
-        categories: [{ name: 'Personal Finance', slug: 'personal-finance' }],
-      },
-      category: "Personal Finance",
-      categoryPath: "/personal-finance",
+    category: "Personal Finance",
+    categoryPath: "/personal-finance",
+  },
+  {
+    slug: "best-personal-loans",
+    frontmatter: {
+      title:
+        "Best Personal Loans in the UK: Your Complete Guide | Top Finance UK",
+      description: "Comprehensive guide to the UK's top personal loans...",
+      date: "2025-03-30T00:00:00Z",
+      featuredImage:
+        "https://media.topfinanzas.com/images/best-personal-loans.webp",
+      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
-     {
-      slug: "tips-for-choosing-an-online-loan",
-       frontmatter: {
-        title: "5 Essential Tips for Choosing an Online Loan: Quick Guide | Top Finance UK",
-        description: "Navigate the world of online loans with confidence...",
-        date: "2025-03-30T00:00:00Z",
-        featuredImage: "https://media.topfinanzas.com/images/choosing-online-loan.jpg",
-        categories: [{ name: 'Personal Finance', slug: 'personal-finance' }],
-      },
-      category: "Personal Finance",
-      categoryPath: "/personal-finance",
+    category: "Personal Finance",
+    categoryPath: "/personal-finance",
+  },
+  {
+    slug: "tips-for-choosing-an-online-loan",
+    frontmatter: {
+      title:
+        "5 Essential Tips for Choosing an Online Loan: Quick Guide | Top Finance UK",
+      description: "Navigate the world of online loans with confidence...",
+      date: "2025-03-30T00:00:00Z",
+      featuredImage:
+        "https://media.topfinanzas.com/images/choosing-online-loan.jpg",
+      categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
+    category: "Personal Finance",
+    categoryPath: "/personal-finance",
+  },
 ];
 // --- End of Hardcoded Data ---
-
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -161,10 +180,14 @@ export default function Home() {
   // Calculate paginated posts using useMemo (operates on the hardcoded allPosts)
   const { paginatedPosts, totalPages } = useMemo(() => {
     // Sort posts by date descending (if date exists)
-     const sortedPosts = [...allPosts].sort((a, b) => {
-        const dateA = a.frontmatter.date ? new Date(a.frontmatter.date).getTime() : 0;
-        const dateB = b.frontmatter.date ? new Date(b.frontmatter.date).getTime() : 0;
-        return dateB - dateA; // Descending order
+    const sortedPosts = [...allPosts].sort((a, b) => {
+      const dateA = a.frontmatter.date
+        ? new Date(a.frontmatter.date).getTime()
+        : 0;
+      const dateB = b.frontmatter.date
+        ? new Date(b.frontmatter.date).getTime()
+        : 0;
+      return dateB - dateA; // Descending order
     });
 
     const calculatedTotalPages = Math.ceil(sortedPosts.length / postsPerPage);
@@ -224,7 +247,8 @@ export default function Home() {
                 {/* Right Column: Text Content */}
                 <div className="md:w-7/12 p-6 md:p-8 flex flex-col justify-center">
                   <h2 className="text-gray-800 text-xl md:text-2xl font-medium leading-tight mb-3">
-                    Best Personal Loans in the UK: Your Complete Guide {/* Updated title */}
+                    Best Personal Loans in the UK: Your Complete Guide{" "}
+                    {/* Updated title */}
                   </h2>
                   <div className="flex items-center space-x-2 text-xs text-gray-500">
                     <div className="size-5 overflow-hidden bg-blue-600 rounded-full flex items-center justify-center">
@@ -239,11 +263,15 @@ export default function Home() {
                       TOP FINANCE
                     </span>
                     <span>•</span>
-                    <span className="font-normal">March 30, 2025</span> {/* Updated date */}
+                    <span className="font-normal">March 30, 2025</span>{" "}
+                    {/* Updated date */}
                     {/* Removed views for consistency */}
                   </div>
                   <p className="text-gray-600 text-sm mt-3 line-clamp-3 hidden md:block">
-                    Comprehensive guide to the UK's top personal loans, including rates, terms, and application requirements from leading lenders like Nationwide, Santander, and Barclays. {/* Updated excerpt */}
+                    Comprehensive guide to the UK's top personal loans,
+                    including rates, terms, and application requirements from
+                    leading lenders like Nationwide, Santander, and Barclays.{" "}
+                    {/* Updated excerpt */}
                   </p>
                 </div>
               </div>
@@ -275,38 +303,51 @@ export default function Home() {
                         fill
                         style={{ objectFit: "cover" }}
                         className="rounded-t-lg"
-                        onError={(e) => { e.currentTarget.src = 'https://media.topfinanzas.com/images/placeholder-image.webp'; }} // Fallback image
+                        onError={(e) => {
+                          e.currentTarget.src =
+                            "https://media.topfinanzas.com/images/placeholder-image.webp";
+                        }} // Fallback image
                       />
-                       <span className={`absolute top-2 left-2 inline-block px-2 py-0.5 rounded text-xs font-semibold text-white ${post.category === 'Personal Finance' ? 'bg-blue-600' : 'bg-green-600'}`}>
-                         {post.category}
-                       </span>
+                      <span
+                        className={`absolute top-2 left-2 inline-block px-2 py-0.5 rounded text-xs font-semibold text-white ${
+                          post.category === "Personal Finance"
+                            ? "bg-blue-600"
+                            : "bg-green-600"
+                        }`}
+                      >
+                        {post.category}
+                      </span>
                     </div>
                     <div className="p-4">
-                      <h3 className="text-gray-800 text-lg font-medium leading-tight mb-2 line-clamp-2"> {/* Added line-clamp */}
-                        {cleanTitle(post.frontmatter.title)} {/* Use cleanTitle */}
+                      <h3 className="text-gray-800 text-lg font-medium leading-tight mb-2 line-clamp-2">
+                        {" "}
+                        {/* Added line-clamp */}
+                        {cleanTitle(post.frontmatter.title)}{" "}
+                        {/* Use cleanTitle */}
                       </h3>
                       <p className="text-gray-600 text-sm line-clamp-2 mb-2">
                         {post.frontmatter.excerpt ||
                           post.frontmatter.description}
                       </p>
                       {post.frontmatter.date && (
-                         <p className="text-xs text-gray-500">
-                           {new Date(post.frontmatter.date).toLocaleDateString(
-                             "en-GB",
-                             {
-                               year: "numeric",
-                               month: "long",
-                               day: "numeric",
-                             }
-                           )}
-                         </p>
+                        <p className="text-xs text-gray-500">
+                          {new Date(post.frontmatter.date).toLocaleDateString(
+                            "en-GB",
+                            {
+                              year: "numeric",
+                              month: "long",
+                              day: "numeric",
+                            }
+                          )}
+                        </p>
                       )}
                     </div>
                   </Link>
                 ))
               ) : (
                 <p className="col-span-full text-center text-gray-500">
-                  No posts found. {/* Keep this message in case hardcoded list is empty */}
+                  No posts found.{" "}
+                  {/* Keep this message in case hardcoded list is empty */}
                 </p>
               )}
             </div>

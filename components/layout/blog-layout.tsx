@@ -7,9 +7,23 @@ import { Button } from "@/components/ui/button";
 import { AnimatedText } from "@/components/ui/animated-text";
 import Link from "next/link";
 import Image from "next/image";
+import { ReactNode } from "react"; // Added ReactNode import
+import {
+  Sidebar,
+  SidebarAd,
+  SidebarCategories,
+  SidebarContent,
+  SidebarFooter,
+  SidebarHeader,
+  SidebarInput,
+  SidebarNewsletter,
+  SidebarProvider,
+  SidebarRecentArticles,
+  SidebarSeparator,
+} from "@/components/ui/sidebar"; // Added Sidebar imports
 
 interface BlogLayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
   metadata?: {
     title?: string;
     date?: string;
@@ -31,12 +45,18 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
     author = "Top Finance",
     authorImage = "/placeholder-user.jpg",
     readingTime = "6 minute read",
+    // Default categories updated to reflect current structure
     categories = [{ name: "Personal Finance", slug: "personal-finance" }],
     featuredImage = "https://media.topfinanzas.com/images/favicon.png",
     excerpt = "",
     views = 0,
     commentCount = 0,
   } = metadata || {};
+
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Formulario enviado");
+  };
 
   return (
     <main className="min-h-screen flex flex-col">
@@ -49,7 +69,12 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
             {categories.map((category, index) => (
               <Link
                 key={index}
-                href={`/blog/category/${category.slug}`}
+                // Updated category link logic
+                href={
+                  category.slug === "financial-solutions"
+                    ? "/financial-solutions"
+                    : "/personal-finance"
+                }
                 className="uppercase text-link text-sm font-medium mr-2 hover:underline"
               >
                 {category.name}
@@ -129,7 +154,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                 viewBox="0 0 24 24"
                 className="h-4 w-4 mr-2"
               >
-                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085a4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
               </svg>
               Tweet
             </Button>
@@ -234,7 +259,11 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   {categories.map((category, index) => (
                     <Link
                       key={index}
-                      href={`/blog/category/${category.slug}`}
+                      href={
+                        category.slug === "financial-solutions"
+                          ? "/financial-solutions"
+                          : "/personal-finance"
+                      } // Updated Tag Link Logic
                       className="bg-gray-100 text-[#234043] rounded-full px-2 py-1 text-[10px] mr-2 mb-2 hover:bg-gray-200 transition-colors"
                     >
                       {category.name}
@@ -319,85 +348,80 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                 />
               </div>
 
-              {/* Recent articles */}
+              {/* Recent articles - Updated */}
               <div className="mb-8">
                 <h3 className="text-[12px] font-bold mb-3 pb-2 border-b border-gray-200 text-[#234043]">
                   Recent Articles
                 </h3>
                 <div className="space-y-4">
                   <Link
-                    href="/blog/post/what-is-a-home-mortgage"
+                    href="/personal-finance/best-personal-loans" // Updated Recent Article Link 1
                     className="block"
                   >
                     <div className="relative h-32 rounded-xl overflow-hidden">
                       <Image
-                        src="https://media.topfinanzas.com/images/generated/1741637181173/sample_0.jpg"
-                        alt="What Is a Home Mortgage? Your Complete Guide"
+                        src="https://media.topfinanzas.com/images/best-personal-loans.webp" // Updated Image
+                        alt="Best Personal Loans in the UK" // Updated Alt
                         fill
                         style={{ objectFit: "cover" }}
                         className="brightness-75"
                       />
                       <div className="absolute inset-0 flex flex-col justify-end p-3 text-white">
                         <h4 className="font-medium text-[10px] leading-tight mb-1">
-                          What Is a Home Mortgage? Your Complete Guide
+                          Best Personal Loans in the UK {/* Updated Title */}
                         </h4>
-                        <p className="text-[8px] opacity-90">
-                          February 25, 2025
-                        </p>
+                        {/* Removed date for consistency */}
                       </div>
                     </div>
                   </Link>
 
                   <Link
-                    href="/blog/post/what-are-online-loans"
+                    href="/personal-finance/getting-out-of-debt" // Updated Recent Article Link 2
                     className="block"
                   >
                     <div className="relative h-32 rounded-xl overflow-hidden">
                       <Image
-                        src="https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg"
-                        alt="What Are Online Loans?: A Key Tool in Personal Finances"
+                        src="https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_como_salir_de_deudas.jpg" // Updated Image
+                        alt="Practical Guide to Getting Out of Debt" // Updated Alt
                         fill
                         style={{ objectFit: "cover" }}
                         className="brightness-75"
                       />
                       <div className="absolute inset-0 flex flex-col justify-end p-3 text-white">
                         <h4 className="font-medium text-[10px] leading-tight mb-1">
-                          What Are Online Loans?: A Key Tool in Personal
-                          Finances
+                          Practical Guide to Getting Out of Debt{" "}
+                          {/* Updated Title */}
                         </h4>
-                        <p className="text-[8px] opacity-90">
-                          February 25, 2025
-                        </p>
+                        {/* Removed date */}
                       </div>
                     </div>
                   </Link>
 
                   <Link
-                    href="/blog/post/5-tips-for-choosing-an-online-loan"
+                    href="/personal-finance/tips-for-choosing-an-online-loan" // Updated Recent Article Link 3
                     className="block"
                   >
                     <div className="relative h-32 rounded-xl overflow-hidden">
                       <Image
-                        src="https://media.topfinanzas.com/images/generated/1741732471632/sample_0.jpg"
-                        alt="5 Tips for Choosing an Online Loan: Quick Guide"
+                        src="https://media.topfinanzas.com/images/choosing-online-loan.jpg" // Updated Image
+                        alt="5 Tips for Choosing an Online Loan: Quick Guide" // Updated Alt
                         fill
                         style={{ objectFit: "cover" }}
                         className="brightness-75"
                       />
                       <div className="absolute inset-0 flex flex-col justify-end p-3 text-white">
                         <h4 className="font-medium text-[10px] leading-tight mb-1">
-                          5 Tips for Choosing an Online Loan: Quick Guide
+                          5 Tips for Choosing an Online Loan{" "}
+                          {/* Updated Title */}
                         </h4>
-                        <p className="text-[8px] opacity-90">
-                          February 25, 2025
-                        </p>
+                        {/* Removed date */}
                       </div>
                     </div>
                   </Link>
                 </div>
               </div>
 
-              {/* Categories */}
+              {/* Categories - Updated */}
               <div className="mb-8">
                 <h3 className="text-[12px] font-bold mb-3 pb-2 border-b border-gray-200 text-[#234043]">
                   Categories
@@ -405,59 +429,23 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                 <ul className="space-y-2">
                   <li>
                     <Link
-                      href="/blog/category/personal-finance"
+                      href="/personal-finance" // Updated Category Link 1
                       className="flex items-center justify-between text-[10px] text-[#234043] hover:text-[#222442] transition-colors"
                     >
                       <span>Personal Finance</span>
-                      <span className="bg-gray-100 text-[#234043] rounded-full px-2 py-1 text-[8px]">
-                        12
-                      </span>
+                      {/* Removed count */}
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/blog/category/credit-cards"
+                      href="/financial-solutions" // Updated Category Link 2
                       className="flex items-center justify-between text-[10px] text-[#234043] hover:text-[#222442] transition-colors"
                     >
-                      <span>Credit Cards</span>
-                      <span className="bg-gray-100 text-[#234043] rounded-full px-2 py-1 text-[8px]">
-                        8
-                      </span>
+                      <span>Financial Solutions</span>
+                      {/* Removed count */}
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      href="/blog/category/mortgages"
-                      className="flex items-center justify-between text-[10px] text-[#234043] hover:text-[#222442] transition-colors"
-                    >
-                      <span>Mortgages</span>
-                      <span className="bg-gray-100 text-[#234043] rounded-full px-2 py-1 text-[8px]">
-                        6
-                      </span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/blog/category/investing"
-                      className="flex items-center justify-between text-[10px] text-[#234043] hover:text-[#222442] transition-colors"
-                    >
-                      <span>Investing</span>
-                      <span className="bg-gray-100 text-[#234043] rounded-full px-2 py-1 text-[8px]">
-                        5
-                      </span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/blog/category/student-loans"
-                      className="flex items-center justify-between text-[10px] text-[#234043] hover:text-[#222442] transition-colors"
-                    >
-                      <span>Student Loans</span>
-                      <span className="bg-gray-100 text-[#234043] rounded-full px-2 py-1 text-[8px]">
-                        4
-                      </span>
-                    </Link>
-                  </li>
+                  {/* Removed outdated categories */}
                 </ul>
               </div>
 

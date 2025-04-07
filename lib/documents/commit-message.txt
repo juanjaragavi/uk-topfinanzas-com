@@ -12,3 +12,4 @@ feat: implement blog archive and restructure content
 - Refactor(img): Update several image URLs from us.topfinanzas.com to media.topfinanzas.com/images/uk/ (Partial).
 - fix(nav): Update footer navigation links (footerNavigation.ts) to reflect current site structure.
 - fix(links): Update related article links in financial solutions requirements pages.
+- fix(links): Update outdated blog post/category links in blog layout and ad config.

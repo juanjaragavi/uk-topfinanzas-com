@@ -392,7 +392,7 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                 </p>
 
                 <div className="text-center my-8">
-                  <Link href="/blog/post/best-personal-loans">
+                  <Link href="/financial-solutions">
                     <Button className="bg-green-600 hover:bg-green-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Explore Best Personal Loans
                     </Button>

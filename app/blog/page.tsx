@@ -55,8 +55,7 @@ export default function BlogArchivePage() {
         "Best Cashback Credit Cards for Maximizing Your Rewards | Top Finance UK",
       slug: "cashback-credit-cards",
       description: "Discover the top cashback credit cards!...",
-      image:
-        "https://media.topfinanzas.com/images/uk/download-8-1.webp", // Placeholder
+      image: "https://media.topfinanzas.com/images/uk/download-8-1.webp", // Placeholder
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
@@ -129,8 +128,7 @@ export default function BlogArchivePage() {
         "Understanding Credit Card Interest Rates - A Consumer Guide | Top Finance UK",
       slug: "understanding-credit-card-interest-rates",
       description: "Learn how credit card interest rates work...",
-      image:
-        "https://media.topfinanzas.com/images/uk/download-5-2.webp", // Placeholder
+      image: "https://media.topfinanzas.com/images/uk/download-5-2.webp", // Placeholder
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
@@ -314,7 +312,6 @@ export default function BlogArchivePage() {
     </div>
   );
 
-  // Use the metadata defined in app/blog/metadata.ts
   // The BlogLayout component might handle this automatically if set up,
   // otherwise, you might pass the imported metadata object.
   // For simplicity, assuming BlogLayout handles it or metadata is implicitly used.
