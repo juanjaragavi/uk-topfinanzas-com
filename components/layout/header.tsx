@@ -151,7 +151,11 @@ export function Header() {
                               <li key={itemIdx}>
                                 <Link
                                   href={item.href}
-                                  className="text-body hover:text-primary block py-1"
+                                  className={
+                                    item.isEmphasis
+                                      ? "inline-block bg-gray-100 hover:bg-gray-200 text-blue-700 underline underline-offset-2 font-medium text-sm py-1 px-3 rounded-full transition-colors" // Button-like style
+                                      : "text-body hover:text-primary block py-1" // Original style
+                                  }
                                   onClick={() => setActiveMegaMenu(null)}
                                 >
                                   {item.text}
@@ -175,26 +179,32 @@ export function Header() {
                               <Link
                                 key={idx}
                                 href={post.href}
-                                className="group block"
+                                className="group flex space-x-4 items-center" // Use flexbox for row layout
                                 onClick={() => setActiveMegaMenu(null)}
                               >
-                                <div className="relative aspect-video rounded-xl overflow-hidden mb-2">
+                                {/* Text Content Div */}
+                                <div className="flex-grow">
+                                  <span className="inline-block bg-blue-600 text-white px-2 py-0.5 rounded text-meta mb-1">
+                                    {post.category}
+                                  </span>
+                                  <h4 className="text-h3 group-hover:text-primary transition-colors line-clamp-2">
+                                    {" "}
+                                    {/* Limit title lines */}
+                                    {post.title}
+                                  </h4>
+                                </div>
+                                {/* Image Content Div */}
+                                <div className="flex-shrink-0 w-24 h-16 relative text-blue-700 underline underline-offset-2 rounded-md overflow-hidden">
+                                  {" "}
+                                  {/* Fixed size image container */}
                                   <Image
                                     src={post.image}
                                     alt={post.title}
                                     fill
                                     className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                    sizes="96px" // Match width
                                   />
-                                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                                  <div className="absolute bottom-2 left-2">
-                                    <span className="inline-block bg-blue-600 text-white px-2 py-0.5 rounded text-meta">
-                                      {post.category}
-                                    </span>
-                                  </div>
                                 </div>
-                                <h4 className="text-h3 group-hover:text-primary transition-colors">
-                                  {post.title}
-                                </h4>
                               </Link>
                             )
                           )}
@@ -202,7 +212,7 @@ export function Header() {
                         <div className="mt-4 text-right">
                           <Link
                             href="/blog"
-                            className="text-link font-medium inline-flex items-center"
+                            className="text-link font-medium inline-flex items-center text-blue-700 underline underline-offset-2"
                             onClick={() => setActiveMegaMenu(null)}
                           >
                             {headerContent.blogMegaMenu.viewAllText}

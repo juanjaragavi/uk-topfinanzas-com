@@ -1,354 +1,154 @@
-import { Header } from "@/components/layout/header";
-import { CompactFooter } from "@/components/layout/compact-footer";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+"use client"; // Keep client directive if interactions are needed
+
+import { BlogLayout } from "@/components/mdx/blog-layout"; // Assuming this layout is suitable
 import Link from "next/link";
+import Image from "next/image";
+// Remove state imports if no filtering is implemented initially
+// import { useState } from "react";
 
-export default function BestPersonalLoansPage() {
-  return (
-    <main className="min-h-screen flex flex-col">
-      <Header />
+// Define the structure for each post item
+interface PostItem {
+  title: string;
+  slug: string;
+  description: string;
+  image: string;
+  date?: string; // Optional date
+}
 
-      <article className="bg-white py-8 md:py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-3xl font-bold text-gray-800 mb-4 leading-8">
-              Best Personal Loans in the UK: Your Complete Guide
-            </h1>
+export default function PersonalFinanceArchivePage() {
+  // Array of all posts in this category
+  const allPosts: PostItem[] = [
+    {
+      title: "Best Personal Loans in the UK: Your Complete Guide | Top Finance UK",
+      slug: "best-personal-loans",
+      description: "Comprehensive guide to the UK's top personal loans, including rates, terms, and application requirements from leading lenders like Nationwide, Santander, and Barclays.",
+      image: "https://media.topfinanzas.com/images/best-personal-loans.webp",
+      date: "30 March 2025", // Example date
+    },
+    {
+      title: "Top Rewards Credit Cards to Maximize Your Spending | Top Finance UK",
+      slug: "best-rewards-credit-cards",
+      description: "Discover the best rewards credit cards that turn your everyday spending into valuable perks. From cashback to points and miles, find the perfect card.",
+      image: "https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_tarjeta_de_credito_nu.jpg", // Placeholder image - UPDATE NEEDED
+      date: "3 April 2025", // Example date
+    },
+    {
+      title: "Best Cashback Credit Cards for Maximizing Your Rewards | Top Finance UK",
+      slug: "cashback-credit-cards",
+      description: "Discover the top cashback credit cards! Compare benefits like unlimited rewards, flexible redemption options, and introductory APR offers.",
+      image: "https://us.topfinanzas.com/wp-content/uploads/2025/02/download-8-1.webp", // Placeholder image - UPDATE NEEDED
+      date: "3 April 2025", // Example date
+    },
+    {
+      title: "Credit Cards - Types, Benefits, and Keys to Financial Health | Top Finance UK",
+      slug: "credit-card-types-benefits",
+      description: "Discover everything you need to know about credit cards, from types and benefits to tips for responsible usage and maintaining healthy finances.",
+      image: "https://us.topfinanzas.com/wp-content/uploads/2024/02/Top_Finanzas_Top_tarjeta_de_credito-1.jpg", // Placeholder image - UPDATE NEEDED
+      date: "3 April 2025", // Example date
+    },
+    {
+      title: "Practical Guide to Getting Out of Debt | Top Finance UK",
+      slug: "getting-out-of-debt",
+      description: "Feeling overwhelmed by debt? Get practical strategies for getting out of debt, building an emergency fund, and taking control of your finances.",
+      image: "https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_como_salir_de_deudas.jpg",
+      date: "3 April 2025", // Example date
+    },
+    {
+      title: "Top Credit Cards With No Annual Fees | Top Finance UK",
+      slug: "no-annual-fee-credit-cards",
+      description: "Find the best no annual fee credit cards with great cashback, rewards, and flexible benefits. Perfect for managing expenses while saving on fees.",
+      image: "https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_tarjetas_de_credito_sin_anualidad.jpg", // Placeholder image - UPDATE NEEDED
+      date: "3 April 2025", // Example date
+    },
+    {
+      title: "Personal Loans - A Strategy for Managing Debt | Top Finance UK",
+      slug: "personal-loans-debt-strategy",
+      description: "Discover how personal loans can help you consolidate debt and manage your finances efficiently. Learn how to choose the right loan for your needs.",
+      image: "https://us.topfinanzas.com/wp-content/uploads/2018/12/Top-Finanzas_prestamos_personales.jpg", // Placeholder image - UPDATE NEEDED
+      date: "3 April 2025", // Example date
+    },
+    {
+      title: "5 Essential Tips for Choosing an Online Loan: Quick Guide | Top Finance UK",
+      slug: "tips-for-choosing-an-online-loan",
+      description: "Navigate the world of online loans with confidence using these essential tips to find the best rates and terms for your financial needs.",
+      image: "https://media.topfinanzas.com/images/choosing-online-loan.jpg",
+      date: "30 March 2025", // Example date
+    },
+    {
+      title: "Best Credit Cards with 0% Intro APR Offers in the UK | Top Finance UK",
+      slug: "top-credit-cards-0-intro-apr",
+      description: "Compare the best credit cards offering 0% introductory APR on purchases and balance transfers in the UK. Save money on interest and manage debt effectively.",
+      image: "https://us.topfinanzas.com/wp-content/uploads/2025/02/APR.webp", // Placeholder image - UPDATE NEEDED
+      date: "3 April 2025", // Example date
+    },
+    {
+      title: "Understanding Credit Card Interest Rates - A Consumer Guide | Top Finance UK",
+      slug: "understanding-credit-card-interest-rates",
+      description: "Learn how credit card interest rates work, including APR calculations, and discover ways to manage and minimize your debt effectively.",
+      image: "https://us.topfinanzas.com/wp-content/uploads/2024/12/download-5-2-820x547.webp", // Placeholder image - UPDATE NEEDED
+      date: "3 April 2025", // Example date
+    },
+    // Add other posts here as needed
+  ];
 
-            <div className="my-8">
-              <p className="text-lg text-gray-800 mb-8 leading-5">
-                Find the perfect personal loan for your needs with our
-                comprehensive guide to the UK's top lenders, rates, and
-                application requirements.
-              </p>
+  // Simple content structure without filtering for now
+  const content = (
+    <div>
+      <h1 className="text-4xl font-bold mb-6">Personal Finance Guides</h1>
+      <p className="text-lg text-gray-700 mb-8 leading-tight">
+        Explore our guides on credit cards, loans, debt management, and other personal finance topics to help you make informed decisions.
+      </p>
 
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-green-600 flex items-center justify-center mr-3 mt-0.5">
-                    <span className="text-white font-bold">➔</span>
-                  </div>
-                  <div className="text-sm leading-5">
-                    <span className="font-semibold">
-                      Competitive interest rates
-                    </span>{" "}
-                    starting from 3.5% APR representative.
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-green-600 flex items-center justify-center mr-3 mt-0.5">
-                    <span className="text-white font-bold">➔</span>
-                  </div>
-                  <div className="text-sm leading-5">
-                    <span className="font-semibold">Flexible loan amounts</span>{" "}
-                    from £1,000 to £50,000.
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-green-600 flex items-center justify-center mr-3 mt-0.5">
-                    <span className="text-white font-bold">➔</span>
-                  </div>
-                  <div className="text-sm leading-5">
-                    <span className="font-semibold">
-                      Various repayment terms
-                    </span>{" "}
-                    from 1 to 7 years to suit your budget.
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-green-600 flex items-center justify-center mr-3 mt-0.5">
-                    <span className="text-white font-bold">➔</span>
-                  </div>
-                  <div className="text-sm leading-5">
-                    <span className="font-semibold">
-                      Quick application processes
-                    </span>{" "}
-                    with many same-day approval options.
-                  </div>
-                </div>
+      {/* Grid of posts */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {allPosts.map((post, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col"
+          >
+            <div className="relative h-48 w-full">
+              <Image
+                src={post.image}
+                alt={post.title.split('|')[0].trim()} // Cleaner alt text
+                fill
+                style={{ objectFit: "cover" }}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Basic responsive sizes
+                onError={(e) => { e.currentTarget.src = 'https://media.topfinanzas.com/images/placeholder-image.webp'; }} // Fallback image
+              />
+            </div>
+            <div className="p-6 flex flex-col flex-grow">
+              {post.date && <p className="text-sm text-gray-500 mb-2">{post.date}</p>}
+              <Link
+                href={`/personal-finance/${post.slug}`}
+                className="text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors mb-2"
+              >
+                {post.title.split('|')[0].trim()} {/* Show cleaner title */}
+              </Link>
+              <p className="text-sm text-gray-600 mb-4 flex-grow">{post.description}</p>
+              <div className="mt-auto">
+                <Link
+                  href={`/personal-finance/${post.slug}`}
+                  className="text-blue-600 hover:text-blue-800 font-medium text-sm"
+                >
+                  Read more →
+                </Link>
               </div>
-
-              <div className="my-8">
-                <Image
-                  src="https://media.topfinanzas.com/images/best-personal-loans.webp"
-                  alt="Personal Loans Guide"
-                  width={800}
-                  height={450}
-                  className="w-full h-auto rounded-lg"
-                  priority
-                />
-              </div>
-
-              <section className="my-6">
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
-                  Understanding Personal Loans in the UK
-                </h2>
-
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
-                  Personal loans provide a versatile financial solution for
-                  various needs, from consolidating debt to funding home
-                  improvements or covering unexpected expenses. In the UK, these
-                  unsecured loans typically range from £1,000 to £50,000 with
-                  repayment terms spanning 1 to 7 years, depending on the lender
-                  and your financial profile.
-                </p>
-
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
-                  Unlike secured loans, personal loans don't require collateral,
-                  making them accessible to a wider range of borrowers. However,
-                  this means interest rates may be higher than secured options
-                  like mortgages. The specific rate you're offered will depend
-                  on your credit score, income, existing debt obligations, and
-                  the lender's criteria.
-                </p>
-
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
-                  Top Personal Loan Providers in the UK
-                </h2>
-
-                <h3 className="text-lg font-semibold text-gray-800 mb-3">
-                  Nationwide Building Society
-                </h3>
-
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
-                  Nationwide offers competitive rates starting from 3.5% APR
-                  representative on loans between £7,500 and £25,000. Their
-                  personal loans feature flexible repayment terms from 1 to 7
-                  years, no arrangement fees, and the ability to make
-                  overpayments without penalties. Existing Nationwide customers
-                  may access preferential rates, making it an excellent choice
-                  for those already banking with this building society.
-                </p>
-
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
-                  Their application process is straightforward, with same-day
-                  approval available for many customers. Nationwide's
-                  transparent terms and member-owned structure have earned them
-                  high satisfaction ratings among UK borrowers.
-                </p>
-
-                <h3 className="text-lg font-semibold text-gray-800 mb-3">
-                  Santander
-                </h3>
-
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
-                  Santander's personal loans start from 3.7% APR representative
-                  for amounts between £7,500 and £20,000. They offer loan terms
-                  from 1 to 5 years, providing flexibility for different
-                  financial situations. Their online application process
-                  includes a pre-approval option that gives you a decision
-                  within minutes without affecting your credit score.
-                </p>
-
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
-                  Santander account holders can benefit from streamlined
-                  applications and potential rate discounts. Their personal
-                  loans include payment holidays (subject to conditions) and the
-                  option to choose your payment date, adding convenience to
-                  their offering.
-                </p>
-
-                <h3 className="text-lg font-semibold text-gray-800 mb-3">
-                  Barclays
-                </h3>
-
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
-                  Barclays provides personal loans with rates from 3.9% APR
-                  representative for existing customers borrowing between £7,500
-                  and £15,000. Their loan amounts range from £1,000 to £50,000,
-                  with terms from 1 to 5 years. Barclays' digital application
-                  process allows customers to check eligibility and apply
-                  entirely online, with funds often available within 24 hours of
-                  approval.
-                </p>
-
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
-                  Their loan calculator tool helps borrowers understand the
-                  total cost of borrowing before applying. Barclays also offers
-                  a Price Promise, potentially matching lower rates offered by
-                  other lenders (subject to terms and conditions).
-                </p>
-
-                <h3 className="text-lg font-semibold text-gray-800 mb-3">
-                  Admiral
-                </h3>
-
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
-                  Better known for insurance, Admiral has established a
-                  competitive personal loan offering with rates from 3.8% APR
-                  representative for loans between £7,500 and £25,000. Their
-                  loans feature repayment terms from 1 to 7 years and no early
-                  repayment charges, giving borrowers flexibility to pay off
-                  their loans ahead of schedule if their financial situation
-                  improves.
-                </p>
-
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
-                  Admiral's straightforward application process can be completed
-                  entirely online, with decisions often provided within minutes.
-                  They also offer a 14-day cooling-off period, allowing
-                  borrowers to cancel without penalty if they change their minds
-                  shortly after taking out the loan.
-                </p>
-
-                <h3 className="text-lg font-semibold text-gray-800 mb-3">
-                  M&S Bank
-                </h3>
-
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
-                  M&S Bank personal loans start from 3.6% APR representative for
-                  existing customers borrowing between £7,500 and £15,000. Their
-                  loans range from £1,000 to £25,000 with terms from 1 to 7
-                  years. M&S Bank offers loan payment holidays (subject to
-                  criteria) and the flexibility to choose your payment date.
-                </p>
-
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
-                  Their application process can be completed online, by phone,
-                  or in-store, providing options for different preferences. M&S
-                  Bank's customer service has received high ratings, making them
-                  a good choice for borrowers who value support throughout the
-                  loan process.
-                </p>
-
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
-                  How to Choose the Right Personal Loan
-                </h2>
-
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
-                  Selecting the best personal loan involves more than just
-                  finding the lowest interest rate. Consider these factors to
-                  make an informed decision:
-                </p>
-
-                <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800">
-                  <li className="mb-2">
-                    <strong>APR (Annual Percentage Rate):</strong> This
-                    represents the total cost of borrowing, including interest
-                    and fees. Compare APRs rather than just interest rates for a
-                    more accurate comparison.
-                  </li>
-                  <li className="mb-2">
-                    <strong>Loan amount flexibility:</strong> Ensure the lender
-                    offers exactly what you need—neither too little (requiring
-                    additional borrowing elsewhere) nor too much (leading to
-                    unnecessary interest payments).
-                  </li>
-                  <li className="mb-2">
-                    <strong>Repayment terms:</strong> Longer terms mean lower
-                    monthly payments but higher total interest costs. Shorter
-                    terms have higher monthly payments but lower overall costs.
-                  </li>
-                  <li className="mb-2">
-                    <strong>Early repayment options:</strong> Look for loans
-                    that allow penalty-free overpayments or early settlement,
-                    giving you flexibility if your financial situation improves.
-                  </li>
-                  <li className="mb-2">
-                    <strong>Fees and charges:</strong> Check for arrangement
-                    fees, late payment charges, and other potential costs that
-                    could impact the total amount you repay.
-                  </li>
-                  <li className="mb-2">
-                    <strong>Application process:</strong> Consider how quickly
-                    you need the funds and whether you prefer applying online,
-                    by phone, or in person.
-                  </li>
-                </ul>
-
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
-                  Improving Your Chances of Approval
-                </h2>
-
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
-                  To increase your likelihood of being approved for a personal
-                  loan at competitive rates:
-                </p>
-
-                <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800">
-                  <li className="mb-2">
-                    Check your credit report before applying and address any
-                    errors
-                  </li>
-                  <li className="mb-2">
-                    Register on the electoral roll at your current address
-                  </li>
-                  <li className="mb-2">
-                    Reduce existing debt where possible before applying
-                  </li>
-                  <li className="mb-2">
-                    Avoid multiple loan applications in a short period, as these
-                    can harm your credit score
-                  </li>
-                  <li className="mb-2">
-                    Use eligibility checkers that perform soft searches (which
-                    don't affect your credit score) to see likely approval odds
-                    before formally applying
-                  </li>
-                  <li className="mb-2">
-                    Provide accurate and complete information in your
-                    application
-                  </li>
-                </ul>
-
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
-                  Making the Most of Your Personal Loan
-                </h2>
-
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
-                  Once approved, follow these best practices to manage your
-                  personal loan effectively:
-                </p>
-
-                <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800">
-                  <li className="mb-2">
-                    Set up a direct debit to ensure you never miss a payment
-                  </li>
-                  <li className="mb-2">
-                    Consider making overpayments when your finances allow
-                  </li>
-                  <li className="mb-2">
-                    Regularly review your loan statement to track your progress
-                  </li>
-                  <li className="mb-2">
-                    Contact your lender proactively if you anticipate any
-                    difficulty making payments
-                  </li>
-                  <li className="mb-2">
-                    Consider loan protection insurance only if it truly meets
-                    your needs, not because of pressure from the lender
-                  </li>
-                </ul>
-
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
-                  Finding Your Ideal Financial Solution
-                </h2>
-
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
-                  The UK personal loan market offers diverse options to suit
-                  different financial needs and circumstances. By researching
-                  thoroughly, comparing offers from multiple lenders, and
-                  considering the factors that matter most to your situation,
-                  you can secure a personal loan with favourable terms that
-                  helps you achieve your financial goals.
-                </p>
-
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
-                  Remember that responsible borrowing involves taking on debt
-                  only when necessary and in amounts you can comfortably repay.
-                  A well-chosen personal loan can be a valuable financial tool
-                  when used with careful planning and discipline.
-                </p>
-              </section>
             </div>
           </div>
-        </div>
-      </article>
+        ))}
+      </div>
+    </div>
+  );
 
-      <CompactFooter />
-    </main>
+  // Metadata for the archive page itself
+  const pageMetadata = {
+    title: "Personal Finance Guides | Top Finance UK",
+    description: "Explore guides on credit cards, loans, debt management, and other personal finance topics in the UK.",
+  };
+
+  return (
+    <BlogLayout metadata={pageMetadata}>
+      {content}
+    </BlogLayout>
   );
 }

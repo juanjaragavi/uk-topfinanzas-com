@@ -1,7 +1,11 @@
-docs: update documentation for UK localization
+feat: implement blog archive and restructure content
 
-- Updated Markdown files in app/, components/, content/, and lib/ directories for UK market
-- Updated navigation configs with UK-specific financial products and terminology
-- Added comprehensive UK localization guidelines (spelling, currency, financial terms, dates)
-- Ensured proper references to UK financial institutions and regulatory bodies
-- Maintained company's official Panama address while focusing on UK content
+- Create main blog archive page (/blog) displaying posts from all categories with pagination.
+- Restructure /personal-finance into a category archive page, moving the 'Best Personal Loans' article to its own subdirectory.
+- Complete MDX to TSX migrations for remaining personal finance articles.
+- Update Blog Megamenu navigation (headerNavigation.ts) to reflect current site structure (Personal Finance, Financial Solutions - Loans/Cards) with limits and "Show more..." links.
+- Update Blog Megamenu styling (header.tsx) for featured posts layout and "Show more..." links.
+- Implement /api/posts route to dynamically fetch post metadata (currently unused by homepage).
+- Switch homepage "Latest Articles" section to use hardcoded data (similar to /blog) to resolve display issues.
+- Update various metadata files for consistency (URLs, sections).
+- Update blog layout sidebar (blog-layout.tsx) with current categories and recent posts.

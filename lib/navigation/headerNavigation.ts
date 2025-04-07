@@ -7,6 +7,7 @@
 export interface NavigationItem {
   text: string;
   href: string;
+  isEmphasis?: boolean; // Optional flag for "Show more..."
 }
 
 export interface DropdownItem {
@@ -34,24 +35,17 @@ export interface MegaMenu {
   };
 }
 
+// Helper function to clean titles (remove potential pipe and extra text)
+const cleanTitle = (title: string): string => {
+  return title.split("|")[0].split(":")[0].split(" - ")[0].trim();
+};
+
 export const headerNavigation = {
   /** Main navigation items */
   mainNavItems: [
     {
       text: "CARD RECOMMENDER",
       href: "/credit-card-recommender-p1",
-    },
-    {
-      text: "FINANCIAL SOLUTIONS",
-      href: "/financial-solutions",
-    },
-    {
-      text: "BLOG",
-      href: "/blog",
-    },
-    {
-      text: "APPLY NOW",
-      href: "/financial-solutions/barclaycard-avios-plus-requirements",
     },
   ],
 
@@ -64,100 +58,144 @@ export const headerNavigation = {
         href: "/financial-solutions",
       },
       {
-        text: "Credit Cards",
-        href: "/financial-solutions",
-      },
-      {
-        text: "Personal Loans",
-        href: "/blog/post/best-personal-loans-uk",
+        text: "Personal Finance",
+        href: "/personal-finance",
       },
       {
         text: "Card Recommender",
         href: "/credit-card-recommender-p1",
       },
-      {
-        text: "Current Accounts",
-        href: "/blog/category/current-accounts",
-      },
     ],
   },
 
-  /** Blog megamenu */
+  /** Blog megamenu - Updated with limited items and "Show more..." */
   blogMegaMenu: {
     title: "BLOG",
     columns: [
+      // Column 1: Personal Finance Guides (Top 5 + Show more)
       {
-        title: "Categories",
+        title: "Personal Finance",
         items: [
           {
-            text: "Personal Finance",
-            href: "/blog/category/personal-finance",
+            text: cleanTitle("Best Personal Loans in the UK"),
+            href: "/personal-finance/best-personal-loans",
           },
           {
-            text: "Financial Solutions",
-            href: "/blog/category/financial-solutions",
+            text: cleanTitle("Top Rewards Credit Cards"),
+            href: "/personal-finance/best-rewards-credit-cards",
           },
           {
-            text: "Mortgages",
-            href: "/blog/category/mortgages",
+            text: cleanTitle("Best Cashback Credit Cards"),
+            href: "/personal-finance/cashback-credit-cards",
           },
           {
-            text: "Credit Cards",
-            href: "/blog/category/credit-cards",
+            text: cleanTitle("Credit Cards - Types, Benefits..."),
+            href: "/personal-finance/credit-card-types-benefits",
           },
           {
-            text: "Investments & ISAs",
-            href: "/blog/category/investing",
+            text: cleanTitle("Practical Guide to Getting Out of Debt"),
+            href: "/personal-finance/getting-out-of-debt",
           },
-          {
-            text: "Budgeting",
-            href: "/blog/category/budgeting",
-          },
+          { text: "Show more...", href: "/personal-finance", isEmphasis: true }, // Link to category archive
         ],
       },
+      // Column 2: Financial Solutions - Credit Cards (Top 5 + Show more)
       {
-        title: "Popular Topics",
+        title: "Credit Cards",
         items: [
           {
-            text: "Your First Salary Guide",
-            href: "/blog/post/your-first-paycheck",
+            text: cleanTitle("Barclaycard Avios Plus"),
+            href: "/financial-solutions/barclaycard-avios-plus",
           },
           {
-            text: "UK Mortgage Guide",
-            href: "/blog/post/what-is-a-home-mortgage-uk",
+            text: cleanTitle("Curve Credit Card"),
+            href: "/financial-solutions/curve-credit-card",
           },
           {
-            text: "Online Loans in the UK",
-            href: "/blog/post/what-are-online-loans-uk",
+            text: cleanTitle("Halifax World Elite Mastercard"),
+            href: "/financial-solutions/halifax-world-elite-mastercard",
           },
           {
-            text: "Choosing UK Online Loans",
-            href: "/blog/post/tips-for-choosing-an-online-loan-uk",
+            text: cleanTitle("Lloyds Bank Credit Card"),
+            href: "/financial-solutions/lloyds-bank-credit-card",
           },
           {
-            text: "Best Personal Loans UK",
-            href: "/blog/post/best-personal-loans-uk",
+            text: cleanTitle("Monzo Credit Card"),
+            href: "/financial-solutions/monzo-credit-card",
           },
+          {
+            text: "Show more...",
+            href: "/financial-solutions",
+            isEmphasis: true,
+          }, // Link to category archive
+        ],
+      },
+      // Column 3: Financial Solutions - Loans (Top 5 + Show more)
+      {
+        title: "Loans",
+        items: [
+          {
+            text: cleanTitle("Barclays Personal Loan"),
+            href: "/financial-solutions/barclays-personal-loan",
+          },
+          {
+            text: cleanTitle("Capify Business Finance"),
+            href: "/financial-solutions/capify-personal-loan",
+          },
+          {
+            text: cleanTitle("Fleximize Business Loans"),
+            href: "/financial-solutions/fleximize-personal-loan",
+          },
+          {
+            text: cleanTitle("Funding Circle Business Loan"),
+            href: "/financial-solutions/funding-circle-personal-loan",
+          },
+          {
+            text: cleanTitle("Funding Options Marketplace"),
+            href: "/financial-solutions/funding-options-personal-loan",
+          },
+          {
+            text: "Show more...",
+            href: "/financial-solutions",
+            isEmphasis: true,
+          }, // Link to category archive
         ],
       },
     ],
+    // Featured Posts Section - Remains the same
     featuredPosts: {
       title: "Featured Articles",
       posts: [
         {
-          title: "Best Personal Loans in the UK (2025)",
-          href: "/blog/post/best-personal-loans-uk",
+          title: cleanTitle("Best Personal Loans in the UK"),
+          href: "/personal-finance/best-personal-loans",
           image:
-            "https://media.topfinanzas.com/images/uk/loans/best-personal-loans-uk.webp",
-          category: "Personal Loans",
+            "https://media.topfinanzas.com/images/best-personal-loans.webp",
+          category: "Personal Finance",
+          categoryHref: "/personal-finance",
+        },
+        {
+          title: cleanTitle("Practical Guide to Getting Out of Debt"),
+          href: "/personal-finance/getting-out-of-debt",
+          image:
+            "https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_como_salir_de_deudas.jpg",
+          category: "Personal Finance",
+          categoryHref: "/personal-finance",
+        },
+        {
+          title: cleanTitle("Barclaycard Avios Plus"),
+          href: "/financial-solutions/barclaycard-avios-plus",
+          image:
+            "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+          category: "Credit Cards",
           categoryHref: "/financial-solutions",
         },
         {
-          title: "UK Credit Card Comparison Guide",
-          href: "/blog/post/uk-credit-card-comparison-guide",
+          title: cleanTitle("HSBC Personal Loan"),
+          href: "/financial-solutions/hsbc-personal-loan",
           image:
-            "https://media.topfinanzas.com/images/uk/credit-cards/uk-credit-card-comparison.webp",
-          category: "Credit Cards",
+            "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.jpg",
+          category: "Loans",
           categoryHref: "/financial-solutions",
         },
       ],

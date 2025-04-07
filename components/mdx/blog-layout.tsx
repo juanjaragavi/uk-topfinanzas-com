@@ -59,134 +59,120 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   {/* Ad banner */}
                   <SidebarAd />
                   <SidebarSeparator />
-                  {/* Recent Articles */}
+                  {/* Recent Articles - Updated */}
                   <SidebarRecentArticles>
+                    {/* Article 1 */}
                     <div className="flex items-center gap-3">
                       <Image
-                        src="https://media.topfinanzas.com/images/generated/1741659352997/sample_0.jpg"
-                        alt="Tu Primer Sueldo: Una Guía Completa para Gestión Inteligente"
+                        src="https://media.topfinanzas.com/images/best-personal-loans.webp"
+                        alt="Best Personal Loans in the UK"
                         width={50}
                         height={50}
-                        className="rounded-md"
+                        className="rounded-md object-cover" // Added object-cover
+                        onError={(e) => {
+                          e.currentTarget.src =
+                            "https://media.topfinanzas.com/images/placeholder-image.webp";
+                        }}
                       />
                       <div>
                         <Link
-                          href="/blog/post/your-first-paycheck"
-                          className="text-sm font-medium hover:underline"
+                          href="/personal-finance/best-personal-loans"
+                          className="text-sm font-medium hover:underline line-clamp-2" // Added line-clamp
                         >
-                          Your First Salary: A Complete Guide to Smart
-                          Management
+                          Best Personal Loans in the UK
                         </Link>
-                        <p className="text-xs text-gray-500">
-                          25 February, 2025
-                        </p>
+                        {/* Optional: Add date if available */}
                       </div>
                     </div>
-
+                    {/* Article 2 */}
                     <div className="flex items-center gap-3">
                       <Image
-                        src="https://media.topfinanzas.com/images/generated/1741658237902/sample_0.jpg"
-                        alt="¿Qué Es una Hipoteca? Tu Guía Completa"
+                        src="https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_tarjeta_de_credito_nu.jpg" // Placeholder
+                        alt="Top Rewards Credit Cards"
                         width={50}
                         height={50}
-                        className="rounded-md"
+                        className="rounded-md object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src =
+                            "https://media.topfinanzas.com/images/placeholder-image.webp";
+                        }}
                       />
                       <div>
                         <Link
-                          href="/blog/post/what-is-a-home-mortgage"
-                          className="text-sm font-medium hover:underline"
+                          href="/personal-finance/best-rewards-credit-cards"
+                          className="text-sm font-medium hover:underline line-clamp-2"
                         >
-                          What Is a Mortgage? Your Complete Guide
+                          Top Rewards Credit Cards
                         </Link>
-                        <p className="text-xs text-gray-500">
-                          25 February, 2025
-                        </p>
                       </div>
                     </div>
-
+                    {/* Article 3 */}
                     <div className="flex items-center gap-3">
                       <Image
-                        src="https://media.topfinanzas.com/images/generated/1741723547071/sample_0.jpg"
-                        alt="What Are Online Loans? A Key Tool in Personal Finance"
+                        src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
+                        alt="Barclaycard Avios Plus"
                         width={50}
                         height={50}
-                        className="rounded-md"
+                        className="rounded-md object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src =
+                            "https://media.topfinanzas.com/images/placeholder-image.webp";
+                        }}
                       />
                       <div>
                         <Link
-                          href="/blog/post/what-are-online-loans"
-                          className="text-sm font-medium hover:underline"
+                          href="/financial-solutions/barclaycard-avios-plus"
+                          className="text-sm font-medium hover:underline line-clamp-2"
                         >
-                          What Are Online Loans? A Key Tool in Personal Finance
+                          Barclaycard Avios Plus Credit Card
                         </Link>
-                        <p className="text-xs text-gray-500">
-                          25 February, 2025
-                        </p>
+                      </div>
+                    </div>
+                    {/* Article 4 */}
+                    <div className="flex items-center gap-3">
+                      <Image
+                        src="https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_como_salir_de_deudas.jpg"
+                        alt="Practical Guide to Getting Out of Debt"
+                        width={50}
+                        height={50}
+                        className="rounded-md object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src =
+                            "https://media.topfinanzas.com/images/placeholder-image.webp";
+                        }}
+                      />
+                      <div>
+                        <Link
+                          href="/personal-finance/getting-out-of-debt"
+                          className="text-sm font-medium hover:underline line-clamp-2"
+                        >
+                          Practical Guide to Getting Out of Debt
+                        </Link>
                       </div>
                     </div>
                   </SidebarRecentArticles>
                   <SidebarSeparator />
-                  {/* Categories */}
+                  {/* Categories - Updated */}
                   <SidebarCategories>
                     <div className="flex items-center justify-between">
                       <Link
-                        href="/blog/category/personal-finance"
-                        className="text-sm hover:underline"
+                        href="/personal-finance"
+                        className="text-sm hover:underline font-medium" // Made font medium
                       >
                         Personal Finance
                       </Link>
-                      <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
-                        12
-                      </span>
+                      {/* Removed count */}
                     </div>
-
                     <div className="flex items-center justify-between">
                       <Link
-                        href="/blog/category/credit-cards"
-                        className="text-sm hover:underline"
+                        href="/financial-solutions"
+                        className="text-sm hover:underline font-medium" // Made font medium
                       >
-                        Credit Cards
+                        Financial Solutions
                       </Link>
-                      <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
-                        8
-                      </span>
+                      {/* Removed count */}
                     </div>
-
-                    <div className="flex items-center justify-between">
-                      <Link
-                        href="/blog/category/mortgages"
-                        className="text-sm hover:underline"
-                      >
-                        Mortgages
-                      </Link>
-                      <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
-                        6
-                      </span>
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <Link
-                        href="/blog/category/investing"
-                        className="text-sm hover:underline"
-                      >
-                        Investments
-                      </Link>
-                      <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
-                        5
-                      </span>
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <Link
-                        href="/blog/category/budgeting"
-                        className="text-sm hover:underline"
-                      >
-                        Budgeting
-                      </Link>
-                      <span className="text-xs bg-gray-100 rounded-full px-2 py-0.5">
-                        4
-                      </span>
-                    </div>
+                    {/* Add more relevant categories if needed */}
                   </SidebarCategories>
                   <SidebarSeparator />
                   {/* Newsletter */}
