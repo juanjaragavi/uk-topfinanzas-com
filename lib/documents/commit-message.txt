@@ -1,5 +1,8 @@
-feat: implement blog archive, UTM parameter persistence, build fixes and GTM updates
+feat: implement blog archive, UTM parameter persistence, build fixes, GTM updates and performance improvements
 
+- Improve site performance metrics by fixing 4XX errors and optimizing LCP loading
+- Add new travel-credit-cards page to fix broken internal links
+- Create automated scripts for image optimization and broken link detection/fixing
 - Update Google Tag Manager implementation to follow standard placement recommendations
 - Enhance UTM parameter persistence functionality to ensure campaign tracking across site navigation
 - Add UTM parameter monitoring tools for testing and debugging
