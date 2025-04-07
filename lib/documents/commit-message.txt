@@ -1,5 +1,6 @@
-feat: implement blog archive, UTM parameter persistence, build fixes and restructure content
+feat: implement blog archive, UTM parameter persistence, build fixes and GTM updates
 
+- Update Google Tag Manager implementation to follow standard placement recommendations
 - Enhance UTM parameter persistence functionality to ensure campaign tracking across site navigation
 - Add UTM parameter monitoring tools for testing and debugging
 - Create UTM test page for verifying cross-page UTM parameter persistence
