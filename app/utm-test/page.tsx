@@ -1,13 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { UtmTester, testUtmPersistence } from "@/components/analytics/utm-test";
 import { Button } from "@/components/ui/button";
 
-export default function UtmTestPage() {
+// Client Component that uses useSearchParams
+function UtmTestContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [currentUrl, setCurrentUrl] = useState("");
@@ -87,5 +88,20 @@ export default function UtmTestPage() {
         </p>
       </div>
     </div>
+  );
+}
+
+// Main page component with Suspense boundary
+export default function UtmTestPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="container mx-auto px-4 py-8">
+          Loading UTM test page...
+        </div>
+      }
+    >
+      <UtmTestContent />
+    </Suspense>
   );
 }
