@@ -14,20 +14,20 @@ import UtmMonitor from "@/components/analytics/utm-monitor";
 const poppins = localFont({
   src: [
     {
-      path: '../public/fonts/poppins-regular.woff2',
-      weight: '400',
-      style: 'normal',
+      path: "../public/fonts/poppins-regular.woff2",
+      weight: "400",
+      style: "normal",
     },
     {
-      path: '../public/fonts/poppins-medium.woff2',
-      weight: '500',
-      style: 'normal',
+      path: "../public/fonts/poppins-medium.woff2",
+      weight: "500",
+      style: "normal",
     },
     {
-      path: '../public/fonts/poppins-semibold.woff2',
-      weight: '600',
-      style: 'normal',
-    }
+      path: "../public/fonts/poppins-semibold.woff2",
+      weight: "600",
+      style: "normal",
+    },
   ],
   display: "swap",
   variable: "--font-poppins",
@@ -113,7 +113,7 @@ export default function RootLayout({
                 "@type": "Organization",
                 name: "TopFinance UK", // Replace with your actual name
                 url: baseUrl, // Uses the variable defined above
-                logo: "https://uk.topfinanzas.com/images/logo-english-color.png",
+                logo: "https://storage.googleapis.com/media-topfinanzas-com/images/logo-english-color.webp",
                 address: {
                   "@type": "PostalAddress",
                   streetAddress: "PANAMA, PANAMA CITY", // Replace with your address

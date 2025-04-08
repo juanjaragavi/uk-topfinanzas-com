@@ -17,7 +17,7 @@ export default function Logo() {
       }}
     >
       <Image
-        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagotipo-sinfondo-3-gEahRjTETkuvBtblSOs8dgdFVGFmuo.png"
+        src="https://media.topfinanzas.com/images/favicon.webp"
         alt="Top Finance Logo"
         width={48}
         height={48}

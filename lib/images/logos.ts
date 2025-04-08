@@ -5,14 +5,14 @@
 export const logos = {
   /** Color logo for light backgrounds (header) */
   colorLogo: {
-    url: "https://media.topfinanzas.com/images/logo-english-color.png",
+    url: "https://storage.googleapis.com/media-topfinanzas-com/images/logo-english-color.webp",
     alt: "Logo de TopFinanzas",
     width: 200,
     height: 53,
   },
   /** White logo for dark backgrounds (footer) */
   whiteLogo: {
-    url: "https://media.topfinanzas.com/images/logo-english-white.png",
+    url: "https://storage.googleapis.com/media-topfinanzas-com/images/logo-english-white.webp",
     alt: "Logo de TopFinanzas",
     width: 300,
     height: 63,

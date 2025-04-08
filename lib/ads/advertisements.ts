@@ -24,7 +24,7 @@ export const advertisements: Advertisement[] = [
     id: "ad1",
     name: "Financial Management Ad",
     image: {
-      src: "https://media.topfinanzas.com/images/advertisement.jpg",
+      src: "https://media.topfinanzas.com/images/advertisement.webp",
       alt: "Financial management advertisement",
       width: 350,
       height: 300,
@@ -37,7 +37,7 @@ export const advertisements: Advertisement[] = [
     id: "ad2",
     name: "Credit Card Blog Ad",
     image: {
-      src: "https://media.topfinanzas.com/images/Top-Blog-Credit-Cards.png",
+      src: "https://media.topfinanzas.com/images/Top-Blog-Credit-Cards.webp",
       alt: "Credit cards blog advertisement",
       width: 320,
       height: 620,

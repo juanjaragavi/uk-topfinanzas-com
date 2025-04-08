@@ -27,7 +27,7 @@ yarn-error.log*
 next-env.d.ts
 
 # Documents and Prompts
-lib/documents/topfinanzas-mexico-adaptation-agent.md
+lib/documents
 
 # Original site converted to XML
 lib/us-topfinance-com-posts-2025-03-30.xml
@@ -40,15 +40,3 @@ public/images/**/*.png
 public/images/**/*.gif
 public/images/**/*.svg
 public/images/**/*.webp
-
-# Placeholder Markdown Document
-lib/documents/placeholder-markdown-document.md
-
-# Placeholder HTML Document
-lib/documents/example.html
-
-# 404 Error URLs Document
-lib/documents/top-uk-ajustes.xlsx-404.csv
-
-# WordPress Site Export
-lib/documents/TopFinance_WordPress_Export_Mar_15_2025.xml

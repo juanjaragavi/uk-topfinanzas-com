@@ -748,7 +748,7 @@ const SidebarAd = React.forwardRef<HTMLDivElement, React.ComponentProps<"div">>(
         <Link href="/personal-finance/credit-card-types-benefits/">
           <div className="overflow-hidden rounded-lg border shadow hover:shadow-md transition-shadow">
             <Image
-              src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.png"
+              src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"
               alt="Barclaycard Avios Plus Credit Card"
               width={1000}
               height={563}

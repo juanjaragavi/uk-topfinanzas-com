@@ -177,7 +177,7 @@ export default function FundingOptionsPersonalLoanPage() {
                 <div className="my-8">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
-                      src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.png"
+                      src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"
                       alt="Funding Options Business Finance Marketplace"
                       width={1000}
                       height={563}

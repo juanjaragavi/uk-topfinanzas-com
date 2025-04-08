@@ -201,7 +201,7 @@ export default function LloydsBankCreditCardRequirementsPage() {
                 <div className="my-8">
                   <Link href="/personal-finance/best-personal-loans">
                     <Image
-                      src="https://media.topfinanzas.com/images/ads/Top-Blog-Personal-loans-1.png"
+                      src="https://media.topfinanzas.com/images/ads/Top-Blog-Personal-loans-1.webp"
                       alt="Lloyds Bank Credit Card"
                       width={1000}
                       height={563}
@@ -332,7 +332,7 @@ export default function LloydsBankCreditCardRequirementsPage() {
                 <div className="my-8">
                   <Link href="/personal-finance/getting-out-of-debt">
                     <Image
-                      src="https://media.topfinanzas.com/images/ads/Top-Blog-Debt-management-1.png"
+                      src="https://media.topfinanzas.com/images/ads/Top-Blog-Debt-management-1.webp"
                       alt="Lloyds Bank Credit Card"
                       width={1000}
                       height={563}

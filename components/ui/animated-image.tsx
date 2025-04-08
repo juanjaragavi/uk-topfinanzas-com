@@ -35,7 +35,7 @@ export const AnimatedImage: React.FC<AnimatedImageProps> = ({
       className={`p-0 m-0 ${className}`}
     >
       <Image
-        src={src || "https://media.topfinanzas.com/images/favicon.png"}
+        src={src || "https://media.topfinanzas.com/images/favicon.webp"}
         alt={alt}
         width={width}
         height={height}

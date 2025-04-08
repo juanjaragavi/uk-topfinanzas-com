@@ -253,7 +253,7 @@ export default function Home() {
                   <div className="flex items-center space-x-2 text-xs text-gray-500">
                     <div className="size-5 overflow-hidden bg-blue-600 rounded-full flex items-center justify-center">
                       <Image
-                        src="https://media.topfinanzas.com/images/favicon.png"
+                        src="https://media.topfinanzas.com/images/favicon.webp"
                         alt="Top Finance"
                         width={16}
                         height={16}
