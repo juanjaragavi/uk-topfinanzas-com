@@ -113,7 +113,7 @@ export default function RootLayout({
                 "@type": "Organization",
                 name: "TopFinance UK", // Replace with your actual name
                 url: baseUrl, // Uses the variable defined above
-                logo: "https://storage.googleapis.com/media-topfinanzas-com/images/logo-english-color.webp",
+                logo: "https://media.topfinanzas.com/images/logo-english.webp",
                 address: {
                   "@type": "PostalAddress",
                   streetAddress: "PANAMA, PANAMA CITY", // Replace with your address

@@ -29,9 +29,6 @@ next-env.d.ts
 # Documents and Prompts
 lib/documents
 
-# Original site converted to XML
-lib/us-topfinance-com-posts-2025-03-30.xml
-
 # Local Images (because all of them all in our CDN)
 # Ignore image files in public/images and its subdirectories but keep the directory structure
 public/images/**/*.jpg
