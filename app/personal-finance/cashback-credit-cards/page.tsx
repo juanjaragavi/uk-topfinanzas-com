@@ -33,6 +33,7 @@ export default function CashbackCreditCardsPage() {
                   height={450}
                   className="w-full h-auto rounded-lg"
                   priority
+                  loading="eager"
                 />
               </div>
 

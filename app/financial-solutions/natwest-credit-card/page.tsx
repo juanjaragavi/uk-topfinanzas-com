@@ -92,12 +92,13 @@ export default function NatWestCreditCardPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/uk/credit-cards/718644866-top_prestamos-y-tarjetas-uk_v1_mesa-de-trabajo-1-copia.jpg"
+                  src="https://media.topfinanzas.com/images/uk/credit-cards/718644866-top_prestamos-y-tarjetas-uk_v1_mesa-de-trabajo-1-copia.webp"
                   alt="NatWest Credit Card"
-                  width={1000}
-                  height={563}
+                  width={900}
+                  height={507}
                   className="w-full h-auto rounded-lg"
                   priority
+                  loading="eager"
                 />
               </div>
 

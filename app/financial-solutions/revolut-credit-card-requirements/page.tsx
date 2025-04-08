@@ -36,11 +36,12 @@ export default function RevolutCreditCardRequirementsPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/uk/credit-cards/718645629-top_prestamos-y-tarjetas-uk_v1-11.jpg"
+                  src="https://media.topfinanzas.com/images/uk/credit-cards/718645629-top_prestamos-y-tarjetas-uk_v1-11.webp"
                   alt="Revolut Credit Card"
-                  width={1000}
-                  height={563}
+                  width={900}
+                  height={507}
                   className="w-full h-auto rounded-lg"
+                  loading="eager"
                   priority
                 />
               </div>

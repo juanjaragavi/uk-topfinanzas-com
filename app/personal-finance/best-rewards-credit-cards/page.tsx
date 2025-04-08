@@ -28,12 +28,13 @@ export default function BestRewardsCreditCardsPage() {
               {/* TODO: Update image if needed */}
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjeta_de_credito_nu.jpg"
+                  src="https://media.topfinanzas.com/images/uk/Top_Finance_uk_credit_cards.webp"
                   alt="Rewards Credit Cards" // Updated Alt Text
                   width={800}
                   height={450}
                   className="w-full h-auto rounded-lg"
                   priority
+                  loading="eager"
                 />
               </div>
 

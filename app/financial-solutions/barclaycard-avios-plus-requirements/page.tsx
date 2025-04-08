@@ -38,10 +38,11 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                 <Image
                   src="https://media.topfinanzas.com/images/barclaycard-avios-plus-requirements.webp"
                   alt="Barclaycard Avios Plus Credit Card"
-                  width={1000}
-                  height={563}
+                  width={900}
+                  height={507}
                   className="w-full h-auto rounded-lg"
                   priority
+                  loading="eager"
                 />
               </div>
 

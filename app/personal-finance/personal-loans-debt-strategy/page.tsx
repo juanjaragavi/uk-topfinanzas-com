@@ -25,12 +25,13 @@ export default function PersonalLoansDebtStrategyPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/uk/Top-Finanzas_prestamos_personales.jpg"
+                  src="https://media.topfinanzas.com/images/uk/Top-Finanzas_prestamos_personales.webp"
                   alt="Personal Loans Strategy"
                   width={800}
                   height={450}
                   className="w-full h-auto rounded-lg"
                   priority
+                  loading="eager"
                 />
               </div>
 

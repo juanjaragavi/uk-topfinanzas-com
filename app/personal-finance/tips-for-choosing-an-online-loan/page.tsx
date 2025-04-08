@@ -83,12 +83,13 @@ export default function TipsForChoosingAnOnlineLoanPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/choosing-online-loan.jpg"
+                  src="https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp"
                   alt="Tips for Choosing an Online Loan"
                   width={800}
                   height={450}
                   className="w-full h-auto rounded-lg"
                   priority
+                  loading="eager"
                 />
               </div>
 

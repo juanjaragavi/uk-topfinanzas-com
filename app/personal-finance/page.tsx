@@ -29,7 +29,7 @@ export default function PersonalFinanceArchivePage() {
       title: "Top Rewards Credit Cards to Maximize Your Spending | Top Finance UK",
       slug: "best-rewards-credit-cards",
       description: "Discover the best rewards credit cards that turn your everyday spending into valuable perks. From cashback to points and miles, find the perfect card.",
-      image: "https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjeta_de_credito_nu.jpg", // Placeholder image - UPDATE NEEDED
+      image: "https://media.topfinanzas.com/images/uk/Top_Finance_uk_credit_cards.webp", // Placeholder image - UPDATE NEEDED
       date: "3 April 2025", // Example date
     },
     {
@@ -43,35 +43,35 @@ export default function PersonalFinanceArchivePage() {
       title: "Credit Cards - Types, Benefits, and Keys to Financial Health | Top Finance UK",
       slug: "credit-card-types-benefits",
       description: "Discover everything you need to know about credit cards, from types and benefits to tips for responsible usage and maintaining healthy finances.",
-      image: "https://media.topfinanzas.com/images/uk/Top_Finanzas_Top_tarjeta_de_credito-1.jpg", // Placeholder image - UPDATE NEEDED
+      image: "https://media.topfinanzas.com/images/uk/Top_Finanzas_Top_tarjeta_de_credito-1.webp", // Placeholder image - UPDATE NEEDED
       date: "3 April 2025", // Example date
     },
     {
       title: "Practical Guide to Getting Out of Debt | Top Finance UK",
       slug: "getting-out-of-debt",
       description: "Feeling overwhelmed by debt? Get practical strategies for getting out of debt, building an emergency fund, and taking control of your finances.",
-      image: "https://media.topfinanzas.com/images/uk/Top_Finanzas_como_salir_de_deudas.jpg",
+      image: "https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp",
       date: "3 April 2025", // Example date
     },
     {
       title: "Top Credit Cards With No Annual Fees | Top Finance UK",
       slug: "no-annual-fee-credit-cards",
       description: "Find the best no annual fee credit cards with great cashback, rewards, and flexible benefits. Perfect for managing expenses while saving on fees.",
-      image: "https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjetas_de_credito_sin_anualidad.jpg", // Placeholder image - UPDATE NEEDED
+      image: "https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjetas_de_credito_sin_anualidad.webp", // Placeholder image - UPDATE NEEDED
       date: "3 April 2025", // Example date
     },
     {
       title: "Personal Loans - A Strategy for Managing Debt | Top Finance UK",
       slug: "personal-loans-debt-strategy",
       description: "Discover how personal loans can help you consolidate debt and manage your finances efficiently. Learn how to choose the right loan for your needs.",
-      image: "https://media.topfinanzas.com/images/uk/Top-Finanzas_prestamos_personales.jpg", // Placeholder image - UPDATE NEEDED
+      image: "https://media.topfinanzas.com/images/uk/Top-Finanzas_prestamos_personales.webp", // Placeholder image - UPDATE NEEDED
       date: "3 April 2025", // Example date
     },
     {
       title: "5 Essential Tips for Choosing an Online Loan: Quick Guide | Top Finance UK",
       slug: "tips-for-choosing-an-online-loan",
       description: "Navigate the world of online loans with confidence using these essential tips to find the best rates and terms for your financial needs.",
-      image: "https://media.topfinanzas.com/images/choosing-online-loan.jpg",
+      image: "https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp",
       date: "30 March 2025", // Example date
     },
     {

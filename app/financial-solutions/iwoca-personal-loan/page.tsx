@@ -101,12 +101,13 @@ export default function IwocaPersonalLoanPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/uk/loans/718137033-fotosprestamo-iwoca1uk.jpg"
+                  src="https://media.topfinanzas.com/images/uk/loans/718137033-fotosprestamo-iwoca1uk.webp"
                   alt="iwoca Business Finance"
-                  width={1000}
-                  height={563}
+                  width={900}
+                  height={507}
                   className="w-full h-auto rounded-lg"
                   priority
+                  loading="eager"
                 />
               </div>
 

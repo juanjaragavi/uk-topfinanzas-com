@@ -52,7 +52,7 @@ export default function FinancialSolutionsPage() {
       slug: "tips-for-choosing-an-online-loan",
       description:
         "Navigate the world of online loans with confidence using these essential tips to find the best rates and terms for your financial needs.",
-      image: "https://media.topfinanzas.com/images/choosing-online-loan.jpg",
+      image: "https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp",
       date: "30 March 2025",
       type: "guide",
     },
@@ -63,7 +63,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Discover HSBC Personal Loans with competitive rates, flexible repayment terms, and quick application process.",
       image:
-        "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.jpg",
+        "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
@@ -73,7 +73,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Explore Barclays Personal Loans with competitive rates, flexible terms, and a streamlined application process.",
       image:
-        "https://media.topfinanzas.com/images/uk/loans/718136012-fotosprestamo-barclays2uk.jpg",
+        "https://media.topfinanzas.com/images/uk/loans/718136012-fotosprestamo-barclays2uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
@@ -83,7 +83,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Explore Lloyds Bank Personal Loans with competitive rates, flexible repayment options, and trusted service.",
       image:
-        "https://media.topfinanzas.com/images/uk/loans/718136057-fotosprestamo-lloyds1uk.jpg",
+        "https://media.topfinanzas.com/images/uk/loans/718136057-fotosprestamo-lloyds1uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
@@ -93,7 +93,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Explore NatWest Personal Loans with competitive rates, flexible repayment terms, and a straightforward application process.",
       image:
-        "https://media.topfinanzas.com/images/uk/loans/718136156-fotosprestamo-nawest1uk.jpg",
+        "https://media.topfinanzas.com/images/uk/loans/718136156-fotosprestamo-nawest1uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
@@ -103,7 +103,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Explore Santander UK Personal Loans with competitive rates, flexible repayment terms, and potential benefits for 1|2|3 World customers.",
       image:
-        "https://media.topfinanzas.com/images/uk/loans/718136214-fotosprestamo-santander1uk.jpg",
+        "https://media.topfinanzas.com/images/uk/loans/718136214-fotosprestamo-santander1uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
@@ -113,7 +113,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Explore TSB Personal Loans with competitive rates, flexible repayment options, and a focus on clear, simple banking solutions.",
       image:
-        "https://media.topfinanzas.com/images/uk/loans/718136271-fotosprestamo-tbs1uk.jpg",
+        "https://media.topfinanzas.com/images/uk/loans/718136271-fotosprestamo-tbs1uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
@@ -123,7 +123,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Explore Virgin Money Personal Loans with competitive rates, flexible terms, and potential benefits linked to the Virgin Red rewards program.",
       image:
-        "https://media.topfinanzas.com/images/uk/loans/718136330-fotosprestamo-virginmoney1uk.jpg",
+        "https://media.topfinanzas.com/images/uk/loans/718136330-fotosprestamo-virginmoney1uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
@@ -133,7 +133,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Explore Halifax Personal Loans with competitive rates, flexible repayment options, and the trusted service of a major UK bank.",
       image:
-        "https://media.topfinanzas.com/images/uk/loans/718136403-fotosprestamo-halifax1uk.jpg",
+        "https://media.topfinanzas.com/images/uk/loans/718136403-fotosprestamo-halifax1uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
@@ -143,7 +143,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Explore Nationwide Personal Loans with competitive rates, flexible terms, and benefits for existing members.",
       image:
-        "https://media.topfinanzas.com/images/uk/loans/718136476-fotosprestamo-nationwide1uk.jpg",
+        "https://media.topfinanzas.com/images/uk/loans/718136476-fotosprestamo-nationwide1uk.webp",
       date: "4 April 2025",
       type: "personal",
     },
@@ -154,7 +154,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Explore Revolut Personal Loans offering quick decisions, flexible terms, and seamless management through the Revolut app.",
       image:
-        "https://media.topfinanzas.com/images/uk/loans/718136529-fotosprestamo-revoult1uk.jpg",
+        "https://media.topfinanzas.com/images/uk/loans/718136529-fotosprestamo-revoult1uk.webp",
       date: "4 April 2025",
       type: "fintech", // Could also be 'personal' depending on desired filter logic
     },
@@ -164,7 +164,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Explore Monzo Personal Loans offering quick decisions, clear terms, and seamless management through the Monzo app.",
       image:
-        "https://media.topfinanzas.com/images/uk/loans/718136607-fotosprestamo-monzo2uk.jpg",
+        "https://media.topfinanzas.com/images/uk/loans/718136607-fotosprestamo-monzo2uk.webp",
       date: "4 April 2025",
       type: "neobank", // Could also be 'personal'
     },
@@ -173,7 +173,7 @@ export default function FinancialSolutionsPage() {
       slug: "starling-bank-personal-loan",
       description:
         "Explore Starling Bank Personal Loans offering competitive rates, clear terms, and seamless management via the Starling app.",
-      image: "https://media.topfinanzas.com/images/uk/loans/718136704-fotosprestamo-starlinkbanck1uk.jpg",
+      image: "https://media.topfinanzas.com/images/uk/loans/718136704-fotosprestamo-starlinkbanck1uk.webp",
       date: "4 April 2025",
       type: "neobank", // Could also be 'personal'
     },
@@ -183,7 +183,7 @@ export default function FinancialSolutionsPage() {
       slug: "funding-circle-personal-loan", // Keep slug as created
       description:
         "Explore Funding Circle's business loans offering fast, flexible financing solutions designed specifically for UK SMEs.",
-      image: "https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.jpg",
+      image: "https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.webp",
       date: "4 April 2025",
       type: "sme_fintech",
     },
@@ -192,7 +192,7 @@ export default function FinancialSolutionsPage() {
       slug: "funding-options-personal-loan", // Keep slug as created
       description:
         "Explore Funding Options, a leading UK platform connecting SMEs with a wide range of business finance solutions.",
-      image: "https://media.topfinanzas.com/images/uk/loans/718138018-fotosprestamo-fundingoption1uk.jpg",
+      image: "https://media.topfinanzas.com/images/uk/loans/718138018-fotosprestamo-fundingoption1uk.webp",
       date: "4 April 2025",
       type: "marketplace", // Specific type for marketplaces
     },
@@ -201,7 +201,7 @@ export default function FinancialSolutionsPage() {
       slug: "iwoca-personal-loan", // Keep slug as created
       description:
         "Explore iwoca's Flexi-Loan, offering fast, flexible working capital solutions designed for UK SMEs.",
-      image: "https://media.topfinanzas.com/images/uk/loans/718137033-fotosprestamo-iwoca1uk.jpg",
+      image: "https://media.topfinanzas.com/images/uk/loans/718137033-fotosprestamo-iwoca1uk.webp",
       date: "4 April 2025",
       type: "sme_fintech",
     },
@@ -210,7 +210,7 @@ export default function FinancialSolutionsPage() {
       slug: "marketfinance-personal-loan", // Keep slug as created
       description:
         "Explore MarketFinance's solutions for UK SMEs, including fast business loans and flexible invoice finance.",
-      image: "https://media.topfinanzas.com/images/uk/loans/718137315-fotosprestamo-fundingchange2uk.jpg",
+      image: "https://media.topfinanzas.com/images/uk/loans/718137315-fotosprestamo-fundingchange2uk.webp",
       date: "4 April 2025",
       type: "sme_fintech",
     },
@@ -219,7 +219,7 @@ export default function FinancialSolutionsPage() {
       slug: "funding-xchange-personal-loan", // Keep slug as created
       description:
         "Explore Funding Xchange, a smart platform helping UK SMEs compare and access business finance options.",
-      image: "https://media.topfinanzas.com/images/uk/loans/718136896-fotosprestamo-fundingchange1uk.jpg",
+      image: "https://media.topfinanzas.com/images/uk/loans/718136896-fotosprestamo-fundingchange1uk.webp",
       date: "4 April 2025",
       type: "marketplace", // Specific type for marketplaces
     },
@@ -228,7 +228,7 @@ export default function FinancialSolutionsPage() {
       slug: "capify-personal-loan", // Keep slug as created
       description:
         "Explore Capify's financing solutions for UK SMEs, including Merchant Cash Advances and Business Loans.",
-      image: "https://media.topfinanzas.com/images/uk/loans/718137374-fotosprestamo-capify1uk.jpg",
+      image: "https://media.topfinanzas.com/images/uk/loans/718137374-fotosprestamo-capify1uk.webp",
       date: "4 April 2025",
       type: "sme_fintech",
     },
@@ -237,7 +237,7 @@ export default function FinancialSolutionsPage() {
       slug: "fleximize-personal-loan", // Keep slug as created
       description:
         "Explore Fleximize's flexible business loans (Flexiloan & Flexiloan Lite) offering tailored repayment options for UK SMEs.",
-      image: "https://media.topfinanzas.com/images/uk/loans/718137416-fotosprestamo-fleximize1uk.jpg",
+      image: "https://media.topfinanzas.com/images/uk/loans/718137416-fotosprestamo-fleximize1uk.webp",
       date: "4 April 2025",
       type: "sme_fintech",
     },
@@ -251,7 +251,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Explore the Lloyds Bank Credit Card with competitive rates, no annual fees, and Everyday Offers cashback program for existing Lloyds customers.",
       image:
-        "https://media.topfinanzas.com/images/uk/credit-cards/719906900-top_prestamos-y-tarjetas-uk_v1-16.jpg",
+        "https://media.topfinanzas.com/images/uk/credit-cards/719906900-top_prestamos-y-tarjetas-uk_v1-16.webp",
       date: "2 April 2025",
       type: "traditional",
     },
@@ -261,7 +261,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Discover the NatWest Credit Card with MyRewards program, mobile banking integration, and flexible payment options for everyday spending.",
       image:
-        "https://media.topfinanzas.com/images/uk/credit-cards/718644866-top_prestamos-y-tarjetas-uk_v1_mesa-de-trabajo-1-copia.jpg",
+        "https://media.topfinanzas.com/images/uk/credit-cards/718644866-top_prestamos-y-tarjetas-uk_v1_mesa-de-trabajo-1-copia.webp",
       date: "2 April 2025",
       type: "traditional",
     },
@@ -271,7 +271,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Learn about the Santander UK Credit Card with All in One cashback, no foreign transaction fees, and balance transfer options for smart financial management.",
       image:
-        "https://media.topfinanzas.com/images/uk/credit-cards/718644935-top_prestamos-y-tarjetas-uk_v1-03.jpg",
+        "https://media.topfinanzas.com/images/uk/credit-cards/718644935-top_prestamos-y-tarjetas-uk_v1-03.webp",
       date: "2 April 2025",
       type: "traditional",
     },
@@ -281,7 +281,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Explore the TSB Credit Card with everyday value, low fees, and seamless integration with TSB's mobile and online banking platforms.",
       image:
-        "https://media.topfinanzas.com/images/uk/credit-cards/718645155-top_prestamos-y-tarjetas-uk_v1-06.jpg",
+        "https://media.topfinanzas.com/images/uk/credit-cards/718645155-top_prestamos-y-tarjetas-uk_v1-06.webp",
       date: "2 April 2025",
       type: "traditional",
     },
@@ -291,7 +291,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Discover the Virgin Money Credit Card with lifestyle-focused rewards, Virgin Points, and exclusive offers across the Virgin Group ecosystem.",
       image:
-        "https://media.topfinanzas.com/images/uk/credit-cards/718645561-top_prestamos-y-tarjetas-uk_v1-08.jpg",
+        "https://media.topfinanzas.com/images/uk/credit-cards/718645561-top_prestamos-y-tarjetas-uk_v1-08.webp",
       date: "2 April 2025",
       type: "traditional",
     },
@@ -301,7 +301,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Explore the Halifax World Elite MasterCard, offering premium travel benefits, comprehensive insurance, and exclusive rewards.",
       image:
-        "https://media.topfinanzas.com/images/uk/credit-cards/719906760-top_prestamos-y-tarjetas-uk_v1-14.jpg", // Placeholder image
+        "https://media.topfinanzas.com/images/uk/credit-cards/719906760-top_prestamos-y-tarjetas-uk_v1-14.webp", // Placeholder image
       date: "4 April 2025",
       type: "traditional",
     },
@@ -311,7 +311,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Learn about the Monzo Credit Card with real-time spending notifications, smart budgeting tools, and seamless integration with Monzo's digital banking services.",
       image:
-        "https://media.topfinanzas.com/images/uk/credit-cards/719907302-top_prestamos-y-tarjetas-uk_v1-18.jpg",
+        "https://media.topfinanzas.com/images/uk/credit-cards/719907302-top_prestamos-y-tarjetas-uk_v1-18.webp",
       date: "2 April 2025",
       type: "neobank",
     },
@@ -321,7 +321,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Explore the Revolut Credit Card with multi-currency capabilities, competitive exchange rates, and real-time control for modern international lifestyles.",
       image:
-        "https://media.topfinanzas.com/images/uk/credit-cards/718645626-top_prestamos-y-tarjetas-uk_v1-10.jpg",
+        "https://media.topfinanzas.com/images/uk/credit-cards/718645626-top_prestamos-y-tarjetas-uk_v1-10.webp",
       date: "2 April 2025",
       type: "fintech",
     },
@@ -331,7 +331,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Discover the Starling Bank Credit Card with transparent pricing, ethical banking practices, and advanced digital features for modern financial management.",
       image:
-        "https://media.topfinanzas.com/images/uk/credit-cards/719907598-top_prestamos-y-tarjetas-uk_v1-20.jpg",
+        "https://media.topfinanzas.com/images/uk/credit-cards/719907598-top_prestamos-y-tarjetas-uk_v1-20.webp",
       date: "2 April 2025",
       type: "neobank",
     },
@@ -341,7 +341,7 @@ export default function FinancialSolutionsPage() {
       description:
         "Learn about the innovative Curve Card that consolidates all your existing cards into a single smart card with time-travel functionality and enhanced rewards.",
       image:
-        "https://media.topfinanzas.com/images/uk/credit-cards/719907701-top_prestamos-y-tarjetas-uk_v1-22.jpg",
+        "https://media.topfinanzas.com/images/uk/credit-cards/719907701-top_prestamos-y-tarjetas-uk_v1-22.webp",
       date: "2 April 2025",
       type: "fintech",
     },

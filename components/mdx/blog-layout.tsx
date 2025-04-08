@@ -87,7 +87,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     {/* Article 2 */}
                     <div className="flex items-center gap-3">
                       <Image
-                        src="https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjeta_de_credito_nu.jpg" // Placeholder
+                        src="https://media.topfinanzas.com/images/uk/Top_Finance_uk_credit_cards.webp" // Placeholder
                         alt="Top Rewards Credit Cards"
                         width={50}
                         height={50}
@@ -131,7 +131,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     {/* Article 4 */}
                     <div className="flex items-center gap-3">
                       <Image
-                        src="https://media.topfinanzas.com/images/uk/Top_Finanzas_como_salir_de_deudas.jpg"
+                        src="https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp"
                         alt="Practical Guide to Getting Out of Debt"
                         width={50}
                         height={50}

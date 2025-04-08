@@ -97,11 +97,12 @@ export default function SantanderUKCreditCardPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/uk/credit-cards/718644935-top_prestamos-y-tarjetas-uk_v1-03.jpg"
+                  src="https://media.topfinanzas.com/images/uk/credit-cards/718644935-top_prestamos-y-tarjetas-uk_v1-03.webp"
                   alt="Santander UK Credit Card"
-                  width={1000}
-                  height={563}
+                  width={900}
+                  height={507}
                   className="w-full h-auto rounded-lg"
+                  loading="eager"
                   priority
                 />
               </div>

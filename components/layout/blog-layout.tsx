@@ -43,7 +43,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
     title = "Blog Post Title",
     date = "February 25, 2025",
     author = "Top Finance",
-    authorImage = "/placeholder-user.jpg",
+    authorImage = "/placeholder-user.webp",
     readingTime = "6 minute read",
     // Default categories updated to reflect current structure
     categories = [{ name: "Personal Finance", slug: "personal-finance" }],
@@ -381,7 +381,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   >
                     <div className="relative h-32 rounded-xl overflow-hidden">
                       <Image
-                        src="https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_como_salir_de_deudas.jpg" // Updated Image
+                        src="https://us.topfinanzas.com/wp-content/uploads/2023/11/Top_Finanzas_como_salir_de_deudas.webp" // Updated Image
                         alt="Practical Guide to Getting Out of Debt" // Updated Alt
                         fill
                         style={{ objectFit: "cover" }}
@@ -403,7 +403,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   >
                     <div className="relative h-32 rounded-xl overflow-hidden">
                       <Image
-                        src="https://media.topfinanzas.com/images/choosing-online-loan.jpg" // Updated Image
+                        src="https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp" // Updated Image
                         alt="5 Tips for Choosing an Online Loan: Quick Guide" // Updated Alt
                         fill
                         style={{ objectFit: "cover" }}

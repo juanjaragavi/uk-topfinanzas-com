@@ -61,7 +61,7 @@ const allPosts: PostData[] = [
       description: "Discover HSBC Personal Loans with competitive rates...",
       date: "2025-04-04T00:00:00Z",
       featuredImage:
-        "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.jpg",
+        "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.webp",
       categories: [
         { name: "Financial Solutions", slug: "financial-solutions" },
       ],
@@ -77,7 +77,7 @@ const allPosts: PostData[] = [
         "Explore Funding Circle's business loans offering fast, flexible financing...",
       date: "2025-04-04T00:00:00Z", // Example Date
       featuredImage:
-        "https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.jpg",
+        "https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.webp",
       categories: [
         { name: "Financial Solutions", slug: "financial-solutions" },
       ],
@@ -93,7 +93,7 @@ const allPosts: PostData[] = [
       description: "Discover the best rewards credit cards...",
       date: "2025-04-03T00:00:00Z",
       featuredImage:
-        "https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjeta_de_credito_nu.jpg", // Placeholder
+        "https://media.topfinanzas.com/images/uk/Top_Finance_uk_credit_cards.webp", // Placeholder
       categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
     category: "Personal Finance",
@@ -106,7 +106,7 @@ const allPosts: PostData[] = [
       description: "Feeling overwhelmed by debt? Get practical strategies...",
       date: "2025-04-03T00:00:00Z",
       featuredImage:
-        "https://media.topfinanzas.com/images/uk/Top_Finanzas_como_salir_de_deudas.jpg",
+        "https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp",
       categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
     category: "Personal Finance",
@@ -148,7 +148,7 @@ const allPosts: PostData[] = [
       description: "Navigate the world of online loans with confidence...",
       date: "2025-03-30T00:00:00Z",
       featuredImage:
-        "https://media.topfinanzas.com/images/choosing-online-loan.jpg",
+        "https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp",
       categories: [{ name: "Personal Finance", slug: "personal-finance" }],
     },
     category: "Personal Finance",
@@ -297,7 +297,7 @@ export default function Home() {
                       <Image
                         src={
                           post.frontmatter.featuredImage ||
-                          "https://media.topfinanzas.com/images/placeholder.jpg"
+                          "https://media.topfinanzas.com/images/placeholder.webp"
                         }
                         alt={cleanTitle(post.frontmatter.title)} // Use cleanTitle
                         fill

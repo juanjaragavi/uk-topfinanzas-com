@@ -100,12 +100,13 @@ export default function LloydsBankPersonalLoanPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/uk/loans/718136057-fotosprestamo-lloyds1uk.jpg"
+                  src="https://media.topfinanzas.com/images/uk/loans/718136057-fotosprestamo-lloyds1uk.webp"
                   alt="Lloyds Bank Personal Loan"
-                  width={1000}
-                  height={563}
+                  width={900}
+                  height={507}
                   className="w-full h-auto rounded-lg"
                   priority
+                  loading="eager"
                 />
               </div>
 

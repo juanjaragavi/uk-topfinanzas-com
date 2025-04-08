@@ -45,7 +45,7 @@ export default function BlogArchivePage() {
       slug: "best-rewards-credit-cards",
       description: "Discover the best rewards credit cards...",
       image:
-        "https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjeta_de_credito_nu.jpg", // Placeholder
+        "https://media.topfinanzas.com/images/uk/Top_Finance_uk_credit_cards.webp", // Placeholder
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
@@ -66,7 +66,7 @@ export default function BlogArchivePage() {
       slug: "credit-card-types-benefits",
       description: "Discover everything you need to know about credit cards...",
       image:
-        "https://media.topfinanzas.com/images/uk/Top_Finanzas_Top_tarjeta_de_credito-1.jpg", // Placeholder
+        "https://media.topfinanzas.com/images/uk/Top_Finanzas_Top_tarjeta_de_credito-1.webp", // Placeholder
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
@@ -76,7 +76,7 @@ export default function BlogArchivePage() {
       slug: "getting-out-of-debt",
       description: "Feeling overwhelmed by debt? Get practical strategies...",
       image:
-        "https://media.topfinanzas.com/images/uk/Top_Finanzas_como_salir_de_deudas.jpg",
+        "https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp",
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
@@ -86,7 +86,7 @@ export default function BlogArchivePage() {
       slug: "no-annual-fee-credit-cards",
       description: "Find the best no annual fee credit cards...",
       image:
-        "https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjetas_de_credito_sin_anualidad.jpg", // Placeholder
+        "https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjetas_de_credito_sin_anualidad.webp", // Placeholder
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
@@ -97,7 +97,7 @@ export default function BlogArchivePage() {
       description:
         "Discover how personal loans can help you consolidate debt...",
       image:
-        "https://media.topfinanzas.com/images/uk/Top-Finanzas_prestamos_personales.jpg", // Placeholder
+        "https://media.topfinanzas.com/images/uk/Top-Finanzas_prestamos_personales.webp", // Placeholder
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
@@ -107,7 +107,7 @@ export default function BlogArchivePage() {
         "5 Essential Tips for Choosing an Online Loan: Quick Guide | Top Finance UK",
       slug: "tips-for-choosing-an-online-loan",
       description: "Navigate the world of online loans with confidence...",
-      image: "https://media.topfinanzas.com/images/choosing-online-loan.jpg",
+      image: "https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp",
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "30 March 2025",
@@ -151,7 +151,7 @@ export default function BlogArchivePage() {
       slug: "hsbc-personal-loan",
       description: "Discover HSBC Personal Loans with competitive rates...",
       image:
-        "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.jpg",
+        "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.webp",
       category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "4 April 2025",
@@ -162,7 +162,7 @@ export default function BlogArchivePage() {
       description:
         "Learn about the innovative Curve Card that consolidates all your existing cards...",
       image:
-        "https://media.topfinanzas.com/images/uk/credit-cards/719907701-top_prestamos-y-tarjetas-uk_v1-22.jpg",
+        "https://media.topfinanzas.com/images/uk/credit-cards/719907701-top_prestamos-y-tarjetas-uk_v1-22.webp",
       category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "2 April 2025",
@@ -173,7 +173,7 @@ export default function BlogArchivePage() {
       description:
         "Explore Funding Circle's business loans offering fast, flexible financing...",
       image:
-        "https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.jpg",
+        "https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.webp",
       category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "4 April 2025",

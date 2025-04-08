@@ -25,12 +25,13 @@ export default function GettingOutOfDebtPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/uk/Top_Finanzas_como_salir_de_deudas.jpg" // Keep existing image or update if needed
+                  src="https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp" // Keep existing image or update if needed
                   alt="Getting Out of Debt Guide"
                   width={800}
                   height={450}
                   className="w-full h-auto rounded-lg"
                   priority
+                  loading="eager"
                 />
               </div>
 

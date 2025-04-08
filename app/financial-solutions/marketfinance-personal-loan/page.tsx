@@ -98,12 +98,13 @@ export default function MarketFinancePersonalLoanPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/uk/loans/718136896-fotosprestamo-fundingchange1uk.jpg"
+                  src="https://media.topfinanzas.com/images/uk/loans/718136896-fotosprestamo-fundingchange1uk.webp"
                   alt="MarketFinance Business Solutions"
-                  width={1000}
-                  height={563}
+                  width={900}
+                  height={507}
                   className="w-full h-auto rounded-lg"
                   priority
+                  loading="eager"
                 />
               </div>
 

@@ -36,12 +36,13 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/uk/loans/718136220-fotosprestamo-santander2uk.jpg"
+                  src="https://media.topfinanzas.com/images/uk/loans/718136220-fotosprestamo-santander2uk.webp"
                   alt="Santander UK Personal Loan Requirements"
-                  width={1000}
-                  height={563}
+                  width={900}
+                  height={507}
                   className="w-full h-auto rounded-lg"
                   priority
+                  loading="eager"
                 />
               </div>
 

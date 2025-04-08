@@ -18,7 +18,6 @@ export function Footer() {
             width={logos.whiteLogo.width}
             height={logos.whiteLogo.height}
             className="h-20 w-auto"
-            priority
           />
           <p className="text-xs mt-2 text-justify max-w-[250px] leading-3 text-white font-light">
             {footerContent.legal.fullCopyright.text}

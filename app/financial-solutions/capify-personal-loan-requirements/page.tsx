@@ -37,12 +37,13 @@ export default function CapifyPersonalLoanRequirementsPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/uk/loans/718137378-fotosprestamo-capify2uk.jpg"
+                  src="https://media.topfinanzas.com/images/uk/loans/718137378-fotosprestamo-capify2uk.webp"
                   alt="Capify Finance Requirements"
-                  width={1000}
-                  height={563}
+                  width={900}
+                  height={507}
                   className="w-full h-auto rounded-lg"
                   priority
+                  loading="eager"
                 />
               </div>
 

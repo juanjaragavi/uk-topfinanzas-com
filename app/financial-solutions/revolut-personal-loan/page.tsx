@@ -97,11 +97,12 @@ export default function RevolutPersonalLoanPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/uk/loans/718136529-fotosprestamo-revoult1uk.jpg"
+                  src="https://media.topfinanzas.com/images/uk/loans/718136529-fotosprestamo-revoult1uk.webp"
                   alt="Revolut Personal Loan"
-                  width={1000}
-                  height={563}
+                  width={900}
+                  height={507}
                   className="w-full h-auto rounded-lg"
+                  loading="eager"
                   priority
                 />
               </div>

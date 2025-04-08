@@ -96,10 +96,11 @@ export default function BarclayCardAviosPlusPage() {
                 <Image
                   src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
                   alt="Barclaycard Avios Plus Credit Card"
-                  width={1000}
-                  height={563}
+                  width={900}
+                  height={507}
                   className="w-full h-auto rounded-lg"
                   priority
+                  loading="eager"
                 />
               </div>
 
@@ -162,11 +163,11 @@ export default function BarclayCardAviosPlusPage() {
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"
-                      alt="Barclays Personal Loan"
+                      alt="Learn More About Credit Cards" // Corrected alt text
                       width={1000}
                       height={563}
                       className="mx-auto w-full md:w-8/12 h-auto rounded-lg"
-                      priority
+                      // Removed priority prop
                     />
                   </Link>
                 </div>

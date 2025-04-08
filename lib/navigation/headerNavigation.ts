@@ -178,7 +178,7 @@ export const headerNavigation = {
           title: cleanTitle("Practical Guide to Getting Out of Debt"),
           href: "/personal-finance/getting-out-of-debt",
           image:
-            "https://media.topfinanzas.com/images/uk/Top_Finanzas_como_salir_de_deudas.jpg",
+            "https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp",
           category: "Personal Finance",
           categoryHref: "/personal-finance",
         },
@@ -194,7 +194,7 @@ export const headerNavigation = {
           title: cleanTitle("HSBC Personal Loan"),
           href: "/financial-solutions/hsbc-personal-loan",
           image:
-            "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.jpg",
+            "https://media.topfinanzas.com/images/uk/loans/718135900-fotosprestamo1hsbc-uk.webp",
           category: "Loans",
           categoryHref: "/financial-solutions",
         },

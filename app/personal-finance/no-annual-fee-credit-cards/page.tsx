@@ -21,7 +21,7 @@ export default function NoAnnualFeeCreditCards() {
 
         <div className="my-8">
           <Image
-            src="https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjetas_de_credito_sin_anualidad.jpg"
+            src="https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjetas_de_credito_sin_anualidad.webp"
             alt="Rewards Credit Cards" // Updated Alt Text
             width={800}
             height={450}

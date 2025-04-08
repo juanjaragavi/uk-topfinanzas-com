@@ -252,8 +252,8 @@ export default function CreditCardRecommenderPage() {
                 <Image
                   src="https://media.topfinanzas.com/images/ads/Top-Blog-Debt-management-1.webp"
                   alt="Barclaycard Avios Plus Credit Card"
-                  width={1000}
-                  height={563}
+                  width={900}
+                  height={507}
                   className="mx-auto w-full md:w-8/12 h-auto rounded-lg"
                   priority
                 />

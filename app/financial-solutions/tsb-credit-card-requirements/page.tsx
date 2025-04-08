@@ -36,10 +36,10 @@ export default function TSBCreditCardRequirementsPage() {
 
               <div className="my-8">
                 <Image
-                  src="https://media.topfinanzas.com/images/uk/credit-cards/718645161-top_prestamos-y-tarjetas-uk_v1-07.jpg"
+                  src="https://media.topfinanzas.com/images/uk/credit-cards/718645161-top_prestamos-y-tarjetas-uk_v1-07.webp"
                   alt="TSB Credit Card"
-                  width={1000}
-                  height={563}
+                  width={900}
+                  height={507}
                   className="w-full h-auto rounded-lg"
                   priority
                 />
