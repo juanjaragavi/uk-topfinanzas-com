@@ -1,5 +1,5 @@
 import type React from "react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Suspense } from "react";
 import "./globals.css";
@@ -43,6 +43,14 @@ const poppins = localFont({
 
 // Define base URL for metadata
 const baseUrl = "https://uk.topfinanzas.com"; // Replace with actual production URL if different
+
+// Add viewport configuration
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#ffffff",
+};
 
 export const metadata: Metadata = {
   // Updated Title and Description for UK focus
@@ -104,6 +112,33 @@ export default function RootLayout({
   return (
     <html lang="en-gb">
       <head>
+        {/* Preload critical resources for faster LCP */}
+        <link
+          rel="preload"
+          href="https://media.topfinanzas.com/images/banner-home-mobile.webp"
+          as="image"
+          media="(max-width: 767px)"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          href="https://media.topfinanzas.com/images/banner-home.webp"
+          as="image"
+          media="(min-width: 768px)"
+          fetchPriority="high"
+        />
+
+        {/* Preload the logo image which appears in the header */}
+        <link
+          rel="preload"
+          href="https://media.topfinanzas.com/images/logo-english.webp"
+          as="image"
+          fetchPriority="high"
+        />
+
+        {/* Preconnect to media domain to establish early connection */}
+        <link rel="preconnect" href="https://media.topfinanzas.com" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

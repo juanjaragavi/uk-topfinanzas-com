@@ -17,33 +17,33 @@ const nextConfig = {
   // Asset prefix and base path for Vercel deployment
   assetPrefix: undefined,
   basePath: "",
+  // Original image optimization settings to restore performance
   images: {
-    unoptimized: false, // Enable Next.js image optimization
+    unoptimized: false,
     dangerouslyAllowSVG: true,
     remotePatterns: [
       {
         protocol: "https",
         hostname: "media.topfinanzas.com",
         port: "",
-        pathname: "/**", // Make pathname more permissive
+        pathname: "/**",
       },
       {
         protocol: "https",
-        hostname: "us.topfinanzas.com", // Added new hostname
+        hostname: "us.topfinanzas.com",
         port: "",
-        pathname: "/**", // Allow any path under this hostname
+        pathname: "/**",
       },
       {
         protocol: "https",
         hostname: "storage.googleapis.com",
         port: "",
-        pathname: "/**", // Allow any path under this hostname
+        pathname: "/**",
       },
     ],
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    // domains: ["media.topfinanzas.com"], // Remove potentially conflicting domains array
     minimumCacheTTL: 60,
   },
   experimental: {
@@ -51,9 +51,14 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
     optimizeCss: true,
-    optimizePackageImports: ["next/font"],
+    optimizePackageImports: ["next/font", "framer-motion", "lucide-react"],
   },
   optimizeFonts: true,
+  // Add compression to improve loading speeds
+  compress: true,
+  // Improve build times and reduce memory usage
+  swcMinify: true,
+  poweredByHeader: false,
 };
 
 const withMDX = createMDX({
