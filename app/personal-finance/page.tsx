@@ -57,14 +57,14 @@ export default function PersonalFinanceArchivePage() {
       title: "Top Credit Cards With No Annual Fees | Top Finance UK",
       slug: "no-annual-fee-credit-cards",
       description: "Find the best no annual fee credit cards with great cashback, rewards, and flexible benefits. Perfect for managing expenses while saving on fees.",
-      image: "https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjetas_de_credito_sin_anualidad.webp", // Placeholder image - UPDATE NEEDED
+      image: "https://media.topfinanzas.com/images/uk/Top_Finance_credit_cards_without_annual_fee.webp", // Placeholder image - UPDATE NEEDED
       date: "3 April 2025", // Example date
     },
     {
       title: "Personal Loans - A Strategy for Managing Debt | Top Finance UK",
       slug: "personal-loans-debt-strategy",
       description: "Discover how personal loans can help you consolidate debt and manage your finances efficiently. Learn how to choose the right loan for your needs.",
-      image: "https://media.topfinanzas.com/images/uk/Top-Finanzas_prestamos_personales.webp", // Placeholder image - UPDATE NEEDED
+      image: "https://media.topfinanzas.com/images/uk/Top-Finances_personal_loans.webp", // Placeholder image - UPDATE NEEDED
       date: "3 April 2025", // Example date
     },
     {

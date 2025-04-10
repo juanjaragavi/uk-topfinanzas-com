@@ -86,7 +86,7 @@ export default function BlogArchivePage() {
       slug: "no-annual-fee-credit-cards",
       description: "Find the best no annual fee credit cards...",
       image:
-        "https://media.topfinanzas.com/images/uk/Top_Finanzas_tarjetas_de_credito_sin_anualidad.webp", // Placeholder
+        "https://media.topfinanzas.com/images/uk/Top_Finance_credit_cards_without_annual_fee.webp", // Placeholder
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
@@ -97,7 +97,7 @@ export default function BlogArchivePage() {
       description:
         "Discover how personal loans can help you consolidate debt...",
       image:
-        "https://media.topfinanzas.com/images/uk/Top-Finanzas_prestamos_personales.webp", // Placeholder
+        "https://media.topfinanzas.com/images/uk/Top-Finances_personal_loans.webp", // Placeholder
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 April 2025",
