@@ -272,6 +272,7 @@ export default function CreditCardRecommenderPage() {
                   height={507}
                   className="mx-auto w-full md:w-8/12 h-auto rounded-lg"
                   priority
+                  sizes="(max-width: 767px) 768px, 512px" // Added sizes based on layout constraints
                 />
               </Link>
             </div>

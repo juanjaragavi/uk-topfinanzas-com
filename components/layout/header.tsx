@@ -71,7 +71,7 @@ export function Header() {
               className="h-10 w-auto"
               priority={true}
               loading="eager"
-              sizes="160px"
+              sizes="153px" // Updated based on h-10 (40px) and aspect ratio
               quality={75}
             />
           </Link>
