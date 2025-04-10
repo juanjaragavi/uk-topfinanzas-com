@@ -117,9 +117,12 @@ export default function CreditCardRecommenderPage() {
             </p>
 
             <div className="mt-6 mb-6 border rounded">
-              <div
-                className="flex justify-between items-center p-4 cursor-pointer border-b"
+              {/* FAQ Item 1: Benefits */}
+              <button
+                type="button"
+                className="flex justify-between items-center w-full p-4 text-left cursor-pointer border-b"
                 onClick={() => toggleFaq("benefits")}
+                aria-expanded={openFaq === "benefits"}
               >
                 <h3
                   className={`font-medium text-lg leading-5 ${
@@ -130,16 +133,17 @@ export default function CreditCardRecommenderPage() {
                 </h3>
                 <span
                   className={`text-xl transition-transform ${
-                    openFaq === "benefits"
-                      ? "transform text-green-500"
-                      : "text-sky-700"
+                    openFaq === "benefits" ? "transform rotate-180" : "" // Changed to rotate for better icon indication
+                  } ${
+                    openFaq === "benefits" ? "text-green-500" : "text-sky-700"
                   }`}
+                  aria-hidden="true" // Hide decorative icon from screen readers
                 >
-                  {openFaq === "benefits" ? "−" : "+"}
+                  ▼ {/* Use a consistent down arrow, rotation handled by CSS */}
                 </span>
-              </div>
+              </button>
               {openFaq === "benefits" && (
-                <div className="p-4 text-gray-700">
+                <div className="p-4 text-gray-700" id="faq-benefits-content">
                   <p>
                     A card with no annual fee helps you save on recurring costs
                     while enjoying key benefits such as cashback or points for
@@ -148,9 +152,12 @@ export default function CreditCardRecommenderPage() {
                 </div>
               )}
 
-              <div
-                className="flex justify-between items-center p-4 cursor-pointer border-b"
+              {/* FAQ Item 2: Cashback */}
+              <button
+                type="button"
+                className="flex justify-between items-center w-full p-4 text-left cursor-pointer border-b"
                 onClick={() => toggleFaq("cashback")}
+                aria-expanded={openFaq === "cashback"}
               >
                 <h3
                   className={`font-medium text-lg leading-5 ${
@@ -161,16 +168,17 @@ export default function CreditCardRecommenderPage() {
                 </h3>
                 <span
                   className={`text-xl transition-transform ${
-                    openFaq === "cashback"
-                      ? "transform text-green-500"
-                      : "text-sky-700"
+                    openFaq === "cashback" ? "transform rotate-180" : ""
+                  } ${
+                    openFaq === "cashback" ? "text-green-500" : "text-sky-700"
                   }`}
+                  aria-hidden="true"
                 >
-                  {openFaq === "cashback" ? "−" : "+"}
+                  ▼
                 </span>
-              </div>
+              </button>
               {openFaq === "cashback" && (
-                <div className="p-4 text-gray-700">
+                <div className="p-4 text-gray-700" id="faq-cashback-content">
                   <p>
                     You receive a percentage of your purchases as cash that you
                     can use to reduce balances or spend as you prefer.
@@ -178,9 +186,12 @@ export default function CreditCardRecommenderPage() {
                 </div>
               )}
 
-              <div
-                className="flex justify-between items-center p-4 cursor-pointer border-b"
+              {/* FAQ Item 3: Travelers */}
+              <button
+                type="button"
+                className="flex justify-between items-center w-full p-4 text-left cursor-pointer border-b"
                 onClick={() => toggleFaq("travelers")}
+                aria-expanded={openFaq === "travelers"}
               >
                 <h3
                   className={`font-medium text-lg leading-5 ${
@@ -191,16 +202,17 @@ export default function CreditCardRecommenderPage() {
                 </h3>
                 <span
                   className={`text-xl transition-transform ${
-                    openFaq === "travelers"
-                      ? "transform text-green-500"
-                      : "text-sky-700"
+                    openFaq === "travelers" ? "transform rotate-180" : ""
+                  } ${
+                    openFaq === "travelers" ? "text-green-500" : "text-sky-700"
                   }`}
+                  aria-hidden="true"
                 >
-                  {openFaq === "travelers" ? "−" : "+"}
+                  ▼
                 </span>
-              </div>
+              </button>
               {openFaq === "travelers" && (
-                <div className="p-4 text-gray-700">
+                <div className="p-4 text-gray-700" id="faq-travelers-content">
                   <p>
                     Cards with air miles accumulation or access to VIP lounges
                     are ideal for frequent travellers, allowing you to save on
@@ -209,9 +221,12 @@ export default function CreditCardRecommenderPage() {
                 </div>
               )}
 
-              <div
-                className="flex justify-between items-center p-4 cursor-pointer"
+              {/* FAQ Item 4: Online */}
+              <button
+                type="button"
+                className="flex justify-between items-center w-full p-4 text-left cursor-pointer"
                 onClick={() => toggleFaq("online")}
+                aria-expanded={openFaq === "online"}
               >
                 <h3
                   className={`font-medium text-lg leading-6 ${
@@ -222,16 +237,17 @@ export default function CreditCardRecommenderPage() {
                 </h3>
                 <span
                   className={`text-xl transition-transform ${
-                    openFaq === "online"
-                      ? "transform -rotate-90 text-green-500"
-                      : "text-sky-700"
+                    openFaq === "online" ? "transform rotate-180" : ""
+                  } ${
+                    openFaq === "online" ? "text-green-500" : "text-sky-700"
                   }`}
+                  aria-hidden="true"
                 >
-                  {openFaq === "online" ? "−" : "+"}
+                  ▼
                 </span>
-              </div>
+              </button>
               {openFaq === "online" && (
-                <div className="p-4 text-gray-700">
+                <div className="p-4 text-gray-700" id="faq-online-content">
                   <p>
                     Yes, many cards offer advanced technology such as dynamic
                     CVV and instant alerts to protect your transactions.

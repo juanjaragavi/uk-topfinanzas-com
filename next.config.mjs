@@ -17,7 +17,52 @@ const nextConfig = {
   // Asset prefix and base path for Vercel deployment
   assetPrefix: undefined,
   basePath: "",
-  // Original image optimization settings to restore performance
+  // Add cache headers for static assets
+  async headers() {
+    return [
+      {
+        // Apply these headers to all static assets
+        source: "/(fonts|images)/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        // Apply to banner images
+        source: "/images/banner-home(-mobile)?.webp",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        // Logo image caching
+        source: "/images/logo-english.webp",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        // Next.js image optimization cache
+        source: "/_next/image",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+    ];
+  },
+  // Image optimization settings with improved caching
   images: {
     unoptimized: false,
     dangerouslyAllowSVG: true,
@@ -42,9 +87,11 @@ const nextConfig = {
       },
     ],
     formats: ["image/avif", "image/webp"],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
+    deviceSizes: [
+      16, 32, 48, 64, 96, 128, 256, 384, 640, 750, 828, 1080, 1200, 1920, 2048,
+    ],
+    imageSizes: [16, 32, 48, 64, 96, 128],
+    minimumCacheTTL: 31536000, // 1 year cache for improved performance
   },
   experimental: {
     webpackBuildWorker: true,

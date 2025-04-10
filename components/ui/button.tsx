@@ -10,6 +10,11 @@ export interface ButtonBaseProps {
   fullWidth?: boolean;
   className?: string;
   children?: React.ReactNode;
+  /**
+   * Accessibility label for screen readers
+   * Required for buttons without text content
+   */
+  "aria-label"?: string;
 }
 
 export interface ButtonAsButtonProps

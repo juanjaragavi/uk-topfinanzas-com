@@ -42,7 +42,7 @@ const poppins = localFont({
 });
 
 // Define base URL for metadata
-const baseUrl = "https://uk.topfinanzas.com"; // Replace with actual production URL if different
+const baseUrl = "https://uk.topfinanzas.com";
 
 // Add viewport configuration
 export const viewport: Viewport = {
@@ -70,9 +70,9 @@ export const metadata: Metadata = {
     siteName: "TopFinance UK",
     images: [
       {
-        url: `https://media.topfinanzas.com/images/your-first-paycheck.webp`, // Using the provided image URL
-        width: 1200, // Assuming standard OG image width
-        height: 630, // Assuming standard OG image height
+        url: `https://media.topfinanzas.com/images/placeholder-image.webp`, // Using the provided image URL
+        width: 900, // Assuming standard OG image width
+        height: 600, // Assuming standard OG image height
         alt: "TopFinance UK - Financial Guides and Solutions", // Updated Alt Text
       },
     ],
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     // siteId: "[Optional Twitter ID]",
     // creator: "[Optional Twitter Handle]",
     // creatorId: "[Optional Twitter ID]",
-    images: [`https://media.topfinanzas.com/images/your-first-paycheck.webp`], // Using the provided image URL
+    images: [`https://media.topfinanzas.com/images/placeholder-image.webp`], // Using the provided image URL
   },
 
   // Optional: Add icons and manifest for PWA/better bookmarking
@@ -112,13 +112,22 @@ export default function RootLayout({
   return (
     <html lang="en-gb">
       <head>
-        {/* Preload critical resources for faster LCP */}
+        {/* Preload critical resources for faster LCP with crossorigin for CORS compliance */}
+        <link
+          rel="preload"
+          href="https://media.topfinanzas.com/images/placeholder-image.webp"
+          as="image"
+          media="(max-width: 767px)"
+          fetchPriority="high"
+          crossOrigin="anonymous"
+        />
         <link
           rel="preload"
           href="https://media.topfinanzas.com/images/banner-home-mobile.webp"
           as="image"
           media="(max-width: 767px)"
           fetchPriority="high"
+          crossOrigin="anonymous"
         />
         <link
           rel="preload"
@@ -126,18 +135,30 @@ export default function RootLayout({
           as="image"
           media="(min-width: 768px)"
           fetchPriority="high"
+          crossOrigin="anonymous"
         />
 
-        {/* Preload the logo image which appears in the header */}
+        {/* Preload the logo image which appears in the header - optimized to 4KB */}
         <link
           rel="preload"
-          href="https://media.topfinanzas.com/images/logo-english.webp"
+          href="https://media.topfinanzas.com/images/logo-english.webp?w=200&q=75"
           as="image"
           fetchPriority="high"
+          crossOrigin="anonymous"
+        />
+
+        {/* Add Cache-Control meta tag for browser caching */}
+        <meta
+          httpEquiv="Cache-Control"
+          content="public, max-age=31536000, immutable"
         />
 
         {/* Preconnect to media domain to establish early connection */}
-        <link rel="preconnect" href="https://media.topfinanzas.com" />
+        <link
+          rel="preconnect"
+          href="https://media.topfinanzas.com"
+          crossOrigin="anonymous"
+        />
 
         <script
           type="application/ld+json"

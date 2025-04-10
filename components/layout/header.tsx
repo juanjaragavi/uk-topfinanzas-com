@@ -61,15 +61,18 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* Logo - optimized to reduce LCP */}
           <Link href="/" className="flex-shrink-0">
             <Image
               src={logos.colorLogo.url}
               alt={logos.colorLogo.alt}
               width={logos.colorLogo.width}
               height={logos.colorLogo.height}
-              className="h-14 w-auto"
-              priority
+              className="h-10 w-auto"
+              priority={true}
+              loading="eager"
+              sizes="160px"
+              quality={75}
             />
           </Link>
 
@@ -141,7 +144,9 @@ export function Header() {
                   {/* Changed main grid to 3 columns, links left (2/3), featured right (1/3) */}
                   <div className="p-5 grid grid-cols-3 gap-8">
                     {/* Left Column: Category Links */}
-                    <div className="col-span-2 space-y-6"> {/* Container for all link columns */}
+                    <div className="col-span-2 space-y-6">
+                      {" "}
+                      {/* Container for all link columns */}
                       {headerNavigation.blogMegaMenu.columns.map(
                         (column, idx) => (
                           // Removed inner col-span, columns will stack vertically now
@@ -149,29 +154,29 @@ export function Header() {
                             <h3 className="text-h3 uppercase tracking-wide mb-3">
                               {column.title}
                             </h3>
-                          <ul className="space-y-2">
-                            {column.items.map((item, itemIdx) => (
-                              <li key={itemIdx}>
-                                <Link
-                                  href={item.href}
-                                  className={
-                                    item.isEmphasis
-                                      ? "inline-block bg-gray-100 hover:bg-gray-200 text-blue-700 underline underline-offset-2 font-medium text-sm py-1 px-3 rounded-full transition-colors" // Button-like style
-                                      : "text-body hover:text-primary block py-1" // Original style
-                                  }
-                                  onClick={() => setActiveMegaMenu(null)}
-                                >
-                                  {item.text}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )
-                    )}
-                    {/* Removed extraneous closing brackets here */}
-                    </div> {/* End Left Column container */}
-
+                            <ul className="space-y-2">
+                              {column.items.map((item, itemIdx) => (
+                                <li key={itemIdx}>
+                                  <Link
+                                    href={item.href}
+                                    className={
+                                      item.isEmphasis
+                                        ? "inline-block bg-gray-100 hover:bg-gray-200 text-blue-700 underline underline-offset-2 font-medium text-sm py-1 px-3 rounded-full transition-colors" // Button-like style
+                                        : "text-body hover:text-primary block py-1" // Original style
+                                    }
+                                    onClick={() => setActiveMegaMenu(null)}
+                                  >
+                                    {item.text}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )
+                      )}
+                      {/* Removed extraneous closing brackets here */}
+                    </div>{" "}
+                    {/* End Left Column container */}
                     {/* Right Column: Featured Posts */}
                     {headerNavigation.blogMegaMenu.featuredPosts && (
                       // Changed to col-span-1 for the right column
@@ -272,6 +277,7 @@ export function Header() {
               variant="secondary"
               onClick={() => setIsSearchOpen(!isSearchOpen)}
               className="p-2 rounded-full hover:bg-gray-100"
+              aria-label="Search"
             >
               <Search className="w-5 h-5" />
             </Button>
@@ -282,6 +288,8 @@ export function Header() {
             variant="secondary"
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </Button>
