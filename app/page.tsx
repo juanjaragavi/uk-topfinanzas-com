@@ -237,7 +237,7 @@ export default function Home() {
               href="/personal-finance/best-personal-loans"
               className="block group"
             >
-              <div className="bg-white rounded-lg shadow-md overflow-hidden md:flex group-hover:shadow-lg transition-shadow duration-300">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden md:flex group-hover:shadow-lg transition-shadow duration-300">
                 {/* Left Column: Image */}
                 <div className="md:w-5/12 relative h-64 md:h-auto">
                   <Image
@@ -291,7 +291,7 @@ export default function Home() {
                   <Link
                     key={post.slug}
                     href={`${post.categoryPath}/${post.slug}`}
-                    className="block relative overflow-hidden group bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
+                    className="block relative overflow-hidden group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
                   >
                     <div className="relative h-[180px] w-full">
                       <Image

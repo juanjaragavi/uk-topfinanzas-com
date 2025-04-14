@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { Button } from "@/components/ui/button";
+import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -32,7 +33,7 @@ export default function BestRewardsCreditCardsPage() {
                   alt="Rewards Credit Cards" // Updated Alt Text
                   width={800}
                   height={450}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-xl"
                   priority
                   loading="eager"
                 />
@@ -223,6 +224,9 @@ export default function BestRewardsCreditCardsPage() {
                 format="horizontal"
                 className="my-8"
               />
+
+              {/* AI Content Disclaimer */}
+              <AIContentDisclaimer />
             </div>
           </div>
         </div>

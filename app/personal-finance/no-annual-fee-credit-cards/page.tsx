@@ -1,4 +1,5 @@
 import { Ad } from "@/components/ui/ad";
+import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { CompactFooter } from "@/components/layout/compact-footer"; // Corrected path
 import { Header } from "@/components/layout/header"; // Corrected path and component
 import Image from "next/image";
@@ -25,7 +26,7 @@ export default function NoAnnualFeeCreditCards() {
             alt="Rewards Credit Cards" // Updated Alt Text
             width={800}
             height={450}
-            className="w-full h-auto rounded-lg"
+            className="w-full h-auto rounded-xl"
             priority
           />
         </div>
@@ -168,6 +169,9 @@ export default function NoAnnualFeeCreditCards() {
         </section>
 
         <Ad adId="us_topfinanzas_3" format="horizontal" className="my-8" />
+
+        {/* AI Content Disclaimer */}
+        <AIContentDisclaimer />
       </article>
       <CompactFooter />
     </main>

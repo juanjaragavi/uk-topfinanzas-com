@@ -103,7 +103,7 @@ export default function TSBPersonalLoanPage() {
                   alt="TSB Personal Loan"
                   width={900}
                   height={507}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-xl"
                   priority
                   loading="eager"
                 />
@@ -167,7 +167,7 @@ export default function TSBPersonalLoanPage() {
                       alt="TSB Personal Loan"
                       width={1000}
                       height={563}
-                      className="mx-auto w-full md:w-8/12 h-auto rounded-lg"
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
                       priority
                     />
                   </Link>

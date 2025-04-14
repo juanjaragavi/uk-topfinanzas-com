@@ -1,5 +1,6 @@
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
+import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image"; // Keep Image import in case it's needed later, though MDX didn't have one
 import Link from "next/link";
 import { Ad } from "@/components/ui/ad";
@@ -29,7 +30,7 @@ export default function PersonalLoansDebtStrategyPage() {
                   alt="Personal Loans Strategy"
                   width={800}
                   height={450}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-xl"
                   priority
                   loading="eager"
                 />
@@ -293,6 +294,9 @@ export default function PersonalLoansDebtStrategyPage() {
                   terms, and borrow responsibly.
                 </p>
               </section>
+
+              {/* AI Content Disclaimer */}
+              <AIContentDisclaimer />
             </div>
           </div>
         </div>

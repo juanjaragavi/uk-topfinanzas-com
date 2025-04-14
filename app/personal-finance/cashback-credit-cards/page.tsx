@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/header"; // Add Header import
 import { CompactFooter } from "@/components/layout/compact-footer"; // Add CompactFooter import
 import { Button } from "@/components/ui/button"; // Keep Button import if needed, or remove if not
+import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image"; // Add Image import
 import Link from "next/link"; // Add Link import
 import { Ad } from "@/components/ui/ad";
@@ -31,7 +32,7 @@ export default function CashbackCreditCardsPage() {
                   alt="Cashback Credit Cards" // Updated Alt Text
                   width={800}
                   height={450}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-xl"
                   priority
                   loading="eager"
                 />
@@ -194,6 +195,9 @@ export default function CashbackCreditCardsPage() {
                 format="horizontal"
                 className="my-8"
               />
+
+              {/* AI Content Disclaimer */}
+              <AIContentDisclaimer />
             </div>
           </div>
         </div>

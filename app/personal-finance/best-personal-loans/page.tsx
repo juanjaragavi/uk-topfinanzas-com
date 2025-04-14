@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { Button } from "@/components/ui/button";
+import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -77,7 +78,7 @@ export default function BestPersonalLoansPage() {
                   alt="Personal Loans Guide"
                   width={800}
                   height={450}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-xl"
                   priority
                   loading="eager"
                 />
@@ -344,6 +345,9 @@ export default function BestPersonalLoansPage() {
                   when used with careful planning and discipline.
                 </p>
               </section>
+
+              {/* AI Content Disclaimer */}
+              <AIContentDisclaimer />
             </div>
           </div>
         </div>

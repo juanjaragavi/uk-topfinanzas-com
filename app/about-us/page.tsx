@@ -218,7 +218,7 @@ export default function AboutUs() {
               alt="Top Finanzas UK Team"
               width={1200}
               height={600}
-              className="w-full rounded-lg object-cover"
+              className="w-full rounded-xl object-cover"
               priority
             />
           </div>
@@ -333,7 +333,7 @@ export default function AboutUs() {
 
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div key={index} className="border rounded-lg overflow-hidden">
+                <div key={index} className="border rounded-xl overflow-hidden">
                   <button
                     onClick={() => toggleFAQ(index)}
                     className="w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 transition-colors"
@@ -377,7 +377,7 @@ export default function AboutUs() {
               Testimonials
             </h2>
 
-            <div className="relative overflow-hidden bg-gray-50 rounded-lg shadow p-8">
+            <div className="relative overflow-hidden bg-gray-50 rounded-xl shadow p-8">
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={index}

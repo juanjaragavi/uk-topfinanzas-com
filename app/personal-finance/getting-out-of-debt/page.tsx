@@ -1,5 +1,6 @@
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
+import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image";
 import Link from "next/link";
 import { Ad } from "@/components/ui/ad";
@@ -29,7 +30,7 @@ export default function GettingOutOfDebtPage() {
                   alt="Getting Out of Debt Guide"
                   width={800}
                   height={450}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-xl"
                   priority
                   loading="eager"
                 />
@@ -706,6 +707,9 @@ export default function GettingOutOfDebtPage() {
                   secure and prosperous future!
                 </p>
               </section>
+
+              {/* AI Content Disclaimer */}
+              <AIContentDisclaimer />
             </div>
           </div>
         </div>

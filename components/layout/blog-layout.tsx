@@ -462,7 +462,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   <input
                     type="email"
                     placeholder="Your email address"
-                    className="w-full px-3 py-1.5 text-[10px] border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    className="w-full px-3 py-1.5 text-[10px] border border-gray-300 rounded-xl focus:outline-none focus:ring-1 focus:ring-blue-500"
                   />
                   <Button className="w-full text-[10px] py-1.5 rounded-full">
                     Subscribe

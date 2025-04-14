@@ -270,7 +270,7 @@ export default function CreditCardRecommenderPage() {
                   alt="Barclaycard Avios Plus Credit Card"
                   width={900}
                   height={507}
-                  className="mx-auto w-full md:w-8/12 h-auto rounded-lg"
+                  className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
                   priority
                   sizes="(max-width: 767px) 768px, 512px" // Added sizes based on layout constraints
                 />

@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { Button } from "@/components/ui/button";
+import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -87,7 +88,7 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                   alt="Tips for Choosing an Online Loan"
                   width={800}
                   height={450}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-xl"
                   priority
                   loading="eager"
                 />
@@ -399,6 +400,9 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                     </Button>
                   </Link>
                 </div>
+
+                {/* AI Content Disclaimer */}
+                <AIContentDisclaimer />
               </section>
             </div>
           </div>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
+import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
 export function generateMetadata() {
   return {
@@ -35,7 +36,7 @@ export default function TravelCreditCardsPage() {
                 travel insurance, and rewarding points systems.
               </p>
 
-              <div className="my-8 bg-blue-50 p-6 rounded-lg">
+              <div className="my-8 bg-blue-50 p-6 rounded-xl">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Top Travel Credit Cards at a Glance
                 </h2>
@@ -219,7 +220,7 @@ export default function TravelCreditCardsPage() {
                   Mastercard exchange rates, it's an excellent choice for
                   regular travelers seeking simplicity.
                 </p>
-                <div className="flex flex-col sm:flex-row sm:justify-between mt-4 bg-gray-50 p-4 rounded-lg">
+                <div className="flex flex-col sm:flex-row sm:justify-between mt-4 bg-gray-50 p-4 rounded-xl">
                   <div className="mb-3 sm:mb-0">
                     <p className="font-semibold text-sm">Key Benefits:</p>
                     <ul className="list-disc pl-5 text-sm">
@@ -257,7 +258,7 @@ export default function TravelCreditCardsPage() {
                   offers exceptional value. The annual fee is offset by generous
                   benefits for frequent travelers.
                 </p>
-                <div className="flex flex-col sm:flex-row sm:justify-between mt-4 bg-gray-50 p-4 rounded-lg">
+                <div className="flex flex-col sm:flex-row sm:justify-between mt-4 bg-gray-50 p-4 rounded-xl">
                   <div className="mb-3 sm:mb-0">
                     <p className="font-semibold text-sm">Key Benefits:</p>
                     <ul className="list-disc pl-5 text-sm">
@@ -297,7 +298,7 @@ export default function TravelCreditCardsPage() {
               </p>
 
               <div className="space-y-4 mb-6">
-                <div className="bg-gray-50 p-4 rounded-lg">
+                <div className="bg-gray-50 p-4 rounded-xl">
                   <p className="font-semibold">
                     How frequently do you travel internationally?
                   </p>
@@ -309,7 +310,7 @@ export default function TravelCreditCardsPage() {
                   </p>
                 </div>
 
-                <div className="bg-gray-50 p-4 rounded-lg">
+                <div className="bg-gray-50 p-4 rounded-xl">
                   <p className="font-semibold">
                     What's your typical travel spending amount?
                   </p>
@@ -320,7 +321,7 @@ export default function TravelCreditCardsPage() {
                   </p>
                 </div>
 
-                <div className="bg-gray-50 p-4 rounded-lg">
+                <div className="bg-gray-50 p-4 rounded-xl">
                   <p className="font-semibold">
                     Do you value simplicity or maximizing rewards?
                   </p>
@@ -331,7 +332,7 @@ export default function TravelCreditCardsPage() {
                   </p>
                 </div>
 
-                <div className="bg-gray-50 p-4 rounded-lg">
+                <div className="bg-gray-50 p-4 rounded-xl">
                   <p className="font-semibold">
                     Which airlines and hotel chains do you typically use?
                   </p>
@@ -394,7 +395,7 @@ export default function TravelCreditCardsPage() {
                 </li>
               </ul>
 
-              <div className="p-6 bg-blue-50 rounded-lg mb-8">
+              <div className="p-6 bg-blue-50 rounded-xl mb-8">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Related Resources
                 </h2>
@@ -458,6 +459,9 @@ export default function TravelCreditCardsPage() {
                 on financial concerns and more on enjoying your international
                 adventures.
               </p>
+
+              {/* AI Content Disclaimer */}
+              <AIContentDisclaimer />
             </div>
           </div>
         </div>

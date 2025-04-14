@@ -326,7 +326,7 @@ export default function ContactUs() {
           </div>
 
           {/* Right column - Contact Form */}
-          <div className="md:col-span-7 bg-white rounded-lg shadow-lg p-6 border border-gray-100">
+          <div className="md:col-span-7 bg-white rounded-xl shadow-lg p-6 border border-gray-100">
             {submitSuccess ? (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

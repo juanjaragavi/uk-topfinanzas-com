@@ -40,7 +40,7 @@ export default function VirginMoneyPersonalLoanRequirementsPage() {
                   alt="Virgin Money Personal Loan Requirements"
                   width={900}
                   height={507}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-xl"
                   priority
                   loading="eager"
                 />

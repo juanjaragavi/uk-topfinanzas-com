@@ -204,7 +204,7 @@ export default function BlogArchivePage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         <Link
           href="/personal-finance"
-          className="block p-6 bg-blue-50 rounded-lg hover:shadow-md transition-shadow"
+          className="block p-6 bg-blue-50 rounded-xl hover:shadow-md transition-shadow"
         >
           <h2 className="text-2xl font-semibold text-blue-800 mb-2">
             Personal Finance Guides
@@ -216,7 +216,7 @@ export default function BlogArchivePage() {
         </Link>
         <Link
           href="/financial-solutions"
-          className="block p-6 bg-green-50 rounded-lg hover:shadow-md transition-shadow"
+          className="block p-6 bg-green-50 rounded-xl hover:shadow-md transition-shadow"
         >
           <h2 className="text-2xl font-semibold text-green-800 mb-2">
             Financial Solutions

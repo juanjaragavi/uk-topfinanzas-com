@@ -101,7 +101,7 @@ export default function SantanderUKCreditCardPage() {
                   alt="Santander UK Credit Card"
                   width={900}
                   height={507}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-xl"
                   loading="eager"
                   priority
                 />
@@ -166,7 +166,7 @@ export default function SantanderUKCreditCardPage() {
                 </p>
 
                 {/* Related Articles Section */}
-                <div className="my-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
+                <div className="my-8 p-6 bg-gray-50 rounded-xl border border-gray-200">
                   <h3 className="text-lg font-semibold text-gray-800 mb-3">Learn More About Credit Cards:</h3>
                   <ul className="space-y-2 list-disc list-inside text-blue-700">
                     <li>

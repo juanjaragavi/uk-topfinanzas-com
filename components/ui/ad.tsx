@@ -41,7 +41,7 @@ export const Ad: React.FC<AdProps> = ({
   if (!ad) {
     return (
       <div
-        className={`bg-gray-100 border border-gray-200 flex items-center justify-center rounded-lg ${className}`}
+        className={`bg-gray-100 border border-gray-200 flex items-center justify-center rounded-xl ${className}`}
         style={{
           width: fallbackWidth ? `${fallbackWidth}px` : "auto",
           height: fallbackHeight ? `${fallbackHeight}px` : "auto",
@@ -58,7 +58,7 @@ export const Ad: React.FC<AdProps> = ({
   return (
     <Link
       href={ad.link}
-      className={`block rounded-lg overflow-hidden ${className}`}
+      className={`block rounded-xl overflow-hidden ${className}`}
       style={{
         maxWidth: `${ad.image.width}px`,
         maxHeight: `${ad.image.height}px`,

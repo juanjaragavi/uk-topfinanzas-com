@@ -104,7 +104,7 @@ export default function VirginMoneyPersonalLoanPage() {
                   alt="Virgin Money Personal Loan"
                   width={900}
                   height={507}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-xl"
                   priority
                   loading="eager"
                 />

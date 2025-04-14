@@ -746,13 +746,13 @@ const SidebarAd = React.forwardRef<HTMLDivElement, React.ComponentProps<"div">>(
         {...props}
       >
         <Link href="/personal-finance/credit-card-types-benefits/">
-          <div className="overflow-hidden rounded-lg border shadow hover:shadow-md transition-shadow">
+          <div className="overflow-hidden rounded-xl border shadow hover:shadow-md transition-shadow">
             <Image
               src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"
               alt="Barclaycard Avios Plus Credit Card"
               width={1000}
               height={563}
-              className="mx-auto w-full md:w-full h-auto rounded-lg"
+              className="mx-auto w-full md:w-full h-auto rounded-xl"
               priority
             />
           </div>
@@ -828,7 +828,7 @@ const SidebarNewsletter = React.forwardRef<
         <input
           type="email"
           placeholder="Your email address"
-          className="w-full px-3 py-2 border rounded-lg text-sm"
+          className="w-full px-3 py-2 border rounded-xl text-sm"
           required
         />
         <button

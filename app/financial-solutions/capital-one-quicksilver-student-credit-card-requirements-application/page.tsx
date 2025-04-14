@@ -76,7 +76,7 @@ export default function CapitalOneQuicksilverStudentCreditCardRequirementsPage()
                   alt="Capital One Quicksilver Student Credit Card"
                   width={800}
                   height={450}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-xl"
                   priority
                   loading="eager"
                 />

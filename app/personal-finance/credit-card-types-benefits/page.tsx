@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { Button } from "@/components/ui/button";
+import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image"; // Assuming you need Image for the future
 import Link from "next/link"; // Assuming you need Link for the future
 import { Ad } from "@/components/ui/ad"; // Import Ad
@@ -31,7 +32,7 @@ export default function CreditCardTypesBenefitsPage() {
                   alt="Credit Card Types" // Updated Alt Text
                   width={800}
                   height={450}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-auto rounded-xl"
                   priority
                   loading="eager"
                 />
@@ -429,6 +430,9 @@ export default function CreditCardTypesBenefitsPage() {
                   enjoy a healthier, more prosperous financial life!
                 </p>
               </section>
+
+              {/* AI Content Disclaimer */}
+              <AIContentDisclaimer />
             </div>
           </div>
         </div>
