@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
+import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
 export function generateMetadata() {
   return {
@@ -465,6 +466,9 @@ export default function RevolutPersonalLoanRequirementsPage() {
                     </Button>
                   </Link>
                 </div>
+
+                {/* AI Content Disclaimer */}
+                <AIContentDisclaimer />
               </section>
             </div>
           </div>
