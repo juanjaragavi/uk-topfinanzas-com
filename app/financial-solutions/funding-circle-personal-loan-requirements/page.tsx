@@ -465,7 +465,7 @@ export default function FundingCirclePersonalLoanRequirementsPage() {
 
                 <div className="text-center my-8">
                   <Link
-                    href="https://www.fundingcircle.com/uk/loans/"
+                    href="https://www.fundingcircle.com/uk/small-business-loans/"
                     target="_blank"
                   >
                     <Button className="bg-[#004C59] hover:bg-teal-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">

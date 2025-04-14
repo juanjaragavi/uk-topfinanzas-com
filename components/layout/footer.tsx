@@ -39,7 +39,8 @@ export function Footer() {
                   (item) =>
                     item.href === "/" ||
                     item.href === "/blog" ||
-                    item.href.startsWith("/credit-cards")
+                    item.href.startsWith("/credit-cards") ||
+                    item.href === "/contact-us"
                 )
                 .map((item) => (
                   <li key={item.href}>

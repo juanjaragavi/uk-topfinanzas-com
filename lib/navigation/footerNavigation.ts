@@ -38,6 +38,10 @@ export const footerNavigation = {
       text: "Financial Solutions",
       href: "/financial-solutions",
     },
+    {
+      text: "Contact Us",
+      href: "/contact-us",
+    },
   ],
 
   /** Categories section - Updated */
