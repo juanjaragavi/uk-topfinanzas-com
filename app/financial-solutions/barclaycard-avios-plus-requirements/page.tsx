@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import SocialShareButtons from "@/components/ui/social-share-buttons"; // Import the new component
 
 export function generateMetadata() {
   return {
@@ -34,6 +35,9 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                 rewards card ideal for frequent travelers and those looking to
                 maximize benefits from their everyday spending.
               </p>
+
+              {/* Add the Social Share Buttons here */}
+              <SocialShareButtons postUrl="/financial-solutions/barclaycard-avios-plus-requirements" />
 
               <div className="my-8">
                 <Image

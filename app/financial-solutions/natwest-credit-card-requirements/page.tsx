@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import SocialShareButtons from "@/components/ui/social-share-buttons"; // Import the new component
 
 export function generateMetadata() {
   return {
@@ -34,6 +35,9 @@ export default function NatWestCreditCardRequirementsPage() {
                 features, and digital management tools for a comprehensive
                 everyday banking solution.
               </p>
+
+              {/* Add the Social Share Buttons here */}
+              <SocialShareButtons postUrl="/financial-solutions/natwest-credit-card-requirements" />
 
               <div className="my-8">
                 <Image
