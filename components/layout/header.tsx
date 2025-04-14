@@ -328,30 +328,85 @@ export function Header() {
               className="md:hidden border-t border-gray-100"
             >
               <nav className="py-4 space-y-4">
+                {/* Navigation Section */}
+                <div className="space-y-2">
+                  <div className="text-h3 px-4 text-primary font-semibold">
+                    {headerContent.mobileMenu.navigateLabel}
+                  </div>
+                  <Link
+                    href="/"
+                    className="block px-4 py-2 text-body hover:bg-gray-100"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    href="/blog"
+                    className="block px-4 py-2 text-body hover:bg-gray-100"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Blog
+                  </Link>
+                  <Link
+                    href="/financial-solutions"
+                    className="block px-4 py-2 text-body hover:bg-gray-100"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Financial Solutions
+                  </Link>
+                  <Link
+                    href="/about-us"
+                    className="block px-4 py-2 text-body hover:bg-gray-100"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    About Us
+                  </Link>
+                  <Link
+                    href="/contact-us"
+                    className="block px-4 py-2 text-body hover:bg-gray-100"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Contact Us
+                  </Link>
+                  <Link
+                    href="/credit-card-recommender-p1"
+                    className="block px-4 py-2 text-body hover:bg-gray-100"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Card Recommender
+                  </Link>
+                </div>
+
                 {/* Categories Section */}
                 <div className="space-y-2">
                   <div className="text-h3 px-4">
                     {headerContent.mobileMenu.categoriesLabel}
                   </div>
-                  {headerNavigation.categoryDropdown.items.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className="block px-4 py-2 text-body hover:bg-gray-100"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.text}
-                    </Link>
-                  ))}
+                  {headerNavigation.categoryDropdown.items
+                    .filter(
+                      (item) =>
+                        !["About Us", "Card Recommender"].includes(item.text)
+                    )
+                    .map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="block px-4 py-2 text-body hover:bg-gray-100"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.text}
+                      </Link>
+                    ))}
                 </div>
 
-                {/* Blog Categories */}
+                {/* Blog Categories - Show fewer items */}
                 <div className="space-y-2">
                   <div className="text-h3 px-4">
                     {headerContent.mobileMenu.blogCategories}
                   </div>
-                  {headerNavigation.blogMegaMenu.columns[0].items.map(
-                    (item) => (
+                  {headerNavigation.blogMegaMenu.columns[0].items
+                    .filter((_, index) => index < 3) // Only show first 3 items
+                    .map((item) => (
                       <Link
                         key={item.href}
                         href={item.href}
@@ -360,17 +415,24 @@ export function Header() {
                       >
                         {item.text}
                       </Link>
-                    )
-                  )}
+                    ))}
+                  <Link
+                    href="/personal-finance"
+                    className="block px-4 py-2 text-blue-600 hover:bg-gray-100 font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Show more...
+                  </Link>
                 </div>
 
-                {/* Popular Articles */}
+                {/* Popular Articles - Show fewer items */}
                 <div className="space-y-2">
                   <div className="text-h3 px-4">
                     {headerContent.mobileMenu.popularArticles}
                   </div>
-                  {headerNavigation.blogMegaMenu.columns[1].items.map(
-                    (item) => (
+                  {headerNavigation.blogMegaMenu.columns[1].items
+                    .filter((_, index) => index < 3) // Only show first 3 items
+                    .map((item) => (
                       <Link
                         key={item.href}
                         href={item.href}
@@ -379,40 +441,15 @@ export function Header() {
                       >
                         {item.text}
                       </Link>
-                    )
-                  )}
+                    ))}
+                  <Link
+                    href="/financial-solutions"
+                    className="block px-4 py-2 text-blue-600 hover:bg-gray-100 font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Show more...
+                  </Link>
                 </div>
-
-                {/* Main nav items */}
-                {headerNavigation.mainNavItems
-                  .filter(
-                    (item) =>
-                      item.text !== "BLOG" &&
-                      (item.href === "/" ||
-                        item.href.startsWith("/financial-solutions") ||
-                        item.href.startsWith("/apply") ||
-                        item.href.startsWith("/credit-card-recommender") ||
-                        item.href.startsWith("/credit-cards"))
-                  )
-                  .map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className="block px-4 py-2 text-body hover:bg-gray-100"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.text}
-                    </Link>
-                  ))}
-
-                {/* Blog Link */}
-                <Link
-                  href="/blog"
-                  className="block px-4 py-2 text-body hover:bg-gray-100 font-medium"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {headerContent.mobileMenu.allArticles}
-                </Link>
               </nav>
             </motion.div>
           )}

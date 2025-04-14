@@ -11,6 +11,7 @@ export const headerContent = {
 
   /** Mobile menu section labels */
   mobileMenu: {
+    navigateLabel: "NAVIGATE",
     categoriesLabel: "CATEGORIES",
     blogCategories: "BLOG CATEGORIES",
     popularArticles: "POPULAR ARTICLES",

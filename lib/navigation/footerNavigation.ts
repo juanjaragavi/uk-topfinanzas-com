@@ -39,6 +39,10 @@ export const footerNavigation = {
       href: "/financial-solutions",
     },
     {
+      text: "About Us",
+      href: "/about-us",
+    },
+    {
       text: "Contact Us",
       href: "/contact-us",
     },

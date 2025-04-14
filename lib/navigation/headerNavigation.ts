@@ -47,6 +47,18 @@ export const headerNavigation = {
       text: "CARD RECOMMENDER",
       href: "/credit-card-recommender-p1",
     },
+    {
+      text: "BLOG",
+      href: "/blog",
+    },
+    {
+      text: "CONTACT US",
+      href: "/contact-us",
+    },
+    {
+      text: "ABOUT US",
+      href: "/about-us",
+    },
   ],
 
   /** Categories dropdown */
