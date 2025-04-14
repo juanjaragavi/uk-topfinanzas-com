@@ -3,6 +3,7 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image"; // Keep Image import
 import Link from "next/link"; // Keep Link import
+import SocialShareButtons from "@/components/ui/social-share-buttons"; // Import the new component
 import { Ad } from "@/components/ui/ad";
 
 export default function TopCreditCards0IntroAprPage() {
@@ -23,6 +24,10 @@ export default function TopCreditCards0IntroAprPage() {
                 interest, manage large purchases, and consolidate debt
                 effectively.
               </p>
+
+              {/* Add the Social Share Buttons here */}
+              <SocialShareButtons postUrl="/personal-finance/top-credit-cards-0-intro-apr" />
+
               <div className="my-8">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/APR.webp"

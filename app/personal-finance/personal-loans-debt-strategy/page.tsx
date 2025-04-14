@@ -3,6 +3,7 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image"; // Keep Image import in case it's needed later, though MDX didn't have one
 import Link from "next/link";
+import SocialShareButtons from "@/components/ui/social-share-buttons"; // Import the new component
 import { Ad } from "@/components/ui/ad";
 
 export default function PersonalLoansDebtStrategyPage() {
@@ -23,6 +24,9 @@ export default function PersonalLoansDebtStrategyPage() {
                 manage your finances efficiently. Learn how to choose the right
                 loan for your needs.
               </p>
+
+              {/* Add the Social Share Buttons here */}
+              <SocialShareButtons postUrl="/personal-finance/personal-loans-debt-strategy" />
 
               <div className="my-8">
                 <Image

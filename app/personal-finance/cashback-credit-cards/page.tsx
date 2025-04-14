@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"; // Keep Button import if needed
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image"; // Add Image import
 import Link from "next/link"; // Add Link import
+import SocialShareButtons from "@/components/ui/social-share-buttons"; // Import the new component
 import { Ad } from "@/components/ui/ad";
 
 export default function CashbackCreditCardsPage() {
@@ -24,6 +25,9 @@ export default function CashbackCreditCardsPage() {
                 unlimited rewards, flexible redemption options, and introductory
                 APR offers.
               </p>
+
+              {/* Add the Social Share Buttons here */}
+              <SocialShareButtons postUrl="/personal-finance/cashback-credit-cards" />
 
               {/* TODO: Update image if needed */}
               <div className="my-8">

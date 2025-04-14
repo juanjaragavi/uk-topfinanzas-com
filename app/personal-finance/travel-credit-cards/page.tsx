@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import SocialShareButtons from "@/components/ui/social-share-buttons"; // Import the new component
 
 export function generateMetadata() {
   return {
@@ -35,6 +36,9 @@ export default function TravelCreditCardsPage() {
                 travelers, highlighting cards with no foreign transaction fees,
                 travel insurance, and rewarding points systems.
               </p>
+
+              {/* Add the Social Share Buttons here */}
+              <SocialShareButtons postUrl="/personal-finance/travel-credit-cards" />
 
               <div className="my-8 bg-blue-50 p-6 rounded-xl">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
