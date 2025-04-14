@@ -398,9 +398,13 @@ export default function AboutUs() {
                     <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mr-4 overflow-hidden">
                       {/* Dynamic image/fallback for testimonial authors */}
                       <Image
-                        src={`/images/testimonials/${testimonial.name
-                          .toLowerCase()
-                          .replace(" ", "-")}.jpg`}
+                        src={
+                          index === 0
+                            ? "https://media.topfinanzas.com/images/uk/james-davies.webp"
+                            : index === 1
+                            ? "https://media.topfinanzas.com/images/uk/sarah-wilson.webp"
+                            : "https://media.topfinanzas.com/images/uk/robert-mitchell.webp"
+                        }
                         alt={testimonial.name}
                         width={56}
                         height={56}

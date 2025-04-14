@@ -13,6 +13,19 @@ BACKUP_BRANCH="backup"
 # Generic Git workflow script for TopFinanzas Pages MX
 # This script automates common Git operations for deployment
 
+# --- Pre-flight Checks ---
+
+# 1. Check if we are on the dev branch
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+if [ "$CURRENT_BRANCH" != "$DEV_BRANCH" ]; then
+    echo "Error: You must be on the '$DEV_BRANCH' branch to run this script."
+    exit 1
+fi
+
+echo "Starting Git workflow on '$DEV_BRANCH' branch..."
+
+# --- Git Workflow (Commit & Push) ---
+
 # Step 1: Check repository status
 echo "Checking repository status..."
 git status
@@ -43,30 +56,27 @@ else
 fi
 
 # Step 5: Push to current branch
-BRANCH=$(git rev-parse --abbrev-ref HEAD)
-echo "Pushing to branch: $BRANCH"
-git push -u origin $BRANCH
+echo "Pushing to branch: $DEV_BRANCH"
+git push -u origin $DEV_BRANCH
 
-echo "Git workflow completed successfully!"
+echo "Git workflow (commit & push) completed successfully!"
 
-# --- Pre-flight Checks ---
+# --- Merge Process (Separate Functionality) ---
 
-# 1. Check if we are on the dev branch
-CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-if [ "$CURRENT_BRANCH" != "$DEV_BRANCH" ]; then
-    echo "Error: You must be on the '$DEV_BRANCH' branch to run this script."
-    exit 1
+# Ask whether to proceed with merges to main and backup branches
+read -p "Do you want to merge changes into main and backup branches? (y/n): " MERGE_CONFIRM
+if [ "$MERGE_CONFIRM" != "y" ] && [ "$MERGE_CONFIRM" != "Y" ]; then
+    echo "Merge process skipped. Exiting script."
+    exit 0
 fi
 
-# 2. Check if the working directory is clean
+# Check if the working directory is clean before proceeding with merges
 if ! git diff-index --quiet HEAD --; then
-    echo "Error: Working directory is not clean. Please commit or stash your changes."
+    echo "Error: Working directory is not clean. Please commit or stash your changes before merging."
     exit 1
 fi
 
-echo "Pre-flight checks passed. Starting merge process..."
-
-# --- Merge Process ---
+echo "Starting merge process..."
 
 # 1. Update and merge into main branch
 echo "Switching to '$MAIN_BRANCH' branch..."
@@ -81,7 +91,7 @@ git merge "$DEV_BRANCH"
 echo "Pushing '$MAIN_BRANCH' to origin..."
 git push origin "$MAIN_BRANCH"
 
-# 2. Update and merge into master branch
+# 2. Update and merge into backup branch
 echo "Switching to '$BACKUP_BRANCH' branch..."
 git checkout "$BACKUP_BRANCH"
 
