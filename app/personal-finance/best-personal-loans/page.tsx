@@ -1,9 +1,8 @@
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
-import { Button } from "@/components/ui/button";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import SocialShareButtons from "@/components/ui/social-share-buttons"; // Import the new component
 import Image from "next/image";
-import Link from "next/link";
 
 export default function BestPersonalLoansPage() {
   return (
@@ -23,6 +22,9 @@ export default function BestPersonalLoansPage() {
                 comprehensive guide to the UK's top lenders, rates, and
                 application requirements.
               </p>
+
+              {/* Add the Social Share Buttons here */}
+              <SocialShareButtons postUrl="/personal-finance/best-personal-loans" />
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
