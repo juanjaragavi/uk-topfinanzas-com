@@ -98,7 +98,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
-  manifest: `${baseUrl}/site.webmanifest`,
+  manifest: "/site.webmanifest", // Use relative path for local manifest
 
   // Optional: Define metadataBase for resolving relative image URLs
   metadataBase: new URL(baseUrl),
