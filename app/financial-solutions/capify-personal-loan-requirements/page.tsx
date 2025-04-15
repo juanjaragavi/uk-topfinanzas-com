@@ -20,7 +20,7 @@ export function generateMetadata() {
 export default function CapifyPersonalLoanRequirementsPage() {
   // Note: Adjusting component name and content for Capify's Business Finance focus (MCA & Loans)
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
       <article className="bg-white py-8 md:py-12">

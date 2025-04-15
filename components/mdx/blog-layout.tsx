@@ -41,7 +41,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
   };
 
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
       <section className="bg-gradient-to-b from-white to-gray-50 py-10">

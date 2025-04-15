@@ -206,7 +206,7 @@ export default function Home() {
   }, [currentPage, postsPerPage]);
 
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
       {/* Banner Section - Uses CSS background images for better LCP performance */}

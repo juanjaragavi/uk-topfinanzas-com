@@ -34,7 +34,7 @@ export default async function PrivacyPolicyPage() {
   });
 
   return (
-    <main className="min-h-screen flex flex-col bg-gray-50">
+    <main className="bg-white min-h-screen flex flex-col bg-gray-50">
       <Header />
 
       <div className="container mx-auto px-4 py-12">

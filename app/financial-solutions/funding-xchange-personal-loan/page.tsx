@@ -20,7 +20,7 @@ export default function FundingXchangePersonalLoanPage() {
   // Note: Funding Xchange is a business finance comparison platform, not a direct personal loan provider.
   // Content adjusted to reflect its actual service for SMEs.
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
       <article className="bg-white py-8 md:py-12">

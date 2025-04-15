@@ -10,7 +10,7 @@ import { Ad } from "@/components/ui/ad";
 
 export default function BestRewardsCreditCardsPage() {
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
       <article className="bg-white py-8 md:py-12">

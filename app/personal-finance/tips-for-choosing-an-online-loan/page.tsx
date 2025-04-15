@@ -8,7 +8,7 @@ import SocialShareButtons from "@/components/ui/social-share-buttons"; // Import
 
 export default function TipsForChoosingAnOnlineLoanPage() {
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
       <article className="bg-white py-8 md:py-12">

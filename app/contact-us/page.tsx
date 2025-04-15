@@ -278,7 +278,7 @@ export default function ContactUs() {
   };
 
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="bg-white min-h-screen flex flex-col">
       <Header />
       <div className="container mx-auto px-4 py-12 max-w-7xl bg-white">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">Contact Us</h1>
