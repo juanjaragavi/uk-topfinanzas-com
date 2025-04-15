@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import SocialShareButtons from "@/components/ui/social-share-buttons";
 
 export function generateMetadata() {
   return {
@@ -34,6 +35,8 @@ export default function MonzoPersonalLoanPage() {
                 simplicity, and user experience to borrowing, offering flexible
                 loans managed entirely within the Monzo app.
               </p>
+
+              <SocialShareButtons postUrl="/financial-solutions/monzo-personal-loan" />
 
               <div className="space-y-2 mb-8">
                 <div className="flex items-start">

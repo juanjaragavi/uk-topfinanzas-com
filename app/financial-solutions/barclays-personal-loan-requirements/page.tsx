@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import SocialShareButtons from "@/components/ui/social-share-buttons";
 
 export function generateMetadata() {
   return {
@@ -34,6 +35,9 @@ export default function BarclaysPersonalLoanRequirementsPage() {
                 terms. Understanding the eligibility criteria and application
                 requirements is key to a successful application.
               </p>
+
+              {/* Add the Social Share Buttons here */}
+              <SocialShareButtons postUrl="/financial-solutions/barclays-personal-loan-requirements" />
 
               <div className="my-8">
                 <Image

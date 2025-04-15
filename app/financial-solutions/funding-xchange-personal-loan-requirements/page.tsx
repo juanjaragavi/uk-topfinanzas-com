@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import SocialShareButtons from "@/components/ui/social-share-buttons";
 
 export function generateMetadata() {
   return {
@@ -35,6 +36,8 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                 providers. Understanding their process and general eligibility
                 helps businesses leverage the platform effectively.
               </p>
+
+              <SocialShareButtons postUrl="/financial-solutions/funding-xchange-personal-loan-requirements" />
 
               <div className="my-8">
                 <Image

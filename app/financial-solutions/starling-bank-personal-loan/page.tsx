@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import SocialShareButtons from "@/components/ui/social-share-buttons";
 
 export function generateMetadata() {
   return {
@@ -35,6 +36,8 @@ export default function StarlingBankPersonalLoanPage() {
                 neobank's commitment to transparency, ethical practices, and an
                 exceptional digital experience via the Starling app.
               </p>
+
+              <SocialShareButtons postUrl="/financial-solutions/starling-bank-personal-loan" />
 
               <div className="space-y-2 mb-8">
                 <div className="flex items-start">

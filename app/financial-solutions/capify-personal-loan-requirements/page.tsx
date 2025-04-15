@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import SocialShareButtons from "@/components/ui/social-share-buttons";
 
 export function generateMetadata() {
   return {
@@ -35,6 +36,8 @@ export default function CapifyPersonalLoanRequirementsPage() {
                 UK SMEs. Understanding their eligibility helps businesses access
                 funding quickly.
               </p>
+
+              <SocialShareButtons postUrl="/financial-solutions/capify-personal-loan-requirements" />
 
               <div className="my-8">
                 <Image
