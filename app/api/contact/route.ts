@@ -1,6 +1,6 @@
-import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
-import sgMail from '@sendgrid/mail';
+import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
+import sgMail from "@sendgrid/mail";
 
 export async function POST(req: Request) {
   try {
@@ -10,15 +10,15 @@ export async function POST(req: Request) {
     // Validate input
     if (!name || !lastName || !email || !phone || !message) {
       return NextResponse.json(
-        { message: 'Missing required fields' },
+        { message: "Missing required fields" },
         { status: 400 }
       );
     }
 
     // Email recipients
     const recipients = [
-      'juan.hoyos@topnetworks.co',
-      'juan.jaramillo@topnetworks.co',
+      "juan.hoyos@topnetworks.co",
+      "juan.jaramillo@topnetworks.co",
     ];
 
     // Prepare email content
@@ -38,37 +38,37 @@ export async function POST(req: Request) {
       try {
         // Use SendGrid for email sending
         sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-        
+
         const msg = {
           to: recipients,
-          from: process.env.SENDER_EMAIL || 'noreply@topfinanzas.com',
+          from: process.env.SENDER_EMAIL || "noreply@topfinanzas.com",
           subject: subject,
           html: htmlContent,
         };
-        
+
         await sgMail.send(msg);
-        console.log('Email sent successfully via SendGrid');
-        
+        console.log("Email sent successfully via SendGrid");
+
         return NextResponse.json(
-          { message: 'Email sent successfully' },
+          { message: "Email sent successfully" },
           { status: 200 }
         );
       } catch (sendGridError) {
-        console.error('SendGrid error:', sendGridError);
-        
+        console.error("SendGrid error:", sendGridError);
+
         // If SendGrid fails, try nodemailer as fallback
         if (
-          process.env.EMAIL_SERVER_HOST && 
-          process.env.EMAIL_SERVER_USER && 
+          process.env.EMAIL_SERVER_HOST &&
+          process.env.EMAIL_SERVER_USER &&
           process.env.EMAIL_SERVER_PASSWORD
         ) {
-          console.log('Attempting to send via nodemailer as fallback...');
-          
+          console.log("Attempting to send via nodemailer as fallback...");
+
           // Fallback to Nodemailer
           const transporter = nodemailer.createTransport({
             host: process.env.EMAIL_SERVER_HOST,
-            port: parseInt(process.env.EMAIL_SERVER_PORT || '587'),
-            secure: process.env.EMAIL_SERVER_SECURE === 'true',
+            port: parseInt(process.env.EMAIL_SERVER_PORT || "587"),
+            secure: process.env.EMAIL_SERVER_SECURE === "true",
             auth: {
               user: process.env.EMAIL_SERVER_USER,
               pass: process.env.EMAIL_SERVER_PASSWORD,
@@ -78,32 +78,34 @@ export async function POST(req: Request) {
           // Email content
           const mailOptions = {
             from: process.env.EMAIL_FROM,
-            to: recipients.join(', '),
+            to: recipients.join(", "),
             subject: subject,
             html: htmlContent,
           };
 
           // Send email via nodemailer
           await transporter.sendMail(mailOptions);
-          console.log('Email sent successfully via nodemailer fallback');
-          
+          console.log("Email sent successfully via nodemailer fallback");
+
           return NextResponse.json(
-            { message: 'Email sent successfully' },
+            { message: "Email sent successfully" },
             { status: 200 }
           );
         } else {
           // Both methods failed
-          throw new Error('Failed to send email: SendGrid error and nodemailer fallback not configured');
+          throw new Error(
+            "Failed to send email: SendGrid error and nodemailer fallback not configured"
+          );
         }
       }
     } else {
       // SendGrid not configured, this is an error state since it's the primary method
-      throw new Error('SendGrid API key not configured');
+      throw new Error("SendGrid API key not configured");
     }
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error("Error sending email:", error);
     return NextResponse.json(
-      { message: 'Error sending email', error: String(error) },
+      { message: "Error sending email", error: String(error) },
       { status: 500 }
     );
   }
