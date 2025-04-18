@@ -164,14 +164,7 @@ export default function RootLayout({
         </noscript>
 
         {/* Preload critical resources for faster LCP with crossorigin for CORS compliance */}
-        <link
-          rel="preload"
-          href="https://media.topfinanzas.com/images/placeholder-image.webp"
-          as="image"
-          media="(max-width: 767px)"
-          fetchPriority="high"
-          crossOrigin="anonymous"
-        />
+        {/* Removed preload for placeholder-image.webp as it competes with LCP banners */}
         <link
           rel="preload"
           href="https://media.topfinanzas.com/images/banner-home-mobile.webp"

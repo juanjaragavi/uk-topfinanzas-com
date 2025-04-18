@@ -291,7 +291,7 @@ export default function Home() {
               categorySlug="/personal-finance"
               date="March 30, 2025"
               orientation="horizontal"
-              priority={true}
+              priority={false} // Removed priority to avoid competing with LCP hero image
             />
           </div>
 

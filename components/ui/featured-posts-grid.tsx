@@ -64,8 +64,7 @@ export function FeaturedPostsGrid({
               {...post}
               orientation="vertical"
               imageHeight="h-48"
-              // Pass priority based on index if needed, even without animation
-              priority={index < 3}
+              // Removed priority={index < 3} to avoid competing with LCP hero image
             />
           </div>
           // Removed the 'else' block as animateItems check is now redundant without motion
