@@ -18,7 +18,10 @@ export function generateMetadata() {
 
 export default function NatWestCreditCardPage() {
   return (
-    <main className="bg-white min-h-screen flex flex-col">
+    <main
+      className="bg-white min-h-screen flex flex-col"
+      data-category="credit-cards"
+    >
       <Header />
 
       <article className="bg-white py-8 md:py-12">
@@ -178,7 +181,8 @@ export default function NatWestCreditCardPage() {
                       width={1000}
                       height={563}
                       className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
-                      priority
+                      loading="lazy"
+                      quality={80}
                     />
                   </Link>
                 </div>

@@ -21,7 +21,7 @@ export default function CurveCreditCardPage() {
     <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
-      <article className="bg-white py-8 md:py-12">
+      <article className="bg-white py-8 md:py-12" data-category="credit-cards">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-8">
@@ -106,7 +106,10 @@ export default function CurveCreditCardPage() {
                   width={900}
                   height={507}
                   className="w-full h-auto rounded-xl"
-                  priority
+                  priority={true}
+                  fetchPriority="high"
+                  quality={85}
+                  loading="eager"
                 />
               </div>
 
@@ -184,7 +187,8 @@ export default function CurveCreditCardPage() {
                       width={1000}
                       height={563}
                       className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
-                      priority
+                      loading="lazy"
+                      quality={80}
                     />
                   </Link>
                 </div>
