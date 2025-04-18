@@ -22,7 +22,8 @@ export default function VirginMoneyPersonalLoanPage() {
     <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
-      <article className="bg-white py-8 md:py-12">
+      {/* Added data-category="loans" here */}
+      <article className="bg-white py-8 md:py-12" data-category="loans">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-8">
@@ -164,6 +165,21 @@ export default function VirginMoneyPersonalLoanPage() {
                   affordability of monthly payments against the total interest
                   paid over the loan's duration.
                 </p>
+
+                {/* Ad Block: Credit Cards - Updated Image attributes */}
+                <div className="my-8">
+                  <Link href="/personal-finance/credit-card-types-benefits/">
+                    <Image
+                      src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"
+                      alt="Virgin Money Personal Loan"
+                      width={1000}
+                      height={563}
+                      className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
+                      loading="lazy"
+                      quality={80}
+                    />
+                  </Link>
+                </div>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Additional Features:
