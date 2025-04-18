@@ -2,11 +2,8 @@
 
 import { BlogLayout } from "@/components/mdx/blog-layout";
 import Link from "next/link";
-import Image from "next/image";
 import { FeaturedPostCard } from "@/components/ui/featured-post-card";
-import { FeaturedPostsGrid } from "@/components/ui/featured-posts-grid";
 import { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function FinancialSolutionsPage() {
   // Category definitions
