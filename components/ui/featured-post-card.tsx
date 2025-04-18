@@ -64,14 +64,15 @@ export function FeaturedPostCard({
             src={image}
             alt={title}
             fill
-            priority={priority}
+            priority={true}
             style={{ objectFit: "cover" }}
+            loading="eager"
             sizes={
               orientation === "horizontal"
                 ? "(max-width: 768px) 100vw, 33vw"
                 : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             }
-            quality={priority ? 85 : 75}
+            quality={75}
             placeholder="blur"
             blurDataURL="data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAAQAAAACQAAAwAAQUxQSBcAAAABD9D/ERFCyDa37d+ICPgXqjgjoqA+qgAAVlA4IDYAAACQAQCdASoKAAQAAkA4JZwAAPrHQAD++5AK1AA="
             unoptimized={false}

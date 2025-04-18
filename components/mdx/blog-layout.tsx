@@ -68,6 +68,8 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                         alt="Best Personal Loans in the UK"
                         width={50}
                         height={50}
+                        loading="lazy"
+                        priority={false}  
                         className="rounded-md object-cover" // Added object-cover
                         onError={(e) => {
                           e.currentTarget.src =
@@ -91,6 +93,8 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                         alt="Top Rewards Credit Cards"
                         width={50}
                         height={50}
+                        loading="lazy"
+                        priority={false} 
                         className="rounded-md object-cover"
                         onError={(e) => {
                           e.currentTarget.src =
@@ -113,6 +117,8 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                         alt="Barclaycard Avios Plus"
                         width={50}
                         height={50}
+                        loading="lazy"
+                        priority={false} 
                         className="rounded-md object-cover"
                         onError={(e) => {
                           e.currentTarget.src =
@@ -135,6 +141,8 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                         alt="Practical Guide to Getting Out of Debt"
                         width={50}
                         height={50}
+                        loading="lazy"
+                        priority={false} 
                         className="rounded-md object-cover"
                         onError={(e) => {
                           e.currentTarget.src =
