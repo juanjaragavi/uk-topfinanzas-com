@@ -1,11 +1,14 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react"; // Removed useCallback
+import { useState, useRef, useEffect, useCallback } from "react"; // Added useCallback back
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Menu, X, ChevronDown } from "lucide-react";
+import { Search, Menu, X, ChevronDown, Loader2 } from "lucide-react"; // Added Loader2
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input"; // Added Input
+import { SearchResults } from "@/components/ui/search-results"; // Added SearchResults (will create later)
+import { useDebouncedCallback } from "use-debounce"; // Using use-debounce hook
 
 // Import content from lib directory
 import { logos } from "@/lib/images/logos";
@@ -21,7 +24,100 @@ export function Header() {
     {}
   );
 
-  // Handle click outside to close mega menu
+  // Search State
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [searchLoading, setSearchLoading] = useState(false);
+  const [searchError, setSearchError] = useState<string | null>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null); // Ref for search input
+  const searchContainerRef = useRef<HTMLDivElement>(null); // Ref for search container + results
+
+  // Debounced search function
+  const debouncedSearch = useDebouncedCallback(async (query: string) => {
+    if (!query || query.trim().length < 3) {
+      // Only search if query is >= 3 chars
+      setSearchResults([]);
+      setSearchLoading(false);
+      setSearchError(null);
+      return;
+    }
+
+    console.log(`[Header] Debounced search for: "${query}"`);
+    setSearchLoading(true);
+    setSearchError(null);
+
+    try {
+      const response = await fetch("/api/search", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ query }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to fetch search results");
+      }
+
+      const data = await response.json();
+      setSearchResults(data.results || []);
+    } catch (error: any) {
+      console.error("[Header] Search error:", error);
+      setSearchError(error.message || "An unexpected error occurred.");
+      setSearchResults([]); // Clear results on error
+    } finally {
+      setSearchLoading(false);
+    }
+  }, 300); // 300ms debounce delay
+
+  // Handle search input change
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const query = event.target.value;
+    setSearchQuery(query);
+    debouncedSearch(query);
+  };
+
+  // Close search results when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      // Close Mega Menu logic (existing)
+      if (activeMegaMenu) {
+        const megaMenuRef = megaMenuRefs.current[activeMegaMenu];
+        const menuButtonRef = menuButtonRefs.current[activeMegaMenu];
+        if (
+          megaMenuRef &&
+          menuButtonRef &&
+          !megaMenuRef.contains(event.target as Node) &&
+          !menuButtonRef.contains(event.target as Node)
+        ) {
+          setActiveMegaMenu(null);
+        }
+      }
+
+      // Close Search Results logic (new)
+      // Check if search is open and click is outside the search container
+      if (
+        isSearchOpen &&
+        searchContainerRef.current &&
+        !searchContainerRef.current.contains(event.target as Node)
+      ) {
+        // Optionally keep search bar open but hide results, or close both
+        // setIsSearchOpen(false); // Uncomment to close the whole search section
+        setSearchResults([]); // Hide results
+        setSearchQuery(""); // Clear query
+        setSearchError(null); // Clear errors
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+    // Added dependencies for search logic
+  }, [activeMegaMenu, isSearchOpen, searchContainerRef]);
+
+  // ESC key handler to close menus and search results
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (activeMegaMenu) {
@@ -52,8 +148,18 @@ export function Header() {
   // ESC key handler to close menus
   useEffect(() => {
     const handleEscKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape" && activeMegaMenu) {
-        setActiveMegaMenu(null);
+      if (event.key === "Escape") {
+        if (activeMegaMenu) {
+          setActiveMegaMenu(null);
+        }
+        // Close search if open on ESC
+        if (isSearchOpen) {
+          // setIsSearchOpen(false); // Optionally close the entire bar
+          setSearchResults([]); // Clear results
+          setSearchQuery(""); // Clear query
+          setSearchError(null); // Clear error
+          // Optionally blur input: searchInputRef.current?.blur();
+        }
       }
     };
 
@@ -62,17 +168,49 @@ export function Header() {
     return () => {
       document.removeEventListener("keydown", handleEscKey);
     };
-  }, [activeMegaMenu]);
+    // Added dependencies for search logic
+  }, [activeMegaMenu, isSearchOpen]);
 
-  // Reverted to simple functions without useCallback
+  // Function to toggle mega menu
   const toggleMegaMenu = (menuId: string) => {
+    // Close search if a mega menu is opened
+    if (isSearchOpen && activeMegaMenu !== menuId) {
+      // setIsSearchOpen(false); // Optionally close search bar
+      setSearchResults([]);
+      setSearchQuery("");
+      setSearchError(null);
+    }
     console.log(`Toggling mega menu: ${menuId}`);
     setActiveMegaMenu((prevMenu) => (prevMenu === menuId ? null : menuId));
   };
 
+  // Function to toggle search bar visibility
+  const toggleSearch = () => {
+    const newState = !isSearchOpen;
+    setIsSearchOpen(newState);
+    if (!newState) {
+      // If closing search
+      setSearchQuery("");
+      setSearchResults([]);
+      setSearchError(null);
+    } else {
+      // If opening search, focus input
+      setTimeout(() => searchInputRef.current?.focus(), 0);
+    }
+    // Close mega menu if opening search
+    if (newState && activeMegaMenu) {
+      setActiveMegaMenu(null);
+    }
+  };
+
+  // Function to toggle mobile menu
   const toggleMobileMenu = () => {
     console.log("Toggling mobile menu");
     setIsOpen((prev) => !prev);
+    // Optionally close search when opening mobile menu
+    if (!isOpen && isSearchOpen) {
+      toggleSearch(); // Close search bar
+    }
   };
 
   const setMenuButtonRef = (el: HTMLButtonElement | null, key: string) => {
@@ -330,21 +468,45 @@ export function Header() {
             {/* Search Button */}
             <Button
               variant="secondary"
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
+              onClick={toggleSearch} // Use toggleSearch function
               className="p-2 rounded-full hover:bg-gray-100"
-              aria-label="Search"
+              aria-label={isSearchOpen ? "Close search" : "Open search"} // Dynamic label
+              aria-expanded={isSearchOpen}
             >
-              <Search className="w-5 h-5" />
+              {/* Optionally change icon when open */}
+              {isSearchOpen ? (
+                <X className="w-5 h-5" />
+              ) : (
+                <Search className="w-5 h-5" />
+              )}
             </Button>
           </nav>
 
-          {/* Mobile Menu Button - Reverted to simple inline onClick */}
-          <div className="md:hidden">
+          {/* Mobile Menu & Search Buttons */}
+          <div className="md:hidden flex items-center space-x-2">
+            {/* Mobile Search Button */}
+            <Button
+              variant="secondary" // Changed from "ghost" to "secondary"
+              onClick={toggleSearch}
+              className="p-2 rounded-full hover:bg-gray-100"
+              aria-label={isSearchOpen ? "Close search" : "Open search"}
+              aria-expanded={isSearchOpen}
+            >
+              {isSearchOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Search className="w-6 h-6" />
+              )}
+            </Button>
+
+            {/* Mobile Menu Button */}
+            {/* Hide menu button if search is open on mobile? Or allow both? */}
+            {/* Let's allow both for now */}
             <button
               type="button"
-              onClick={toggleMobileMenu} // Re-added inline onClick
+              onClick={toggleMobileMenu}
               className="p-2 rounded-md bg-white hover:bg-gray-100 focus:outline-none"
-              aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-label={isOpen ? "Close main menu" : "Open main menu"}
               aria-expanded={isOpen}
               role="button"
             >
@@ -364,17 +526,50 @@ export function Header() {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              className="border-t border-gray-100"
+              className="border-t border-gray-100 overflow-hidden" // Added overflow-hidden
+              ref={searchContainerRef} // Add ref to the container
             >
-              <div className="py-4">
-                <div className="relative">
-                  <input
+              <div className="py-4 relative">
+                {" "}
+                {/* Added relative positioning */}
+                {/* Input container */}
+                <div className="relative mb-2">
+                  <Input
+                    ref={searchInputRef}
                     type="text"
                     placeholder={headerContent.search.placeholder}
                     className="w-full px-4 py-2 pr-10 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    value={searchQuery}
+                    onChange={handleSearchChange}
+                    aria-label="Search input"
                   />
-                  <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  {/* Use Loader2 icon when loading */}
+                  <div className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                    {searchLoading ? (
+                      <Loader2 className="w-5 h-5 animate-spin" />
+                    ) : (
+                      <Search className="w-5 h-5" />
+                    )}
+                  </div>
                 </div>
+                {/* Results/Error/Loading Display */}
+                {/* Only show results container if loading, error, or results exist */}
+                {(searchLoading || searchError || searchResults.length > 0) && (
+                  <div className="absolute top-full left-0 right-0 mt-1 max-h-[60vh] overflow-y-auto bg-white border border-gray-200 rounded-md shadow-lg z-20">
+                    <SearchResults
+                      results={searchResults}
+                      isLoading={searchLoading}
+                      error={searchError}
+                      onResultClick={() => {
+                        // Close search and clear results when a result is clicked
+                        setIsSearchOpen(false);
+                        setSearchQuery("");
+                        setSearchResults([]);
+                        setSearchError(null);
+                      }}
+                    />
+                  </div>
+                )}
               </div>
             </motion.div>
           )}
