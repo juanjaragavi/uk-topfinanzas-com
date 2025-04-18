@@ -1,8 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { OptimizedImage } from "@/components/ui/optimized-image";
+import { generateTinyPlaceholder } from "@/lib/utils/generate-blur-placeholder";
+import { motion, AnimatePresence } from "framer-motion";
 import { BlogLayout } from "@/components/mdx/blog-layout"; // Assuming this layout is suitable
 import { Button } from "@/components/ui/button"; // For pagination
 
@@ -24,7 +27,17 @@ const cleanTitle = (title: string): string => {
 
 export default function BlogArchivePage() {
   const [currentPage, setCurrentPage] = useState(1);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const postsPerPage = 9; // Display 9 posts per page (3x3 grid)
+
+  // Categories for filtering
+  const categories = {
+    all: "All Articles",
+    personalFinance: "Personal Finance",
+    financialSolutions: "Financial Solutions",
+    creditCards: "Credit Cards",
+    loans: "Loans",
+  };
 
   // Combine posts from both categories
   const allPosts: PostItem[] = [
@@ -107,7 +120,8 @@ export default function BlogArchivePage() {
         "5 Essential Tips for Choosing an Online Loan: Quick Guide | Top Finance UK",
       slug: "tips-for-choosing-an-online-loan",
       description: "Navigate the world of online loans with confidence...",
-      image: "https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp",
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "30 March 2025",
@@ -184,11 +198,50 @@ export default function BlogArchivePage() {
   // Sort posts by date if available, otherwise keep original order (or implement other sorting)
   // For now, keeping the combined order. Add date parsing/sorting if needed.
 
+  // Filter posts based on active category
+  const filterPosts = useCallback(() => {
+    let filteredPosts = [...allPosts];
+
+    if (activeCategory === "personalFinance") {
+      filteredPosts = allPosts.filter(
+        (post) => post.category === "Personal Finance"
+      );
+    } else if (activeCategory === "financialSolutions") {
+      filteredPosts = allPosts.filter(
+        (post) => post.category === "Financial Solutions"
+      );
+    } else if (activeCategory === "creditCards") {
+      filteredPosts = allPosts.filter(
+        (post) =>
+          post.title.toLowerCase().includes("credit card") ||
+          post.slug.toLowerCase().includes("credit-card") ||
+          post.description.toLowerCase().includes("credit card")
+      );
+    } else if (activeCategory === "loans") {
+      filteredPosts = allPosts.filter(
+        (post) =>
+          post.title.toLowerCase().includes("loan") ||
+          post.slug.toLowerCase().includes("loan") ||
+          post.description.toLowerCase().includes("loan")
+      );
+    }
+
+    return filteredPosts;
+  }, [allPosts, activeCategory]);
+
+  // Get filtered posts
+  const filteredPosts = filterPosts();
+
+  // Reset to page 1 when filter changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeCategory]);
+
   // Pagination logic
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = allPosts.slice(indexOfFirstPost, indexOfLastPost);
-  const totalPages = Math.ceil(allPosts.length / postsPerPage);
+  const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
+  const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
@@ -228,64 +281,103 @@ export default function BlogArchivePage() {
         </Link>
       </div>
 
-      <h2 className="text-3xl font-bold mb-8">All Articles</h2>
+      <h2 className="text-3xl font-bold mb-4">
+        {activeCategory
+          ? categories[activeCategory as keyof typeof categories]
+          : "All Articles"}
+      </h2>
 
-      {/* Grid of posts */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {currentPosts.map((post, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col"
+      {/* Category filter buttons */}
+      <div className="flex flex-wrap gap-2 mb-8">
+        {Object.entries(categories).map(([key, value]) => (
+          <button
+            key={key}
+            onClick={() => setActiveCategory(key === "all" ? null : key)}
+            className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
+              (key === "all" && !activeCategory) || activeCategory === key
+                ? "bg-blue-600 text-white"
+                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            }`}
+            data-category={key}
           >
-            <Link href={`${post.categoryPath}/${post.slug}`} className="block">
-              <div className="relative h-48 w-full">
-                <Image
-                  src={post.image}
-                  alt={cleanTitle(post.title)}
-                  fill
-                  style={{ objectFit: "cover" }}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  onError={(e) => {
-                    e.currentTarget.src =
-                      "https://media.topfinanzas.com/images/placeholder-image.webp";
-                  }} // Fallback image
-                />
-                <span
-                  className={`absolute top-2 left-2 inline-block px-2 py-0.5 rounded text-xs font-semibold text-white ${
-                    post.category === "Personal Finance"
-                      ? "bg-blue-600"
-                      : "bg-green-600"
-                  }`}
-                >
-                  {post.category}
-                </span>
-              </div>
-            </Link>
-            <div className="p-6 flex flex-col flex-grow">
-              {post.date && (
-                <p className="text-sm text-gray-500 mb-2">{post.date}</p>
-              )}
-              <Link
-                href={`${post.categoryPath}/${post.slug}`}
-                className="text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors mb-2 line-clamp-2"
-              >
-                {cleanTitle(post.title)}
-              </Link>
-              <p className="text-sm text-gray-600 mb-4 flex-grow line-clamp-3">
-                {post.description}
-              </p>
-              <div className="mt-auto">
-                <Link
-                  href={`${post.categoryPath}/${post.slug}`}
-                  className="text-blue-600 hover:text-blue-800 font-medium text-sm"
-                >
-                  Read more →
-                </Link>
-              </div>
-            </div>
-          </div>
+            {value}
+          </button>
         ))}
       </div>
+
+      {/* Grid of posts with animation */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeCategory || "all"}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {currentPosts.map((post, index) => (
+            <motion.div
+              key={post.slug}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.4,
+                delay: index * 0.1,
+              }}
+              className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col"
+              data-category={post.category.toLowerCase().replace(" ", "-")}
+            >
+              <Link
+                href={`${post.categoryPath}/${post.slug}`}
+                className="block"
+              >
+                <div className="relative h-48 w-full">
+                  <OptimizedImage
+                    src={post.image}
+                    alt={cleanTitle(post.title)}
+                    fill
+                    style={{ objectFit: "cover" }}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    lowQualitySrc={generateTinyPlaceholder(post.image)}
+                    fallbackSrc="https://media.topfinanzas.com/images/placeholder-image.webp"
+                  />
+                  <span
+                    className={`absolute top-2 left-2 inline-block px-2 py-0.5 rounded text-xs font-semibold text-white ${
+                      post.category === "Personal Finance"
+                        ? "bg-blue-600"
+                        : "bg-green-600"
+                    }`}
+                  >
+                    {post.category}
+                  </span>
+                </div>
+              </Link>
+              <div className="p-6 flex flex-col flex-grow">
+                {post.date && (
+                  <p className="text-sm text-gray-500 mb-2">{post.date}</p>
+                )}
+                <Link
+                  href={`${post.categoryPath}/${post.slug}`}
+                  className="text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors mb-2 line-clamp-2"
+                >
+                  {cleanTitle(post.title)}
+                </Link>
+                <p className="text-sm text-gray-600 mb-4 flex-grow line-clamp-3">
+                  {post.description}
+                </p>
+                <div className="mt-auto">
+                  <Link
+                    href={`${post.categoryPath}/${post.slug}`}
+                    className="text-blue-600 hover:text-blue-800 font-medium text-sm"
+                  >
+                    Read more →
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </AnimatePresence>
 
       {/* Pagination Controls */}
       {totalPages > 1 && (

@@ -1,86 +1,105 @@
 "use client";
 
-import React from "react";
 import Image, { ImageProps } from "next/image";
-import { cn } from "@/lib/utils";
+import { useState, useEffect } from "react";
 
-interface OptimizedImageProps extends Omit<ImageProps, "quality"> {
-  /**
-   * Additional className for the image container
-   */
+interface OptimizedImageProps extends Omit<ImageProps, "src" | "onLoad"> {
+  src: string;
+  fallbackSrc?: string;
+  lowQualitySrc?: string;
   className?: string;
-  /**
-   * Whether this image is likely to be the LCP (Largest Contentful Paint)
-   * If true, it will be loaded with highest priority
-   */
-  isLCP?: boolean;
-  /**
-   * Quality setting for the image (1-100)
-   * Default is 85 for most images, 90 for LCP images
-   */
-  quality?: number;
-  /**
-   * Placeholder blur hash for faster perceived loading
-   */
-  blurHash?: string;
+  loadingClassName?: string;
+  fadeInDuration?: number;
+  onLoadingComplete?: (img: HTMLImageElement) => void;
 }
 
-/**
- * Optimized image component that applies best practices for performance
- * - Uses Next.js Image for automatic optimization
- * - Implements proper loading priorities
- * - Ensures correct sizing with responsive behavior
- * - Implements blur-up loading for better UX
- */
 export function OptimizedImage({
   src,
   alt,
-  className,
-  isLCP = false,
-  quality,
-  blurHash,
-  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
-  style,
+  fallbackSrc = "https://media.topfinanzas.com/images/placeholder-image.webp",
+  lowQualitySrc,
+  className = "",
+  loadingClassName = "opacity-50 blur-sm",
+  fadeInDuration = 500,
+  priority = false,
+  sizes = "100vw",
+  onLoadingComplete,
   ...props
 }: OptimizedImageProps) {
-  // Determine appropriate quality setting
-  const imageQuality = quality ?? (isLCP ? 90 : 85);
+  const [isLoading, setIsLoading] = useState(!priority);
+  const [imgSrc, setImgSrc] = useState(lowQualitySrc || src);
+  const [retryCount, setRetryCount] = useState(0);
+  const maxRetries = 2;
 
-  // Generate minimal blur placeholder if not provided
-  const placeholder = props.placeholder ?? (blurHash ? "blur" : "empty");
-  const blurDataURL =
-    props.blurDataURL ??
-    blurHash ??
-    "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAAQAAAACQAAAwAAQUxQSBcAAAABD9D/ERFCyDa37d+ICPgXqjgjoqA+qgAAVlA4IDYAAACQAQCdASoKAAQAAkA4JZwAAPrHQAD++5AK1AA=";
+  useEffect(() => {
+    // Reset loading state and retry count when the src changes
+    if (!priority) {
+      setIsLoading(true);
+    }
+    setImgSrc(lowQualitySrc || src);
+    setRetryCount(0);
+  }, [src, lowQualitySrc, priority]);
+
+  // Preconnect to image domain
+  useEffect(() => {
+    try {
+      const url = new URL(src);
+      const link = document.createElement("link");
+      link.rel = "preconnect";
+      link.href = `${url.protocol}//${url.hostname}`;
+      link.crossOrigin = "anonymous";
+      document.head.appendChild(link);
+
+      return () => {
+        document.head.removeChild(link);
+      };
+    } catch (e) {
+      // Invalid URL or other error, just ignore
+      console.warn("Failed to preconnect to image domain", e);
+    }
+  }, [src]);
+
+  const handleLoad = (event: React.SyntheticEvent<HTMLImageElement>) => {
+    setIsLoading(false);
+    // If we were loading a low quality placeholder, switch to the real image
+    if (lowQualitySrc && imgSrc === lowQualitySrc) {
+      setImgSrc(src);
+    }
+    if (onLoadingComplete) {
+      onLoadingComplete(event.currentTarget);
+    }
+  };
+
+  const handleError = () => {
+    // On error, try loading the image directly one more time
+    if (retryCount < maxRetries) {
+      setRetryCount((prev) => prev + 1);
+      // Small delay before retry
+      setTimeout(() => {
+        setImgSrc(`${src}?retry=${retryCount + 1}`);
+      }, 1000);
+    } else {
+      // After max retries, use fallback
+      setImgSrc(fallbackSrc);
+      setIsLoading(false);
+    }
+  };
 
   return (
-    <Image
-      src={src}
-      alt={alt || ""}
-      className={cn("transition-opacity duration-300", className)}
-      sizes={sizes}
-      quality={imageQuality}
-      priority={isLCP}
-      fetchPriority={isLCP ? "high" : "auto"}
-      placeholder={placeholder}
-      blurDataURL={blurDataURL}
-      style={{
-        objectFit: "cover",
-        ...style,
-      }}
-      {...props}
-      onError={(e) => {
-        // Fallback for image loading errors
-        const imgElement = e.currentTarget as HTMLImageElement;
-        if (
-          imgElement.src !==
-          "https://media.topfinanzas.com/images/placeholder-image.webp"
-        ) {
-          imgElement.src =
-            "https://media.topfinanzas.com/images/placeholder-image.webp";
-        }
-        if (props.onError) props.onError(e);
-      }}
-    />
+    <div className="relative overflow-hidden">
+      <Image
+        src={imgSrc}
+        alt={alt}
+        className={`
+          transition-all ${isLoading ? loadingClassName : ""} 
+          duration-${fadeInDuration} ${className}
+        `}
+        sizes={sizes}
+        priority={priority}
+        onLoad={handleLoad}
+        onError={handleError}
+        {...props}
+      />
+    </div>
   );
 }

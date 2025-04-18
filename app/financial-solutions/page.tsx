@@ -3,7 +3,8 @@
 import { BlogLayout } from "@/components/mdx/blog-layout";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function FinancialSolutionsPage() {
   // Category definitions
@@ -464,49 +465,65 @@ export default function FinancialSolutionsPage() {
             ))}
           </div>
 
-          {/* Credit cards grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {filteredCreditCards.map((post, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl shadow-sm overflow-hidden"
-              >
-                <div className="relative h-48">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
-                  <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-2 py-1 uppercase">
-                    {post.type === "traditional"
-                      ? "Traditional"
-                      : post.type === "neobank"
-                      ? "Neobank"
-                      : "Fintech"}
+          {/* Credit cards grid with animation */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeCreditCardType}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            >
+              {filteredCreditCards.map((post, index) => (
+                <motion.div
+                  key={post.slug}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.4,
+                    delay: index * 0.1,
+                  }}
+                  className="bg-white rounded-xl shadow-sm overflow-hidden"
+                  data-category={post.type}
+                >
+                  <div className="relative h-48">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
+                    <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-2 py-1 uppercase">
+                      {post.type === "traditional"
+                        ? "Traditional"
+                        : post.type === "neobank"
+                        ? "Neobank"
+                        : "Fintech"}
+                    </div>
                   </div>
-                </div>
-                <div className="p-6">
-                  <p className="text-sm text-gray-500 mb-2">{post.date}</p>
-                  <Link
-                    href={`/financial-solutions/${post.slug}`}
-                    className="text-xl font-semibold hover:text-blue-600 transition-colors"
-                  >
-                    {post.title}
-                  </Link>
-                  <p className="mt-2 text-gray-600">{post.description}</p>
-                  <div className="mt-4">
+                  <div className="p-6">
+                    <p className="text-sm text-gray-500 mb-2">{post.date}</p>
                     <Link
                       href={`/financial-solutions/${post.slug}`}
-                      className="text-blue-600 hover:text-blue-800 font-medium"
+                      className="text-xl font-semibold hover:text-blue-600 transition-colors"
                     >
-                      Read more →
+                      {post.title}
                     </Link>
+                    <p className="mt-2 text-gray-600">{post.description}</p>
+                    <div className="mt-4">
+                      <Link
+                        href={`/financial-solutions/${post.slug}`}
+                        className="text-blue-600 hover:text-blue-800 font-medium"
+                      >
+                        Read more →
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </div>
-            ))}
-          </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </AnimatePresence>
         </div>
       )}
 
@@ -529,59 +546,75 @@ export default function FinancialSolutionsPage() {
             ))}
           </div>
 
-          {/* Loans grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {filteredLoans.map((post, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl shadow-sm overflow-hidden"
-              >
-                <div className="relative h-48">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
-                  {/* Dynamic Badge based on type */}
-                  <div
-                    className={`absolute top-0 right-0 text-white text-xs font-bold px-2 py-1 uppercase ${
-                      post.type === "personal"
-                        ? "bg-blue-600"
-                        : post.type === "sme_fintech"
-                        ? "bg-red-600" // Changed purple to red for SME Fintech (like Iwoca)
-                        : post.type === "neobank"
-                        ? "bg-pink-600"
-                        : post.type === "marketplace"
-                        ? "bg-yellow-600"
-                        : "bg-gray-600" // Default for Guide etc.
-                    }`}
-                  >
-                    {loanTypes[post.type as keyof typeof loanTypes] ||
-                      post.type}
+          {/* Loans grid with animation */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeLoanType}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            >
+              {filteredLoans.map((post, index) => (
+                <motion.div
+                  key={post.slug}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.4,
+                    delay: index * 0.1,
+                  }}
+                  className="bg-white rounded-xl shadow-sm overflow-hidden"
+                  data-category={post.type}
+                >
+                  <div className="relative h-48">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
+                    {/* Dynamic Badge based on type */}
+                    <div
+                      className={`absolute top-0 right-0 text-white text-xs font-bold px-2 py-1 uppercase ${
+                        post.type === "personal"
+                          ? "bg-blue-600"
+                          : post.type === "sme_fintech"
+                          ? "bg-red-600" // Changed purple to red for SME Fintech (like Iwoca)
+                          : post.type === "neobank"
+                          ? "bg-pink-600"
+                          : post.type === "marketplace"
+                          ? "bg-yellow-600"
+                          : "bg-gray-600" // Default for Guide etc.
+                      }`}
+                    >
+                      {loanTypes[post.type as keyof typeof loanTypes] ||
+                        post.type}
+                    </div>
                   </div>
-                </div>
-                <div className="p-6">
-                  <p className="text-sm text-gray-500 mb-2">{post.date}</p>
-                  <Link
-                    href={`/financial-solutions/${post.slug}`}
-                    className="text-xl font-semibold hover:text-blue-600 transition-colors"
-                  >
-                    {post.title}
-                  </Link>
-                  <p className="mt-2 text-gray-600">{post.description}</p>
-                  <div className="mt-4">
+                  <div className="p-6">
+                    <p className="text-sm text-gray-500 mb-2">{post.date}</p>
                     <Link
                       href={`/financial-solutions/${post.slug}`}
-                      className="text-blue-600 hover:text-blue-800 font-medium"
+                      className="text-xl font-semibold hover:text-blue-600 transition-colors"
                     >
-                      Read more →
+                      {post.title}
                     </Link>
+                    <p className="mt-2 text-gray-600">{post.description}</p>
+                    <div className="mt-4">
+                      <Link
+                        href={`/financial-solutions/${post.slug}`}
+                        className="text-blue-600 hover:text-blue-800 font-medium"
+                      >
+                        Read more →
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </div>
-            ))}
-          </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </AnimatePresence>
         </div>
       )}
 

@@ -4,6 +4,8 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import Link from "next/link";
 import Image from "next/image";
+import { OptimizedImage } from "@/components/ui/optimized-image";
+import { generateTinyPlaceholder } from "@/lib/utils/generate-blur-placeholder";
 import { useEffect, useState, useMemo } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -319,7 +321,7 @@ export default function Home() {
                     className="block relative overflow-hidden group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
                   >
                     <div className="relative h-[180px] w-full">
-                      <Image
+                      <OptimizedImage
                         src={
                           post.frontmatter.featuredImage ||
                           "https://media.topfinanzas.com/images/placeholder.webp"
@@ -329,12 +331,14 @@ export default function Home() {
                         style={{ objectFit: "cover" }}
                         className="rounded-t-lg"
                         sizes={getImageSizes("thumbnail")}
-                        onError={(e) => {
-                          // Fallback if image fails to load
-                          const imgElement = e.target as HTMLImageElement;
-                          imgElement.src =
-                            "https://media.topfinanzas.com/images/placeholder-image.webp";
-                        }}
+                        lowQualitySrc={
+                          post.frontmatter.featuredImage
+                            ? generateTinyPlaceholder(
+                                post.frontmatter.featuredImage
+                              )
+                            : undefined
+                        }
+                        fallbackSrc="https://media.topfinanzas.com/images/placeholder-image.webp"
                       />
                       <span
                         className={`absolute top-2 left-2 inline-block px-2 py-0.5 rounded text-xs font-semibold text-white ${

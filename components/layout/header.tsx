@@ -75,13 +75,18 @@ export function Header() {
 
     if (event) {
       event.preventDefault();
+      event.stopPropagation(); // Stop event propagation to prevent bubbling
     }
 
-    if (activeMegaMenu === menuId) {
-      setActiveMegaMenu(null);
-    } else {
-      setActiveMegaMenu(menuId);
-    }
+    // Use setTimeout to make this run after the current execution context,
+    // preventing any race conditions with click handlers
+    setTimeout(() => {
+      if (activeMegaMenu === menuId) {
+        setActiveMegaMenu(null);
+      } else {
+        setActiveMegaMenu(menuId);
+      }
+    }, 0);
   };
 
   const setMenuButtonRef = (el: HTMLButtonElement | null, key: string) => {
@@ -327,10 +332,19 @@ export function Header() {
           {/* Mobile Menu Button */}
           <Button
             variant="secondary"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation(); // Stop event propagation
+              // Use setTimeout to avoid race conditions
+              setTimeout(() => {
+                setIsOpen(!isOpen);
+              }, 0);
+            }}
             className="md:hidden p-2"
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
+            role="button"
+            tabIndex={0}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </Button>
