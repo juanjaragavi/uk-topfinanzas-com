@@ -28,6 +28,10 @@ const nextConfig = {
             key: "Cache-Control",
             value: "public, max-age=31536000, immutable",
           },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
         ],
       },
       {
@@ -37,6 +41,10 @@ const nextConfig = {
           {
             key: "Cache-Control",
             value: "public, max-age=31536000, immutable",
+          },
+          {
+            key: "Priority",
+            value: "high",
           },
         ],
       },
@@ -58,6 +66,58 @@ const nextConfig = {
             key: "Cache-Control",
             value: "public, max-age=31536000, immutable",
           },
+          {
+            key: "Vary",
+            value: "Accept",
+          },
+        ],
+      },
+      {
+        // JavaScript and CSS assets
+        source: "/_next/static/(css|js)/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        // Static media files
+        source: "/media/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        // Font files
+        source: "/fonts/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        // For all HTML pages
+        source: "/:path*",
+        headers: [
+          {
+            key: "X-Frame-Options",
+            value: "DENY",
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+          {
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin",
+          },
         ],
       },
     ];
@@ -66,6 +126,7 @@ const nextConfig = {
   images: {
     unoptimized: false,
     dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       {
         protocol: "https",
@@ -90,8 +151,9 @@ const nextConfig = {
     deviceSizes: [
       16, 32, 48, 64, 96, 128, 256, 384, 640, 750, 828, 1080, 1200, 1920, 2048,
     ],
-    imageSizes: [16, 32, 48, 64, 96, 128],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256],
     minimumCacheTTL: 31536000, // 1 year cache for improved performance
+    domains: ["media.topfinanzas.com", "us.topfinanzas.com"],
   },
   experimental: {
     webpackBuildWorker: true,

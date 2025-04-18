@@ -4,15 +4,15 @@ const GTM_ID = "GTM-MR76NXR3"; // Default GTM ID
 
 /**
  * Optimized Google Tag Manager Script Component
- * - Uses next/script with strategy="afterInteractive" to defer loading
- * - Doesn't block the initial page rendering
- * - Helps improve First Input Delay (FID) score
+ * - Uses next/script with strategy="lazyOnload" to significantly defer loading
+ * - Doesn't block the initial page rendering or interactivity
+ * - Helps improve Core Web Vitals scores (FCP, LCP, FID)
  */
 export default function GoogleTagManager({ id = GTM_ID }: { id?: string }) {
   return (
     <Script
       id="gtm-script"
-      strategy="afterInteractive" // Load after page becomes interactive - improves performance
+      strategy="lazyOnload" // Changed from afterInteractive to lazyOnload
       dangerouslySetInnerHTML={{
         __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

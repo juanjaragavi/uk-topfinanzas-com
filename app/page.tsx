@@ -209,15 +209,40 @@ export default function Home() {
     <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
-      {/* Banner Section - Uses CSS background images for better LCP performance */}
-      <section
-        className={cn(
-          "banner-section",
-          isMobile ? "banner-section-mobile" : "banner-section-desktop"
-        )}
-      >
-        <div className="absolute inset-0 bg-black opacity-30 md:opacity-25"></div>
-        <div className="container mx-auto px-4 text-left relative z-10">
+      {/* Banner Section - Replace CSS background with optimized Next.js Image */}
+      <section className="relative py-16 md:py-24 lg:py-40 overflow-hidden">
+        {/* Banner Image with Next.js Image optimization */}
+        <div className="absolute inset-0 z-0">
+          {isMobile ? (
+            <Image
+              src="https://media.topfinanzas.com/images/banner-home-mobile.webp"
+              alt="Top Finance UK Banner"
+              fill
+              priority={true}
+              fetchPriority="high"
+              quality={85}
+              sizes="100vw"
+              style={{ objectFit: "cover" }}
+              placeholder="blur"
+              blurDataURL="data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAAQAAAACQAAAwAAQUxQSBcAAAABD9D/ERFCyDa37d+ICPgXqjgjoqA+qgAAVlA4IDYAAACQAQCdASoKAAQAAkA4JZwAAPrHQAD++5AK1AA="
+            />
+          ) : (
+            <Image
+              src="https://media.topfinanzas.com/images/banner-home.webp"
+              alt="Top Finance UK Banner"
+              fill
+              priority={true}
+              fetchPriority="high"
+              quality={85}
+              sizes="100vw"
+              style={{ objectFit: "cover" }}
+              placeholder="blur"
+              blurDataURL="data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAAQAAAACQAAAwAAQUxQSBcAAAABD9D/ERFCyDa37d+ICPgXqjgjoqA+qgAAVlA4IDYAAACQAQCdASoKAAQAAkA4JZwAAPrHQAD++5AK1AA="
+            />
+          )}
+        </div>
+        <div className="absolute inset-0 bg-black opacity-30 md:opacity-25 z-[1]"></div>
+        <div className="container mx-auto px-4 text-left relative z-[2]">
           <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 drop-shadow-lg leading-tight">
             Welcome to Top Finance
           </h1>

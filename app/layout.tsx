@@ -2,12 +2,15 @@ import type React from "react";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Suspense } from "react";
+import fs from "fs";
+import path from "path";
 import "./globals.css";
 import GoogleTagManager, {
   GoogleTagManagerNoScript,
 } from "@/components/analytics/gtm";
 import UtmPersister from "@/components/analytics/utm-persister";
 import UtmMonitor from "@/components/analytics/utm-monitor";
+import ResourceHints from "@/components/resource-hints";
 
 // Use local font to avoid external requests during build
 // This improves build time and eliminates network dependency
@@ -43,6 +46,18 @@ const poppins = localFont({
 
 // Define base URL for metadata
 const baseUrl = "https://uk.topfinanzas.com";
+
+// Read critical CSS at build time to inline it
+let criticalCSS = "";
+try {
+  // Read the critical CSS file
+  criticalCSS = fs.readFileSync(
+    path.join(process.cwd(), "app/critical.css"),
+    "utf8"
+  );
+} catch (e) {
+  console.warn("Failed to read critical CSS:", e);
+}
 
 // Add viewport configuration
 export const viewport: Viewport = {
@@ -112,6 +127,42 @@ export default function RootLayout({
   return (
     <html lang="en-gb">
       <head>
+        {/* Inline critical CSS for faster rendering */}
+        <style
+          dangerouslySetInnerHTML={{
+            __html: criticalCSS,
+          }}
+        />
+
+        {/* Load non-critical CSS asynchronously */}
+        <link rel="preload" href="/styles.css" as="style" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // This script uses JavaScript to convert the preloaded CSS into a stylesheet
+              // This is a common optimization pattern for non-critical CSS
+              (function() {
+                var styleSheet = document.querySelector('link[href="/styles.css"]');
+                if (styleSheet) {
+                  styleSheet.onload = function() {
+                    this.onload = null;
+                    this.rel = 'stylesheet';
+                  };
+                  // Fallback for browsers that don't support onload on link
+                  setTimeout(function() {
+                    if (styleSheet.rel !== 'stylesheet') {
+                      styleSheet.rel = 'stylesheet';
+                    }
+                  }, 0);
+                }
+              })();
+            `,
+          }}
+        />
+        <noscript>
+          <link rel="stylesheet" href="/styles.css" />
+        </noscript>
+
         {/* Preload critical resources for faster LCP with crossorigin for CORS compliance */}
         <link
           rel="preload"
@@ -160,6 +211,20 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
 
+        {/* Module/nomodule pattern for modern browsers */}
+        <script
+          type="module"
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.dataset.jsEnabled = 'module';",
+          }}
+        />
+        <script
+          noModule
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.dataset.jsEnabled = 'nomodule';",
+          }}
+        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -167,33 +232,34 @@ export default function RootLayout({
               {
                 "@context": "https://schema.org",
                 "@type": "Organization",
-                name: "TopFinance UK", // Replace with your actual name
-                url: baseUrl, // Uses the variable defined above
+                name: "TopFinance UK",
+                url: baseUrl,
                 logo: "https://media.topfinanzas.com/images/logo-english.webp",
                 address: {
                   "@type": "PostalAddress",
-                  streetAddress: "PANAMA, PANAMA CITY", // Replace with your address
+                  streetAddress: "PANAMA, PANAMA CITY",
                   addressLocality: "AV. AQUILINO DE LA GUARDIA",
                   postalCode: "OCEAN BUSINESS PLAZA BUILDING, FLOOR 12",
                   addressCountry: "PA",
                 },
                 contactPoint: {
                   "@type": "ContactPoint",
-                  telephone: "+44-20-1234-5678", // Replace with your phone
-                  contactType: "customer support", // Adjust as needed
-                  email: "info@topnetworks.co", // Replace with your email
+                  telephone: "+44-20-1234-5678",
+                  contactType: "customer support",
+                  email: "info@topnetworks.co",
                 },
                 sameAs: [
-                  "https://www.linkedin.com/company/top-networks-inc", // Replace with your actual social links
+                  "https://www.linkedin.com/company/top-networks-inc",
                   "https://www.instagram.com/topfinance_en/",
                 ],
               },
               null,
               2
             ),
-          }} // Added null, 2 for pretty printing in source (optional)
+          }}
         />
         <GoogleTagManager />
+        <ResourceHints />
       </head>
       <body className={`${poppins.variable} font-sans`}>
         <GoogleTagManagerNoScript />
