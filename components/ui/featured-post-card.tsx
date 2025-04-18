@@ -71,6 +71,7 @@ export function FeaturedPostCard({
                 ? "(max-width: 768px) 100vw, 33vw"
                 : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             }
+            quality={85}
           />
           {showBadge && type && (
             <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-2 py-1 uppercase">
