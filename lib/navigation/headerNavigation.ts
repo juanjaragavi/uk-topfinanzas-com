@@ -52,12 +52,12 @@ export const headerNavigation = {
       href: "/blog",
     },
     {
-      text: "CONTACT US",
-      href: "/contact-us",
-    },
-    {
       text: "ABOUT US",
       href: "/about-us",
+    },
+    {
+      text: "CONTACT US",
+      href: "/contact-us",
     },
   ],
 

@@ -253,15 +253,7 @@ export function Header() {
 
             {/* Other Nav Items */}
             {headerNavigation.mainNavItems
-              .filter(
-                (item) =>
-                  item.text !== "BLOG" &&
-                  (item.href === "/" ||
-                    item.href.startsWith("/financial-solutions") ||
-                    item.href.startsWith("/apply") ||
-                    item.href.startsWith("/credit-card-recommender") ||
-                    item.href.startsWith("/credit-cards"))
-              )
+              .filter((item) => item.text !== "BLOG")
               .map((item) => (
                 <Link
                   key={item.href}
