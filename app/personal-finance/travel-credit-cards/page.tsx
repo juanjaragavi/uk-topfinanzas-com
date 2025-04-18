@@ -20,7 +20,10 @@ export default function TravelCreditCardsPage() {
     <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
-      <article className="bg-white py-8 md:py-12">
+      <article
+        className="bg-white py-8 md:py-12"
+        data-category="personal-finance"
+      >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">

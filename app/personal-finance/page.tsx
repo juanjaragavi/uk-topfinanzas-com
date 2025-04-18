@@ -148,7 +148,7 @@ export default function PersonalFinanceArchivePage() {
       : allPosts.filter((post) => post.category === activeCategory);
 
   const content = (
-    <div>
+    <div data-category="personal-finance">
       <h1 className="text-4xl font-bold mb-6">Personal Finance Guides</h1>
       <p className="text-lg text-gray-700 mb-8 leading-tight">
         Explore our guides on credit cards, loans, debt management, and other
@@ -191,6 +191,10 @@ export default function PersonalFinanceArchivePage() {
                     e.currentTarget.src =
                       "https://media.topfinanzas.com/images/placeholder-image.webp";
                   }} // Fallback image
+                  priority={true}
+                  fetchPriority="high"
+                  quality={85}
+                  loading="eager"
                 />
               </div>
               <div className="p-6 flex flex-col flex-grow">

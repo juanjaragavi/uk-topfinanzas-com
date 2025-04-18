@@ -9,7 +9,10 @@ export default function NoAnnualFeeCreditCards() {
   return (
     <main className="min-h-screen bg-gray-50">
       <Header />
-      <article className="max-w-3xl mx-auto px-4 py-8">
+      <article
+        className="max-w-3xl mx-auto px-4 py-8"
+        data-category="personal-finance"
+      >
         <h1 className="text-2xl font-bold text-gray-900 mb-4">
           Top Credit Cards With No Annual Fees
         </h1>
@@ -31,7 +34,10 @@ export default function NoAnnualFeeCreditCards() {
             width={800}
             height={450}
             className="w-full h-auto rounded-xl"
-            priority
+            priority={true}
+            fetchPriority="high"
+            quality={85}
+            loading="eager"
           />
         </div>
 
