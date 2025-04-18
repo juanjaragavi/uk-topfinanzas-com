@@ -206,7 +206,7 @@ export default function AboutUs() {
   return (
     <>
       <Header />
-      <main className="bg-white min-h-screen flex flex-col px-4 sm:px-6 bg-white">
+      <main className="bg-white min-h-screen flex flex-col px-4 sm:px-6">
         <div className="container mx-auto px-4 py-12 max-w-7xl bg-white">
           <h1 className="text-3xl md:text-4xl font-bold mb-8">
             Top Finanzas: Your guide to the world of personal finance
