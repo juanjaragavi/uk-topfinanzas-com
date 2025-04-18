@@ -173,14 +173,7 @@ export default function RootLayout({
           fetchPriority="high"
           crossOrigin="anonymous"
         />
-        <link
-          rel="preload"
-          href="https://media.topfinanzas.com/images/banner-home.webp"
-          as="image"
-          media="(min-width: 768px)"
-          fetchPriority="high"
-          crossOrigin="anonymous"
-        />
+        {/* Removed specific preload for desktop banner; browser will fetch based on CSS media query */}
 
         {/* Preload the logo image which appears in the header - optimized to 4KB */}
         <link
