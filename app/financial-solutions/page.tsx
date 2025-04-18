@@ -465,21 +465,30 @@ export default function FinancialSolutionsPage() {
             ))}
           </div>
 
-          {/* Credit cards grid with our reusable components */}
+          {/* Credit cards grid with fixed positioning to accommodate Image components */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {filteredCreditCards.map((post) => (
-              <FeaturedPostCard
+              <div
                 key={post.slug}
-                title={post.title}
-                description={post.description}
-                image={post.image}
-                slug={post.slug}
-                category="Financial Solutions"
-                categorySlug="/financial-solutions"
-                date={post.date}
-                type={post.type}
-                showBadge={true}
-              />
+                className="relative"
+                style={{ position: "relative" }}
+              >
+                <FeaturedPostCard
+                  title={post.title}
+                  description={post.description}
+                  image={post.image}
+                  slug={post.slug}
+                  category="Financial Solutions"
+                  categorySlug="/financial-solutions"
+                  date={post.date}
+                  type={post.type}
+                  showBadge={true}
+                  priority={
+                    post.type === "traditional" &&
+                    activeCreditCardType === "traditional"
+                  }
+                />
+              </div>
             ))}
           </div>
         </div>
@@ -504,21 +513,27 @@ export default function FinancialSolutionsPage() {
             ))}
           </div>
 
-          {/* Loans grid with our reusable components */}
+          {/* Loans grid with fixed positioning for Image components */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {filteredLoans.map((post) => (
-              <FeaturedPostCard
+              <div
                 key={post.slug}
-                title={post.title}
-                description={post.description}
-                image={post.image}
-                slug={post.slug}
-                category="Financial Solutions"
-                categorySlug="/financial-solutions"
-                date={post.date}
-                type={post.type}
-                showBadge={true}
-              />
+                className="relative"
+                style={{ position: "relative" }}
+              >
+                <FeaturedPostCard
+                  title={post.title}
+                  description={post.description}
+                  image={post.image}
+                  slug={post.slug}
+                  category="Financial Solutions"
+                  categorySlug="/financial-solutions"
+                  date={post.date}
+                  type={post.type}
+                  showBadge={true}
+                  priority={post.type === "guide" && activeLoanType === "guide"}
+                />
+              </div>
             ))}
           </div>
         </div>

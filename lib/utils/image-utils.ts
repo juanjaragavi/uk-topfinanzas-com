@@ -1,47 +1,61 @@
 /**
- * Simplified image utility functions for basic responsive sizing
+ * Image utilities to improve loading performance and reliability
  */
 
 /**
- * Configuration for responsive image sizes
+ * Calculate appropriate image sizes based on breakpoints
+ * @param options Optional size configurations
+ * @returns A sizes string for the Next.js Image component
  */
-export const RESPONSIVE_SIZES = {
-  thumbnail: {
-    sm: 320,
-    md: 480,
-    lg: 640,
-  },
-  medium: {
-    sm: 640,
-    md: 768,
-    lg: 1024,
-  },
-  large: {
-    sm: 768,
-    md: 1024,
-    lg: 1280,
-  },
-  hero: {
-    sm: 640,
-    md: 1280,
-    lg: 1920,
-  },
-};
+export function getImageSizes(options?: {
+  mobile?: string;
+  tablet?: string;
+  desktop?: string;
+  default?: string;
+}): string {
+  const mobile = options?.mobile || "100vw";
+  const tablet = options?.tablet || "50vw";
+  const desktop = options?.desktop || "33vw";
 
-/**
- * Returns a sizes attribute string for Next.js Image component
- */
-export function getImageSizes(
-  sizeType: keyof typeof RESPONSIVE_SIZES = "medium"
-): string {
-  const sizes = RESPONSIVE_SIZES[sizeType];
-  return `(max-width: 640px) ${sizes.sm}px, (max-width: 1024px) ${sizes.md}px, ${sizes.lg}px`;
+  return `(max-width: 640px) ${mobile}, (max-width: 1024px) ${tablet}, ${desktop}`;
 }
 
 /**
- * Returns the original image URL (no transformation applied)
- * This simplified version doesn't modify URLs to avoid potential issues
+ * Get a default blur placeholder for images
+ * @returns A base64 encoded tiny image placeholder
  */
-export function getLowQualityImageUrl(imageUrl: string): string {
-  return imageUrl;
+export function getDefaultBlurPlaceholder(): string {
+  return "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAAQAAAACQAAAwAAQUxQSBcAAAABD9D/ERFCyDa37d+ICPgXqjgjoqA+qgAAVlA4IDYAAACQAQCdASoKAAQAAkA4JZwAAPrHQAD++5AK1AA=";
+}
+
+/**
+ * Fix image URL if needed (ensure HTTPS, add cache-busting, etc.)
+ * @param url Original image URL
+ * @returns Fixed URL
+ */
+export function fixImageUrl(url: string): string {
+  // Handle empty or invalid URLs
+  if (!url) {
+    return "/images/placeholder.webp";
+  }
+
+  // Force HTTPS
+  let fixedUrl = url.replace(/^http:\/\//i, "https://");
+
+  // Handle relative URLs
+  if (fixedUrl.startsWith("/")) {
+    // Already a relative URL - no need to change
+    return fixedUrl;
+  }
+
+  // Handle CDN domain issues
+  if (
+    fixedUrl.includes("topfinanzas.com") ||
+    fixedUrl.includes("media.topfinanzas")
+  ) {
+    // Return the URL as is, but with HTTPS
+    return fixedUrl;
+  }
+
+  return fixedUrl;
 }

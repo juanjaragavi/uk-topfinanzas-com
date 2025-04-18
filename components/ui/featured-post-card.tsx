@@ -58,7 +58,7 @@ export function FeaturedPostCard({
       data-category={category.toLowerCase().replace(/\s+/g, "-")}
       data-post-type={type}
     >
-      <div className={imageContainerClasses}>
+      <div className={imageContainerClasses} style={{ position: "relative" }}>
         <Link href={postUrl} className="block h-full">
           <Image
             src={image}
@@ -71,7 +71,10 @@ export function FeaturedPostCard({
                 ? "(max-width: 768px) 100vw, 33vw"
                 : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             }
-            quality={85}
+            quality={priority ? 85 : 75}
+            placeholder="blur"
+            blurDataURL="data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAAQAAAACQAAAwAAQUxQSBcAAAABD9D/ERFCyDa37d+ICPgXqjgjoqA+qgAAVlA4IDYAAACQAQCdASoKAAQAAkA4JZwAAPrHQAD++5AK1AA="
+            unoptimized={false}
           />
           {showBadge && type && (
             <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-2 py-1 uppercase">

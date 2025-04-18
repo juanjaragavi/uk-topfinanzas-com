@@ -64,7 +64,7 @@ export function Header() {
     };
   }, [activeMegaMenu]);
 
-  // More robust toggle for both desktop and mobile browsers
+  // Simplified toggle for both desktop and mobile browsers
   const toggleMegaMenu = (
     menuId: string,
     event?: React.MouseEvent | React.KeyboardEvent | React.TouchEvent
@@ -74,32 +74,13 @@ export function Header() {
       return;
     }
 
-    // Prevent default and stop propagation for all events
+    // Prevent default
     if (event) {
       event.preventDefault();
-      try {
-        event.stopPropagation();
-      } catch (e) {
-        // Some browsers might not support stopPropagation for all event types
-        console.log("Could not stop propagation");
-      }
     }
 
-    // For mobile browsers, force the menu to toggle directly
-    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
-
-    if (isMobile) {
-      setActiveMegaMenu(activeMegaMenu === menuId ? null : menuId);
-      return;
-    }
-
-    // Use requestAnimationFrame for desktop browsers to prevent race conditions
-    // This works better than setTimeout in production environments
-    requestAnimationFrame(() => {
-      setActiveMegaMenu((prevMenu) => {
-        return prevMenu === menuId ? null : menuId;
-      });
-    });
+    // Directly toggle menu with functional update to avoid closure issues
+    setActiveMegaMenu((prevMenu) => (prevMenu === menuId ? null : menuId));
   };
 
   const setMenuButtonRef = (el: HTMLButtonElement | null, key: string) => {
@@ -125,17 +106,19 @@ export function Header() {
               priority={true}
               loading="eager"
               sizes="153px" // Updated based on h-10 (40px) and aspect ratio
-              quality={75}
+              quality={85}
+              placeholder="blur"
+              blurDataURL="data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAAQAAAACQAAAwAAQUxQSBcAAAABD9D/ERFCyDa37d+ICPgXqjgjoqA+qgAAVlA4IDYAAACQAQCdASoKAAQAAkA4JZwAAPrHQAD++5AK1AA="
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation with smaller font size */}
+          <nav className="hidden md:flex items-center space-x-6">
             {/* Categories Dropdown */}
             <div className="relative">
               <button
                 ref={(el) => setMenuButtonRef(el, "categories")}
-                className="text-link hover:text-primary flex items-center space-x-1"
+                className="text-link hover:text-primary flex items-center space-x-1 text-sm"
                 onClick={(e) => {
                   e.stopPropagation();
                   toggleMegaMenu("categories", e);
@@ -179,7 +162,7 @@ export function Header() {
             <div className="relative">
               <button
                 ref={(el) => setMenuButtonRef(el, "blog")}
-                className="text-link hover:text-primary flex items-center space-x-1"
+                className="text-link hover:text-primary flex items-center space-x-1 text-sm"
                 onClick={(e) => {
                   e.stopPropagation();
                   toggleMegaMenu("blog", e);
@@ -282,6 +265,11 @@ export function Header() {
                                     fill
                                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                                     sizes="96px" // Match width
+                                    priority={false}
+                                    loading="lazy"
+                                    quality={75}
+                                    placeholder="blur"
+                                    blurDataURL="data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAAQAAAACQAAAwAAQUxQSBcAAAABD9D/ERFCyDa37d+ICPgXqjgjoqA+qgAAVlA4IDYAAACQAQCdASoKAAQAAkA4JZwAAPrHQAD++5AK1AA="
                                   />
                                 </div>
                               </Link>
@@ -325,7 +313,7 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-link hover:text-primary"
+                  className="text-link hover:text-primary text-sm" // text-sm already applied here, confirming
                 >
                   {item.text}
                 </Link>
@@ -342,25 +330,15 @@ export function Header() {
             </Button>
           </nav>
 
-          {/* Mobile Menu Button with improved touch handling */}
+          {/* Mobile Menu Button - Drastically simplified */}
           <div className="md:hidden">
             <button
               type="button"
-              onTouchStart={(e) => {
-                e.preventDefault();
-                // Set a simple toggle - more reliable on mobile
-                setIsOpen(!isOpen);
-              }}
-              onClick={(e) => {
-                e.preventDefault();
-                // Use functional update to avoid closure issues
-                setIsOpen((prev) => !prev);
-              }}
+              onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-md bg-white hover:bg-gray-100 focus:outline-none"
               aria-label={isOpen ? "Close menu" : "Open menu"}
               aria-expanded={isOpen}
               role="button"
-              tabIndex={0}
             >
               {isOpen ? (
                 <X className="w-6 h-6" />

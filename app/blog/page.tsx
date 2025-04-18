@@ -325,57 +325,21 @@ export default function BlogArchivePage() {
                 duration: 0.4,
                 delay: index * 0.1,
               }}
-              className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col"
+              className="relative"
+              style={{ position: "relative" }}
               data-category={post.category.toLowerCase().replace(" ", "-")}
             >
-              <Link
-                href={`${post.categoryPath}/${post.slug}`}
-                className="block"
-              >
-                <div className="relative h-48 w-full">
-                  <Image
-                    src={post.image}
-                    alt={cleanTitle(post.title)}
-                    fill
-                    style={{ objectFit: "cover" }}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    priority={index < 3}
-                    placeholder="blur"
-                    blurDataURL="data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAAQAAAACQAAAwAAQUxQSBcAAAABD9D/ERFCyDa37d+ICPgXqjgjoqA+qgAAVlA4IDYAAACQAQCdASoKAAQAAkA4JZwAAPrHQAD++5AK1AA="
-                  />
-                  <span
-                    className={`absolute top-2 left-2 inline-block px-2 py-0.5 rounded text-xs font-semibold text-white ${
-                      post.category === "Personal Finance"
-                        ? "bg-blue-600"
-                        : "bg-green-600"
-                    }`}
-                  >
-                    {post.category}
-                  </span>
-                </div>
-              </Link>
-              <div className="p-6 flex flex-col flex-grow">
-                {post.date && (
-                  <p className="text-sm text-gray-500 mb-2">{post.date}</p>
-                )}
-                <Link
-                  href={`${post.categoryPath}/${post.slug}`}
-                  className="text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors mb-2 line-clamp-2"
-                >
-                  {cleanTitle(post.title)}
-                </Link>
-                <p className="text-sm text-gray-600 mb-4 flex-grow line-clamp-3">
-                  {post.description}
-                </p>
-                <div className="mt-auto">
-                  <Link
-                    href={`${post.categoryPath}/${post.slug}`}
-                    className="text-blue-600 hover:text-blue-800 font-medium text-sm"
-                  >
-                    Read more →
-                  </Link>
-                </div>
-              </div>
+              <FeaturedPostCard
+                title={cleanTitle(post.title)}
+                description={post.description}
+                image={post.image}
+                slug={post.slug}
+                category={post.category}
+                categorySlug={post.categoryPath}
+                date={post.date}
+                priority={index < 2}
+                showBadge={true}
+              />
             </motion.div>
           ))}
         </motion.div>

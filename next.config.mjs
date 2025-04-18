@@ -32,6 +32,10 @@ const nextConfig = {
             key: "X-Content-Type-Options",
             value: "nosniff",
           },
+          {
+            key: "Access-Control-Allow-Origin",
+            value: "*", // Allow any origin in development
+          },
         ],
       },
       {
