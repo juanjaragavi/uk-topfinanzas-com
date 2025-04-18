@@ -190,58 +190,60 @@ export function Header() {
               {activeMegaMenu === "blog" && (
                 <div
                   ref={(el) => setMegaMenuRef(el, "blog")}
-                  className="absolute right-0 mt-2 w-auto max-w-4xl rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10"
+                  className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-auto max-w-4xl rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10" // Centered
                   style={{
-                    width: "calc(min(90vw, 900px))",
+                    width: "calc(min(90vw, 900px))", // Kept width constraint
                     maxHeight: "calc(100vh - 100px)",
                     overflowY: "auto",
                   }}
                 >
-                  {/* Changed main grid to 3 columns, links left (2/3), featured right (1/3) */}
-                  <div className="p-5 grid grid-cols-3 gap-8">
-                    {/* Left Column: Category Links */}
-                    <div className="col-span-2 space-y-6">
-                      {" "}
-                      {/* Container for all link columns */}
-                      {headerNavigation.blogMegaMenu.columns.map(
-                        (column, idx) => (
-                          // Removed inner col-span, columns will stack vertically now
-                          <div key={idx}>
-                            <h3 className="text-h3 uppercase tracking-wide mb-3">
-                              {column.title}
-                            </h3>
-                            <ul className="space-y-2">
-                              {column.items.map((item, itemIdx) => (
-                                <li key={itemIdx}>
-                                  <Link
-                                    href={item.href}
-                                    className={
-                                      item.isEmphasis
-                                        ? "inline-block bg-gray-100 hover:bg-gray-200 text-blue-700 underline underline-offset-2 font-medium text-sm py-1 px-3 rounded-full transition-colors" // Button-like style
-                                        : "text-body hover:text-primary block py-1" // Original style
-                                    }
-                                    onClick={() => setActiveMegaMenu(null)}
-                                  >
-                                    {item.text}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )
-                      )}
-                      {/* Removed extraneous closing brackets here */}
-                    </div>{" "}
-                    {/* End Left Column container */}
-                    {/* Right Column: Featured Posts */}
+                  {/* Refactored grid to 4 columns: 3 for links, 1 for featured */}
+                  <div className="p-4 grid grid-cols-4 gap-4">
+                    {" "}
+                    {/* Changed to grid-cols-4 */}
+                    {/* Map link columns directly into the grid */}
+                    {headerNavigation.blogMegaMenu.columns.map(
+                      (column, idx) => (
+                        // Each link column gets its own grid space (col-span-1 implicitly)
+                        <div key={idx} className="col-span-1">
+                          {" "}
+                          {/* Explicitly col-span-1 */}
+                          <h3 className="text-h3 uppercase tracking-wide mb-3">
+                            {column.title}
+                          </h3>
+                          <ul className="space-y-1">
+                            {" "}
+                            {/* Reduced space-y */}
+                            {column.items.map((item, itemIdx) => (
+                              <li key={itemIdx}>
+                                <Link
+                                  href={item.href}
+                                  className={
+                                    item.isEmphasis
+                                      ? "inline-block bg-gray-100 hover:bg-gray-200 text-blue-700 underline underline-offset-2 font-medium text-sm py-1 px-3 rounded-full transition-colors" // Button-like style
+                                      : "text-body hover:text-primary block py-1" // Original style
+                                  }
+                                  onClick={() => setActiveMegaMenu(null)}
+                                >
+                                  {item.text}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )
+                    )}
+                    {/* Featured Posts Column */}
                     {headerNavigation.blogMegaMenu.featuredPosts && (
-                      // Changed to col-span-1 for the right column
+                      // Ensure this is also col-span-1 in the 4-col grid
                       <div className="col-span-1">
                         <h3 className="text-h3 uppercase tracking-wide mb-3">
                           {headerNavigation.blogMegaMenu.featuredPosts.title}
                         </h3>
                         {/* Changed internal grid to single column */}
-                        <div className="grid grid-cols-1 gap-4">
+                        <div className="grid grid-cols-1 gap-2">
+                          {" "}
+                          {/* Reduced gap */}
                           {headerNavigation.blogMegaMenu.featuredPosts.posts.map(
                             (post, idx) => (
                               <Link
