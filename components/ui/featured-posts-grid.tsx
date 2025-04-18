@@ -1,6 +1,6 @@
 import React from "react";
 import { FeaturedPostCard, FeaturedPostCardProps } from "./featured-post-card";
-import { motion, AnimatePresence } from "framer-motion";
+// Removed duplicate imports and framer-motion imports
 
 export interface FeaturedPostsGridProps {
   posts: Array<Omit<FeaturedPostCardProps, "orientation" | "imageHeight">>;
@@ -47,46 +47,31 @@ export function FeaturedPostsGrid({
         <div className="mb-8">
           <h2 className="text-3xl font-bold">{title}</h2>
           {description && <p className="text-gray-600 mt-2">{description}</p>}
-        </div>
+        </div> // *** CORRECTLY CLOSES showHeader div ***
       )}
 
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={filter || "all"}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className={`grid ${gridColsClass} gap-6`}
-        >
-          {filteredPosts.map((post, index) =>
-            animateItems ? (
-              <motion.div
-                key={post.slug}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.4,
-                  delay: index * 0.1,
-                }}
-              >
-                <FeaturedPostCard
-                  {...post}
-                  orientation="vertical"
-                  imageHeight="h-48"
-                />
-              </motion.div>
-            ) : (
-              <FeaturedPostCard
-                key={post.slug}
-                {...post}
-                orientation="vertical"
-                imageHeight="h-48"
-              />
-            )
-          )}
-        </motion.div>
-      </AnimatePresence>
+      {/* Completely removed AnimatePresence and motion.div for debugging */}
+      <div
+        key={filter || "all"} // Keep key for re-rendering on filter change
+        className={`grid ${gridColsClass} gap-6`} // Basic grid styles
+      >
+        {filteredPosts.map((post, index) => (
+          // No motion.div wrapper, just the card directly or a simple div if needed for key
+          <div key={post.slug}>
+            {" "}
+            {/* Simple div wrapper for the key */}
+            <FeaturedPostCard
+              {...post}
+              orientation="vertical"
+              imageHeight="h-48"
+              // Pass priority based on index if needed, even without animation
+              priority={index < 3}
+            />
+          </div>
+          // Removed the 'else' block as animateItems check is now redundant without motion
+        ))}
+      </div>
+      {/* End of removed animation wrappers */}
 
       {filteredPosts.length === 0 && (
         <div className="text-center py-12 bg-gray-50 rounded-lg">

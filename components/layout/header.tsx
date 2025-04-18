@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react"; // Removed useCallback
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -64,23 +64,15 @@ export function Header() {
     };
   }, [activeMegaMenu]);
 
-  // Simplified toggle for both desktop and mobile browsers
-  const toggleMegaMenu = (
-    menuId: string,
-    event?: React.MouseEvent | React.KeyboardEvent | React.TouchEvent
-  ) => {
-    // If this is a keyboard event and it's not Enter or Space, do nothing
-    if (event && "key" in event && event.key !== "Enter" && event.key !== " ") {
-      return;
-    }
-
-    // Prevent default
-    if (event) {
-      event.preventDefault();
-    }
-
-    // Directly toggle menu with functional update to avoid closure issues
+  // Reverted to simple functions without useCallback
+  const toggleMegaMenu = (menuId: string) => {
+    console.log(`Toggling mega menu: ${menuId}`);
     setActiveMegaMenu((prevMenu) => (prevMenu === menuId ? null : menuId));
+  };
+
+  const toggleMobileMenu = () => {
+    console.log("Toggling mobile menu");
+    setIsOpen((prev) => !prev);
   };
 
   const setMenuButtonRef = (el: HTMLButtonElement | null, key: string) => {
@@ -120,10 +112,17 @@ export function Header() {
                 ref={(el) => setMenuButtonRef(el, "categories")}
                 className="text-link hover:text-primary flex items-center space-x-1 text-sm"
                 onClick={(e) => {
-                  e.stopPropagation();
-                  toggleMegaMenu("categories", e);
+                  // Prevent default browser action but DON'T stop propagation
+                  e.preventDefault();
+                  toggleMegaMenu("categories");
                 }}
-                onKeyDown={(e) => toggleMegaMenu("categories", e)}
+                // Keep onKeyDown for accessibility
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    toggleMegaMenu("categories");
+                  }
+                }}
                 aria-expanded={activeMegaMenu === "categories"}
                 aria-haspopup="true"
                 role="button"
@@ -164,10 +163,17 @@ export function Header() {
                 ref={(el) => setMenuButtonRef(el, "blog")}
                 className="text-link hover:text-primary flex items-center space-x-1 text-sm"
                 onClick={(e) => {
-                  e.stopPropagation();
-                  toggleMegaMenu("blog", e);
+                  // Prevent default browser action but DON'T stop propagation
+                  e.preventDefault();
+                  toggleMegaMenu("blog");
                 }}
-                onKeyDown={(e) => toggleMegaMenu("blog", e)}
+                // Keep onKeyDown for accessibility
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    toggleMegaMenu("blog");
+                  }
+                }}
                 aria-expanded={activeMegaMenu === "blog"}
                 aria-haspopup="true"
                 role="button"
@@ -330,11 +336,11 @@ export function Header() {
             </Button>
           </nav>
 
-          {/* Mobile Menu Button - Drastically simplified */}
+          {/* Mobile Menu Button - Reverted to simple inline onClick */}
           <div className="md:hidden">
             <button
               type="button"
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={toggleMobileMenu} // Re-added inline onClick
               className="p-2 rounded-md bg-white hover:bg-gray-100 focus:outline-none"
               aria-label={isOpen ? "Close menu" : "Open menu"}
               aria-expanded={isOpen}
