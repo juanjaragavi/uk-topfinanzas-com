@@ -3,7 +3,7 @@
 import { BlogLayout } from "@/components/mdx/blog-layout";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function FinancialSolutionsPage() {
   // Category definitions
@@ -30,10 +30,18 @@ export default function FinancialSolutionsPage() {
     guide: "Guides",
   };
 
-  // State for active category and filters
+  // State for active category and filters - with client-side initialization via useEffect
   const [activeCategory, setActiveCategory] = useState("creditCards");
   const [activeCreditCardType, setActiveCreditCardType] = useState("all");
   const [activeLoanType, setActiveLoanType] = useState("all");
+
+  // Force client-side state initialization to ensure React hydration
+  useEffect(() => {
+    // Keep the default values but force client-side initialization
+    setActiveCategory("creditCards");
+    setActiveCreditCardType("all");
+    setActiveLoanType("all");
+  }, []);
 
   // List of all loan content with types
   const allLoansContent = [
@@ -52,7 +60,8 @@ export default function FinancialSolutionsPage() {
       slug: "tips-for-choosing-an-online-loan",
       description:
         "Navigate the world of online loans with confidence using these essential tips to find the best rates and terms for your financial needs.",
-      image: "https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp",
       date: "30 March 2025",
       type: "guide",
     },
@@ -173,7 +182,8 @@ export default function FinancialSolutionsPage() {
       slug: "starling-bank-personal-loan",
       description:
         "Explore Starling Bank Personal Loans offering competitive rates, clear terms, and seamless management via the Starling app.",
-      image: "https://media.topfinanzas.com/images/uk/loans/718136704-fotosprestamo-starlinkbanck1uk.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/loans/718136704-fotosprestamo-starlinkbanck1uk.webp",
       date: "4 April 2025",
       type: "neobank", // Could also be 'personal'
     },
@@ -183,7 +193,8 @@ export default function FinancialSolutionsPage() {
       slug: "funding-circle-personal-loan", // Keep slug as created
       description:
         "Explore Funding Circle's business loans offering fast, flexible financing solutions designed specifically for UK SMEs.",
-      image: "https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.webp",
       date: "4 April 2025",
       type: "sme_fintech",
     },
@@ -192,7 +203,8 @@ export default function FinancialSolutionsPage() {
       slug: "funding-options-personal-loan", // Keep slug as created
       description:
         "Explore Funding Options, a leading UK platform connecting SMEs with a wide range of business finance solutions.",
-      image: "https://media.topfinanzas.com/images/uk/loans/718138018-fotosprestamo-fundingoption1uk.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/loans/718138018-fotosprestamo-fundingoption1uk.webp",
       date: "4 April 2025",
       type: "marketplace", // Specific type for marketplaces
     },
@@ -201,7 +213,8 @@ export default function FinancialSolutionsPage() {
       slug: "iwoca-personal-loan", // Keep slug as created
       description:
         "Explore iwoca's Flexi-Loan, offering fast, flexible working capital solutions designed for UK SMEs.",
-      image: "https://media.topfinanzas.com/images/uk/loans/718137033-fotosprestamo-iwoca1uk.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/loans/718137033-fotosprestamo-iwoca1uk.webp",
       date: "4 April 2025",
       type: "sme_fintech",
     },
@@ -210,7 +223,8 @@ export default function FinancialSolutionsPage() {
       slug: "marketfinance-personal-loan", // Keep slug as created
       description:
         "Explore MarketFinance's solutions for UK SMEs, including fast business loans and flexible invoice finance.",
-      image: "https://media.topfinanzas.com/images/uk/loans/718137315-fotosprestamo-fundingchange2uk.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/loans/718137315-fotosprestamo-fundingchange2uk.webp",
       date: "4 April 2025",
       type: "sme_fintech",
     },
@@ -219,7 +233,8 @@ export default function FinancialSolutionsPage() {
       slug: "funding-xchange-personal-loan", // Keep slug as created
       description:
         "Explore Funding Xchange, a smart platform helping UK SMEs compare and access business finance options.",
-      image: "https://media.topfinanzas.com/images/uk/loans/718136896-fotosprestamo-fundingchange1uk.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/loans/718136896-fotosprestamo-fundingchange1uk.webp",
       date: "4 April 2025",
       type: "marketplace", // Specific type for marketplaces
     },
@@ -228,7 +243,8 @@ export default function FinancialSolutionsPage() {
       slug: "capify-personal-loan", // Keep slug as created
       description:
         "Explore Capify's financing solutions for UK SMEs, including Merchant Cash Advances and Business Loans.",
-      image: "https://media.topfinanzas.com/images/uk/loans/718137374-fotosprestamo-capify1uk.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/loans/718137374-fotosprestamo-capify1uk.webp",
       date: "4 April 2025",
       type: "sme_fintech",
     },
@@ -237,7 +253,8 @@ export default function FinancialSolutionsPage() {
       slug: "fleximize-personal-loan", // Keep slug as created
       description:
         "Explore Fleximize's flexible business loans (Flexiloan & Flexiloan Lite) offering tailored repayment options for UK SMEs.",
-      image: "https://media.topfinanzas.com/images/uk/loans/718137416-fotosprestamo-fleximize1uk.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/loans/718137416-fotosprestamo-fleximize1uk.webp",
       date: "4 April 2025",
       type: "sme_fintech",
     },
@@ -529,13 +546,13 @@ export default function FinancialSolutionsPage() {
                   {/* Dynamic Badge based on type */}
                   <div
                     className={`absolute top-0 right-0 text-white text-xs font-bold px-2 py-1 uppercase ${
-                post.type === "personal"
-                  ? "bg-blue-600"
-                  : post.type === "sme_fintech"
-                  ? "bg-red-600" // Changed purple to red for SME Fintech (like Iwoca)
-                  : post.type === "neobank"
-                  ? "bg-pink-600"
-                  : post.type === "marketplace"
+                      post.type === "personal"
+                        ? "bg-blue-600"
+                        : post.type === "sme_fintech"
+                        ? "bg-red-600" // Changed purple to red for SME Fintech (like Iwoca)
+                        : post.type === "neobank"
+                        ? "bg-pink-600"
+                        : post.type === "marketplace"
                         ? "bg-yellow-600"
                         : "bg-gray-600" // Default for Guide etc.
                     }`}

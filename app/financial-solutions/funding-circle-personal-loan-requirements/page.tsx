@@ -23,7 +23,7 @@ export default function FundingCirclePersonalLoanRequirementsPage() {
     <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
-      <article className="bg-white py-8 md:py-12">
+      <article className="bg-white py-8 md:py-12" data-category="loans">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-3xl font-bold text-gray-800 mb-4 leading-8">
@@ -312,7 +312,7 @@ export default function FundingCirclePersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="my-8">
+                <div className="my-8" data-category="loans">
                   <Link href="/personal-finance/best-personal-loans">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Personal-loans-1.webp"
@@ -320,7 +320,8 @@ export default function FundingCirclePersonalLoanRequirementsPage() {
                       width={1000}
                       height={563}
                       className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
-                      priority
+                      loading="lazy"
+                      quality={80}
                     />
                   </Link>
                 </div>
@@ -392,7 +393,7 @@ export default function FundingCirclePersonalLoanRequirementsPage() {
                   </Link>
                 </p>
 
-                <div className="my-8">
+                <div className="my-8" data-category="loans">
                   <Link href="/personal-finance/getting-out-of-debt">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Debt-management-1.webp"
@@ -400,7 +401,8 @@ export default function FundingCirclePersonalLoanRequirementsPage() {
                       width={1000}
                       height={563}
                       className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
-                      priority
+                      loading="lazy"
+                      quality={80}
                     />
                   </Link>
                 </div>

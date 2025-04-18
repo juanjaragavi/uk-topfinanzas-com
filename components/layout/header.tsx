@@ -24,24 +24,59 @@ export function Header() {
   // Handle click outside to close mega menu
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (
-        activeMegaMenu &&
-        megaMenuRefs.current[activeMegaMenu] &&
-        menuButtonRefs.current[activeMegaMenu] &&
-        !megaMenuRefs.current[activeMegaMenu]?.contains(event.target as Node) &&
-        !menuButtonRefs.current[activeMegaMenu]?.contains(event.target as Node)
-      ) {
-        setActiveMegaMenu(null);
+      if (activeMegaMenu) {
+        const megaMenuRef = megaMenuRefs.current[activeMegaMenu];
+        const menuButtonRef = menuButtonRefs.current[activeMegaMenu];
+
+        // Check if refs exist and if click is outside both elements
+        if (
+          megaMenuRef &&
+          menuButtonRef &&
+          !megaMenuRef.contains(event.target as Node) &&
+          !menuButtonRef.contains(event.target as Node)
+        ) {
+          setActiveMegaMenu(null);
+        }
       }
     }
 
+    // Add event listener
     document.addEventListener("mousedown", handleClickOutside);
+
+    // Cleanup function
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [activeMegaMenu]);
 
-  const toggleMegaMenu = (menuId: string) => {
+  // ESC key handler to close menus
+  useEffect(() => {
+    const handleEscKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && activeMegaMenu) {
+        setActiveMegaMenu(null);
+      }
+    };
+
+    document.addEventListener("keydown", handleEscKey);
+
+    return () => {
+      document.removeEventListener("keydown", handleEscKey);
+    };
+  }, [activeMegaMenu]);
+
+  const toggleMegaMenu = (
+    menuId: string,
+    event?: React.MouseEvent | React.KeyboardEvent
+  ) => {
+    // If this is a keyboard event and it's not Enter or Space, do nothing
+    if (event && "key" in event && event.key !== "Enter" && event.key !== " ") {
+      return;
+    }
+
+    if (event) {
+      event.preventDefault();
+    }
+
     if (activeMegaMenu === menuId) {
       setActiveMegaMenu(null);
     } else {
@@ -83,8 +118,15 @@ export function Header() {
               <button
                 ref={(el) => setMenuButtonRef(el, "categories")}
                 className="text-link hover:text-primary flex items-center space-x-1"
-                onClick={() => toggleMegaMenu("categories")}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  toggleMegaMenu("categories", e);
+                }}
+                onKeyDown={(e) => toggleMegaMenu("categories", e)}
                 aria-expanded={activeMegaMenu === "categories"}
+                aria-haspopup="true"
+                role="button"
+                tabIndex={0}
               >
                 <span>{headerNavigation.categoryDropdown.text}</span>
                 <ChevronDown
@@ -120,8 +162,15 @@ export function Header() {
               <button
                 ref={(el) => setMenuButtonRef(el, "blog")}
                 className="text-link hover:text-primary flex items-center space-x-1"
-                onClick={() => toggleMegaMenu("blog")}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  toggleMegaMenu("blog", e);
+                }}
+                onKeyDown={(e) => toggleMegaMenu("blog", e)}
                 aria-expanded={activeMegaMenu === "blog"}
+                aria-haspopup="true"
+                role="button"
+                tabIndex={0}
               >
                 <span>{headerNavigation.blogMegaMenu.title}</span>
                 <ChevronDown
