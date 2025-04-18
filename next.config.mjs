@@ -126,7 +126,9 @@ const nextConfig = {
   images: {
     unoptimized: false,
     dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // Using a permissive CSP instead of null (which is invalid)
+    contentSecurityPolicy:
+      "default-src 'self'; script-src 'none'; sandbox; img-src 'self' https: data:;",
     remotePatterns: [
       {
         protocol: "https",
@@ -146,6 +148,13 @@ const nextConfig = {
         port: "",
         pathname: "/**",
       },
+      // Allow any domain temporarily for debugging
+      {
+        protocol: "https",
+        hostname: "**",
+        port: "",
+        pathname: "/**",
+      },
     ],
     formats: ["image/avif", "image/webp"],
     deviceSizes: [
@@ -153,7 +162,7 @@ const nextConfig = {
     ],
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
     minimumCacheTTL: 31536000, // 1 year cache for improved performance
-    domains: ["media.topfinanzas.com", "us.topfinanzas.com"],
+    // Remove deprecated domains configuration (already covered by remotePatterns)
   },
   experimental: {
     webpackBuildWorker: true,

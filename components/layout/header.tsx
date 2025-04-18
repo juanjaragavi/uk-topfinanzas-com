@@ -64,29 +64,42 @@ export function Header() {
     };
   }, [activeMegaMenu]);
 
+  // More robust toggle for both desktop and mobile browsers
   const toggleMegaMenu = (
     menuId: string,
-    event?: React.MouseEvent | React.KeyboardEvent
+    event?: React.MouseEvent | React.KeyboardEvent | React.TouchEvent
   ) => {
     // If this is a keyboard event and it's not Enter or Space, do nothing
     if (event && "key" in event && event.key !== "Enter" && event.key !== " ") {
       return;
     }
 
+    // Prevent default and stop propagation for all events
     if (event) {
       event.preventDefault();
-      event.stopPropagation(); // Stop event propagation to prevent bubbling
+      try {
+        event.stopPropagation();
+      } catch (e) {
+        // Some browsers might not support stopPropagation for all event types
+        console.log("Could not stop propagation");
+      }
     }
 
-    // Use setTimeout to make this run after the current execution context,
-    // preventing any race conditions with click handlers
-    setTimeout(() => {
-      if (activeMegaMenu === menuId) {
-        setActiveMegaMenu(null);
-      } else {
-        setActiveMegaMenu(menuId);
-      }
-    }, 0);
+    // For mobile browsers, force the menu to toggle directly
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+
+    if (isMobile) {
+      setActiveMegaMenu(activeMegaMenu === menuId ? null : menuId);
+      return;
+    }
+
+    // Use requestAnimationFrame for desktop browsers to prevent race conditions
+    // This works better than setTimeout in production environments
+    requestAnimationFrame(() => {
+      setActiveMegaMenu((prevMenu) => {
+        return prevMenu === menuId ? null : menuId;
+      });
+    });
   };
 
   const setMenuButtonRef = (el: HTMLButtonElement | null, key: string) => {
@@ -329,25 +342,33 @@ export function Header() {
             </Button>
           </nav>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="secondary"
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation(); // Stop event propagation
-              // Use setTimeout to avoid race conditions
-              setTimeout(() => {
+          {/* Mobile Menu Button with improved touch handling */}
+          <div className="md:hidden">
+            <button
+              type="button"
+              onTouchStart={(e) => {
+                e.preventDefault();
+                // Set a simple toggle - more reliable on mobile
                 setIsOpen(!isOpen);
-              }, 0);
-            }}
-            className="md:hidden p-2"
-            aria-label={isOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isOpen}
-            role="button"
-            tabIndex={0}
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </Button>
+              }}
+              onClick={(e) => {
+                e.preventDefault();
+                // Use functional update to avoid closure issues
+                setIsOpen((prev) => !prev);
+              }}
+              className="p-2 rounded-md bg-white hover:bg-gray-100 focus:outline-none"
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isOpen}
+              role="button"
+              tabIndex={0}
+            >
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Search Bar */}

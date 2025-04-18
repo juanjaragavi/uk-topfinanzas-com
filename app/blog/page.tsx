@@ -3,8 +3,9 @@
 import { useState, useCallback, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { OptimizedImage } from "@/components/ui/optimized-image";
-import { generateTinyPlaceholder } from "@/lib/utils/generate-blur-placeholder";
+// Standard Next.js Image component
+import { FeaturedPostCard } from "@/components/ui/featured-post-card";
+import { FeaturedPostsGrid } from "@/components/ui/featured-posts-grid";
 import { motion, AnimatePresence } from "framer-motion";
 import { BlogLayout } from "@/components/mdx/blog-layout"; // Assuming this layout is suitable
 import { Button } from "@/components/ui/button"; // For pagination
@@ -332,14 +333,15 @@ export default function BlogArchivePage() {
                 className="block"
               >
                 <div className="relative h-48 w-full">
-                  <OptimizedImage
+                  <Image
                     src={post.image}
                     alt={cleanTitle(post.title)}
                     fill
                     style={{ objectFit: "cover" }}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    lowQualitySrc={generateTinyPlaceholder(post.image)}
-                    fallbackSrc="https://media.topfinanzas.com/images/placeholder-image.webp"
+                    priority={index < 3}
+                    placeholder="blur"
+                    blurDataURL="data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAAQAAAACQAAAwAAQUxQSBcAAAABD9D/ERFCyDa37d+ICPgXqjgjoqA+qgAAVlA4IDYAAACQAQCdASoKAAQAAkA4JZwAAPrHQAD++5AK1AA="
                   />
                   <span
                     className={`absolute top-2 left-2 inline-block px-2 py-0.5 rounded text-xs font-semibold text-white ${

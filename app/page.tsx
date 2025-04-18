@@ -4,8 +4,8 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import Link from "next/link";
 import Image from "next/image";
-import { OptimizedImage } from "@/components/ui/optimized-image";
-import { generateTinyPlaceholder } from "@/lib/utils/generate-blur-placeholder";
+import { FeaturedPostsGrid } from "@/components/ui/featured-posts-grid";
+import { FeaturedPostCard } from "@/components/ui/featured-post-card";
 import { useEffect, useState, useMemo } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -207,6 +207,28 @@ export default function Home() {
     return { paginatedPosts: postsToDisplay, totalPages: calculatedTotalPages };
   }, [currentPage, postsPerPage]);
 
+  // Convert posts to the format expected by FeaturedPostsGrid
+  const featuredPostsData = useMemo(() => {
+    return paginatedPosts.map((post) => ({
+      title: cleanTitle(post.frontmatter.title),
+      description: post.frontmatter.description,
+      image:
+        post.frontmatter.featuredImage ||
+        "https://media.topfinanzas.com/images/placeholder.webp",
+      slug: post.slug,
+      category: post.category,
+      categorySlug: post.categoryPath,
+      date: post.frontmatter.date
+        ? new Date(post.frontmatter.date).toLocaleDateString("en-GB", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })
+        : undefined,
+      type: post.category === "Financial Solutions" ? "financial" : "personal",
+    }));
+  }, [paginatedPosts]);
+
   return (
     <main className="bg-white min-h-screen flex flex-col">
       <Header />
@@ -260,162 +282,62 @@ export default function Home() {
         <div className="container mx-auto px-4">
           {/* Featured post - Using standard Next.js Image component */}
           <div className="mb-12">
-            <Link
-              href="/personal-finance/best-personal-loans"
-              className="block group"
-            >
-              <div className="bg-white rounded-xl shadow-md overflow-hidden md:flex group-hover:shadow-lg transition-shadow duration-300">
-                {/* Left Column: Image */}
-                <div className="md:w-5/12 relative h-64 md:h-auto">
-                  <Image
-                    src="https://media.topfinanzas.com/images/best-personal-loans.webp"
-                    alt="Best Personal Loans in the UK: Your Complete Guide"
-                    fill
-                    style={{ objectFit: "cover" }}
-                    className="transition-transform duration-300 group-hover:scale-105"
-                    sizes={getImageSizes("large")}
-                    priority // LCP image, mark as high priority
-                  />
-                </div>
-                {/* Right Column: Text Content */}
-                <div className="md:w-7/12 p-6 md:p-8 flex flex-col justify-center">
-                  <h2 className="text-gray-800 text-xl md:text-2xl font-medium leading-tight mb-3">
-                    Best Personal Loans in the UK: Your Complete Guide
-                  </h2>
-                  <div className="flex items-center space-x-2 text-xs text-gray-500">
-                    <div className="size-5 overflow-hidden bg-blue-600 rounded-full flex items-center justify-center">
-                      <Image
-                        src="https://media.topfinanzas.com/images/favicon.webp"
-                        alt="Top Finance"
-                        width={16}
-                        height={16}
-                      />
-                    </div>
-                    <span className="font-medium text-gray-700">
-                      TOP FINANCE
-                    </span>
-                    <span>•</span>
-                    <span className="font-normal">March 30, 2025</span>
-                  </div>
-                  <p className="text-gray-600 text-sm mt-3 line-clamp-3 hidden md:block">
-                    Comprehensive guide to the UK's top personal loans,
-                    including rates, terms, and application requirements from
-                    leading lenders like Nationwide, Santander, and Barclays.
-                  </p>
-                </div>
-              </div>
-            </Link>
+            <FeaturedPostCard
+              title="Best Personal Loans in the UK: Your Complete Guide"
+              description="Comprehensive guide to the UK's top personal loans, including rates, terms, and application requirements from leading lenders like Nationwide, Santander, and Barclays."
+              image="https://media.topfinanzas.com/images/best-personal-loans.webp"
+              slug="best-personal-loans"
+              category="Personal Finance"
+              categorySlug="/personal-finance"
+              date="March 30, 2025"
+              orientation="horizontal"
+              priority={true}
+            />
           </div>
 
           {/* Latest Articles */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold mb-6">Latest Articles</h2>
+          <FeaturedPostsGrid
+            posts={featuredPostsData}
+            title="Latest Articles"
+            animateItems={true}
+            columns={3}
+          />
 
-            {/* Display Posts with standard Image component */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {paginatedPosts.length > 0 ? (
-                paginatedPosts.map((post) => (
-                  <Link
-                    key={post.slug}
-                    href={`${post.categoryPath}/${post.slug}`}
-                    className="block relative overflow-hidden group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
-                  >
-                    <div className="relative h-[180px] w-full">
-                      <OptimizedImage
-                        src={
-                          post.frontmatter.featuredImage ||
-                          "https://media.topfinanzas.com/images/placeholder.webp"
-                        }
-                        alt={cleanTitle(post.frontmatter.title)}
-                        fill
-                        style={{ objectFit: "cover" }}
-                        className="rounded-t-lg"
-                        sizes={getImageSizes("thumbnail")}
-                        lowQualitySrc={
-                          post.frontmatter.featuredImage
-                            ? generateTinyPlaceholder(
-                                post.frontmatter.featuredImage
-                              )
-                            : undefined
-                        }
-                        fallbackSrc="https://media.topfinanzas.com/images/placeholder-image.webp"
-                      />
-                      <span
-                        className={`absolute top-2 left-2 inline-block px-2 py-0.5 rounded text-xs font-semibold text-white ${
-                          post.category === "Personal Finance"
-                            ? "bg-blue-600"
-                            : "bg-green-600"
-                        }`}
-                      >
-                        {post.category}
-                      </span>
-                    </div>
-                    <div className="p-4">
-                      <h3 className="text-gray-800 text-lg font-medium leading-tight mb-2 line-clamp-2">
-                        {cleanTitle(post.frontmatter.title)}
-                      </h3>
-                      <p className="text-gray-600 text-sm line-clamp-2 mb-2">
-                        {post.frontmatter.excerpt ||
-                          post.frontmatter.description}
-                      </p>
-                      {post.frontmatter.date && (
-                        <p className="text-xs text-gray-500">
-                          {new Date(post.frontmatter.date).toLocaleDateString(
-                            "en-GB",
-                            {
-                              year: "numeric",
-                              month: "long",
-                              day: "numeric",
-                            }
-                          )}
-                        </p>
-                      )}
-                    </div>
-                  </Link>
-                ))
-              ) : (
-                <p className="col-span-full text-center text-gray-500">
-                  No posts found.
-                </p>
-              )}
-            </div>
-
-            {/* Pagination Controls - Using the dynamically loaded component */}
-            {totalPages > 1 &&
-              (totalPages <= 3 ? (
-                <div className="flex justify-center items-center space-x-4 mt-8">
-                  <Button
-                    onClick={() =>
-                      setCurrentPage((prev) => Math.max(prev - 1, 1))
-                    }
-                    disabled={currentPage === 1}
-                    variant="secondary"
-                    className="px-4 py-2 text-sm font-medium rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                  >
-                    Previous
-                  </Button>
-                  <span className="text-sm text-gray-700">
-                    Page {currentPage} of {totalPages}
-                  </span>
-                  <Button
-                    onClick={() =>
-                      setCurrentPage((prev) => Math.min(prev + 1, totalPages))
-                    }
-                    disabled={currentPage === totalPages}
-                    variant="secondary"
-                    className="px-4 py-2 text-sm font-medium rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                  >
-                    Next
-                  </Button>
-                </div>
-              ) : (
-                <DynamicPagination
-                  currentPage={currentPage}
-                  totalPages={totalPages}
-                  onPageChange={setCurrentPage}
-                />
-              ))}
-          </div>
+          {/* Pagination Controls */}
+          {totalPages > 1 &&
+            (totalPages <= 3 ? (
+              <div className="flex justify-center items-center space-x-4 mt-8">
+                <Button
+                  onClick={() =>
+                    setCurrentPage((prev) => Math.max(prev - 1, 1))
+                  }
+                  disabled={currentPage === 1}
+                  variant="secondary"
+                  className="px-4 py-2 text-sm font-medium rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  Previous
+                </Button>
+                <span className="text-sm text-gray-700">
+                  Page {currentPage} of {totalPages}
+                </span>
+                <Button
+                  onClick={() =>
+                    setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                  }
+                  disabled={currentPage === totalPages}
+                  variant="secondary"
+                  className="px-4 py-2 text-sm font-medium rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                >
+                  Next
+                </Button>
+              </div>
+            ) : (
+              <DynamicPagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={setCurrentPage}
+              />
+            ))}
         </div>
       </section>
 

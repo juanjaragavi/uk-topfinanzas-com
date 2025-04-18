@@ -3,6 +3,8 @@
 import { BlogLayout } from "@/components/mdx/blog-layout";
 import Link from "next/link";
 import Image from "next/image";
+import { FeaturedPostCard } from "@/components/ui/featured-post-card";
+import { FeaturedPostsGrid } from "@/components/ui/featured-posts-grid";
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -31,18 +33,40 @@ export default function FinancialSolutionsPage() {
     guide: "Guides",
   };
 
-  // State for active category and filters - with client-side initialization via useEffect
+  // State for active category and filters with more reliable client-side initialization
+  const [isClient, setIsClient] = useState(false);
   const [activeCategory, setActiveCategory] = useState("creditCards");
   const [activeCreditCardType, setActiveCreditCardType] = useState("all");
   const [activeLoanType, setActiveLoanType] = useState("all");
 
   // Force client-side state initialization to ensure React hydration
   useEffect(() => {
-    // Keep the default values but force client-side initialization
-    setActiveCategory("creditCards");
-    setActiveCreditCardType("all");
-    setActiveLoanType("all");
+    // Mark as client-side rendered
+    setIsClient(true);
+
+    // Force re-render after mount to ensure hydration issues are resolved
+    const timer = setTimeout(() => {
+      setActiveCategory("creditCards");
+      setActiveCreditCardType("all");
+      setActiveLoanType("all");
+    }, 0);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  // Avoid any rendering until client-side code is running
+  // This prevents hydration issues in production
+  if (!isClient) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-pulse bg-gray-200 rounded-xl p-8">
+          <div className="h-6 bg-gray-300 rounded w-3/4 mb-4"></div>
+          <div className="h-4 bg-gray-300 rounded w-1/2 mb-2"></div>
+          <div className="h-4 bg-gray-300 rounded w-2/3"></div>
+        </div>
+      </div>
+    );
+  }
 
   // List of all loan content with types
   const allLoansContent = [
@@ -386,42 +410,18 @@ export default function FinancialSolutionsPage() {
         choose the best option based on your financial needs.
       </p>
 
-      {/* Featured article */}
-      <div className="bg-white rounded-xl shadow-md overflow-hidden mb-10">
-        <div className="md:flex">
-          <div className="md:flex-shrink-0 relative h-64 md:h-auto md:w-48">
-            <Image
-              src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
-              alt="Barclaycard Avios Plus Credit Card: Premium Travel Rewards"
-              fill
-              style={{ objectFit: "cover" }}
-            />
-          </div>
-          <div className="p-8">
-            <div className="uppercase tracking-wide text-sm text-blue-600 font-semibold">
-              Featured
-            </div>
-            <Link
-              href={`/financial-solutions/barclaycard-avios-plus`}
-              className="block mt-1 text-2xl font-medium text-black hover:text-blue-600 transition-colors"
-            >
-              Barclaycard Avios Plus Credit Card: Premium Travel Rewards.
-            </Link>
-            <p className="mt-2 text-gray-600">
-              Discover why the Barclaycard Avios Plus Credit Card has become one
-              of the most popular options among those looking for a credit card
-              with excellent benefits and favourable conditions.
-            </p>
-            <div className="mt-4">
-              <Link
-                href={`/financial-solutions/barclaycard-avios-plus`}
-                className="text-blue-600 hover:text-blue-800 font-medium"
-              >
-                Read more →
-              </Link>
-            </div>
-          </div>
-        </div>
+      {/* Featured article using our new component */}
+      <div className="mb-10">
+        <FeaturedPostCard
+          title="Barclaycard Avios Plus Credit Card: Premium Travel Rewards"
+          description="Discover why the Barclaycard Avios Plus Credit Card has become one of the most popular options among those looking for a credit card with excellent benefits and favourable conditions."
+          image="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
+          slug="barclaycard-avios-plus"
+          category="Financial Solutions"
+          categorySlug="/financial-solutions"
+          orientation="horizontal"
+          priority={true}
+        />
       </div>
 
       {/* Main category selector */}
@@ -465,65 +465,23 @@ export default function FinancialSolutionsPage() {
             ))}
           </div>
 
-          {/* Credit cards grid with animation */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeCreditCardType}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-6"
-            >
-              {filteredCreditCards.map((post, index) => (
-                <motion.div
-                  key={post.slug}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.4,
-                    delay: index * 0.1,
-                  }}
-                  className="bg-white rounded-xl shadow-sm overflow-hidden"
-                  data-category={post.type}
-                >
-                  <div className="relative h-48">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      style={{ objectFit: "cover" }}
-                    />
-                    <div className="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold px-2 py-1 uppercase">
-                      {post.type === "traditional"
-                        ? "Traditional"
-                        : post.type === "neobank"
-                        ? "Neobank"
-                        : "Fintech"}
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <p className="text-sm text-gray-500 mb-2">{post.date}</p>
-                    <Link
-                      href={`/financial-solutions/${post.slug}`}
-                      className="text-xl font-semibold hover:text-blue-600 transition-colors"
-                    >
-                      {post.title}
-                    </Link>
-                    <p className="mt-2 text-gray-600">{post.description}</p>
-                    <div className="mt-4">
-                      <Link
-                        href={`/financial-solutions/${post.slug}`}
-                        className="text-blue-600 hover:text-blue-800 font-medium"
-                      >
-                        Read more →
-                      </Link>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </AnimatePresence>
+          {/* Credit cards grid with our reusable components */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {filteredCreditCards.map((post) => (
+              <FeaturedPostCard
+                key={post.slug}
+                title={post.title}
+                description={post.description}
+                image={post.image}
+                slug={post.slug}
+                category="Financial Solutions"
+                categorySlug="/financial-solutions"
+                date={post.date}
+                type={post.type}
+                showBadge={true}
+              />
+            ))}
+          </div>
         </div>
       )}
 
@@ -546,75 +504,23 @@ export default function FinancialSolutionsPage() {
             ))}
           </div>
 
-          {/* Loans grid with animation */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeLoanType}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-6"
-            >
-              {filteredLoans.map((post, index) => (
-                <motion.div
-                  key={post.slug}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.4,
-                    delay: index * 0.1,
-                  }}
-                  className="bg-white rounded-xl shadow-sm overflow-hidden"
-                  data-category={post.type}
-                >
-                  <div className="relative h-48">
-                    <Image
-                      src={post.image}
-                      alt={post.title}
-                      fill
-                      style={{ objectFit: "cover" }}
-                    />
-                    {/* Dynamic Badge based on type */}
-                    <div
-                      className={`absolute top-0 right-0 text-white text-xs font-bold px-2 py-1 uppercase ${
-                        post.type === "personal"
-                          ? "bg-blue-600"
-                          : post.type === "sme_fintech"
-                          ? "bg-red-600" // Changed purple to red for SME Fintech (like Iwoca)
-                          : post.type === "neobank"
-                          ? "bg-pink-600"
-                          : post.type === "marketplace"
-                          ? "bg-yellow-600"
-                          : "bg-gray-600" // Default for Guide etc.
-                      }`}
-                    >
-                      {loanTypes[post.type as keyof typeof loanTypes] ||
-                        post.type}
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <p className="text-sm text-gray-500 mb-2">{post.date}</p>
-                    <Link
-                      href={`/financial-solutions/${post.slug}`}
-                      className="text-xl font-semibold hover:text-blue-600 transition-colors"
-                    >
-                      {post.title}
-                    </Link>
-                    <p className="mt-2 text-gray-600">{post.description}</p>
-                    <div className="mt-4">
-                      <Link
-                        href={`/financial-solutions/${post.slug}`}
-                        className="text-blue-600 hover:text-blue-800 font-medium"
-                      >
-                        Read more →
-                      </Link>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </AnimatePresence>
+          {/* Loans grid with our reusable components */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {filteredLoans.map((post) => (
+              <FeaturedPostCard
+                key={post.slug}
+                title={post.title}
+                description={post.description}
+                image={post.image}
+                slug={post.slug}
+                category="Financial Solutions"
+                categorySlug="/financial-solutions"
+                date={post.date}
+                type={post.type}
+                showBadge={true}
+              />
+            ))}
+          </div>
         </div>
       )}
 

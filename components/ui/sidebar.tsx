@@ -6,7 +6,6 @@ import { VariantProps, cva } from "class-variance-authority";
 import { PanelLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { OptimizedImage } from "@/components/ui/optimized-image";
 
 import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
@@ -748,13 +747,15 @@ const SidebarAd = React.forwardRef<HTMLDivElement, React.ComponentProps<"div">>(
       >
         <Link href="/personal-finance/credit-card-types-benefits/">
           <div className="overflow-hidden rounded-xl border shadow hover:shadow-md transition-shadow">
-            <OptimizedImage
+            <Image
               src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"
               alt="Barclaycard Avios Plus Credit Card"
               width={1000}
               height={563}
               className="mx-auto w-full md:w-full h-auto rounded-xl"
               priority
+              placeholder="blur"
+              blurDataURL="data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAAQAAAACQAAAwAAQUxQSBcAAAABD9D/ERFCyDa37d+ICPgXqjgjoqA+qgAAVlA4IDYAAACQAQCdASoKAAQAAkA4JZwAAPrHQAD++5AK1AA="
             />
           </div>
         </Link>
