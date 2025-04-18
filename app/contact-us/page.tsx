@@ -286,7 +286,7 @@ export default function ContactUs() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Left column - Image and Text */}
           <div className="md:col-span-5 space-y-6">
-            <div className="relative w-full h-64 md:h-80 overflow-hidden">
+            <div className="relative w-full h-64 md:h-80 overflow-hidden rounded-xl shadow-md">
               <Image
                 src="https://media.topfinanzas.com/images/uk/contact-us-uk.webp"
                 alt="Contact TopFinanzas UK"

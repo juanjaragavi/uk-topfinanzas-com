@@ -35,7 +35,9 @@ export default function GettingOutOfDebtPage() {
                   width={800}
                   height={450}
                   className="w-full h-auto rounded-xl"
-                  priority
+                  priority={true}
+                  fetchPriority="high"
+                  quality={85}
                   loading="eager"
                 />
               </div>

@@ -218,7 +218,7 @@ export default function AboutUs() {
               alt="Top Finanzas UK Team"
               width={1200}
               height={600}
-              className="w-full rounded-xl object-cover"
+              className="w-full rounded-xl object-cover shadow-md"
               priority
             />
           </div>

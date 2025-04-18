@@ -102,7 +102,9 @@ export default function NatWestCreditCardPage() {
                   width={900}
                   height={507}
                   className="w-full h-auto rounded-xl"
-                  priority
+                  priority={true}
+                  fetchPriority="high"
+                  quality={85}
                   loading="eager"
                 />
               </div>
