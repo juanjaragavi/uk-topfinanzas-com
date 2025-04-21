@@ -110,7 +110,7 @@ export const metadata: Metadata = {
   // Optional: Add icons and manifest for PWA/better bookmarking
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
+    shortcut: "/favicon-16x16.ico", // Corrected to existing .ico file
     apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest", // Use relative path for local manifest
@@ -134,34 +134,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* Load non-critical CSS asynchronously */}
-        <link rel="preload" href="/styles.css" as="style" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              // This script uses JavaScript to convert the preloaded CSS into a stylesheet
-              // This is a common optimization pattern for non-critical CSS
-              (function() {
-                var styleSheet = document.querySelector('link[href="/styles.css"]');
-                if (styleSheet) {
-                  styleSheet.onload = function() {
-                    this.onload = null;
-                    this.rel = 'stylesheet';
-                  };
-                  // Fallback for browsers that don't support onload on link
-                  setTimeout(function() {
-                    if (styleSheet.rel !== 'stylesheet') {
-                      styleSheet.rel = 'stylesheet';
-                    }
-                  }, 0);
-                }
-              })();
-            `,
-          }}
-        />
-        <noscript>
-          <link rel="stylesheet" href="/styles.css" />
-        </noscript>
+        {/* Removed manual loading for /styles.css; ./globals.css import handles it */}
 
         {/* Preload critical resources for faster LCP with crossorigin for CORS compliance */}
         {/* Removed preload for placeholder-image.webp as it competes with LCP banners */}
@@ -174,15 +147,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         {/* Removed specific preload for desktop banner; browser will fetch based on CSS media query */}
-
-        {/* Preload the logo image which appears in the header - optimized to 4KB */}
-        <link
-          rel="preload"
-          href="https://media.topfinanzas.com/images/logo-english.webp?w=200&q=75"
-          as="image"
-          fetchPriority="high"
-          crossOrigin="anonymous"
-        />
+        {/* Removed redundant manual preload for logo; Next/Image priority=true handles this */}
 
         {/* Add Cache-Control meta tag for browser caching */}
         <meta

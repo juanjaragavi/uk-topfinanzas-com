@@ -1,86 +1,35 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react"; // Added useCallback back
+import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Menu, X, ChevronDown, Loader2 } from "lucide-react"; // Added Loader2
+import { Menu, X, ChevronDown } from "lucide-react"; // Removed Search, Loader2
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input"; // Added Input
-import { SearchResults } from "@/components/ui/search-results"; // Added SearchResults (will create later)
-import { useDebouncedCallback } from "use-debounce"; // Using use-debounce hook
+// Removed Input, SearchResults, useDebouncedCallback
 
 // Import content from lib directory
 import { logos } from "@/lib/images/logos";
 import { headerNavigation } from "@/lib/navigation/headerNavigation";
 import { headerContent } from "@/lib/texts/header/content";
-import { searchIndex, SearchItem } from "@/lib/search-index"; // Import index and type
+// Removed searchIndex, SearchItem
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  // Removed isSearchOpen state
   const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
   const megaMenuRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
   const menuButtonRefs = useRef<{ [key: string]: HTMLButtonElement | null }>(
     {}
   );
 
-  // Search State
-  const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState<SearchItem[]>([]); // Use SearchItem type
-  const [searchLoading, setSearchLoading] = useState(false);
-  const [searchError, setSearchError] = useState<string | null>(null);
-  const searchInputRef = useRef<HTMLInputElement>(null); // Ref for search input
-  const searchContainerRef = useRef<HTMLDivElement>(null); // Ref for search container + results
+  // Removed Search State and Refs
+  // Removed Debounced search function
+  // Removed Handle search input change
 
-  // Debounced search function
-  const debouncedSearch = useDebouncedCallback(async (query: string) => {
-    if (!query || query.trim().length < 3) {
-      // Only search if query is >= 3 chars
-      setSearchResults([]);
-      setSearchLoading(false);
-      setSearchError(null);
-      return;
-    }
-
-    console.log(`[Header] Debounced search START for: "${query}"`); // Log start
-    setSearchLoading(true); // Keep loading state for visual feedback
-    setSearchError(null);
-
-    // Removed artificial delay
-
-    try {
-      const lowerCaseQuery = query.toLowerCase();
-      const filteredResults = searchIndex.filter(
-        (item) =>
-          item.title.toLowerCase().includes(lowerCaseQuery) ||
-          item.description.toLowerCase().includes(lowerCaseQuery)
-      );
-      console.log("[Header] Filtered results:", filteredResults); // Log results
-      setSearchResults(filteredResults);
-    } catch (error: any) {
-      // Handle potential errors during filtering, though unlikely here
-      console.error("[Header] Client-side search error:", error);
-      setSearchError("An error occurred during search.");
-      setSearchResults([]);
-    } finally {
-      console.log("[Header] Debounced search END"); // Log end
-      setSearchLoading(false);
-    }
-  }, 300); // 300ms debounce delay
-
-  // Handle search input change
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log("[Header] handleSearchChange triggered"); // Add log here
-    const query = event.target.value;
-    setSearchQuery(query);
-    debouncedSearch(query);
-  };
-
-  // Close search results when clicking outside
+  // Close mega menu when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      // Close Mega Menu logic (existing)
       if (activeMegaMenu) {
         const megaMenuRef = megaMenuRefs.current[activeMegaMenu];
         const menuButtonRef = menuButtonRefs.current[activeMegaMenu];
@@ -93,56 +42,14 @@ export function Header() {
           setActiveMegaMenu(null);
         }
       }
-
-      // Close Search Results logic (new)
-      // Check if search is open and click is outside the search container
-      if (
-        isSearchOpen &&
-        searchContainerRef.current &&
-        !searchContainerRef.current.contains(event.target as Node)
-      ) {
-        // Optionally keep search bar open but hide results, or close both
-        // setIsSearchOpen(false); // Uncomment to close the whole search section
-        setSearchResults([]); // Hide results
-        setSearchQuery(""); // Clear query
-        setSearchError(null); // Clear errors
-      }
+      // Removed search-related logic
     }
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-    // Added dependencies for search logic
-  }, [activeMegaMenu, isSearchOpen, searchContainerRef]);
-
-  // ESC key handler to close menus and search results
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (activeMegaMenu) {
-        const megaMenuRef = megaMenuRefs.current[activeMegaMenu];
-        const menuButtonRef = menuButtonRefs.current[activeMegaMenu];
-
-        // Check if refs exist and if click is outside both elements
-        if (
-          megaMenuRef &&
-          menuButtonRef &&
-          !megaMenuRef.contains(event.target as Node) &&
-          !menuButtonRef.contains(event.target as Node)
-        ) {
-          setActiveMegaMenu(null);
-        }
-      }
-    }
-
-    // Add event listener
-    document.addEventListener("mousedown", handleClickOutside);
-
-    // Cleanup function
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [activeMegaMenu]);
+  }, [activeMegaMenu]); // Removed search-related dependencies
 
   // ESC key handler to close menus
   useEffect(() => {
@@ -151,14 +58,7 @@ export function Header() {
         if (activeMegaMenu) {
           setActiveMegaMenu(null);
         }
-        // Close search if open on ESC
-        if (isSearchOpen) {
-          // setIsSearchOpen(false); // Optionally close the entire bar
-          setSearchResults([]); // Clear results
-          setSearchQuery(""); // Clear query
-          setSearchError(null); // Clear error
-          // Optionally blur input: searchInputRef.current?.blur();
-        }
+        // Removed search closing logic on ESC
       }
     };
 
@@ -167,49 +67,22 @@ export function Header() {
     return () => {
       document.removeEventListener("keydown", handleEscKey);
     };
-    // Added dependencies for search logic
-  }, [activeMegaMenu, isSearchOpen]);
+  }, [activeMegaMenu]); // Removed search-related dependencies
 
   // Function to toggle mega menu
   const toggleMegaMenu = (menuId: string) => {
-    // Close search if a mega menu is opened
-    if (isSearchOpen && activeMegaMenu !== menuId) {
-      // setIsSearchOpen(false); // Optionally close search bar
-      setSearchResults([]);
-      setSearchQuery("");
-      setSearchError(null);
-    }
+    // Removed search closing logic
     console.log(`Toggling mega menu: ${menuId}`);
     setActiveMegaMenu((prevMenu) => (prevMenu === menuId ? null : menuId));
   };
 
-  // Function to toggle search bar visibility
-  const toggleSearch = () => {
-    const newState = !isSearchOpen;
-    setIsSearchOpen(newState);
-    if (!newState) {
-      // If closing search
-      setSearchQuery("");
-      setSearchResults([]);
-      setSearchError(null);
-    } else {
-      // If opening search, focus input
-      setTimeout(() => searchInputRef.current?.focus(), 0);
-    }
-    // Close mega menu if opening search
-    if (newState && activeMegaMenu) {
-      setActiveMegaMenu(null);
-    }
-  };
+  // Removed toggleSearch function
 
   // Function to toggle mobile menu
   const toggleMobileMenu = () => {
     console.log("Toggling mobile menu");
     setIsOpen((prev) => !prev);
-    // Optionally close search when opening mobile menu
-    if (!isOpen && isSearchOpen) {
-      toggleSearch(); // Close search bar
-    }
+    // Removed search closing logic
   };
 
   const setMenuButtonRef = (el: HTMLButtonElement | null, key: string) => {
@@ -220,13 +93,7 @@ export function Header() {
     megaMenuRefs.current[key] = el;
   };
 
-  // Log state just before rendering
-  console.log("[Header Render] State:", {
-    searchQuery,
-    searchResults,
-    searchLoading,
-    searchError,
-  });
+  // Removed search-related console log
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
@@ -275,7 +142,7 @@ export function Header() {
               >
                 <span>{headerNavigation.categoryDropdown.text}</span>
                 <ChevronDown
-                  className={`w-4 h-4 transition-transform ${
+                  className={`size-4 transition-transform ${
                     activeMegaMenu === "categories" ? "rotate-180" : ""
                   }`}
                 />
@@ -291,7 +158,7 @@ export function Header() {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block px-4 py-2 text-body hover:bg-gray-100"
+                        className="block px-2 text-body hover:bg-gray-100"
                         onClick={() => setActiveMegaMenu(null)}
                       >
                         {item.text}
@@ -326,7 +193,7 @@ export function Header() {
               >
                 <span>{headerNavigation.blogMegaMenu.title}</span>
                 <ChevronDown
-                  className={`w-4 h-4 transition-transform ${
+                  className={`size-4 transition-transform ${
                     activeMegaMenu === "blog" ? "rotate-180" : ""
                   }`}
                 />
@@ -386,7 +253,7 @@ export function Header() {
                           {headerNavigation.blogMegaMenu.featuredPosts.title}
                         </h3>
                         {/* Changed internal grid to single column */}
-                        <div className="grid grid-cols-1 gap-2">
+                        <div className="grid grid-cols-1 gapx-2">
                           {" "}
                           {/* Reduced gap */}
                           {headerNavigation.blogMegaMenu.featuredPosts.posts.map(
@@ -402,7 +269,7 @@ export function Header() {
                                   <span className="inline-block bg-blue-600 text-white px-2 py-0.5 rounded text-meta mb-1">
                                     {post.category}
                                   </span>
-                                  <h4 className="text-h3 group-hover:text-primary transition-colors line-clamp-2">
+                                  <h4 className="text-h3 group-hover:text-primary transition-colors line-clampx-2">
                                     {" "}
                                     {/* Limit title lines */}
                                     {post.title}
@@ -472,47 +339,16 @@ export function Header() {
                 </Link>
               ))}
 
-            {/* Search Button */}
-            <Button
-              variant="secondary"
-              onClick={toggleSearch} // Use toggleSearch function
-              className="p-2 rounded-full hover:bg-gray-100"
-              aria-label={isSearchOpen ? "Close search" : "Open search"} // Dynamic label
-              aria-expanded={isSearchOpen}
-            >
-              {/* Optionally change icon when open */}
-              {isSearchOpen ? (
-                <X className="w-5 h-5" />
-              ) : (
-                <Search className="w-5 h-5" />
-              )}
-            </Button>
+            {/* Removed Search Button */}
           </nav>
 
-          {/* Mobile Menu & Search Buttons */}
+          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
-            {/* Mobile Search Button */}
-            <Button
-              variant="secondary" // Changed from "ghost" to "secondary"
-              onClick={toggleSearch}
-              className="p-2 rounded-full hover:bg-gray-100"
-              aria-label={isSearchOpen ? "Close search" : "Open search"}
-              aria-expanded={isSearchOpen}
-            >
-              {isSearchOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Search className="w-6 h-6" />
-              )}
-            </Button>
-
-            {/* Mobile Menu Button */}
-            {/* Hide menu button if search is open on mobile? Or allow both? */}
-            {/* Let's allow both for now */}
+            {/* Removed Mobile Search Button */}
             <button
               type="button"
               onClick={toggleMobileMenu}
-              className="p-2 rounded-md bg-white hover:bg-gray-100 focus:outline-none"
+              className="px-2 rounded-md bg-white hover:bg-gray-100 focus:outline-none"
               aria-label={isOpen ? "Close main menu" : "Open main menu"}
               aria-expanded={isOpen}
               role="button"
@@ -526,63 +362,7 @@ export function Header() {
           </div>
         </div>
 
-        {/* Search Bar */}
-        <AnimatePresence>
-          {isSearchOpen && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              className="border-t border-gray-100 overflow-hidden" // Added overflow-hidden
-              ref={searchContainerRef} // Add ref to the container
-            >
-              <div className="py-4 relative">
-                {" "}
-                {/* Added relative positioning */}
-                {/* Input container */}
-                <div className="relative mb-2">
-                  <Input
-                    ref={searchInputRef}
-                    type="text"
-                    placeholder={headerContent.search.placeholder}
-                    className="w-full px-4 py-2 pr-10 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                    value={searchQuery}
-                    onChange={handleSearchChange}
-                    aria-label="Search input"
-                  />
-                  {/* Use Loader2 icon when loading */}
-                  <div className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
-                    {searchLoading ? (
-                      <Loader2 className="w-5 h-5 animate-spin" />
-                    ) : (
-                      <Search className="w-5 h-5" />
-                    )}
-                  </div>
-                </div>
-                {/* Results/Error/Loading Display */}
-                {/* Simplified condition: Only show if results exist */}
-                {searchResults.length > 0 && (
-                  <div className="absolute top-full left-0 right-0 mt-1 max-h-[90vh] overflow-y-auto bg-white border border-gray-200 rounded-md shadow-lg z-[60]">
-                    {" "}
-                    {/* Increased z-index and max-height */}
-                    <SearchResults
-                      results={searchResults}
-                      isLoading={searchLoading}
-                      error={searchError}
-                      onResultClick={() => {
-                        // Close search and clear results when a result is clicked
-                        setIsSearchOpen(false);
-                        setSearchQuery("");
-                        setSearchResults([]);
-                        setSearchError(null);
-                      }}
-                    />
-                  </div>
-                )}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {/* Removed Search Bar and Results Section */}
 
         {/* Mobile Menu */}
         <AnimatePresence>
@@ -593,50 +373,43 @@ export function Header() {
               exit={{ height: 0, opacity: 0 }}
               className="md:hidden border-t border-gray-100"
             >
-              <nav className="py-4 space-y-4">
+              <nav className="space-y-4">
                 {/* Navigation Section */}
                 <div className="space-y-2">
-                  <div className="text-h3 px-4 text-primary font-semibold">
+                  <div className="text-h3 text-primary font-semibold">
                     {headerContent.mobileMenu.navigateLabel}
                   </div>
                   <Link
                     href="/"
-                    className="block px-4 py-2 text-body hover:bg-gray-100"
+                    className="block px-2 text-body hover:bg-gray-100"
                     onClick={() => setIsOpen(false)}
                   >
                     Home
                   </Link>
                   <Link
                     href="/blog"
-                    className="block px-4 py-2 text-body hover:bg-gray-100"
+                    className="block px-2 text-body hover:bg-gray-100"
                     onClick={() => setIsOpen(false)}
                   >
                     Blog
                   </Link>
                   <Link
-                    href="/financial-solutions"
-                    className="block px-4 py-2 text-body hover:bg-gray-100"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Financial Solutions
-                  </Link>
-                  <Link
                     href="/about-us"
-                    className="block px-4 py-2 text-body hover:bg-gray-100"
+                    className="block px-2 text-body hover:bg-gray-100"
                     onClick={() => setIsOpen(false)}
                   >
                     About Us
                   </Link>
                   <Link
                     href="/contact-us"
-                    className="block px-4 py-2 text-body hover:bg-gray-100"
+                    className="block px-2 text-body hover:bg-gray-100"
                     onClick={() => setIsOpen(false)}
                   >
                     Contact Us
                   </Link>
                   <Link
                     href="/credit-card-recommender-p1"
-                    className="block px-4 py-2 text-body hover:bg-gray-100"
+                    className="block px-2 text-body hover:bg-gray-100"
                     onClick={() => setIsOpen(false)}
                   >
                     Card Recommender
@@ -645,7 +418,7 @@ export function Header() {
 
                 {/* Categories Section */}
                 <div className="space-y-2">
-                  <div className="text-h3 px-4">
+                  <div className="text-h3 text-[#2E74B5] font-semibold">
                     {headerContent.mobileMenu.categoriesLabel}
                   </div>
                   {headerNavigation.categoryDropdown.items
@@ -657,7 +430,7 @@ export function Header() {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block px-4 py-2 text-body hover:bg-gray-100"
+                        className="block px-2 text-body hover:bg-gray-100"
                         onClick={() => setIsOpen(false)}
                       >
                         {item.text}
@@ -667,7 +440,7 @@ export function Header() {
 
                 {/* Blog Categories - Show fewer items */}
                 <div className="space-y-2">
-                  <div className="text-h3 px-4">
+                  <div className="text-h3 text-[#2E74B5] font-semibold">
                     {headerContent.mobileMenu.blogCategories}
                   </div>
                   {headerNavigation.blogMegaMenu.columns[0].items
@@ -676,7 +449,7 @@ export function Header() {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block px-4 py-2 text-body hover:bg-gray-100"
+                        className="block px-2 text-body hover:bg-gray-100"
                         onClick={() => setIsOpen(false)}
                       >
                         {item.text}
@@ -684,7 +457,7 @@ export function Header() {
                     ))}
                   <Link
                     href="/personal-finance"
-                    className="block px-4 py-2 text-blue-600 hover:bg-gray-100 font-medium"
+                    className="block px-2 text-sm text-blue-600 hover:bg-gray-100 font-medium"
                     onClick={() => setIsOpen(false)}
                   >
                     Show more...
@@ -693,7 +466,7 @@ export function Header() {
 
                 {/* Popular Articles - Show fewer items */}
                 <div className="space-y-2">
-                  <div className="text-h3 px-4">
+                  <div className="text-h3 text-[#2E74B5] font-semibold">
                     {headerContent.mobileMenu.popularArticles}
                   </div>
                   {headerNavigation.blogMegaMenu.columns[1].items
@@ -702,7 +475,7 @@ export function Header() {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block px-4 py-2 text-body hover:bg-gray-100"
+                        className="block px-2 text-body hover:bg-gray-100"
                         onClick={() => setIsOpen(false)}
                       >
                         {item.text}
@@ -710,7 +483,7 @@ export function Header() {
                     ))}
                   <Link
                     href="/financial-solutions"
-                    className="block px-4 py-2 text-blue-600 hover:bg-gray-100 font-medium"
+                    className="block text-sm px-2 text-blue-600 hover:bg-gray-100 font-medium"
                     onClick={() => setIsOpen(false)}
                   >
                     Show more...
