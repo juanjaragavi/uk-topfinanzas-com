@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { BackToTop } from "@/components/ui/back-to-top"; // Import the new component
 
 // Import content from lib directory
 import { logos } from "@/lib/images/logos";
@@ -224,6 +225,7 @@ export function Footer() {
           </p>
         </div>
       </div>
+      <BackToTop /> {/* Add the component here */}
     </footer>
   );
 }

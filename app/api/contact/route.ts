@@ -17,7 +17,7 @@ export async function POST(req: Request) {
 
     // Email recipients
     const recipients = [
-      "juan.hoyos@topnetworks.co",
+      "top.admin@topnetworks.co",
       "juan.jaramillo@topnetworks.co",
     ];
 

@@ -232,7 +232,7 @@ export default function RootLayout({
                   "@type": "ContactPoint",
                   telephone: "+44-20-1234-5678",
                   contactType: "customer support",
-                  email: "info@topnetworks.co",
+                  email: "info@topfinanzas.com",
                 },
                 sameAs: [
                   "https://www.linkedin.com/company/top-networks-inc",

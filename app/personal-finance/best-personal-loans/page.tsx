@@ -29,54 +29,6 @@ export default function BestPersonalLoansPage() {
               {/* Add the Social Share Buttons here */}
               <SocialShareButtons postUrl="/personal-finance/best-personal-loans" />
 
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-green-600 flex items-center justify-center mr-3 mt-0.5">
-                    <span className="text-white font-bold">➔</span>
-                  </div>
-                  <div className="text-sm leading-5">
-                    <span className="font-semibold">
-                      Competitive interest rates
-                    </span>{" "}
-                    starting from 3.5% APR representative.
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-green-600 flex items-center justify-center mr-3 mt-0.5">
-                    <span className="text-white font-bold">➔</span>
-                  </div>
-                  <div className="text-sm leading-5">
-                    <span className="font-semibold">Flexible loan amounts</span>{" "}
-                    from £1,000 to £50,000.
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-green-600 flex items-center justify-center mr-3 mt-0.5">
-                    <span className="text-white font-bold">➔</span>
-                  </div>
-                  <div className="text-sm leading-5">
-                    <span className="font-semibold">
-                      Various repayment terms
-                    </span>{" "}
-                    from 1 to 7 years to suit your budget.
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 size-5 rounded-full bg-green-600 flex items-center justify-center mr-3 mt-0.5">
-                    <span className="text-white font-bold">➔</span>
-                  </div>
-                  <div className="text-sm leading-5">
-                    <span className="font-semibold">
-                      Quick application processes
-                    </span>{" "}
-                    with many same-day approval options.
-                  </div>
-                </div>
-              </div>
-
               <div className="my-8">
                 <Image
                   src="https://media.topfinanzas.com/images/best-personal-loans.webp"

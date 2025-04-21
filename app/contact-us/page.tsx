@@ -308,7 +308,7 @@ export default function ContactUs() {
                 financial stability and prosperity, we're here to accompany you.
                 Contact us through our email at{" "}
                 <span className="font-semibold text-[#2E74B5]">
-                  info@topnetworks.co
+                  info@topfinanzas.com
                 </span>{" "}
                 or complete the form to share your questions, ideas, or plans.
               </p>
