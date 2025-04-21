@@ -14,6 +14,7 @@ import { useDebouncedCallback } from "use-debounce"; // Using use-debounce hook
 import { logos } from "@/lib/images/logos";
 import { headerNavigation } from "@/lib/navigation/headerNavigation";
 import { headerContent } from "@/lib/texts/header/content";
+import { searchIndex, SearchItem } from "@/lib/search-index"; // Import index and type
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +27,7 @@ export function Header() {
 
   // Search State
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [searchResults, setSearchResults] = useState<SearchItem[]>([]); // Use SearchItem type
   const [searchLoading, setSearchLoading] = useState(false);
   const [searchError, setSearchError] = useState<string | null>(null);
   const searchInputRef = useRef<HTMLInputElement>(null); // Ref for search input
@@ -42,37 +43,35 @@ export function Header() {
       return;
     }
 
-    console.log(`[Header] Debounced search for: "${query}"`);
-    setSearchLoading(true);
+    console.log(`[Header] Debounced search START for: "${query}"`); // Log start
+    setSearchLoading(true); // Keep loading state for visual feedback
     setSearchError(null);
 
+    // Removed artificial delay
+
     try {
-      const response = await fetch("/api/search", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ query }),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || "Failed to fetch search results");
-      }
-
-      const data = await response.json();
-      setSearchResults(data.results || []);
+      const lowerCaseQuery = query.toLowerCase();
+      const filteredResults = searchIndex.filter(
+        (item) =>
+          item.title.toLowerCase().includes(lowerCaseQuery) ||
+          item.description.toLowerCase().includes(lowerCaseQuery)
+      );
+      console.log("[Header] Filtered results:", filteredResults); // Log results
+      setSearchResults(filteredResults);
     } catch (error: any) {
-      console.error("[Header] Search error:", error);
-      setSearchError(error.message || "An unexpected error occurred.");
-      setSearchResults([]); // Clear results on error
+      // Handle potential errors during filtering, though unlikely here
+      console.error("[Header] Client-side search error:", error);
+      setSearchError("An error occurred during search.");
+      setSearchResults([]);
     } finally {
+      console.log("[Header] Debounced search END"); // Log end
       setSearchLoading(false);
     }
   }, 300); // 300ms debounce delay
 
   // Handle search input change
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log("[Header] handleSearchChange triggered"); // Add log here
     const query = event.target.value;
     setSearchQuery(query);
     debouncedSearch(query);
@@ -220,6 +219,14 @@ export function Header() {
   const setMegaMenuRef = (el: HTMLDivElement | null, key: string) => {
     megaMenuRefs.current[key] = el;
   };
+
+  // Log state just before rendering
+  console.log("[Header Render] State:", {
+    searchQuery,
+    searchResults,
+    searchLoading,
+    searchError,
+  });
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
@@ -553,9 +560,11 @@ export function Header() {
                   </div>
                 </div>
                 {/* Results/Error/Loading Display */}
-                {/* Only show results container if loading, error, or results exist */}
-                {(searchLoading || searchError || searchResults.length > 0) && (
-                  <div className="absolute top-full left-0 right-0 mt-1 max-h-[60vh] overflow-y-auto bg-white border border-gray-200 rounded-md shadow-lg z-20">
+                {/* Simplified condition: Only show if results exist */}
+                {searchResults.length > 0 && (
+                  <div className="absolute top-full left-0 right-0 mt-1 max-h-[90vh] overflow-y-auto bg-white border border-gray-200 rounded-md shadow-lg z-[60]">
+                    {" "}
+                    {/* Increased z-index and max-height */}
                     <SearchResults
                       results={searchResults}
                       isLoading={searchLoading}

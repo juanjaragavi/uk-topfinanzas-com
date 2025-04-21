@@ -1,19 +1,13 @@
-import React from "react";
 import Link from "next/link";
-import { Loader2 } from "lucide-react";
-
-interface SearchResultItem {
-  id: string;
-  title: string;
-  link?: string; // Link might be optional
-  snippet: string;
-}
+import Image from "next/image";
+import { Loader2, AlertCircle } from "lucide-react";
+import { SearchItem } from "@/lib/search-index"; // Import the interface
 
 interface SearchResultsProps {
-  results: SearchResultItem[];
+  results: SearchItem[];
   isLoading: boolean;
   error: string | null;
-  onResultClick: () => void; // Callback for when a result is clicked
+  onResultClick: () => void; // Callback when a result is clicked
 }
 
 export function SearchResults({
@@ -22,74 +16,77 @@ export function SearchResults({
   error,
   onResultClick,
 }: SearchResultsProps) {
-  // Render loading state
+  // Log received props
+  console.log("[SearchResults] Rendering with props:", {
+    results,
+    isLoading,
+    error,
+  });
+
+  // --- Debugging Change: Prioritize showing results if they exist ---
+  if (results.length > 0) {
+    console.log("[SearchResults] Rendering results list because length > 0"); // Added log
+    return (
+      <ul className="divide-y divide-gray-100">
+        {results.map((item) => (
+          <li key={item.id}>
+            <Link
+              href={item.href}
+              className="block p-4 hover:bg-gray-50 transition-colors group"
+              onClick={onResultClick} // Trigger callback on click
+            >
+              <div className="flex items-start space-x-4">
+                {/* Image Placeholder */}
+                <div className="flex-shrink-0 w-20 h-16 bg-gray-200 rounded flex items-center justify-center text-gray-400 overflow-hidden">
+                  {item.image ? (
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      width={80}
+                      height={64}
+                      className="object-cover w-full h-full"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span className="text-xs">No Image</span>
+                  )}
+                </div>
+                {/* Text Content */}
+                <div className="flex-grow">
+                  <h3 className="text-md font-semibold text-gray-900 group-hover:text-primary mb-1 line-clamp-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 line-clamp-2">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
+  // Original checks (only run if results.length is 0)
   if (isLoading) {
     return (
       <div className="p-4 flex justify-center items-center text-gray-500">
-        <Loader2 className="w-5 h-5 animate-spin mr-2" />
+        <Loader2 className="w-6 h-6 animate-spin mr-2" />
         <span>Loading results...</span>
       </div>
     );
   }
 
-  // Render error state
   if (error) {
     return (
-      <div className="p-4 text-red-600 bg-red-50 border border-red-200 rounded-md">
-        <p className="font-medium">Error loading search results:</p>
-        <p className="text-sm">{error}</p>
+      <div className="p-4 flex items-center text-red-600 bg-red-50 border border-red-200 rounded-md">
+        <AlertCircle className="w-5 h-5 mr-2 flex-shrink-0" />
+        <span>Error: {error}</span>
       </div>
     );
   }
 
-  // Render "No results" state
-  if (results.length === 0) {
-    return (
-      <div className="p-4 text-center text-gray-500">
-        No results found. Try refining your search query.
-      </div>
-    );
-  }
-
-  // Render the list of results
-  return (
-    <ul className="divide-y divide-gray-100">
-      {results.map((result) => (
-        <li key={result.id} className="p-3 hover:bg-gray-50 transition-colors">
-          {result.link ? (
-            <Link
-              href={result.link}
-              className="block group"
-              onClick={onResultClick} // Call the callback when a result link is clicked
-              target="_blank" // Optional: open in new tab
-              rel="noopener noreferrer" // Security for target="_blank"
-            >
-              <h4
-                className="text-sm font-medium text-blue-700 group-hover:underline mb-1"
-                // Use dangerouslySetInnerHTML for HTML title from API
-                dangerouslySetInnerHTML={{ __html: result.title }}
-              />
-              <p
-                className="text-xs text-gray-600 line-clamp-2"
-                // Use dangerouslySetInnerHTML for HTML snippet from API
-                dangerouslySetInnerHTML={{ __html: result.snippet }}
-              />
-            </Link>
-          ) : (
-            // Fallback if link is missing (should ideally not happen with web search)
-            <div>
-              <h4
-                className="text-sm font-medium text-gray-800 mb-1"
-                dangerouslySetInnerHTML={{ __html: result.title }}
-              />
-              <p
-                className="text-xs text-gray-600 line-clamp-2"
-                dangerouslySetInnerHTML={{ __html: result.snippet }}
-              />
-            </div>
-          )}
-        </li>
-      ))}
-    </ul>
-  );
+  // If results.length === 0 and not loading and no error
+  return <div className="p-4 text-center text-gray-500">No results found.</div>;
 }
