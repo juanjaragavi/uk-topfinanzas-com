@@ -219,6 +219,10 @@ export default function RootLayout({
           {process.env.NODE_ENV === "development" && <UtmMonitor />}
         </Suspense>
         {children}
+        <script
+          data-cfasync="false"
+          src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
+        ></script>
       </body>
     </html>
   );

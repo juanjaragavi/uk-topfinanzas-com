@@ -87,7 +87,7 @@ export default function NoAnnualFeeCreditCards() {
           </ul>
         </section>
 
-        <Ad adId="us_topfinanzas_1" format="horizontal" className="my-8" />
+        <Ad adId="uk_topfinanzas_1" format="horizontal" className="my-8" />
 
         <section className="my-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
@@ -129,7 +129,7 @@ export default function NoAnnualFeeCreditCards() {
           </ul>
         </section>
 
-        <Ad adId="us_topfinanzas_2" format="horizontal" className="my-8" />
+        <Ad adId="uk_topfinanzas_2" format="horizontal" className="my-8" />
 
         <section className="my-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
@@ -178,7 +178,7 @@ export default function NoAnnualFeeCreditCards() {
           </p>
         </section>
 
-        <Ad adId="us_topfinanzas_3" format="horizontal" className="my-8" />
+        <Ad adId="uk_topfinanzas_3" format="horizontal" className="my-8" />
 
         {/* AI Content Disclaimer */}
         <AIContentDisclaimer />

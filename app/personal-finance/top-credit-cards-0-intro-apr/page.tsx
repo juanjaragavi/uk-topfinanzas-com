@@ -106,7 +106,7 @@ export default function TopCreditCards0IntroAprPage() {
               </section>
 
               <Ad
-                adId="us_topfinanzas_1"
+                adId="uk_topfinanzas_1"
                 format="horizontal"
                 className="my-8"
               />
@@ -169,7 +169,7 @@ export default function TopCreditCards0IntroAprPage() {
               </section>
 
               <Ad
-                adId="us_topfinanzas_2"
+                adId="uk_topfinanzas_2"
                 format="horizontal"
                 className="my-8"
               />
@@ -235,7 +235,7 @@ export default function TopCreditCards0IntroAprPage() {
               </section>
 
               <Ad
-                adId="us_topfinanzas_3"
+                adId="uk_topfinanzas_3"
                 format="horizontal"
                 className="my-8"
               />

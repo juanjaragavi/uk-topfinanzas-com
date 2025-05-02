@@ -3,6 +3,7 @@
 /**
  * Advertisement component for TopFinanzas
  * Displays an advertisement from the centralized ad management system
+ * Updated to comply with AutoZep Tag implementation requirements
  */
 
 import { useState, useEffect } from "react";
@@ -16,7 +17,7 @@ import {
 
 interface AdProps {
   format: Advertisement["format"];
-  adId?: string; // Optional: specify a specific ad by ID
+  adId?: string; // Specify a specific ad ID (should be in format "uk_topfinanzas_X" for AutoZep compatibility)
   className?: string;
   fallbackWidth?: number;
   fallbackHeight?: number;
@@ -30,12 +31,34 @@ export const Ad: React.FC<AdProps> = ({
   fallbackHeight,
 }) => {
   const [ad, setAd] = useState<Advertisement | undefined>(undefined);
+  const [isAutoZepAd, setIsAutoZepAd] = useState<boolean>(false);
 
   useEffect(() => {
-    // Get advertisement either by ID or randomly by format
+    // Check if this is an AutoZep ad based on its ID format
+    if (adId && adId.startsWith("uk_topfinanzas_")) {
+      setIsAutoZepAd(true);
+      return;
+    }
+
+    // For non-AutoZep ads, use the existing system
     const advertisement = adId ? getAdById(adId) : getRandomAd(format);
     setAd(advertisement);
   }, [format, adId]);
+
+  // If this is an AutoZep ad, render the div with the exact required ID
+  if (isAutoZepAd) {
+    return (
+      <div
+        id={adId}
+        className={`ad-container ${className}`}
+        style={{
+          width: fallbackWidth ? `${fallbackWidth}px` : "100%",
+          height: fallbackHeight ? `${fallbackHeight}px` : "auto",
+          minHeight: "100px", // Ensures the ad container is visible even when empty
+        }}
+      ></div>
+    );
+  }
 
   // If no ad is found or loaded yet, show a placeholder
   if (!ad) {
@@ -54,7 +77,7 @@ export const Ad: React.FC<AdProps> = ({
     );
   }
 
-  // Render the advertisement with a link
+  // Render the advertisement with a link (for non-AutoZep ads)
   return (
     <Link
       href={ad.link}
