@@ -211,6 +211,10 @@ export default function RootLayout({
         />
         <GoogleTagManager />
         <ResourceHints />
+        <script
+          data-cfasync="false"
+          src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
+        ></script>
       </head>
       <body className={`${poppins.variable} font-sans`}>
         <GoogleTagManagerNoScript />
@@ -219,10 +223,6 @@ export default function RootLayout({
           {process.env.NODE_ENV === "development" && <UtmMonitor />}
         </Suspense>
         {children}
-        <script
-          data-cfasync="false"
-          src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
-        ></script>
       </body>
     </html>
   );
