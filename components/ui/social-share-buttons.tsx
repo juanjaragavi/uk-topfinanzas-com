@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 // Use X icon instead of Twitter
 import { Share2, X, Facebook, MessageCircle } from "lucide-react"; // Updated icons
+import { useIsMobile } from "@/hooks/use-mobile"; // Import the useIsMobile hook
 
 interface SocialShareButtonsProps {
   postUrl: string;
@@ -19,6 +20,7 @@ const SocialShareButtons: React.FC<SocialShareButtonsProps> = ({
   const [isFloatingVisible, setIsFloatingVisible] = useState(false);
   const initialContainerRef = useRef<HTMLDivElement>(null);
   const [currentUrl, setCurrentUrl] = useState("");
+  const isMobile = useIsMobile(); // Use the mobile detection hook
 
   // Get the full current URL on the client-side
   useEffect(() => {
@@ -27,6 +29,12 @@ const SocialShareButtons: React.FC<SocialShareButtonsProps> = ({
 
   useEffect(() => {
     const handleScroll = () => {
+      // Don't check for floating visibility if on mobile
+      if (isMobile) {
+        setIsFloatingVisible(false);
+        return;
+      }
+
       if (initialContainerRef.current) {
         const rect = initialContainerRef.current.getBoundingClientRect();
         // Show floating buttons if the top of the initial container is above the viewport top
@@ -44,7 +52,7 @@ const SocialShareButtons: React.FC<SocialShareButtonsProps> = ({
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isMobile]); // Add isMobile as a dependency
 
   const encodedUrl = encodeURIComponent(currentUrl || postUrl); // Use client-side URL if available
 
@@ -125,8 +133,8 @@ const SocialShareButtons: React.FC<SocialShareButtonsProps> = ({
         {renderButtons(false)}
       </div>
 
-      {/* Floating container */}
-      {isFloatingVisible && (
+      {/* Floating container - only show on non-mobile devices */}
+      {isFloatingVisible && !isMobile && (
         <div className="fixed left-4 top-1/2 transform -translate-y-1/2 z-50 p-2 bg-background/80 backdrop-blur-sm border rounded-xl shadow-lg">
           {/* Using background/80 for slight transparency */}
           {renderButtons(true)}

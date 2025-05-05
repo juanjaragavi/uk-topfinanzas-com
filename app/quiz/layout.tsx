@@ -70,7 +70,6 @@ export default function QuizLayout({
   children: React.ReactNode;
 }) {
   // This layout completely replaces the root layout for the quiz page
-  // ADZep script is intentionally excluded for this route
   return (
     <html lang="en-gb">
       <head>
@@ -87,6 +86,12 @@ export default function QuizLayout({
           href="https://media.topfinanzas.com"
           crossOrigin="anonymous"
         />
+
+        {/* ADZep AutoZep Paid Advertising tag */}
+        <script
+          data-cfasync="false"
+          src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
+        ></script>
 
         {/* Module/nomodule pattern for modern browsers */}
         <script
