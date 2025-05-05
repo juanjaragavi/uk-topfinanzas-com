@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { Button } from "@/components/ui/button";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { Ad } from "@/components/ui/ad";
 import Image from "next/image";
 import Link from "next/link";
 import SocialShareButtons from "@/components/ui/social-share-buttons"; // Import the new component
@@ -30,6 +31,12 @@ export default function TipsForChoosingAnOnlineLoanPage() {
 
               {/* Add the Social Share Buttons here */}
               <SocialShareButtons postUrl="/personal-finance/tips-for-choosing-an-online-loan" />
+
+              <Ad
+                adId="uk_topfinanzas_1"
+                format="horizontal"
+                className="my-8"
+              />
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
@@ -155,6 +162,12 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                   you a clearer picture of your total repayment obligations.
                 </p>
 
+                <Ad
+                  adId="uk_topfinanzas_2"
+                  format="horizontal"
+                  className="my-8"
+                />
+
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   2. Verify Lender Legitimacy
                 </h2>
@@ -249,6 +262,12 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                   application. A transparent lender will be happy to explain
                   their terms clearly.
                 </p>
+
+                <Ad
+                  adId="uk_topfinanzas_3"
+                  format="horizontal"
+                  className="my-8"
+                />
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   4. Check Flexibility Options
@@ -401,6 +420,12 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                   research your options thoroughly can lead to better financial
                   outcomes and peace of mind throughout your loan term.
                 </p>
+
+                <Ad
+                  adId="uk_topfinanzas_4"
+                  format="horizontal"
+                  className="my-8"
+                />
 
                 <div className="text-center my-8">
                   <Link href="/financial-solutions">

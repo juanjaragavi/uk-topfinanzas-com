@@ -89,6 +89,12 @@ export default function UnderstandingCreditCardInterestRatesPage() {
                 </p>
               </section>
 
+              <Ad
+                adId="uk_topfinanzas_1"
+                format="horizontal"
+                className="my-8"
+              />
+
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Factors Affecting Interest Rates
@@ -122,7 +128,7 @@ export default function UnderstandingCreditCardInterestRatesPage() {
               </section>
 
               <Ad
-                adId="uk_topfinanzas_1"
+                adId="uk_topfinanzas_2"
                 format="horizontal"
                 className="my-8"
               />
@@ -189,7 +195,7 @@ export default function UnderstandingCreditCardInterestRatesPage() {
               </section>
 
               <Ad
-                adId="uk_topfinanzas_2"
+                adId="uk_topfinanzas_3"
                 format="horizontal"
                 className="my-8"
               />
@@ -267,7 +273,7 @@ export default function UnderstandingCreditCardInterestRatesPage() {
               </section>
 
               <Ad
-                adId="uk_topfinanzas_3"
+                adId="uk_topfinanzas_4"
                 format="horizontal"
                 className="my-8"
               />

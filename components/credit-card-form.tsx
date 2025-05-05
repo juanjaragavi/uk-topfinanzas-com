@@ -80,7 +80,7 @@ export default function CreditCardForm() {
   const handleSubmit = async (e?: React.FormEvent) => {
     e?.preventDefault();
     console.log("Form submitted with data:", formData);
-    console.log("[DEBUG] API Key:", process.env.NEXT_PUBLIC_KIT_API_KEY);
+    console.log("[DEBUG] API Key:", "[DEBUG] API Key: OK");
 
     try {
       // Get UTM parameters from session storage
@@ -101,7 +101,7 @@ export default function CreditCardForm() {
           acepto_politicas_de_tratamiento_de_datos_y_terminos_y_condiciones:
             formData.receiveMessages ? "1" : "0",
           beneficio_empresa: null,
-          birthday: "Feb 6", // Default value as specified
+          birthday: "Ene 1, 1988", // Default value as specified
           contacto: null,
           cual_es_tu_ingreso_mensual: formData.incomeText || formData.income, // Use text value with fallback to ID
           cuanto_dinero_necesitas: null,
