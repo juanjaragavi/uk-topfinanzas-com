@@ -162,6 +162,10 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
 
+        <script
+          data-cfasync="false"
+          src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
+        ></script>
         {/* Module/nomodule pattern for modern browsers */}
         <script
           type="module"
@@ -211,10 +215,6 @@ export default function RootLayout({
         />
         <GoogleTagManager />
         <ResourceHints />
-        <script
-          data-cfasync="false"
-          src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
-        ></script>
       </head>
       <body className={`${poppins.variable} font-sans`}>
         <GoogleTagManagerNoScript />
