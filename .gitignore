@@ -20,6 +20,7 @@ yarn-error.log*
 ecosystem.config.js
 *.env*
 !.env.example
+.env.production
 
 # vercel
 .vercel
