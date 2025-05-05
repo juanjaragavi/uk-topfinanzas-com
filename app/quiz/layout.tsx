@@ -1,7 +1,8 @@
 import type React from "react";
 import type { Metadata } from "next";
 import { metadata as metadataStrings } from "@/lib/constants";
-import { Poppins } from "next/font/google";
+import UtmMonitor from "@/components/analytics/utm-monitor";
+import { Suspense } from "react";
 import localFont from "next/font/local";
 import fs from "fs";
 import path from "path";
@@ -106,7 +107,10 @@ export default function QuizLayout({
       </head>
       <body className={`${poppins.variable} font-sans`}>
         <GoogleTagManagerNoScript />
-        <UtmPersister />
+        <Suspense fallback={null}>
+          <UtmPersister />
+          {process.env.NODE_ENV === "development" && <UtmMonitor />}
+        </Suspense>
         <main className="flex min-h-[100dvh] flex-col justify-start bg-gray-100 pb-safe">
           {children}
         </main>
