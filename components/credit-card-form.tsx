@@ -10,6 +10,15 @@ import Step3 from "./steps/step3";
 import Logo from "./ui/logo";
 import { formStrings } from "@/lib/constants";
 
+// Define UTM parameters array
+const UTM_PARAM_KEYS = [
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "utm_term",
+  "utm_content",
+];
+
 export default function CreditCardForm() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -44,11 +53,108 @@ export default function CreditCardForm() {
 
   const router = useRouter();
 
-  const handleSubmit = (e?: React.FormEvent) => {
+  const handleSubmit = async (e?: React.FormEvent) => {
     e?.preventDefault();
     console.log("Form submitted with data:", formData);
-    // Redirect to UK results page using Next.js router
-    router.push("/credit-card-recommender-p1");
+
+    try {
+      // Get UTM parameters from session storage
+      const utmParams: Record<string, string> = {};
+      UTM_PARAM_KEYS.forEach((param) => {
+        const value = sessionStorage.getItem(param);
+        if (value) {
+          utmParams[param] = value;
+        }
+      });
+
+      // Prepare data for Kit API
+      const kitData = {
+        first_name: formData.name,
+        email_address: formData.email,
+        state: "active",
+        fields: {
+          acepto_politicas_de_tratamiento_de_datos_y_terminos_y_condiciones:
+            formData.receiveMessages ? "1" : "0",
+          beneficio_empresa: null,
+          birthday: "Feb 6", // Default value as specified
+          contacto: null,
+          cual_es_tu_ingreso_mensual: formData.income,
+          cuanto_dinero_necesitas: null,
+          date_created: null,
+          describe_tu_necesidad: null,
+          elige_el_grupo_que_mejor_describe_tu_situacion_actual: null,
+          estas_reportado_en_buro_de_credito: null,
+          flujo_prestamos_2: null,
+          last_name: formData.lastName,
+          monto_empresa: null,
+          newsletter: null,
+          pais: "UK", // Default value as specified
+          phone_number: formData.phone,
+          preferencia_1_cupo_de_credito_alto: null,
+          preferencia_2_sin_buro: null,
+          preferencia_3_millas_y_puntos: null,
+          preferencia_4_credito_inmediato: null,
+          preferencia_5_sin_anualidad: null,
+          preferencia_6_cashback: null,
+          que_es_lo_que_mas_importante_en_una_tarjeta_de_credito:
+            formData.preference,
+          quickemailverification_free: null,
+          quickemailverification_result: null,
+          quickemailverification_safe_to_send: null,
+          quiz_campana_leads: null,
+          quiz_prestamos: null,
+          quiz_prestamos_2: null,
+          quiz_prestamos_bbva: null,
+          quiz_prestamos_credilikeme: null,
+          quiz_prestamos_discover: null,
+          quiz_prestamos_empresarial_sabadell: null,
+          quiz_prestamos_upstart: null,
+          quiz_prestamo_kueski: null,
+          quiz_tarjetas: "SI", // Default value as specified
+          quiz_tarjeta_bbva_azul: null,
+          quiz_tarjeta_citi_double_cash: null,
+          quiz_tarjeta_hsbc_zero: null,
+          quiz_tarjeta_nubank: null,
+          quiz_tarjeta_nubank_2: null,
+          quiz_tarjeta_platacard: null,
+          quiz_tarjeta_stori: null,
+          quiz_tarjeta_visa_signature: null,
+          recovery: null,
+          reingresar_flujo_tarjetas: null,
+          source: "Quiz UK", // Default value as specified
+          tarjetas_neobancos: null,
+          // Include UTM params if available
+          utm_source: utmParams.utm_source || null,
+          utm_medium: utmParams.utm_medium || null,
+          utm_campaign: utmParams.utm_campaign || null,
+          utm_content: utmParams.utm_content || null,
+          utm_term: utmParams.utm_term || null,
+        },
+      };
+
+      // Send data to Kit API
+      const headers = {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "X-Kit-Api-Key": `${process.env.NEXT_PUBLIC_KIT_API_KEY}`,
+      };
+
+      // Make the API request
+      const response = await fetch("https://api.kit.com/v4/subscribers", {
+        method: "POST",
+        body: JSON.stringify(kitData),
+        headers: headers,
+      });
+
+      const result = await response.json();
+      console.log("Kit API response:", result);
+    } catch (error) {
+      console.error("Error sending data to Kit API:", error);
+    } finally {
+      // Redirect to UK results page using Next.js router
+      // regardless of API response to ensure good user experience
+      router.push("/credit-card-recommender-p1");
+    }
   };
 
   const handleLastNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {

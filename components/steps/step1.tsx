@@ -50,16 +50,14 @@ export default function Step1({ formData, updateFormData }: Step1Props) {
         transition={{ delay: 0.4, staggerChildren: 0.1 }}
       >
         {options.map((option, index) => (
-          
-            <OptionButton
-              id={option.id}
-              label={option.label}
-              selected={selected === option.id}
-              onClick={() => handleSelect(option.id)}
-              delay={0.1 * index}
-              className="pregunta_1"
-            />
-          
+          <OptionButton
+            id={option.id}
+            label={option.label}
+            selected={selected === option.id}
+            onClick={() => handleSelect(option.id)}
+            delay={0.1 * index}
+            className="pregunta_1"
+          />
         ))}
       </motion.div>
 
