@@ -9,6 +9,7 @@ import Step2 from "./steps/step2";
 import Step3 from "./steps/step3";
 import Logo from "./ui/logo";
 import { formStrings } from "@/lib/constants";
+import { step1Strings, step2Strings } from "@/lib/strings";
 
 // Define UTM parameters array
 const UTM_PARAM_KEYS = [
@@ -23,7 +24,9 @@ export default function CreditCardForm() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     preference: "",
+    preferenceText: "", // Add a new field to store the text value
     income: "",
+    incomeText: "", // Add a new field to store the text value
     email: "",
     name: "",
     lastName: "",
@@ -41,6 +44,27 @@ export default function CreditCardForm() {
     setFormData((prev) => ({ ...prev, ...data }));
   };
 
+  const getPreferenceText = (id: string): string => {
+    const option = step1Strings.options.find((opt) => opt.id === id);
+    return option ? option.label : "";
+  };
+
+  const getIncomeText = (id: string): string => {
+    const option = step2Strings.options.find((opt) => opt.id === id);
+    return option ? option.label : "";
+  };
+
+  useEffect(() => {
+    if (formData.preference) {
+      updateFormData({
+        preferenceText: getPreferenceText(formData.preference),
+      });
+    }
+    if (formData.income) {
+      updateFormData({ incomeText: getIncomeText(formData.income) });
+    }
+  }, [formData.preference, formData.income]);
+
   useEffect(() => {
     if (
       step < totalSteps &&
@@ -56,7 +80,7 @@ export default function CreditCardForm() {
   const handleSubmit = async (e?: React.FormEvent) => {
     e?.preventDefault();
     console.log("Form submitted with data:", formData);
-    console.log('[DEBUG] API Key:', process.env.NEXT_PUBLIC_KIT_API_KEY);
+    console.log("[DEBUG] API Key:", process.env.NEXT_PUBLIC_KIT_API_KEY);
 
     try {
       // Get UTM parameters from session storage
@@ -79,7 +103,7 @@ export default function CreditCardForm() {
           beneficio_empresa: null,
           birthday: "Feb 6", // Default value as specified
           contacto: null,
-          cual_es_tu_ingreso_mensual: formData.income,
+          cual_es_tu_ingreso_mensual: formData.incomeText || formData.income, // Use text value with fallback to ID
           cuanto_dinero_necesitas: null,
           date_created: null,
           describe_tu_necesidad: null,
@@ -89,7 +113,7 @@ export default function CreditCardForm() {
           last_name: formData.lastName,
           monto_empresa: null,
           newsletter: null,
-          pais: "UK", // Default value as specified
+          pais: "Reino Unido", // Default value as specified
           phone_number: formData.phone,
           preferencia_1_cupo_de_credito_alto: null,
           preferencia_2_sin_buro: null,
@@ -98,7 +122,7 @@ export default function CreditCardForm() {
           preferencia_5_sin_anualidad: null,
           preferencia_6_cashback: null,
           que_es_lo_que_mas_importante_en_una_tarjeta_de_credito:
-            formData.preference,
+            formData.preferenceText || formData.preference, // Use text value with fallback to ID
           quickemailverification_free: null,
           quickemailverification_result: null,
           quickemailverification_safe_to_send: null,
