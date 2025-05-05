@@ -16,8 +16,10 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files
-.env*
+# Config files
+ecosystem.config.js
+*.env*
+!.env.example
 
 # vercel
 .vercel

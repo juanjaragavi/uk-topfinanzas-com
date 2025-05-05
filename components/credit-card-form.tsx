@@ -56,6 +56,7 @@ export default function CreditCardForm() {
   const handleSubmit = async (e?: React.FormEvent) => {
     e?.preventDefault();
     console.log("Form submitted with data:", formData);
+    console.log('[DEBUG] API Key:', process.env.NEXT_PUBLIC_KIT_API_KEY);
 
     try {
       // Get UTM parameters from session storage
