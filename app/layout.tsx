@@ -11,6 +11,7 @@ import GoogleTagManager, {
 import UtmPersister from "@/components/analytics/utm-persister";
 import UtmMonitor from "@/components/analytics/utm-monitor";
 import ResourceHints from "@/components/resource-hints";
+import AdScriptLoader from "@/components/ads/AdScriptLoader"; // Import the new component
 
 // Use local font to avoid external requests during build
 // This improves build time and eliminates network dependency
@@ -219,11 +220,8 @@ export default function RootLayout({
           {process.env.NODE_ENV === "development" && <UtmMonitor />}
         </Suspense>
         {children}
-        {/* ADZep AutoZep Paid Advertising tag */}
-        <script
-          data-cfasync="false"
-          src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
-        ></script>
+        {/* Conditionally load ADZep script */}
+        <AdScriptLoader />
       </body>
     </html>
   );
