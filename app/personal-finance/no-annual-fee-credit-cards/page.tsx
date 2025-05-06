@@ -56,29 +56,32 @@ export default function NoAnnualFeeCreditCards() {
           </p>
           <ul className="list-disc list-inside space-y-2 text-sm leading-5 font-light text-gray-800">
             <li>
-              **Cashback Rewards:** Earn a percentage back on your purchases,
-              either as a flat rate on everything or higher rates in specific
-              categories like groceries, dining, or fuel.
+              <span className="font-bold">Cashback Rewards</span> Earn a
+              percentage back on your purchases, either as a flat rate on
+              everything or higher rates in specific categories like groceries,
+              dining, or fuel.
             </li>
             <li>
-              **Rewards Points/Miles:** Some cards offer points or miles instead
-              of cashback, which can be redeemed for travel, merchandise, or
-              statement credits.
+              <span className="font-bold">Rewards Points/Miles</span> Some cards
+              offer points or miles instead of cashback, which can be redeemed
+              for travel, merchandise, or statement credits.
             </li>
             <li>
-              **Introductory Offers:** Many no-fee cards come with 0%
-              introductory APR periods on purchases or balance transfers,
-              helping you save on interest for a limited time.
+              <span className="font-bold">Introductory Offers</span> Many no-fee
+              cards come with 0% introductory APR periods on purchases or
+              balance transfers, helping you save on interest for a limited
+              time.
             </li>
             <li>
-              **Credit Building:** For those new to credit or looking to improve
-              their score, several no-fee cards are designed specifically for
-              this purpose, often with more accessible approval requirements.
+              <span className="font-bold">Credit Building</span> For those new
+              to credit or looking to improve their score, several no-fee cards
+              are designed specifically for this purpose, often with more
+              accessible approval requirements.
             </li>
             <li>
-              **Travel Perks:** While less common than premium cards, some
-              no-fee options include benefits like no foreign transaction fees,
-              which is great for international travel.
+              <span className="font-bold">Travel Perks</span> While less common
+              than premium cards, some no-fee options include benefits like no
+              foreign transaction fees, which is great for international travel.
             </li>
           </ul>
         </section>
@@ -95,32 +98,34 @@ export default function NoAnnualFeeCreditCards() {
           </p>
           <ul className="list-disc list-inside space-y-2 text-sm leading-5 font-light text-gray-800">
             <li>
-              **Flat-Rate Cashback Cards:** These offer a simple, consistent
-              cashback percentage (e.g., 1% or 1.5%) on all purchases, making
-              them easy to understand and use.
+              <span className="font-bold">Flat-Rate Cashback Cards</span> These
+              offer a simple, consistent cashback percentage (e.g., 1% or 1.5%)
+              on all purchases, making them easy to understand and use.
             </li>
             <li>
-              **Tiered/Category Cashback Cards:** These provide higher cashback
-              rates (e.g., 3% or 5%) in specific spending categories that might
-              rotate quarterly or be chosen by the cardholder. They are best
-              suited for those whose spending aligns with the bonus categories.
+              <span className="font-bold">Tiered/Category Cashback Cards</span>{" "}
+              These provide higher cashback rates (e.g., 3% or 5%) in specific
+              spending categories that might rotate quarterly or be chosen by
+              the cardholder. They are best suited for those whose spending
+              aligns with the bonus categories.
             </li>
             <li>
-              **Balance Transfer Cards:** Often feature long 0% intro APR
-              periods specifically for transferring balances from other
-              high-interest cards, helping users manage and pay down debt more
-              affordably.
+              <span className="font-bold">Balance Transfer Cards</span> Often
+              feature long 0% intro APR periods specifically for transferring
+              balances from other high-interest cards, helping users manage and
+              pay down debt more affordably.
             </li>
             <li>
-              **Student Cards:** Designed for students with limited credit
-              history, these cards often have lower credit limits but provide an
-              opportunity to build credit responsibly while potentially earning
-              modest rewards.
+              <span className="font-bold">Student Cards</span> Designed for
+              students with limited credit history, these cards often have lower
+              credit limits but provide an opportunity to build credit
+              responsibly while potentially earning modest rewards.
             </li>
             <li>
-              **Basic/Credit Builder Cards:** Focused primarily on establishing
-              or rebuilding credit, these cards may have fewer rewards but offer
-              a pathway to better credit scores with responsible use.
+              <span className="font-bold">Basic/Credit Builder Cards</span>{" "}
+              Focused primarily on establishing or rebuilding credit, these
+              cards may have fewer rewards but offer a pathway to better credit
+              scores with responsible use.
             </li>
           </ul>
         </section>
@@ -136,25 +141,27 @@ export default function NoAnnualFeeCreditCards() {
           </p>
           <ul className="list-disc list-inside space-y-2 text-sm leading-5 font-light text-gray-800">
             <li>
-              **Maximize Cashback:** If you want straightforward rewards, a
-              flat-rate cashback card is a good choice. If your spending is
-              concentrated in specific areas (like dining or groceries), a
-              category cashback card might yield higher returns.
+              <span className="font-bold">Maximize Cashback</span> If you want
+              straightforward rewards, a flat-rate cashback card is a good
+              choice. If your spending is concentrated in specific areas (like
+              dining or groceries), a category cashback card might yield higher
+              returns.
             </li>
             <li>
-              **Manage Debt:** If you have existing high-interest credit card
-              debt, prioritize a card with a long 0% intro APR on balance
-              transfers.
+              <span className="font-bold">Manage Debt</span> If you have
+              existing high-interest credit card debt, prioritize a card with a
+              long 0% intro APR on balance transfers.
             </li>
             <li>
-              **Build Credit:** If you're new to credit or rebuilding your
-              score, look for student cards or secured cards (though secured
-              cards often require a deposit, they might still lack an annual
-              fee).
+              <span className="font-bold">Build Credit</span> If you're new to
+              credit or rebuilding your score, look for student cards or secured
+              cards (though secured cards often require a deposit, they might
+              still lack an annual fee).
             </li>
             <li>
-              **Travel:** If you travel internationally, even occasionally, a
-              card with no foreign transaction fees can save you money.
+              <span className="font-bold">Travel</span> If you travel
+              internationally, even occasionally, a card with no foreign
+              transaction fees can save you money.
             </li>
           </ul>
         </section>
