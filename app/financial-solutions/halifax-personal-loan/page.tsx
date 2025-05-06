@@ -96,7 +96,7 @@ export default function HalifaxPersonalLoanPage() {
                 </div>
               </div>
 
-              <div className="text-center my-8">
+              <div className="text-left my-8">
                 <Link href="/financial-solutions/halifax-personal-loan-requirements">
                   <Button className="bg-[#007A87] hover:bg-teal-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                     View Requirements
@@ -325,7 +325,7 @@ export default function HalifaxPersonalLoanPage() {
                   effectively.
                 </p>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link href="/financial-solutions/halifax-personal-loan-requirements">
                     <Button className="bg-[#007A87] hover:bg-teal-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       View Requirements

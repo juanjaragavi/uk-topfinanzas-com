@@ -88,5 +88,5 @@ export function SearchResults({
   }
 
   // If results.length === 0 and not loading and no error
-  return <div className="p-4 text-center text-gray-500">No results found.</div>;
+  return <div className="p-4 text-left text-gray-500">No results found.</div>;
 }

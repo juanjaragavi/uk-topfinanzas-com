@@ -508,7 +508,7 @@ export default function CurveCreditCardRequirementsPage() {
                   less value in its more advanced features.
                 </p>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link href="https://www.curve.com/card/" target="_blank">
                     <Button className="bg-[#E33292] hover:bg-pink-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Visit Official Website

@@ -162,7 +162,7 @@ export default function SidebarExample() {
           </SidebarContent>
 
           <SidebarFooter>
-            <small className="text-xs text-center block text-gray-500">
+            <small className="text-xs text-left block text-gray-500">
               © 2025 TopFinance UK
             </small>
           </SidebarFooter>

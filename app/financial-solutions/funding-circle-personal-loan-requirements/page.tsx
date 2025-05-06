@@ -471,7 +471,7 @@ export default function FundingCirclePersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link
                     href="https://www.fundingcircle.com/uk/small-business-loans/"
                     target="_blank"

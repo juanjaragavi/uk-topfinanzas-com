@@ -505,7 +505,7 @@ export default function VirginMoneyCreditCardRequirementsPage() {
                   improve your chances of approval.
                 </p>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link
                     href="https://uk.virginmoney.com/credit-cards/"
                     target="_blank"

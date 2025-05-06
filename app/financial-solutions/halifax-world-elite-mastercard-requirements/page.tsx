@@ -378,7 +378,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                   protections.
                 </p>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link
                     href="https://www.halifax.co.uk/creditcards/mastercard-world-elite.html"
                     target="_blank"

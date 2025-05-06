@@ -242,11 +242,11 @@ export default function Step3({
 
   return (
     <div className="space-y-4">
-      <div className="text-center mb-4">
-        <h2 className="text-xl font-bold text-center text-gray-950">
+      <div className="text-left mb-4">
+        <h2 className="text-xl font-bold text-left text-gray-950">
           {step3Strings.title}
         </h2>
-        <p className="text-xl leading-tight font-bold text-center text-[#2E74B5]">
+        <p className="text-xl leading-tight font-bold text-left text-[#2E74B5]">
           {step3Texts.subtitle.firstPart}{" "}
           <span className="text-[#4A8BC5]">
             {step3Texts.subtitle.highlight}
@@ -398,7 +398,7 @@ export default function Step3({
         className="mt-6"
       >
         {errors.general && (
-          <p className="text-xs text-red-500 mt-2 text-center">
+          <p className="text-xs text-red-500 mt-2 text-left">
             {errors.general}
           </p>
         )}
@@ -423,13 +423,13 @@ export default function Step3({
             <VisitorCounter />
           </div>
         </div>
-        <p className="text-center text-sm">
+        <p className="text-left text-sm">
           <span className="font-bold text-[#FF8C00]">
             {commonStrings.important.prefix}
           </span>{" "}
           {commonStrings.important.emailVerification}
         </p>
-        <p className="text-center text-xs mt-2">{commonStrings.copyright}</p>
+        <p className="text-left text-xs mt-2">{commonStrings.copyright}</p>
       </div>
     </div>
   );

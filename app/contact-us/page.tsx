@@ -337,7 +337,7 @@ export default function ContactUs() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-center py-12"
+                className="text-left py-12"
               >
                 <div className="text-[#8DC63F] text-6xl mb-4">✓</div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">
@@ -521,7 +521,7 @@ export default function ContactUs() {
                 </div>
 
                 {errors.general && (
-                  <p className="text-xs text-red-500 mt-2 text-center">
+                  <p className="text-xs text-red-500 mt-2 text-left">
                     {errors.general}
                   </p>
                 )}
@@ -551,7 +551,7 @@ export default function ContactUs() {
         </div>
 
         {/* Social Media Section */}
-        <div className="mt-16 text-center bg-white py-8">
+        <div className="mt-16 text-left bg-white py-8">
           <h3 className="text-xl font-semibold text-gray-800 mb-6">
             Follow us on social media and take control of your finances
           </h3>

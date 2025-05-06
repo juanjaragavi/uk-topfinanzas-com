@@ -282,7 +282,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     height={60}
                     className="rounded-xl mb-4 sm:mb-0 sm:mr-4"
                   />
-                  <div className="text-center sm:text-left">
+                  <div className="text-left sm:text-left">
                     <h3 className="text-h3 mb-1">{author}</h3>
                     <p className="text-body mb-2">
                       Financial expert with over 10 years of experience in
@@ -325,7 +325,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
               {/* Comments section */}
               <div className="mt-8 pt-4 border-t border-gray-200">
                 <h3 className="text-h3 mb-4">Comments</h3>
-                <div className="bg-gray-50 p-4 rounded-xl text-center">
+                <div className="bg-gray-50 p-4 rounded-xl text-left">
                   <p className="text-body mb-3">
                     Be the first to share your thoughts on this article.
                   </p>

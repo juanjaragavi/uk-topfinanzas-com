@@ -93,7 +93,7 @@ export default function MonzoPersonalLoanPage() {
                 </div>
               </div>
 
-              <div className="text-center my-8">
+              <div className="text-left my-8">
                 <Link href="/financial-solutions/monzo-personal-loan-requirements">
                   <Button className="bg-[#FF4D56] hover:bg-red-500 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                     View Requirements
@@ -267,7 +267,7 @@ export default function MonzoPersonalLoanPage() {
                   Loans present a compelling alternative to traditional lenders.
                 </p>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link href="/financial-solutions/monzo-personal-loan-requirements">
                     <Button className="bg-[#FF4D56] hover:bg-red-500 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       View Requirements

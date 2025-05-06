@@ -244,7 +244,7 @@ export default function CreditCardForm() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
               />
             </div>
-            <div className="text-center text-sm text-gray-600">
+            <div className="text-left text-sm text-gray-600">
               {progress}
               {formStrings.progressBar.complete}
               {progress < 100

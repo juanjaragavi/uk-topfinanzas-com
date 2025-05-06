@@ -450,7 +450,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link href="https://fundingxchange.co.uk/" target="_blank">
                     <Button className="bg-[#008C95] hover:bg-teal-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Visit Funding Xchange Website

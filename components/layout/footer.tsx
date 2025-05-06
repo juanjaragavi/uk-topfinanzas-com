@@ -195,7 +195,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="text-center border-t border-white/20 pt-6">
+        <div className="text-left border-t border-white/20 pt-6">
           <p className="footer-meta text-xs md:text-sm font-light">
             {" "}
             {/* Style Update */}

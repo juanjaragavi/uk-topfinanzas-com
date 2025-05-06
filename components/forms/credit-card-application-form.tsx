@@ -56,7 +56,7 @@ export const CreditCardApplicationForm = () => {
         animate={{ opacity: 1 }}
         className="bg-white p-8 rounded-xl shadow-md"
       >
-        <div className="text-center">
+        <div className="text-left">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -138,7 +138,7 @@ export const CreditCardApplicationForm = () => {
                   step
                 )}
               </div>
-              <div className="text-xs mt-2 text-center">
+              <div className="text-xs mt-2 text-left">
                 {step === 1
                   ? "Personal Info"
                   : step === 2

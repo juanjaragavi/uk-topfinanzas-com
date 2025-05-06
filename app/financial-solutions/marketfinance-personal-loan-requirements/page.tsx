@@ -462,7 +462,7 @@ export default function MarketFinancePersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link href="https://marketfinance.com/" target="_blank">
                     <Button className="bg-[#003DA5] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Visit MarketFinance Website

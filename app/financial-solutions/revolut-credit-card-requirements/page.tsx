@@ -513,7 +513,7 @@ export default function RevolutCreditCardRequirementsPage() {
                   international outlook.
                 </p>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link
                     href="https://www.revolut.com/credit-card"
                     target="_blank"

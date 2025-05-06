@@ -97,7 +97,7 @@ export default function FundingXchangePersonalLoanPage() {
                 </div>
               </div>
 
-              <div className="text-center my-8">
+              <div className="text-left my-8">
                 <Link href="/financial-solutions/funding-xchange-personal-loan-requirements">
                   <Button className="bg-[#008C95] hover:bg-teal-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                     Learn About the Process
@@ -332,7 +332,7 @@ export default function FundingXchangePersonalLoanPage() {
                   data-led platform.
                 </p>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link href="/financial-solutions/funding-xchange-personal-loan-requirements">
                     <Button className="bg-[#008C95] hover:bg-teal-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Learn About the Process

@@ -462,7 +462,7 @@ export default function LloydsBankPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link
                     href="https://www.lloydsbank.com/personal-loans.html"
                     target="_blank"

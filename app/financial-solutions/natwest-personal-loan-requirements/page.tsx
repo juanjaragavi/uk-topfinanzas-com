@@ -461,7 +461,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link
                     href="https://personal.natwest.com/personal/loans.html"
                     target="_blank"

@@ -73,7 +73,7 @@ export function FeaturedPostsGrid({
       {/* End of removed animation wrappers */}
 
       {filteredPosts.length === 0 && (
-        <div className="text-center py-12 bg-gray-50 rounded-lg">
+        <div className="text-left py-12 bg-gray-50 rounded-lg">
           <p className="text-gray-500">No articles found.</p>
         </div>
       )}

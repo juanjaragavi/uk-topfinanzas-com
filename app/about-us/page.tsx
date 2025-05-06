@@ -373,7 +373,7 @@ export default function AboutUs() {
           </section>
 
           <section className="mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-left">
               Testimonials
             </h2>
 

@@ -97,7 +97,7 @@ export default function FleximizePersonalLoanPage() {
                 </div>
               </div>
 
-              <div className="text-center my-8">
+              <div className="text-left my-8">
                 <Link href="/financial-solutions/fleximize-personal-loan-requirements">
                   <Button className="bg-[#6D2C91] hover:bg-purple-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                     View Requirements
@@ -321,7 +321,7 @@ export default function FleximizePersonalLoanPage() {
                   Fleximize offers a compelling and supportive lending solution.
                 </p>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link href="/financial-solutions/fleximize-personal-loan-requirements">
                     <Button className="bg-[#6D2C91] hover:bg-purple-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       View Requirements

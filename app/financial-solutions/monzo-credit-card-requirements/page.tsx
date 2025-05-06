@@ -496,7 +496,7 @@ export default function MonzoCreditCardRequirementsPage() {
                   approach to managing credit.
                 </p>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link href="https://monzo.com/flex/" target="_blank">
                     <Button className="bg-[#FF4D56] hover:bg-red-500 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Visit Official Website

@@ -503,7 +503,7 @@ export default function HSBCPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link
                     href="https://www.hsbc.co.uk/loans/products/personal/"
                     target="_blank"

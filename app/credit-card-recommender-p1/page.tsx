@@ -107,7 +107,7 @@ export default function CreditCardRecommenderPage() {
               </Link>
             </div>
 
-            <p className="text-center text-sm mb-6">
+            <p className="text-left text-sm mb-6">
               <Link
                 className="text-blue-500"
                 href="/financial-solutions/halifax-world-elite-mastercard-requirements"

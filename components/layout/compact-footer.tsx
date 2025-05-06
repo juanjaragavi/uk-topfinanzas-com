@@ -24,7 +24,7 @@ export function CompactFooter() {
         </div>
 
         {/* Copyright Text Block */}
-        <div className="text-center mb-4">
+        <div className="text-left mb-4">
           <p className="text-xs uppercase tracking-wide text-white">
             ALL RIGHTS RESERVED, ©TOP NETWORKS INC 2025. REPRODUCTION IN WHOLE
             OR IN PART BY ANY MEANS OR FORM WITHOUT WRITTEN AND EXPRESS
@@ -33,7 +33,7 @@ export function CompactFooter() {
         </div>
 
         {/* Bottom Links */}
-        <div className="mt-20 text-center text-xs text-white">
+        <div className="mt-20 text-left text-xs text-white">
           <span className="text-white">A Product of TOP NETWORKS INC. | </span>
           <span className="text-white">
             {footerNavigation.legalLinks.map((link, index) => (

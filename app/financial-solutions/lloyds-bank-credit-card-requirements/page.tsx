@@ -369,7 +369,7 @@ export default function LloydsBankCreditCardRequirementsPage() {
                   programs, you might want to explore other options.
                 </p>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link
                     href="https://www.lloydsbank.com/credit-cards.html"
                     target="_blank"

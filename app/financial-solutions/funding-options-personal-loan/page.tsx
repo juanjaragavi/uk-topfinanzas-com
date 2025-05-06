@@ -98,7 +98,7 @@ export default function FundingOptionsPersonalLoanPage() {
                 </div>
               </div>
 
-              <div className="text-center my-8">
+              <div className="text-left my-8">
                 <Link href="/financial-solutions/funding-options-personal-loan-requirements">
                   <Button className="bg-[#FDB913] hover:bg-yellow-500 text-black font-medium text-md py-2 px-8 rounded-full w-full">
                     Learn More About the Process
@@ -331,7 +331,7 @@ export default function FundingOptionsPersonalLoanPage() {
                   specific business needs.
                 </p>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link href="/financial-solutions/funding-options-personal-loan-requirements">
                     <Button className="bg-[#FDB913] hover:bg-yellow-500 text-black font-medium text-md py-2 px-8 rounded-full w-full">
                       Learn More About the Process

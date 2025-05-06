@@ -28,14 +28,14 @@ export default function Step1({ formData, updateFormData }: Step1Props) {
   return (
     <div className="space-y-4">
       <ProgressIndicator step={1} />
-      <div className="text-center">
-        <h2 className="text-md font-bold text-center text-gray-950">
+      <div className="text-left">
+        <h2 className="text-md font-bold text-left text-gray-950">
           {step1Strings.title}
         </h2>
       </div>
 
       <motion.h1
-        className="text-xl leading-tight font-bold text-center text-[#2E74B5]"
+        className="text-xl leading-tight font-bold text-left text-[#2E74B5]"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
@@ -67,7 +67,7 @@ export default function Step1({ formData, updateFormData }: Step1Props) {
             <VisitorCounter />
           </div>
         </div>
-        <p className="text-center text-xs text-gray-500">
+        <p className="text-left text-xs text-gray-500">
           {commonStrings.copyright}
         </p>
       </div>

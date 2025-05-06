@@ -94,7 +94,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
               {...props}
             />
             {props.alt && (
-              <span className="block text-center text-sm text-gray-500 mt-2">
+              <span className="block text-left text-sm text-gray-500 mt-2">
                 {props.alt}
               </span>
             )}
@@ -115,7 +115,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             className="rounded-xl mx-auto"
           />
           {props.alt && (
-            <span className="block text-center text-sm text-gray-500 mt-2">
+            <span className="block text-left text-sm text-gray-500 mt-2">
               {props.alt}
             </span>
           )}

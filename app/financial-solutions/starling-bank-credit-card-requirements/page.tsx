@@ -504,7 +504,7 @@ export default function StarlingBankCreditCardRequirementsPage() {
                   any consumer seeking a more modern approach to credit.
                 </p>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link
                     href="https://www.starlingbank.com/travel/"
                     target="_blank"

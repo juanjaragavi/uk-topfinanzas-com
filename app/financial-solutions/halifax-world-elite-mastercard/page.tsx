@@ -91,7 +91,7 @@ export default function HalifaxWorldEliteMastercardPage() {
                 </div>
               </div>
 
-              <div className="text-center my-8">
+              <div className="text-left my-8">
                 <Link href="/financial-solutions/halifax-world-elite-mastercard-requirements">
                   <Button className="bg-[#004C9F] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                     View Requirements
@@ -336,7 +336,7 @@ export default function HalifaxWorldEliteMastercardPage() {
                   life.
                 </p>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link href="/financial-solutions/halifax-world-elite-mastercard-requirements">
                     <Button className="bg-[#004C9F] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       View Requirements

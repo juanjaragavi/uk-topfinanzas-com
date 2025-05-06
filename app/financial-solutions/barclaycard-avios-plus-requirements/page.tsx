@@ -353,7 +353,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   derive enough value from its features to justify the cost.
                 </p>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link
                     href="https://www.barclaycard.co.uk/personal/credit-cards/avios-plus"
                     target="_blank"

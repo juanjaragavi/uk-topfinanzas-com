@@ -476,7 +476,7 @@ export default function BarclaysPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link
                     href="https://www.barclays.co.uk/loans/personal-loan/"
                     target="_blank"

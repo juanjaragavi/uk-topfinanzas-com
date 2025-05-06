@@ -468,7 +468,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link
                     href="https://www.santander.co.uk/personal/loans"
                     target="_blank"

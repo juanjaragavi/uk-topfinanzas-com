@@ -443,7 +443,7 @@ export default function NatWestCreditCardRequirementsPage() {
                   options that specialize in these areas.
                 </p>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link
                     href="https://www.natwest.com/credit-cards.html"
                     target="_blank"

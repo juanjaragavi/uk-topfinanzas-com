@@ -478,7 +478,7 @@ export default function StarlingBankPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="text-center my-8">
+                <div className="text-left my-8">
                   <Link
                     href="https://www.starlingbank.com/loans/"
                     target="_blank"
