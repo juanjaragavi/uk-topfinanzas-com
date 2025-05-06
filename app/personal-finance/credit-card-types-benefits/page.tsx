@@ -23,7 +23,7 @@ export default function CreditCardTypesBenefitsPage() {
             </h1>
 
             <div className="my-8">
-              <p className="text-lg text-gray-800 mb-4 leading-5">
+              <p className="text-left sm:text-left text-lg text-gray-800 mb-4 leading-5">
                 Discover everything you need to know about credit cards, from
                 types and benefits to tips for responsible usage and maintaining
                 healthy finances.
@@ -47,7 +47,7 @@ export default function CreditCardTypesBenefitsPage() {
                 />
               </div>
 
-              <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+              <p className="text-left sm:text-left text-gray-800 mb-4 text-sm leading-5 font-light">
                 Credit cards are a powerful financial tool in our daily lives,
                 but do we really know how to use them to our advantage? This
                 guide aims to demystify everything related to credit cards, from
@@ -57,10 +57,10 @@ export default function CreditCardTypesBenefitsPage() {
               </p>
 
               <section className="my-6">
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-left sm:text-left text-xl font-bold text-gray-800 mb-4">
                   What is a Credit Card?
                 </h2>
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-left sm:text-left text-gray-800 mb-4 text-sm leading-5 font-light">
                   A credit card is much more than just a piece of plastic in
                   your wallet. It’s a financial tool that, if used correctly,
                   can be a great ally in managing your finances. Essentially, a
@@ -68,7 +68,7 @@ export default function CreditCardTypesBenefitsPage() {
                   to a limit set by the issuer, with the promise to repay that
                   amount plus any interest that may apply.
                 </p>
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-left sm:text-left text-gray-800 mb-4 text-sm leading-5 font-light">
                   Unlike debit cards, where money is directly withdrawn from
                   your bank account, a credit card offers temporary credit. The
                   bank or financial institution lends you money for your
@@ -78,7 +78,7 @@ export default function CreditCardTypesBenefitsPage() {
                   protections. However, it requires responsibility: smart and
                   controlled use is key to avoiding unnecessary debt.
                 </p>
-                <blockquote className="border-l-4 border-gray-300 pl-4 italic text-gray-600 my-4 text-sm">
+                <blockquote className="text-left sm:text-left border-l-4 border-gray-300 pl-4 italic text-gray-600 my-4 text-sm">
                   Credit cards can empower your financial independence—use them
                   wisely to enjoy benefits while staying on track toward
                   stability and freedom.
@@ -95,7 +95,7 @@ export default function CreditCardTypesBenefitsPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Types of Credit Cards
                 </h2>
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-left sm:text-left text-gray-800 mb-4 text-sm leading-5 font-light">
                   The options for credit cards are numerous and designed to meet
                   different needs and lifestyles. Here are some of the most
                   common types:
@@ -185,10 +185,10 @@ export default function CreditCardTypesBenefitsPage() {
               </section>
 
               <section className="my-6">
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-left sm:text-left text-xl font-bold text-gray-800 mb-4">
                   How Do Credit Cards Work?
                 </h2>
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-left sm:text-left text-gray-800 mb-4 text-sm leading-5 font-light">
                   The basic functioning of a credit card is relatively simple,
                   but knowing certain details will help you use it more
                   strategically:
@@ -236,10 +236,10 @@ export default function CreditCardTypesBenefitsPage() {
               />
 
               <section className="my-6">
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-left sm:text-left text-xl font-bold text-gray-800 mb-4">
                   Recent Trends in Credit Card Usage
                 </h2>
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-left sm:text-left text-gray-800 mb-4 text-sm leading-5 font-light">
                   The credit card market is constantly evolving, reflecting
                   changes in spending habits and technology:
                 </p>
@@ -272,10 +272,10 @@ export default function CreditCardTypesBenefitsPage() {
               </section>
 
               <section className="my-6">
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-left sm:text-left text-xl font-bold text-gray-800 mb-4">
                   Benefits and Risks of Credit Cards
                 </h2>
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-left sm:text-left text-gray-800 mb-4 text-sm leading-5 font-light">
                   Credit cards offer many advantages, but they also come with
                   certain risks. It’s essential to understand both sides.
                 </p>
@@ -311,7 +311,7 @@ export default function CreditCardTypesBenefitsPage() {
                   </li>
                 </ul>
 
-                <h3 className="text-lg font-semibold text-gray-700 mb-2 mt-4">
+                <h3 className="text-left sm:text-left text-lg font-semibold text-gray-700 mb-2 mt-4">
                   Risks:
                 </h3>
                 <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800">
@@ -345,10 +345,10 @@ export default function CreditCardTypesBenefitsPage() {
               />
 
               <section className="my-6">
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-left sm:text-left text-xl font-bold text-gray-800 mb-4">
                   Tips for Responsible Credit Card Use
                 </h2>
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-left sm:text-left text-gray-800 mb-4 text-sm leading-5 font-light">
                   To make the most of your credit card and avoid problems:
                 </p>
                 <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800">
@@ -386,10 +386,10 @@ export default function CreditCardTypesBenefitsPage() {
               </section>
 
               <section className="my-6">
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-left sm:text-left text-xl font-bold text-gray-800 mb-4">
                   How to Choose the Best Credit Card
                 </h2>
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-left sm:text-left text-gray-800 mb-4 text-sm leading-5 font-light">
                   To choose the best credit card for you:
                 </p>
                 <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800">
@@ -423,17 +423,17 @@ export default function CreditCardTypesBenefitsPage() {
               </section>
 
               <section className="my-6">
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-left sm:text-left text-xl font-bold text-gray-800 mb-4">
                   Your Path to Financial Freedom: Take Control with Knowledge
                 </h2>
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-left sm:text-left text-gray-800 mb-4 text-sm leading-5 font-light">
                   Credit cards are more than just a payment tool; they are a way
                   to manage cash flow, earn rewards, and build your financial
                   profile. By understanding how they work, choosing the right
                   card for your needs, and managing them responsibly, you can
                   enjoy their benefits and avoid common pitfalls.
                 </p>
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-left sm:text-left text-gray-800 mb-4 text-sm leading-5 font-light">
                   Every informed financial decision brings you one step closer
                   to stability and financial freedom. Take control today and
                   enjoy a healthier, more prosperous financial life!

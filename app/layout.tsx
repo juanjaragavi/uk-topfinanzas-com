@@ -162,12 +162,6 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
 
-        {/* ADZep AutoZep Paid Advertising tag */}
-        <script
-          data-cfasync="false"
-          src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
-        ></script>
-
         {/* Module/nomodule pattern for modern browsers */}
         <script
           type="module"
@@ -225,6 +219,11 @@ export default function RootLayout({
           {process.env.NODE_ENV === "development" && <UtmMonitor />}
         </Suspense>
         {children}
+        {/* ADZep AutoZep Paid Advertising tag */}
+        <script
+          data-cfasync="false"
+          src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
+        ></script>
       </body>
     </html>
   );

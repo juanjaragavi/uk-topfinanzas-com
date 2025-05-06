@@ -87,12 +87,6 @@ export default function QuizLayout({
           crossOrigin="anonymous"
         />
 
-        {/* ADZep AutoZep Paid Advertising tag */}
-        <script
-          data-cfasync="false"
-          src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
-        ></script>
-
         {/* Module/nomodule pattern for modern browsers */}
         <script
           type="module"
