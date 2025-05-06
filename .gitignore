@@ -25,6 +25,7 @@ ecosystem.config.js
 *.env*
 !.env.example
 .env.production
+.env.local
 
 # vercel
 .vercel
