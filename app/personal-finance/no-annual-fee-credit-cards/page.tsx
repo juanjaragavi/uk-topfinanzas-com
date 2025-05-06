@@ -3,7 +3,6 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { CompactFooter } from "@/components/layout/compact-footer"; // Corrected path
 import { Header } from "@/components/layout/header"; // Corrected path and component
 import Image from "next/image";
-import SocialShareButtons from "@/components/ui/social-share-buttons"; // Import the new component
 
 export default function NoAnnualFeeCreditCards() {
   return (
@@ -23,9 +22,6 @@ export default function NoAnnualFeeCreditCards() {
           while enjoying perks like cashback rewards, flexible payment options,
           and tools to manage their finances effectively.
         </p>
-
-        {/* Add the Social Share Buttons here */}
-        <SocialShareButtons postUrl="/personal-finance/no-annual-fee-credit-cards" />
 
         <div className="my-8">
           <Image

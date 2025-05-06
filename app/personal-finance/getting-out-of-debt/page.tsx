@@ -3,7 +3,6 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image";
 import Link from "next/link";
-import SocialShareButtons from "@/components/ui/social-share-buttons"; // Import the new component
 import { Ad } from "@/components/ui/ad";
 
 export default function GettingOutOfDebtPage() {
@@ -27,9 +26,6 @@ export default function GettingOutOfDebtPage() {
                 getting out of debt, building an emergency fund, and taking
                 control of your finances.
               </p>
-
-              {/* Add the Social Share Buttons here */}
-              <SocialShareButtons postUrl="/personal-finance/getting-out-of-debt" />
 
               <div className="my-8">
                 <Image

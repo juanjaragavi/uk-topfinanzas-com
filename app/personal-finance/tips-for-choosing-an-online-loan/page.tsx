@@ -5,7 +5,6 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { Ad } from "@/components/ui/ad";
 import Image from "next/image";
 import Link from "next/link";
-import SocialShareButtons from "@/components/ui/social-share-buttons"; // Import the new component
 
 export default function TipsForChoosingAnOnlineLoanPage() {
   return (
@@ -28,9 +27,6 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                 essential tips to find the best rates and terms for your
                 financial needs.
               </p>
-
-              {/* Add the Social Share Buttons here */}
-              <SocialShareButtons postUrl="/personal-finance/tips-for-choosing-an-online-loan" />
 
               <Ad
                 adId="uk_topfinanzas_1"

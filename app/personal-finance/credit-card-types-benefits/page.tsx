@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image"; // Assuming you need Image for the future
 import Link from "next/link"; // Assuming you need Link for the future
-import SocialShareButtons from "@/components/ui/social-share-buttons"; // Import the new component
 import { Ad } from "@/components/ui/ad"; // Import Ad
 
 export default function CreditCardTypesBenefitsPage() {
@@ -28,9 +27,6 @@ export default function CreditCardTypesBenefitsPage() {
                 types and benefits to tips for responsible usage and maintaining
                 healthy finances.
               </p>
-
-              {/* Add the Social Share Buttons here */}
-              <SocialShareButtons postUrl="/personal-finance/credit-card-types-benefits" />
 
               {/* TODO: Update image if needed */}
               <div className="my-8">

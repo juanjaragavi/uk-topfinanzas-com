@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import SocialShareButtons from "@/components/ui/social-share-buttons"; // Import the new component
 import { Ad } from "@/components/ui/ad";
 
 export function generateMetadata() {
@@ -40,9 +39,6 @@ export default function TravelCreditCardsPage() {
                 travelers, highlighting cards with no foreign transaction fees,
                 travel insurance, and rewarding points systems.
               </p>
-
-              {/* Add the Social Share Buttons here */}
-              <SocialShareButtons postUrl="/personal-finance/travel-credit-cards" />
 
               <Ad
                 adId="uk_topfinanzas_1"

@@ -1,9 +1,7 @@
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import SocialShareButtons from "@/components/ui/social-share-buttons"; // Import the new component
 import Image from "next/image";
-import { Ad } from "@/components/ui/ad";
 
 export default function BestPersonalLoansPage() {
   return (
@@ -26,9 +24,6 @@ export default function BestPersonalLoansPage() {
                 comprehensive guide to the UK's top lenders, rates, and
                 application requirements.
               </p>
-
-              {/* Add the Social Share Buttons here */}
-              <SocialShareButtons postUrl="/personal-finance/best-personal-loans" />
 
               <div className="my-8">
                 <Image
@@ -67,11 +62,7 @@ export default function BestPersonalLoansPage() {
                   the lender's criteria.
                 </p>
 
-                <Ad
-                  adId="uk_topfinanzas_1"
-                  format="horizontal"
-                  className="my-8"
-                />
+                <div className="my-8" id="uk_topfinanzas_1" />
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Top Personal Loan Providers in the UK
@@ -140,11 +131,7 @@ export default function BestPersonalLoansPage() {
                   other lenders (subject to terms and conditions).
                 </p>
 
-                <Ad
-                  adId="uk_topfinanzas_2"
-                  format="horizontal"
-                  className="my-8"
-                />
+                <div className="my-8" id="uk_topfinanzas_2" />
 
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">
                   Admiral
@@ -188,11 +175,7 @@ export default function BestPersonalLoansPage() {
                   loan process.
                 </p>
 
-                <Ad
-                  adId="uk_topfinanzas_3"
-                  format="horizontal"
-                  className="my-8"
-                />
+                <div className="my-8" id="uk_topfinanzas_3" />
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   How to Choose the Right Personal Loan
@@ -303,11 +286,7 @@ export default function BestPersonalLoansPage() {
                   </li>
                 </ul>
 
-                <Ad
-                  adId="uk_topfinanzas_4"
-                  format="horizontal"
-                  className="my-8"
-                />
+                <div className="my-8" id="uk_topfinanzas_4" />
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Finding Your Ideal Financial Solution

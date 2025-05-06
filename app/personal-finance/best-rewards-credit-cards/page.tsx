@@ -1,10 +1,8 @@
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
-import { Button } from "@/components/ui/button";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image";
 import Link from "next/link";
-import SocialShareButtons from "@/components/ui/social-share-buttons"; // Import the new component
 
 import { Ad } from "@/components/ui/ad";
 
@@ -29,9 +27,6 @@ export default function BestRewardsCreditCardsPage() {
                 spending into valuable perks. From cashback to points and miles,
                 find the perfect card.
               </p>
-
-              {/* Add the Social Share Buttons here */}
-              <SocialShareButtons postUrl="/personal-finance/best-rewards-credit-cards" />
 
               {/* TODO: Update image if needed */}
               <div className="my-8">

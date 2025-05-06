@@ -3,7 +3,6 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image"; // Keep Image import
 import Link from "next/link"; // Keep Link import
-import SocialShareButtons from "@/components/ui/social-share-buttons"; // Import the new component
 import { Ad } from "@/components/ui/ad";
 
 export default function UnderstandingCreditCardInterestRatesPage() {
@@ -27,9 +26,6 @@ export default function UnderstandingCreditCardInterestRatesPage() {
                 calculations, and discover ways to manage and minimize your debt
                 effectively.
               </p>
-
-              {/* Add the Social Share Buttons here */}
-              <SocialShareButtons postUrl="/personal-finance/understanding-credit-card-interest-rates" />
 
               <div className="my-8">
                 <Image

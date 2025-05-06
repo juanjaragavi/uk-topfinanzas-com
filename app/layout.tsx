@@ -213,7 +213,7 @@ export default function RootLayout({
         <GoogleTagManager />
         <ResourceHints />
       </head>
-      <body className={`${poppins.variable} font-sans`}>
+      <body className={`${poppins.variable} font-sans text-left sm:text-left`}>
         <GoogleTagManagerNoScript />
         <Suspense fallback={null}>
           <UtmPersister />
