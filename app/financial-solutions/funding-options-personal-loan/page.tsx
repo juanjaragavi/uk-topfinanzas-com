@@ -31,7 +31,7 @@ export default function FundingOptionsPersonalLoanPage() {
               Funding Options: Connecting SMEs with the Right Business Finance
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 Funding Options is a leading business finance marketplace that
                 simplifies the process for UK SMEs to find and compare funding
@@ -106,7 +106,7 @@ export default function FundingOptionsPersonalLoanPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718138018-fotosprestamo-fundingoption1uk.webp"
                   alt="Funding Options Business Finance Marketplace"

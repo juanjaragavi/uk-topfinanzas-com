@@ -28,7 +28,7 @@ export default function NatWestPersonalLoanPage() {
               NatWest Personal Loan: Flexible Financing from a Leading UK Bank
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 NatWest Personal Loans offer competitive rates, adaptable
                 repayment options, and the reliability of one of the UK's
@@ -104,7 +104,7 @@ export default function NatWestPersonalLoanPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718136156-fotosprestamo-nawest1uk.webp"
                   alt="NatWest Personal Loan"
@@ -172,7 +172,7 @@ export default function NatWestPersonalLoanPage() {
                 </p>
 
                 {/* Ad Block: Credit Cards */}
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"

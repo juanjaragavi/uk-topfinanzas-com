@@ -30,7 +30,7 @@ export default function FundingCirclePersonalLoanPage() {
               Funding Circle Business Loan: Fast, Flexible Finance for SMEs
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 Funding Circle provides fast and flexible business loans
                 tailored to the needs of UK SMEs, leveraging fintech innovation
@@ -104,7 +104,7 @@ export default function FundingCirclePersonalLoanPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718136824-fotosprestamo-fundingcircle1uk.webp"
                   alt="Funding Circle Business Loan"

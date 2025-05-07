@@ -29,7 +29,7 @@ export default function StarlingBankCreditCardRequirementsPage() {
               Requirements for the Starling Bank Credit Card
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 The Starling Bank Credit Card offers transparent, ethical
                 banking with innovative digital features and award-winning
@@ -39,7 +39,7 @@ export default function StarlingBankCreditCardRequirementsPage() {
               {/* Add Social Share Buttons */}
               <SocialShareButtons postUrl="/financial-solutions/starling-bank-credit-card-requirements" />
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/credit-cards/719907598-top_prestamos-y-tarjetas-uk_v1-20.webp"
                   alt="Starling Bank Credit Card"
@@ -324,7 +324,7 @@ export default function StarlingBankCreditCardRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Personal-loans-1.webp"
@@ -474,7 +474,7 @@ export default function StarlingBankCreditCardRequirementsPage() {
                   </Link>
                 </p>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/getting-out-of-debt">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Debt-management-1.webp"

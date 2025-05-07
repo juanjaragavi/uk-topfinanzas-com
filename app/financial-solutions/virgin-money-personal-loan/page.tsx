@@ -30,7 +30,7 @@ export default function VirginMoneyPersonalLoanPage() {
               Virgin Money Personal Loan: Financing with Added Sparkle
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 Virgin Money Personal Loans combine competitive financing
                 options with the potential for lifestyle benefits through the
@@ -103,7 +103,7 @@ export default function VirginMoneyPersonalLoanPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718136330-fotosprestamo-virginmoney1uk.webp"
                   alt="Virgin Money Personal Loan"
@@ -167,7 +167,7 @@ export default function VirginMoneyPersonalLoanPage() {
                 </p>
 
                 {/* Ad Block: Credit Cards - Updated Image attributes */}
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"

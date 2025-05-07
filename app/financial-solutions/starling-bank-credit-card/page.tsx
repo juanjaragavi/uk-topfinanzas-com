@@ -29,7 +29,7 @@ export default function StarlingBankCreditCardPage() {
               Starling Bank Credit Card: Digital Banking with Purpose
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 The Starling Bank Credit Card extends the award-winning digital
                 bank's commitment to transparent, customer-first banking with a
@@ -104,7 +104,7 @@ export default function StarlingBankCreditCardPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/credit-cards/719907598-top_prestamos-y-tarjetas-uk_v1-20.webp"
                   alt="Starling Bank Credit Card"

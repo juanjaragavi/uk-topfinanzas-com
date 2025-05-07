@@ -30,7 +30,7 @@ export default function MarketFinancePersonalLoanPage() {
               MarketFinance: Smart Business Finance Solutions for UK SMEs
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 MarketFinance offers a range of fast, flexible finance options
                 for UK businesses, including business loans and invoice finance,
@@ -97,7 +97,7 @@ export default function MarketFinancePersonalLoanPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718136896-fotosprestamo-fundingchange1uk.webp"
                   alt="MarketFinance Business Solutions"
@@ -164,7 +164,7 @@ export default function MarketFinancePersonalLoanPage() {
                   bank processes.
                 </p>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"

@@ -2,7 +2,7 @@
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { Ad } from "@/components/ui/ad";
+
 import { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";

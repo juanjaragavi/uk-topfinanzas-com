@@ -29,7 +29,7 @@ export default function CurveCreditCardRequirementsPage() {
               Requirements for the Curve Card
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 The Curve Card revolutionizes how you manage your finances by
                 consolidating all your payment cards into one smart card with
@@ -39,7 +39,7 @@ export default function CurveCreditCardRequirementsPage() {
               {/* Add the Social Share Buttons here */}
               <SocialShareButtons postUrl="/financial-solutions/curve-credit-card-requirements" />
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/credit-cards/719907706-top_prestamos-y-tarjetas-uk_v1-23.webp"
                   alt="Curve Credit Card"
@@ -325,7 +325,7 @@ export default function CurveCreditCardRequirementsPage() {
                 </div>
 
                 {/* Ad Block 1: Personal Loans */}
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Personal-loans-1.webp"
@@ -475,7 +475,7 @@ export default function CurveCreditCardRequirementsPage() {
                 </p>
 
                 {/* Ad Block 2: Debt Management */}
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/getting-out-of-debt">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Debt-management-1.webp"

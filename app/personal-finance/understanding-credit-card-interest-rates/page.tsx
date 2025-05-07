@@ -3,7 +3,6 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image"; // Keep Image import
 import Link from "next/link"; // Keep Link import
-import { Ad } from "@/components/ui/ad";
 
 export default function UnderstandingCreditCardInterestRatesPage() {
   return (
@@ -20,14 +19,14 @@ export default function UnderstandingCreditCardInterestRatesPage() {
               Understanding Credit Card Interest Rates - A Consumer Guide
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Learn how credit card interest rates work, including APR
                 calculations, and discover ways to manage and minimize your debt
                 effectively.
               </p>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/download-5-2.webp"
                   alt="Understanding Credit Card Interest Rates"
@@ -85,12 +84,6 @@ export default function UnderstandingCreditCardInterestRatesPage() {
                 </p>
               </section>
 
-              <Ad
-                adId="uk_topfinanzas_1"
-                format="horizontal"
-                className="my-8"
-              />
-
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Factors Affecting Interest Rates
@@ -122,12 +115,6 @@ export default function UnderstandingCreditCardInterestRatesPage() {
                   </li>
                 </ul>
               </section>
-
-              <Ad
-                adId="uk_topfinanzas_2"
-                format="horizontal"
-                className="my-8"
-              />
 
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
@@ -189,12 +176,6 @@ export default function UnderstandingCreditCardInterestRatesPage() {
                   </li>
                 </ul>
               </section>
-
-              <Ad
-                adId="uk_topfinanzas_3"
-                format="horizontal"
-                className="my-8"
-              />
 
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
@@ -267,12 +248,6 @@ export default function UnderstandingCreditCardInterestRatesPage() {
                   taking control of your debt today!
                 </p>
               </section>
-
-              <Ad
-                adId="uk_topfinanzas_4"
-                format="horizontal"
-                className="my-8"
-              />
 
               {/* AI Content Disclaimer */}
               <AIContentDisclaimer />

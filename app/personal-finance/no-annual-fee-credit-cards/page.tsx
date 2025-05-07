@@ -1,4 +1,3 @@
-import { Ad } from "@/components/ui/ad";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { CompactFooter } from "@/components/layout/compact-footer"; // Corrected path
 import { Header } from "@/components/layout/header"; // Corrected path and component
@@ -23,7 +22,7 @@ export default function NoAnnualFeeCreditCards() {
           and tools to manage their finances effectively.
         </p>
 
-        <div className="my-8">
+        <div className="my-8 text-left sm:text-left">
           <Image
             src="https://media.topfinanzas.com/images/uk/Top_Finance_credit_cards_without_annual_fee.webp"
             alt="Rewards Credit Cards" // Updated Alt Text
@@ -86,8 +85,6 @@ export default function NoAnnualFeeCreditCards() {
           </ul>
         </section>
 
-        <Ad adId="uk_topfinanzas_1" format="horizontal" className="my-8" />
-
         <section className="my-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
             Types of No Annual Fee Cards
@@ -129,8 +126,6 @@ export default function NoAnnualFeeCreditCards() {
             </li>
           </ul>
         </section>
-
-        <Ad adId="uk_topfinanzas_2" format="horizontal" className="my-8" />
 
         <section className="my-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
@@ -180,8 +175,6 @@ export default function NoAnnualFeeCreditCards() {
             your goals.
           </p>
         </section>
-
-        <Ad adId="uk_topfinanzas_3" format="horizontal" className="my-8" />
 
         {/* AI Content Disclaimer */}
         <AIContentDisclaimer />

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image"; // Assuming you need Image for the future
 import Link from "next/link"; // Assuming you need Link for the future
-import { Ad } from "@/components/ui/ad"; // Import Ad
+ // Import Ad
 
 export default function CreditCardTypesBenefitsPage() {
   return (
@@ -21,7 +21,7 @@ export default function CreditCardTypesBenefitsPage() {
               Credit Cards - Types, Benefits, and Keys to Financial Health
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-left sm:text-left text-lg text-gray-800 mb-4 leading-5">
                 Discover everything you need to know about credit cards, from
                 types and benefits to tips for responsible usage and maintaining
@@ -29,7 +29,7 @@ export default function CreditCardTypesBenefitsPage() {
               </p>
 
               {/* TODO: Update image if needed */}
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/Top_Finanzas_Top_tarjeta_de_credito-1.webp"
                   alt="Credit Card Types" // Updated Alt Text
@@ -81,11 +81,7 @@ export default function CreditCardTypesBenefitsPage() {
                 </blockquote>
               </section>
 
-              <Ad
-                adId="uk_topfinanzas_1"
-                format="horizontal"
-                className="my-8"
-              />
+              
 
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
@@ -225,11 +221,7 @@ export default function CreditCardTypesBenefitsPage() {
                 </ul>
               </section>
 
-              <Ad
-                adId="uk_topfinanzas_2"
-                format="horizontal"
-                className="my-8"
-              />
+              
 
               <section className="my-6">
                 <h2 className="text-left sm:text-left text-xl font-bold text-gray-800 mb-4">
@@ -334,11 +326,7 @@ export default function CreditCardTypesBenefitsPage() {
                 </ul>
               </section>
 
-              <Ad
-                adId="uk_topfinanzas_3"
-                format="horizontal"
-                className="my-8"
-              />
+              
 
               <section className="my-6">
                 <h2 className="text-left sm:text-left text-xl font-bold text-gray-800 mb-4">

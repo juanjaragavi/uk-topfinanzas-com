@@ -30,7 +30,7 @@ export default function NationwidePersonalLoanPage() {
               Society
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 Nationwide Personal Loans offer competitive rates and flexible
                 terms, reflecting the building society's commitment to providing
@@ -101,7 +101,7 @@ export default function NationwidePersonalLoanPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718136476-fotosprestamo-nationwide1uk.webp"
                   alt="Nationwide Personal Loan"
@@ -168,7 +168,7 @@ export default function NationwidePersonalLoanPage() {
                   planning horizon.
                 </p>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"

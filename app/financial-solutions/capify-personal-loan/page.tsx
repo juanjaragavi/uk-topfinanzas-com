@@ -31,7 +31,7 @@ export default function CapifyPersonalLoanPage() {
               Capify: Flexible Financing Solutions for UK Businesses
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 Capify offers fast, accessible funding options tailored for UK
                 SMEs, including innovative Merchant Cash Advances (MCAs) and
@@ -103,7 +103,7 @@ export default function CapifyPersonalLoanPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718137374-fotosprestamo-capify1uk.webp"
                   alt="Capify Business Finance Solutions"

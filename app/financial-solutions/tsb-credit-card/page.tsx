@@ -29,7 +29,7 @@ export default function TSBCreditCardPage() {
               TSB Credit Card: Straightforward Banking for Everyday Life
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 The TSB Credit Card delivers a straightforward approach to
                 credit with practical features and competitive rates designed to
@@ -100,7 +100,7 @@ export default function TSBCreditCardPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/credit-cards/718645155-top_prestamos-y-tarjetas-uk_v1-06.webp"
                   alt="TSB Credit Card"
@@ -174,7 +174,7 @@ export default function TSBCreditCardPage() {
                 </p>
 
                 {/* Ad Block: Credit Cards */}
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"

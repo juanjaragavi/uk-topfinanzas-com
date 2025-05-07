@@ -28,7 +28,7 @@ export default function CurveCreditCardPage() {
               Curve Credit Card: Your Cards United in One Smart Solution
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 The Curve Card revolutionizes how you use credit and debit cards
                 by consolidating all your existing cards into a single smart
@@ -99,7 +99,7 @@ export default function CurveCreditCardPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/credit-cards/719907701-top_prestamos-y-tarjetas-uk_v1-22.webp"
                   alt="Curve Credit Card"
@@ -179,7 +179,7 @@ export default function CurveCreditCardPage() {
                   your existing financial products.
                 </p>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"

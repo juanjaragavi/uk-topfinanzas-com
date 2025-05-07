@@ -30,7 +30,7 @@ export default function FleximizePersonalLoanPage() {
               Fleximize: Truly Flexible Business Loans for SMEs
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 Fleximize offers innovative and highly flexible business loans
                 (Flexiloan and Flexiloan Lite) designed to adapt to the changing
@@ -105,7 +105,7 @@ export default function FleximizePersonalLoanPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718137416-fotosprestamo-fleximize1uk.webp"
                   alt="Fleximize Business Loans"

@@ -4,8 +4,6 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Ad } from "@/components/ui/ad";
-
 export default function BestRewardsCreditCardsPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col">
@@ -21,7 +19,7 @@ export default function BestRewardsCreditCardsPage() {
               Top Rewards Credit Cards to Maximize Your Spending
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Discover the best rewards credit cards that turn your everyday
                 spending into valuable perks. From cashback to points and miles,
@@ -29,7 +27,7 @@ export default function BestRewardsCreditCardsPage() {
               </p>
 
               {/* TODO: Update image if needed */}
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/Top_Finance_uk_credit_cards.webp"
                   alt="Rewards Credit Cards" // Updated Alt Text
@@ -124,12 +122,6 @@ export default function BestRewardsCreditCardsPage() {
                 </ul>
               </section>
 
-              <Ad
-                adId="uk_topfinanzas_1"
-                format="horizontal"
-                className="my-8"
-              />
-
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Key Features of Rewards Cards
@@ -170,12 +162,6 @@ export default function BestRewardsCreditCardsPage() {
                   </li>
                 </ul>
               </section>
-
-              <Ad
-                adId="uk_topfinanzas_2"
-                format="horizontal"
-                className="my-8"
-              />
 
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
@@ -222,12 +208,6 @@ export default function BestRewardsCreditCardsPage() {
                   turning everyday expenses into meaningful rewards today!
                 </p>
               </section>
-
-              <Ad
-                adId="uk_topfinanzas_3"
-                format="horizontal"
-                className="my-8"
-              />
 
               {/* AI Content Disclaimer */}
               <AIContentDisclaimer />

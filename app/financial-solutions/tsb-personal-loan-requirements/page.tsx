@@ -28,7 +28,7 @@ export default function TSBPersonalLoanRequirementsPage() {
               Requirements for TSB Personal Loans
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 TSB Personal Loans offer simple terms and competitive rates.
                 Understanding the eligibility criteria and application
@@ -37,7 +37,7 @@ export default function TSBPersonalLoanRequirementsPage() {
 
               <SocialShareButtons postUrl="/financial-solutions/tsb-personal-loan-requirements" />
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718136277-fotosprestamo-tbs2uk.webp"
                   alt="TSB Personal Loan Requirements"
@@ -292,7 +292,7 @@ export default function TSBPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Personal-loans-1.webp"
@@ -374,7 +374,7 @@ export default function TSBPersonalLoanRequirementsPage() {
                   </Link>
                 </p>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/getting-out-of-debt">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Debt-management-1.webp"

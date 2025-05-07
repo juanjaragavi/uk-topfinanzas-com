@@ -32,7 +32,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
               Requirements for the Halifax World Elite Mastercard
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 The Halifax World Elite Mastercard is a premium banking product
                 designed for customers seeking exceptional benefits,
@@ -42,7 +42,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
               {/* Add the Social Share Buttons here */}
               <SocialShareButtons postUrl="/financial-solutions/halifax-world-elite-mastercard-requirements" />
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/credit-cards/719906765-top_prestamos-y-tarjetas-uk_v1-15.webp"
                   alt="Halifax World Elite Mastercard"
@@ -259,7 +259,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Personal-loans-1.webp"
@@ -350,7 +350,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                   </Link>
                 </p>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/getting-out-of-debt">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Debt-management-1.webp"

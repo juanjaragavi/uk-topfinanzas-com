@@ -32,7 +32,7 @@ export default function RevolutCreditCardRequirementsPage() {
               Requirements for the Revolut Credit Card
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 The Revolut Credit Card offers multi-currency capabilities,
                 global-first features, and innovative security controls for
@@ -42,7 +42,7 @@ export default function RevolutCreditCardRequirementsPage() {
               {/* Add Social Share Buttons */}
               <SocialShareButtons postUrl="/financial-solutions/revolut-credit-card-requirements" />
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/credit-cards/718645629-top_prestamos-y-tarjetas-uk_v1-11.webp"
                   alt="Revolut Credit Card"
@@ -327,7 +327,7 @@ export default function RevolutCreditCardRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Personal-loans-1.webp"
@@ -482,7 +482,7 @@ export default function RevolutCreditCardRequirementsPage() {
                   </Link>
                 </p>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/getting-out-of-debt">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Debt-management-1.webp"

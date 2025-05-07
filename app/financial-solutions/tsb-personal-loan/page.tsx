@@ -29,7 +29,7 @@ export default function TSBPersonalLoanPage() {
               TSB Personal Loan: Simple, Fair Financing for Your Needs
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 TSB Personal Loans offer clear terms, competitive rates, and a
                 straightforward approach to borrowing, reflecting TSB's
@@ -101,7 +101,7 @@ export default function TSBPersonalLoanPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718136271-fotosprestamo-tbs1uk.webp"
                   alt="TSB Personal Loan"
@@ -166,7 +166,7 @@ export default function TSBPersonalLoanPage() {
                   remains affordable.
                 </p>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"

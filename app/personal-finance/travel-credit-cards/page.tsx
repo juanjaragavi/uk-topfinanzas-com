@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import { Ad } from "@/components/ui/ad";
+
 
 export function generateMetadata() {
   return {
@@ -40,11 +40,7 @@ export default function TravelCreditCardsPage() {
                 travel insurance, and rewarding points systems.
               </p>
 
-              <Ad
-                adId="uk_topfinanzas_1"
-                format="horizontal"
-                className="my-8"
-              />
+              
 
               <div className="my-8 bg-blue-50 p-6 rounded-xl">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
@@ -144,11 +140,7 @@ export default function TravelCreditCardsPage() {
                 </ul>
               </div>
 
-              <Ad
-                adId="uk_topfinanzas_2"
-                format="horizontal"
-                className="my-8"
-              />
+              
 
               <h2 className="text-2xl font-bold text-gray-800 my-5">
                 What Makes a Great Travel Credit Card?
@@ -303,11 +295,7 @@ export default function TravelCreditCardsPage() {
                 </div>
               </div>
 
-              <Ad
-                adId="uk_topfinanzas_3"
-                format="horizontal"
-                className="my-8"
-              />
+              
 
               <h2 className="text-2xl font-bold text-gray-800 my-5">
                 How to Choose the Right Travel Credit Card
@@ -482,11 +470,7 @@ export default function TravelCreditCardsPage() {
                 adventures.
               </p>
 
-              <Ad
-                adId="uk_topfinanzas_4"
-                format="horizontal"
-                className="my-8"
-              />
+              
 
               {/* AI Content Disclaimer */}
               <AIContentDisclaimer />

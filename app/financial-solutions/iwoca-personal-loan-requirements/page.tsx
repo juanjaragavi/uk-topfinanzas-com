@@ -30,7 +30,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
               Requirements for iwoca Flexi-Loans (Business Finance)
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 iwoca provides fast, flexible finance for UK SMEs. Understanding
                 their eligibility criteria and application process helps
@@ -39,7 +39,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
 
               <SocialShareButtons postUrl="/financial-solutions/iwoca-personal-loan-requirements" />
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718137037-fotosprestamo-iwoca2uk.webp"
                   alt="iwoca Flexi-Loan Requirements"
@@ -333,7 +333,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Personal-loans-1.webp"
@@ -413,7 +413,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                   </Link>
                 </p>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/getting-out-of-debt">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Debt-management-1.webp"

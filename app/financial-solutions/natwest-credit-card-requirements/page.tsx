@@ -32,7 +32,7 @@ export default function NatWestCreditCardRequirementsPage() {
               Requirements for the NatWest Credit Card
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 The NatWest Credit Card combines practical rewards, security
                 features, and digital management tools for a comprehensive
@@ -42,7 +42,7 @@ export default function NatWestCreditCardRequirementsPage() {
               {/* Add the Social Share Buttons here */}
               <SocialShareButtons postUrl="/financial-solutions/natwest-credit-card-requirements" />
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/credit-cards/718644872-top_prestamos-y-tarjetas-uk_v1_mesa-de-trabajo-1.webp"
                   alt="NatWest Credit Card"
@@ -277,7 +277,7 @@ export default function NatWestCreditCardRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Personal-loans-1.webp"
@@ -414,7 +414,7 @@ export default function NatWestCreditCardRequirementsPage() {
                   </Link>
                 </p>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/getting-out-of-debt">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Debt-management-1.webp"

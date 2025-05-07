@@ -31,7 +31,7 @@ export default function NatWestCreditCardPage() {
               NatWest Credit Card: Versatile Banking for Your Lifestyle
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 The NatWest Credit Card delivers a practical combination of
                 rewards, security features, and financial flexibility designed
@@ -98,7 +98,7 @@ export default function NatWestCreditCardPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/credit-cards/718644866-top_prestamos-y-tarjetas-uk_v1_mesa-de-trabajo-1-copia.webp"
                   alt="NatWest Credit Card"
@@ -173,7 +173,7 @@ export default function NatWestCreditCardPage() {
                   activities.
                 </p>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"

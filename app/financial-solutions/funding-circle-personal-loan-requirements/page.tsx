@@ -30,7 +30,7 @@ export default function FundingCirclePersonalLoanRequirementsPage() {
               Requirements for Funding Circle Business Loans
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Funding Circle offers fast, flexible loans for UK SMEs.
                 Understanding the eligibility criteria and application
@@ -39,7 +39,7 @@ export default function FundingCirclePersonalLoanRequirementsPage() {
 
               <SocialShareButtons postUrl="/financial-solutions/funding-circle-personal-loan-requirements" />
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718136831-fotosprestamo-fundingcircle2uk.webp"
                   alt="Funding Circle Business Loan Requirements"

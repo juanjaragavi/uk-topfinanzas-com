@@ -29,7 +29,7 @@ export default function MonzoPersonalLoanPage() {
               Monzo Personal Loan: Simple, Fair Financing from a Leading Neobank
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 Monzo Personal Loans bring the neobank's focus on transparency,
                 simplicity, and user experience to borrowing, offering flexible
@@ -101,7 +101,7 @@ export default function MonzoPersonalLoanPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718136607-fotosprestamo-monzo2uk.webp"
                   alt="Monzo Personal Loan"
@@ -167,7 +167,7 @@ export default function MonzoPersonalLoanPage() {
                 </p>
 
                 {/* Ad Block: Credit Cards */}
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"

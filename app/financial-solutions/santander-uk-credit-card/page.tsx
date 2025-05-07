@@ -29,7 +29,7 @@ export default function SantanderUKCreditCardPage() {
               Santander UK Credit Card: Smart Banking for Modern Life
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 The Santander UK Credit Card combines competitive cashback
                 opportunities with practical features designed to support your
@@ -100,7 +100,7 @@ export default function SantanderUKCreditCardPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/credit-cards/718644935-top_prestamos-y-tarjetas-uk_v1-03.webp"
                   alt="Santander UK Credit Card"

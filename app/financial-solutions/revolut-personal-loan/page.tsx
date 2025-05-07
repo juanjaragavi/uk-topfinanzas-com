@@ -29,7 +29,7 @@ export default function RevolutPersonalLoanPage() {
               Revolut Personal Loan: Fast, Flexible Financing via Fintech
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 Revolut Personal Loans leverage fintech innovation to offer
                 quick, flexible borrowing managed entirely through the Revolut
@@ -99,7 +99,7 @@ export default function RevolutPersonalLoanPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718136529-fotosprestamo-revoult1uk.webp"
                   alt="Revolut Personal Loan"
@@ -163,7 +163,7 @@ export default function RevolutPersonalLoanPage() {
                   will vary.
                 </p>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"

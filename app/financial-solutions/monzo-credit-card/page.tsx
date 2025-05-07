@@ -32,7 +32,7 @@ export default function MonzoCreditCardPage() {
               Monzo Credit Card: Digital-First Banking for Modern Life
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 The Monzo Credit Card embodies the innovative, digital-first
                 approach that has made Monzo one of the UK's leading neobanks,
@@ -110,7 +110,7 @@ export default function MonzoCreditCardPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/credit-cards/719907302-top_prestamos-y-tarjetas-uk_v1-18.webp"
                   alt="Monzo Credit Card"
@@ -187,7 +187,7 @@ export default function MonzoCreditCardPage() {
                   products.
                 </p>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"

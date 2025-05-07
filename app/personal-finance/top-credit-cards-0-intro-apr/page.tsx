@@ -3,7 +3,7 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image"; // Keep Image import
 import Link from "next/link"; // Keep Link import
-import { Ad } from "@/components/ui/ad";
+
 
 export default function TopCreditCards0IntroAprPage() {
   return (
@@ -20,14 +20,14 @@ export default function TopCreditCards0IntroAprPage() {
               Top Credit Cards with 0% Intro APR to Help You Save
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Discover how 0% intro APR credit cards can help you save on
                 interest, manage large purchases, and consolidate debt
                 effectively.
               </p>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/APR.webp"
                   alt="0% Intro APR Credit Cards" // Updated Alt Text
@@ -101,11 +101,7 @@ export default function TopCreditCards0IntroAprPage() {
                 </blockquote>
               </section>
 
-              <Ad
-                adId="uk_topfinanzas_1"
-                format="horizontal"
-                className="my-8"
-              />
+              
 
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
@@ -164,11 +160,7 @@ export default function TopCreditCards0IntroAprPage() {
                 </p>
               </section>
 
-              <Ad
-                adId="uk_topfinanzas_2"
-                format="horizontal"
-                className="my-8"
-              />
+              
 
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
@@ -230,11 +222,7 @@ export default function TopCreditCards0IntroAprPage() {
                 </p>
               </section>
 
-              <Ad
-                adId="uk_topfinanzas_3"
-                format="horizontal"
-                className="my-8"
-              />
+              
 
               {/* AI Content Disclaimer */}
               <AIContentDisclaimer />

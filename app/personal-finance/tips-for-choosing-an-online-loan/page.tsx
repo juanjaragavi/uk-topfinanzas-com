@@ -2,7 +2,7 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { Button } from "@/components/ui/button";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import { Ad } from "@/components/ui/ad";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -21,18 +21,12 @@ export default function TipsForChoosingAnOnlineLoanPage() {
               5 Essential Tips for Choosing an Online Loan: Your Quick Guide
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Navigate the world of online loans with confidence using these
                 essential tips to find the best rates and terms for your
                 financial needs.
               </p>
-
-              <Ad
-                adId="uk_topfinanzas_1"
-                format="horizontal"
-                className="my-8"
-              />
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
@@ -92,7 +86,7 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                 </div>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp"
                   alt="Tips for Choosing an Online Loan"
@@ -157,12 +151,6 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                   offers based on their APRs rather than headline rates, giving
                   you a clearer picture of your total repayment obligations.
                 </p>
-
-                <Ad
-                  adId="uk_topfinanzas_2"
-                  format="horizontal"
-                  className="my-8"
-                />
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   2. Verify Lender Legitimacy
@@ -258,12 +246,6 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                   application. A transparent lender will be happy to explain
                   their terms clearly.
                 </p>
-
-                <Ad
-                  adId="uk_topfinanzas_3"
-                  format="horizontal"
-                  className="my-8"
-                />
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   4. Check Flexibility Options
@@ -416,12 +398,6 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                   research your options thoroughly can lead to better financial
                   outcomes and peace of mind throughout your loan term.
                 </p>
-
-                <Ad
-                  adId="uk_topfinanzas_4"
-                  format="horizontal"
-                  className="my-8"
-                />
 
                 <div className="text-left my-8">
                   <Link href="/financial-solutions">

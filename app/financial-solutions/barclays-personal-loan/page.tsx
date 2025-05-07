@@ -30,7 +30,7 @@ export default function BarclaysPersonalLoanPage() {
               Partner
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 Barclays Personal Loans combine competitive rates with the
                 stability and trusted service of one of the UK's largest banking
@@ -105,7 +105,7 @@ export default function BarclaysPersonalLoanPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718136012-fotosprestamo-barclays2uk.webp"
                   alt="Barclays Personal Loan"

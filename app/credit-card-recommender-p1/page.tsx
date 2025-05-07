@@ -35,7 +35,7 @@ export default function CreditCardRecommenderPage() {
               ideal card for you!
             </p>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <Link href="/financial-solutions/barclaycard-avios-plus">
                 <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
                   <div className="flex items-center space-x-1">
@@ -263,7 +263,7 @@ export default function CreditCardRecommenderPage() {
               and find the card that best suits you.
             </p>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <Link href="/financial-solutions/barclaycard-avios-plus">
                 <Image
                   src="https://media.topfinanzas.com/images/ads/Top-Blog-Debt-management-1.webp"

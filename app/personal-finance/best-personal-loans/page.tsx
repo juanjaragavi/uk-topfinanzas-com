@@ -18,14 +18,14 @@ export default function BestPersonalLoansPage() {
               Best Personal Loans in the UK: Your Complete Guide
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Find the perfect personal loan for your needs with our
                 comprehensive guide to the UK's top lenders, rates, and
                 application requirements.
               </p>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/best-personal-loans.webp"
                   alt="Personal Loans Guide"
@@ -61,8 +61,6 @@ export default function BestPersonalLoansPage() {
                   on your credit score, income, existing debt obligations, and
                   the lender's criteria.
                 </p>
-
-                <div className="my-8" id="uk_topfinanzas_1" />
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Top Personal Loan Providers in the UK
@@ -131,8 +129,6 @@ export default function BestPersonalLoansPage() {
                   other lenders (subject to terms and conditions).
                 </p>
 
-                <div className="my-8" id="uk_topfinanzas_2" />
-
                 <h3 className="text-lg font-semibold text-gray-800 mb-3">
                   Admiral
                 </h3>
@@ -174,8 +170,6 @@ export default function BestPersonalLoansPage() {
                   a good choice for borrowers who value support throughout the
                   loan process.
                 </p>
-
-                <div className="my-8" id="uk_topfinanzas_3" />
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   How to Choose the Right Personal Loan
@@ -285,8 +279,6 @@ export default function BestPersonalLoansPage() {
                     your needs, not because of pressure from the lender
                   </li>
                 </ul>
-
-                <div className="my-8" id="uk_topfinanzas_4" />
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Finding Your Ideal Financial Solution

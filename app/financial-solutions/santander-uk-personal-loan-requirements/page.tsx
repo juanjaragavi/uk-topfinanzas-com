@@ -29,7 +29,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
               Requirements for Santander UK Personal Loans
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Santander UK Personal Loans offer competitive rates and flexible
                 terms. Understanding the eligibility criteria and application
@@ -38,7 +38,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
 
               <SocialShareButtons postUrl="/financial-solutions/monzo-personal-loan" />
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718136220-fotosprestamo-santander2uk.webp"
                   alt="Santander UK Personal Loan Requirements"
@@ -301,7 +301,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Personal-loans-1.webp"
@@ -386,7 +386,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                   </Link>
                 </p>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/getting-out-of-debt">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Debt-management-1.webp"

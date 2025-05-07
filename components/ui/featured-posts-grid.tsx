@@ -42,7 +42,7 @@ export function FeaturedPostsGrid({
   }[columns];
 
   return (
-    <div className="my-8">
+    <div className="my-8 text-left sm:text-left">
       {showHeader && (
         <div className="mb-8">
           <h2 className="text-3xl font-bold">{title}</h2>

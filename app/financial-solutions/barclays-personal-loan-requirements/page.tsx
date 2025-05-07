@@ -29,7 +29,7 @@ export default function BarclaysPersonalLoanRequirementsPage() {
               Requirements for Barclays Personal Loans
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Barclays Personal Loans offer competitive rates and flexible
                 terms. Understanding the eligibility criteria and application
@@ -39,7 +39,7 @@ export default function BarclaysPersonalLoanRequirementsPage() {
               {/* Add the Social Share Buttons here */}
               <SocialShareButtons postUrl="/financial-solutions/barclays-personal-loan-requirements" />
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718136015-fotosprestamo-barclays1uk.webp"
                   alt="Barclays Personal Loan Requirements"

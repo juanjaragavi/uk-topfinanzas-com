@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button"; // Keep Button import if needed
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image"; // Add Image import
 import Link from "next/link"; // Add Link import
-import { Ad } from "@/components/ui/ad";
 
 export default function CashbackCreditCardsPage() {
   return (
@@ -21,7 +20,7 @@ export default function CashbackCreditCardsPage() {
               Best Cashback Credit Cards for Maximizing Your Rewards
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Discover the top cashback credit cards! Compare benefits like
                 unlimited rewards, flexible redemption options, and introductory
@@ -29,7 +28,7 @@ export default function CashbackCreditCardsPage() {
               </p>
 
               {/* TODO: Update image if needed */}
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/download-8-1.webp"
                   alt="Cashback Credit Cards" // Updated Alt Text
@@ -94,12 +93,6 @@ export default function CashbackCreditCardsPage() {
                 </ul>
               </section>
 
-              <Ad
-                adId="uk_topfinanzas_1"
-                format="horizontal"
-                className="my-8"
-              />
-
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Key Features to Compare
@@ -143,12 +136,6 @@ export default function CashbackCreditCardsPage() {
                   </li>
                 </ul>
               </section>
-
-              <Ad
-                adId="uk_topfinanzas_2"
-                format="horizontal"
-                className="my-8"
-              />
 
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
@@ -194,12 +181,6 @@ export default function CashbackCreditCardsPage() {
                   earning today!
                 </p>
               </section>
-
-              <Ad
-                adId="uk_topfinanzas_3"
-                format="horizontal"
-                className="my-8"
-              />
 
               {/* AI Content Disclaimer */}
               <AIContentDisclaimer />

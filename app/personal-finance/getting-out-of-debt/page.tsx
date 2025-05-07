@@ -3,7 +3,7 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image";
 import Link from "next/link";
-import { Ad } from "@/components/ui/ad";
+
 
 export default function GettingOutOfDebtPage() {
   return (
@@ -20,14 +20,14 @@ export default function GettingOutOfDebtPage() {
               Practical Guide to Getting Out of Debt
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Feeling overwhelmed by debt? Get practical strategies for
                 getting out of debt, building an emergency fund, and taking
                 control of your finances.
               </p>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp" // Keep existing image or update if needed
                   alt="Getting Out of Debt Guide"
@@ -201,11 +201,7 @@ export default function GettingOutOfDebtPage() {
                 </blockquote>
               </section>
 
-              <Ad
-                adId="uk_topfinanzas_1"
-                format="horizontal"
-                className="my-8"
-              />
+              
 
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
@@ -312,11 +308,7 @@ export default function GettingOutOfDebtPage() {
                 </p>
               </section>
 
-              <Ad
-                adId="uk_topfinanzas_2"
-                format="horizontal"
-                className="my-8"
-              />
+              
 
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
@@ -651,11 +643,7 @@ export default function GettingOutOfDebtPage() {
                 </ul>
               </section>
 
-              <Ad
-                adId="uk_topfinanzas_3"
-                format="horizontal"
-                className="my-8"
-              />
+              
 
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">

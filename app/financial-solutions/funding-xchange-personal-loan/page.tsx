@@ -30,7 +30,7 @@ export default function FundingXchangePersonalLoanPage() {
               Funding Xchange: Smart Comparison for Business Finance
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 Funding Xchange provides an intelligent platform for UK SMEs to
                 compare and access tailored business finance solutions from a
@@ -105,7 +105,7 @@ export default function FundingXchangePersonalLoanPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718136896-fotosprestamo-fundingchange1uk.webp"
                   alt="Funding Xchange Business Finance Platform"
@@ -181,7 +181,7 @@ export default function FundingXchangePersonalLoanPage() {
                 </p>
 
                 {/* Ad Block: Credit Cards */}
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"

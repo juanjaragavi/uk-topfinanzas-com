@@ -30,7 +30,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
               Using Funding Options: Process & Eligibility for SMEs
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Funding Options connects UK SMEs with numerous lenders.
                 Understanding their process and general eligibility helps
@@ -39,7 +39,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
 
               <SocialShareButtons postUrl="/financial-solutions/funding-options-personal-loan-requirements" />
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718138020-fotosprestamo-fundingoption2uk.webp"
                   alt="Funding Options Process"

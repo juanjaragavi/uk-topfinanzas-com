@@ -32,7 +32,7 @@ export default function BarclayCardAviosPlusPage() {
               Barclaycard Avios Plus Credit Card: Premium Travel Rewards
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 The Barclaycard Avios Plus Credit Card is designed for frequent
                 travelers and those who want to maximize rewards on everyday
@@ -100,7 +100,7 @@ export default function BarclayCardAviosPlusPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
                   alt="Barclaycard Avios Plus Credit Card"
@@ -169,7 +169,7 @@ export default function BarclayCardAviosPlusPage() {
                   situations.
                 </p>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"

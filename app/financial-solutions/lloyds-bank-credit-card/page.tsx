@@ -32,7 +32,7 @@ export default function LloydsBankCreditCardPage() {
               Lloyds Bank Credit Card: Flexible Everyday Banking Solutions
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 The Lloyds Bank Credit Card offers a balance of everyday value
                 and flexibility, designed to support your daily spending while
@@ -98,7 +98,7 @@ export default function LloydsBankCreditCardPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/credit-cards/719906900-top_prestamos-y-tarjetas-uk_v1-16.webp"
                   alt="Lloyds Bank Credit Card"
@@ -172,7 +172,7 @@ export default function LloydsBankCreditCardPage() {
                   giving you peace of mind when making significant purchases.
                 </p>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"

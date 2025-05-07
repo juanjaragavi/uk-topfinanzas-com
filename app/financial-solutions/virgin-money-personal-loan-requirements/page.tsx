@@ -29,7 +29,7 @@ export default function VirginMoneyPersonalLoanRequirementsPage() {
               Requirements for Virgin Money Personal Loans
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Virgin Money Personal Loans offer competitive rates and flexible
                 terms, potentially with added Virgin Red benefits. Understanding
@@ -38,7 +38,7 @@ export default function VirginMoneyPersonalLoanRequirementsPage() {
 
               <SocialShareButtons postUrl="/financial-solutions/virgin-money-personal-loan-requirements" />
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718136332-fotosprestamo-virginmoney2uk.webp"
                   alt="Virgin Money Personal Loan Requirements"

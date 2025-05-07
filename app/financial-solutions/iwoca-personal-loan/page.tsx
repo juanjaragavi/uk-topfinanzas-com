@@ -31,7 +31,7 @@ export default function IwocaPersonalLoanPage() {
               iwoca Flexi-Loan: Fast, Flexible Funding for UK Businesses
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 iwoca offers innovative business finance solutions, including
                 the Flexi-Loan, designed to provide UK SMEs with quick access to
@@ -103,7 +103,7 @@ export default function IwocaPersonalLoanPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718137033-fotosprestamo-iwoca1uk.webp"
                   alt="iwoca Business Finance"
@@ -169,7 +169,7 @@ export default function IwocaPersonalLoanPage() {
                   than expected.
                 </p>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"

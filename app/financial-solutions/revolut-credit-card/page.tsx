@@ -32,7 +32,7 @@ export default function RevolutCreditCardPage() {
               Revolut Credit Card: Global Banking Without Boundaries
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 The Revolut Credit Card extends the company's innovative fintech
                 approach to credit, offering a globally-minded card with
@@ -107,7 +107,7 @@ export default function RevolutCreditCardPage() {
                 </Link>
               </div>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/credit-cards/718645626-top_prestamos-y-tarjetas-uk_v1-10.webp"
                   alt="Revolut Credit Card"
@@ -182,7 +182,7 @@ export default function RevolutCreditCardPage() {
                   putting security control literally at your fingertips.
                 </p>
 
-                <div className="my-8">
+                <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"

@@ -30,7 +30,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
               Requirements for Capify Business Finance (MCA & Loans)
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Capify offers fast Merchant Cash Advances and Business Loans for
                 UK SMEs. Understanding their eligibility helps businesses access
@@ -39,7 +39,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
 
               <SocialShareButtons postUrl="/financial-solutions/capify-personal-loan-requirements" />
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718137378-fotosprestamo-capify2uk.webp"
                   alt="Capify Finance Requirements"

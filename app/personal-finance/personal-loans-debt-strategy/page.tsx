@@ -3,7 +3,6 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image"; // Keep Image import in case it's needed later, though MDX didn't have one
 import Link from "next/link";
-import { Ad } from "@/components/ui/ad";
 
 export default function PersonalLoansDebtStrategyPage() {
   return (
@@ -20,14 +19,14 @@ export default function PersonalLoansDebtStrategyPage() {
               Personal Loans - A Strategy for Managing Debt
             </h1>
 
-            <div className="my-8">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Discover how personal loans can help you consolidate debt and
                 manage your finances efficiently. Learn how to choose the right
                 loan for your needs.
               </p>
 
-              <div className="my-8">
+              <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/Top-Finances_personal_loans.webp"
                   alt="Personal Loans Strategy"
@@ -76,12 +75,6 @@ export default function PersonalLoansDebtStrategyPage() {
                   compare options and act wisely.
                 </blockquote>
               </section>
-
-              <Ad
-                adId="uk_topfinanzas_1"
-                format="horizontal"
-                className="my-8"
-              />
 
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
@@ -160,12 +153,6 @@ export default function PersonalLoansDebtStrategyPage() {
                   , offering features tailored to this purpose.
                 </p>
               </section>
-
-              <Ad
-                adId="uk_topfinanzas_2"
-                format="horizontal"
-                className="my-8"
-              />
 
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
@@ -280,12 +267,6 @@ export default function PersonalLoansDebtStrategyPage() {
                   high interest rates or fees.
                 </p>
               </section>
-
-              <Ad
-                adId="uk_topfinanzas_3"
-                format="horizontal"
-                className="my-8"
-              />
 
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
