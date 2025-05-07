@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import SocialShareButtons from "@/components/ui/social-share-buttons";
 
 export function generateMetadata() {
   return {
@@ -38,9 +37,6 @@ export default function RevolutCreditCardRequirementsPage() {
                 global-first features, and innovative security controls for
                 modern international lifestyles.
               </p>
-
-              {/* Add Social Share Buttons */}
-              <SocialShareButtons postUrl="/financial-solutions/revolut-credit-card-requirements" />
 
               <div className="my-8 text-left sm:text-left">
                 <Image

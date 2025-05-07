@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import SocialShareButtons from "@/components/ui/social-share-buttons"; // Import the new component
 
 export function generateMetadata() {
   return {
@@ -38,9 +37,6 @@ export default function LloydsBankCreditCardRequirementsPage() {
                 customers looking for a flexible financial tool with practical
                 rewards and features.
               </p>
-
-              {/* Add the Social Share Buttons here */}
-              <SocialShareButtons postUrl="/financial-solutions/lloyds-bank-credit-card-requirements" />
 
               <div className="my-8 text-left sm:text-left">
                 <Image

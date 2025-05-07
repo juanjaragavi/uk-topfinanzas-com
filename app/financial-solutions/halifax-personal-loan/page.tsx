@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import SocialShareButtons from "@/components/ui/social-share-buttons";
 
 export function generateMetadata() {
   return {
@@ -35,8 +34,6 @@ export default function HalifaxPersonalLoanPage() {
                 and the dependability of one of the UK's largest and most
                 recognized banking brands, part of the Lloyds Banking Group.
               </p>
-
-              <SocialShareButtons postUrl="/financial-solutions/halifax-personal-loan" />
 
               <div className="space-y-2 mb-8">
                 <div className="flex items-start">

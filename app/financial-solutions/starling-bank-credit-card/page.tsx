@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import SocialShareButtons from "@/components/ui/social-share-buttons";
 
 export function generateMetadata() {
   return {
@@ -36,9 +35,6 @@ export default function StarlingBankCreditCardPage() {
                 credit product that combines innovative features with ethical
                 principles.
               </p>
-
-              {/* Add Social Share Buttons */}
-              <SocialShareButtons postUrl="/financial-solutions/starling-bank-credit-card" />
 
               <div className="space-y-2 mb-8">
                 <div className="flex items-start">

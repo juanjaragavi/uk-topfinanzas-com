@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import SocialShareButtons from "@/components/ui/social-share-buttons"; // Import the new component
 
 export function generateMetadata() {
   return {
@@ -37,10 +36,7 @@ export default function BarclayCardAviosPlusPage() {
                 The Barclaycard Avios Plus Credit Card is designed for frequent
                 travelers and those who want to maximize rewards on everyday
                 spending with premium travel benefits.
-              </p>
-
-              {/* Add the Social Share Buttons here */}
-              <SocialShareButtons postUrl="/financial-solutions/barclaycard-avios-plus" />
+              </p>            
 
               <div className="space-y-2 mb-8">
                 <div className="flex items-start">

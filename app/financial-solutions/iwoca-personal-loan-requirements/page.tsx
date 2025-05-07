@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import SocialShareButtons from "@/components/ui/social-share-buttons";
 
 export function generateMetadata() {
   return {
@@ -36,8 +35,6 @@ export default function IwocaPersonalLoanRequirementsPage() {
                 their eligibility criteria and application process helps
                 businesses access working capital quickly.
               </p>
-
-              <SocialShareButtons postUrl="/financial-solutions/iwoca-personal-loan-requirements" />
 
               <div className="my-8 text-left sm:text-left">
                 <Image

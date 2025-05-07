@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import SocialShareButtons from "@/components/ui/social-share-buttons";
 
 export function generateMetadata() {
   return {
@@ -35,9 +34,6 @@ export default function SantanderUKCreditCardPage() {
                 opportunities with practical features designed to support your
                 financial goals while rewarding your everyday spending.
               </p>
-
-              {/* Add Social Share Buttons */}
-              <SocialShareButtons postUrl="/financial-solutions/santander-uk-credit-card" />
 
               <div className="space-y-2 mb-8">
                 <div className="flex items-start">

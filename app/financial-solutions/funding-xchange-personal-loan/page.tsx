@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import SocialShareButtons from "@/components/ui/social-share-buttons";
 
 export function generateMetadata() {
   return {
@@ -36,8 +35,6 @@ export default function FundingXchangePersonalLoanPage() {
                 compare and access tailored business finance solutions from a
                 diverse panel of lenders, simplifying the funding search.
               </p>
-
-              <SocialShareButtons postUrl="/financial-solutions/funding-xchange-personal-loan" />
 
               <div className="space-y-2 mb-8">
                 <div className="flex items-start">

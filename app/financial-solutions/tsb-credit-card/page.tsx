@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import SocialShareButtons from "@/components/ui/social-share-buttons";
 
 export function generateMetadata() {
   return {
@@ -35,9 +34,6 @@ export default function TSBCreditCardPage() {
                 credit with practical features and competitive rates designed to
                 support your everyday financial needs.
               </p>
-
-              {/* Add Social Share Buttons */}
-              <SocialShareButtons postUrl="/financial-solutions/tsb-credit-card" />
 
               <div className="space-y-2 mb-8">
                 <div className="flex items-start">

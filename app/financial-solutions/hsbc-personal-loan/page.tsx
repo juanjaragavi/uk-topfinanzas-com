@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import SocialShareButtons from "@/components/ui/social-share-buttons";
 
 export function generateMetadata() {
   return {
@@ -36,8 +35,6 @@ export default function HSBCPersonalLoanPage() {
                 institutions, providing you with the funds you need for life's
                 major expenses.
               </p>
-
-              <SocialShareButtons postUrl="/financial-solutions/hsbc-personal-loan" />
 
               <div className="space-y-2 mb-8">
                 <div className="flex items-start">
