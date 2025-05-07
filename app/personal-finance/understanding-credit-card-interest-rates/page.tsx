@@ -323,6 +323,16 @@ export default function UnderstandingCreditCardInterestRatesPage() {
                 </p>
               </section>
 
+              {/* CTA Button */}
+              <div className="mt-12 mb-6 text-center">
+                <Link
+                  href="/credit-card-recommender-p1"
+                  className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-full inline-block transition-colors text-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                >
+                  Compare Credit Card Rates & Offers
+                </Link>
+              </div>
+
               {/* AI Content Disclaimer */}
               <AIContentDisclaimer />
             </div>

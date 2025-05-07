@@ -2,6 +2,7 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { CompactFooter } from "@/components/layout/compact-footer"; // Corrected path
 import { Header } from "@/components/layout/header"; // Corrected path and component
 import Image from "next/image";
+import Link from "next/link";
 
 export default function NoAnnualFeeCreditCards() {
   return (
@@ -251,6 +252,16 @@ export default function NoAnnualFeeCreditCards() {
             to select the card that best aligns with your goals.
           </p>
         </section>
+
+        {/* CTA Button */}
+        <div className="mt-12 mb-6 text-center">
+          <Link
+            href="/credit-card-recommender-p1"
+            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-full inline-block transition-colors text-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+          >
+            Explore No Annual Fee Cards
+          </Link>
+        </div>
 
         {/* AI Content Disclaimer */}
         <AIContentDisclaimer />

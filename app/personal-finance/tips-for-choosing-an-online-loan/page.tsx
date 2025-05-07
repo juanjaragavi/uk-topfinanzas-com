@@ -429,11 +429,13 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                   throughout your loan term.
                 </p>
 
-                <div className="text-left my-8">
-                  <Link href="/financial-solutions">
-                    <Button className="bg-green-600 hover:bg-green-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
-                      Explore Best Personal Loans
-                    </Button>
+                {/* CTA Button */}
+                <div className="mt-12 mb-6 text-center">
+                  <Link
+                    href="/financial-solutions"
+                    className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-full inline-block transition-colors text-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                  >
+                    Explore Online Loan Options
                   </Link>
                 </div>
 

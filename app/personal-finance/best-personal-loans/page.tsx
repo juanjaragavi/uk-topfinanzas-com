@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function BestPersonalLoansPage() {
   return (
@@ -374,6 +375,16 @@ export default function BestPersonalLoansPage() {
                   when used with careful planning and discipline.
                 </p>
               </section>
+
+              {/* CTA Button */}
+              <div className="mt-12 mb-6 text-center">
+                <Link
+                  href="/financial-solutions"
+                  className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-full inline-block transition-colors text-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                >
+                  Explore Top Personal Loan Options
+                </Link>
+              </div>
 
               {/* AI Content Disclaimer */}
               <AIContentDisclaimer />
