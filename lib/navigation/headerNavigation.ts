@@ -66,15 +66,23 @@ export const headerNavigation = {
     text: "CATEGORIES",
     items: [
       {
-        text: "Financial Solutions",
+        text: "Financial Solutions", // Main MOFU category
         href: "/financial-solutions",
       },
       {
-        text: "Personal Finance",
+        text: "Credit Cards", // Specific MOFU sub-category
+        href: "/credit-cards", // Link to new dedicated page
+      },
+      {
+        text: "Personal Loans", // Specific MOFU sub-category
+        href: "/personal-loans", // Link to new dedicated page
+      },
+      {
+        text: "Personal Finance", // TOFU category
         href: "/personal-finance",
       },
       {
-        text: "Card Recommender",
+        text: "Card Recommender", // Tool
         href: "/credit-card-recommender-p1",
       },
     ],
