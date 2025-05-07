@@ -14,7 +14,7 @@ export default function BestPersonalLoansPage() {
       >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-3xl font-bold text-gray-800 mb-4 leading-8">
+            <h1 className="text-3xl text-left sm:text-left md:text-3xl font-bold text-gray-800 mb-4 leading-8">
               Best Personal Loans in the UK: Your Complete Guide
             </h1>
 

@@ -27,18 +27,24 @@ export default function BarclayCardAviosPlusPage() {
       <article className="bg-white py-8 md:py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-8">
+            <h1 className="text-3xl text-left sm:text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Barclaycard Avios Plus Credit Card: Premium Travel Rewards
             </h1>
+
+            {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+            <div
+              id="uk_topfinanzas_1"
+              className="p-4 flex items-center justify-center w-full min-w-full"
+            ></div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
                 The Barclaycard Avios Plus Credit Card is designed for frequent
                 travelers and those who want to maximize rewards on everyday
                 spending with premium travel benefits.
-              </p>            
+              </p>
 
-              <div className="space-y-2 mb-8">
+              <div className="space-y-2 my-8">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>

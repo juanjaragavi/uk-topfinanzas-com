@@ -24,9 +24,15 @@ export default function MonzoPersonalLoanRequirementsPage() {
       <article className="bg-white py-8 md:py-12" data-category="loans">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-3xl font-bold text-gray-800 mb-4 leading-8">
+            <h1 className="text-3xl text-left sm:text-left md:text-3xl font-bold text-gray-800 mb-4 leading-8">
               Requirements for Monzo Personal Loans
             </h1>
+            
+            {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+            <div
+              id="uk_topfinanzas_1"
+              className="p-4 flex items-center justify-center w-full min-w-full"
+            ></div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
@@ -54,7 +60,7 @@ export default function MonzoPersonalLoanRequirementsPage() {
                   Basic Eligibility Criteria
                 </h2>
 
-                <div className="space-y-6 mb-8">
+                <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
@@ -126,7 +132,7 @@ export default function MonzoPersonalLoanRequirementsPage() {
                   typically need to provide or confirm:
                 </p>
 
-                <div className="space-y-6 mb-8">
+                <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
@@ -200,7 +206,7 @@ export default function MonzoPersonalLoanRequirementsPage() {
                   within their app:
                 </p>
 
-                <div className="space-y-6 mb-8">
+                <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
@@ -264,7 +270,7 @@ export default function MonzoPersonalLoanRequirementsPage() {
                   Key terms associated with Monzo Personal Loans:
                 </p>
 
-                <div className="space-y-6 mb-8">
+                <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
@@ -415,7 +421,7 @@ export default function MonzoPersonalLoanRequirementsPage() {
                   To enhance your chances of approval for a Monzo Personal Loan:
                 </p>
 
-                <div className="space-y-6 mb-8">
+                <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>

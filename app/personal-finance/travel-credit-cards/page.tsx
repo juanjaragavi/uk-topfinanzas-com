@@ -25,7 +25,7 @@ export default function TravelCreditCardsPage() {
       >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+            <h1 className="text-3xl text-left sm:text-left md:text-4xl font-bold text-gray-800 mb-6">
               Best Travel Credit Cards UK: Ultimate Guide for International
               Spending
             </h1>

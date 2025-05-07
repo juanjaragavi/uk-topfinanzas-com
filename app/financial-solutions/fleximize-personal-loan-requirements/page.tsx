@@ -25,9 +25,15 @@ export default function FleximizePersonalLoanRequirementsPage() {
       <article className="bg-white py-8 md:py-12" data-category="loans">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-3xl font-bold text-gray-800 mb-4 leading-8">
+            <h1 className="text-3xl text-left sm:text-left md:text-3xl font-bold text-gray-800 mb-4 leading-8">
               Requirements for Fleximize Business Loans (Flexiloan & Lite)
             </h1>
+            
+            {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+            <div
+              id="uk_topfinanzas_1"
+              className="p-4 flex items-center justify-center w-full min-w-full"
+            ></div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
@@ -55,7 +61,7 @@ export default function FleximizePersonalLoanRequirementsPage() {
                   Basic Eligibility Criteria for SMEs
                 </h2>
 
-                <div className="space-y-6 mb-8">
+                <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#6D2C91] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
@@ -124,7 +130,7 @@ export default function FleximizePersonalLoanRequirementsPage() {
                   prepared to provide:
                 </p>
 
-                <div className="space-y-6 mb-8">
+                <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#6D2C91] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
@@ -196,7 +202,7 @@ export default function FleximizePersonalLoanRequirementsPage() {
                   interaction:
                 </p>
 
-                <div className="space-y-6 mb-8">
+                <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#6D2C91] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
@@ -269,7 +275,7 @@ export default function FleximizePersonalLoanRequirementsPage() {
                   Key terms for Fleximize's loans:
                 </p>
 
-                <div className="space-y-6 mb-8">
+                <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#6D2C91] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
@@ -431,7 +437,7 @@ export default function FleximizePersonalLoanRequirementsPage() {
                   To enhance your chances of approval with Fleximize:
                 </p>
 
-                <div className="space-y-6 mb-8">
+                <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#6D2C91] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>

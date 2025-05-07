@@ -17,7 +17,7 @@ export default function TipsForChoosingAnOnlineLoanPage() {
       >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-3xl font-bold text-gray-800 mb-4 leading-8">
+            <h1 className="text-3xl text-left sm:text-left md:text-3xl font-bold text-gray-800 mb-4 leading-8">
               5 Essential Tips for Choosing an Online Loan: Your Quick Guide
             </h1>
 

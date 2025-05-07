@@ -67,26 +67,6 @@ export default function FinancialSolutionsPage() {
 
   // List of all loan content with types
   const allLoansContent = [
-    // Guides
-    {
-      title: "Best Personal Loans in the UK",
-      slug: "best-personal-loans",
-      description:
-        "Find the perfect personal loan for your needs with our comprehensive guide to the UK's top lenders, rates, and application requirements.",
-      image: "https://media.topfinanzas.com/images/best-personal-loans.webp",
-      date: "30 March 2025",
-      type: "guide",
-    },
-    {
-      title: "Tips for Choosing an Online Loan",
-      slug: "tips-for-choosing-an-online-loan",
-      description:
-        "Navigate the world of online loans with confidence using these essential tips to find the best rates and terms for your financial needs.",
-      image:
-        "https://media.topfinanzas.com/images/uk/choosing-online-loan-uk.webp",
-      date: "30 March 2025",
-      type: "guide",
-    },
     // Personal Loans (Traditional Banks)
     {
       title: "HSBC Personal Loan",
@@ -401,6 +381,7 @@ export default function FinancialSolutionsPage() {
   const content = (
     <div>
       <h1 className="text-4xl font-bold mb-6">Financial Solutions</h1>
+
       <p className="text-lg text-gray-700 mb-8 leading-tight">
         Find detailed information about the best credit cards available in the
         UK, requirements for applying, and comprehensive guides to help you

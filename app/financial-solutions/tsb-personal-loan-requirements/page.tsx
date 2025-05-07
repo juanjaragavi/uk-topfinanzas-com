@@ -23,9 +23,15 @@ export default function TSBPersonalLoanRequirementsPage() {
       <article className="bg-white py-8 md:py-12" data-category="loans">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-3xl font-bold text-gray-800 mb-4 leading-8">
+            <h1 className="text-3xl text-left sm:text-left md:text-3xl font-bold text-gray-800 mb-4 leading-8">
               Requirements for TSB Personal Loans
             </h1>
+            
+            {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+            <div
+              id="uk_topfinanzas_1"
+              className="p-4 flex items-center justify-center w-full min-w-full"
+            ></div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
@@ -53,7 +59,7 @@ export default function TSBPersonalLoanRequirementsPage() {
                   Basic Eligibility Criteria
                 </h2>
 
-                <div className="space-y-6 mb-8">
+                <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
@@ -121,7 +127,7 @@ export default function TSBPersonalLoanRequirementsPage() {
                   Required Documentation:
                 </h2>
 
-                <div className="space-y-6 mb-8">
+                <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
@@ -183,7 +189,7 @@ export default function TSBPersonalLoanRequirementsPage() {
                   online:
                 </p>
 
-                <div className="space-y-6 mb-8">
+                <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
@@ -242,7 +248,7 @@ export default function TSBPersonalLoanRequirementsPage() {
                   Key terms associated with TSB Personal Loans:
                 </p>
 
-                <div className="space-y-6 mb-8">
+                <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
@@ -393,7 +399,7 @@ export default function TSBPersonalLoanRequirementsPage() {
                   To enhance your chances of approval for a TSB Personal Loan:
                 </p>
 
-                <div className="space-y-6 mb-8">
+                <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
