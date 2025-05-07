@@ -4,7 +4,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title: "Best Travel Credit Cards UK: Top Options for 2025 - Top Finance UK",
@@ -39,8 +38,6 @@ export default function TravelCreditCardsPage() {
                 travelers, highlighting cards with no foreign transaction fees,
                 travel insurance, and rewarding points systems.
               </p>
-
-              
 
               <div className="my-8 bg-blue-50 p-6 rounded-xl">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
@@ -109,8 +106,15 @@ export default function TravelCreditCardsPage() {
                       </svg>
                     </span>
                     <div>
-                      <span className="font-semibold">Curve Card</span> -
-                      Combine all your cards, fee-free spending abroad (limits
+                      <span className="font-semibold">
+                        <Link
+                          href="/financial-solutions/curve-credit-card"
+                          className="text-blue-600 hover:underline"
+                        >
+                          Curve Card
+                        </Link>
+                      </span>{" "}
+                      - Combine all your cards, fee-free spending abroad (limits
                       vary by plan), "Go Back in Time" feature
                     </div>
                   </li>
@@ -131,7 +135,12 @@ export default function TravelCreditCardsPage() {
                     </span>
                     <div>
                       <span className="font-semibold">
-                        Santander All in One Credit Card
+                        <Link
+                          href="/financial-solutions/santander-uk-credit-card"
+                          className="text-blue-600 hover:underline"
+                        >
+                          Santander All in One Credit Card
+                        </Link>
                       </span>{" "}
                       - No foreign transaction fees for the first 6 months, 0%
                       on purchases, cashback on spending
@@ -139,8 +148,6 @@ export default function TravelCreditCardsPage() {
                   </li>
                 </ul>
               </div>
-
-              
 
               <h2 className="text-2xl font-bold text-gray-800 my-5">
                 What Makes a Great Travel Credit Card?
@@ -294,8 +301,6 @@ export default function TravelCreditCardsPage() {
                   </Link>
                 </div>
               </div>
-
-              
 
               <h2 className="text-2xl font-bold text-gray-800 my-5">
                 How to Choose the Right Travel Credit Card
@@ -465,12 +470,17 @@ export default function TravelCreditCardsPage() {
                 Remember that the best card for you depends on your specific
                 circumstances, and it's worth reassessing your choice
                 periodically as both your travel habits and card offerings
-                evolve. With the right card in your wallet, you can focus less
-                on financial concerns and more on enjoying your international
-                adventures.
+                evolve. Explore various options in our{" "}
+                <Link
+                  href="/financial-solutions"
+                  className="text-blue-600 hover:underline"
+                >
+                  Financial Solutions section
+                </Link>{" "}
+                to find the perfect fit. With the right card in your wallet, you
+                can focus less on financial concerns and more on enjoying your
+                international adventures.
               </p>
-
-              
 
               {/* AI Content Disclaimer */}
               <AIContentDisclaimer />

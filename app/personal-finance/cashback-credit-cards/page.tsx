@@ -139,6 +139,56 @@ export default function CashbackCreditCardsPage() {
 
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
+                  Explore Specific Cashback Credit Card Offers
+                </h2>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  Looking for specific cashback credit cards? Here are a few
+                  options that offer compelling rewards:
+                </p>
+                <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800">
+                  <li className="mb-2">
+                    <Link
+                      href="/financial-solutions/lloyds-bank-credit-card"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Lloyds Bank Credit Card:
+                    </Link>{" "}
+                    Offers cashback through its Everyday Offers program.
+                  </li>
+                  <li className="mb-2">
+                    <Link
+                      href="/financial-solutions/santander-uk-credit-card"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Santander UK All in One Credit Card:
+                    </Link>{" "}
+                    Known for its All in One cashback benefits.
+                  </li>
+                  <li className="mb-2">
+                    <Link
+                      href="/financial-solutions/natwest-credit-card"
+                      className="text-blue-600 hover:underline"
+                    >
+                      NatWest Credit Card:
+                    </Link>{" "}
+                    Features the MyRewards program for earning cashback.
+                  </li>
+                </ul>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  To discover a broader range of credit cards, including various
+                  cashback and rewards options, visit our{" "}
+                  <Link
+                    href="/financial-solutions"
+                    className="text-blue-600 hover:underline"
+                  >
+                    Financial Solutions page
+                  </Link>
+                  .
+                </p>
+              </section>
+
+              <section className="my-6">
+                <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Choosing the Right Cashback Card
                 </h2>
                 <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800">
@@ -177,8 +227,14 @@ export default function CashbackCreditCardsPage() {
                   you maximize savings and financial freedom. With options that
                   combine cashback, travel perks, and cost-effective benefits,
                   you can turn routine purchases into valuable rewards. Take
-                  control of your spending, explore the best options, and start
-                  earning today!
+                  control of your spending, explore the best options on our{" "}
+                  <Link
+                    href="/financial-solutions"
+                    className="text-blue-600 hover:underline"
+                  >
+                    Financial Solutions section
+                  </Link>
+                  , and start earning today!
                 </p>
               </section>
 

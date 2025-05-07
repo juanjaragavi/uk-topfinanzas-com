@@ -336,7 +336,29 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                   Compare the Market, and Experian. When using these platforms,
                   remember that they may not include every available lender, so
                   considering multiple comparison sites can provide a more
-                  comprehensive view of your options.
+                  comprehensive view of your options. You can also explore
+                  specific providers directly, such as{" "}
+                  <Link
+                    href="/financial-solutions/revolut-personal-loan"
+                    className="text-blue-600 hover:underline"
+                  >
+                    Revolut
+                  </Link>
+                  ,{" "}
+                  <Link
+                    href="/financial-solutions/monzo-personal-loan"
+                    className="text-blue-600 hover:underline"
+                  >
+                    Monzo
+                  </Link>
+                  , or{" "}
+                  <Link
+                    href="/financial-solutions/starling-bank-personal-loan"
+                    className="text-blue-600 hover:underline"
+                  >
+                    Starling Bank
+                  </Link>
+                  , known for their online loan offerings.
                 </p>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
@@ -395,8 +417,16 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                   Remember that responsible borrowing involves not just finding
                   the best loan, but also ensuring the amount and terms are
                   appropriate for your financial situation. Taking the time to
-                  research your options thoroughly can lead to better financial
-                  outcomes and peace of mind throughout your loan term.
+                  research your options thoroughly, including those listed on
+                  our{" "}
+                  <Link
+                    href="/financial-solutions"
+                    className="text-blue-600 hover:underline"
+                  >
+                    Financial Solutions page
+                  </Link>
+                  , can lead to better financial outcomes and peace of mind
+                  throughout your loan term.
                 </p>
 
                 <div className="text-left my-8">

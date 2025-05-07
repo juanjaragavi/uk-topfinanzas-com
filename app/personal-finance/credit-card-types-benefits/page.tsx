@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image"; // Assuming you need Image for the future
 import Link from "next/link"; // Assuming you need Link for the future
- // Import Ad
+// Import Ad
 
 export default function CreditCardTypesBenefitsPage() {
   return (
@@ -80,8 +80,6 @@ export default function CreditCardTypesBenefitsPage() {
                   stability and freedom.
                 </blockquote>
               </section>
-
-              
 
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
@@ -221,7 +219,66 @@ export default function CreditCardTypesBenefitsPage() {
                 </ul>
               </section>
 
-              
+              <section className="my-6">
+                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                  Discover Specific Credit Card Solutions
+                </h2>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  Ready to explore some specific credit card options available
+                  in the UK? Here are a few examples catering to different
+                  needs:
+                </p>
+                <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800">
+                  <li className="mb-2">
+                    <Link
+                      href="/financial-solutions/barclaycard-avios-plus"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Barclaycard Avios Plus:
+                    </Link>{" "}
+                    Excellent for earning Avios points for travel.
+                  </li>
+                  <li className="mb-2">
+                    <Link
+                      href="/financial-solutions/curve-credit-card"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Curve Card:
+                    </Link>{" "}
+                    A unique card that consolidates all your existing cards into
+                    one.
+                  </li>
+                  <li className="mb-2">
+                    <Link
+                      href="/financial-solutions/monzo-credit-card"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Monzo Credit Card:
+                    </Link>{" "}
+                    Offers smart budgeting tools and seamless app integration.
+                  </li>
+                  <li className="mb-2">
+                    <Link
+                      href="/financial-solutions/santander-uk-credit-card"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Santander UK All in One Credit Card:
+                    </Link>{" "}
+                    Provides cashback and no foreign transaction fees.
+                  </li>
+                </ul>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  For a comprehensive look at various credit cards and other
+                  financial products, visit our{" "}
+                  <Link
+                    href="/financial-solutions"
+                    className="text-blue-600 hover:underline"
+                  >
+                    Financial Solutions page
+                  </Link>
+                  .
+                </p>
+              </section>
 
               <section className="my-6">
                 <h2 className="text-left sm:text-left text-xl font-bold text-gray-800 mb-4">
@@ -326,8 +383,6 @@ export default function CreditCardTypesBenefitsPage() {
                 </ul>
               </section>
 
-              
-
               <section className="my-6">
                 <h2 className="text-left sm:text-left text-xl font-bold text-gray-800 mb-4">
                   Tips for Responsible Credit Card Use
@@ -414,8 +469,15 @@ export default function CreditCardTypesBenefitsPage() {
                   Credit cards are more than just a payment tool; they are a way
                   to manage cash flow, earn rewards, and build your financial
                   profile. By understanding how they work, choosing the right
-                  card for your needs, and managing them responsibly, you can
-                  enjoy their benefits and avoid common pitfalls.
+                  card for your needs from options available on our{" "}
+                  <Link
+                    href="/financial-solutions"
+                    className="text-blue-600 hover:underline"
+                  >
+                    Financial Solutions section
+                  </Link>
+                  , and managing them responsibly, you can enjoy their benefits
+                  and avoid common pitfalls.
                 </p>
                 <p className="text-left sm:text-left text-gray-800 mb-4 text-sm leading-5 font-light">
                   Every informed financial decision brings you one step closer

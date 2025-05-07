@@ -4,7 +4,6 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image";
 import Link from "next/link";
 
-
 export default function GettingOutOfDebtPage() {
   return (
     <main className="bg-white min-h-screen flex flex-col">
@@ -201,8 +200,6 @@ export default function GettingOutOfDebtPage() {
                 </blockquote>
               </section>
 
-              
-
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Adjust Your Budget to Free Up Funds
@@ -307,8 +304,6 @@ export default function GettingOutOfDebtPage() {
                   accordingly.
                 </p>
               </section>
-
-              
 
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
@@ -489,6 +484,65 @@ export default function GettingOutOfDebtPage() {
 
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
+                  Explore Debt Management Solutions
+                </h2>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  If you are considering consolidating your debts, here are some
+                  financial products that might help:
+                </p>
+                <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800">
+                  <li className="mb-2">
+                    <Link
+                      href="/financial-solutions/barclays-personal-loan"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Barclays Personal Loan:
+                    </Link>{" "}
+                    Could be an option for consolidating higher-interest debts.
+                  </li>
+                  <li className="mb-2">
+                    <Link
+                      href="/financial-solutions/hsbc-personal-loan"
+                      className="text-blue-600 hover:underline"
+                    >
+                      HSBC Personal Loan:
+                    </Link>{" "}
+                    Explore their terms for debt consolidation purposes.
+                  </li>
+                  <li className="mb-2">
+                    Consider{" "}
+                    <Link
+                      href="/personal-finance/top-credit-cards-0-intro-apr"
+                      className="text-blue-600 hover:underline"
+                    >
+                      balance transfer credit cards
+                    </Link>{" "}
+                    if you have credit card debt. Some cards in our{" "}
+                    <Link
+                      href="/financial-solutions"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Financial Solutions section
+                    </Link>{" "}
+                    may offer 0% introductory APR periods.
+                  </li>
+                </ul>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  Always compare offers and ensure the terms suit your debt
+                  repayment strategy. For a wider view of available products,
+                  visit our main{" "}
+                  <Link
+                    href="/financial-solutions"
+                    className="text-blue-600 hover:underline"
+                  >
+                    Financial Solutions page
+                  </Link>
+                  .
+                </p>
+              </section>
+
+              <section className="my-6">
+                <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Seek Additional Income
                 </h2>
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
@@ -643,8 +697,6 @@ export default function GettingOutOfDebtPage() {
                 </ul>
               </section>
 
-              
-
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Stay Motivated and Focused
@@ -697,7 +749,15 @@ export default function GettingOutOfDebtPage() {
                 </p>
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
                   Take control of your finances today and actively shape a more
-                  secure and prosperous future!
+                  secure and prosperous future! For more tools and product
+                  information, visit our{" "}
+                  <Link
+                    href="/financial-solutions"
+                    className="text-blue-600 hover:underline"
+                  >
+                    Financial Solutions hub
+                  </Link>
+                  .
                 </p>
               </section>
 

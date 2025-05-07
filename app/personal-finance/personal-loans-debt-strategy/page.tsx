@@ -156,6 +156,75 @@ export default function PersonalLoansDebtStrategyPage() {
 
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
+                  Explore Personal Loan Options for Debt Consolidation
+                </h2>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  If you're considering using a personal loan to consolidate
+                  debt, here are some providers to explore:
+                </p>
+                <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800">
+                  <li className="mb-2">
+                    <Link
+                      href="/financial-solutions/barclays-personal-loan"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Barclays Personal Loan:
+                    </Link>{" "}
+                    Check their rates and terms for consolidation.
+                  </li>
+                  <li className="mb-2">
+                    <Link
+                      href="/financial-solutions/hsbc-personal-loan"
+                      className="text-blue-600 hover:underline"
+                    >
+                      HSBC Personal Loan:
+                    </Link>{" "}
+                    Often offer competitive rates suitable for managing existing
+                    debts.
+                  </li>
+                  <li className="mb-2">
+                    <Link
+                      href="/financial-solutions/lloyds-bank-personal-loan"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Lloyds Bank Personal Loan:
+                    </Link>{" "}
+                    Explore their options for combining debts into one payment.
+                  </li>
+                  <li className="mb-2">
+                    <Link
+                      href="/financial-solutions/nationwide-personal-loan"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Nationwide Personal Loan:
+                    </Link>{" "}
+                    May offer favourable terms, especially for existing members.
+                  </li>
+                  <li className="mb-2">
+                    <Link
+                      href="/financial-solutions/santander-uk-personal-loan"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Santander UK Personal Loan:
+                    </Link>{" "}
+                    See if their loan products fit your consolidation needs.
+                  </li>
+                </ul>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  For a broader comparison of personal loans and other financial
+                  tools, visit our{" "}
+                  <Link
+                    href="/financial-solutions"
+                    className="text-blue-600 hover:underline"
+                  >
+                    Financial Solutions page
+                  </Link>
+                  .
+                </p>
+              </section>
+
+              <section className="my-6">
+                <h2 className="text-xl font-bold text-gray-800 mb-4">
                   How to Choose the Right Personal Loan
                 </h2>
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
@@ -276,8 +345,15 @@ export default function PersonalLoansDebtStrategyPage() {
                   Personal loans can be an excellent tool if used properly. From
                   debt consolidation to financing major projects, a well-chosen
                   personal loan can help improve your long-term financial
-                  health. Always compare your options, fully understand the
-                  terms, and borrow responsibly.
+                  health. Always compare your options, which you can explore
+                  further in our{" "}
+                  <Link
+                    href="/financial-solutions"
+                    className="text-blue-600 hover:underline"
+                  >
+                    Financial Solutions section
+                  </Link>
+                  , fully understand the terms, and borrow responsibly.
                 </p>
               </section>
 

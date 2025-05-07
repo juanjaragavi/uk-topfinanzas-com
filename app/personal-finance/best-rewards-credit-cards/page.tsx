@@ -165,6 +165,74 @@ export default function BestRewardsCreditCardsPage() {
 
               <section className="my-6">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
+                  Explore Specific Rewards Credit Cards
+                </h2>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  Interested in specific rewards credit cards? Here are some top
+                  choices in the UK:
+                </p>
+                <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800">
+                  <li className="mb-2">
+                    <Link
+                      href="/financial-solutions/barclaycard-avios-plus"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Barclaycard Avios Plus:
+                    </Link>{" "}
+                    Ideal for earning travel rewards with Avios.
+                  </li>
+                  <li className="mb-2">
+                    <Link
+                      href="/financial-solutions/halifax-world-elite-mastercard"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Halifax World Elite Mastercard:
+                    </Link>{" "}
+                    Offers premium travel benefits and comprehensive insurance.
+                  </li>
+                  <li className="mb-2">
+                    <Link
+                      href="/financial-solutions/lloyds-bank-credit-card"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Lloyds Bank Credit Card:
+                    </Link>{" "}
+                    Features cashback through their Everyday Offers program.
+                  </li>
+                  <li className="mb-2">
+                    <Link
+                      href="/financial-solutions/santander-uk-credit-card"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Santander UK All in One Credit Card:
+                    </Link>{" "}
+                    Provides cashback and no foreign transaction fees.
+                  </li>
+                  <li className="mb-2">
+                    <Link
+                      href="/financial-solutions/virgin-money-credit-card"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Virgin Money Credit Card:
+                    </Link>{" "}
+                    Earn Virgin Points and enjoy lifestyle rewards.
+                  </li>
+                </ul>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  For a wider selection of credit cards and other financial
+                  products, check out our{" "}
+                  <Link
+                    href="/financial-solutions"
+                    className="text-blue-600 hover:underline"
+                  >
+                    Financial Solutions page
+                  </Link>
+                  .
+                </p>
+              </section>
+
+              <section className="my-6">
+                <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Maximizing Your Rewards
                 </h2>
                 <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800">
@@ -204,8 +272,15 @@ export default function BestRewardsCreditCardsPage() {
                   purchases to miles for flights and hotel stays, plus flexible
                   redemption options and varying annual fees, these cards
                   empower you to make the most of your finances. Explore your
-                  options, select the card that suits your needs, and start
-                  turning everyday expenses into meaningful rewards today!
+                  options by visiting our{" "}
+                  <Link
+                    href="/financial-solutions"
+                    className="text-blue-600 hover:underline"
+                  >
+                    Financial Solutions section
+                  </Link>
+                  , select the card that suits your needs, and start turning
+                  everyday expenses into meaningful rewards today!
                 </p>
               </section>
 

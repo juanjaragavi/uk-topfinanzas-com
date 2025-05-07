@@ -217,6 +217,72 @@ export default function BestPersonalLoansPage() {
                 </ul>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
+                  Explore Specific Loan Options
+                </h2>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  Ready to explore specific loan products? Here are some popular
+                  options available in the UK:
+                </p>
+                <ul className="list-disc pl-6 mb-4 text-sm leading-5 font-light text-gray-800">
+                  <li className="mb-2">
+                    <a
+                      href="/financial-solutions/barclays-personal-loan"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Barclays Personal Loan:
+                    </a>{" "}
+                    Learn more about competitive rates and flexible terms.
+                  </li>
+                  <li className="mb-2">
+                    <a
+                      href="/financial-solutions/hsbc-personal-loan"
+                      className="text-blue-600 hover:underline"
+                    >
+                      HSBC Personal Loan:
+                    </a>{" "}
+                    Discover options with quick application processes.
+                  </li>
+                  <li className="mb-2">
+                    <a
+                      href="/financial-solutions/lloyds-bank-personal-loan"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Lloyds Bank Personal Loan:
+                    </a>{" "}
+                    Explore trusted service and flexible repayment.
+                  </li>
+                  <li className="mb-2">
+                    <a
+                      href="/financial-solutions/nationwide-personal-loan"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Nationwide Personal Loan:
+                    </a>{" "}
+                    Check out benefits for existing members.
+                  </li>
+                  <li className="mb-2">
+                    <a
+                      href="/financial-solutions/santander-uk-personal-loan"
+                      className="text-blue-600 hover:underline"
+                    >
+                      Santander UK Personal Loan:
+                    </a>{" "}
+                    See potential benefits for 1|2|3 World customers.
+                  </li>
+                </ul>
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                  For a broader overview of various financial products,
+                  including different types of loans and credit cards, visit our{" "}
+                  <a
+                    href="/financial-solutions"
+                    className="text-blue-600 hover:underline"
+                  >
+                    Financial Solutions page
+                  </a>
+                  .
+                </p>
+
+                <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Improving Your Chances of Approval
                 </h2>
 
@@ -290,7 +356,15 @@ export default function BestPersonalLoansPage() {
                   thoroughly, comparing offers from multiple lenders, and
                   considering the factors that matter most to your situation,
                   you can secure a personal loan with favourable terms that
-                  helps you achieve your financial goals.
+                  helps you achieve your financial goals. For a comprehensive
+                  list of available products, you can also explore our{" "}
+                  <a
+                    href="/financial-solutions"
+                    className="text-blue-600 hover:underline"
+                  >
+                    main financial solutions page
+                  </a>
+                  .
                 </p>
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light">

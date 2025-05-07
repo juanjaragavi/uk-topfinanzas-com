@@ -129,6 +129,76 @@ export default function NoAnnualFeeCreditCards() {
 
         <section className="my-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
+            Explore Specific No Annual Fee Cards
+          </h2>
+          <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+            Ready to look at some specific credit cards that typically come
+            without an annual fee? Here are some examples:
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-sm leading-5 font-light text-gray-800">
+            <li>
+              <a
+                href="/financial-solutions/lloyds-bank-credit-card"
+                className="text-blue-600 hover:underline"
+              >
+                Lloyds Bank Credit Card:
+              </a>{" "}
+              Often available with no annual fee and potential cashback offers.
+            </li>
+            <li>
+              <a
+                href="/financial-solutions/natwest-credit-card"
+                className="text-blue-600 hover:underline"
+              >
+                NatWest Credit Card:
+              </a>{" "}
+              Explore their standard card options which may include no-fee
+              versions with rewards.
+            </li>
+            <li>
+              <a
+                href="/financial-solutions/monzo-credit-card"
+                className="text-blue-600 hover:underline"
+              >
+                Monzo Credit Card:
+              </a>{" "}
+              Known for its app integration and often comes without an annual
+              fee.
+            </li>
+            <li>
+              <a
+                href="/financial-solutions/starling-bank-credit-card"
+                className="text-blue-600 hover:underline"
+              >
+                Starling Bank Credit Card:
+              </a>{" "}
+              Focuses on transparent banking, typically without annual fees.
+            </li>
+            <li>
+              <a
+                href="/financial-solutions/tsb-credit-card"
+                className="text-blue-600 hover:underline"
+              >
+                TSB Credit Card:
+              </a>{" "}
+              Check their range for straightforward, no-fee options.
+            </li>
+          </ul>
+          <p className="text-gray-800 mt-4 text-sm leading-5 font-light">
+            For a comprehensive overview of various credit cards, including fee
+            structures and benefits, visit our{" "}
+            <a
+              href="/financial-solutions"
+              className="text-blue-600 hover:underline"
+            >
+              Financial Solutions page
+            </a>
+            .
+          </p>
+        </section>
+
+        <section className="my-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">
             Choosing the Right Card for You
           </h2>
           <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
@@ -171,8 +241,14 @@ export default function NoAnnualFeeCreditCards() {
             types available and matching them to your spending patterns and
             financial objectives, you can find a card that helps you save money,
             earn rewards, and manage your finances effectively. Take the time to
-            evaluate your priorities to select the card that best aligns with
-            your goals.
+            evaluate your priorities by exploring options in our{" "}
+            <a
+              href="/financial-solutions"
+              className="text-blue-600 hover:underline"
+            >
+              Financial Solutions section
+            </a>{" "}
+            to select the card that best aligns with your goals.
           </p>
         </section>
 
