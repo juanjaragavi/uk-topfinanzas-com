@@ -17,6 +17,21 @@ const nextConfig = {
   // Asset prefix and base path for Vercel deployment
   assetPrefix: undefined,
   basePath: "",
+  // Add redirects to handle favicon requests properly
+  async redirects() {
+    return [
+      {
+        source: "/favicon.ico",
+        destination: "/favicon.png",
+        permanent: true,
+      },
+      {
+        source: "/favicon.:hash.ico",
+        destination: "/favicon.png",
+        permanent: true,
+      },
+    ];
+  },
   // Add cache headers for static assets
   async headers() {
     return [

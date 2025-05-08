@@ -11,7 +11,8 @@ import GoogleTagManager, {
 import UtmPersister from "@/components/analytics/utm-persister";
 import UtmMonitor from "@/components/analytics/utm-monitor";
 import ResourceHints from "@/components/resource-hints";
-import AdScriptLoader from "@/components/ads/AdScriptLoader"; // Import the new component
+import AdScriptLoader from "@/components/ads/AdScriptLoader";
+import NavigationProvider from "@/components/providers/navigation-provider";
 
 // Use local font to avoid external requests during build
 // This improves build time and eliminates network dependency
@@ -110,8 +111,13 @@ export const metadata: Metadata = {
 
   // Optional: Add icons and manifest for PWA/better bookmarking
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.ico", // Corrected to existing .ico file
+    // Remove all .ico references to avoid 500 errors
+    icon: [
+      {
+        url: "/favicon.png",
+        type: "image/png",
+      },
+    ],
     apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest", // Use relative path for local manifest
@@ -215,13 +221,15 @@ export default function RootLayout({
       </head>
       <body className={`${poppins.variable} font-sans text-left sm:text-left`}>
         <GoogleTagManagerNoScript />
-        <Suspense fallback={null}>
-          <UtmPersister />
-          {process.env.NODE_ENV === "development" && <UtmMonitor />}
-        </Suspense>
-        {children}
-        {/* Conditionally load ADZep script */}
-        <AdScriptLoader />
+        <NavigationProvider>
+          <Suspense fallback={null}>
+            <UtmPersister />
+            {process.env.NODE_ENV === "development" && <UtmMonitor />}
+          </Suspense>
+          {children}
+          {/* Conditionally load ADZep script */}
+          <AdScriptLoader />
+        </NavigationProvider>
       </body>
     </html>
   );
