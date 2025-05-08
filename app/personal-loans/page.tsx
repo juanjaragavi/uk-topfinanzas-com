@@ -258,10 +258,10 @@ export default function PersonalLoansArchivePage() {
               title={post.title}
               description={post.description}
               image={post.image}
-              // Construct the correct slug path assuming they live under /financial-solutions/
-              slug={`/financial-solutions/${post.slug}`}
+              // Posts are located under /financial-solutions/
+              slug={post.slug}
               category="Loans" // Static category for this page
-              categorySlug="/personal-loans" // Link back to this archive page
+              categorySlug="/financial-solutions" // Base path for these posts
               date={post.date}
               type={post.type}
               showBadge={true} // Show type badge if desired
