@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ResponsiveImage from "@/components/ui/responsive-image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
@@ -103,16 +104,16 @@ export default function BarclayCardAviosPlusPage() {
               </div>
 
               <div className="my-8 text-left sm:text-left">
-                <Image
+                <ResponsiveImage
                   src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
                   alt="Barclaycard Avios Plus Credit Card"
                   width={900}
                   height={507}
-                  className="w-full h-auto rounded-xl"
+                  className="w-full rounded-xl"
                   priority={true}
-                  fetchPriority="high"
                   quality={85}
-                  loading="eager"
+                  sizes="(max-width: 768px) 100vw, 900px"
+                  containerClassName="w-full"
                 />
               </div>
 
@@ -173,14 +174,16 @@ export default function BarclayCardAviosPlusPage() {
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
-                    <Image
+                    <ResponsiveImage
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"
-                      alt="Learn More About Credit Cards" // Corrected alt text
+                      alt="Learn More About Credit Cards"
                       width={1000}
                       height={563}
-                      className="mx-auto w-full md:w-8/12 h-auto rounded-xl"
-                      loading="lazy"
+                      className="rounded-xl"
+                      containerClassName="mx-auto w-full md:w-8/12"
                       quality={80}
+                      sizes="(max-width: 768px) 100vw, 800px"
+                      crossOrigin="anonymous"
                     />
                   </Link>
                 </div>
