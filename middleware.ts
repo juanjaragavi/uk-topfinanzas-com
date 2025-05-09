@@ -1,11 +1,25 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export function middleware(request: NextRequest) {
-  // Simply pass through all requests without any rewrites
+  // Check if the request is for a static file
+  const { pathname } = request.nextUrl;
+
+  // Allow static files to pass through without any processing
+  if (
+    pathname.includes(".png") ||
+    pathname.includes(".ico") ||
+    pathname.includes(".webmanifest") ||
+    pathname.includes("/fonts/") ||
+    pathname.includes("/images/")
+  ) {
+    return NextResponse.next();
+  }
+
+  // For other requests, continue normally
   return NextResponse.next();
 }
 
 export const config = {
-  // Only apply middleware to specific routes if needed
-  matcher: [],
+  // Apply middleware to all routes
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
 };

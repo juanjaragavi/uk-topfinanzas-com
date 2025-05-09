@@ -32,6 +32,32 @@ const nextConfig = {
       },
     ];
   },
+
+  // Add rewrites to ensure static files are properly served
+  async rewrites() {
+    return [
+      {
+        source: "/favicon.png",
+        destination: "/favicon.png",
+      },
+      {
+        source: "/apple-touch-icon.png",
+        destination: "/apple-touch-icon.png",
+      },
+      {
+        source: "/site.webmanifest",
+        destination: "/site.webmanifest",
+      },
+      {
+        source: "/robots.txt",
+        destination: "/robots.txt",
+      },
+      {
+        source: "/sitemap.xml",
+        destination: "/sitemap.xml",
+      },
+    ];
+  },
   // Add cache headers for static assets
   async headers() {
     return [
@@ -115,6 +141,34 @@ const nextConfig = {
           {
             key: "Cache-Control",
             value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        // Static root files
+        source: "/(favicon.png|apple-touch-icon.png)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+          {
+            key: "Content-Type",
+            value: "image/png",
+          },
+        ],
+      },
+      {
+        // Web manifest file
+        source: "/site.webmanifest",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+          {
+            key: "Content-Type",
+            value: "application/manifest+json",
           },
         ],
       },
