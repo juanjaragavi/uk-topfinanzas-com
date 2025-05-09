@@ -113,13 +113,13 @@ export const metadata: Metadata = {
     // Remove all .ico references to avoid 500 errors
     icon: [
       {
-        url: "/favicon.png",
+        url: "../public/favicon.png",
         type: "image/png",
       },
     ],
-    apple: "/apple-touch-icon.png",
+    apple: "../public/apple-touch-icon.png",
   },
-  manifest: "/site.webmanifest", // Use relative path for local manifest
+  manifest: "../public/site.webmanifest", // Use relative path for local manifest
 
   // Optional: Define metadataBase for resolving relative image URLs
   metadataBase: new URL(baseUrl),
