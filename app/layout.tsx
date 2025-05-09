@@ -182,6 +182,12 @@ export default function RootLayout({
           }}
         />
 
+        {/* ADZep AutoZep Paid Advertising tag */}
+        <script
+          data-cfasync="false"
+          src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
+        ></script>
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

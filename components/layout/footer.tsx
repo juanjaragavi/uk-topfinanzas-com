@@ -10,11 +10,6 @@ import { footerContent } from "@/lib/texts/footer/content";
 export function Footer() {
   return (
     <footer className="bg-[#3F67B9] text-white">
-      {/* ADZep AutoZep Paid Advertising tag */}
-      <script
-        data-cfasync="false"
-        src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
-      ></script>
       <div className="container mx-auto px-6 py-12">
         {/* Logo Section - Added at the top for mobile */}
         <div className="flex flex-col items-center md:items-start mb-8">
