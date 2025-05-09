@@ -28,7 +28,7 @@ export default function NationwidePersonalLoanPage() {
               Nationwide Personal Loan: Fair Financing from a Member-Owned
               Society
             </h1>
-            
+
             {/* AdZep AutoZep Paid Advertisement `<div>` element */}
             <div
               id="uk_topfinanzas_1"
@@ -95,6 +95,12 @@ export default function NationwidePersonalLoanPage() {
                   </div>
                 </div>
               </div>
+
+              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/nationwide-personal-loan-requirements">
@@ -170,6 +176,12 @@ export default function NationwidePersonalLoanPage() {
                   tailor the loan to their specific budget and financial
                   planning horizon.
                 </p>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -250,6 +262,12 @@ export default function NationwidePersonalLoanPage() {
                     </div>
                   </div>
                 </div>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Application Process

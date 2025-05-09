@@ -28,7 +28,7 @@ export default function VirginMoneyCreditCardPage() {
               Virgin Money Credit Card: Distinctive Banking with Style and
               Substance
             </h1>
-            
+
             {/* AdZep AutoZep Paid Advertisement `<div>` element */}
             <div
               id="uk_topfinanzas_1"
@@ -93,6 +93,12 @@ export default function VirginMoneyCreditCardPage() {
                   </div>
                 </div>
               </div>
+
+              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/virgin-money-credit-card-requirements">
@@ -180,6 +186,12 @@ export default function VirginMoneyCreditCardPage() {
                   those who regularly shop with overseas retailers.
                 </p>
 
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
                 {/* Ad Block: Credit Cards */}
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -259,6 +271,12 @@ export default function VirginMoneyCreditCardPage() {
                     </div>
                   </div>
                 </div>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Digital Banking Excellence
@@ -347,7 +365,7 @@ export default function VirginMoneyCreditCardPage() {
                     </Button>
                   </Link>
                 </div>
-                
+
                 {/* AI Content Disclaimer */}
                 <AIContentDisclaimer />
               </div>

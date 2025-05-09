@@ -28,7 +28,7 @@ export default function FundingCirclePersonalLoanPage() {
             <h1 className="text-3xl text-left sm:text-left md:text-4xl font-bold text-gray-800 mb-4 leading-8">
               Funding Circle Business Loan: Fast, Flexible Finance for SMEs
             </h1>
-            
+
             {/* AdZep AutoZep Paid Advertisement `<div>` element */}
             <div
               id="uk_topfinanzas_1"
@@ -99,6 +99,12 @@ export default function FundingCirclePersonalLoanPage() {
                 </div>
               </div>
 
+              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/funding-circle-personal-loan-requirements">
                   <Button className="bg-[#004C59] hover:bg-teal-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -144,6 +150,12 @@ export default function FundingCirclePersonalLoanPage() {
                   various stages of growth.
                 </p>
 
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Speed and Efficiency Through Fintech
                 </h2>
@@ -169,6 +181,12 @@ export default function FundingCirclePersonalLoanPage() {
                   and revenue streams. Interest rates are fixed for the loan
                   term, providing certainty for financial planning.
                 </p>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="my-8" data-category="loans">
                   <Link href="/personal-finance/credit-card-types-benefits/">

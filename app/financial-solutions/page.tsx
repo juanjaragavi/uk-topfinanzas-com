@@ -388,6 +388,12 @@ export default function FinancialSolutionsPage() {
         choose the best option based on your financial needs.
       </p>
 
+      {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+      <div
+        id="uk_topfinanzas_1"
+        className="p-4 flex items-center justify-center w-full min-w-full"
+      ></div>
+
       {/* Featured article using our new component */}
       <div className="mb-10">
         <FeaturedPostCard
@@ -424,6 +430,12 @@ export default function FinancialSolutionsPage() {
         ))}
       </div>
 
+      {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+      <div
+        id="uk_topfinanzas_2"
+        className="p-4 flex items-center justify-center w-full min-w-full"
+      ></div>
+
       {activeCategory === "creditCards" && (
         <div className="mb-8">
           {/* Subcategory filter for credit cards */}
@@ -442,6 +454,12 @@ export default function FinancialSolutionsPage() {
               </button>
             ))}
           </div>
+
+          {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+          <div
+            id="uk_topfinanzas_3"
+            className="p-4 flex items-center justify-center w-full min-w-full"
+          ></div>
 
           {/* Credit cards grid with fixed positioning to accommodate Image components */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -490,6 +508,12 @@ export default function FinancialSolutionsPage() {
               </button>
             ))}
           </div>
+
+          {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+          <div
+            id="uk_topfinanzas_4"
+            className="p-4 flex items-center justify-center w-full min-w-full"
+          ></div>
 
           {/* Loans grid with fixed positioning for Image components */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

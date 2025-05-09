@@ -28,7 +28,7 @@ export default function FundingCirclePersonalLoanRequirementsPage() {
             <h1 className="text-3xl text-left sm:text-left md:text-3xl font-bold text-gray-800 mb-4 leading-8">
               Requirements for Funding Circle Business Loans
             </h1>
-            
+
             {/* AdZep AutoZep Paid Advertisement `<div>` element */}
             <div
               id="uk_topfinanzas_1"
@@ -55,6 +55,12 @@ export default function FundingCirclePersonalLoanRequirementsPage() {
                   loading="eager"
                 />
               </div>
+
+              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
 
               <section className="my-6">
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
@@ -120,6 +126,12 @@ export default function FundingCirclePersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
                   Required Documentation:
@@ -248,6 +260,12 @@ export default function FundingCirclePersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
                   Loan Terms and Conditions

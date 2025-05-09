@@ -132,6 +132,12 @@ export default function BarclayCardAviosPlusPage() {
                   Maximise Your Travel Rewards
                 </h2>
 
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light">
                   With the Barclaycard Avios Plus, every purchase brings you
                   closer to your next adventure. Earn a generous 1.5 Avios for
@@ -160,6 +166,12 @@ export default function BarclayCardAviosPlusPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Comprehensive Travel Protection
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light">
                   Peace of mind comes standard with the Barclaycard Avios Plus
@@ -224,6 +236,12 @@ export default function BarclayCardAviosPlusPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">

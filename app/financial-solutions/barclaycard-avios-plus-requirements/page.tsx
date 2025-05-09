@@ -30,7 +30,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
             <h1 className="text-3xl text-left sm:text-left md:text-3xl font-bold text-gray-800 mb-4 leading-8">
               Requirements for the Barclaycard Avios Plus Credit Card
             </h1>
-            
+
             {/* AdZep AutoZep Paid Advertisement `<div>` element */}
             <div
               id="uk_topfinanzas_1"
@@ -42,7 +42,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                 The Barclaycard Avios Plus Credit Card is a premium travel
                 rewards card ideal for frequent travelers and those looking to
                 maximize benefits from their everyday spending.
-              </p>              
+              </p>
 
               <div className="my-8 text-left sm:text-left">
                 <Image
@@ -62,6 +62,12 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
                   How to Qualify for the Barclaycard Avios Plus Credit Card
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
@@ -94,6 +100,12 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
                   Required Documentation:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
@@ -146,6 +158,12 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
                   Understanding the Costs
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
                   It's essential to understand the costs associated with the

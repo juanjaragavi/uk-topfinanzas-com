@@ -28,7 +28,7 @@ export default function FleximizePersonalLoanPage() {
             <h1 className="text-3xl text-left sm:text-left md:text-4xl font-bold text-gray-800 mb-4 leading-8">
               Fleximize: Truly Flexible Business Loans for SMEs
             </h1>
-            
+
             {/* AdZep AutoZep Paid Advertisement `<div>` element */}
             <div
               id="uk_topfinanzas_1"
@@ -100,6 +100,12 @@ export default function FleximizePersonalLoanPage() {
                 </div>
               </div>
 
+              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/fleximize-personal-loan-requirements">
                   <Button className="bg-[#6D2C91] hover:bg-purple-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -147,6 +153,12 @@ export default function FleximizePersonalLoanPage() {
                   offering. They also allow penalty-free early repayments.
                 </p>
 
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Tailored Loan Products: Flexiloan & Flexiloan Lite
                 </h2>
@@ -184,6 +196,12 @@ export default function FleximizePersonalLoanPage() {
                   whose potential isn't fully captured by automated credit
                   scoring alone.
                 </p>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="my-8" data-category="loans">
                   <Link href="/personal-finance/credit-card-types-benefits/">

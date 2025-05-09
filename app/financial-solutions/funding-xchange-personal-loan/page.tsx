@@ -28,7 +28,7 @@ export default function FundingXchangePersonalLoanPage() {
             <h1 className="text-3xl text-left sm:text-left md:text-4xl font-bold text-gray-800 mb-4 leading-8">
               Funding Xchange: Smart Comparison for Business Finance
             </h1>
-            
+
             {/* AdZep AutoZep Paid Advertisement `<div>` element */}
             <div
               id="uk_topfinanzas_1"
@@ -100,6 +100,12 @@ export default function FundingXchangePersonalLoanPage() {
                 </div>
               </div>
 
+              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/funding-xchange-personal-loan-requirements">
                   <Button className="bg-[#008C95] hover:bg-teal-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -146,6 +152,12 @@ export default function FundingXchangePersonalLoanPage() {
                   lenders, and alternative finance providers.
                 </p>
 
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Access to Diverse Funding Products
                 </h2>
@@ -182,6 +194,12 @@ export default function FundingXchangePersonalLoanPage() {
                   to meet, increasing the chances of a successful application
                   and saving time wasted on unsuitable lenders.
                 </p>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 {/* Ad Block: Credit Cards */}
                 <div className="my-8 text-left sm:text-left">

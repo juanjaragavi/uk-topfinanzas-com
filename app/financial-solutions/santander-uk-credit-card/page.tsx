@@ -27,7 +27,7 @@ export default function SantanderUKCreditCardPage() {
             <h1 className="text-3xl text-left sm:text-left md:text-4xl font-bold text-gray-800 mb-4 leading-8">
               Santander UK Credit Card: Smart Banking for Modern Life
             </h1>
-            
+
             {/* AdZep AutoZep Paid Advertisement `<div>` element */}
             <div
               id="uk_topfinanzas_1"
@@ -93,6 +93,12 @@ export default function SantanderUKCreditCardPage() {
                   </div>
                 </div>
               </div>
+
+              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/santander-uk-credit-card-requirements">
@@ -172,24 +178,57 @@ export default function SantanderUKCreditCardPage() {
                   benefit in an increasingly global marketplace.
                 </p>
 
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
                 {/* Related Articles Section */}
                 <div className="my-8 p-6 bg-gray-50 rounded-xl border border-gray-200">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3">Learn More About Credit Cards:</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                    Learn More About Credit Cards:
+                  </h3>
                   <ul className="space-y-2 list-disc list-inside text-blue-700">
                     <li>
-                      <Link href="/personal-finance/cashback-credit-cards/" className="hover:underline hover:text-blue-900 transition-colors">Best Cashback Credit Cards</Link>
-                    </li>
-                     <li>
-                      <Link href="/personal-finance/best-rewards-credit-cards/" className="hover:underline hover:text-blue-900 transition-colors">Maximising Credit Card Rewards</Link>
-                    </li>
-                    <li>
-                      <Link href="/personal-finance/top-credit-cards-0-intro-apr/" className="hover:underline hover:text-blue-900 transition-colors">Using 0% Intro APR Offers</Link>
-                    </li>
-                     <li>
-                      <Link href="/personal-finance/travel-credit-cards/" className="hover:underline hover:text-blue-900 transition-colors">Top Travel Credit Cards</Link>
+                      <Link
+                        href="/personal-finance/cashback-credit-cards/"
+                        className="hover:underline hover:text-blue-900 transition-colors"
+                      >
+                        Best Cashback Credit Cards
+                      </Link>
                     </li>
                     <li>
-                      <Link href="/personal-finance/understanding-credit-card-interest-rates/" className="hover:underline hover:text-blue-900 transition-colors">Understanding Interest Rates</Link>
+                      <Link
+                        href="/personal-finance/best-rewards-credit-cards/"
+                        className="hover:underline hover:text-blue-900 transition-colors"
+                      >
+                        Maximising Credit Card Rewards
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/personal-finance/top-credit-cards-0-intro-apr/"
+                        className="hover:underline hover:text-blue-900 transition-colors"
+                      >
+                        Using 0% Intro APR Offers
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/personal-finance/travel-credit-cards/"
+                        className="hover:underline hover:text-blue-900 transition-colors"
+                      >
+                        Top Travel Credit Cards
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/personal-finance/understanding-credit-card-interest-rates/"
+                        className="hover:underline hover:text-blue-900 transition-colors"
+                      >
+                        Understanding Interest Rates
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -257,6 +296,12 @@ export default function SantanderUKCreditCardPage() {
                     </div>
                   </div>
                 </div>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Enhanced Customer Experience
@@ -332,7 +377,7 @@ export default function SantanderUKCreditCardPage() {
                     </Button>
                   </Link>
                 </div>
-                
+
                 {/* AI Content Disclaimer */}
                 <AIContentDisclaimer />
               </div>

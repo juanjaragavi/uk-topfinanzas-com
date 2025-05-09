@@ -29,7 +29,7 @@ export default function MarketFinancePersonalLoanPage() {
             <h1 className="text-3xl text-left sm:text-left md:text-4xl font-bold text-gray-800 mb-4 leading-8">
               MarketFinance: Smart Business Finance Solutions for UK SMEs
             </h1>
-            
+
             {/* AdZep AutoZep Paid Advertisement `<div>` element */}
             <div
               id="uk_topfinanzas_1"
@@ -94,6 +94,12 @@ export default function MarketFinancePersonalLoanPage() {
                   </div>
                 </div>
               </div>
+
+              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/marketfinance-personal-loan-requirements">
@@ -169,6 +175,12 @@ export default function MarketFinancePersonalLoanPage() {
                   rapid funding decisions, often much faster than traditional
                   bank processes.
                 </p>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -308,6 +320,12 @@ export default function MarketFinancePersonalLoanPage() {
                   funding growth, MarketFinance offers tailored products
                   designed to meet their specific needs.
                 </p>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="text-left my-8">
                   <Link href="/financial-solutions/marketfinance-personal-loan-requirements">

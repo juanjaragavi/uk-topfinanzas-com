@@ -26,7 +26,7 @@ export default function NatWestPersonalLoanPage() {
             <h1 className="text-3xl text-left sm:text-left md:text-4xl font-bold text-gray-800 mb-4 leading-8">
               NatWest Personal Loan: Flexible Financing from a Leading UK Bank
             </h1>
-            
+
             {/* AdZep AutoZep Paid Advertisement `<div>` element */}
             <div
               id="uk_topfinanzas_1"
@@ -98,6 +98,12 @@ export default function NatWestPersonalLoanPage() {
                   </div>
                 </div>
               </div>
+
+              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/natwest-personal-loan-requirements">
@@ -173,6 +179,12 @@ export default function NatWestPersonalLoanPage() {
                   while a shorter term helps reduce the total amount of interest
                   paid over the loan's lifetime.
                 </p>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 {/* Ad Block: Credit Cards */}
                 <div className="my-8 text-left sm:text-left">
@@ -253,6 +265,12 @@ export default function NatWestPersonalLoanPage() {
                     </div>
                   </div>
                 </div>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Streamlined Application Journey

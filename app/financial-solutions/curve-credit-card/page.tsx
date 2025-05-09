@@ -26,7 +26,7 @@ export default function CurveCreditCardPage() {
             <h1 className="text-3xl text-left sm:text-left md:text-4xl font-bold text-gray-800 mb-4 leading-8">
               Curve Credit Card: Your Cards United in One Smart Solution
             </h1>
-            
+
             {/* AdZep AutoZep Paid Advertisement `<div>` element */}
             <div
               id="uk_topfinanzas_1"
@@ -93,6 +93,12 @@ export default function CurveCreditCardPage() {
                 </div>
               </div>
 
+              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/curve-credit-card-requirements">
                   <Button className="bg-[#E33292] hover:bg-pink-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -145,6 +151,12 @@ export default function CurveCreditCardPage() {
                   that traditional siloed banking can't match.
                 </p>
 
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Time-Travel Banking
                 </h2>
@@ -180,6 +192,12 @@ export default function CurveCreditCardPage() {
                   derived from everyday spending, without requiring changes to
                   your existing financial products.
                 </p>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">

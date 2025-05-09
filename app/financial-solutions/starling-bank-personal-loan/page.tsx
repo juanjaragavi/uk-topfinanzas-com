@@ -96,6 +96,12 @@ export default function StarlingBankPersonalLoanPage() {
                 </div>
               </div>
 
+              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/starling-bank-personal-loan-requirements">
                   <Button className="bg-[#250E62] hover:bg-purple-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -169,6 +175,12 @@ export default function StarlingBankPersonalLoanPage() {
                   support, reflecting Starling's commitment to a superior
                   digital user experience.
                 </p>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -247,6 +259,12 @@ export default function StarlingBankPersonalLoanPage() {
                     </div>
                   </div>
                 </div>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   The Starling Approach to Lending

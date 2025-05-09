@@ -28,7 +28,7 @@ export default function BarclaysPersonalLoanPage() {
               Barclays Personal Loan: Tailored Financing with a Trusted Banking
               Partner
             </h1>
-            
+
             {/* AdZep AutoZep Paid Advertisement `<div>` element */}
             <div
               id="uk_topfinanzas_1"
@@ -99,6 +99,12 @@ export default function BarclaysPersonalLoanPage() {
                 </div>
               </div>
 
+              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/barclays-personal-loan-requirements">
                   <Button className="bg-[#00AEEF] hover:bg-blue-600 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -146,6 +152,12 @@ export default function BarclaysPersonalLoanPage() {
                   various financial needs across different life stages.
                 </p>
 
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Transparent and Competitive Pricing
                 </h2>
@@ -175,6 +187,12 @@ export default function BarclaysPersonalLoanPage() {
                   with your existing financial commitments while supporting your
                   broader financial planning.
                 </p>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="my-8" data-category="loans">
                   <Link href="/personal-finance/credit-card-types-benefits/">

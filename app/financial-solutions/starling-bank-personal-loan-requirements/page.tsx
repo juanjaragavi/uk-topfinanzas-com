@@ -127,6 +127,12 @@ export default function StarlingBankPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
                   Required Information (In-App):
                 </h2>
@@ -200,6 +206,12 @@ export default function StarlingBankPersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
                   Digital Application Process
@@ -318,6 +330,12 @@ export default function StarlingBankPersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">

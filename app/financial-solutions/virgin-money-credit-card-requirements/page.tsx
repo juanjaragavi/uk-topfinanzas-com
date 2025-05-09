@@ -27,7 +27,7 @@ export default function VirginMoneyCreditCardRequirementsPage() {
             <h1 className="text-3xl text-left sm:text-left md:text-3xl font-bold text-gray-800 mb-4 leading-8">
               Requirements for the Virgin Money Credit Card
             </h1>
-            
+
             {/* AdZep AutoZep Paid Advertisement `<div>` element */}
             <div
               id="uk_topfinanzas_1"
@@ -119,6 +119,12 @@ export default function VirginMoneyCreditCardRequirementsPage() {
                   </div>
                 </div>
 
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
                   Required Documentation:
                 </h2>
@@ -178,6 +184,12 @@ export default function VirginMoneyCreditCardRequirementsPage() {
                     </div>
                   </div>
                 </div>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4">
                   Application Process
@@ -325,6 +337,12 @@ export default function VirginMoneyCreditCardRequirementsPage() {
                     </div>
                   </div>
                 </div>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
@@ -517,7 +535,7 @@ export default function VirginMoneyCreditCardRequirementsPage() {
                     </Button>
                   </Link>
                 </div>
-                
+
                 {/* AI Content Disclaimer */}
                 <AIContentDisclaimer />
               </section>
