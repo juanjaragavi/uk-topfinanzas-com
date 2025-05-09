@@ -8,14 +8,14 @@
     "theme_color": "#2E74B5",
     "icons": [
         {
-            "src": "/images/optimized/favicon-640.webp",
+            "src": "/favicon.png",
             "sizes": "192x192",
-            "type": "image/webp"
+            "type": "image/png"
         },
         {
-            "src": "/images/favicon.webp",
+            "src": "/apple-touch-icon.png",
             "sizes": "512x512",
-            "type": "image/webp"
+            "type": "image/png"
         }
     ]
 }

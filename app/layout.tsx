@@ -113,13 +113,13 @@ export const metadata: Metadata = {
     // Remove all .ico references to avoid 500 errors
     icon: [
       {
-        url: "../public/favicon.png",
+        url: "/favicon.png",
         type: "image/png",
       },
     ],
-    apple: "../public/apple-touch-icon.png",
+    apple: "/apple-touch-icon.png",
   },
-  manifest: "../public/site.webmanifest", // Use relative path for local manifest
+  manifest: "/site.webmanifest", // Use relative path for local manifest
 
   // Optional: Define metadataBase for resolving relative image URLs
   metadataBase: new URL(baseUrl),
@@ -218,6 +218,8 @@ export default function RootLayout({
         <GoogleTagManager />
         <ResourceHints />
         <link rel="manifest" href="/site.webmanifest" crossOrigin="anonymous" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body className={`${poppins.variable} font-sans text-left sm:text-left`}>
         <GoogleTagManagerNoScript />
