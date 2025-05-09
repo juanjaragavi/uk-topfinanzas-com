@@ -177,12 +177,6 @@ export default function RootLayout({
           }}
         />
 
-        {/* ADZep AutoZep Paid Advertising tag */}
-        <script
-          data-cfasync="false"
-          src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
-        ></script>
-
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -245,6 +239,11 @@ export default function RootLayout({
         />
       </head>
       <body className={`${poppins.variable} font-sans text-left sm:text-left`}>
+        {/* ADZep AutoZep Paid Advertising tag */}
+        <script
+          data-cfasync="false"
+          src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
+        ></script>
         <GoogleTagManagerNoScript />
         <NavigationProvider>
           <Suspense fallback={null}>
