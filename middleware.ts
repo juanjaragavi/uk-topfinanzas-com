@@ -20,6 +20,6 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Apply middleware to all routes
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+  // Apply middleware to all routes, but exclude static resources
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico|favicon.png|apple-touch-icon.png|site.webmanifest).*)"],
 };

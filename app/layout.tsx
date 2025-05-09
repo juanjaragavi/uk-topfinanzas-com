@@ -108,15 +108,9 @@ export const metadata: Metadata = {
     images: [`https://media.topfinanzas.com/images/placeholder-image.webp`], // Using the provided image URL
   },
 
-  // Optional: Add icons and manifest for PWA/better bookmarking
+  // Use simplified favicon configuration
   icons: {
-    // Remove all .ico references to avoid 500 errors
-    icon: [
-      {
-        url: "/favicon.png",
-        type: "image/png",
-      },
-    ],
+    icon: "/favicon.png",
     apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest", // Use relative path for local manifest
@@ -223,9 +217,16 @@ export default function RootLayout({
         />
         <GoogleTagManager />
         <ResourceHints />
-        <link rel="manifest" href="/site.webmanifest" crossOrigin="anonymous" />
-        <link rel="icon" href="/favicon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        
+        {/* Explicit favicon and manifest links with proper MIME types */}
+        <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" type="image/png" />
+        <link rel="manifest" href="/site.webmanifest" type="application/manifest+json" crossOrigin="anonymous" />
+        
+        {/* Fallback api routes for browsers that might have issues with static files */}
+        <link rel="alternate icon" href="/api/favicon" type="image/x-icon" />
+        <link rel="alternate" href="/api/webmanifest" type="application/manifest+json" />
       </head>
       <body className={`${poppins.variable} font-sans text-left sm:text-left`}>
         <GoogleTagManagerNoScript />

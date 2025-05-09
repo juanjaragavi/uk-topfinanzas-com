@@ -17,46 +17,9 @@ const nextConfig = {
   // Asset prefix and base path for Vercel deployment
   assetPrefix: undefined,
   basePath: "",
-  // Add redirects to handle favicon requests properly
-  async redirects() {
-    return [
-      {
-        source: "/favicon.ico",
-        destination: "/favicon.png",
-        permanent: true,
-      },
-      {
-        source: "/favicon.:hash.ico",
-        destination: "/favicon.png",
-        permanent: true,
-      },
-    ];
-  },
-
-  // Add rewrites to ensure static files are properly served
+  // Add rewrites for static files - using simpler approach
   async rewrites() {
-    return [
-      {
-        source: "/favicon.png",
-        destination: "/favicon.png",
-      },
-      {
-        source: "/apple-touch-icon.png",
-        destination: "/apple-touch-icon.png",
-      },
-      {
-        source: "/site.webmanifest",
-        destination: "/site.webmanifest",
-      },
-      {
-        source: "/robots.txt",
-        destination: "/robots.txt",
-      },
-      {
-        source: "/sitemap.xml",
-        destination: "/sitemap.xml",
-      },
-    ];
+    return [];
   },
   // Add cache headers for static assets
   async headers() {
@@ -159,6 +122,20 @@ const nextConfig = {
         ],
       },
       {
+        // Favicon ICO
+        source: "/favicon.ico",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+          {
+            key: "Content-Type",
+            value: "image/x-icon",
+          },
+        ],
+      },
+      {
         // Web manifest file
         source: "/site.webmanifest",
         headers: [
@@ -169,6 +146,18 @@ const nextConfig = {
           {
             key: "Content-Type",
             value: "application/manifest+json",
+          },
+          {
+            key: "Access-Control-Allow-Origin",
+            value: "*",
+          },
+          {
+            key: "Access-Control-Allow-Methods",
+            value: "GET, OPTIONS",
+          },
+          {
+            key: "Access-Control-Allow-Headers",
+            value: "Content-Type, Authorization",
           },
         ],
       },
