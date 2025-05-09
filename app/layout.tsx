@@ -217,6 +217,7 @@ export default function RootLayout({
         />
         <GoogleTagManager />
         <ResourceHints />
+        <link rel="manifest" href="/site.webmanifest" crossOrigin="anonymous" />
       </head>
       <body className={`${poppins.variable} font-sans text-left sm:text-left`}>
         <GoogleTagManagerNoScript />
