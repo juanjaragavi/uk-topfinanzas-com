@@ -3,6 +3,7 @@
 import type React from "react";
 
 import { useState } from "react";
+import ClientOnly from "../ClientOnly";
 import { motion } from "framer-motion";
 
 export const CreditCardApplicationForm = () => {
@@ -86,9 +87,11 @@ export const CreditCardApplicationForm = () => {
 
           <p className="text-gray-600">
             Application Reference:{" "}
-            <span className="font-medium">
-              CC-{Math.floor(Math.random() * 1000000)}
-            </span>
+            <ClientOnly fallback={<span className="font-medium">CC-XXXX</span>}>
+              <span className="font-medium">
+                CC-{Math.floor(Math.random() * 1000000)}
+              </span>
+            </ClientOnly>
           </p>
         </div>
       </motion.div>

@@ -12,6 +12,7 @@ import UtmPersister from "@/components/analytics/utm-persister";
 import UtmMonitor from "@/components/analytics/utm-monitor";
 import ResourceHints from "@/components/resource-hints";
 import NavigationProvider from "@/components/providers/navigation-provider";
+import ClientOnly from "@/components/ClientOnly";
 
 // Use local font to avoid external requests during build
 // This improves build time and eliminates network dependency
@@ -215,18 +216,33 @@ export default function RootLayout({
             ),
           }}
         />
-        <GoogleTagManager />
+        <ClientOnly>
+          <GoogleTagManager />
+        </ClientOnly>
         <ResourceHints />
-        
+
         {/* Explicit favicon and manifest links with proper MIME types */}
         <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" type="image/png" />
-        <link rel="manifest" href="/site.webmanifest" type="application/manifest+json" crossOrigin="anonymous" />
-        
+        <link
+          rel="apple-touch-icon"
+          href="/apple-touch-icon.png"
+          type="image/png"
+        />
+        <link
+          rel="manifest"
+          href="/site.webmanifest"
+          type="application/manifest+json"
+          crossOrigin="anonymous"
+        />
+
         {/* Fallback api routes for browsers that might have issues with static files */}
         <link rel="alternate icon" href="/api/favicon" type="image/x-icon" />
-        <link rel="alternate" href="/api/webmanifest" type="application/manifest+json" />
+        <link
+          rel="alternate"
+          href="/api/webmanifest"
+          type="application/manifest+json"
+        />
       </head>
       <body className={`${poppins.variable} font-sans text-left sm:text-left`}>
         <GoogleTagManagerNoScript />

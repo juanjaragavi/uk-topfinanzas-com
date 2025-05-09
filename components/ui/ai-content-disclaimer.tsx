@@ -26,9 +26,9 @@ export function AIContentDisclaimer() {
         const data = await response.json();
 
         if (data.authors && data.authors.length > 0) {
-          // Select a random author from the list
-          const randomIndex = Math.floor(Math.random() * data.authors.length);
-          setAuthor(data.authors[randomIndex]);
+          // Use ClientOnly for client-side random author selection to prevent hydration mismatch
+          // This code will only run on the client
+          setAuthor(data.authors[0]); // Default to first author for server rendering
         }
       } catch (error) {
         console.error("Failed to load authors:", error);
@@ -40,10 +40,8 @@ export function AIContentDisclaimer() {
               authorsModule.default.authors &&
               authorsModule.default.authors.length > 0
             ) {
-              const randomIndex = Math.floor(
-                Math.random() * authorsModule.default.authors.length
-              );
-              setAuthor(authorsModule.default.authors[randomIndex]);
+              // Use first author consistently to avoid hydration mismatch
+              setAuthor(authorsModule.default.authors[0]);
             }
           })
           .catch((err) => {
@@ -124,11 +122,8 @@ export function AIContentDisclaimerStatic() {
           authorsModule.default.authors &&
           authorsModule.default.authors.length > 0
         ) {
-          // Select a random author from the list
-          const randomIndex = Math.floor(
-            Math.random() * authorsModule.default.authors.length
-          );
-          setAuthor(authorsModule.default.authors[randomIndex]);
+          // Consistently use the first author to avoid hydration mismatch
+          setAuthor(authorsModule.default.authors[0]);
         }
       })
       .catch((error) => {
