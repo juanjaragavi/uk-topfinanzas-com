@@ -144,14 +144,14 @@ export default function RootLayout({
 
         {/* Preload critical resources for faster LCP with crossorigin for CORS compliance */}
         {/* Removed preload for placeholder-image.webp as it competes with LCP banners */}
-        <link
+        {/*<link
           rel="preload"
           href="https://media.topfinanzas.com/images/banner-home-mobile.webp"
           as="image"
           media="(max-width: 767px)"
           fetchPriority="high"
           crossOrigin="anonymous"
-        />
+        />*/}
         {/* Removed specific preload for desktop banner; browser will fetch based on CSS media query */}
         {/* Removed redundant manual preload for logo; Next/Image priority=true handles this */}
 
