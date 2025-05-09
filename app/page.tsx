@@ -2,15 +2,11 @@
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import Link from "next/link";
-import Image from "next/image";
 import { FeaturedPostsGrid } from "@/components/ui/featured-posts-grid";
 import { FeaturedPostCard } from "@/components/ui/featured-post-card";
 import { useEffect, useState, useMemo } from "react";
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import dynamic from "next/dynamic";
-import { getImageSizes } from "@/lib/utils/image-utils";
 
 // Dynamically import components that aren't needed for the initial render
 const DynamicPagination = dynamic(
