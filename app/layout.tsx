@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import fs from "fs";
 import path from "path";
 import "./globals.css";
+import Script from "next/script"; // Added if not present, but it is for GTM
 import GoogleTagManager, {
   GoogleTagManagerNoScript,
 } from "@/components/analytics/gtm";
@@ -239,11 +240,15 @@ export default function RootLayout({
         />
       </head>
       <body className={`${poppins.variable} font-sans text-left sm:text-left`}>
-        {/* ADZep AutoZep Paid Advertising tag */}
-        <script
-          data-cfasync="false"
-          src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
-        ></script>
+        {/* ADZep AutoZep Paid Advertising tag - Modified to use next/script and ClientOnly */}
+        <ClientOnly>
+          <Script
+            id="adzep-script"
+            src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
+            strategy="afterInteractive"
+            data-cfasync="false"
+          />
+        </ClientOnly>
         <GoogleTagManagerNoScript />
         <NavigationProvider>
           <Suspense fallback={null}>
