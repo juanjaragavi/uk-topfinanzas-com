@@ -38,7 +38,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 mb-8 leading-5">
+              <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 The Halifax World Elite Mastercard is a premium banking product
                 designed for customers seeking exceptional benefits,
                 comprehensive travel perks, and exclusive lifestyle privileges.
@@ -58,23 +58,25 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                 />
               </div>
 
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+              
+
+              <section className="my-6">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
+                  Qualifying for the Halifax World Elite Mastercard
+                </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
               <div
                 id="uk_topfinanzas_2"
                 className="p-4 flex items-center justify-center w-full min-w-full"
               ></div>
-
-              <section className="my-6">
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
-                  Qualifying for the Halifax World Elite Mastercard
-                </h2>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Age and residency:</span>{" "}
                       You must be at least 18 years old and a UK resident. As
                       with all financial products, these fundamental
@@ -88,7 +90,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Halifax account holder status:
                       </span>{" "}
@@ -104,7 +106,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Income requirement:</span>{" "}
                       A minimum annual income of £75,000 is typically required.
                       This high threshold reflects the premium nature of the
@@ -114,7 +116,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Required Documentation:
                 </h2>
 
@@ -123,7 +125,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of Identity:</span>{" "}
                       A valid passport, driving licence, or national identity
                       card. These documents establish your identity and help
@@ -135,7 +137,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of Address:</span>{" "}
                       Recent documents (not older than 3 months) such as utility
                       bills, council tax statements, or bank statements. These
@@ -148,7 +150,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Credit History:</span> You
                       must authorize Halifax to perform a credit check. An
                       excellent credit history is typically required for this
@@ -161,7 +163,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of Income:</span>{" "}
                       Recent payslips, tax returns, or bank statements that
                       confirm your income, which is essential for assessing your
@@ -177,11 +179,11 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Understanding the Costs
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   It's important to understand the financial commitments
                   associated with the Halifax World Elite Mastercard:
                 </p>
@@ -191,7 +193,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Annual Account Fee:</span>{" "}
                       £15 monthly fee (£180 annually) for the Ultimate Reward
                       Current Account, which typically includes the World Elite
@@ -203,7 +205,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Representative APR:</span>{" "}
                       Typically around 49.9% (variable), which includes the
                       account fee. This rate should be considered carefully in
@@ -215,7 +217,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Cash Withdrawal Fee:
                       </span>{" "}
@@ -226,7 +228,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Premium Benefits
                 </h2>
 
@@ -235,7 +237,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Worldwide Travel Insurance:
                       </span>{" "}
@@ -250,7 +252,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">LoungeKey Access:</span>{" "}
                       Complimentary membership giving you access to over 1,000
                       airport lounges worldwide, creating a more comfortable and
@@ -263,7 +265,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C9F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Concierge Service:</span>{" "}
                       24/7 personal assistance for restaurant reservations,
                       travel arrangements, event tickets, and special occasion
@@ -273,11 +275,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                   </div>
                 </div>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
+                
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
@@ -293,21 +291,27 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Ideal Customer Profiles for the Halifax World Elite Mastercard
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The Halifax World Elite Mastercard is particularly suitable
                   for certain customer profiles, making it an excellent choice
                   for:
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Frequent international travelers:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   With comprehensive travel insurance, airport lounge access,
                   and no foreign transaction fees, this card creates significant
                   value for those who regularly travel abroad. The combined
@@ -316,7 +320,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                   travellers.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-rewards-credit-cards/" // Updated link
@@ -326,11 +330,11 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   High-income professionals with busy lifestyles:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The concierge service provides valuable time savings for
                   professionals with demanding schedules. Whether arranging
                   dinner reservations or sourcing tickets to sold-out events,
@@ -338,7 +342,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                   time spent on planning and arrangements.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/credit-card-types-benefits/" // Replaced dead link
@@ -348,11 +352,11 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Customers seeking comprehensive financial security:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   With purchase protection, extended warranty coverage, and
                   advanced fraud monitoring, this card provides peace of mind
                   for significant purchases and everyday transactions. These
@@ -360,7 +364,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                   standard cards typically offer.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/understanding-credit-card-interest-rates/" // Updated link
@@ -384,11 +388,11 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Is the Halifax World Elite Mastercard Right for You?
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   When considering the Halifax World Elite Mastercard, evaluate
                   how the specific benefits align with your lifestyle and
                   financial needs. While the income requirements and fees are
@@ -401,7 +405,6 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                 <div className="text-left my-8">
                   <Link
                     href="https://www.halifax.co.uk/creditcards/mastercard-world-elite.html"
-                    target="_blank"
                   >
                     <Button className="bg-[#004C9F] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Visit Official Website

@@ -37,7 +37,7 @@ export default function MarketFinancePersonalLoanPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 MarketFinance offers a range of fast, flexible finance options
                 for UK businesses, including business loans and invoice finance,
                 designed to unlock working capital and fuel growth.
@@ -50,7 +50,7 @@ export default function MarketFinancePersonalLoanPage() {
                     {/* MarketFinance Blue */}
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Invoice Finance:</span>{" "}
                     Unlock cash tied up in unpaid invoices, typically up to 90%
                     of the invoice value, often within 24 hours. Flexible
@@ -62,7 +62,7 @@ export default function MarketFinancePersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Business Loans:</span>{" "}
                     Access unsecured loans from £10,000 up to £500,000 for
                     growth, working capital, or other business needs, with fast
@@ -74,7 +74,7 @@ export default function MarketFinancePersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Fast & Simple Process:
                     </span>{" "}
@@ -87,19 +87,13 @@ export default function MarketFinancePersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Transparent Pricing:</span>{" "}
                     Clear, upfront information on rates and fees tailored to
                     your business profile and the specific finance product.
                   </div>
                 </div>
               </div>
-
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/marketfinance-personal-loan-requirements">
@@ -124,7 +118,7 @@ export default function MarketFinancePersonalLoanPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   MarketFinance (formerly MarketInvoice) is a leading UK fintech
                   company specializing in providing working capital solutions to
                   SMEs. They offer innovative products like invoice finance and
@@ -132,11 +126,17 @@ export default function MarketFinancePersonalLoanPage() {
                   invest in growth, and navigate operational challenges.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Unlocking Cash Flow with Invoice Finance
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   A core offering from MarketFinance is invoice finance. This
                   allows businesses to unlock the cash tied up in their
                   outstanding customer invoices, rather than waiting 30, 60, or
@@ -148,11 +148,11 @@ export default function MarketFinancePersonalLoanPage() {
                   invoices to fund) and contract finance options.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Flexible Business Loans for Growth
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   MarketFinance also provides unsecured business loans,
                   typically ranging from £10,000 to £500,000. These loans can be
                   used for various purposes, including expansion projects,
@@ -162,11 +162,11 @@ export default function MarketFinancePersonalLoanPage() {
                   providing budget certainty.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Technology-Driven Speed and Simplicity
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Leveraging fintech, MarketFinance offers a fast, streamlined
                   application process. Businesses can apply online, often
                   linking their accounting software (like Xero, Sage,
@@ -175,12 +175,6 @@ export default function MarketFinancePersonalLoanPage() {
                   rapid funding decisions, often much faster than traditional
                   bank processes.
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -196,16 +190,22 @@ export default function MarketFinancePersonalLoanPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Transparent Costs:</span>{" "}
                       MarketFinance provides clear pricing structures for both
                       loans (interest rate + potential arrangement fee) and
@@ -218,7 +218,7 @@ export default function MarketFinancePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Dedicated Support:</span>{" "}
                       Businesses often work with relationship managers who
                       understand their needs and can provide guidance on the
@@ -230,7 +230,7 @@ export default function MarketFinancePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Flexibility:</span>{" "}
                       Particularly with invoice finance, businesses can often
                       choose which invoices to fund, providing control over
@@ -243,7 +243,7 @@ export default function MarketFinancePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Focus on Established SMEs:
                       </span>{" "}
@@ -254,11 +254,11 @@ export default function MarketFinancePersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Streamlined Application for Businesses
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   The application process is tailored for efficiency:
                 </p>
 
@@ -267,7 +267,7 @@ export default function MarketFinancePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Online Enquiry:</span>{" "}
                       Start with a quick online application, providing basic
                       business details and funding requirements.
@@ -278,7 +278,7 @@ export default function MarketFinancePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Data Integration:</span>{" "}
                       Securely link accounting software or provide bank
                       statements and financial accounts digitally for
@@ -290,7 +290,7 @@ export default function MarketFinancePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#003DA5] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Fast Assessment & Offer:
                       </span>{" "}
@@ -300,11 +300,17 @@ export default function MarketFinancePersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Powering Business Ambition
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   MarketFinance plays a significant role in the alternative
                   finance market, offering crucial working capital and growth
                   funding to UK SMEs. Their focus on invoice finance provides a
@@ -314,18 +320,12 @@ export default function MarketFinancePersonalLoanPage() {
                   investment and expansion.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   For established UK SMEs seeking efficient, technology-driven
                   finance solutions, particularly for managing cash flow or
                   funding growth, MarketFinance offers tailored products
                   designed to meet their specific needs.
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="text-left my-8">
                   <Link href="/financial-solutions/marketfinance-personal-loan-requirements">

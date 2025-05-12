@@ -35,7 +35,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 mb-8 leading-5">
+              <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 Santander UK Personal Loans offer competitive rates and flexible
                 terms. Understanding the eligibility criteria and application
                 requirements is key to a successful application.
@@ -56,7 +56,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
               </div>
 
               <section className="my-6">
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Basic Eligibility Criteria
                 </h2>
 
@@ -65,7 +65,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Age requirement:</span>{" "}
                       You must be 18 years or older to apply for a Santander UK
                       Personal Loan.
@@ -76,7 +76,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">UK residency:</span> You
                       must be a permanent UK resident. Santander typically
                       requires applicants to have lived in the UK for at least 3
@@ -88,7 +88,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Income requirements:
                       </span>{" "}
@@ -102,7 +102,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Credit history:</span> A
                       good credit history is important for approval and securing
                       the best interest rates. Santander will conduct a credit
@@ -114,7 +114,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Santander customer status:
                       </span>{" "}
@@ -133,7 +133,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Required Documentation:
                 </h2>
 
@@ -142,7 +142,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of identity:</span>{" "}
                       A valid passport, UK driving license, or EU identity card
                       is typically required. Existing Santander customers may
@@ -154,7 +154,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of address:</span>{" "}
                       Recent utility bills, council tax statements, or bank
                       statements (usually dated within the last 3 months) are
@@ -166,7 +166,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Income verification:
                       </span>{" "}
@@ -180,7 +180,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Bank account details:
                       </span>{" "}
@@ -190,11 +190,11 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Application Process
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Santander offers a convenient application process, primarily
                   online:
                 </p>
@@ -204,7 +204,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Online Application:</span>{" "}
                       The quickest method is via the Santander UK website or
                       mobile app. The online form is designed for ease of use,
@@ -217,7 +217,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Eligibility Checker:
                       </span>{" "}
@@ -232,7 +232,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Decision Time:</span>{" "}
                       Santander aims to provide an instant decision for most
                       online applications. If further checks are required, it
@@ -244,7 +244,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Funding Speed:</span> Once
                       approved and the loan agreement is electronically signed,
                       funds are typically transferred to your nominated account
@@ -253,11 +253,11 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Loan Terms and Conditions
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Key terms associated with Santander UK Personal Loans:
                 </p>
 
@@ -266,7 +266,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Representative APR:</span>{" "}
                       Santander's representative APR starts from 3.6% for loans
                       between £7,500 and £15,000. The actual rate offered
@@ -278,7 +278,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Loan Amounts:</span>{" "}
                       Borrow between £1,000 and £25,000 (up to £35,000 for
                       eligible existing customers), subject to eligibility and
@@ -290,7 +290,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Repayment Terms:</span>{" "}
                       Choose repayment periods from 1 to 5 years (12 to 60
                       months).
@@ -301,7 +301,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Early Repayment:</span>{" "}
                       Santander allows early repayment. An early settlement
                       charge, typically up to 58 days' interest on the amount
@@ -309,12 +309,6 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
@@ -330,27 +324,33 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Who Is This Loan Best For?
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Santander UK Personal Loans are a strong option for various
                   borrowers:
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Existing Santander customers:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Customers with 1|2|3 World or Select Current Accounts may
                   receive preferential rates and higher borrowing limits, making
                   it a particularly attractive option. The integrated digital
                   experience is also a plus.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-rewards-credit-cards" // Replaced dead link
@@ -360,17 +360,17 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Debt consolidation:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The competitive rates and structured repayment plans make
                   Santander loans suitable for consolidating higher-interest
                   debts into a single, potentially lower-cost monthly payment.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/personal-loans-debt-strategy" // Replaced dead link
@@ -380,18 +380,18 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Medium-term financing needs:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   With repayment terms up to 5 years, Santander loans are
                   well-suited for financing goals like car purchases, home
                   improvements, or other significant expenses that require
                   spreading the cost over several years.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-personal-loans" // Replaced dead link
@@ -400,12 +400,6 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     Choosing the right loan term
                   </Link>
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/getting-out-of-debt">
@@ -421,11 +415,17 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Tips for a Successful Application
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   To enhance your chances of approval for a Santander UK
                   Personal Loan:
                 </p>
@@ -435,7 +435,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Check your credit score:
                       </span>{" "}
@@ -449,7 +449,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Use the eligibility checker:
                       </span>{" "}
@@ -464,7 +464,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Be accurate with details:
                       </span>{" "}
@@ -478,7 +478,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Prepare documentation:
                       </span>{" "}
@@ -490,10 +490,7 @@ export default function SantanderUKPersonalLoanRequirementsPage() {
                 </div>
 
                 <div className="text-left my-8">
-                  <Link
-                    href="https://www.santander.co.uk/personal/loans"
-                    target="_blank"
-                  >
+                  <Link href="https://www.santander.co.uk/personal/loans">
                     <Button className="bg-[#EC0000] hover:bg-red-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Visit Official Website
                     </Button>

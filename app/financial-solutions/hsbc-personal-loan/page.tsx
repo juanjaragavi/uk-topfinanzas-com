@@ -35,7 +35,7 @@ export default function HSBCPersonalLoanPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 HSBC Personal Loans offer competitive rates, straightforward
                 terms, and the reliability of one of the world's largest banking
                 institutions, providing you with the funds you need for life's
@@ -47,7 +47,7 @@ export default function HSBCPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#DB0011] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Competitive Interest Rates:
                     </span>{" "}
@@ -61,7 +61,7 @@ export default function HSBCPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#DB0011] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Flexible Loan Amounts:
                     </span>{" "}
@@ -75,7 +75,7 @@ export default function HSBCPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#DB0011] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Tailored Repayment Terms:
                     </span>{" "}
@@ -89,7 +89,7 @@ export default function HSBCPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#DB0011] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Quick Decision Process:
                     </span>{" "}
@@ -99,12 +99,6 @@ export default function HSBCPersonalLoanPage() {
                   </div>
                 </div>
               </div>
-
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/hsbc-personal-loan-requirements">
@@ -129,7 +123,7 @@ export default function HSBCPersonalLoanPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   HSBC's Personal Loan offers a reliable financial solution
                   backed by one of the world's largest and most established
                   banking institutions. With a history dating back over 150
@@ -138,11 +132,17 @@ export default function HSBCPersonalLoanPage() {
                   customers.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Tailored Solutions for Every Need
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Whether you're planning home improvements, considering a
                   vehicle purchase, consolidating existing debts, or preparing
                   for a special occasion like a wedding, HSBC's Personal Loan
@@ -154,11 +154,11 @@ export default function HSBCPersonalLoanPage() {
                   without borrowing more than necessary.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Competitive Rates and Clear Terms
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   HSBC offers competitive interest rates with a representative
                   APR starting from 3.9% for larger loans (rates subject to
                   change and individual circumstances). The bank's transparent
@@ -169,11 +169,11 @@ export default function HSBCPersonalLoanPage() {
                   in the broader financial market.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Flexible Repayment Options
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   HSBC understands that different financial situations require
                   different repayment strategies. Their Personal Loan offers
                   repayment terms ranging from 1 to 8 years, allowing you to
@@ -183,12 +183,6 @@ export default function HSBCPersonalLoanPage() {
                   within your monthly budget while aligning with your long-term
                   financial goals.
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -204,16 +198,22 @@ export default function HSBCPersonalLoanPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#DB0011] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         No Early Repayment Charges:
                       </span>{" "}
@@ -231,7 +231,7 @@ export default function HSBCPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#DB0011] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Preferential Rates for Existing Customers:
                       </span>{" "}
@@ -249,7 +249,7 @@ export default function HSBCPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#DB0011] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Loan Repayment Insurance (Optional):
                       </span>{" "}
@@ -266,7 +266,7 @@ export default function HSBCPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#DB0011] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Integrated Digital Management:
                       </span>{" "}
@@ -286,11 +286,11 @@ export default function HSBCPersonalLoanPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Streamlined Application Process
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   HSBC has designed its loan application process to be
                   straightforward and efficient:
                 </p>
@@ -300,7 +300,7 @@ export default function HSBCPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#DB0011] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Quick Online Application:
                       </span>{" "}
@@ -316,7 +316,7 @@ export default function HSBCPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#DB0011] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Rapid Decision:</span>{" "}
                       Receive an initial lending decision within minutes of
                       submitting your application, eliminating prolonged
@@ -330,7 +330,7 @@ export default function HSBCPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#DB0011] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Fast Funding:</span> Once
                       approved, funds are typically transferred to your
                       designated account within 24 hours, and often on the same
@@ -341,11 +341,11 @@ export default function HSBCPersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   The HSBC Advantage
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Choosing HSBC for your personal loan means partnering with a
                   financial institution that combines global scale with local
                   expertise. The bank's established presence in the UK market,
@@ -357,7 +357,7 @@ export default function HSBCPersonalLoanPage() {
                   loan journey.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Whether you're an existing HSBC customer looking to benefit
                   from relationship rates or new to the bank and seeking a
                   reliable lending partner, their Personal Loan offers a

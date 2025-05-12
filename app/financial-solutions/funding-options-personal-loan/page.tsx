@@ -37,7 +37,7 @@ export default function FundingOptionsPersonalLoanPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Funding Options is a leading business finance marketplace that
                 simplifies the process for UK SMEs to find and compare funding
                 solutions from a wide panel of lenders.
@@ -50,7 +50,7 @@ export default function FundingOptionsPersonalLoanPage() {
                     {/* Funding Options Yellow */}
                     <span className="text-black font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Access to Multiple Lenders:
                     </span>{" "}
@@ -64,7 +64,7 @@ export default function FundingOptionsPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3">
                     <span className="text-black font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Wide Range of Products:
                     </span>{" "}
@@ -78,7 +78,7 @@ export default function FundingOptionsPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3">
                     <span className="text-black font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Fast & Simple Process:
                     </span>{" "}
@@ -92,7 +92,7 @@ export default function FundingOptionsPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3">
                     <span className="text-black font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Expert Support:</span>{" "}
                     Benefit from guidance from dedicated Business Finance
                     Specialists who can help navigate the options and
@@ -100,12 +100,6 @@ export default function FundingOptionsPersonalLoanPage() {
                   </div>
                 </div>
               </div>
-
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/funding-options-personal-loan-requirements">
@@ -130,7 +124,7 @@ export default function FundingOptionsPersonalLoanPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Funding Options operates as a crucial intermediary in the UK's
                   business finance landscape. Instead of lending directly, they
                   provide a platform that connects Small and Medium-sized
@@ -138,11 +132,17 @@ export default function FundingOptionsPersonalLoanPage() {
                   simplifying the often complex search for business capital.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Navigating the Funding Maze for SMEs
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Finding the right finance can be challenging for SMEs. Funding
                   Options addresses this by offering a single point of access to
                   over 120 lenders. Their platform uses smart technology to
@@ -153,39 +153,37 @@ export default function FundingOptionsPersonalLoanPage() {
                   multiple lenders individually.
                 </p>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
-
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   A Spectrum of Business Finance Solutions
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Funding Options facilitates access to a wide array of business
                   finance products beyond standard term loans. This includes:
-                  <ul className="list-disc list-inside ml-4 my-2">
-                    <li>Unsecured Business Loans</li>
-                    <li>Secured Business Loans</li>
-                    <li>Invoice Finance (Factoring and Discounting)</li>
-                    <li>Asset Finance (Hire Purchase and Leasing)</li>
-                    <li>Revolving Credit Facilities</li>
-                    <li>Merchant Cash Advances</li>
-                    <li>Commercial Mortgages</li>
-                    <li>Property Development Finance</li>
+                  <ul className="list-disc list-inside ml-4 my-2 text-left">
+                    <li className="text-left">Unsecured Business Loans</li>
+                    <li className="text-left">Secured Business Loans</li>
+                    <li className="text-left">
+                      Invoice Finance (Factoring and Discounting)
+                    </li>
+                    <li className="text-left">
+                      Asset Finance (Hire Purchase and Leasing)
+                    </li>
+                    <li className="text-left">Revolving Credit Facilities</li>
+                    <li className="text-left">Merchant Cash Advances</li>
+                    <li className="text-left">Commercial Mortgages</li>
+                    <li className="text-left">Property Development Finance</li>
                   </ul>
                   This breadth ensures businesses can find funding tailored to
                   specific needs, whether it's managing cash flow, purchasing
                   assets, funding growth, or acquiring property.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Technology-Driven Matching and Speed
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The platform leverages fintech to streamline the matching
                   process. Businesses complete one simple online application,
                   and Funding Options' algorithm identifies potential lenders
@@ -194,12 +192,6 @@ export default function FundingOptionsPersonalLoanPage() {
                   minutes or hours, dramatically accelerating the funding
                   journey compared to traditional methods.
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 {/* Ad Block: Credit Cards */}
                 <div className="my-8" data-category="loans">
@@ -216,16 +208,22 @@ export default function FundingOptionsPersonalLoanPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Key Benefits of Using Funding Options:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Market Comparison:</span>{" "}
                       Easily compare potential offers from multiple lenders
                       side-by-side, helping businesses make informed decisions
@@ -237,7 +235,7 @@ export default function FundingOptionsPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Access to Specialist Lenders:
                       </span>{" "}
@@ -251,7 +249,7 @@ export default function FundingOptionsPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Dedicated Support:</span>{" "}
                       Businesses are assigned a Business Finance Specialist who
                       provides guidance, explains the options, and assists
@@ -264,7 +262,7 @@ export default function FundingOptionsPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Improved Approval Chances:
                       </span>{" "}
@@ -276,11 +274,11 @@ export default function FundingOptionsPersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   The Process for Businesses
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Using Funding Options typically involves these steps:
                 </p>
 
@@ -289,7 +287,7 @@ export default function FundingOptionsPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Online Enquiry:</span>{" "}
                       Complete a short online form detailing your business,
                       funding needs, and financial situation.
@@ -300,7 +298,7 @@ export default function FundingOptionsPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Matching:</span> Funding
                       Options' technology matches your request with suitable
                       lenders on their panel.
@@ -311,7 +309,7 @@ export default function FundingOptionsPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Review Options:</span>{" "}
                       Receive indicative quotes and options from matched
                       lenders, often facilitated by a Business Finance
@@ -322,7 +320,7 @@ export default function FundingOptionsPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Application & Funding:
                       </span>{" "}
@@ -333,11 +331,17 @@ export default function FundingOptionsPersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Empowering SME Growth
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Funding Options plays a vital role in the UK's SME ecosystem
                   by improving access to finance. Their platform demystifies the
                   funding landscape, offering clarity and choice to business
@@ -345,7 +349,7 @@ export default function FundingOptionsPersonalLoanPage() {
                   secure appropriate funding through traditional channels alone.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   For UK SMEs seeking finance, Funding Options provides an
                   efficient, transparent, and supportive route to exploring a
                   wide range of potential funding solutions tailored to their

@@ -36,7 +36,7 @@ export default function BarclaysPersonalLoanPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Barclays Personal Loans combine competitive rates with the
                 stability and trusted service of one of the UK's largest banking
                 institutions, providing flexible financial solutions customized
@@ -48,7 +48,7 @@ export default function BarclaysPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Straightforward Borrowing:
                     </span>{" "}
@@ -62,7 +62,7 @@ export default function BarclaysPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Customer-Focused Terms:
                     </span>{" "}
@@ -72,11 +72,17 @@ export default function BarclaysPersonalLoanPage() {
                   </div>
                 </div>
 
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Barclays Customer Benefits:
                     </span>{" "}
@@ -90,7 +96,7 @@ export default function BarclaysPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Digital Convenience:</span>{" "}
                     Apply online in minutes through the user-friendly Barclays
                     app or website, with quick decisions and minimal paperwork
@@ -99,12 +105,6 @@ export default function BarclaysPersonalLoanPage() {
                 </div>
               </div>
 
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
-
               <div className="text-left my-8">
                 <Link href="/financial-solutions/barclays-personal-loan-requirements">
                   <Button className="bg-[#00AEEF] hover:bg-blue-600 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -112,6 +112,12 @@ export default function BarclaysPersonalLoanPage() {
                   </Button>
                 </Link>
               </div>
+
+              {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
 
               <div className="my-8 text-left sm:text-left">
                 <Image
@@ -128,7 +134,7 @@ export default function BarclaysPersonalLoanPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Barclays Personal Loans provide trusted financial solutions
                   backed by over 300 years of banking experience. As one of
                   Britain's oldest and most established financial institutions,
@@ -137,11 +143,11 @@ export default function BarclaysPersonalLoanPage() {
                   customer needs.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Flexible Financing for Life's Key Moments
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Whether you're planning a home renovation, consolidating
                   existing debts, financing a special occasion like a wedding,
                   or making a significant purchase, Barclays Personal Loans
@@ -158,11 +164,11 @@ export default function BarclaysPersonalLoanPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Transparent and Competitive Pricing
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Barclays prides itself on transparent pricing with no hidden
                   fees or complex terms. Their personal loans feature
                   competitive representative APRs starting from 3.5% for larger
@@ -173,11 +179,17 @@ export default function BarclaysPersonalLoanPage() {
                   budget planning and financial management.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Customer-Focused Repayment Structure
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Recognizing that different financial situations require
                   tailored solutions, Barclays offers repayment terms ranging
                   from 2 to 5 years. This flexibility allows you to balance
@@ -187,12 +199,6 @@ export default function BarclaysPersonalLoanPage() {
                   with your existing financial commitments while supporting your
                   broader financial planning.
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8" data-category="loans">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -208,7 +214,7 @@ export default function BarclaysPersonalLoanPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
 
@@ -217,7 +223,7 @@ export default function BarclaysPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Early Repayment Flexibility:
                       </span>{" "}
@@ -235,7 +241,7 @@ export default function BarclaysPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Barclays Blue Rewards Program:
                       </span>{" "}
@@ -252,7 +258,7 @@ export default function BarclaysPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Payment Protection Options:
                       </span>{" "}
@@ -269,7 +275,7 @@ export default function BarclaysPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Digital Account Management:
                       </span>{" "}
@@ -283,11 +289,11 @@ export default function BarclaysPersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Streamlined Application Experience
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Barclays has invested significantly in creating an efficient,
                   user-friendly application process:
                 </p>
@@ -297,7 +303,7 @@ export default function BarclaysPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Expedited Online Application:
                       </span>{" "}
@@ -313,7 +319,7 @@ export default function BarclaysPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Personalized Rate Check:
                       </span>{" "}
@@ -330,7 +336,7 @@ export default function BarclaysPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Quick Funding:</span> Upon
                       approval, funds are typically deposited into your account
                       within 1-2 business days, often on the same day for
@@ -342,11 +348,11 @@ export default function BarclaysPersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   The Barclays Difference
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Choosing Barclays for your personal loan connects you with a
                   financial institution that balances innovation with proven
                   expertise. The bank's commitment to responsible lending
@@ -358,7 +364,7 @@ export default function BarclaysPersonalLoanPage() {
                   assistance available in whatever format you prefer.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Whether you're an existing Barclays customer looking to
                   benefit from relationship rates or new to the bank and seeking
                   a reliable lending partner, their Personal Loan offers a

@@ -310,7 +310,6 @@ export default function ContactUs() {
                 <span className="font-semibold text-[#2E74B5]">
                   <a
                     href="mailto:info@topfinanzas.com"
-                    target="_blank"
                     rel="noopener noreferrer"
                   >
                     info@topfinanzas.com

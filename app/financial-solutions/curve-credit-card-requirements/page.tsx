@@ -35,7 +35,7 @@ export default function CurveCreditCardRequirementsPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 mb-8 leading-5">
+              <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 The Curve Card revolutionizes how you manage your finances by
                 consolidating all your payment cards into one smart card with
                 powerful flexibility and enhanced features.
@@ -55,23 +55,23 @@ export default function CurveCreditCardRequirementsPage() {
                 />
               </div>
 
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
-
               <section className="my-6">
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   How to Qualify for the Curve Card
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Age requirement:</span>{" "}
                       You must be at least 18 years old to apply for a Curve
                       Card. This is a standard regulatory requirement for
@@ -83,7 +83,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Residency:</span> You must
                       be a resident of one of the countries where Curve
                       operates, including the UK and most European Economic Area
@@ -96,7 +96,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Existing payment cards:
                       </span>{" "}
@@ -111,7 +111,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Smartphone requirement:
                       </span>{" "}
@@ -128,7 +128,7 @@ export default function CurveCreditCardRequirementsPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Application Requirements:
                 </h2>
 
@@ -137,7 +137,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Curve App:</span> Download
                       the Curve App from the App Store (iOS) or Google Play
                       Store (Android) to begin the application process. All
@@ -149,7 +149,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Identity Verification:
                       </span>{" "}
@@ -164,7 +164,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Personal Information:
                       </span>{" "}
@@ -179,7 +179,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Card Details:</span>{" "}
                       You'll need to add at least one Mastercard or Visa payment
                       card to your Curve account by providing the card details
@@ -189,11 +189,11 @@ export default function CurveCreditCardRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Digital Application Process
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Curve's application process is entirely digital and typically
                   very quick:
                 </p>
@@ -203,7 +203,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         App Download and Setup:
                       </span>{" "}
@@ -218,7 +218,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Identity Verification:
                       </span>{" "}
@@ -233,7 +233,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Card Selection:</span>{" "}
                       Choose your plan (Curve Standard, Black, or Metal) and
                       provide your delivery address for your physical Curve
@@ -246,7 +246,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Adding Payment Cards:
                       </span>{" "}
@@ -261,7 +261,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Virtual Card Access:
                       </span>{" "}
@@ -279,11 +279,11 @@ export default function CurveCreditCardRequirementsPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Understanding the Costs
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Curve offers several tiers with different fee structures and
                   benefits:
                 </p>
@@ -293,7 +293,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Curve Standard:</span> The
                       entry-level tier is free with no monthly or annual fee.
                       Standard includes basic features like the ability to add
@@ -306,7 +306,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Curve Black:</span> This
                       mid-tier subscription costs approximately £9.99 per month
                       and includes increased limits (£15,000 fee-free foreign
@@ -319,7 +319,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Curve Metal:</span> The
                       premium tier costs approximately £14.99 per month and
                       includes all Black features plus unlimited fee-free
@@ -333,7 +333,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Additional Fees:</span>{" "}
                       Beyond monthly subscription costs (if applicable), be
                       aware of potential fees for services like cash withdrawals
@@ -359,7 +359,7 @@ export default function CurveCreditCardRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Key Benefits and Features
                 </h2>
 
@@ -368,7 +368,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">All Cards in One:</span>{" "}
                       Connect up to 30 Mastercard and Visa cards to your Curve
                       account, allowing you to carry just one physical card
@@ -380,7 +380,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Go Back in Time:</span>{" "}
                       Curve's signature feature allows you to switch which card
                       is charged for a transaction up to 30 days after the
@@ -392,7 +392,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Enhanced Security:</span>{" "}
                       Benefit from instant spending notifications, easy card
                       freezing, and the ability to disable specific transaction
@@ -406,7 +406,7 @@ export default function CurveCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Fee-Free Foreign Spending:
                       </span>{" "}
@@ -418,20 +418,20 @@ export default function CurveCreditCardRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Who Is This Card Best For?
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The Curve Card is particularly well-suited for several types
                   of users:
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Multi-card users:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   If you use multiple credit and debit cards for different
                   purposes (personal, business, rewards maximization), Curve
                   simplifies your wallet and financial management by
@@ -439,7 +439,7 @@ export default function CurveCreditCardRequirementsPage() {
                   preserving all their specific benefits.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/credit-card-types-benefits/" // Updated link
@@ -449,11 +449,11 @@ export default function CurveCreditCardRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   International travelers:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   For those who frequently travel abroad, Curve's fee-free
                   foreign spending and competitive exchange rates provide
                   significant savings compared to most traditional cards. The
@@ -461,7 +461,7 @@ export default function CurveCreditCardRequirementsPage() {
                   foreign transaction fees is particularly valuable.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/understanding-credit-card-interest-rates/" // Updated link
@@ -471,11 +471,11 @@ export default function CurveCreditCardRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Rewards maximizers:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Curve's ability to add another layer of rewards on top of your
                   existing cards' benefits allows for "double-dipping" on
                   rewards programs. By strategically selecting which underlying
@@ -484,7 +484,7 @@ export default function CurveCreditCardRequirementsPage() {
                   spending.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-rewards-credit-cards/" // Replaced dead link
@@ -509,11 +509,11 @@ export default function CurveCreditCardRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Is the Curve Card Right for You?
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   When considering the Curve Card, it's important to evaluate
                   how its unique approach to payment cards aligns with your
                   financial needs and habits. Unlike traditional credit cards,

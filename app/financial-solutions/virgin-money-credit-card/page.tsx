@@ -36,7 +36,7 @@ export default function VirginMoneyCreditCardPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 The Virgin Money Credit Card combines innovative features,
                 exclusive rewards, and competitive rates with the distinctive
                 style that defines the Virgin brand.
@@ -47,7 +47,7 @@ export default function VirginMoneyCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Virgin Red Points:</span>{" "}
                     Earn Virgin Red points on your spending that can be redeemed
                     for experiences, travel with Virgin Atlantic, retail
@@ -59,7 +59,7 @@ export default function VirginMoneyCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Exclusive Offers:</span>{" "}
                     Access to exclusive Virgin Group discounts and priority
                     booking for Virgin experiences and events, from concert
@@ -71,7 +71,7 @@ export default function VirginMoneyCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Competitive Transfer Rates:
                     </span>{" "}
@@ -85,7 +85,7 @@ export default function VirginMoneyCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Advanced Mobile App:</span>{" "}
                     Manage your account through Virgin Money's award-winning
                     mobile app, featuring spend tracking, card controls, and
@@ -94,12 +94,6 @@ export default function VirginMoneyCreditCardPage() {
                 </div>
               </div>
 
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
-
               <div className="text-left my-8">
                 <Link href="/financial-solutions/virgin-money-credit-card-requirements">
                   <Button className="bg-[#CC0000] hover:bg-red-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -107,6 +101,8 @@ export default function VirginMoneyCreditCardPage() {
                   </Button>
                 </Link>
               </div>
+              
+              
 
               <div className="my-8 text-left sm:text-left">
                 <Image
@@ -123,7 +119,7 @@ export default function VirginMoneyCreditCardPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The Virgin Money Credit Card stands out in the UK banking
                   landscape with its distinctive approach that combines
                   practical financial benefits with the innovative style that
@@ -132,11 +128,17 @@ export default function VirginMoneyCreditCardPage() {
                   substance and personality.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Rewarding Your Loyalty
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   At the heart of the Virgin Money Credit Card's appeal is its
                   reward structure centered around the Virgin Red loyalty
                   program. Cardholders earn Virgin Red points on their everyday
@@ -150,11 +152,11 @@ export default function VirginMoneyCreditCardPage() {
                   benefits that extend beyond traditional cashback.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Exclusive Virgin Benefits
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   One of the unique advantages of the Virgin Money Credit Card
                   is access to exclusive offers and priority booking for Virgin
                   experiences and events. Cardholders can enjoy discounts across
@@ -168,11 +170,11 @@ export default function VirginMoneyCreditCardPage() {
                   this card from more conventional banking products.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Practical Financial Features
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   While style and rewards are important aspects of the Virgin
                   Money Credit Card, it doesn't compromise on practical
                   financial features. The card offers competitive promotional
@@ -186,11 +188,7 @@ export default function VirginMoneyCreditCardPage() {
                   those who regularly shop with overseas retailers.
                 </p>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
+                
 
                 {/* Ad Block: Credit Cards */}
                 <div className="my-8 text-left sm:text-left">
@@ -206,16 +204,22 @@ export default function VirginMoneyCreditCardPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Distinctive Card Design:
                       </span>{" "}
@@ -230,7 +234,7 @@ export default function VirginMoneyCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Digital Wallet Integration:
                       </span>{" "}
@@ -245,7 +249,7 @@ export default function VirginMoneyCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Enhanced Security Features:
                       </span>{" "}
@@ -260,7 +264,7 @@ export default function VirginMoneyCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Fee-Free Currency Conversion:
                       </span>{" "}
@@ -278,11 +282,11 @@ export default function VirginMoneyCreditCardPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Digital Banking Excellence
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Virgin Money's commitment to modern banking is evident in its
                   digital capabilities:
                 </p>
@@ -292,7 +296,7 @@ export default function VirginMoneyCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Award-Winning Mobile App:
                       </span>{" "}
@@ -307,7 +311,7 @@ export default function VirginMoneyCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Spend Tracking:</span>{" "}
                       Gain insights into your spending patterns with automated
                       categorization of transactions, helping you understand
@@ -320,7 +324,7 @@ export default function VirginMoneyCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Instant Notifications:
                       </span>{" "}
@@ -331,11 +335,11 @@ export default function VirginMoneyCreditCardPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   A Different Kind of Banking
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   The Virgin Money Credit Card represents the brand's
                   distinctive approach to banking that combines style,
                   innovation, and substance. It offers a compelling blend of
@@ -347,7 +351,7 @@ export default function VirginMoneyCreditCardPage() {
                   experiences.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Whether you're attracted by the rewards, the exclusive Virgin
                   Group benefits, the competitive rates, or simply the
                   distinctive style, the Virgin Money Credit Card offers a

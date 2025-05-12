@@ -35,7 +35,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 mb-8 leading-5">
+              <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 NatWest Personal Loans offer competitive rates and flexible
                 terms. Understanding the eligibility criteria and application
                 requirements is key to a successful application.
@@ -56,7 +56,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
               </div>
 
               <section className="my-6">
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Basic Eligibility Criteria
                 </h2>
 
@@ -65,7 +65,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Age requirement:</span>{" "}
                       You must be 18 years or older to apply for a NatWest
                       Personal Loan.
@@ -76,7 +76,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">UK residency:</span> You
                       must be a UK resident with a permanent UK address. NatWest
                       typically requires applicants to have been resident in the
@@ -88,7 +88,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Income requirements:
                       </span>{" "}
@@ -102,7 +102,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Credit history:</span> A
                       good credit history is important for approval and securing
                       the best interest rates. NatWest will conduct a credit
@@ -114,7 +114,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         NatWest customer status:
                       </span>{" "}
@@ -131,7 +131,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Required Documentation:
                 </h2>
 
@@ -140,7 +140,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of identity:</span>{" "}
                       A valid passport, UK driving license, or EU identity card
                       is typically required. Existing NatWest customers may have
@@ -152,7 +152,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of address:</span>{" "}
                       Recent utility bills, council tax statements, or bank
                       statements (usually dated within the last 3 months) are
@@ -164,7 +164,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Income verification:
                       </span>{" "}
@@ -178,7 +178,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Bank account details:
                       </span>{" "}
@@ -188,11 +188,11 @@ export default function NatWestPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Application Process
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   NatWest offers a convenient application process, primarily
                   online:
                 </p>
@@ -202,7 +202,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Online Application:</span>{" "}
                       The quickest method is via the NatWest website or mobile
                       app. The online form is designed for ease of use, guiding
@@ -215,7 +215,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Personalized Quote:</span>{" "}
                       Before submitting a full application, use the NatWest loan
                       calculator and personalized quote tool. This provides an
@@ -228,7 +228,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Decision Time:</span>{" "}
                       NatWest aims to provide an instant decision for most
                       online applications. If further checks are required, it
@@ -240,7 +240,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Funding Speed:</span> Once
                       approved and the loan agreement is electronically signed,
                       funds are typically transferred to your nominated account
@@ -249,11 +249,11 @@ export default function NatWestPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Loan Terms and Conditions
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Key terms associated with NatWest Personal Loans:
                 </p>
 
@@ -262,7 +262,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Representative APR:</span>{" "}
                       NatWest's representative APR starts from 3.9% for loans
                       between £7,500 and £15,000. The actual rate offered
@@ -274,7 +274,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Loan Amounts:</span>{" "}
                       Borrow between £1,000 and £50,000, subject to eligibility
                       and affordability checks.
@@ -285,7 +285,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Repayment Terms:</span>{" "}
                       Choose repayment periods from 1 to 8 years (12 to 96
                       months).
@@ -296,7 +296,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Early Repayment:</span>{" "}
                       NatWest allows early repayment. An early settlement
                       charge, typically equivalent to one month's interest, may
@@ -304,12 +304,6 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
@@ -325,26 +319,32 @@ export default function NatWestPersonalLoanRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Who Is This Loan Best For?
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   NatWest Personal Loans are a strong option for various
                   borrowers:
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Home improvement projects:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   With loan amounts up to £50,000 and flexible terms up to 8
                   years, NatWest loans can comfortably finance significant home
                   renovations or extensions.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-personal-loans" // Replaced dead link
@@ -354,17 +354,17 @@ export default function NatWestPersonalLoanRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Debt consolidation:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The competitive rates and structured repayment plans make
                   NatWest loans suitable for consolidating higher-interest debts
                   into a single, potentially lower-cost monthly payment.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/personal-loans-debt-strategy" // Replaced dead link
@@ -374,17 +374,17 @@ export default function NatWestPersonalLoanRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Existing NatWest customers:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Current account holders may benefit from a faster application
                   process and potentially better rates, making it a convenient
                   option for those already banking with NatWest.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-rewards-credit-cards" // Replaced dead link
@@ -393,12 +393,6 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     Loyalty rewards in banking
                   </Link>
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/getting-out-of-debt">
@@ -414,11 +408,17 @@ export default function NatWestPersonalLoanRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Tips for a Successful Application
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   To enhance your chances of approval for a NatWest Personal
                   Loan:
                 </p>
@@ -428,7 +428,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Check your credit score:
                       </span>{" "}
@@ -442,7 +442,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Use the eligibility checker:
                       </span>{" "}
@@ -457,7 +457,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Be accurate with details:
                       </span>{" "}
@@ -471,7 +471,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Prepare documentation:
                       </span>{" "}
@@ -483,10 +483,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                 </div>
 
                 <div className="text-left my-8">
-                  <Link
-                    href="https://personal.natwest.com/personal/loans.html"
-                    target="_blank"
-                  >
+                  <Link href="https://personal.natwest.com/personal/loans.html">
                     <Button className="bg-[#42145F] hover:bg-purple-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Visit Official Website
                     </Button>

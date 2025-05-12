@@ -38,7 +38,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 mb-8 leading-5">
+              <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 The Barclaycard Avios Plus Credit Card is a premium travel
                 rewards card ideal for frequent travelers and those looking to
                 maximize benefits from their everyday spending.
@@ -59,7 +59,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
               </div>
 
               <section className="my-6">
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   How to Qualify for the Barclaycard Avios Plus Credit Card
                 </h2>
 
@@ -74,7 +74,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Age and residency:</span>{" "}
                       You must be at least 18 years old and a UK resident. This
                       ensures applicants have the legal capacity for financial
@@ -87,7 +87,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Income requirement:</span>{" "}
                       A minimum annual income of £20,000 is required. This
                       premium card is designed for those with higher income
@@ -97,7 +97,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Required Documentation:
                 </h2>
 
@@ -112,7 +112,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of Identity:</span>{" "}
                       A valid passport, driving licence, or national identity
                       card.
@@ -123,7 +123,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of Address:</span>{" "}
                       Recent documents (no older than 3 months) such as utility
                       bills, council tax statements, or bank statements.
@@ -134,7 +134,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Credit History:</span> You
                       must authorize Barclaycard to perform a credit check. A
                       good to excellent credit score is typically required for
@@ -146,7 +146,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of Income:</span>{" "}
                       Recent payslips, tax returns, or bank statements that
                       confirm your income, which is essential for assessing your
@@ -155,7 +155,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Understanding the Costs
                 </h2>
 
@@ -165,7 +165,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   It's essential to understand the costs associated with the
                   Barclaycard Avios Plus Credit Card to make an informed
                   decision:
@@ -176,7 +176,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Annual Fee:</span> £20 per
                       month (£240 annually), which is common for premium travel
                       rewards cards offering substantial benefits.
@@ -187,7 +187,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Representative APR:</span>{" "}
                       72.4% (variable) based on a £1,200 credit limit. This
                       includes the annual fee and should be carefully evaluated
@@ -199,7 +199,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Cash Withdrawals:</span> A
                       fee of 2.99% (minimum £2.99) applies for cash advances,
                       making this an option to consider only for emergencies due
@@ -222,7 +222,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Benefits and Features
                 </h2>
 
@@ -231,7 +231,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Avios Points:</span> Earn
                       1.5 Avios for every £1 spent, with the potential to earn
                       even more on British Airways purchases. These points can
@@ -244,7 +244,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Welcome Bonus:</span> Earn
                       25,000 Avios when you spend £3,000 in your first 3 months,
                       jumpstarting your rewards balance for future travel
@@ -256,7 +256,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Cabin Upgrade Voucher:
                       </span>{" "}
@@ -267,21 +267,21 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Optimise Your Experience with the Barclaycard Avios Plus
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The Barclaycard Avios Plus Credit Card is particularly
                   well-suited for several types of consumers, thanks to its
                   accessible features and numerous benefits:
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Frequent travelers and British Airways enthusiasts:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   With a generous Avios earning rate and a cabin upgrade
                   voucher, this card is ideal for those who regularly travel
                   with British Airways or its partner airlines. The ability to
@@ -290,7 +290,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   excellent choice for those who prioritise travel rewards.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-rewards-credit-cards/" // Replaced dead link
@@ -300,11 +300,11 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Higher-income professionals:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   With a minimum income requirement of £20,000 annually, this
                   card targets professionals who can benefit from its premium
                   features. The comprehensive travel insurance and high earning
@@ -312,7 +312,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   disposable income who want to make the most of their spending.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/credit-card-types-benefits/" // Replaced dead link
@@ -322,11 +322,11 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   International travellers and online shoppers:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The lack of foreign transaction fees makes this card
                   particularly valuable for those who frequently travel abroad
                   or make purchases from international websites. This feature,
@@ -336,7 +336,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   journeys.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/understanding-credit-card-interest-rates/" // Updated link
@@ -360,11 +360,11 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Is the Barclaycard Avios Plus Right for You?
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   When considering the Barclaycard Avios Plus Credit Card, it's
                   important to evaluate how its specific features align with
                   your lifestyle and financial habits. This premium card offers
@@ -376,7 +376,6 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                 <div className="text-left my-8">
                   <Link
                     href="https://www.barclaycard.co.uk/personal/credit-cards/avios-plus"
-                    target="_blank"
                   >
                     <Button className="bg-[#00395D] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Visit Official Website

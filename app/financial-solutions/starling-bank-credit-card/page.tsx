@@ -35,7 +35,7 @@ export default function StarlingBankCreditCardPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 The Starling Bank Credit Card extends the award-winning digital
                 bank's commitment to transparent, customer-first banking with a
                 credit product that combines innovative features with ethical
@@ -47,7 +47,7 @@ export default function StarlingBankCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Fee-Free Global Transactions:
                     </span>{" "}
@@ -61,7 +61,7 @@ export default function StarlingBankCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Real-Time Insights:</span>{" "}
                     Access instant spending notifications, automatic
                     categorization, and detailed analytics to help you
@@ -73,7 +73,7 @@ export default function StarlingBankCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Seamless Banking Integration:
                     </span>{" "}
@@ -87,7 +87,7 @@ export default function StarlingBankCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Transparent and Fair Pricing:
                     </span>{" "}
@@ -97,12 +97,6 @@ export default function StarlingBankCreditCardPage() {
                   </div>
                 </div>
               </div>
-
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/starling-bank-credit-card-requirements">
@@ -127,7 +121,7 @@ export default function StarlingBankCreditCardPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The Starling Bank Credit Card is a natural extension of the
                   award-winning digital bank's approach to financial services.
                   As one of the UK's most respected neobanks, Starling has built
@@ -138,11 +132,17 @@ export default function StarlingBankCreditCardPage() {
                   maintaining ethical principles.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Ethical Approach to Credit
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   At the foundation of the Starling Credit Card is an ethical
                   approach to lending. Unlike some traditional credit cards that
                   profit from customer debt, Starling emphasizes responsible
@@ -155,11 +155,11 @@ export default function StarlingBankCreditCardPage() {
                   the best interest of its customers, not against them.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Digital-First Experience
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   True to its neobank roots, Starling delivers a fully digital
                   credit card experience. From application to everyday use, the
                   entire process is managed through Starling's award-winning
@@ -173,11 +173,11 @@ export default function StarlingBankCreditCardPage() {
                   comprehensive financial management solution.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Seamless Banking Integration
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   For existing Starling customers, the credit card integrates
                   seamlessly with the bank's other products. The card appears
                   alongside your current account in the same app, creating a
@@ -190,19 +190,13 @@ export default function StarlingBankCreditCardPage() {
                   multiple financial products.
                 </p>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
-
                 {/* Related Articles Section */}
                 <div className="my-8 p-6 bg-gray-50 rounded-xl border border-gray-200">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3 text-left">
                     Learn More About Credit Cards:
                   </h3>
-                  <ul className="space-y-2 list-disc list-inside text-blue-700">
-                    <li>
+                  <ul className="space-y-2 list-disc list-inside text-blue-700 text-left">
+                    <li className="text-left">
                       <Link
                         href="/personal-finance/travel-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
@@ -210,7 +204,7 @@ export default function StarlingBankCreditCardPage() {
                         Top Travel Credit Cards
                       </Link>
                     </li>
-                    <li>
+                    <li className="text-left">
                       <Link
                         href="/personal-finance/no-annual-fee-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
@@ -218,7 +212,7 @@ export default function StarlingBankCreditCardPage() {
                         Top No Annual Fee Cards
                       </Link>
                     </li>
-                    <li>
+                    <li className="text-left">
                       <Link
                         href="/personal-finance/best-rewards-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
@@ -226,7 +220,7 @@ export default function StarlingBankCreditCardPage() {
                         Maximising Credit Card Rewards
                       </Link>
                     </li>
-                    <li>
+                    <li className="text-left">
                       <Link
                         href="/personal-finance/understanding-credit-card-interest-rates/"
                         className="hover:underline hover:text-blue-900 transition-colors"
@@ -237,16 +231,22 @@ export default function StarlingBankCreditCardPage() {
                   </ul>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Smart Security Controls:
                       </span>{" "}
@@ -262,7 +262,7 @@ export default function StarlingBankCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Spending Insights:</span>{" "}
                       Access detailed breakdowns of your spending by category,
                       merchant, and time period, with personalized insights that
@@ -276,7 +276,7 @@ export default function StarlingBankCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Goals and Roundups:</span>{" "}
                       Integrate your credit card spending with Starling's
                       savings features, including the ability to round up
@@ -290,7 +290,7 @@ export default function StarlingBankCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Digital Wallet Integration:
                       </span>{" "}
@@ -308,11 +308,11 @@ export default function StarlingBankCreditCardPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Customer-First Support
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Starling's approach to customer service has won numerous
                   awards and continues with their credit card:
                 </p>
@@ -322,7 +322,7 @@ export default function StarlingBankCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         24/7 In-App Support:
                       </span>{" "}
@@ -337,7 +337,7 @@ export default function StarlingBankCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         UK-Based Customer Service:
                       </span>{" "}
@@ -352,7 +352,7 @@ export default function StarlingBankCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Transparent Issue Resolution:
                       </span>{" "}
@@ -364,11 +364,11 @@ export default function StarlingBankCreditCardPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Banking That Benefits Society
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Beyond its direct customer benefits, the Starling Credit Card
                   reflects the bank's broader commitment to responsible banking
                   practices. Starling is a certified B Corporation, meaning it
@@ -379,7 +379,7 @@ export default function StarlingBankCreditCardPage() {
                   the environment, not just shareholders.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Whether you're an existing Starling customer looking to expand
                   your relationship with the bank or someone seeking a more
                   ethical and transparent approach to credit, the Starling

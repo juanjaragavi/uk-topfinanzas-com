@@ -36,7 +36,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 mb-8 leading-5">
+              <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 Capify offers fast Merchant Cash Advances and Business Loans for
                 UK SMEs. Understanding their eligibility helps businesses access
                 funding quickly.
@@ -56,14 +56,8 @@ export default function CapifyPersonalLoanRequirementsPage() {
                 />
               </div>
 
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
-
               <section className="my-6">
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Basic Eligibility Criteria for SMEs
                 </h2>
 
@@ -72,7 +66,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Business Location:</span>{" "}
                       Your business must be based and operating in the UK.
                     </div>
@@ -82,7 +76,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Trading History:</span>{" "}
                       Typically requires a minimum trading history, often 6-12
                       months, demonstrating business activity.
@@ -93,7 +87,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Turnover / Card Sales:
                       </span>{" "}
@@ -104,11 +98,17 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     </div>
                   </div>
 
+                  {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                  <div
+                    id="uk_topfinanzas_2"
+                    className="p-4 flex items-center justify-center w-full min-w-full"
+                  ></div>
+
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Business Structure:</span>{" "}
                       Capify serves various structures including Limited
                       Companies, Sole Traders, and Partnerships.
@@ -118,7 +118,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Industry:</span> While
                       broad, certain industries (especially those with high card
                       transaction volumes like retail and hospitality) are
@@ -133,10 +133,10 @@ export default function CapifyPersonalLoanRequirementsPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Information & Documentation Needed:
                 </h2>
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Capify aims for a simple process, typically requiring:
                 </p>
 
@@ -145,7 +145,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Basic Business Information:
                       </span>{" "}
@@ -158,7 +158,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Trading Information:
                       </span>{" "}
@@ -171,7 +171,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Card Sales Data (for MCA):
                       </span>{" "}
@@ -183,7 +183,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of Identity:</span>{" "}
                       Standard ID verification for the business
                       owner(s)/director(s).
@@ -191,11 +191,11 @@ export default function CapifyPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Application Process
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Capify's application process is designed for speed and
                   simplicity:
                 </p>
@@ -205,7 +205,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">1. Initial Enquiry:</span>{" "}
                       Start with a quick online form or phone call to provide
                       basic business details and funding needs.
@@ -216,7 +216,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         2. Document Submission:
                       </span>{" "}
@@ -229,7 +229,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         3. Underwriting & Decision:
                       </span>{" "}
@@ -243,7 +243,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">4. Offer & Funding:</span>{" "}
                       If approved, you receive a clear offer. Upon acceptance,
                       funds are typically transferred rapidly, often within the
@@ -258,11 +258,11 @@ export default function CapifyPersonalLoanRequirementsPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Finance Terms and Conditions
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Key terms differ between MCA and Business Loans:
                 </p>
 
@@ -271,7 +271,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Merchant Cash Advance (MCA):
                       </span>{" "}
@@ -286,7 +286,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Business Loans:</span>{" "}
                       Amounts typically £5k - £500k. Fixed repayment terms
                       (e.g., 6-18 months) with set daily or weekly payments.
@@ -297,7 +297,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Security:</span> Often
                       unsecured, but personal guarantees from directors/owners
                       are commonly required.
@@ -319,25 +319,25 @@ export default function CapifyPersonalLoanRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Who Is Capify Finance Best For?
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Capify's solutions are particularly well-suited for:
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Retail, Hospitality & Service Businesses (MCA):
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Businesses with consistent daily card sales find the MCA model
                   attractive due to its flexible repayment structure tied
                   directly to revenue.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-personal-loans" // Replaced dead link
@@ -347,17 +347,17 @@ export default function CapifyPersonalLoanRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   SMEs Needing Fast Funding:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Companies requiring quick access to working capital for
                   opportunities or unexpected costs benefit from Capify's rapid
                   decision and funding times.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/tips-for-choosing-an-online-loan" // Replaced dead link
@@ -367,17 +367,17 @@ export default function CapifyPersonalLoanRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Businesses with Less Traditional Profiles:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Capify's focus on recent performance can make them an option
                   for businesses that might struggle to meet the stricter
                   historical criteria of traditional banks.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-personal-loans" // Replaced dead link
@@ -401,11 +401,11 @@ export default function CapifyPersonalLoanRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Tips for a Successful Application
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   To enhance your chances of approval with Capify:
                 </p>
 
@@ -414,7 +414,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Provide Complete Statements:
                       </span>{" "}
@@ -428,7 +428,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Demonstrate Consistent Performance:
                       </span>{" "}
@@ -441,7 +441,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Be Clear About Funding Use:
                       </span>{" "}
@@ -454,7 +454,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Understand the Costs:
                       </span>{" "}

@@ -35,7 +35,7 @@ export default function TSBCreditCardPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 The TSB Credit Card delivers a straightforward approach to
                 credit with practical features and competitive rates designed to
                 support your everyday financial needs.
@@ -46,7 +46,7 @@ export default function TSBCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Competitive Interest Rates:
                     </span>{" "}
@@ -59,7 +59,7 @@ export default function TSBCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Balance Transfer Options:
                     </span>{" "}
@@ -73,7 +73,7 @@ export default function TSBCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Cashback Offers:</span>{" "}
                     Access targeted cashback deals at selected retailers through
                     TSB's cashback platform, helping you save on everyday
@@ -85,7 +85,7 @@ export default function TSBCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Mobile Banking App:</span>{" "}
                     Manage your account easily through TSB's mobile banking app
                     with features like transaction alerts, card freezing, and
@@ -94,12 +94,6 @@ export default function TSBCreditCardPage() {
                 </div>
               </div>
 
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
-
               <div className="text-left my-8">
                 <Link href="/financial-solutions/tsb-credit-card-requirements">
                   <Button className="bg-[#0A4D8C] hover:bg-blue-900 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -107,6 +101,8 @@ export default function TSBCreditCardPage() {
                   </Button>
                 </Link>
               </div>
+
+              
 
               <div className="my-8 text-left sm:text-left">
                 <Image
@@ -123,7 +119,7 @@ export default function TSBCreditCardPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The TSB Credit Card represents a practical financial tool from
                   one of the UK's established high street banks. With its focus
                   on straightforward features and competitive rates, this card
@@ -131,11 +127,17 @@ export default function TSBCreditCardPage() {
                   unnecessary complexity.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Practical Financial Management
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   TSB's approach to credit cards emphasizes practical financial
                   management. The card offers competitive standard interest
                   rates, making it a reasonable option for everyday purchases
@@ -148,11 +150,11 @@ export default function TSBCreditCardPage() {
                   administration.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Targeted Rewards and Savings
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Rather than a complex points system, TSB focuses on providing
                   targeted cashback offers through their dedicated platform.
                   These offers are typically aligned with everyday spending
@@ -164,11 +166,11 @@ export default function TSBCreditCardPage() {
                   spending without navigating complicated redemption processes.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Security and Protection
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Security is a priority with the TSB Credit Card. The card
                   benefits from advanced security features, including continuous
                   fraud monitoring and real-time transaction alerts. If
@@ -181,11 +183,7 @@ export default function TSBCreditCardPage() {
                   shopping.
                 </p>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
+                
 
                 {/* Ad Block: Credit Cards */}
                 <div className="my-8 text-left sm:text-left">
@@ -201,16 +199,22 @@ export default function TSBCreditCardPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Digital Wallet Compatibility:
                       </span>{" "}
@@ -225,7 +229,7 @@ export default function TSBCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Card Controls:</span> Use
                       the TSB mobile app to temporarily freeze your credit card
                       if it's misplaced, set transaction alerts, and monitor
@@ -238,7 +242,7 @@ export default function TSBCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Flexible Repayment Options:
                       </span>{" "}
@@ -253,7 +257,7 @@ export default function TSBCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Global Acceptance:</span>{" "}
                       Use your TSB Credit Card with confidence at millions of
                       locations worldwide through the Mastercard or Visa network
@@ -269,11 +273,11 @@ export default function TSBCreditCardPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Customer Support and Service
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   TSB is committed to providing accessible customer support
                   through multiple channels:
                 </p>
@@ -283,7 +287,7 @@ export default function TSBCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Branch Network:</span>{" "}
                       Access in-person assistance at TSB's extensive network of
                       branches across the UK, allowing for face-to-face support
@@ -295,7 +299,7 @@ export default function TSBCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Telephone Banking:</span>{" "}
                       Reach dedicated customer service representatives by phone
                       for assistance with your credit card account, including
@@ -308,7 +312,7 @@ export default function TSBCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Online and Mobile Support:
                       </span>{" "}
@@ -320,11 +324,11 @@ export default function TSBCreditCardPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   A Balanced Everyday Financial Tool
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   The TSB Credit Card stands out for its straightforward
                   approach to everyday banking. Without complex features or
                   premium price points, it delivers reliable functionality that
@@ -334,7 +338,7 @@ export default function TSBCreditCardPage() {
                   for a wide range of financial needs.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Whether you're an existing TSB customer looking to expand your
                   banking relationship or someone seeking a straightforward
                   credit card from an established high street bank, the TSB

@@ -37,7 +37,7 @@ export default function IwocaPersonalLoanPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 iwoca offers innovative business finance solutions, including
                 the Flexi-Loan, designed to provide UK SMEs with quick access to
                 working capital through a simple, technology-driven process.
@@ -50,7 +50,7 @@ export default function IwocaPersonalLoanPage() {
                     {/* iwoca Teal */}
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Fast Access to Funds:</span>{" "}
                     Apply online in minutes, receive decisions quickly (often
                     within hours), and access funds typically within 24 hours of
@@ -62,7 +62,7 @@ export default function IwocaPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Flexible Borrowing:</span>{" "}
                     Borrow from £1,000 up to £500,000 with the Flexi-Loan,
                     designed for working capital needs, stock purchase, or
@@ -74,7 +74,7 @@ export default function IwocaPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Pay Only for What You Use:
                     </span>{" "}
@@ -88,7 +88,7 @@ export default function IwocaPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Simple, Transparent Pricing:
                     </span>{" "}
@@ -97,12 +97,6 @@ export default function IwocaPersonalLoanPage() {
                   </div>
                 </div>
               </div>
-
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/iwoca-personal-loan-requirements">
@@ -127,7 +121,7 @@ export default function IwocaPersonalLoanPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   iwoca is a prominent European fintech lender focused on
                   providing flexible finance to small and medium-sized
                   businesses. Their flagship product, the Flexi-Loan, is
@@ -136,11 +130,17 @@ export default function IwocaPersonalLoanPage() {
                   flexibility, and simplicity.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Addressing SME Working Capital Needs
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The iwoca Flexi-Loan functions like a credit line, allowing
                   businesses to access funds up to an approved limit (£1,000 to
                   £500,000) whenever needed. This is ideal for managing cash
@@ -151,11 +151,11 @@ export default function IwocaPersonalLoanPage() {
                   managing variable capital requirements.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Speed and Simplicity via Technology
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   iwoca leverages technology to offer a fast and streamlined
                   experience. Businesses can apply online in minutes, often by
                   securely linking their business bank accounts or accounting
@@ -165,11 +165,11 @@ export default function IwocaPersonalLoanPage() {
                   within 24 hours.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Flexible Repayment Structure
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The Flexi-Loan typically has a term of up to 12 or 24 months,
                   but one of its key features is the flexibility in repayment.
                   Businesses can repay the borrowed amount early at any time
@@ -177,12 +177,6 @@ export default function IwocaPersonalLoanPage() {
                   to minimize interest costs if their cash flow improves sooner
                   than expected.
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -198,16 +192,22 @@ export default function IwocaPersonalLoanPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Top-Ups Available:</span>{" "}
                       Businesses with an existing Flexi-Loan can often apply for
                       top-ups if they need additional funds, subject to
@@ -219,7 +219,7 @@ export default function IwocaPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Transparent Pricing:
                       </span>{" "}
@@ -233,7 +233,7 @@ export default function IwocaPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Dedicated Account Management:
                       </span>{" "}
@@ -247,7 +247,7 @@ export default function IwocaPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Integration Capabilities:
                       </span>{" "}
@@ -264,11 +264,11 @@ export default function IwocaPersonalLoanPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Streamlined Application for Businesses
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   The application process is designed for busy SMEs:
                 </p>
 
@@ -277,7 +277,7 @@ export default function IwocaPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Quick Online Form:</span>{" "}
                       Complete the application online in minutes, providing
                       basic business details and funding needs.
@@ -288,7 +288,7 @@ export default function IwocaPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Secure Data Linking:
                       </span>{" "}
@@ -303,7 +303,7 @@ export default function IwocaPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Rapid Decision & Offer:
                       </span>{" "}
@@ -314,11 +314,11 @@ export default function IwocaPersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Supporting SME Agility
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   iwoca positions itself as a partner for SMEs needing agile
                   financial support. The Flexi-Loan is particularly suited for
                   businesses with fluctuating working capital needs, seasonal
@@ -327,7 +327,7 @@ export default function IwocaPersonalLoanPage() {
                   traditional fixed-term loan.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   For UK SMEs seeking fast, flexible, and transparent
                   short-to-medium term financing, especially for working
                   capital, iwoca's Flexi-Loan offers a strong fintech

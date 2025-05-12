@@ -35,7 +35,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 mb-8 leading-5">
+              <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 Nationwide Personal Loans offer competitive rates, especially
                 for members. Understanding the eligibility criteria is key to a
                 successful application with the UK's largest building society.
@@ -56,7 +56,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
               </div>
 
               <section className="my-6">
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Basic Eligibility Criteria
                 </h2>
 
@@ -65,7 +65,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Age requirement:</span>{" "}
                       You must be 18 years or older to apply for a Nationwide
                       Personal Loan.
@@ -76,7 +76,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">UK residency:</span> You
                       must be a permanent UK resident. Nationwide typically
                       requires applicants to have lived in the UK for at least 3
@@ -88,7 +88,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Income requirements:
                       </span>{" "}
@@ -102,7 +102,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Credit history:</span> A
                       good credit history is important for approval and securing
                       the best interest rates. Nationwide will conduct a credit
@@ -114,7 +114,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Nationwide Member Status:
                       </span>{" "}
@@ -132,7 +132,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Required Documentation:
                 </h2>
 
@@ -141,7 +141,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of identity:</span>{" "}
                       A valid passport, UK driving license, or EU identity card
                       is typically required. Existing Nationwide members may
@@ -153,7 +153,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of address:</span>{" "}
                       Recent utility bills, council tax statements, or bank
                       statements (usually dated within the last 3 months) are
@@ -165,7 +165,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Income verification:
                       </span>{" "}
@@ -179,7 +179,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Bank account details:
                       </span>{" "}
@@ -189,11 +189,11 @@ export default function NationwidePersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Application Process
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Nationwide offers a clear application process, primarily
                   online for members:
                 </p>
@@ -203,7 +203,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Online Application (Members):
                       </span>{" "}
@@ -217,7 +217,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Eligibility Checker:
                       </span>{" "}
@@ -232,7 +232,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Decision Time:</span>{" "}
                       Nationwide aims to provide a decision promptly, often
                       within minutes for online applications by members.
@@ -244,7 +244,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Funding Speed:</span> Once
                       approved and the loan agreement is signed, funds are
                       typically transferred quickly, often within hours for
@@ -253,11 +253,11 @@ export default function NationwidePersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Loan Terms and Conditions
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Key terms associated with Nationwide Personal Loans:
                 </p>
 
@@ -266,7 +266,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Representative APR:</span>{" "}
                       Nationwide's representative APR starts from 3.9% for loans
                       between £7,500 and £15,000. Member rates are often more
@@ -279,7 +279,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Loan Amounts:</span>{" "}
                       Borrow between £1,000 and £25,000, subject to eligibility
                       and affordability checks.
@@ -290,7 +290,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Repayment Terms:</span>{" "}
                       Choose repayment periods from 1 to 7 years (12 to 84
                       months).
@@ -301,7 +301,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Early Repayment:</span>{" "}
                       Nationwide allows early repayment. An early settlement
                       charge, typically equivalent to one month's interest, may
@@ -309,12 +309,6 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
@@ -330,25 +324,31 @@ export default function NationwidePersonalLoanRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Who Is This Loan Best For?
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Nationwide Personal Loans are particularly suitable for:
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Existing Nationwide members:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Members often receive the most competitive rates and benefit
                   from a faster, more integrated application process, making it
                   a primary choice for those already banking with Nationwide.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-rewards-credit-cards" // Replaced dead link
@@ -358,17 +358,17 @@ export default function NationwidePersonalLoanRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Borrowers seeking fair value:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   As a building society, Nationwide's focus on member value
                   often translates into competitive rates and fair terms
                   compared to shareholder-owned banks.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-personal-loans" // Replaced dead link
@@ -378,18 +378,18 @@ export default function NationwidePersonalLoanRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Debt consolidation or home improvements:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   With competitive rates for mid-range loan amounts and terms up
                   to 7 years, Nationwide loans are well-suited for common
                   borrowing needs like consolidating debts or funding home
                   projects.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-personal-loans" // Replaced dead link
@@ -398,12 +398,6 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     Using personal loans for home improvement
                   </Link>
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/getting-out-of-debt">
@@ -419,11 +413,17 @@ export default function NationwidePersonalLoanRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Tips for a Successful Application
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   To enhance your chances of approval for a Nationwide Personal
                   Loan:
                 </p>
@@ -433,7 +433,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Check your credit score:
                       </span>{" "}
@@ -447,7 +447,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Use the eligibility checker:
                       </span>{" "}
@@ -462,7 +462,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Highlight your member status (if applicable):
                       </span>{" "}
@@ -476,7 +476,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Prepare documentation:
                       </span>{" "}
@@ -488,10 +488,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                 </div>
 
                 <div className="text-left my-8">
-                  <Link
-                    href="https://www.nationwide.co.uk/personal-loans/"
-                    target="_blank"
-                  >
+                  <Link href="https://www.nationwide.co.uk/personal-loans/">
                     <Button className="bg-[#005A9E] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Visit Official Website
                     </Button>

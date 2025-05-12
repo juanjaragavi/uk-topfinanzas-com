@@ -38,7 +38,7 @@ export default function RevolutCreditCardRequirementsPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 mb-8 leading-5">
+              <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 The Revolut Credit Card offers multi-currency capabilities,
                 global-first features, and innovative security controls for
                 modern international lifestyles.
@@ -57,7 +57,7 @@ export default function RevolutCreditCardRequirementsPage() {
               </div>
 
               <section className="my-6">
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   How to Qualify for the Revolut Credit Card
                 </h2>
 
@@ -66,7 +66,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Revolut account:</span>{" "}
                       You need to have an existing Revolut account before you
                       can apply for the Revolut Credit Card. This requirement
@@ -79,7 +79,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Age and residency:</span>{" "}
                       You must be at least 18 years old and a legal resident of
                       a country where Revolut operates. For UK applicants, you
@@ -92,7 +92,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Credit history:</span>{" "}
                       Revolut will assess your credit history as part of the
                       application process. While they consider applicants with
@@ -106,7 +106,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Income requirements:
                       </span>{" "}
@@ -121,7 +121,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Subscription tier:</span>{" "}
                       While the basic Credit Card is available to Standard
                       users, certain enhanced features, benefits, and credit
@@ -137,7 +137,7 @@ export default function RevolutCreditCardRequirementsPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Digital Application Requirements:
                 </h2>
 
@@ -146,7 +146,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Revolut App:</span> The
                       entire application process takes place within the Revolut
                       mobile app, which is available for both iOS and Android
@@ -159,7 +159,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Identity Verification:
                       </span>{" "}
@@ -174,7 +174,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Personal Information:
                       </span>{" "}
@@ -189,7 +189,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Financial Information:
                       </span>{" "}
@@ -200,11 +200,11 @@ export default function RevolutCreditCardRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Digital Application Process
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Revolut's application process is entirely digital and
                   streamlined for efficiency:
                 </p>
@@ -214,7 +214,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">In-App Application:</span>{" "}
                       The entire application takes place within the Revolut app.
                       For existing customers, much of your information will be
@@ -227,7 +227,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Quick Decision:</span> The
                       application typically takes just minutes to complete, and
                       many applicants receive an immediate or same-day decision.
@@ -240,7 +240,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Virtual Card Access:
                       </span>{" "}
@@ -255,7 +255,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Physical Card Delivery:
                       </span>{" "}
@@ -268,11 +268,11 @@ export default function RevolutCreditCardRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Understanding the Costs
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Before applying for the Revolut Credit Card, it's important to
                   understand the associated costs, which may vary based on your
                   subscription tier:
@@ -283,7 +283,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Representative APR:</span>{" "}
                       The standard variable APR typically ranges from 17.9% to
                       23.9%, depending on your individual circumstances, credit
@@ -296,7 +296,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Subscription Fees:</span>{" "}
                       While the credit card itself doesn't typically have a
                       separate annual fee, access to enhanced features and
@@ -309,7 +309,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Foreign Transaction Fee:
                       </span>{" "}
@@ -325,7 +325,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">ATM Withdrawal Fee:</span>{" "}
                       Cash withdrawals typically incur a fee, with the specific
                       amount often depending on your subscription tier. Premium
@@ -334,12 +334,6 @@ export default function RevolutCreditCardRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
@@ -355,16 +349,22 @@ export default function RevolutCreditCardRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Key Benefits and Features
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Fee-Free Global Spending:
                       </span>{" "}
@@ -378,7 +378,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Multi-Currency Capability:
                       </span>{" "}
@@ -392,7 +392,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Advanced Security Controls:
                       </span>{" "}
@@ -407,7 +407,7 @@ export default function RevolutCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Tiered Rewards System:
                       </span>{" "}
@@ -418,20 +418,20 @@ export default function RevolutCreditCardRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Who Is This Card Best For?
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The Revolut Credit Card is particularly well-suited for
                   several types of customers:
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Global citizens and frequent travelers:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   For those who travel internationally or make purchases in
                   multiple currencies, the Revolut Credit Card offers
                   significant advantages through its fee-free foreign spending,
@@ -441,7 +441,7 @@ export default function RevolutCreditCardRequirementsPage() {
                   foreign transactions.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/understanding-credit-card-interest-rates/" // Updated link
@@ -451,11 +451,11 @@ export default function RevolutCreditCardRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Digital-first consumers:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   If you prefer managing your finances entirely through mobile
                   apps rather than branch visits or phone calls, Revolut's fully
                   digital experience aligns perfectly with this preference. The
@@ -464,7 +464,7 @@ export default function RevolutCreditCardRequirementsPage() {
                   technology-driven financial management.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/credit-card-types-benefits/" // Replaced dead link
@@ -474,11 +474,11 @@ export default function RevolutCreditCardRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Existing Revolut customers:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   For those who already use Revolut for their banking, currency
                   exchange, or investments, adding the credit card creates a
                   comprehensive financial ecosystem. This integration allows for
@@ -486,7 +486,7 @@ export default function RevolutCreditCardRequirementsPage() {
                   accounts, and consolidated financial insights.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-rewards-credit-cards/" // Updated link
@@ -495,12 +495,6 @@ export default function RevolutCreditCardRequirementsPage() {
                     Benefits of integrated fintech ecosystems
                   </Link>
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/getting-out-of-debt">
@@ -516,11 +510,17 @@ export default function RevolutCreditCardRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Is the Revolut Credit Card Right for You?
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   When considering the Revolut Credit Card, it's essential to
                   evaluate how its globally-focused features align with your
                   lifestyle and financial needs. If you travel frequently, shop
@@ -534,10 +534,7 @@ export default function RevolutCreditCardRequirementsPage() {
                 </p>
 
                 <div className="text-left my-8">
-                  <Link
-                    href="https://www.revolut.com/credit-card"
-                    target="_blank"
-                  >
+                  <Link href="https://www.revolut.com/credit-card">
                     <Button className="bg-[#191C33] hover:bg-blue-900 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Visit Official Website
                     </Button>

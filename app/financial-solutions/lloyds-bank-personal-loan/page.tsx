@@ -35,7 +35,7 @@ export default function LloydsBankPersonalLoanPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Lloyds Bank Personal Loans offer competitive rates, flexible
                 terms, and the reliability of one of the UK's most established
                 banking institutions, helping you fund life's important moments.
@@ -46,7 +46,7 @@ export default function LloydsBankPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Competitive Loan Rates:
                     </span>{" "}
@@ -60,7 +60,7 @@ export default function LloydsBankPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Flexible Borrowing:</span>{" "}
                     Borrow between £1,000 and £50,000 to suit a wide range of
                     needs, from smaller purchases to significant investments
@@ -72,7 +72,7 @@ export default function LloydsBankPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Customizable Repayment Terms:
                     </span>{" "}
@@ -86,7 +86,7 @@ export default function LloydsBankPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Quick and Easy Application:
                     </span>{" "}
@@ -96,12 +96,6 @@ export default function LloydsBankPersonalLoanPage() {
                   </div>
                 </div>
               </div>
-
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/lloyds-bank-personal-loan-requirements">
@@ -126,7 +120,7 @@ export default function LloydsBankPersonalLoanPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Lloyds Bank Personal Loans provide a dependable financial
                   solution from one of the UK's most recognized and trusted
                   banking names. With a long history of serving British
@@ -135,11 +129,17 @@ export default function LloydsBankPersonalLoanPage() {
                   various financial needs.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Financing Tailored to Your Life
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Whether you're planning significant home renovations,
                   consolidating existing debts into a single manageable payment,
                   purchasing a new vehicle, or funding a major life event like a
@@ -150,11 +150,11 @@ export default function LloydsBankPersonalLoanPage() {
                   responsibly.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Competitive Rates and Transparent Terms
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Lloyds Bank offers competitive interest rates, with
                   representative APRs starting from 3.9% for loans between
                   £7,500 and £25,000 (rates are subject to change and depend on
@@ -165,11 +165,11 @@ export default function LloydsBankPersonalLoanPage() {
                   borrowing upfront.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Flexible Repayment to Suit Your Budget
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Understanding that financial situations vary, Lloyds Bank
                   provides flexible repayment terms ranging from 1 to 7 years.
                   This allows borrowers to choose a repayment schedule that
@@ -178,12 +178,6 @@ export default function LloydsBankPersonalLoanPage() {
                   while a shorter term reduces the total interest paid over the
                   life of the loan.
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -199,16 +193,22 @@ export default function LloydsBankPersonalLoanPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Early Repayment Options:
                       </span>{" "}
@@ -224,7 +224,7 @@ export default function LloydsBankPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Preferential Rates for Existing Customers:
                       </span>{" "}
@@ -239,7 +239,7 @@ export default function LloydsBankPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Payment Holidays (Subject to Approval):
                       </span>{" "}
@@ -254,7 +254,7 @@ export default function LloydsBankPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Comprehensive Digital Management:
                       </span>{" "}
@@ -272,11 +272,11 @@ export default function LloydsBankPersonalLoanPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Efficient Application Process
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Lloyds Bank aims for a smooth and efficient application
                   experience:
                 </p>
@@ -286,7 +286,7 @@ export default function LloydsBankPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         User-Friendly Online Application:
                       </span>{" "}
@@ -301,7 +301,7 @@ export default function LloydsBankPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Personalized Quote Tool:
                       </span>{" "}
@@ -315,7 +315,7 @@ export default function LloydsBankPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Quick Decision and Funding:
                       </span>{" "}
@@ -327,11 +327,11 @@ export default function LloydsBankPersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Why Choose Lloyds Bank?
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Opting for a Lloyds Bank Personal Loan means choosing a lender
                   with a strong reputation for reliability and customer service.
                   The bank's extensive branch network provides accessibility for
@@ -342,7 +342,7 @@ export default function LloydsBankPersonalLoanPage() {
                   sustainable financial health.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Whether you are an existing Lloyds Bank customer or
                   considering them for the first time, their Personal Loan
                   product offers a solid combination of competitive terms,

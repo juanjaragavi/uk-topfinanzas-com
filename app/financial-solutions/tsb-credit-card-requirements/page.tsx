@@ -35,7 +35,7 @@ export default function TSBCreditCardRequirementsPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 mb-8 leading-5">
+              <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 The TSB Credit Card offers straightforward features with
                 competitive rates and practical benefits designed for everyday
                 banking needs.
@@ -56,7 +56,7 @@ export default function TSBCreditCardRequirementsPage() {
               </div>
 
               <section className="my-6">
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   How to Qualify for the TSB Credit Card
                 </h2>
 
@@ -65,7 +65,7 @@ export default function TSBCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Age and residency:</span>{" "}
                       You must be at least 18 years old and a UK resident. This
                       ensures compliance with UK financial regulations and
@@ -77,7 +77,7 @@ export default function TSBCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Income requirement:</span>{" "}
                       While TSB doesn't typically specify a minimum income
                       threshold, you'll need to demonstrate a regular income
@@ -91,7 +91,7 @@ export default function TSBCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Banking relationship:
                       </span>{" "}
@@ -109,7 +109,7 @@ export default function TSBCreditCardRequirementsPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Required Documentation:
                 </h2>
 
@@ -118,11 +118,11 @@ export default function TSBCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of Identity:</span>{" "}
-                      A valid passport, driving licence, or national identity
-                      card to verify your identity in accordance with anti-money
-                      laundering regulations and confirm your legal status.
+                      A valid passport, driving licence, or other acceptable
+                      government-issued ID to verify your identity in accordance
+                      with anti-money laundering regulations.
                     </div>
                   </div>
 
@@ -130,7 +130,7 @@ export default function TSBCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of Address:</span>{" "}
                       Recent utility bills, council tax statements, or bank
                       statements (typically no older than 3 months) to confirm
@@ -143,13 +143,13 @@ export default function TSBCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Employment Information:
                       </span>{" "}
                       Details about your current employment status, including
-                      your employer's name, your role, and length of employment,
-                      as well as your income level, to establish your financial
+                      your employer's name and contact information, your role,
+                      and length of employment to establish your income
                       stability.
                     </div>
                   </div>
@@ -158,12 +158,11 @@ export default function TSBCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Financial Details:</span>{" "}
-                      Information about your existing financial commitments,
-                      including any outstanding loans, mortgages, or credit
-                      cards, to help TSB assess your ability to manage
-                      additional credit.
+                      Information about your income, existing financial
+                      commitments, and monthly expenditures to assess your
+                      ability to manage additional credit.
                     </div>
                   </div>
                 </div>
@@ -174,13 +173,13 @@ export default function TSBCreditCardRequirementsPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Application Process
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Understanding the TSB Credit Card application process can help
-                  improve your chances of a successful application:
+                  increase your chances of a successful application:
                 </p>
 
                 <div className="space-y-6 my-8">
@@ -188,7 +187,7 @@ export default function TSBCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Online Application:</span>{" "}
                       The most convenient option is to apply through TSB's
                       website, which offers a streamlined process typically
@@ -201,7 +200,7 @@ export default function TSBCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         In-Branch Application:
                       </span>{" "}
@@ -216,7 +215,7 @@ export default function TSBCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Telephone Application:
                       </span>{" "}
@@ -230,7 +229,7 @@ export default function TSBCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Credit Check:</span> As
                       part of the application process, TSB will conduct a credit
                       check using information from credit reference agencies.
@@ -240,11 +239,11 @@ export default function TSBCreditCardRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Understanding the Costs
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Before applying for the TSB Credit Card, it's important to
                   understand the associated costs:
                 </p>
@@ -254,7 +253,7 @@ export default function TSBCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Representative APR:</span>{" "}
                       The standard variable APR typically ranges from 19.9% to
                       27.9%, depending on your individual circumstances and the
@@ -267,7 +266,7 @@ export default function TSBCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Annual Fee:</span> Most
                       TSB credit cards have no annual fee, making them
                       economical options for everyday banking customers.
@@ -278,7 +277,7 @@ export default function TSBCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Balance Transfer Fee:
                       </span>{" "}
@@ -293,7 +292,7 @@ export default function TSBCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Foreign Transaction Fee:
                       </span>{" "}
@@ -303,12 +302,6 @@ export default function TSBCreditCardRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
@@ -323,16 +316,22 @@ export default function TSBCreditCardRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Key Benefits and Features
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Cashback Offers:</span>{" "}
                       Access targeted cashback deals at selected retailers
                       through TSB's cashback platform, providing tangible
@@ -345,7 +344,7 @@ export default function TSBCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Digital Banking:</span>{" "}
                       Manage your account through TSB's mobile app and online
                       banking platform, with features like transaction
@@ -358,7 +357,7 @@ export default function TSBCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Promotional Rates:</span>{" "}
                       New customers may benefit from promotional interest rates
                       on purchases or balance transfers, providing flexibility
@@ -368,20 +367,20 @@ export default function TSBCreditCardRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Who Is This Card Best For?
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The TSB Credit Card is particularly suitable for several types
                   of customers:
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Everyday banking customers:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   With its straightforward features and competitive rates, this
                   card is ideal for those seeking a reliable credit card for
                   everyday purchases without unnecessary complexity. It offers
@@ -389,7 +388,7 @@ export default function TSBCreditCardRequirementsPage() {
                   often accompanies more feature-rich cards.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/cashback-credit-cards/" // Replaced dead link
@@ -399,11 +398,11 @@ export default function TSBCreditCardRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Existing TSB customers:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   If you already bank with TSB, this card offers seamless
                   integration with your existing accounts. You can view and
                   manage all your TSB products in one place, making it
@@ -412,7 +411,7 @@ export default function TSBCreditCardRequirementsPage() {
                   bank.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/credit-card-types-benefits/" // Replaced dead link
@@ -422,11 +421,11 @@ export default function TSBCreditCardRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Cashback seekers:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   TSB's cashback platform provides targeted offers at selected
                   retailers, allowing you to earn rewards on your everyday
                   spending. Unlike more complex rewards systems that require
@@ -435,7 +434,7 @@ export default function TSBCreditCardRequirementsPage() {
                   your account.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/understanding-credit-card-interest-rates/" // Updated link
@@ -458,11 +457,11 @@ export default function TSBCreditCardRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Is the TSB Credit Card Right for You?
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   When considering the TSB Credit Card, it's important to
                   evaluate how its features align with your financial needs and
                   spending habits. This card offers a straightforward approach
@@ -475,10 +474,7 @@ export default function TSBCreditCardRequirementsPage() {
                 </p>
 
                 <div className="text-left my-8">
-                  <Link
-                    href="https://www.tsb.co.uk/credit-cards/"
-                    target="_blank"
-                  >
+                  <Link href="https://www.tsb.co.uk/credit-cards/">
                     <Button className="bg-[#0A4D8C] hover:bg-blue-900 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Visit Official Website
                     </Button>

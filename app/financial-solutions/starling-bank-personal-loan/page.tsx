@@ -36,7 +36,7 @@ export default function StarlingBankPersonalLoanPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Starling Bank Personal Loans combine competitive rates with the
                 neobank's commitment to transparency, ethical practices, and an
                 exceptional digital experience via the Starling app.
@@ -47,7 +47,7 @@ export default function StarlingBankPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Transparent & Competitive Rates:
                     </span>{" "}
@@ -61,7 +61,7 @@ export default function StarlingBankPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Flexible Borrowing:</span>{" "}
                     Borrow amounts typically ranging from £1,000 up to £25,000
                     to suit various personal needs.
@@ -72,7 +72,7 @@ export default function StarlingBankPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Adaptable Repayment Terms:
                     </span>{" "}
@@ -85,7 +85,7 @@ export default function StarlingBankPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Seamless App Management:
                     </span>{" "}
@@ -96,12 +96,6 @@ export default function StarlingBankPersonalLoanPage() {
                 </div>
               </div>
 
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
-
               <div className="text-left my-8">
                 <Link href="/financial-solutions/starling-bank-personal-loan-requirements">
                   <Button className="bg-[#250E62] hover:bg-purple-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -109,6 +103,8 @@ export default function StarlingBankPersonalLoanPage() {
                   </Button>
                 </Link>
               </div>
+
+              
 
               <div className="my-8 text-left sm:text-left">
                 <Image
@@ -125,7 +121,7 @@ export default function StarlingBankPersonalLoanPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Starling Bank Personal Loans extend the neobank's
                   award-winning approach to banking into the lending space.
                   Known for its ethical stance, transparency, and exceptional
@@ -134,11 +130,17 @@ export default function StarlingBankPersonalLoanPage() {
                   highly-rated mobile app.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Ethical and Transparent Borrowing
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   As a certified B Corporation, Starling Bank places a strong
                   emphasis on ethical practices. This philosophy extends to its
                   personal loans, which feature clear terms, competitive rates,
@@ -148,11 +150,11 @@ export default function StarlingBankPersonalLoanPage() {
                   borrowers throughout the loan term.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Financing Tailored to Your Needs
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Starling Personal Loans are available for various purposes,
                   including debt consolidation, home improvements, car
                   purchases, or other significant life expenses. Borrowers can
@@ -162,11 +164,11 @@ export default function StarlingBankPersonalLoanPage() {
                   budget.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Seamless Digital Experience
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The entire loan process, from application to management, is
                   handled within the Starling Bank app. Existing customers
                   benefit from a streamlined application, often with pre-filled
@@ -176,11 +178,7 @@ export default function StarlingBankPersonalLoanPage() {
                   digital user experience.
                 </p>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
+                
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -196,16 +194,22 @@ export default function StarlingBankPersonalLoanPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Penalty-Free Overpayments:
                       </span>{" "}
@@ -220,7 +224,7 @@ export default function StarlingBankPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Integration with Starling Account:
                       </span>{" "}
@@ -235,7 +239,7 @@ export default function StarlingBankPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Award-Winning Customer Support:
                       </span>{" "}
@@ -249,7 +253,7 @@ export default function StarlingBankPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Clear Communication:
                       </span>{" "}
@@ -266,11 +270,11 @@ export default function StarlingBankPersonalLoanPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   The Starling Approach to Lending
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Starling's personal loans reflect its overall banking
                   philosophy: leveraging technology to provide simple, fair, and
                   transparent financial products. The focus is on empowering
@@ -280,7 +284,7 @@ export default function StarlingBankPersonalLoanPage() {
                   Bank.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   For existing Starling customers, the integrated experience and
                   potential for tailored offers make their personal loan a
                   natural choice. For others seeking a modern, app-based loan

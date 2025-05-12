@@ -35,7 +35,7 @@ export default function SantanderUKCreditCardPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 The Santander UK Credit Card combines competitive cashback
                 opportunities with practical features designed to support your
                 financial goals while rewarding your everyday spending.
@@ -46,7 +46,7 @@ export default function SantanderUKCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Cashback Rewards:</span>{" "}
                     Earn up to 0.5% cashback on eligible purchases, with
                     enhanced rates for spending in selected retail partners.
@@ -57,7 +57,7 @@ export default function SantanderUKCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Promotional Offers:</span>{" "}
                     Benefit from competitive introductory rates, including 0%
                     interest on purchases and balance transfers for new
@@ -69,7 +69,7 @@ export default function SantanderUKCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       No Foreign Transaction Fees:
                     </span>{" "}
@@ -83,7 +83,7 @@ export default function SantanderUKCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Digital Banking Excellence:
                     </span>{" "}
@@ -94,12 +94,6 @@ export default function SantanderUKCreditCardPage() {
                 </div>
               </div>
 
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
-
               <div className="text-left my-8">
                 <Link href="/financial-solutions/santander-uk-credit-card-requirements">
                   <Button className="bg-[#EC0000] hover:bg-red-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -107,6 +101,8 @@ export default function SantanderUKCreditCardPage() {
                   </Button>
                 </Link>
               </div>
+
+              
 
               <div className="my-8 text-left sm:text-left">
                 <Image
@@ -121,7 +117,7 @@ export default function SantanderUKCreditCardPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The Santander UK Credit Card represents a versatile financial
                   tool from one of Europe's leading banking institutions. With a
                   focus on rewarding everyday spending while providing practical
@@ -129,11 +125,17 @@ export default function SantanderUKCreditCardPage() {
                   modern lifestyles and diverse financial needs.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Rewarding Your Spending Habits
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   With the Santander UK Credit Card, your everyday purchases
                   become more valuable through the card's cashback program.
                   Cardholders can earn up to 0.5% cashback on eligible spending,
@@ -146,11 +148,11 @@ export default function SantanderUKCreditCardPage() {
                   consistently generates returns.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Flexible Financial Management
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Santander understands that financial needs vary, which is why
                   their credit card offers competitive introductory rates that
                   can help in various situations. New customers may benefit from
@@ -162,11 +164,11 @@ export default function SantanderUKCreditCardPage() {
                   your financial management with a single monthly payment.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   International Spending Benefits
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   One of the standout features of selected Santander credit
                   cards is the absence of foreign transaction fees. While many
                   credit cards charge around 2.95% for purchases made in foreign
@@ -178,19 +180,15 @@ export default function SantanderUKCreditCardPage() {
                   benefit in an increasingly global marketplace.
                 </p>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
+                
 
                 {/* Related Articles Section */}
                 <div className="my-8 p-6 bg-gray-50 rounded-xl border border-gray-200">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3 text-left">
                     Learn More About Credit Cards:
                   </h3>
-                  <ul className="space-y-2 list-disc list-inside text-blue-700">
-                    <li>
+                  <ul className="space-y-2 list-disc list-inside text-blue-700 text-left">
+                    <li className="text-left">
                       <Link
                         href="/personal-finance/cashback-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
@@ -198,7 +196,7 @@ export default function SantanderUKCreditCardPage() {
                         Best Cashback Credit Cards
                       </Link>
                     </li>
-                    <li>
+                    <li className="text-left">
                       <Link
                         href="/personal-finance/best-rewards-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
@@ -206,7 +204,7 @@ export default function SantanderUKCreditCardPage() {
                         Maximising Credit Card Rewards
                       </Link>
                     </li>
-                    <li>
+                    <li className="text-left">
                       <Link
                         href="/personal-finance/top-credit-cards-0-intro-apr/"
                         className="hover:underline hover:text-blue-900 transition-colors"
@@ -214,7 +212,7 @@ export default function SantanderUKCreditCardPage() {
                         Using 0% Intro APR Offers
                       </Link>
                     </li>
-                    <li>
+                    <li className="text-left">
                       <Link
                         href="/personal-finance/travel-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
@@ -222,7 +220,7 @@ export default function SantanderUKCreditCardPage() {
                         Top Travel Credit Cards
                       </Link>
                     </li>
-                    <li>
+                    <li className="text-left">
                       <Link
                         href="/personal-finance/understanding-credit-card-interest-rates/"
                         className="hover:underline hover:text-blue-900 transition-colors"
@@ -233,16 +231,22 @@ export default function SantanderUKCreditCardPage() {
                   </ul>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Advanced Security Protection:
                       </span>{" "}
@@ -258,7 +262,7 @@ export default function SantanderUKCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Digital Wallet Compatibility:
                       </span>{" "}
@@ -273,7 +277,7 @@ export default function SantanderUKCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Spending Insights:</span>{" "}
                       The Santander mobile app provides detailed breakdowns of
                       your spending patterns, categorizing transactions to help
@@ -286,7 +290,7 @@ export default function SantanderUKCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Global Acceptance:</span>{" "}
                       With Mastercard or Visa network backing (depending on your
                       specific card), the Santander UK Credit Card is accepted
@@ -303,11 +307,11 @@ export default function SantanderUKCreditCardPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Enhanced Customer Experience
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Santander prioritizes customer experience through multiple
                   service channels and convenient account management options:
                 </p>
@@ -317,7 +321,7 @@ export default function SantanderUKCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Award-Winning Mobile App:
                       </span>{" "}
@@ -332,7 +336,7 @@ export default function SantanderUKCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         24/7 Customer Support:
                       </span>{" "}
@@ -343,11 +347,11 @@ export default function SantanderUKCreditCardPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   A Balanced Financial Tool
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   The Santander UK Credit Card offers a balanced combination of
                   practical benefits, financial flexibility, and everyday
                   rewards. It's designed to appeal to a broad range of
@@ -359,7 +363,7 @@ export default function SantanderUKCreditCardPage() {
                   account management.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Whether you're an existing Santander customer looking to
                   expand your banking relationship or someone attracted by the
                   card's specific features, it offers a compelling package that

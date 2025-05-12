@@ -38,7 +38,7 @@ export default function LloydsBankCreditCardPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 The Lloyds Bank Credit Card offers a balance of everyday value
                 and flexibility, designed to support your daily spending while
                 providing useful rewards and benefits.
@@ -49,7 +49,7 @@ export default function LloydsBankCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Everyday Rewards:</span>{" "}
                     Earn cashback on selected purchases at participating
                     retailers through the Everyday Offers program.
@@ -60,7 +60,7 @@ export default function LloydsBankCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Balance Transfer Offers:
                     </span>{" "}
@@ -73,7 +73,7 @@ export default function LloydsBankCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Purchase Protection:</span>{" "}
                     Benefit from purchase protection on eligible items,
                     providing security for your shopping.
@@ -84,19 +84,13 @@ export default function LloydsBankCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Mobile Banking:</span>{" "}
                     Manage your account seamlessly through the Lloyds Bank
                     mobile app with real-time notifications.
                   </div>
                 </div>
               </div>
-
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/lloyds-bank-credit-card-requirements">
@@ -121,7 +115,7 @@ export default function LloydsBankCreditCardPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The Lloyds Bank Credit Card is designed to offer everyday
                   value to UK consumers, providing a reliable financial tool
                   that combines convenience, security, and rewards. As one of
@@ -130,11 +124,17 @@ export default function LloydsBankCreditCardPage() {
                   customer-focused banking solutions.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Everyday Rewards and Benefits
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   One of the most attractive features of the Lloyds Bank Credit
                   Card is its Everyday Offers program. This program allows
                   cardholders to earn cashback on purchases at participating
@@ -146,11 +146,11 @@ export default function LloydsBankCreditCardPage() {
                   groceries to entertainment.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Effective Debt Management Tools
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   For those looking to manage existing credit card debt, the
                   Lloyds Bank Credit Card offers competitive balance transfer
                   rates. This feature allows you to transfer balances from other
@@ -163,11 +163,11 @@ export default function LloydsBankCreditCardPage() {
                   balance each month.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Security and Protection
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Security is a priority with the Lloyds Bank Credit Card. The
                   card comes with advanced security features, including
                   real-time fraud monitoring that tracks unusual activity on
@@ -179,12 +179,6 @@ export default function LloydsBankCreditCardPage() {
                   against damage or theft for a specified period after purchase,
                   giving you peace of mind when making significant purchases.
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -202,11 +196,11 @@ export default function LloydsBankCreditCardPage() {
 
                 {/* Related Articles Section */}
                 <div className="my-8 p-6 bg-gray-50 rounded-xl border border-gray-200">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3 text-left">
                     Learn More About Credit Cards:
                   </h3>
-                  <ul className="space-y-2 list-disc list-inside text-blue-700">
-                    <li>
+                  <ul className="space-y-2 list-disc list-inside text-blue-700 text-left">
+                    <li className="text-left">
                       <Link
                         href="/personal-finance/cashback-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
@@ -214,7 +208,7 @@ export default function LloydsBankCreditCardPage() {
                         Best Cashback Credit Cards
                       </Link>
                     </li>
-                    <li>
+                    <li className="text-left">
                       <Link
                         href="/personal-finance/best-rewards-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
@@ -222,7 +216,7 @@ export default function LloydsBankCreditCardPage() {
                         Maximising Credit Card Rewards
                       </Link>
                     </li>
-                    <li>
+                    <li className="text-left">
                       <Link
                         href="/personal-finance/top-credit-cards-0-intro-apr/"
                         className="hover:underline hover:text-blue-900 transition-colors"
@@ -230,7 +224,7 @@ export default function LloydsBankCreditCardPage() {
                         Using 0% Intro APR Offers
                       </Link>
                     </li>
-                    <li>
+                    <li className="text-left">
                       <Link
                         href="/personal-finance/understanding-credit-card-interest-rates/"
                         className="hover:underline hover:text-blue-900 transition-colors"
@@ -241,16 +235,22 @@ export default function LloydsBankCreditCardPage() {
                   </ul>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Mobile Banking Integration:
                       </span>{" "}
@@ -265,7 +265,7 @@ export default function LloydsBankCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Global Acceptance:</span>{" "}
                       Widely accepted worldwide through the Mastercard or Visa
                       network (depending on your specific card), ensuring you
@@ -278,7 +278,7 @@ export default function LloydsBankCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Contactless Technology:
                       </span>{" "}
@@ -292,7 +292,7 @@ export default function LloydsBankCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Digital Wallet Compatibility:
                       </span>{" "}
@@ -308,11 +308,11 @@ export default function LloydsBankCreditCardPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Customer Support and Banking Experience
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Lloyds Bank is known for its comprehensive customer support,
                   which extends to its credit card services:
                 </p>
@@ -322,7 +322,7 @@ export default function LloydsBankCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         24/7 Customer Service:
                       </span>{" "}
@@ -335,7 +335,7 @@ export default function LloydsBankCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Branch Network Support:
                       </span>{" "}
@@ -345,11 +345,11 @@ export default function LloydsBankCreditCardPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   A Reliable Everyday Financial Tool
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   The Lloyds Bank Credit Card represents a balanced approach to
                   everyday financial management. It doesn't focus on flashy
                   premium benefits or complex rewards structures, but instead
@@ -359,7 +359,7 @@ export default function LloydsBankCreditCardPage() {
                   a versatile option for a wide range of financial needs.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Whether you're looking to earn rewards on everyday spending,
                   manage existing credit card debt, or simply want a reliable
                   card from a trusted high street bank, the Lloyds Bank Credit

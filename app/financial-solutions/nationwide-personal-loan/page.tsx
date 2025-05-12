@@ -36,7 +36,7 @@ export default function NationwidePersonalLoanPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Nationwide Personal Loans offer competitive rates and flexible
                 terms, reflecting the building society's commitment to providing
                 value and fair treatment to its members.
@@ -47,7 +47,7 @@ export default function NationwidePersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Competitive Member Rates:
                     </span>{" "}
@@ -61,7 +61,7 @@ export default function NationwidePersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Flexible Borrowing:</span>{" "}
                     Borrow between £1,000 and £25,000 to suit various needs,
                     from consolidating debts to funding home improvements or
@@ -73,7 +73,7 @@ export default function NationwidePersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Adaptable Repayment Terms:
                     </span>{" "}
@@ -87,7 +87,7 @@ export default function NationwidePersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">No Arrangement Fees:</span>{" "}
                     Nationwide typically doesn't charge arrangement fees for
                     setting up personal loans, keeping the borrowing process
@@ -96,12 +96,6 @@ export default function NationwidePersonalLoanPage() {
                 </div>
               </div>
 
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
-
               <div className="text-left my-8">
                 <Link href="/financial-solutions/nationwide-personal-loan-requirements">
                   <Button className="bg-[#005A9E] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -109,6 +103,8 @@ export default function NationwidePersonalLoanPage() {
                   </Button>
                 </Link>
               </div>
+
+              
 
               <div className="my-8 text-left sm:text-left">
                 <Image
@@ -125,7 +121,7 @@ export default function NationwidePersonalLoanPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Nationwide Personal Loans are offered by the UK's largest
                   building society, an organization owned by its members rather
                   than shareholders. This mutual structure often translates into
@@ -134,11 +130,17 @@ export default function NationwidePersonalLoanPage() {
                   membership base.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Member-Focused Financing
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Nationwide Personal Loans are available for various purposes,
                   such as consolidating existing debts, financing home
                   improvements, purchasing a vehicle, or covering other
@@ -150,11 +152,11 @@ export default function NationwidePersonalLoanPage() {
                   mortgage.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Competitive Rates and Fair Terms
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Reflecting its mutual ethos, Nationwide aims to offer
                   competitive interest rates, with representative APRs starting
                   from 3.9% for loans between £7,500 and £15,000 (subject to
@@ -165,11 +167,11 @@ export default function NationwidePersonalLoanPage() {
                   setting up the loan.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Flexible Repayment Options
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Borrowers can choose repayment terms ranging from 1 to 7
                   years, allowing them to balance the monthly payment amount
                   with the total interest paid. This flexibility helps members
@@ -177,11 +179,7 @@ export default function NationwidePersonalLoanPage() {
                   planning horizon.
                 </p>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
+                
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -197,16 +195,22 @@ export default function NationwidePersonalLoanPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Early Repayment Flexibility:
                       </span>{" "}
@@ -222,7 +226,7 @@ export default function NationwidePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Exclusive Member Rates:
                       </span>{" "}
@@ -237,7 +241,7 @@ export default function NationwidePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Loan Payment Holidays (Subject to Eligibility):
                       </span>{" "}
@@ -251,7 +255,7 @@ export default function NationwidePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Integrated Digital and Branch Service:
                       </span>{" "}
@@ -269,11 +273,11 @@ export default function NationwidePersonalLoanPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Application Process
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Nationwide provides a clear application process, primarily
                   online:
                 </p>
@@ -283,7 +287,7 @@ export default function NationwidePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Online Application for Members:
                       </span>{" "}
@@ -297,7 +301,7 @@ export default function NationwidePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Eligibility Checker:
                       </span>{" "}
@@ -312,7 +316,7 @@ export default function NationwidePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#005A9E] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Quick Decision and Funding:
                       </span>{" "}
@@ -324,11 +328,11 @@ export default function NationwidePersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   The Nationwide Difference: Member Value
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Choosing Nationwide means engaging with a member-owned
                   organization focused on delivering long-term value rather than
                   maximizing shareholder profits. This often translates into
@@ -338,7 +342,7 @@ export default function NationwidePersonalLoanPage() {
                   society.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   For borrowers seeking a loan from a trusted institution with a
                   strong ethical foundation and potential member advantages, the
                   Nationwide Personal Loan offers a compelling and reliable

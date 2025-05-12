@@ -35,7 +35,7 @@ export default function MonzoPersonalLoanPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Monzo Personal Loans bring the neobank's focus on transparency,
                 simplicity, and user experience to borrowing, offering flexible
                 loans managed entirely within the Monzo app.
@@ -46,7 +46,7 @@ export default function MonzoPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Fast In-App Application:
                     </span>{" "}
@@ -60,7 +60,7 @@ export default function MonzoPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Flexible Borrowing:</span>{" "}
                     Borrow amounts typically ranging from £1,000 up to £25,000,
                     tailored to various personal needs like home improvements or
@@ -72,7 +72,7 @@ export default function MonzoPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Transparent Rates:</span>{" "}
                     Access competitive APRs, often personalized based on your
                     financial profile. Monzo emphasizes clear,
@@ -85,7 +85,7 @@ export default function MonzoPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Seamless App Management:
                     </span>{" "}
@@ -96,12 +96,6 @@ export default function MonzoPersonalLoanPage() {
                 </div>
               </div>
 
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
-
               <div className="text-left my-8">
                 <Link href="/financial-solutions/monzo-personal-loan-requirements">
                   <Button className="bg-[#FF4D56] hover:bg-red-500 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -109,6 +103,8 @@ export default function MonzoPersonalLoanPage() {
                   </Button>
                 </Link>
               </div>
+
+              
 
               <div className="my-8 text-left sm:text-left">
                 <Image
@@ -125,7 +121,7 @@ export default function MonzoPersonalLoanPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Monzo Personal Loans extend the popular neobank's philosophy
                   of simple, transparent, and user-friendly financial products
                   into the lending space. Designed for the digital age, these
@@ -133,11 +129,17 @@ export default function MonzoPersonalLoanPage() {
                   convenience and control for its customer base.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Neobank Simplicity in Borrowing
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   True to Monzo's style, the personal loan application process
                   is designed to be quick and straightforward, especially for
                   existing Monzo current account holders. Applications are made
@@ -147,11 +149,11 @@ export default function MonzoPersonalLoanPage() {
                   efficient, technology-driven approach.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Flexible Funding for Your Needs
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Monzo offers personal loans typically ranging from £1,000 up
                   to £25,000. This range makes them suitable for various
                   purposes, such as financing home improvements, purchasing a
@@ -161,11 +163,11 @@ export default function MonzoPersonalLoanPage() {
                   select a plan that aligns with their budget.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Transparent Rates and Terms
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Monzo emphasizes transparency in its pricing. They offer
                   competitive interest rates, with representative APRs often
                   starting around 4.9% (subject to status and loan amount). The
@@ -175,11 +177,7 @@ export default function MonzoPersonalLoanPage() {
                   are presented clearly within the app.
                 </p>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
+                
 
                 {/* Ad Block: Credit Cards */}
                 <div className="my-8 text-left sm:text-left">
@@ -196,16 +194,22 @@ export default function MonzoPersonalLoanPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Full In-App Control:
                       </span>{" "}
@@ -220,7 +224,7 @@ export default function MonzoPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Penalty-Free Overpayments:
                       </span>{" "}
@@ -234,7 +238,7 @@ export default function MonzoPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Integration with Monzo Budgeting Tools:
                       </span>{" "}
@@ -249,7 +253,7 @@ export default function MonzoPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Clear Communication:
                       </span>{" "}
@@ -266,11 +270,11 @@ export default function MonzoPersonalLoanPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   The Monzo Approach to Lending
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Monzo's personal loans reflect its core values: making money
                   work for everyone through simplicity, transparency, and a
                   great user experience. The process is designed to be
@@ -280,7 +284,7 @@ export default function MonzoPersonalLoanPage() {
                   account.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   For existing Monzo customers seeking a loan, the convenience
                   and integration offered are significant advantages. For others
                   comfortable with app-based banking and looking for a

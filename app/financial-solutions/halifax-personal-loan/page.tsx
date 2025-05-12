@@ -35,7 +35,7 @@ export default function HalifaxPersonalLoanPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Halifax Personal Loans offer competitive rates, flexible terms,
                 and the dependability of one of the UK's largest and most
                 recognized banking brands, part of the Lloyds Banking Group.
@@ -46,7 +46,7 @@ export default function HalifaxPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#007A87] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Competitive Loan Rates:
                     </span>{" "}
@@ -60,7 +60,7 @@ export default function HalifaxPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#007A87] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Flexible Borrowing Amounts:
                     </span>{" "}
@@ -74,7 +74,7 @@ export default function HalifaxPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#007A87] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Customizable Repayment Terms:
                     </span>{" "}
@@ -88,7 +88,7 @@ export default function HalifaxPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#007A87] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Penalty-Free Overpayments:
                     </span>{" "}
@@ -98,12 +98,6 @@ export default function HalifaxPersonalLoanPage() {
                   </div>
                 </div>
               </div>
-
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/halifax-personal-loan-requirements">
@@ -128,7 +122,7 @@ export default function HalifaxPersonalLoanPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Halifax Personal Loans provide a dependable financing option
                   from one of the UK's most familiar banking names. As part of
                   the Lloyds Banking Group, Halifax benefits from the resources
@@ -137,11 +131,17 @@ export default function HalifaxPersonalLoanPage() {
                   straightforward banking solutions.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Funding Life's Important Steps
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Whether you're planning home improvements, consolidating
                   debts, purchasing a car, or financing a significant life
                   event, Halifax Personal Loans offer the flexibility to support
@@ -151,11 +151,11 @@ export default function HalifaxPersonalLoanPage() {
                   plans.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Competitive Rates and Clear Terms
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Halifax offers competitive interest rates, with representative
                   APRs starting from 3.9% for loans between £7,500 and £25,000
                   (subject to status and loan amount). The bank emphasizes
@@ -165,11 +165,11 @@ export default function HalifaxPersonalLoanPage() {
                   total cost of borrowing upfront.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Flexible Repayment Tailored to You
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Understanding that financial situations vary, Halifax provides
                   flexible repayment terms ranging from 1 to 7 years. This
                   allows borrowers to choose a repayment schedule that aligns
@@ -178,12 +178,6 @@ export default function HalifaxPersonalLoanPage() {
                   shorter term reduces the total interest paid over the life of
                   the loan.
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -199,16 +193,22 @@ export default function HalifaxPersonalLoanPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#007A87] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Penalty-Free Early Repayment:
                       </span>{" "}
@@ -223,7 +223,7 @@ export default function HalifaxPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#007A87] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Preferential Rates for Existing Customers:
                       </span>{" "}
@@ -237,7 +237,7 @@ export default function HalifaxPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#007A87] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Payment Holidays (Subject to Approval):
                       </span>{" "}
@@ -252,7 +252,7 @@ export default function HalifaxPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#007A87] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Comprehensive Digital Management:
                       </span>{" "}
@@ -270,11 +270,11 @@ export default function HalifaxPersonalLoanPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Efficient Application Process
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Halifax aims for a smooth and efficient application
                   experience:
                 </p>
@@ -284,7 +284,7 @@ export default function HalifaxPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#007A87] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         User-Friendly Online Application:
                       </span>{" "}
@@ -298,7 +298,7 @@ export default function HalifaxPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#007A87] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Personalized Quote Tool:
                       </span>{" "}
@@ -312,7 +312,7 @@ export default function HalifaxPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#007A87] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Quick Decision and Funding:
                       </span>{" "}
@@ -324,11 +324,11 @@ export default function HalifaxPersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Why Choose Halifax?
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Opting for a Halifax Personal Loan means choosing a lender
                   with a strong high-street presence and the backing of the
                   Lloyds Banking Group. Halifax is known for its straightforward
@@ -337,7 +337,7 @@ export default function HalifaxPersonalLoanPage() {
                   advantage, offering borrowers valuable flexibility.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Whether you are an existing Halifax customer or new to the
                   bank, their Personal Loan product offers a solid combination
                   of competitive terms, flexibility, and the reliability of a

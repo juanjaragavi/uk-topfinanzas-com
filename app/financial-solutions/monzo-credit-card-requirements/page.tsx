@@ -38,7 +38,7 @@ export default function MonzoCreditCardRequirementsPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 mb-8 leading-5">
+              <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 The Monzo Credit Card offers innovative digital tools, real-time
                 spending insights, and seamless integration with the Monzo app
                 for a next-generation banking experience.
@@ -59,7 +59,7 @@ export default function MonzoCreditCardRequirementsPage() {
               </div>
 
               <section className="my-6">
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   How to Qualify for the Monzo Credit Card
                 </h2>
 
@@ -68,7 +68,7 @@ export default function MonzoCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Age and residency:</span>{" "}
                       You must be at least 18 years old and a UK resident with a
                       UK home address. As a digital bank, Monzo requires a valid
@@ -80,7 +80,7 @@ export default function MonzoCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Monzo account:</span> You
                       typically need to have an existing Monzo current account
                       to apply for the Monzo Credit Card. This requirement
@@ -93,7 +93,7 @@ export default function MonzoCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Credit history:</span>{" "}
                       Monzo will assess your credit history as part of the
                       application process. While a good credit score is
@@ -107,7 +107,7 @@ export default function MonzoCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Financial stability:
                       </span>{" "}
@@ -125,7 +125,7 @@ export default function MonzoCreditCardRequirementsPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Digital Application Requirements:
                 </h2>
 
@@ -134,7 +134,7 @@ export default function MonzoCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Monzo App:</span> You must
                       have the Monzo app installed on a compatible smartphone to
                       apply for and manage your Monzo Credit Card. The app is
@@ -146,7 +146,7 @@ export default function MonzoCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Digital Identity Verification:
                       </span>{" "}
@@ -162,7 +162,7 @@ export default function MonzoCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Personal Information:
                       </span>{" "}
@@ -176,7 +176,7 @@ export default function MonzoCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Financial Information:
                       </span>{" "}
@@ -187,11 +187,11 @@ export default function MonzoCreditCardRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Digital Application Process
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Monzo's application process is designed to be quick,
                   transparent, and entirely digital:
                 </p>
@@ -201,7 +201,7 @@ export default function MonzoCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">In-App Application:</span>{" "}
                       For existing Monzo customers, the application process
                       takes place entirely within the Monzo app. You can apply
@@ -215,7 +215,7 @@ export default function MonzoCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Streamlined Process:
                       </span>{" "}
@@ -229,7 +229,7 @@ export default function MonzoCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Real-Time Decision:</span>{" "}
                       Many applicants receive an immediate decision on their
                       application. For those who require further review, Monzo
@@ -242,7 +242,7 @@ export default function MonzoCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Instant Virtual Card:
                       </span>{" "}
@@ -254,11 +254,11 @@ export default function MonzoCreditCardRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Understanding the Costs
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Before applying for the Monzo Credit Card, it's important to
                   understand the associated costs:
                 </p>
@@ -268,7 +268,7 @@ export default function MonzoCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Representative APR:</span>{" "}
                       The standard variable APR typically ranges from 19.9% to
                       34.9%, depending on your individual circumstances and
@@ -281,7 +281,7 @@ export default function MonzoCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Annual Fee:</span> The
                       standard Monzo Credit Card typically has no annual fee,
                       aligning with Monzo's commitment to transparent and
@@ -293,7 +293,7 @@ export default function MonzoCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Cash Withdrawal Fee:
                       </span>{" "}
@@ -308,7 +308,7 @@ export default function MonzoCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Foreign Transaction Fee:
                       </span>{" "}
@@ -319,12 +319,6 @@ export default function MonzoCreditCardRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
@@ -340,16 +334,22 @@ export default function MonzoCreditCardRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Key Benefits and Features
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Real-Time Notifications:
                       </span>{" "}
@@ -363,7 +363,7 @@ export default function MonzoCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Smart Budgeting Tools:
                       </span>{" "}
@@ -377,7 +377,7 @@ export default function MonzoCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Enhanced Security Controls:
                       </span>{" "}
@@ -391,7 +391,7 @@ export default function MonzoCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FF4D56] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Seamless App Integration:
                       </span>{" "}
@@ -402,20 +402,20 @@ export default function MonzoCreditCardRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Who Is This Card Best For?
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The Monzo Credit Card is particularly well-suited for several
                   types of customers:
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Digital-first consumers:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   If you prefer managing your finances through mobile apps
                   rather than branch visits or phone calls, the Monzo Credit
                   Card offers a seamless digital experience. The intuitive
@@ -424,7 +424,7 @@ export default function MonzoCreditCardRequirementsPage() {
                   financial management.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/credit-card-types-benefits/" // Replaced dead link
@@ -434,11 +434,11 @@ export default function MonzoCreditCardRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Existing Monzo customers:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   For those who already use Monzo for their current account,
                   adding the credit card creates a unified financial ecosystem.
                   This integration allows for simplified money management,
@@ -446,7 +446,7 @@ export default function MonzoCreditCardRequirementsPage() {
                   consistent user experience.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/understanding-credit-card-interest-rates/" // Updated link
@@ -456,11 +456,11 @@ export default function MonzoCreditCardRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Budget-conscious consumers:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The real-time notifications and budgeting tools make this card
                   excellent for those who want to maintain tight control over
                   their spending. The ability to set category budgets and
@@ -469,7 +469,7 @@ export default function MonzoCreditCardRequirementsPage() {
                   habits.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/getting-out-of-debt/" // Replaced dead link
@@ -478,12 +478,6 @@ export default function MonzoCreditCardRequirementsPage() {
                     Effective digital budgeting strategies
                   </Link>
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/getting-out-of-debt">
@@ -499,11 +493,17 @@ export default function MonzoCreditCardRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Is the Monzo Credit Card Right for You?
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   When considering the Monzo Credit Card, it's essential to
                   evaluate how its digital-first approach aligns with your
                   financial management preferences. If you value real-time

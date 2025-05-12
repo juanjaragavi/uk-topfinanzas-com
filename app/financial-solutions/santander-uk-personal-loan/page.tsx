@@ -35,7 +35,7 @@ export default function SantanderUKPersonalLoanPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Santander UK Personal Loans offer straightforward borrowing with
                 competitive rates, flexible terms, and potential perks for
                 existing Santander customers, helping you fund your plans.
@@ -46,7 +46,7 @@ export default function SantanderUKPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Competitive Loan Rates:
                     </span>{" "}
@@ -60,7 +60,7 @@ export default function SantanderUKPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Flexible Borrowing Amounts:
                     </span>{" "}
@@ -74,7 +74,7 @@ export default function SantanderUKPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Adaptable Repayment Terms:
                     </span>{" "}
@@ -87,7 +87,7 @@ export default function SantanderUKPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       1|2|3 World Customer Benefits:
                     </span>{" "}
@@ -97,12 +97,6 @@ export default function SantanderUKPersonalLoanPage() {
                 </div>
               </div>
 
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
-
               <div className="text-left my-8">
                 <Link href="/financial-solutions/santander-uk-personal-loan-requirements">
                   <Button className="bg-[#EC0000] hover:bg-red-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -110,6 +104,8 @@ export default function SantanderUKPersonalLoanPage() {
                   </Button>
                 </Link>
               </div>
+
+              
 
               <div className="my-8 text-left sm:text-left">
                 <Image
@@ -126,7 +122,7 @@ export default function SantanderUKPersonalLoanPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Santander UK Personal Loans provide a straightforward and
                   reliable financing option from a major global banking group
                   with a strong presence in the UK. Known for its
@@ -134,11 +130,17 @@ export default function SantanderUKPersonalLoanPage() {
                   designed to be simple, flexible, and accessible.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Funding for Your Plans
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Whether you need funds for a new car, home improvements,
                   consolidating debts, or covering unexpected expenses,
                   Santander Personal Loans offer flexibility. You can typically
@@ -148,11 +150,11 @@ export default function SantanderUKPersonalLoanPage() {
                   projects to more significant investments.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Competitive Rates and Clear Terms
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Santander provides competitive interest rates, with
                   representative APRs starting from 3.6% for loans between
                   £7,500 and £15,000 (subject to status and loan amount). The
@@ -162,11 +164,11 @@ export default function SantanderUKPersonalLoanPage() {
                   budgeting.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Flexible Repayment Options
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Santander offers repayment terms ranging from 1 to 5 years (12
                   to 60 months). This allows borrowers to choose a repayment
                   schedule that best suits their financial situation, balancing
@@ -174,11 +176,7 @@ export default function SantanderUKPersonalLoanPage() {
                   the loan's duration.
                 </p>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
+                
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -194,16 +192,22 @@ export default function SantanderUKPersonalLoanPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Early Repayment Flexibility:
                       </span>{" "}
@@ -219,7 +223,7 @@ export default function SantanderUKPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Benefits for 1|2|3 World Customers:
                       </span>{" "}
@@ -234,7 +238,7 @@ export default function SantanderUKPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Optional Payment Protection:
                       </span>{" "}
@@ -249,7 +253,7 @@ export default function SantanderUKPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Convenient Digital Management:
                       </span>{" "}
@@ -266,11 +270,11 @@ export default function SantanderUKPersonalLoanPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Streamlined Application Process
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Santander aims for a simple and efficient application
                   experience:
                 </p>
@@ -280,7 +284,7 @@ export default function SantanderUKPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Easy Online Application:
                       </span>{" "}
@@ -294,7 +298,7 @@ export default function SantanderUKPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Eligibility Checker:
                       </span>{" "}
@@ -308,7 +312,7 @@ export default function SantanderUKPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Quick Decision and Funding:
                       </span>{" "}
@@ -319,11 +323,11 @@ export default function SantanderUKPersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   The Santander Advantage
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Choosing a Santander UK Personal Loan means accessing finance
                   from a well-regarded international bank with a strong UK
                   footprint. Santander is known for its focus on simple,
@@ -334,7 +338,7 @@ export default function SantanderUKPersonalLoanPage() {
                   for those who prefer face-to-face service.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   For borrowers seeking a straightforward loan with competitive
                   rates and the backing of a major financial institution,
                   Santander UK Personal Loans offer a compelling option. The

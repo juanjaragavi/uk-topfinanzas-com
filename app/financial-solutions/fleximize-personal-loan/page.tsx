@@ -36,7 +36,7 @@ export default function FleximizePersonalLoanPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Fleximize offers innovative and highly flexible business loans
                 (Flexiloan and Flexiloan Lite) designed to adapt to the changing
                 needs of UK SMEs, with features like repayment holidays and
@@ -50,7 +50,7 @@ export default function FleximizePersonalLoanPage() {
                     {/* Fleximize Purple */}
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Highly Flexible Terms:
                     </span>{" "}
@@ -64,7 +64,7 @@ export default function FleximizePersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#6D2C91] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Two Core Products:</span>{" "}
                     Choose between the 'Flexiloan' for larger amounts/longer
                     terms and the 'Flexiloan Lite' for smaller, shorter-term
@@ -76,7 +76,7 @@ export default function FleximizePersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#6D2C91] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Relationship-Focused Lending:
                     </span>{" "}
@@ -90,7 +90,7 @@ export default function FleximizePersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#6D2C91] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Fast & Responsive Service:
                     </span>{" "}
@@ -99,12 +99,6 @@ export default function FleximizePersonalLoanPage() {
                   </div>
                 </div>
               </div>
-
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/fleximize-personal-loan-requirements">
@@ -129,7 +123,7 @@ export default function FleximizePersonalLoanPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Fleximize is a UK-based fintech lender dedicated to providing
                   genuinely flexible finance solutions for small and
                   medium-sized businesses. Their core products, the Flexiloan
@@ -138,11 +132,17 @@ export default function FleximizePersonalLoanPage() {
                   business loans.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Unparalleled Flexibility: Top-Ups & Holidays
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   What sets Fleximize apart is its built-in flexibility.
                   Businesses with a good repayment history can often access
                   top-ups to their existing loan amount without needing a full
@@ -153,26 +153,20 @@ export default function FleximizePersonalLoanPage() {
                   offering. They also allow penalty-free early repayments.
                 </p>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
-
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Tailored Loan Products: Flexiloan & Flexiloan Lite
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Fleximize offers two main loan products to cater to different
                   needs:
-                  <ul className="list-disc list-inside ml-4 my-2">
-                    <li>
+                  <ul className="list-disc list-inside ml-4 my-2 text-left">
+                    <li className="text-left">
                       <strong>Flexiloan:</strong> For established businesses
                       seeking larger amounts (£25,001 - £500,000) over longer
                       terms (up to 48 months), often requiring security.
                     </li>
-                    <li>
+                    <li className="text-left">
                       <strong>Flexiloan Lite:</strong> An unsecured option for
                       smaller, shorter-term needs (£5,000 - £25,000) over terms
                       typically up to 36 months.
@@ -183,11 +177,17 @@ export default function FleximizePersonalLoanPage() {
                   those planning larger investments.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Relationship-Driven Approach
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   While leveraging technology for speed, Fleximize emphasizes a
                   relationship-based approach. Each applicant typically works
                   with a dedicated relationship manager who seeks to understand
@@ -196,12 +196,6 @@ export default function FleximizePersonalLoanPage() {
                   whose potential isn't fully captured by automated credit
                   scoring alone.
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8" data-category="loans">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -217,7 +211,7 @@ export default function FleximizePersonalLoanPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Key Features of Fleximize Loans:
                 </h2>
 
@@ -226,7 +220,7 @@ export default function FleximizePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#6D2C91] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Top-Up Facility:</span>{" "}
                       Access additional funds easily as your business grows or
                       needs change, without a complex re-application process
@@ -238,7 +232,7 @@ export default function FleximizePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#6D2C91] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Repayment Holidays:</span>{" "}
                       Option to defer payments during challenging periods,
                       providing crucial breathing space for cash flow management
@@ -250,7 +244,7 @@ export default function FleximizePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#6D2C91] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Penalty-Free Early Repayment:
                       </span>{" "}
@@ -263,7 +257,7 @@ export default function FleximizePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#6D2C91] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Transparent Pricing:
                       </span>{" "}
@@ -273,11 +267,17 @@ export default function FleximizePersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Application Process
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Fleximize combines technology with a personal touch:
                 </p>
 
@@ -286,7 +286,7 @@ export default function FleximizePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#6D2C91] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Online Application:</span>{" "}
                       Start with a straightforward online form providing
                       business details and funding needs.
@@ -297,7 +297,7 @@ export default function FleximizePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#6D2C91] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Dedicated Relationship Manager:
                       </span>{" "}
@@ -312,7 +312,7 @@ export default function FleximizePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#6D2C91] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Fast Decision Making:
                       </span>{" "}
@@ -322,11 +322,11 @@ export default function FleximizePersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Supporting SME Resilience and Growth
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Fleximize's focus on flexibility makes its loans particularly
                   suitable for businesses operating in dynamic markets or those
                   experiencing seasonal fluctuations. The ability to top-up
@@ -336,7 +336,7 @@ export default function FleximizePersonalLoanPage() {
                   opportunities.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   For UK SMEs seeking more than just capital – a flexible
                   financial partner that understands business volatility –
                   Fleximize offers a compelling and supportive lending solution.

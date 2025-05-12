@@ -38,7 +38,7 @@ export default function NatWestCreditCardRequirementsPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 mb-8 leading-5">
+              <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 The NatWest Credit Card combines practical rewards, security
                 features, and digital management tools for a comprehensive
                 everyday banking solution.
@@ -59,7 +59,7 @@ export default function NatWestCreditCardRequirementsPage() {
               </div>
 
               <section className="my-6">
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   How to Qualify for the NatWest Credit Card
                 </h2>
 
@@ -68,7 +68,7 @@ export default function NatWestCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Age and residency:</span>{" "}
                       You must be at least 18 years old and a UK resident. This
                       ensures compliance with regulatory requirements and
@@ -80,7 +80,7 @@ export default function NatWestCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Income requirement:</span>{" "}
                       You'll need to demonstrate a regular income sufficient to
                       manage credit responsibly. While NatWest doesn't publicly
@@ -93,7 +93,7 @@ export default function NatWestCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Existing customer priority:
                       </span>{" "}
@@ -111,7 +111,7 @@ export default function NatWestCreditCardRequirementsPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Required Documentation:
                 </h2>
 
@@ -120,7 +120,7 @@ export default function NatWestCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of Identity:</span>{" "}
                       A valid passport, driving licence, or other acceptable
                       government-issued ID to verify your identity in accordance
@@ -132,7 +132,7 @@ export default function NatWestCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Proof of Address:</span>{" "}
                       Recent utility bills, council tax statements, or bank
                       statements (typically no older than 3 months) to confirm
@@ -144,7 +144,7 @@ export default function NatWestCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Employment Information:
                       </span>{" "}
@@ -158,7 +158,7 @@ export default function NatWestCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Financial Information:
                       </span>{" "}
@@ -169,11 +169,11 @@ export default function NatWestCreditCardRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Application Process
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Understanding the NatWest Credit Card application process can
                   help increase your chances of a successful application:
                 </p>
@@ -183,7 +183,7 @@ export default function NatWestCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Online Application:</span>{" "}
                       The most convenient way to apply is through the NatWest
                       website or mobile app, which offers a streamlined process
@@ -195,7 +195,7 @@ export default function NatWestCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         In-Branch Application:
                       </span>{" "}
@@ -209,7 +209,7 @@ export default function NatWestCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Telephone Application:
                       </span>{" "}
@@ -220,11 +220,11 @@ export default function NatWestCreditCardRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Understanding the Costs
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Before applying for the NatWest Credit Card, it's important to
                   understand the associated costs:
                 </p>
@@ -234,7 +234,7 @@ export default function NatWestCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Representative APR:</span>{" "}
                       The standard variable APR is typically between 19.9% and
                       24.9%, though this can vary based on your individual
@@ -247,7 +247,7 @@ export default function NatWestCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Annual Fee:</span> The
                       standard NatWest Credit Card typically has no annual fee,
                       though premium variants with enhanced benefits may carry
@@ -259,7 +259,7 @@ export default function NatWestCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Balance Transfer Fee:
                       </span>{" "}
@@ -274,7 +274,7 @@ export default function NatWestCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Foreign Transaction Fee:
                       </span>{" "}
@@ -284,12 +284,6 @@ export default function NatWestCreditCardRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
@@ -305,16 +299,22 @@ export default function NatWestCreditCardRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Key Benefits and Features
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         MyRewards Programme:
                       </span>{" "}
@@ -328,7 +328,7 @@ export default function NatWestCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Promotional Rates:</span>{" "}
                       New customers may be eligible for promotional interest
                       rates, such as 0% on purchases or balance transfers for a
@@ -341,7 +341,7 @@ export default function NatWestCreditCardRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Digital Banking Integration:
                       </span>{" "}
@@ -352,20 +352,20 @@ export default function NatWestCreditCardRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Who Is This Card Best For?
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The NatWest Credit Card is particularly well-suited for
                   several types of customers:
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Existing NatWest customers:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   If you already bank with NatWest, this card offers seamless
                   integration with your existing accounts. You can view and
                   manage all your NatWest products in one place, making it
@@ -373,7 +373,7 @@ export default function NatWestCreditCardRequirementsPage() {
                   overview of your entire banking relationship.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/credit-card-types-benefits/" // Replaced dead link
@@ -383,11 +383,11 @@ export default function NatWestCreditCardRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Rewards-focused spenders:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The MyRewards programme offers valuable benefits for those who
                   regularly use their credit card for everyday spending. By
                   accumulating points on eligible purchases and then converting
@@ -395,7 +395,7 @@ export default function NatWestCreditCardRequirementsPage() {
                   effectively enhance the value of your regular expenditure.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-rewards-credit-cards/" // Replaced dead link
@@ -405,11 +405,11 @@ export default function NatWestCreditCardRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Tech-savvy banking customers:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   With its comprehensive mobile app functionality, including
                   spending insights, card freezing capabilities, and seamless
                   digital wallet integration, this card is ideal for those who
@@ -418,7 +418,7 @@ export default function NatWestCreditCardRequirementsPage() {
                   experience that aligns with contemporary lifestyles.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/understanding-credit-card-interest-rates/" // Updated link
@@ -427,12 +427,6 @@ export default function NatWestCreditCardRequirementsPage() {
                     The benefits of digital banking in today's world
                   </Link>
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/getting-out-of-debt">
@@ -448,11 +442,17 @@ export default function NatWestCreditCardRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Is the NatWest Credit Card Right for You?
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   When considering the NatWest Credit Card, it's important to
                   evaluate how its features align with your financial needs and
                   preferences. This card offers a strong combination of
@@ -464,10 +464,7 @@ export default function NatWestCreditCardRequirementsPage() {
                 </p>
 
                 <div className="text-left my-8">
-                  <Link
-                    href="https://www.natwest.com/credit-cards.html"
-                    target="_blank"
-                  >
+                  <Link href="https://www.natwest.com/credit-cards.html">
                     <Button className="bg-[#42145F] hover:bg-purple-900 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Visit Official Website
                     </Button>

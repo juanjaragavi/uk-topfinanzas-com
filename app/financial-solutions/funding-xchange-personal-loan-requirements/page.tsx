@@ -36,7 +36,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 mb-8 leading-5">
+              <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 Funding Xchange connects UK SMEs with multiple finance
                 providers. Understanding their process and general eligibility
                 helps businesses leverage the platform effectively.
@@ -56,17 +56,18 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                 />
               </div>
 
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
-
               <section className="my-6">
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   General Eligibility to Use Funding Xchange
                 </h2>
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   While specific lender criteria vary, businesses generally need
                   to meet these conditions to effectively use the Funding
                   Xchange platform:
@@ -77,7 +78,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">UK-Based Business:</span>{" "}
                       Your business must be registered and operating primarily
                       within the United Kingdom.
@@ -88,7 +89,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Trading History:</span>{" "}
                       Most lenders require some trading history, often 6-12
                       months minimum, though options for newer businesses might
@@ -101,7 +102,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Turnover Level:</span>{" "}
                       While thresholds vary, demonstrating consistent revenue is
                       key. Minimum turnover requirements differ significantly
@@ -113,7 +114,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Business Structure:</span>{" "}
                       The platform supports Limited Companies, LLPs, Sole
                       Traders, and Partnerships, matching them with appropriate
@@ -124,7 +125,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Funding Need:</span> You
                       must be seeking finance for a legitimate business purpose
                       (e.g., working capital, growth, asset purchase).
@@ -138,10 +139,10 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Information Needed for the Platform:
                 </h2>
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   To facilitate accurate matching, Funding Xchange typically
                   requires:
                 </p>
@@ -151,7 +152,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Basic Company Details:
                       </span>{" "}
@@ -164,7 +165,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Funding Requirements:
                       </span>{" "}
@@ -177,7 +178,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Financial Snapshot:</span>{" "}
                       Key figures like annual turnover and potentially net
                       profit. More detailed financials (bank statements,
@@ -188,7 +189,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Director/Owner Information:
                       </span>{" "}
@@ -200,7 +201,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Consent:</span> Permission
                       to share necessary information with potential lenders on
                       their panel and for credit checks to be performed by those
@@ -209,11 +210,11 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   How the Funding Xchange Process Works
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Using the Funding Xchange platform typically involves these
                   steps:
                 </p>
@@ -223,7 +224,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">1. Submit Enquiry:</span>{" "}
                       Complete the online form on the Funding Xchange website
                       with your business and funding details. This initial step
@@ -235,7 +236,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">2. Smart Matching:</span>{" "}
                       Funding Xchange's technology analyzes your request against
                       the criteria of its lender panel to identify suitable
@@ -247,7 +248,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         3. Compare Indicative Offers:
                       </span>{" "}
@@ -261,7 +262,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         4. Lender Application:
                       </span>{" "}
@@ -274,7 +275,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         5. Approval & Funding:
                       </span>{" "}
@@ -284,12 +285,6 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
@@ -305,44 +300,50 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Types of Finance Accessible
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Funding Xchange connects businesses to a wide array of funding
                   solutions, including:
                 </p>
-                <ul className="list-disc list-inside ml-4 space-y-1 text-sm text-gray-700 mb-8">
-                  <li>Unsecured Business Loans</li>
-                  <li>Secured Business Loans</li>
-                  <li>Invoice Finance</li>
-                  <li>Asset Finance</li>
-                  <li>Revolving Credit Facilities</li>
-                  <li>Merchant Cash Advance</li>
-                  <li>Property Finance</li>
-                  <li>Specialist Sector Finance</li>
+                <ul className="list-disc list-inside ml-4 space-y-1 text-sm text-gray-700 mb-8 text-left">
+                  <li className="text-left">Unsecured Business Loans</li>
+                  <li className="text-left">Secured Business Loans</li>
+                  <li className="text-left">Invoice Finance</li>
+                  <li className="text-left">Asset Finance</li>
+                  <li className="text-left">Revolving Credit Facilities</li>
+                  <li className="text-left">Merchant Cash Advance</li>
+                  <li className="text-left">Property Finance</li>
+                  <li className="text-left">Specialist Sector Finance</li>
                 </ul>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Who Should Use Funding Xchange?
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   This platform is particularly beneficial for:
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   SMEs wanting to compare the market:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Businesses looking to efficiently survey a wide range of
                   potential lenders and finance products without multiple
                   applications.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-personal-loans" // Replaced dead link
@@ -352,17 +353,17 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Businesses unsure of the best finance type:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The platform can help identify the most suitable type of
                   finance (e.g., loan vs. invoice finance) based on the
                   business's needs and profile.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-personal-loans" // Replaced dead link
@@ -372,17 +373,17 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Companies seeking alternative lenders:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Funding Xchange provides access to a diverse panel including
                   fintechs and specialist lenders who may offer different
                   criteria or products than high-street banks.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-personal-loans" // Replaced dead link
@@ -406,11 +407,11 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Tips for Using Funding Xchange Effectively
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   To maximize your success with the platform:
                 </p>
 
@@ -419,7 +420,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Provide Accurate Data:
                       </span>{" "}
@@ -433,7 +434,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Consider Open Banking Linking:
                       </span>{" "}
@@ -447,7 +448,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Review Indicative Offers Carefully:
                       </span>{" "}
@@ -460,7 +461,7 @@ export default function FundingXchangePersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Be Prepared for Lender Due Diligence:
                       </span>{" "}

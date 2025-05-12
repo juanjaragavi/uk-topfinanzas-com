@@ -38,7 +38,7 @@ export default function RevolutCreditCardPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 The Revolut Credit Card extends the company's innovative fintech
                 approach to credit, offering a globally-minded card with
                 multi-currency capabilities, competitive exchange rates, and
@@ -50,7 +50,7 @@ export default function RevolutCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Fee-Free Global Spending:
                     </span>{" "}
@@ -64,7 +64,7 @@ export default function RevolutCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Multi-Currency Capability:
                     </span>{" "}
@@ -78,7 +78,7 @@ export default function RevolutCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Advanced Security Controls:
                     </span>{" "}
@@ -92,7 +92,7 @@ export default function RevolutCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Cashback & Perks:</span>{" "}
                     Earn cashback on everyday spending and access special perks
                     like airport lounge access, travel insurance, and exclusive
@@ -101,12 +101,6 @@ export default function RevolutCreditCardPage() {
                 </div>
               </div>
 
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
-
               <div className="text-left my-8">
                 <Link href="/financial-solutions/revolut-credit-card-requirements">
                   <Button className="bg-[#191C33] hover:bg-blue-900 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -114,6 +108,8 @@ export default function RevolutCreditCardPage() {
                   </Button>
                 </Link>
               </div>
+
+              
 
               <div className="my-8 text-left sm:text-left">
                 <Image
@@ -128,7 +124,7 @@ export default function RevolutCreditCardPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The Revolut Credit Card represents a natural extension of
                   Revolut's innovative approach to financial services. As one of
                   the world's fastest-growing fintech companies, Revolut has
@@ -138,11 +134,17 @@ export default function RevolutCreditCardPage() {
                   seamlessly wherever you are.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Truly Global Spending Power
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   At the core of the Revolut Credit Card's appeal is its global
                   functionality. Unlike traditional credit cards that typically
                   charge around 3% for foreign transactions, the Revolut Credit
@@ -155,11 +157,11 @@ export default function RevolutCreditCardPage() {
                   hidden discount on all your global transactions.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Multi-Currency Flexibility
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The Revolut Credit Card takes international functionality a
                   step further with its multi-currency capability. Unlike
                   conventional credit cards that process all transactions in
@@ -173,11 +175,11 @@ export default function RevolutCreditCardPage() {
                   cost savings through better exchange rates.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Next-Generation Security
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Security is reimagined with the Revolut Credit Card through a
                   suite of innovative features designed for the digital age. The
                   card offers location-based security that can match your card's
@@ -190,11 +192,7 @@ export default function RevolutCreditCardPage() {
                   putting security control literally at your fingertips.
                 </p>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
+                
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -212,11 +210,11 @@ export default function RevolutCreditCardPage() {
 
                 {/* Related Articles Section */}
                 <div className="my-8 p-6 bg-gray-50 rounded-xl border border-gray-200">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3 text-left">
                     Learn More About Credit Cards:
                   </h3>
-                  <ul className="space-y-2 list-disc list-inside text-blue-700">
-                    <li>
+                  <ul className="space-y-2 list-disc list-inside text-blue-700 text-left">
+                    <li className="text-left">
                       <Link
                         href="/personal-finance/travel-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
@@ -224,7 +222,7 @@ export default function RevolutCreditCardPage() {
                         Top Travel Credit Cards
                       </Link>
                     </li>
-                    <li>
+                    <li className="text-left">
                       <Link
                         href="/personal-finance/cashback-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
@@ -232,7 +230,7 @@ export default function RevolutCreditCardPage() {
                         Best Cashback Credit Cards
                       </Link>
                     </li>
-                    <li>
+                    <li className="text-left">
                       <Link
                         href="/personal-finance/best-rewards-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
@@ -240,7 +238,7 @@ export default function RevolutCreditCardPage() {
                         Maximising Credit Card Rewards
                       </Link>
                     </li>
-                    <li>
+                    <li className="text-left">
                       <Link
                         href="/personal-finance/understanding-credit-card-interest-rates/"
                         className="hover:underline hover:text-blue-900 transition-colors"
@@ -251,16 +249,22 @@ export default function RevolutCreditCardPage() {
                   </ul>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Tiered Rewards System:
                       </span>{" "}
@@ -277,7 +281,7 @@ export default function RevolutCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Smart Analytics:</span>{" "}
                       Gain insights into your spending habits with automatically
                       categorized transactions, detailed spending breakdowns by
@@ -291,7 +295,7 @@ export default function RevolutCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Bill Split Function:
                       </span>{" "}
@@ -307,7 +311,7 @@ export default function RevolutCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Global ATM Withdrawals:
                       </span>{" "}
@@ -326,11 +330,11 @@ export default function RevolutCreditCardPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Seamless Digital Experience
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   True to its fintech origins, Revolut provides a fully digital
                   experience:
                 </p>
@@ -340,7 +344,7 @@ export default function RevolutCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Intuitive Mobile App:
                       </span>{" "}
@@ -355,7 +359,7 @@ export default function RevolutCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         In-App Customer Support:
                       </span>{" "}
@@ -371,7 +375,7 @@ export default function RevolutCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Seamless Ecosystem Integration:
                       </span>{" "}
@@ -384,11 +388,11 @@ export default function RevolutCreditCardPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Banking for a Borderless World
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   The Revolut Credit Card embodies the company's mission to
                   build a financial platform without borders or boundaries. It's
                   designed for modern, globally-minded consumers who expect
@@ -400,7 +404,7 @@ export default function RevolutCreditCardPage() {
                   today's interconnected world.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Whether you're a frequent international traveler, someone who
                   regularly shops from global retailers, or simply a consumer
                   who values innovative financial tools with transparent

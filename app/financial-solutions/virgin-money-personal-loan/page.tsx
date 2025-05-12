@@ -36,7 +36,7 @@ export default function VirginMoneyPersonalLoanPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Virgin Money Personal Loans combine competitive financing
                 options with the potential for lifestyle benefits through the
                 Virgin Red rewards program, offering a unique approach to
@@ -48,7 +48,7 @@ export default function VirginMoneyPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Competitive Loan Rates:
                     </span>{" "}
@@ -62,7 +62,7 @@ export default function VirginMoneyPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Flexible Borrowing:</span>{" "}
                     Borrow between £1,000 and £25,000 to fund various needs,
                     from home improvements and car purchases to debt
@@ -74,7 +74,7 @@ export default function VirginMoneyPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Adaptable Repayment Terms:
                     </span>{" "}
@@ -87,7 +87,7 @@ export default function VirginMoneyPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Potential Virgin Red Benefits:
                     </span>{" "}
@@ -98,12 +98,6 @@ export default function VirginMoneyPersonalLoanPage() {
                 </div>
               </div>
 
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
-
               <div className="text-left my-8">
                 <Link href="/financial-solutions/virgin-money-personal-loan-requirements">
                   <Button className="bg-[#CC0000] hover:bg-red-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -111,6 +105,8 @@ export default function VirginMoneyPersonalLoanPage() {
                   </Button>
                 </Link>
               </div>
+
+              
 
               <div className="my-8 text-left sm:text-left">
                 <Image
@@ -127,7 +123,7 @@ export default function VirginMoneyPersonalLoanPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Virgin Money Personal Loans bring the distinctive Virgin brand
                   approach to personal finance, offering competitive loan
                   products potentially enhanced by the group's wider rewards
@@ -136,11 +132,17 @@ export default function VirginMoneyPersonalLoanPage() {
                   touch of added value.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Funding Your Goals, Virgin Style
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Whether you're planning a major purchase like a car,
                   undertaking home renovations, consolidating existing debts, or
                   financing a special event, Virgin Money Personal Loans offer
@@ -150,11 +152,11 @@ export default function VirginMoneyPersonalLoanPage() {
                   customers achieve their aspirations.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Competitive Rates and Clear Terms
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Virgin Money offers competitive interest rates, with
                   representative APRs starting from 4.9% for loans between
                   £7,500 and £15,000 (subject to status and loan amount). They
@@ -163,11 +165,11 @@ export default function VirginMoneyPersonalLoanPage() {
                   throughout the loan term provide predictability for budgeting.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Flexible Repayment Options
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   With repayment terms ranging from 1 to 7 years, Virgin Money
                   allows borrowers to tailor their loan schedule to fit their
                   financial circumstances. This flexibility helps balance the
@@ -175,11 +177,7 @@ export default function VirginMoneyPersonalLoanPage() {
                   paid over the loan's duration.
                 </p>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
+                
 
                 {/* Ad Block: Credit Cards - Updated Image attributes */}
                 <div className="my-8 text-left sm:text-left">
@@ -196,16 +194,22 @@ export default function VirginMoneyPersonalLoanPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Early Repayment Flexibility:
                       </span>{" "}
@@ -221,7 +225,7 @@ export default function VirginMoneyPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Potential Virgin Red Integration:
                       </span>{" "}
@@ -237,7 +241,7 @@ export default function VirginMoneyPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Simple Online Management:
                       </span>{" "}
@@ -251,7 +255,7 @@ export default function VirginMoneyPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Customer-Focused Service:
                       </span>{" "}
@@ -268,11 +272,11 @@ export default function VirginMoneyPersonalLoanPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Streamlined Application Process
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Virgin Money offers a straightforward application journey:
                 </p>
 
@@ -281,7 +285,7 @@ export default function VirginMoneyPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Easy Online Application:
                       </span>{" "}
@@ -295,7 +299,7 @@ export default function VirginMoneyPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Eligibility Checker:
                       </span>{" "}
@@ -310,7 +314,7 @@ export default function VirginMoneyPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#CC0000] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Quick Decision and Funding:
                       </span>{" "}
@@ -322,11 +326,11 @@ export default function VirginMoneyPersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   The Virgin Money Difference
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Choosing a Virgin Money Personal Loan offers access to
                   competitive financing from a well-known brand that often
                   provides additional lifestyle benefits through its rewards
@@ -335,7 +339,7 @@ export default function VirginMoneyPersonalLoanPage() {
                   focused on customer experience and added value.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   For borrowers looking for a reliable loan with competitive
                   rates, flexible terms, and the potential for extra perks
                   linked to the wider Virgin ecosystem, the Virgin Money

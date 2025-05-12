@@ -36,7 +36,7 @@ export default function FundingXchangePersonalLoanPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Funding Xchange provides an intelligent platform for UK SMEs to
                 compare and access tailored business finance solutions from a
                 diverse panel of lenders, simplifying the funding search.
@@ -49,7 +49,7 @@ export default function FundingXchangePersonalLoanPage() {
                     {/* Funding Xchange Teal/Blue */}
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Intelligent Lender Matching:
                     </span>{" "}
@@ -63,7 +63,7 @@ export default function FundingXchangePersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Wide Range of Finance Types:
                     </span>{" "}
@@ -77,7 +77,7 @@ export default function FundingXchangePersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Transparent Comparison:
                     </span>{" "}
@@ -91,7 +91,7 @@ export default function FundingXchangePersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Streamlined Process:</span>{" "}
                     A single online application provides access to multiple
                     potential funding solutions, saving time and effort for busy
@@ -99,12 +99,6 @@ export default function FundingXchangePersonalLoanPage() {
                   </div>
                 </div>
               </div>
-
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/funding-xchange-personal-loan-requirements">
@@ -129,7 +123,7 @@ export default function FundingXchangePersonalLoanPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Funding Xchange operates as an intelligent comparison platform
                   and marketplace for business finance in the UK. Rather than
                   lending directly, it connects SMEs with a wide array of
@@ -138,11 +132,17 @@ export default function FundingXchangePersonalLoanPage() {
                   panel.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Simplifying the Search for SME Funding
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The UK business finance market is diverse and can be complex
                   to navigate. Funding Xchange aims to simplify this by
                   providing a single platform where SMEs can outline their
@@ -152,40 +152,46 @@ export default function FundingXchangePersonalLoanPage() {
                   lenders, and alternative finance providers.
                 </p>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
-
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Access to Diverse Funding Products
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Through Funding Xchange, businesses can explore a broad range
                   of finance solutions tailored to different needs:
-                  <ul className="list-disc list-inside ml-4 my-2">
-                    <li>Unsecured and Secured Business Loans</li>
-                    <li>Invoice Finance (Factoring & Discounting)</li>
-                    <li>Asset Finance (Leasing & Hire Purchase)</li>
-                    <li>Merchant Cash Advance</li>
-                    <li>Revolving Credit Facilities</li>
-                    <li>
+                  <ul className="list-disc list-inside ml-4 my-2 text-left">
+                    <li className="text-left">
+                      Unsecured and Secured Business Loans
+                    </li>
+                    <li className="text-left">
+                      Invoice Finance (Factoring & Discounting)
+                    </li>
+                    <li className="text-left">
+                      Asset Finance (Leasing & Hire Purchase)
+                    </li>
+                    <li className="text-left">Merchant Cash Advance</li>
+                    <li className="text-left">Revolving Credit Facilities</li>
+                    <li className="text-left">
                       Property Finance (Commercial Mortgages, Bridging Loans)
                     </li>
-                    <li>Specialist Sector Finance</li>
+                    <li className="text-left">Specialist Sector Finance</li>
                   </ul>
                   This comprehensive approach ensures businesses can find the
                   most appropriate type of funding for their specific situation,
                   whether for short-term cash flow or long-term investment.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Data-Driven Matching Technology
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Funding Xchange utilises sophisticated technology and data
                   analytics (including Open Banking data if consented) to
                   understand a business's financial profile and funding needs
@@ -194,12 +200,6 @@ export default function FundingXchangePersonalLoanPage() {
                   to meet, increasing the chances of a successful application
                   and saving time wasted on unsuitable lenders.
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 {/* Ad Block: Credit Cards */}
                 <div className="my-8 text-left sm:text-left">
@@ -216,7 +216,7 @@ export default function FundingXchangePersonalLoanPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Key Benefits of Using Funding Xchange:
                 </h2>
 
@@ -225,7 +225,7 @@ export default function FundingXchangePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Efficient Market Access:
                       </span>{" "}
@@ -239,7 +239,7 @@ export default function FundingXchangePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Transparent Comparison:
                       </span>{" "}
@@ -253,7 +253,7 @@ export default function FundingXchangePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Increased Approval Likelihood:
                       </span>{" "}
@@ -267,7 +267,7 @@ export default function FundingXchangePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Access to Diverse Lenders:
                       </span>{" "}
@@ -278,11 +278,17 @@ export default function FundingXchangePersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   The Process for Businesses
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Using Funding Xchange typically follows these steps:
                 </p>
 
@@ -291,7 +297,7 @@ export default function FundingXchangePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">1. Online Enquiry:</span>{" "}
                       Complete Funding Xchange's online form with details about
                       your business and funding requirements.
@@ -302,7 +308,7 @@ export default function FundingXchangePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">2. Data Provision:</span>{" "}
                       Securely provide financial data, often through Open
                       Banking connections or by uploading documents like bank
@@ -314,7 +320,7 @@ export default function FundingXchangePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         3. Smart Matching & Comparison:
                       </span>{" "}
@@ -326,7 +332,7 @@ export default function FundingXchangePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#008C95] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">4. Select & Apply:</span>{" "}
                       Choose the preferred option(s) and proceed to the selected
                       lender's full application process, often with support from
@@ -335,11 +341,11 @@ export default function FundingXchangePersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Facilitating Informed Funding Decisions
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Funding Xchange empowers SMEs by providing transparency and
                   choice in the business finance market. Their technology-driven
                   approach helps businesses quickly understand their funding
@@ -347,7 +353,7 @@ export default function FundingXchangePersonalLoanPage() {
                   enabling more informed financial decision-making.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   For UK SMEs seeking to efficiently explore and compare diverse
                   business finance options, Funding Xchange offers a valuable,
                   data-led platform.

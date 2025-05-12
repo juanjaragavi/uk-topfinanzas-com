@@ -36,7 +36,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 mb-8 leading-5">
+              <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 iwoca provides fast, flexible finance for UK SMEs. Understanding
                 their eligibility criteria and application process helps
                 businesses access working capital quickly.
@@ -56,23 +56,23 @@ export default function IwocaPersonalLoanRequirementsPage() {
                 />
               </div>
 
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
-
               <section className="my-6">
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Basic Eligibility Criteria for SMEs
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Business Type:</span>{" "}
                       Available to Limited Companies and Limited Liability
                       Partnerships (LLPs) registered in the UK. Sole traders are
@@ -84,7 +84,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Trading History:</span>{" "}
                       Businesses typically need to have been trading for at
                       least 4 months. Newer businesses might be considered based
@@ -96,7 +96,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Turnover:</span> Minimum
                       annual turnover requirements apply, often starting around
                       £10,000, but this can vary. iwoca assesses overall
@@ -108,7 +108,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Creditworthiness:</span>{" "}
                       iwoca assesses the business's credit profile and
                       potentially the director's personal credit history. They
@@ -121,17 +121,17 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">UK Based Operation:</span>{" "}
                       The business must be based and operating in the UK.
                     </div>
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Information & Documentation Needed:
                 </h2>
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   iwoca's process is designed to be data-driven and minimize
                   paperwork:
                 </p>
@@ -141,7 +141,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Basic Business Details:
                       </span>{" "}
@@ -154,7 +154,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Funding Amount:</span> How
                       much finance you need (up to your approved limit for
                       Flexi-Loan).
@@ -165,7 +165,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Data Linking (Preferred):
                       </span>{" "}
@@ -179,7 +179,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Manual Upload (Alternative):
                       </span>{" "}
@@ -192,7 +192,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Director/Owner Details:
                       </span>{" "}
@@ -208,11 +208,11 @@ export default function IwocaPersonalLoanRequirementsPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Application Process
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   iwoca's application process is fast and technology-led:
                 </p>
 
@@ -221,7 +221,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         1. Online Application:
                       </span>{" "}
@@ -235,7 +235,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         2. Link Data or Upload Docs:
                       </span>{" "}
@@ -248,7 +248,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">3. Fast Assessment:</span>{" "}
                       iwoca's technology analyzes the data to assess
                       creditworthiness and affordability rapidly.
@@ -259,7 +259,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         4. Decision and Offer:
                       </span>{" "}
@@ -272,7 +272,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">5. Access Funds:</span>{" "}
                       Once the agreement is signed digitally, you can draw down
                       funds from your Flexi-Loan limit as needed, typically
@@ -281,11 +281,11 @@ export default function IwocaPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Loan Terms and Conditions
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Key terms for iwoca's Flexi-Loan:
                 </p>
 
@@ -294,7 +294,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Interest Rates:</span>{" "}
                       Rates are tailored to the business's risk profile and
                       typically quoted as a monthly interest rate. Interest is
@@ -306,7 +306,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Loan Amounts (Credit Limit):
                       </span>{" "}
@@ -318,7 +318,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Repayment Terms:</span>{" "}
                       Typically up to 12 or 24 months for each drawdown, with
                       flexible repayment options (e.g., monthly payments).
@@ -329,7 +329,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Fees:</span> iwoca is
                       transparent about fees. There are no arrangement fees or
                       early repayment penalties. Interest is the primary cost.
@@ -339,7 +339,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Security:</span>{" "}
                       Flexi-Loans are typically unsecured, but personal
                       guarantees from directors may be required depending on the
@@ -347,12 +347,6 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
@@ -368,25 +362,25 @@ export default function IwocaPersonalLoanRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Who Is This Finance Best For?
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   iwoca's Flexi-Loan is particularly suitable for:
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   SMEs needing flexible working capital:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Businesses that experience fluctuating cash flow needs and
                   require access to funds on demand, without committing to a
                   large fixed-term loan.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-personal-loans" // Replaced dead link
@@ -396,16 +390,16 @@ export default function IwocaPersonalLoanRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Businesses requiring speed:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Companies needing quick decisions and fast access to funds to
                   cover immediate costs or seize time-sensitive opportunities.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/tips-for-choosing-an-online-loan" // Replaced dead link
@@ -415,16 +409,16 @@ export default function IwocaPersonalLoanRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Companies comfortable with technology:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Businesses that are happy to link bank accounts or accounting
                   software and manage their finance digitally.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-personal-loans" // Replaced dead link
@@ -448,11 +442,17 @@ export default function IwocaPersonalLoanRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Tips for a Successful Application
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   To enhance your chances of approval for an iwoca Flexi-Loan:
                 </p>
 
@@ -461,7 +461,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Link Bank/Accounting Data:
                       </span>{" "}
@@ -476,7 +476,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Ensure Data Accuracy:
                       </span>{" "}
@@ -489,7 +489,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Check Business Credit:
                       </span>{" "}
@@ -502,7 +502,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-red-400 flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Be Clear on Purpose:
                       </span>{" "}
@@ -514,10 +514,7 @@ export default function IwocaPersonalLoanRequirementsPage() {
                 </div>
 
                 <div className="text-left my-8">
-                  <Link
-                    href="https://www.iwoca.co.uk/flexi-loan"
-                    target="_blank"
-                  >
+                  <Link href="https://www.iwoca.co.uk/flexi-loan">
                     <Button className="bg-red-400 hover:bg-teal-600 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Visit iwoca Website
                     </Button>

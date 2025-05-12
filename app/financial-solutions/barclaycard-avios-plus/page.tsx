@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ResponsiveImage from "@/components/ui/responsive-image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -39,7 +38,7 @@ export default function BarclayCardAviosPlusPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 The Barclaycard Avios Plus Credit Card is designed for frequent
                 travelers and those who want to maximize rewards on everyday
                 spending with premium travel benefits.
@@ -50,7 +49,7 @@ export default function BarclayCardAviosPlusPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Generous Welcome Bonus:
                     </span>{" "}
@@ -63,7 +62,7 @@ export default function BarclayCardAviosPlusPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Premium Rewards:</span>{" "}
                     Collect 1.5 Avios for every £1 spent, with higher rates for
                     British Airways purchases.
@@ -74,7 +73,7 @@ export default function BarclayCardAviosPlusPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Cabin Upgrade Voucher:
                     </span>{" "}
@@ -87,7 +86,7 @@ export default function BarclayCardAviosPlusPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Travel Insurance:</span>{" "}
                     Comprehensive worldwide travel insurance for you and your
                     family.
@@ -118,7 +117,7 @@ export default function BarclayCardAviosPlusPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The Barclaycard Avios Plus Credit Card stands out as a premium
                   travel rewards card, offering exceptional benefits for
                   frequent travelers and those who enjoy collecting Avios points
@@ -128,7 +127,7 @@ export default function BarclayCardAviosPlusPage() {
                   through a range of exclusive perks and rewards.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Maximise Your Travel Rewards
                 </h2>
 
@@ -138,7 +137,7 @@ export default function BarclayCardAviosPlusPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   With the Barclaycard Avios Plus, every purchase brings you
                   closer to your next adventure. Earn a generous 1.5 Avios for
                   every £1 spent, with higher rates for purchases made directly
@@ -148,11 +147,11 @@ export default function BarclayCardAviosPlusPage() {
                   for your accumulated rewards.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Exclusive Premium Benefits
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The Barclaycard Avios Plus goes beyond just points
                   accumulation, offering premium benefits designed for the
                   discerning traveler. One of the most valuable perks is the
@@ -163,7 +162,7 @@ export default function BarclayCardAviosPlusPage() {
                   additional cost.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Comprehensive Travel Protection
                 </h2>
 
@@ -173,7 +172,7 @@ export default function BarclayCardAviosPlusPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Peace of mind comes standard with the Barclaycard Avios Plus
                   through its comprehensive worldwide travel insurance. This
                   coverage extends to you and your family, providing protection
@@ -202,7 +201,7 @@ export default function BarclayCardAviosPlusPage() {
 
                 {/* Related Articles Section */}
                 <div className="my-8 p-6 bg-gray-50 rounded-xl border border-gray-200">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3 text-left">
                     Learn More About Credit Cards:
                   </h3>
                   <ul className="space-y-2 list-disc list-inside text-blue-700">
@@ -233,7 +232,7 @@ export default function BarclayCardAviosPlusPage() {
                   </ul>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
 
@@ -248,7 +247,7 @@ export default function BarclayCardAviosPlusPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Enhanced Security:</span>{" "}
                       Advanced security features including real-time transaction
                       alerts, 24/7 fraud monitoring, and secure online payments.
@@ -259,7 +258,7 @@ export default function BarclayCardAviosPlusPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Global Acceptance:</span>{" "}
                       Worldwide acceptance with the Mastercard network, ensuring
                       you can use your card confidently wherever you travel.
@@ -270,7 +269,7 @@ export default function BarclayCardAviosPlusPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Contactless Payments:
                       </span>{" "}
@@ -283,7 +282,7 @@ export default function BarclayCardAviosPlusPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Digital Wallet Integration:
                       </span>{" "}
@@ -293,11 +292,11 @@ export default function BarclayCardAviosPlusPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Premium Travel Experience
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   The Barclaycard Avios Plus offers additional travel-focused
                   benefits that further enhance your journeys:
                 </p>
@@ -307,7 +306,7 @@ export default function BarclayCardAviosPlusPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Airport Lounge Access Discounts:
                       </span>{" "}
@@ -321,7 +320,7 @@ export default function BarclayCardAviosPlusPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Foreign Transaction Fee Waiver:
                       </span>{" "}
@@ -331,11 +330,11 @@ export default function BarclayCardAviosPlusPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   More Than Just a Travel Card
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   The Barclaycard Avios Plus Credit Card not only enhances your
                   travel experiences but also serves as a reliable financial
                   tool for everyday spending. With its robust rewards system,

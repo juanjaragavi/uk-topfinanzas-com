@@ -36,7 +36,7 @@ export default function FundingCirclePersonalLoanPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Funding Circle provides fast and flexible business loans
                 tailored to the needs of UK SMEs, leveraging fintech innovation
                 to streamline the borrowing process for growth, working capital,
@@ -48,7 +48,7 @@ export default function FundingCirclePersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#004C59] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       SME Focused Financing:
                     </span>{" "}
@@ -62,7 +62,7 @@ export default function FundingCirclePersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#004C59] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Fast Decisions & Funding:
                     </span>{" "}
@@ -76,7 +76,7 @@ export default function FundingCirclePersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#004C59] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Flexible Repayment Terms:
                     </span>{" "}
@@ -90,7 +90,7 @@ export default function FundingCirclePersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#004C59] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Transparent Pricing:</span>{" "}
                     Understand the costs upfront with clear interest rates and
                     fees, tailored to your business's risk profile. No hidden
@@ -98,12 +98,6 @@ export default function FundingCirclePersonalLoanPage() {
                   </div>
                 </div>
               </div>
-
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/funding-circle-personal-loan-requirements">
@@ -128,7 +122,7 @@ export default function FundingCirclePersonalLoanPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Funding Circle is a leading global platform connecting small
                   businesses seeking finance with investors. Their business
                   loans are specifically designed to meet the unique challenges
@@ -136,11 +130,17 @@ export default function FundingCirclePersonalLoanPage() {
                   flexible alternative to traditional bank lending.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Fueling Business Growth
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Funding Circle loans cater to a wide range of business needs.
                   Whether you require working capital to manage day-to-day
                   operations, funds for expansion projects, investment in new
@@ -150,17 +150,17 @@ export default function FundingCirclePersonalLoanPage() {
                   various stages of growth.
                 </p>
 
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
+                  Speed and Efficiency Through Fintech
+                </h2>
+
                 {/* AdZep AutoZep Paid Advertisement `<div>` element */}
                 <div
                   id="uk_topfinanzas_3"
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
-                  Speed and Efficiency Through Fintech
-                </h2>
-
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Leveraging technology, Funding Circle offers a significantly
                   faster application and decision process compared to many
                   traditional lenders. Businesses can apply online in minutes,
@@ -169,11 +169,11 @@ export default function FundingCirclePersonalLoanPage() {
                   opportunities or manage cash flow effectively.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Flexible Terms for Business Cycles
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Understanding that business cash flow can fluctuate, Funding
                   Circle offers flexible repayment terms, typically from 6
                   months up to 6 years. This allows businesses to structure
@@ -181,12 +181,6 @@ export default function FundingCirclePersonalLoanPage() {
                   and revenue streams. Interest rates are fixed for the loan
                   term, providing certainty for financial planning.
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8" data-category="loans">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -202,7 +196,7 @@ export default function FundingCirclePersonalLoanPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
 
@@ -211,7 +205,7 @@ export default function FundingCirclePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C59] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Dedicated Account Manager:
                       </span>{" "}
@@ -225,7 +219,7 @@ export default function FundingCirclePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C59] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         No Early Repayment Charges:
                       </span>{" "}
@@ -239,7 +233,7 @@ export default function FundingCirclePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C59] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Transparent Fees:</span>{" "}
                       Costs are clearly outlined upfront, usually consisting of
                       the interest rate and a one-off completion fee. There are
@@ -251,7 +245,7 @@ export default function FundingCirclePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C59] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Government Scheme Participation:
                       </span>{" "}
@@ -262,11 +256,11 @@ export default function FundingCirclePersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Streamlined Application for Businesses
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   The application process is designed with busy business owners
                   in mind:
                 </p>
@@ -276,7 +270,7 @@ export default function FundingCirclePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C59] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Quick Online Application:
                       </span>{" "}
@@ -289,7 +283,7 @@ export default function FundingCirclePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C59] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Minimal Documentation:
                       </span>{" "}
@@ -303,7 +297,7 @@ export default function FundingCirclePersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C59] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Fast Decision Making:
                       </span>{" "}
@@ -313,11 +307,17 @@ export default function FundingCirclePersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Supporting UK SMEs
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Funding Circle has established itself as a major player in the
                   SME lending market, providing a vital source of finance for
                   businesses that may find traditional bank lending processes
@@ -326,7 +326,7 @@ export default function FundingCirclePersonalLoanPage() {
                   SMEs across various sectors.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   For UK SMEs seeking fast, flexible, and transparent financing
                   options to support their growth and operational needs, Funding
                   Circle offers a compelling alternative finance solution.

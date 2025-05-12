@@ -66,7 +66,6 @@ export function Footer() {
                   <a
                     key={social.platform}
                     href={social.url}
-                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-white hover:text-[#55B9FF] transition-colors"
                     aria-label={social.ariaLabel}

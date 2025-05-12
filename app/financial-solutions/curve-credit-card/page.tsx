@@ -34,7 +34,7 @@ export default function CurveCreditCardPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 The Curve Card revolutionizes how you use credit and debit cards
                 by consolidating all your existing cards into a single smart
                 card, while adding powerful features that transform your
@@ -46,7 +46,7 @@ export default function CurveCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">All Cards in One:</span>{" "}
                     Connect all your existing Mastercard and Visa cards to your
                     Curve Card, allowing you to carry just one card while still
@@ -58,7 +58,7 @@ export default function CurveCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Time-Travel Banking:</span>{" "}
                     With Curve's unique "Go Back in Time" feature, move
                     transactions between your connected cards up to 30 days
@@ -70,7 +70,7 @@ export default function CurveCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Enhanced Rewards:</span>{" "}
                     Earn rewards twice - first from your underlying card's
                     rewards program, then additional cashback from Curve on
@@ -82,7 +82,7 @@ export default function CurveCreditCardPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Smart Financial Tools:
                     </span>{" "}
@@ -92,12 +92,6 @@ export default function CurveCreditCardPage() {
                   </div>
                 </div>
               </div>
-
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/curve-credit-card-requirements">
@@ -122,7 +116,7 @@ export default function CurveCreditCardPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The Curve Card represents a paradigm shift in personal finance
                   management. Unlike traditional credit cards issued by banks,
                   Curve offers a fundamentally different approach by acting as
@@ -133,11 +127,17 @@ export default function CurveCreditCardPage() {
                   flexibility and control.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Unifying Your Financial Life
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   At its core, Curve addresses a common modern financial
                   challenge: managing multiple payment cards across different
                   banks and financial institutions. Instead of carrying several
@@ -151,17 +151,17 @@ export default function CurveCreditCardPage() {
                   that traditional siloed banking can't match.
                 </p>
 
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
+                  Time-Travel Banking
+                </h2>
+
                 {/* AdZep AutoZep Paid Advertisement `<div>` element */}
                 <div
                   id="uk_topfinanzas_3"
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
-                  Time-Travel Banking
-                </h2>
-
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Curve's most distinctive innovation is its "Go Back in Time"
                   feature, which fundamentally rethinks the finality of
                   financial transactions. This functionality allows you to move
@@ -176,11 +176,11 @@ export default function CurveCreditCardPage() {
                   elements of your financial strategy.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Double-Dipping Rewards
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   With Curve, you can effectively "double-dip" on rewards and
                   benefits. When you make a purchase through Curve, you still
                   earn all the rewards, points, or cashback that your underlying
@@ -192,12 +192,6 @@ export default function CurveCreditCardPage() {
                   derived from everyday spending, without requiring changes to
                   your existing financial products.
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -215,7 +209,7 @@ export default function CurveCreditCardPage() {
 
                 {/* Related Articles Section */}
                 <div className="my-8 p-6 bg-gray-50 rounded-xl border border-gray-200">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3 text-left">
                     Learn More About Credit Cards:
                   </h3>
                   <ul className="space-y-2 list-disc list-inside text-blue-700">
@@ -254,16 +248,22 @@ export default function CurveCreditCardPage() {
                   </ul>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Curve Flex:</span>{" "}
                       Transform any past purchase into installment plans with
                       Curve Flex, allowing you to spread the cost of purchases
@@ -278,7 +278,7 @@ export default function CurveCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Fee-Free Foreign Spending:
                       </span>{" "}
@@ -295,7 +295,7 @@ export default function CurveCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Enhanced Security:</span>{" "}
                       Benefit from advanced security features including instant
                       push notifications for all transactions, the ability to
@@ -312,7 +312,7 @@ export default function CurveCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Anti-Embarrassment Mode:
                       </span>{" "}
@@ -325,11 +325,11 @@ export default function CurveCreditCardPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Comprehensive Financial Insights
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Curve transforms financial management with comprehensive
                   spending analytics:
                 </p>
@@ -339,7 +339,7 @@ export default function CurveCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Unified Spending View:
                       </span>{" "}
@@ -355,7 +355,7 @@ export default function CurveCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Spending Categories:
                       </span>{" "}
@@ -371,7 +371,7 @@ export default function CurveCreditCardPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Expense Tagging:</span>{" "}
                       For business users, Curve offers the ability to tag
                       transactions and add notes or receipt images, simplifying
@@ -383,11 +383,11 @@ export default function CurveCreditCardPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   A New Financial Layer
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   What makes Curve truly revolutionary is that it doesn't
                   require you to change your existing financial relationships or
                   apply for new credit products. Instead, it works as an
@@ -402,7 +402,7 @@ export default function CurveCreditCardPage() {
                   rather than replace them.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Whether you're looking to simplify your wallet, maximize
                   rewards, gain better financial insights, or enjoy more
                   flexibility in how you manage transactions, the Curve Card

@@ -36,7 +36,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 mb-8 leading-5">
+              <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 Funding Options connects UK SMEs with numerous lenders.
                 Understanding their process and general eligibility helps
                 businesses navigate the platform effectively.
@@ -56,17 +56,18 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                 />
               </div>
 
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
-
               <section className="my-6">
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   General Eligibility to Use Funding Options
                 </h2>
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   While specific lender criteria vary, businesses generally need
                   to meet these conditions to effectively use the Funding
                   Options platform:
@@ -77,7 +78,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">UK-Based Business:</span>{" "}
                       Your business must be registered and operating primarily
                       within the United Kingdom.
@@ -88,7 +89,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Trading History:</span>{" "}
                       Most lenders on the panel require a minimum trading
                       history, often at least 12 months, although some options
@@ -101,7 +102,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Turnover Level:</span>{" "}
                       While thresholds vary by lender and product, having a
                       demonstrable annual turnover (e.g., £30,000+) generally
@@ -113,7 +114,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Business Structure:</span>{" "}
                       The platform caters primarily to Limited Companies and
                       LLPs, but options may exist for Sole Traders and
@@ -124,7 +125,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Funding Purpose:</span>{" "}
                       You need a clear business reason for seeking finance
                       (e.g., working capital, expansion, asset purchase,
@@ -139,10 +140,10 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Information Needed for the Platform:
                 </h2>
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   To effectively match you with lenders, Funding Options will
                   typically ask for:
                 </p>
@@ -152,7 +153,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Basic Company Information:
                       </span>{" "}
@@ -164,7 +165,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Funding Requirements:
                       </span>{" "}
@@ -177,7 +178,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Financial Overview:</span>{" "}
                       Key financial details like annual turnover, net
                       profit/loss, and potentially information about assets or
@@ -188,25 +189,25 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Director Details:</span>{" "}
                       Basic information about the company directors.
                     </div>
                   </div>
                 </div>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Note: While Funding Options facilitates the initial matching,
                   individual lenders will have their own specific documentation
                   requirements if you proceed with a full application (e.g.,
                   detailed accounts, bank statements, business plans).
                 </p>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   How the Funding Options Process Works
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Using the Funding Options marketplace involves these key
                   steps:
                 </p>
@@ -216,7 +217,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">1. Online Enquiry:</span>{" "}
                       Submit your business details and funding requirements
                       through their secure online form. This initial step does
@@ -228,7 +229,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         2. Tech-Based Matching:
                       </span>{" "}
@@ -242,7 +243,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         3. Review Potential Options:
                       </span>{" "}
@@ -256,7 +257,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         4. Specialist Consultation:
                       </span>{" "}
@@ -269,7 +270,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         5. Proceed with Lender:
                       </span>{" "}
@@ -280,12 +281,6 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8" data-category="loans">
                   <Link href="/personal-finance/best-personal-loans">
@@ -301,47 +296,57 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Types of Finance Available
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Funding Options provides access to a diverse range of funding
                   types, including:
                 </p>
-                <ul className="list-disc list-inside ml-4 space-y-1 text-sm text-gray-700 mb-8">
-                  <li>Working Capital Loans</li>
-                  <li>Business Expansion Loans</li>
-                  <li>Asset Finance (Leasing/Hire Purchase)</li>
-                  <li>Invoice Finance (Factoring/Discounting)</li>
-                  <li>Revolving Credit Facilities</li>
-                  <li>Merchant Cash Advances</li>
-                  <li>Commercial Mortgages</li>
-                  <li>Bridging Loans</li>
-                  <li>VAT & Tax Loans</li>
-                  <li>
+                <ul className="list-disc list-inside ml-4 space-y-1 text-sm text-gray-700 mb-8 text-left">
+                  <li className="text-left">Working Capital Loans</li>
+                  <li className="text-left">Business Expansion Loans</li>
+                  <li className="text-left">
+                    Asset Finance (Leasing/Hire Purchase)
+                  </li>
+                  <li className="text-left">
+                    Invoice Finance (Factoring/Discounting)
+                  </li>
+                  <li className="text-left">Revolving Credit Facilities</li>
+                  <li className="text-left">Merchant Cash Advances</li>
+                  <li className="text-left">Commercial Mortgages</li>
+                  <li className="text-left">Bridging Loans</li>
+                  <li className="text-left">VAT & Tax Loans</li>
+                  <li className="text-left">
                     Recovery Loan Scheme (RLS) facilities (when available)
                   </li>
                 </ul>
 
-                <h2 className="text-lg font-bold text-gray-800 mb-4">
+                <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Who Should Use Funding Options?
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   This platform is particularly beneficial for:
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   SMEs seeking market comparison:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Businesses that want to efficiently compare multiple funding
                   offers without approaching numerous lenders individually.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-personal-loans" // Replaced dead link
@@ -351,17 +356,17 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Businesses exploring alternative finance:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Companies looking beyond traditional bank loans to find
                   specialist or fintech lenders that might offer more suitable
                   or flexible terms.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/best-personal-loans" // Replaced dead link
@@ -371,17 +376,17 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                   </Link>
                 </p>
 
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
+                <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Time-constrained business owners:
                 </h3>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The platform significantly reduces the time spent researching
                   and applying for finance, allowing owners to focus on running
                   their business.
                 </p>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5">
+                <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
                     href="/personal-finance/tips-for-choosing-an-online-loan" // Replaced dead link
@@ -405,11 +410,11 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Tips for Using Funding Options Effectively
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-sm leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   To maximize your success with the platform:
                 </p>
 
@@ -418,7 +423,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Be Clear About Your Needs:
                       </span>{" "}
@@ -431,7 +436,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Have Financials Ready:
                       </span>{" "}
@@ -446,7 +451,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Engage with the Specialist:
                       </span>{" "}
@@ -460,7 +465,7 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#FDB913] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-black font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Review Offers Carefully:
                       </span>{" "}

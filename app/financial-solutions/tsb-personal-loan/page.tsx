@@ -35,7 +35,7 @@ export default function TSBPersonalLoanPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 TSB Personal Loans offer clear terms, competitive rates, and a
                 straightforward approach to borrowing, reflecting TSB's
                 commitment to simple, community-focused banking.
@@ -46,7 +46,7 @@ export default function TSBPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Competitive Loan Rates:
                     </span>{" "}
@@ -60,7 +60,7 @@ export default function TSBPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Flexible Borrowing:</span>{" "}
                     Borrow between £1,000 and £25,000 to suit a variety of
                     needs, from consolidating debts to funding home improvements
@@ -72,7 +72,7 @@ export default function TSBPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Adaptable Repayment Terms:
                     </span>{" "}
@@ -85,7 +85,7 @@ export default function TSBPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Simple Application Process:
                     </span>{" "}
@@ -96,12 +96,6 @@ export default function TSBPersonalLoanPage() {
                 </div>
               </div>
 
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
-
               <div className="text-left my-8">
                 <Link href="/financial-solutions/tsb-personal-loan-requirements">
                   <Button className="bg-[#0A4D8C] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -109,6 +103,8 @@ export default function TSBPersonalLoanPage() {
                   </Button>
                 </Link>
               </div>
+
+              
 
               <div className="my-8 text-left sm:text-left">
                 <Image
@@ -125,7 +121,7 @@ export default function TSBPersonalLoanPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   TSB Personal Loans embody the bank's focus on straightforward,
                   community-based banking. With roots stretching back over 200
                   years, TSB aims to provide clear, fair financial products that
@@ -134,13 +130,19 @@ export default function TSBPersonalLoanPage() {
                   rates.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Financing for Everyday Life
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+              <div
+                id="uk_topfinanzas_2"
+                className="p-4 flex items-center justify-center w-full min-w-full"
+              ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Whether you need funds for home improvements, a new car,
-                  consolidating existing debts, or covering unexpected costs,
+                  consolidating existing debts, or covering unexpected expenses,
                   TSB Personal Loans offer a flexible solution. You can
                   typically borrow between £1,000 and £25,000, providing a range
                   suitable for various personal financing needs. TSB focuses on
@@ -148,11 +150,11 @@ export default function TSBPersonalLoanPage() {
                   customers.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Clear Terms and Competitive Rates
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   TSB offers competitive interest rates, with representative
                   APRs starting from 4.9% for loans between £7,500 and £15,000
                   (subject to status and loan amount). The bank prioritizes
@@ -162,11 +164,11 @@ export default function TSBPersonalLoanPage() {
                   surprises.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Flexible Repayment Tailored to You
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   TSB provides repayment terms ranging from 1 to 7 years,
                   allowing borrowers to choose a schedule that fits their
                   financial situation. This flexibility enables customers to
@@ -175,11 +177,7 @@ export default function TSBPersonalLoanPage() {
                   remains affordable.
                 </p>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
+                
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -195,16 +193,22 @@ export default function TSBPersonalLoanPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Early Repayment Flexibility:
                       </span>{" "}
@@ -220,7 +224,7 @@ export default function TSBPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Potential Benefits for TSB Customers:
                       </span>{" "}
@@ -235,7 +239,7 @@ export default function TSBPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Simple Loan Management:
                       </span>{" "}
@@ -249,7 +253,7 @@ export default function TSBPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Focus on Responsible Lending:
                       </span>{" "}
@@ -267,11 +271,11 @@ export default function TSBPersonalLoanPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Straightforward Application Process
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   TSB aims for a simple and clear application journey:
                 </p>
 
@@ -280,7 +284,7 @@ export default function TSBPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Easy Online Application:
                       </span>{" "}
@@ -294,7 +298,7 @@ export default function TSBPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Personalized Quote Tool:
                       </span>{" "}
@@ -308,7 +312,7 @@ export default function TSBPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#0A4D8C] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Quick Decision and Funding:
                       </span>{" "}
@@ -320,11 +324,11 @@ export default function TSBPersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   The TSB Approach
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Choosing a TSB Personal Loan aligns with supporting a bank
                   focused on serving local communities and providing
                   straightforward financial products. TSB's commitment to
@@ -334,7 +338,7 @@ export default function TSBPersonalLoanPage() {
                   reliable, customer-friendly loan option.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   For borrowers who value clear terms, competitive rates, and a
                   bank with strong community roots, the TSB Personal Loan offers
                   a solid choice for financing various personal needs.

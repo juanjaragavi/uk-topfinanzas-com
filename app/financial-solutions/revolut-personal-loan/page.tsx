@@ -35,7 +35,7 @@ export default function RevolutPersonalLoanPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Revolut Personal Loans leverage fintech innovation to offer
                 quick, flexible borrowing managed entirely through the Revolut
                 app, providing a modern alternative to traditional bank loans.
@@ -46,7 +46,7 @@ export default function RevolutPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Fast Application & Decision:
                     </span>{" "}
@@ -59,7 +59,7 @@ export default function RevolutPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Flexible Loan Amounts:
                     </span>{" "}
@@ -72,7 +72,7 @@ export default function RevolutPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">Competitive Rates:</span>{" "}
                     Access competitive APRs, often personalized based on your
                     financial profile and relationship with Revolut. Rates
@@ -84,7 +84,7 @@ export default function RevolutPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Seamless App Management:
                     </span>{" "}
@@ -93,12 +93,6 @@ export default function RevolutPersonalLoanPage() {
                   </div>
                 </div>
               </div>
-
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/revolut-personal-loan-requirements">
@@ -121,7 +115,7 @@ export default function RevolutPersonalLoanPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Revolut Personal Loans represent the fintech giant's expansion
                   into consumer lending, bringing its technology-driven approach
                   to the personal loan market. Designed for speed, flexibility,
@@ -130,11 +124,17 @@ export default function RevolutPersonalLoanPage() {
                   borrowing.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Fintech Speed and Convenience
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   One of the key attractions of a Revolut Personal Loan is the
                   speed and ease of the application process. Existing Revolut
                   customers can often apply directly within the app in just a
@@ -146,11 +146,11 @@ export default function RevolutPersonalLoanPage() {
                   acceptance.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Flexible Borrowing for Modern Needs
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Revolut offers loan amounts typically ranging from £1,000 to
                   £25,000, suitable for various purposes like debt
                   consolidation, funding education, purchasing vehicles, or
@@ -159,11 +159,11 @@ export default function RevolutPersonalLoanPage() {
                   choose a plan that fits their budget.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Competitive, Personalized Rates
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Revolut aims to offer competitive interest rates, often
                   personalized based on the applicant's financial profile,
                   credit history, and potentially their existing relationship
@@ -171,12 +171,6 @@ export default function RevolutPersonalLoanPage() {
                   typically start from around 4.9%, but the actual rate offered
                   will vary.
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -192,16 +186,22 @@ export default function RevolutPersonalLoanPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Full In-App Management:
                       </span>{" "}
@@ -216,7 +216,7 @@ export default function RevolutPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Early Repayment Options:
                       </span>{" "}
@@ -232,7 +232,7 @@ export default function RevolutPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Integration with Revolut Ecosystem:
                       </span>{" "}
@@ -247,7 +247,7 @@ export default function RevolutPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Transparent Updates:
                       </span>{" "}
@@ -264,11 +264,11 @@ export default function RevolutPersonalLoanPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   The Fintech Approach to Lending
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Revolut's approach to personal loans differs from traditional
                   banks by heavily relying on technology, data analytics, and a
                   digital-first user experience. This often results in faster
@@ -277,7 +277,7 @@ export default function RevolutPersonalLoanPage() {
                   your activity and history within the Revolut app itself.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   For tech-savvy individuals, particularly existing Revolut
                   users, who value speed, convenience, and managing their
                   finances entirely through an app, the Revolut Personal Loan

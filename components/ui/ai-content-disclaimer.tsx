@@ -89,7 +89,7 @@ export function AIContentDisclaimer() {
             <h4 className="text-lg font-semibold mb-1">
               AI-Generated Content Disclaimer
             </h4>
-            <p className="text-sm text-gray-600 mb-2">
+            <p className="text-sm text-left sm:text-left text-gray-600 mb-2">
               This content was generated using artificial intelligence tools,
               with extensive information sourced from live online resources. All
               generated content (text and potentially images) has been curated,

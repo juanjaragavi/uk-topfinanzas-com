@@ -34,7 +34,7 @@ export default function NatWestPersonalLoanPage() {
             ></div>
 
             <div className="my-8 text-left sm:text-left">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-5">
+              <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 NatWest Personal Loans offer competitive rates, adaptable
                 repayment options, and the reliability of one of the UK's
                 largest banking groups, helping you achieve your financial
@@ -46,7 +46,7 @@ export default function NatWestPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Competitive Interest Rates:
                     </span>{" "}
@@ -60,7 +60,7 @@ export default function NatWestPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Wide Range of Loan Amounts:
                     </span>{" "}
@@ -74,7 +74,7 @@ export default function NatWestPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Flexible Repayment Terms:
                     </span>{" "}
@@ -88,7 +88,7 @@ export default function NatWestPersonalLoanPage() {
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
                   </div>
-                  <div className="text-md leading-5">
+                  <div className="text-md leading-5 text-left">
                     <span className="font-semibold">
                       Quick Online Application:
                     </span>{" "}
@@ -98,12 +98,6 @@ export default function NatWestPersonalLoanPage() {
                   </div>
                 </div>
               </div>
-
-              {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/natwest-personal-loan-requirements">
@@ -128,7 +122,7 @@ export default function NatWestPersonalLoanPage() {
               </div>
 
               <div className="my-6">
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   NatWest Personal Loans offer a reliable and flexible financing
                   option from one of the UK's most prominent banking groups.
                   With a strong high-street presence combined with advanced
@@ -137,11 +131,17 @@ export default function NatWestPersonalLoanPage() {
                   country.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Funding Your Ambitions
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
+
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Whether you're looking to finance a new car, undertake
                   significant home improvements, consolidate existing debts for
                   simpler management, or cover the costs of a major life event
@@ -152,11 +152,11 @@ export default function NatWestPersonalLoanPage() {
                   the right amount for your specific goal.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Competitive and Transparent Terms
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   NatWest offers competitive interest rates, with representative
                   APRs starting from 3.9% for loans between £7,500 and £15,000
                   (subject to status and loan amount). The bank emphasizes
@@ -166,11 +166,11 @@ export default function NatWestPersonalLoanPage() {
                   free from concerns about fluctuating interest rates.
                 </p>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Adaptable Repayment Schedules
                 </h2>
 
-                <p className="text-gray-800 mb-4 text-md leading-5 font-light">
+                <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Recognizing that financial circumstances differ, NatWest
                   provides flexible repayment terms ranging from 1 to 8 years.
                   This allows borrowers to choose a repayment plan that aligns
@@ -179,12 +179,6 @@ export default function NatWestPersonalLoanPage() {
                   while a shorter term helps reduce the total amount of interest
                   paid over the loan's lifetime.
                 </p>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 {/* Ad Block: Credit Cards */}
                 <div className="my-8 text-left sm:text-left">
@@ -201,16 +195,22 @@ export default function NatWestPersonalLoanPage() {
                   </Link>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
+
+                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+                <div
+                  id="uk_topfinanzas_3"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Early Repayment Flexibility:
                       </span>{" "}
@@ -226,7 +226,7 @@ export default function NatWestPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Potential Benefits for Existing Customers:
                       </span>{" "}
@@ -241,7 +241,7 @@ export default function NatWestPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">Loan Top-Up Option:</span>{" "}
                       Existing NatWest loan customers may be eligible to apply
                       for additional borrowing through a loan top-up, subject to
@@ -254,7 +254,7 @@ export default function NatWestPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Integrated Digital Banking:
                       </span>{" "}
@@ -272,11 +272,11 @@ export default function NatWestPersonalLoanPage() {
                   className="p-4 flex items-center justify-center w-full min-w-full"
                 ></div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Streamlined Application Journey
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   NatWest focuses on providing a straightforward and efficient
                   application process:
                 </p>
@@ -286,7 +286,7 @@ export default function NatWestPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Quick Online Application:
                       </span>{" "}
@@ -300,7 +300,7 @@ export default function NatWestPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Personalized Quote Tool:
                       </span>{" "}
@@ -315,7 +315,7 @@ export default function NatWestPersonalLoanPage() {
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
                     </div>
-                    <div className="text-sm leading-5">
+                    <div className="text-sm leading-5 text-left">
                       <span className="font-semibold">
                         Fast Decision and Funding:
                       </span>{" "}
@@ -327,11 +327,11 @@ export default function NatWestPersonalLoanPage() {
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4">
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   The NatWest Commitment
                 </h2>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Choosing a NatWest Personal Loan means partnering with a bank
                   committed to supporting its customers' financial well-being.
                   NatWest emphasizes responsible lending, ensuring loan offers
@@ -341,7 +341,7 @@ export default function NatWestPersonalLoanPage() {
                   catering to diverse customer preferences.
                 </p>
 
-                <p className="text-gray-800 text-sm leading-5 mb-4">
+                <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Whether you need funds for a specific project, wish to
                   consolidate debts, or require financing for a significant life
                   event, the NatWest Personal Loan offers a reliable and
