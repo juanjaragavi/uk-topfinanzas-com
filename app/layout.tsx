@@ -257,6 +257,17 @@ export default function RootLayout({
           </Suspense>
           {children}
         </NavigationProvider>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (typeof window.AdZepActivateAds === 'function') {
+                window.AdZepActivateAds();
+              } else {
+                console.warn('AdZepActivateAds function not found. Ads may not be activated.');
+              }
+            `,
+          }}
+        />
       </body>
     </html>
   );
