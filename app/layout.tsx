@@ -14,6 +14,7 @@ import UtmMonitor from "@/components/analytics/utm-monitor";
 import ResourceHints from "@/components/resource-hints";
 import NavigationProvider from "@/components/providers/navigation-provider";
 import ClientOnly from "@/components/ClientOnly";
+import AdZepScript from "@/components/ads/AdZepScript"; // Import the new component
 
 // Use local font to avoid external requests during build
 // This improves build time and eliminates network dependency
@@ -240,15 +241,8 @@ export default function RootLayout({
         />
       </head>
       <body className={`${poppins.variable} font-sans text-left sm:text-left`}>
-        {/* ADZep AutoZep Paid Advertising tag - Modified to use next/script and ClientOnly */}
-        <ClientOnly>
-          <Script
-            id="adzep-script"
-            src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
-            strategy="afterInteractive"
-            data-cfasync="false"
-          />
-        </ClientOnly>
+        {/* ADZep AutoZep Paid Advertising tag - Now using AdZepScript component */}
+        <AdZepScript />
         <GoogleTagManagerNoScript />
         <NavigationProvider>
           <Suspense fallback={null}>
@@ -257,17 +251,6 @@ export default function RootLayout({
           </Suspense>
           {children}
         </NavigationProvider>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              if (typeof window.AdZepActivateAds === 'function') {
-                window.AdZepActivateAds();
-              } else {
-                console.warn('AdZepActivateAds function not found. Ads may not be activated.');
-              }
-            `,
-          }}
-        />
       </body>
     </html>
   );
