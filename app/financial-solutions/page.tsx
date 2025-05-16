@@ -380,9 +380,11 @@ export default function FinancialSolutionsPage() {
   // Custom content for this category page
   const content = (
     <div>
-      <h1 className="text-4xl font-bold mb-6">Financial Solutions</h1>
+      <h1 className="text-4xl font-bold mb-6 text-left sm:text-left">
+        Financial Solutions
+      </h1>
 
-      <p className="text-lg text-gray-700 mb-8 leading-tight">
+      <p className="text-lg text-gray-700 mb-8 leading-tight text-left sm:text-left">
         Find detailed information about the best credit cards available in the
         UK, requirements for applying, and comprehensive guides to help you
         choose the best option based on your financial needs.
@@ -455,12 +457,6 @@ export default function FinancialSolutionsPage() {
             ))}
           </div>
 
-          {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-          <div
-            id="uk_topfinanzas_3"
-            className="p-4 flex items-center justify-center w-full min-w-full"
-          ></div>
-
           {/* Credit cards grid with fixed positioning to accommodate Image components */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {filteredCreditCards.map((post) => (
@@ -511,7 +507,7 @@ export default function FinancialSolutionsPage() {
 
           {/* AdZep AutoZep Paid Advertisement `<div>` element */}
           <div
-            id="uk_topfinanzas_4"
+            id="uk_topfinanzas_3"
             className="p-4 flex items-center justify-center w-full min-w-full"
           ></div>
 
@@ -543,10 +539,10 @@ export default function FinancialSolutionsPage() {
 
       {/* CTA section */}
       <div className="bg-blue-50 p-8 rounded-xl shadow-sm mb-10">
-        <h2 className="text-2xl font-bold mb-4">
+        <h2 className="text-2xl font-bold mb-4 text-left sm:text-left">
           Looking for the ideal card for you?
         </h2>
-        <p className="text-gray-700 mb-6">
+        <p className="text-gray-700 mb-6 text-left sm:text-left">
           Use our credit card recommender and find the option that best suits
           your financial profile and specific needs.
         </p>

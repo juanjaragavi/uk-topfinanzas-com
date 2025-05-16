@@ -98,20 +98,24 @@ export function FeaturedPostCard({
       </div>
 
       <div className={contentClasses}>
-        {date && <p className="text-sm text-gray-500 mb-2">{date}</p>}
+        {date && (
+          <p className="text-sm text-gray-500 mb-2 text-left sm:text-left">
+            {date}
+          </p>
+        )}
 
         <Link
           href={postUrl}
-          className="block mt-1 text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors mb-2 line-clamp-2"
+          className="block mt-1 text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors mb-2 line-clamp-2 text-left sm:text-left"
         >
           {title}
         </Link>
 
-        <p className="mt-2 text-gray-600 line-clamp-3 flex-grow">
+        <p className="mt-2 text-gray-600 line-clamp-3 flex-grow text-left sm:text-left">
           {description}
         </p>
 
-        <div className="mt-4">
+        <div className="mt-4 text-left sm:text-left">
           <Link
             href={postUrl}
             className="text-blue-600 hover:text-blue-800 font-medium"
