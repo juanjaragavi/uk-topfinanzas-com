@@ -243,6 +243,11 @@ export default function RootLayout({
         />
       </head>
       <body className={`${poppins.variable} font-sans text-left sm:text-left`}>
+        {/* ADZep AutoZep Paid Advertising tag */}
+        <script
+          data-cfasync="false"
+          src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
+        ></script>
         {/* ADZep AutoZep Paid Advertising tag - Now using AdZepScript component
         <AdZepScript /> */}
         <GoogleTagManagerNoScript />
@@ -253,11 +258,19 @@ export default function RootLayout({
           </Suspense>
           {children}
         </NavigationProvider>
-        {/* ADZep AutoZep Paid Advertising tag */}
         <script
-          data-cfasync="false"
-          src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
-        ></script>
+          dangerouslySetInnerHTML={{
+            __html: `
+      window.onload = function() {
+        if (typeof window.AdZepActivateAds === 'function') {
+          window.AdZepActivateAds();
+        } else {
+          console.error('AdZepActivateAds function not found after window load.');
+        }
+      };
+    `,
+          }}
+        />
       </body>
     </html>
   );
