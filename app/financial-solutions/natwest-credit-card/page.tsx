@@ -100,8 +100,6 @@ export default function NatWestCreditCardPage() {
                 </Link>
               </div>
 
-              
-
               <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/credit-cards/718644866-top_prestamos-y-tarjetas-uk_v1_mesa-de-trabajo-1-copia.webp"
@@ -131,10 +129,10 @@ export default function NatWestCreditCardPage() {
                 </h2>
 
                 {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The NatWest MyRewards programme allows cardholders to earn
@@ -183,8 +181,6 @@ export default function NatWestCreditCardPage() {
                   activities.
                 </p>
 
-                
-
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
@@ -200,7 +196,7 @@ export default function NatWestCreditCardPage() {
                 </div>
 
                 {/* Related Articles Section */}
-                <div className="my-8 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <div className="my-8 p-6 bg-gray-50 rounded-xl border border-gray-200 text-left sm:text-left">
                   <h3 className="text-lg font-semibold text-gray-800 mb-3 text-left">
                     Learn More About Credit Cards:
                   </h3>

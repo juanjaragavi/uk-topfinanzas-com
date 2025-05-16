@@ -187,7 +187,7 @@ export default function HalifaxWorldEliteMastercardPage() {
                 </div>
 
                 {/* Related Articles Section */}
-                <div className="my-8 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <div className="my-8 p-6 bg-gray-50 rounded-xl border border-gray-200 text-left sm:text-left">
                   <h3 className="text-lg font-semibold text-gray-800 mb-3 text-left">
                     Learn More About Credit Cards:
                   </h3>

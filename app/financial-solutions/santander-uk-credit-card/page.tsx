@@ -102,8 +102,6 @@ export default function SantanderUKCreditCardPage() {
                 </Link>
               </div>
 
-              
-
               <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/credit-cards/718644935-top_prestamos-y-tarjetas-uk_v1-03.webp"
@@ -130,10 +128,10 @@ export default function SantanderUKCreditCardPage() {
                 </h2>
 
                 {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
+                <div
+                  id="uk_topfinanzas_2"
+                  className="p-4 flex items-center justify-center w-full min-w-full"
+                ></div>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   With the Santander UK Credit Card, your everyday purchases
@@ -180,10 +178,8 @@ export default function SantanderUKCreditCardPage() {
                   benefit in an increasingly global marketplace.
                 </p>
 
-                
-
                 {/* Related Articles Section */}
-                <div className="my-8 p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <div className="my-8 p-6 bg-gray-50 rounded-xl border border-gray-200 text-left sm:text-left">
                   <h3 className="text-lg font-semibold text-gray-800 mb-3 text-left">
                     Learn More About Credit Cards:
                   </h3>
