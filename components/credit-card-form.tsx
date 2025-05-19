@@ -4,6 +4,7 @@ import type React from "react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
+import Cookies from "js-cookie"; // Import Cookies
 import Step1 from "./steps/step1";
 import Step2 from "./steps/step2";
 import Step3 from "./steps/step3";
@@ -176,6 +177,8 @@ export default function CreditCardForm() {
     } catch (error) {
       console.error("Error sending data to Kit API:", error);
     } finally {
+      // Set cookie to indicate quiz completion
+      Cookies.set("quizCompleted", "true", { expires: 30 }); // Expires in 30 days
       // Redirect to UK results page using Next.js router
       // regardless of API response to ensure good user experience
       router.push("/credit-card-recommender-p1");
