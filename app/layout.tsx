@@ -235,7 +235,7 @@ export default function RootLayout({
               // Define ad slot 1
               googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_1', [[300, 250], [250, 250], [336, 280]], 'div-gpt-ad-1747926742578-0').addService(googletag.pubads());
               // Define ad slot 2 (interstitial)
-              googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_interstitial', ['fluid'], 'div-gpt-ad-1747927074275-0').addService(googletag.pubads());
+              googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_interstitial', ['fluid'], 'div-gpt-ad-1747934765427-0').addService(googletag.pubads());
               // Define ad slot 3 (offerwall)
               googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_offerwall', ['fluid'], 'div-gpt-ad-1747927172704-0').addService(googletag.pubads());
               
@@ -277,9 +277,9 @@ export default function RootLayout({
           </Script>
         </div>
         {/* /23062212598/uk.topfinanzas_com_mob_interstitial */}
-        <div id="div-gpt-ad-1747927074275-0">
-          <Script id="gpt-display-1747927074275-0" strategy="lazyOnload">
-            {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747927074275-0'); });`}
+        <div id="div-gpt-ad-1747934765427-0">
+          <Script id="gpt-display-1747934765427-0" strategy="lazyOnload">
+            {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747934765427-0'); });`}
           </Script>
         </div>
         {/* ADZep AutoZep Paid Advertising tag */}
