@@ -21,6 +21,13 @@ const UTM_PARAM_KEYS = [
   "utm_content",
 ];
 
+// Cookie names for user tracking
+const COOKIE_NAMES = {
+  QUIZ_COMPLETED: "quizCompleted",
+  USER_REGISTERED: "userRegistered",
+  USER_DATA: "userData",
+};
+
 export default function CreditCardForm() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -37,6 +44,7 @@ export default function CreditCardForm() {
 
   const [lastName, setLastName] = useState(formData.lastName);
   const [phone, setPhone] = useState(formData.phone);
+  const [isRegisteredUser, setIsRegisteredUser] = useState(false);
 
   const totalSteps = 3;
   const progress = Math.round(((step - 1) / (totalSteps - 1)) * 100) || 0;
@@ -55,6 +63,34 @@ export default function CreditCardForm() {
     return option ? option.label : "";
   };
 
+  // Check if user is registered based on cookies on component mount
+  useEffect(() => {
+    const userRegistered = Cookies.get(COOKIE_NAMES.USER_REGISTERED);
+    const userData = Cookies.get(COOKIE_NAMES.USER_DATA);
+
+    if (userRegistered === "true" && userData) {
+      setIsRegisteredUser(true);
+
+      // Pre-fill data from cookies for registered users
+      try {
+        const savedData = JSON.parse(userData);
+        if (savedData.email) {
+          updateFormData({
+            email: savedData.email,
+            name: savedData.name || "",
+            lastName: savedData.lastName || "",
+            phone: savedData.phone || "",
+            receiveMessages: true, // Assume they already agreed
+          });
+          setLastName(savedData.lastName || "");
+          setPhone(savedData.phone || "");
+        }
+      } catch (error) {
+        console.error("Error parsing saved user data:", error);
+      }
+    }
+  }, []);
+
   useEffect(() => {
     if (formData.preference) {
       updateFormData({
@@ -71,10 +107,19 @@ export default function CreditCardForm() {
       step < totalSteps &&
       ((step === 1 && formData.preference) || (step === 2 && formData.income))
     ) {
-      const timer = setTimeout(() => setStep(step + 1), 500);
-      return () => clearTimeout(timer);
+      // For registered users, skip step 3 after completing step 2
+      if (step === 2 && formData.income && isRegisteredUser) {
+        // Submit directly for registered users
+        setTimeout(() => {
+          handleSubmit();
+        }, 500);
+      } else {
+        // Normal flow: proceed to next step
+        const timer = setTimeout(() => setStep(step + 1), 500);
+        return () => clearTimeout(timer);
+      }
     }
-  }, [formData, step]);
+  }, [formData, step, isRegisteredUser]);
 
   const router = useRouter();
 
@@ -158,27 +203,45 @@ export default function CreditCardForm() {
         },
       };
 
-      // Send data to Kit API
-      const headers = {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "X-Kit-Api-Key": `${process.env.NEXT_PUBLIC_KIT_API_KEY}`,
-      };
+      // Send data to Kit API only if not a registered user or if we have new email data
+      if (!isRegisteredUser || formData.email) {
+        const headers = {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+          "X-Kit-Api-Key": `${process.env.NEXT_PUBLIC_KIT_API_KEY}`,
+        };
 
-      // Make the API request
-      const response = await fetch("https://api.kit.com/v4/subscribers", {
-        method: "POST",
-        body: JSON.stringify(kitData),
-        headers: headers,
-      });
+        // Make the API request
+        const response = await fetch("https://api.kit.com/v4/subscribers", {
+          method: "POST",
+          body: JSON.stringify(kitData),
+          headers: headers,
+        });
 
-      const result = await response.json();
-      console.log("Kit API response:", result);
+        const result = await response.json();
+        console.log("Kit API response:", result);
+      }
     } catch (error) {
       console.error("Error sending data to Kit API:", error);
     } finally {
-      // Set cookie to indicate quiz completion
-      Cookies.set("quizCompleted", "true", { expires: 30 }); // Expires in 30 days
+      // Set cookies to indicate quiz completion and user registration
+      Cookies.set(COOKIE_NAMES.QUIZ_COMPLETED, "true", { expires: 30 }); // Expires in 30 days
+
+      // Save user registration status and data for future visits
+      if (formData.email) {
+        Cookies.set(COOKIE_NAMES.USER_REGISTERED, "true", { expires: 30 });
+        Cookies.set(
+          COOKIE_NAMES.USER_DATA,
+          JSON.stringify({
+            email: formData.email,
+            name: formData.name,
+            lastName: formData.lastName,
+            phone: formData.phone,
+          }),
+          { expires: 30 }
+        );
+      }
+
       // Redirect to UK results page using Next.js router
       // regardless of API response to ensure good user experience
       router.push("/credit-card-recommender-p1");
@@ -253,6 +316,11 @@ export default function CreditCardForm() {
               {progress < 100
                 ? formStrings.progressBar.keepItUp
                 : formStrings.progressBar.completed}
+              {isRegisteredUser && step === 2 && (
+                <div className="text-xs text-[#2E74B5] mt-1">
+                  Welcome back! We'll use your saved information.
+                </div>
+              )}
             </div>
           </div>
         </div>

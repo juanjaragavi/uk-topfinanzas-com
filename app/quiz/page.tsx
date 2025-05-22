@@ -2,19 +2,10 @@
 
 import CreditCardForm from "@/components/credit-card-form";
 import AdController from "@/components/ads/AdController";
-import { Suspense, useEffect } from "react";
-import { useRouter } from "next/navigation";
-import Cookies from "js-cookie";
+import { Suspense } from "react";
 
 export default function Home() {
-  const router = useRouter();
-
-  useEffect(() => {
-    const quizCompleted = Cookies.get("quizCompleted");
-    if (quizCompleted) {
-      router.push("/credit-card-recommender-p1");
-    }
-  }, [router]);
+  // Registered users can now answer questions again (Step 1 & 2) while skipping Step 3
 
   return (
     <section className="w-full p-0">
