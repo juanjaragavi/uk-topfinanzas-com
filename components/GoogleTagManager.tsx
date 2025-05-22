@@ -2,7 +2,6 @@
 
 import Script from "next/script";
 import { useEffect } from "react";
-import { executeAfterLoad } from "@/lib/utils/defer-load";
 
 export const GTM_ID = "GTM-MR76NXR3";
 
