@@ -270,6 +270,18 @@ export default function RootLayout({
         />
       </head>
       <body className={`${poppins.variable} font-sans text-left sm:text-left`}>
+        {/* /23062212598/uk.topfinanzas_com_mob_offerwall */}
+        <div id="div-gpt-ad-1747927172704-0">
+          <Script id="gpt-display-1747927172704-0" strategy="lazyOnload">
+            {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747927172704-0'); });`}
+          </Script>
+        </div>
+        {/* /23062212598/uk.topfinanzas_com_mob_interstitial */}
+        <div id="div-gpt-ad-1747927074275-0">
+          <Script id="gpt-display-1747927074275-0" strategy="lazyOnload">
+            {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747927074275-0'); });`}
+          </Script>
+        </div>
         {/* ADZep AutoZep Paid Advertising tag */}
         {/* <script
           data-cfasync="false"
@@ -298,18 +310,6 @@ export default function RootLayout({
     `,
           }}
         />*/}
-        {/* /23062212598/uk.topfinanzas_com_mob_offerwall */}
-        <div id="div-gpt-ad-1747927172704-0">
-          <Script id="gpt-display-1747927172704-0" strategy="lazyOnload">
-            {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747927172704-0'); });`}
-          </Script>
-        </div>
-        {/* /23062212598/uk.topfinanzas_com_mob_interstitial */}
-        <div id="div-gpt-ad-1747927074275-0">
-          <Script id="gpt-display-1747927074275-0" strategy="lazyOnload">
-            {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747927074275-0'); });`}
-          </Script>
-        </div>
       </body>
     </html>
   );
