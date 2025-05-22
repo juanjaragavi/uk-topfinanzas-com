@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script"; // Added for GPT display
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
@@ -31,11 +32,18 @@ export default function BarclayCardAviosPlusRequirementsPage() {
               Requirements for the Barclaycard Avios Plus Credit Card
             </h1>
 
-            {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+            {/* /23062212598/uk.topfinanzas_com_mob_1 */}
             <div
-              id="uk_topfinanzas_1"
-              className="p-4 flex items-center justify-center w-full min-w-full"
-            ></div>
+              id="div-gpt-ad-1747926742578-0"
+              style={{ minWidth: "250px", minHeight: "250px" }}
+            >
+              <Script
+                id="gpt-display-req-1747926742578-0"
+                strategy="lazyOnload"
+              >
+                {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747926742578-0'); });`}
+              </Script>
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -63,11 +71,15 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   How to Qualify for the Barclaycard Avios Plus Credit Card
                 </h2>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_2"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
+                {/* /23062212598/uk.topfinanzas_com_mob_interstitial */}
+                <div id="div-gpt-ad-1747927074275-0">
+                  <Script
+                    id="gpt-display-req-1747927074275-0"
+                    strategy="lazyOnload"
+                  >
+                    {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747927074275-0'); });`}
+                  </Script>
+                </div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
@@ -101,11 +113,15 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   Required Documentation:
                 </h2>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
+                {/* /23062212598/uk.topfinanzas_com_mob_offerwall */}
+                <div id="div-gpt-ad-1747927172704-0">
+                  <Script
+                    id="gpt-display-req-1747927172704-0"
+                    strategy="lazyOnload"
+                  >
+                    {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747927172704-0'); });`}
+                  </Script>
+                </div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
@@ -159,11 +175,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   Understanding the Costs
                 </h2>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
+                {/* Removed div with id="uk_topfinanzas_4" */}
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   It's essential to understand the costs associated with the
@@ -374,9 +386,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                 </p>
 
                 <div className="text-left my-8">
-                  <Link
-                    href="https://www.barclaycard.co.uk/personal/credit-cards/avios-plus"
-                  >
+                  <Link href="https://www.barclaycard.co.uk/personal/credit-cards/avios-plus">
                     <Button className="bg-[#00395D] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Visit Official Website
                     </Button>

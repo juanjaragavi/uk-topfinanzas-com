@@ -214,10 +214,37 @@ export default function RootLayout({
             ),
           }}
         />
+
         <ClientOnly>
           <GoogleTagManager />
         </ClientOnly>
         <ResourceHints />
+
+        {/* Google Publisher Tag Scripts */}
+        <Script
+          src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
+          strategy="beforeInteractive"
+          async
+          crossOrigin="anonymous"
+          id="gpt-js"
+        />
+        <Script id="gpt-inline-config" strategy="beforeInteractive">
+          {`
+            window.googletag = window.googletag || {cmd: []};
+            googletag.cmd.push(function() {
+              // Define ad slot 1
+              googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_1', [[300, 250], [250, 250], [336, 280]], 'div-gpt-ad-1747926742578-0').addService(googletag.pubads());
+              // Define ad slot 2 (interstitial)
+              googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_interstitial', ['fluid'], 'div-gpt-ad-1747927074275-0').addService(googletag.pubads());
+              // Define ad slot 3 (offerwall)
+              googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_offerwall', ['fluid'], 'div-gpt-ad-1747927172704-0').addService(googletag.pubads());
+              
+              // Enable services once after all slots are defined
+              googletag.pubads().enableSingleRequest();
+              googletag.enableServices();
+            });
+          `}
+        </Script>
 
         {/* Explicit favicon and manifest links with proper MIME types */}
         <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192" />
@@ -244,11 +271,11 @@ export default function RootLayout({
       </head>
       <body className={`${poppins.variable} font-sans text-left sm:text-left`}>
         {/* ADZep AutoZep Paid Advertising tag */}
-        <script
+        {/* <script
           data-cfasync="false"
           src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
         ></script>
-        {/* ADZep AutoZep Paid Advertising tag - Now using AdZepScript component
+        ADZep AutoZep Paid Advertising tag - Now using AdZepScript component
         <AdZepScript /> */}
         <GoogleTagManagerNoScript />
         <NavigationProvider>
