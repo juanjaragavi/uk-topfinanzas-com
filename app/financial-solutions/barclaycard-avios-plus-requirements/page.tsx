@@ -36,6 +36,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
             <div
               id="div-gpt-ad-1747926742578-0"
               style={{ minWidth: "250px", minHeight: "250px" }}
+              className="p-4 flex items-center justify-center w-full min-w-full"
             >
               <Script id="gpt-display-1747926742578-0" strategy="lazyOnload">
                 {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747926742578-0'); });`}
@@ -68,16 +69,6 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   How to Qualify for the Barclaycard Avios Plus Credit Card
                 </h2>
 
-                {/* /23062212598/uk.topfinanzas_com_mob_interstitial */}
-                <div id="div-gpt-ad-1747927074275-0">
-                  <Script
-                    id="gpt-display-1747927074275-0"
-                    strategy="lazyOnload"
-                  >
-                    {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747927074275-0'); });`}
-                  </Script>
-                </div>
-
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">
@@ -109,16 +100,6 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Required Documentation:
                 </h2>
-
-                {/* /23062212598/uk.topfinanzas_com_mob_offerwall */}
-                <div id="div-gpt-ad-1747927172704-0">
-                  <Script
-                    id="gpt-display-1747927172704-0"
-                    strategy="lazyOnload"
-                  >
-                    {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747927172704-0'); });`}
-                  </Script>
-                </div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">

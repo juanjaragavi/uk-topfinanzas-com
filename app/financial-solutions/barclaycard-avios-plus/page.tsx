@@ -36,6 +36,7 @@ export default function BarclayCardAviosPlusPage() {
             <div
               id="div-gpt-ad-1747926742578-0"
               style={{ minWidth: "250px", minHeight: "250px" }}
+              className="p-4 flex items-center justify-center w-full min-w-full"
             >
               <Script id="gpt-display-1747926742578-0" strategy="lazyOnload">
                 {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747926742578-0'); });`}
@@ -136,16 +137,6 @@ export default function BarclayCardAviosPlusPage() {
                   Maximise Your Travel Rewards
                 </h2>
 
-                {/* /23062212598/uk.topfinanzas_com_mob_interstitial */}
-                <div id="div-gpt-ad-1747927074275-0">
-                  <Script
-                    id="gpt-display-1747927074275-0"
-                    strategy="lazyOnload"
-                  >
-                    {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747927074275-0'); });`}
-                  </Script>
-                </div>
-
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   With the Barclaycard Avios Plus, every purchase brings you
                   closer to your next adventure. Earn a generous 1.5 Avios for
@@ -174,16 +165,6 @@ export default function BarclayCardAviosPlusPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Comprehensive Travel Protection
                 </h2>
-
-                {/* /23062212598/uk.topfinanzas_com_mob_offerwall */}
-                <div id="div-gpt-ad-1747927172704-0">
-                  <Script
-                    id="gpt-display-1747927172704-0"
-                    strategy="lazyOnload"
-                  >
-                    {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747927172704-0'); });`}
-                  </Script>
-                </div>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Peace of mind comes standard with the Barclaycard Avios Plus

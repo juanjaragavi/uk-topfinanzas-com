@@ -285,7 +285,7 @@ export default function RootLayout({
           </Suspense>
           {children}
         </NavigationProvider>
-        <script
+        {/*<script
           dangerouslySetInnerHTML={{
             __html: `
       window.onload = function() {
@@ -297,7 +297,19 @@ export default function RootLayout({
       };
     `,
           }}
-        />
+        />*/}
+        {/* /23062212598/uk.topfinanzas_com_mob_offerwall */}
+        <div id="div-gpt-ad-1747927172704-0">
+          <Script id="gpt-display-1747927172704-0" strategy="lazyOnload">
+            {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747927172704-0'); });`}
+          </Script>
+        </div>
+        {/* /23062212598/uk.topfinanzas_com_mob_interstitial */}
+        <div id="div-gpt-ad-1747927074275-0">
+          <Script id="gpt-display-1747927074275-0" strategy="lazyOnload">
+            {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747927074275-0'); });`}
+          </Script>
+        </div>
       </body>
     </html>
   );
