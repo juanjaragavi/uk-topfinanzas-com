@@ -37,10 +37,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
               id="div-gpt-ad-1747926742578-0"
               style={{ minWidth: "250px", minHeight: "250px" }}
             >
-              <Script
-                id="gpt-display-req-1747926742578-0"
-                strategy="lazyOnload"
-              >
+              <Script id="gpt-display-1747926742578-0" strategy="lazyOnload">
                 {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747926742578-0'); });`}
               </Script>
             </div>
@@ -74,7 +71,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                 {/* /23062212598/uk.topfinanzas_com_mob_interstitial */}
                 <div id="div-gpt-ad-1747927074275-0">
                   <Script
-                    id="gpt-display-req-1747927074275-0"
+                    id="gpt-display-1747927074275-0"
                     strategy="lazyOnload"
                   >
                     {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747927074275-0'); });`}
@@ -116,7 +113,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                 {/* /23062212598/uk.topfinanzas_com_mob_offerwall */}
                 <div id="div-gpt-ad-1747927172704-0">
                   <Script
-                    id="gpt-display-req-1747927172704-0"
+                    id="gpt-display-1747927172704-0"
                     strategy="lazyOnload"
                   >
                     {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747927172704-0'); });`}
