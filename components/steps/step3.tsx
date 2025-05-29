@@ -14,44 +14,36 @@ import VisitorCounter from "../VisitorCounter";
 interface Step3Props {
   formData: {
     email: string;
-    name: string;
-    lastName: string;
+    firstName: string;
     receiveMessages: boolean;
   };
   updateFormData: (
     data: Partial<{
       email: string;
-      name: string;
-      lastName: string;
+      firstName: string;
       receiveMessages: boolean;
     }>
   ) => void;
   onSubmit: (e?: React.FormEvent) => void;
-  handleLastNameChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  lastName: string;
 }
 
 export default function Step3({
   formData,
   updateFormData,
   onSubmit,
-  handleLastNameChange,
-  lastName,
 }: Step3Props) {
   const [email, setEmail] = useState(formData.email);
-  const [name, setName] = useState(formData.name);
+  const [firstName, setFirstName] = useState(formData.firstName);
   const [receiveMessages, setReceiveMessages] = useState(
     formData.receiveMessages
   );
   const [errors, setErrors] = useState<{
     email: string | null;
-    name: string | null;
-    lastName: string | null;
+    firstName: string | null;
     general: string | null;
   }>({
     email: null,
-    name: null,
-    lastName: null,
+    firstName: null,
     general: null,
   });
 
@@ -91,11 +83,11 @@ export default function Step3({
     return true;
   };
 
-  const validateName = (name: string): boolean => {
+  const validateFirstName = (name: string): boolean => {
     if (!name.trim()) {
       setErrors((prev) => ({
         ...prev,
-        name: step3Texts.validationErrors.nameRequired,
+        firstName: step3Texts.validationErrors.nameRequired, // Assuming you'll update strings
       }));
       return false;
     }
@@ -103,33 +95,13 @@ export default function Step3({
     if (name.trim().length < 2) {
       setErrors((prev) => ({
         ...prev,
-        name: step3Texts.validationErrors.nameLength,
+        firstName: step3Texts.validationErrors.nameLength, // Assuming you'll update strings
       }));
       return false;
     }
+    // Add more specific validation if needed, e.g., no numbers, special characters
 
-    setErrors((prev) => ({ ...prev, name: null }));
-    return true;
-  };
-
-  const validateLastName = (lastName: string): boolean => {
-    if (!lastName.trim()) {
-      setErrors((prev) => ({
-        ...prev,
-        lastName: step3Texts.validationErrors.lastNameRequired,
-      }));
-      return false;
-    }
-
-    if (lastName.trim().length < 2) {
-      setErrors((prev) => ({
-        ...prev,
-        lastName: step3Texts.validationErrors.lastNameLength,
-      }));
-      return false;
-    }
-
-    setErrors((prev) => ({ ...prev, lastName: null }));
+    setErrors((prev) => ({ ...prev, firstName: null }));
     return true;
   };
 
@@ -142,12 +114,12 @@ export default function Step3({
     }
   };
 
-  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFirstNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    setName(value);
-    updateFormData({ name: value });
+    setFirstName(value);
+    updateFormData({ firstName: value });
     if (value.length > 0) {
-      validateName(value);
+      validateFirstName(value);
     }
   };
 
@@ -159,8 +131,7 @@ export default function Step3({
   const validateForm = (): boolean => {
     // Validate all fields
     const isEmailValid = validateEmail(email);
-    const isNameValid = validateName(name);
-    const isLastNameValid = validateLastName(lastName);
+    const isFirstNameValid = validateFirstName(firstName);
 
     // Check terms checkbox
     if (!receiveMessages) {
@@ -173,7 +144,7 @@ export default function Step3({
       setErrors((prev) => ({ ...prev, general: null }));
     }
 
-    return isEmailValid && isNameValid && isLastNameValid && receiveMessages;
+    return isEmailValid && isFirstNameValid && receiveMessages;
   };
 
   const handleFormSubmit = (e: React.FormEvent) => {
@@ -232,58 +203,31 @@ export default function Step3({
         </div>
 
         <div className="space-y-1.5">
-          <Label htmlFor="name" className="text-sm">
-            {step3Strings.fields.name}
+          <Label htmlFor="firstName" className="text-sm">
+            {(step3Strings.fields as { firstName?: string })?.firstName ||
+              "First Name"}
           </Label>
           <Input
-            id="name"
+            id="firstName"
             type="text"
-            value={name}
-            onChange={handleNameChange}
-            onBlur={() => validateName(name)}
+            value={firstName}
+            onChange={handleFirstNameChange}
+            onBlur={() => validateFirstName(firstName)}
             required
             className={`h-9 text-sm ${
-              errors.name
+              errors.firstName
                 ? "border-red-500 focus-visible:ring-red-500"
                 : "border-[#2E74B5] focus-visible:ring-[#8DC63F]"
             }`}
-            placeholder={step3Strings.placeholders.name}
-            aria-describedby="name-error"
+            placeholder={
+              (step3Strings.placeholders as { firstName?: string })
+                ?.firstName || "Enter your first name"
+            }
+            aria-describedby="firstName-error"
           />
-          {errors.name && (
-            <p id="name-error" className="text-xs text-red-500 mt-1">
-              {errors.name}
-            </p>
-          )}
-        </div>
-
-        <div className="space-y-1.5">
-          <Label htmlFor="lastName" className="text-sm">
-            {step3Strings.fields.lastName}
-          </Label>
-          <Input
-            id="lastName"
-            type="text"
-            value={lastName}
-            onChange={(e) => {
-              handleLastNameChange(e);
-              if (lastName.length > 0) {
-                validateLastName(e.target.value);
-              }
-            }}
-            onBlur={() => validateLastName(lastName)}
-            required
-            className={`h-9 text-sm ${
-              errors.lastName
-                ? "border-red-500 focus-visible:ring-red-500"
-                : "border-[#2E74B5] focus-visible:ring-[#8DC63F]"
-            }`}
-            placeholder={step3Strings.placeholders.lastName}
-            aria-describedby="lastName-error"
-          />
-          {errors.lastName && (
-            <p id="lastName-error" className="text-xs text-red-500 mt-1">
-              {errors.lastName}
+          {errors.firstName && (
+            <p id="firstName-error" className="text-xs text-red-500 mt-1">
+              {errors.firstName}
             </p>
           )}
         </div>

@@ -36,12 +36,10 @@ export default function CreditCardForm() {
     income: "",
     incomeText: "", // Add a new field to store the text value
     email: "",
-    name: "",
-    lastName: "",
+    firstName: "",
     receiveMessages: false,
   });
 
-  const [lastName, setLastName] = useState(formData.lastName);
   const [isRegisteredUser, setIsRegisteredUser] = useState(false);
 
   const totalSteps = 3;
@@ -75,11 +73,9 @@ export default function CreditCardForm() {
         if (savedData.email) {
           updateFormData({
             email: savedData.email,
-            name: savedData.name || "",
-            lastName: savedData.lastName || "",
+            firstName: savedData.firstName || "",
             receiveMessages: true, // Assume they already agreed
           });
-          setLastName(savedData.lastName || "");
         }
       } catch (error) {
         console.error("Error parsing saved user data:", error);
@@ -135,8 +131,12 @@ export default function CreditCardForm() {
       });
 
       // Prepare data for Kit API
+      const nameParts = formData.firstName.trim().split(" ");
+      const apiFirstName = nameParts[0] || "";
+      const apiLastName = nameParts.slice(1).join(" ") || "";
+
       const kitData = {
-        first_name: formData.name,
+        first_name: apiFirstName,
         email_address: formData.email,
         state: "active",
         fields: {
@@ -152,7 +152,7 @@ export default function CreditCardForm() {
           elige_el_grupo_que_mejor_describe_tu_situacion_actual: null,
           estas_reportado_en_buro_de_credito: null,
           flujo_prestamos_2: null,
-          last_name: formData.lastName,
+          last_name: apiLastName,
           monto_empresa: null,
           newsletter: null,
           pais: "Reino Unido", // Default value as specified
@@ -230,8 +230,7 @@ export default function CreditCardForm() {
           COOKIE_NAMES.USER_DATA,
           JSON.stringify({
             email: formData.email,
-            name: formData.name,
-            lastName: formData.lastName,
+            firstName: formData.firstName,
           }),
           { expires: 30 }
         );
@@ -241,11 +240,6 @@ export default function CreditCardForm() {
       // regardless of API response to ensure good user experience
       router.push("/credit-card-recommender-p1");
     }
-  };
-
-  const handleLastNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setLastName(e.target.value);
-    updateFormData({ lastName: e.target.value });
   };
 
   return (
@@ -277,8 +271,6 @@ export default function CreditCardForm() {
                     formData={formData}
                     updateFormData={updateFormData}
                     onSubmit={handleSubmit}
-                    handleLastNameChange={handleLastNameChange}
-                    lastName={lastName}
                   />
                 </>
               )}
