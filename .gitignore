@@ -3,6 +3,7 @@
 # Local env files
 .DS_Store
 content/.DS_Store
+public/images/.DS_Store
 
 # dependencies
 /node_modules

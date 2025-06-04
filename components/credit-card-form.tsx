@@ -28,6 +28,16 @@ const COOKIE_NAMES = {
   USER_DATA: "userData",
 };
 
+// Cookie validation configuration
+const COOKIE_CONFIG = {
+  // Feature flag to enable/disable cookie validation (can be controlled via env var)
+  VALIDATION_ENABLED: process.env.NEXT_PUBLIC_COOKIE_VALIDATION_ENABLED !== 'false',
+  // Alternative shorter expiration period when validation is partially enabled (in days)
+  SHORT_EXPIRATION: parseInt(process.env.NEXT_PUBLIC_COOKIE_SHORT_EXPIRATION || '1'),
+  // Default expiration period (30 days)
+  DEFAULT_EXPIRATION: 30,
+};
+
 export default function CreditCardForm() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -61,6 +71,13 @@ export default function CreditCardForm() {
 
   // Check if user is registered based on cookies on component mount
   useEffect(() => {
+    // Skip cookie validation entirely if disabled via environment variable
+    if (!COOKIE_CONFIG.VALIDATION_ENABLED) {
+      console.log('[QUIZ] Cookie validation temporarily disabled');
+      setIsRegisteredUser(false);
+      return;
+    }
+
     const userRegistered = Cookies.get(COOKIE_NAMES.USER_REGISTERED);
     const userData = Cookies.get(COOKIE_NAMES.USER_DATA);
 
@@ -220,20 +237,35 @@ export default function CreditCardForm() {
     } catch (error) {
       console.error("Error sending data to Kit API:", error);
     } finally {
+      // Determine cookie expiration based on configuration
+      const cookieExpiration = COOKIE_CONFIG.VALIDATION_ENABLED 
+        ? COOKIE_CONFIG.DEFAULT_EXPIRATION 
+        : COOKIE_CONFIG.SHORT_EXPIRATION;
+
       // Set cookies to indicate quiz completion and user registration
-      Cookies.set(COOKIE_NAMES.QUIZ_COMPLETED, "true", { expires: 30 }); // Expires in 30 days
+      Cookies.set(COOKIE_NAMES.QUIZ_COMPLETED, "true", { expires: cookieExpiration }); 
 
       // Save user registration status and data for future visits
       if (formData.email) {
-        Cookies.set(COOKIE_NAMES.USER_REGISTERED, "true", { expires: 30 });
+        // Add timestamp when validation is disabled for debugging/monitoring
+        const registrationData = {
+          email: formData.email,
+          firstName: formData.firstName,
+          ...((!COOKIE_CONFIG.VALIDATION_ENABLED) && { 
+            _temporaryMode: true, 
+            _timestamp: new Date().toISOString() 
+          })
+        };
+
+        Cookies.set(COOKIE_NAMES.USER_REGISTERED, "true", { expires: cookieExpiration });
         Cookies.set(
           COOKIE_NAMES.USER_DATA,
-          JSON.stringify({
-            email: formData.email,
-            firstName: formData.firstName,
-          }),
-          { expires: 30 }
+          JSON.stringify(registrationData),
+          { expires: cookieExpiration }
         );
+
+        // Log the current cookie validation status for debugging
+        console.log(`[QUIZ] Cookie validation: ${COOKIE_CONFIG.VALIDATION_ENABLED ? 'enabled' : 'disabled'}, expiration: ${cookieExpiration} days`);
       }
 
       // Redirect to UK results page using Next.js router
