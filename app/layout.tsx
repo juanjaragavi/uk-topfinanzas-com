@@ -281,6 +281,16 @@ export default function RootLayout({
           <Script id="gpt-display-1747934765427-0" strategy="lazyOnload">
             {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747934765427-0'); });`}
           </Script>
+          <div id="div-gpt-ad-1749163004262-0">
+            <Script id="gpt-display-1749163004262-0" strategy="lazyOnload">
+              {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1749163004262-0'); });`}
+            </Script>
+          </div>
+          <div id="div-gpt-ad-1749163309789-0">
+            <Script id="gpt-display-1749163309789-0" strategy="lazyOnload">
+              {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1749163309789-0'); });`}
+            </Script>
+          </div>
         </div>
         {/* ADZep AutoZep Paid Advertising tag */}
         {/* <script
