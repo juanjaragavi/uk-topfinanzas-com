@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import Script from "next/script";
 
 export default function CreditCardRecommenderPage() {
   const [openFaq, setOpenFaq] = useState<string | null>("benefits");
@@ -52,11 +53,16 @@ export default function CreditCardRecommenderPage() {
               Why Choose Our Credit Card Recommender?
             </h2>
 
-            {/* AdZep AutoZep Paid Advertisement `<div>` element */}
+            {/* /23062212598/uk.topfinanzas_com_mob_1 */}
             <div
-              id="uk_topfinanzas_1"
+              id="div-gpt-ad-1747926742578-0"
+              style={{ minWidth: "250px", minHeight: "250px" }}
               className="p-4 flex items-center justify-center w-full min-w-full"
-            ></div>
+            >
+              <Script id="gpt-display-1747926742578-0" strategy="lazyOnload">
+                {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747926742578-0'); });`}
+              </Script>
+            </div>
 
             <div className="space-y-1 mb-6">
               <div className="flex items-start">
