@@ -239,7 +239,10 @@ export default function RootLayout({
               googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_interstitial', ['fluid'], 'div-gpt-ad-1747934765427-0').addService(googletag.pubads());
               // Define ad slot 3 (offerwall)
               googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_offerwall', ['fluid'], 'div-gpt-ad-1747927172704-0').addService(googletag.pubads());
-              
+              // Define ad slot 4 (interstitial)
+              googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_interstitial', ['fluid'], 'div-gpt-ad-1749163004262-0').addService(googletag.pubads());
+              // Define ad slot 5 (offerwall)
+              googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_offerwall', ['fluid'], 'div-gpt-ad-1749163309789-0').addService(googletag.pubads());
               // Enable services once after all slots are defined
               googletag.pubads().enableSingleRequest();
               googletag.enableServices();
