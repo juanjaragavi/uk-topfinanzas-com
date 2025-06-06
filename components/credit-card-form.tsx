@@ -31,9 +31,9 @@ const COOKIE_NAMES = {
 // Cookie validation configuration
 const COOKIE_CONFIG = {
   // Feature flag to enable/disable cookie validation (can be controlled via env var)
-  VALIDATION_ENABLED: process.env.NEXT_PUBLIC_COOKIE_VALIDATION_ENABLED !== 'false',
+  VALIDATION_ENABLED: typeof window !== 'undefined' && process.env.NEXT_PUBLIC_COOKIE_VALIDATION_ENABLED !== 'false',
   // Alternative shorter expiration period when validation is partially enabled (in days)
-  SHORT_EXPIRATION: parseInt(process.env.NEXT_PUBLIC_COOKIE_SHORT_EXPIRATION || '1'),
+  SHORT_EXPIRATION: typeof window !== 'undefined' ? parseInt(process.env.NEXT_PUBLIC_COOKIE_SHORT_EXPIRATION || '1', 10) : 1,
   // Default expiration period (30 days)
   DEFAULT_EXPIRATION: 30,
 };
@@ -218,10 +218,17 @@ export default function CreditCardForm() {
 
       // Send data to Kit API only if not a registered user or if we have new email data
       if (!isRegisteredUser || formData.email) {
+        const apiKey = typeof window !== 'undefined' ? process.env.NEXT_PUBLIC_KIT_API_KEY : '';
+        
+        if (!apiKey) {
+          console.error("Kit API key is not configured");
+          return;
+        }
+        
         const headers = {
           "Content-Type": "application/json",
           Accept: "application/json",
-          "X-Kit-Api-Key": `${process.env.NEXT_PUBLIC_KIT_API_KEY}`,
+          "X-Kit-Api-Key": apiKey,
         };
 
         // Make the API request
