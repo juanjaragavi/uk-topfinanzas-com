@@ -13,6 +13,7 @@ import UtmPersister from "@/components/analytics/utm-persister";
 import UtmMonitor from "@/components/analytics/utm-monitor";
 import ResourceHints from "@/components/resource-hints";
 import NavigationProvider from "@/components/providers/navigation-provider";
+import PreloaderProvider from "@/components/providers/preloader-provider";
 import ClientOnly from "@/components/ClientOnly";
 {
   /*import AdZepScript from "@/components/ads/AdZepScript"; // Import the new component*/
@@ -300,13 +301,25 @@ export default function RootLayout({
         ADZep AutoZep Paid Advertising tag - Now using AdZepScript component
         <AdZepScript /> */}
         <GoogleTagManagerNoScript />
-        <NavigationProvider>
-          <Suspense fallback={null}>
-            <UtmPersister />
-            {process.env.NODE_ENV === "development" && <UtmMonitor />}
-          </Suspense>
-          {children}
-        </NavigationProvider>
+        <PreloaderProvider
+          defaultConfig={{
+            duration: 4000,
+            primaryColor: "#1e40af",
+            secondaryColor: "#3b82f6",
+            backgroundColor: "#ffffff",
+            showLogo: true,
+            showProgress: true,
+          }}
+          showOnNavigation={true}
+        >
+          <NavigationProvider>
+            <Suspense fallback={null}>
+              <UtmPersister />
+              {process.env.NODE_ENV === "development" && <UtmMonitor />}
+            </Suspense>
+            {children}
+          </NavigationProvider>
+        </PreloaderProvider>
         {/*<script
           dangerouslySetInnerHTML={{
             __html: `
