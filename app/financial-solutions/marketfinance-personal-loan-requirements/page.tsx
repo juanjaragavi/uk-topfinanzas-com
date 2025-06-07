@@ -29,12 +29,6 @@ export default function MarketFinancePersonalLoanRequirementsPage() {
               Requirements for MarketFinance Business Solutions
             </h1>
 
-            {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-            <div
-              id="uk_topfinanzas_1"
-              className="p-4 flex items-center justify-center w-full min-w-full"
-            ></div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 MarketFinance offers fast business loans and invoice finance.
@@ -60,12 +54,6 @@ export default function MarketFinancePersonalLoanRequirementsPage() {
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   General Eligibility Criteria for SMEs
                 </h2>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_2"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
@@ -188,12 +176,6 @@ export default function MarketFinancePersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Application Process
@@ -412,14 +394,6 @@ export default function MarketFinancePersonalLoanRequirementsPage() {
                     />
                   </Link>
                 </div>
-                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
-                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-                  Tips for a Successful Application
-                </h2>
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   To enhance your chances of approval with MarketFinance:

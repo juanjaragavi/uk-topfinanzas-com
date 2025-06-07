@@ -32,17 +32,6 @@ export default function BarclayCardAviosPlusPage() {
               Barclaycard Avios Plus Credit Card: Premium Travel Rewards
             </h1>
 
-            {/* /23062212598/uk.topfinanzas_com_mob_1 */}
-            <div
-              id="div-gpt-ad-1747926742578-0"
-              style={{ minWidth: "250px", minHeight: "250px" }}
-              className="p-4 flex items-center justify-center w-full min-w-full"
-            >
-              <Script id="gpt-display-1747926742578-0" strategy="lazyOnload">
-                {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747926742578-0'); });`}
-              </Script>
-            </div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 The Barclaycard Avios Plus Credit Card is designed for frequent

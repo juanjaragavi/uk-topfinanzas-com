@@ -30,12 +30,6 @@ export default function MarketFinancePersonalLoanPage() {
               MarketFinance: Smart Business Finance Solutions for UK SMEs
             </h1>
 
-            {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-            <div
-              id="uk_topfinanzas_1"
-              className="p-4 flex items-center justify-center w-full min-w-full"
-            ></div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 MarketFinance offers a range of fast, flexible finance options
@@ -130,12 +124,6 @@ export default function MarketFinancePersonalLoanPage() {
                   Unlocking Cash Flow with Invoice Finance
                 </h2>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
-                <div
-                  id="uk_topfinanzas_2"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
-
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   A core offering from MarketFinance is invoice finance. This
                   allows businesses to unlock the cash tied up in their
@@ -193,12 +181,6 @@ export default function MarketFinancePersonalLoanPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
@@ -303,12 +285,6 @@ export default function MarketFinancePersonalLoanPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Powering Business Ambition
                 </h2>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   MarketFinance plays a significant role in the alternative

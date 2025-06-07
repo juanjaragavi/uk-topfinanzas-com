@@ -28,11 +28,6 @@ export default function MonzoPersonalLoanPage() {
               Monzo Personal Loan: Simple, Fair Financing from a Leading Neobank
             </h1>
 
-            {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-            <div
-              id="uk_topfinanzas_1"
-              className="p-4 flex items-center justify-center w-full min-w-full"
-            ></div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
@@ -133,11 +128,6 @@ export default function MonzoPersonalLoanPage() {
                   Neobank Simplicity in Borrowing
                 </h2>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   True to Monzo's style, the personal loan application process
@@ -198,11 +188,6 @@ export default function MonzoPersonalLoanPage() {
                   Additional Features:
                 </h2>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
@@ -264,11 +249,6 @@ export default function MonzoPersonalLoanPage() {
                   </div>
                 </div>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   The Monzo Approach to Lending

@@ -29,12 +29,6 @@ export default function FundingCirclePersonalLoanPage() {
               Funding Circle Business Loan: Fast, Flexible Finance for SMEs
             </h1>
 
-            {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-            <div
-              id="uk_topfinanzas_1"
-              className="p-4 flex items-center justify-center w-full min-w-full"
-            ></div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Funding Circle provides fast and flexible business loans
@@ -134,11 +128,6 @@ export default function FundingCirclePersonalLoanPage() {
                   Fueling Business Growth
                 </h2>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
-                <div
-                  id="uk_topfinanzas_2"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Funding Circle loans cater to a wide range of business needs.
@@ -154,11 +143,6 @@ export default function FundingCirclePersonalLoanPage() {
                   Speed and Efficiency Through Fintech
                 </h2>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Leveraging technology, Funding Circle offers a significantly
@@ -311,11 +295,6 @@ export default function FundingCirclePersonalLoanPage() {
                   Supporting UK SMEs
                 </h2>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Funding Circle has established itself as a major player in the

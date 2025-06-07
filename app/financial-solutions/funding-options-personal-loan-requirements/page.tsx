@@ -29,11 +29,6 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
               Using Funding Options: Process & Eligibility for SMEs
             </h1>
 
-            {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-            <div
-              id="uk_topfinanzas_1"
-              className="p-4 flex items-center justify-center w-full min-w-full"
-            ></div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -61,11 +56,6 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                   General Eligibility to Use Funding Options
                 </h2>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_2"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   While specific lender criteria vary, businesses generally need
@@ -134,11 +124,6 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Information Needed for the Platform:
@@ -300,11 +285,6 @@ export default function FundingOptionsPersonalLoanRequirementsPage() {
                   Types of Finance Available
                 </h2>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Funding Options provides access to a diverse range of funding

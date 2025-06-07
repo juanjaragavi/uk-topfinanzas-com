@@ -27,12 +27,6 @@ export default function CurveCreditCardPage() {
               Curve Credit Card: Your Cards United in One Smart Solution
             </h1>
 
-            {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-            <div
-              id="uk_topfinanzas_1"
-              className="p-4 flex items-center justify-center w-full min-w-full"
-            ></div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 The Curve Card revolutionizes how you use credit and debit cards
@@ -131,12 +125,6 @@ export default function CurveCreditCardPage() {
                   Unifying Your Financial Life
                 </h2>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
-                <div
-                  id="uk_topfinanzas_2"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
-
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   At its core, Curve addresses a common modern financial
                   challenge: managing multiple payment cards across different
@@ -154,12 +142,6 @@ export default function CurveCreditCardPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Time-Travel Banking
                 </h2>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Curve's most distinctive innovation is its "Go Back in Time"
@@ -251,12 +233,6 @@ export default function CurveCreditCardPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">

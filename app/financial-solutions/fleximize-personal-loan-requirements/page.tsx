@@ -29,12 +29,6 @@ export default function FleximizePersonalLoanRequirementsPage() {
               Requirements for Fleximize Business Loans (Flexiloan & Lite)
             </h1>
 
-            {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-            <div
-              id="uk_topfinanzas_1"
-              className="p-4 flex items-center justify-center w-full min-w-full"
-            ></div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 Fleximize offers highly flexible loans for UK SMEs.
@@ -63,11 +57,6 @@ export default function FleximizePersonalLoanRequirementsPage() {
                   Basic Eligibility Criteria for SMEs
                 </h2>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-              <div
-                id="uk_topfinanzas_2"
-                className="p-4 flex items-center justify-center w-full min-w-full"
-              ></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
@@ -130,11 +119,6 @@ export default function FleximizePersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Information & Documentation Needed:
@@ -281,11 +265,6 @@ export default function FleximizePersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Loan Terms and Conditions

@@ -32,17 +32,6 @@ export default function BarclayCardAviosPlusRequirementsPage() {
               Requirements for the Barclaycard Avios Plus Credit Card
             </h1>
 
-            {/* /23062212598/uk.topfinanzas_com_mob_1 */}
-            <div
-              id="div-gpt-ad-1747926742578-0"
-              style={{ minWidth: "250px", minHeight: "250px" }}
-              className="p-4 flex items-center justify-center w-full min-w-full"
-            >
-              <Script id="gpt-display-1747926742578-0" strategy="lazyOnload">
-                {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747926742578-0'); });`}
-              </Script>
-            </div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 The Barclaycard Avios Plus Credit Card is a premium travel
@@ -153,7 +142,6 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                   Understanding the Costs
                 </h2>
 
-                {/* Removed div with id="uk_topfinanzas_4" */}
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   It's essential to understand the costs associated with the

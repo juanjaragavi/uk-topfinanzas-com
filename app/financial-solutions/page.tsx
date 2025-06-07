@@ -390,26 +390,6 @@ export default function FinancialSolutionsPage() {
         choose the best option based on your financial needs.
       </p>
 
-      {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-      <div
-        id="uk_topfinanzas_1"
-        className="p-4 flex items-center justify-center w-full min-w-full"
-      ></div>
-
-      {/* Featured article using our new component */}
-      <div className="mb-10">
-        <FeaturedPostCard
-          title="Barclaycard Avios Plus Credit Card: Premium Travel Rewards"
-          description="Discover why the Barclaycard Avios Plus Credit Card has become one of the most popular options among those looking for a credit card with excellent benefits and favourable conditions."
-          image="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
-          slug="barclaycard-avios-plus"
-          category="Financial Solutions"
-          categorySlug="/financial-solutions"
-          orientation="horizontal"
-          priority={true}
-        />
-      </div>
-
       {/* Main category selector */}
       <div className="flex mb-8 border-b border-gray-200">
         {Object.entries(categories).map(([key, value]) => (
@@ -432,11 +412,6 @@ export default function FinancialSolutionsPage() {
         ))}
       </div>
 
-      {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-      <div
-        id="uk_topfinanzas_2"
-        className="p-4 flex items-center justify-center w-full min-w-full"
-      ></div>
 
       {activeCategory === "creditCards" && (
         <div className="mb-8">
@@ -505,11 +480,6 @@ export default function FinancialSolutionsPage() {
             ))}
           </div>
 
-          {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-          <div
-            id="uk_topfinanzas_3"
-            className="p-4 flex items-center justify-center w-full min-w-full"
-          ></div>
 
           {/* Loans grid with fixed positioning for Image components */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

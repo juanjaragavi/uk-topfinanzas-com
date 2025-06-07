@@ -31,11 +31,6 @@ export default function MonzoCreditCardPage() {
               Monzo Credit Card: Digital-First Banking for Modern Life
             </h1>
 
-            {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-            <div
-              id="uk_topfinanzas_1"
-              className="p-4 flex items-center justify-center w-full min-w-full"
-            ></div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
@@ -141,11 +136,6 @@ export default function MonzoCreditCardPage() {
                   Real-Time Financial Management
                 </h2>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element - MOVED HERE */}
-                <div
-                  id="uk_topfinanzas_2"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   At the core of the Monzo Credit Card experience is real-time
@@ -215,11 +205,6 @@ export default function MonzoCreditCardPage() {
                     Learn More About Credit Cards:
                   </h3>
 
-                  {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                  <div
-                    id="uk_topfinanzas_3"
-                    className="p-4 flex items-center justify-center w-full min-w-full"
-                  ></div>
 
                   <ul className="space-y-2 list-disc list-inside text-blue-700 text-left">
                     <li className="text-left">
@@ -324,11 +309,6 @@ export default function MonzoCreditCardPage() {
                   </div>
                 </div>
 
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Innovative Customer Support

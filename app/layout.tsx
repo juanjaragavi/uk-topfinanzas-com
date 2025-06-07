@@ -5,7 +5,6 @@ import { Suspense } from "react";
 import fs from "fs";
 import path from "path";
 import "./globals.css";
-import Script from "next/script"; // Added if not present, but it is for GTM
 import GoogleTagManager, {
   GoogleTagManagerNoScript,
 } from "@/components/analytics/gtm";
@@ -15,9 +14,6 @@ import ResourceHints from "@/components/resource-hints";
 import NavigationProvider from "@/components/providers/navigation-provider";
 import PreloaderProvider from "@/components/providers/preloader-provider";
 import ClientOnly from "@/components/ClientOnly";
-{
-  /*import AdZepScript from "@/components/ads/AdZepScript"; // Import the new component*/
-}
 
 // Use local font to avoid external requests during build
 // This improves build time and eliminates network dependency
@@ -140,22 +136,6 @@ export default function RootLayout({
           }}
         />
 
-        {/* Removed manual loading for /styles.css; ./globals.css import handles it */}
-
-        {/* Preload critical resources for faster LCP with crossorigin for CORS compliance */}
-        {/* Removed preload for placeholder-image.webp as it competes with LCP banners */}
-        {/*<link
-          rel="preload"
-          href="https://media.topfinanzas.com/images/banner-home-mobile.webp"
-          as="image"
-          media="(max-width: 767px)"
-          fetchPriority="high"
-          crossOrigin="anonymous"
-        />*/}
-        {/* Removed specific preload for desktop banner; browser will fetch based on CSS media query */}
-        {/* Removed redundant manual preload for logo; Next/Image priority=true handles this */}
-
-        {/* Add Cache-Control meta tag for browser caching */}
         <meta
           httpEquiv="Cache-Control"
           content="public, max-age=31536000, immutable"
@@ -221,35 +201,6 @@ export default function RootLayout({
         </ClientOnly>
         <ResourceHints />
 
-        {/* Google Publisher Tag Scripts */}
-        <Script
-          src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
-          strategy="beforeInteractive"
-          async
-          crossOrigin="anonymous"
-          id="gpt-js"
-        />
-        <Script id="gpt-inline-config" strategy="beforeInteractive">
-          {`
-            window.googletag = window.googletag || {cmd: []};
-            googletag.cmd.push(function() {
-              // Define ad slot 1
-              googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_1', [[300, 250], [250, 250], [336, 280]], 'div-gpt-ad-1747926742578-0').addService(googletag.pubads());
-              // Define ad slot 2 (interstitial)
-              googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_interstitial', ['fluid'], 'div-gpt-ad-1747934765427-0').addService(googletag.pubads());
-              // Define ad slot 3 (offerwall)
-              googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_offerwall', ['fluid'], 'div-gpt-ad-1747927172704-0').addService(googletag.pubads());
-              // Define ad slot 4 (interstitial)
-              googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_interstitial', ['fluid'], 'div-gpt-ad-1749163004262-0').addService(googletag.pubads());
-              // Define ad slot 5 (offerwall)
-              googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_offerwall', ['fluid'], 'div-gpt-ad-1749163309789-0').addService(googletag.pubads());
-              // Enable services once after all slots are defined
-              googletag.pubads().enableSingleRequest();
-              googletag.enableServices();
-            });
-          `}
-        </Script>
-
         {/* Explicit favicon and manifest links with proper MIME types */}
         <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -274,35 +225,6 @@ export default function RootLayout({
         />
       </head>
       <body className={`${poppins.variable} font-sans text-left sm:text-left`}>
-        {/* /23062212598/uk.topfinanzas_com_mob_offerwall */}
-        <div id="div-gpt-ad-1747927172704-0">
-          <Script id="gpt-display-1747927172704-0" strategy="lazyOnload">
-            {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747927172704-0'); });`}
-          </Script>
-        </div>
-        {/* /23062212598/uk.topfinanzas_com_mob_interstitial */}
-        <div id="div-gpt-ad-1747934765427-0">
-          <Script id="gpt-display-1747934765427-0" strategy="lazyOnload">
-            {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747934765427-0'); });`}
-          </Script>
-          <div id="div-gpt-ad-1749163004262-0">
-            <Script id="gpt-display-1749163004262-0" strategy="lazyOnload">
-              {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1749163004262-0'); });`}
-            </Script>
-          </div>
-          <div id="div-gpt-ad-1749163309789-0">
-            <Script id="gpt-display-1749163309789-0" strategy="lazyOnload">
-              {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1749163309789-0'); });`}
-            </Script>
-          </div>
-        </div>
-        {/* ADZep AutoZep Paid Advertising tag */}
-        {/* <script
-          data-cfasync="false"
-          src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
-        ></script>
-        ADZep AutoZep Paid Advertising tag - Now using AdZepScript component
-        <AdZepScript /> */}
         <GoogleTagManagerNoScript />
         <PreloaderProvider
           defaultConfig={{
@@ -323,19 +245,6 @@ export default function RootLayout({
             {children}
           </NavigationProvider>
         </PreloaderProvider>
-        {/*<script
-          dangerouslySetInnerHTML={{
-            __html: `
-      window.onload = function() {
-        if (typeof window.AdZepActivateAds === 'function') {
-          window.AdZepActivateAds();
-        } else {
-          console.error('AdZepActivateAds function not found after window load.');
-        }
-      };
-    `,
-          }}
-        />*/}
       </body>
     </html>
   );

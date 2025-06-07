@@ -29,12 +29,6 @@ export default function CapifyPersonalLoanRequirementsPage() {
               Requirements for Capify Business Finance (MCA & Loans)
             </h1>
 
-            {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-            <div
-              id="uk_topfinanzas_1"
-              className="p-4 flex items-center justify-center w-full min-w-full"
-            ></div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
                 Capify offers fast Merchant Cash Advances and Business Loans for
@@ -98,12 +92,6 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     </div>
                   </div>
 
-                  {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                  <div
-                    id="uk_topfinanzas_2"
-                    className="p-4 flex items-center justify-center w-full min-w-full"
-                  ></div>
-
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
@@ -126,12 +114,6 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_3"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Information & Documentation Needed:
@@ -251,13 +233,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
-                {/* AdZep AutoZep Paid Advertisement `<div>` element */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="p-4 flex items-center justify-center w-full min-w-full"
-                ></div>
-
+                
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Finance Terms and Conditions
                 </h2>
