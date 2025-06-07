@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 interface PreloaderProps {
   duration?: number; // Duration in milliseconds
@@ -24,9 +25,15 @@ const Preloader: React.FC<PreloaderProps> = ({
   secondaryColor = "#3b82f6",
 }) => {
   const [progress, setProgress] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const pathname = usePathname();
+  const isQuizPage = pathname === "/quiz";
+  const [isVisible, setIsVisible] = useState(!isQuizPage);
 
   useEffect(() => {
+    if (isQuizPage) {
+      return; // Do not run preloader logic on quiz page
+    }
+
     const startTime = Date.now();
     const interval = setInterval(() => {
       const elapsedTime = Date.now() - startTime;
@@ -43,11 +50,11 @@ const Preloader: React.FC<PreloaderProps> = ({
     }, 16); // 60fps
 
     return () => clearInterval(interval);
-  }, [duration, onComplete]);
+  }, [duration, onComplete, isQuizPage]);
 
   return (
     <AnimatePresence>
-      {isVisible && (
+      {isVisible && !isQuizPage && (
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
