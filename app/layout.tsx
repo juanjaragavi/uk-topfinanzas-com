@@ -12,7 +12,9 @@ import UtmPersister from "@/components/analytics/utm-persister";
 import UtmMonitor from "@/components/analytics/utm-monitor";
 import ResourceHints from "@/components/resource-hints";
 import NavigationProvider from "@/components/providers/navigation-provider";
-{/*import PreloaderProvider from "@/components/providers/preloader-provider";*/}
+{
+  /*import PreloaderProvider from "@/components/providers/preloader-provider";*/
+}
 import ClientOnly from "@/components/ClientOnly";
 
 // Use local font to avoid external requests during build
@@ -237,13 +239,13 @@ export default function RootLayout({
           }}
           showOnNavigation={true}
         >*/}
-          <NavigationProvider>
-            <Suspense fallback={null}>
-              <UtmPersister />
-              {process.env.NODE_ENV === "development" && <UtmMonitor />}
-            </Suspense>
-            {children}
-          </NavigationProvider>
+        <NavigationProvider>
+          <Suspense fallback={null}>
+            <UtmPersister />
+            {process.env.NODE_ENV === "development" && <UtmMonitor />}
+          </Suspense>
+          {children}
+        </NavigationProvider>
         {/*</PreloaderProvider>*/}
       </body>
     </html>
