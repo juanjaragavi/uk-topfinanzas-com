@@ -12,7 +12,7 @@ import UtmPersister from "@/components/analytics/utm-persister";
 import UtmMonitor from "@/components/analytics/utm-monitor";
 import ResourceHints from "@/components/resource-hints";
 import NavigationProvider from "@/components/providers/navigation-provider";
-import PreloaderProvider from "@/components/providers/preloader-provider";
+{/*import PreloaderProvider from "@/components/providers/preloader-provider";*/}
 import ClientOnly from "@/components/ClientOnly";
 
 // Use local font to avoid external requests during build
@@ -226,7 +226,7 @@ export default function RootLayout({
       </head>
       <body className={`${poppins.variable} font-sans text-left sm:text-left`}>
         <GoogleTagManagerNoScript />
-        <PreloaderProvider
+        {/*<PreloaderProvider
           defaultConfig={{
             duration: 4000,
             primaryColor: "#1e40af",
@@ -236,7 +236,7 @@ export default function RootLayout({
             showProgress: true,
           }}
           showOnNavigation={true}
-        >
+        >*/}
           <NavigationProvider>
             <Suspense fallback={null}>
               <UtmPersister />
@@ -244,7 +244,7 @@ export default function RootLayout({
             </Suspense>
             {children}
           </NavigationProvider>
-        </PreloaderProvider>
+        {/*</PreloaderProvider>*/}
       </body>
     </html>
   );
