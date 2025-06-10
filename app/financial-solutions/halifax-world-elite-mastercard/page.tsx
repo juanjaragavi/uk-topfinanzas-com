@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import MobileBannerAd from "@/components/ads/mobile-banner-ad";
 
 export function generateMetadata() {
   return {
@@ -31,6 +32,8 @@ export default function HalifaxWorldEliteMastercardPage() {
               Halifax World Elite Mastercard: Exceptional Premium Banking
               Benefits
             </h1>
+
+            <MobileBannerAd />
 
 
             <div className="my-8 text-left sm:text-left">

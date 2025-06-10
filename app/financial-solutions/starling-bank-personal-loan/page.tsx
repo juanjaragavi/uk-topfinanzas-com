@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import MobileBannerAd from "@/components/ads/mobile-banner-ad";
 
 export function generateMetadata() {
   return {
@@ -28,7 +29,8 @@ export default function StarlingBankPersonalLoanPage() {
               Starling Bank Personal Loan: Ethical Financing, Digitally
               Delivered
             </h1>
-            
+
+            <MobileBannerAd />
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
