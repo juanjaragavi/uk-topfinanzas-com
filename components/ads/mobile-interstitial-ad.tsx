@@ -13,7 +13,7 @@ export default function MobileInterstitialAd() {
     // Ensure googletag is available before displaying the ad
     if (typeof window !== "undefined" && window.googletag) {
       window.googletag.cmd.push(function () {
-        window.googletag.display("div-gpt-ad-1749569273899-0");
+        window.googletag.display("div-gpt-ad-1749571694903-0");
       });
     }
   }, []);
@@ -21,7 +21,7 @@ export default function MobileInterstitialAd() {
   return (
     <div className="my-8 flex justify-center">
       <div
-        id="div-gpt-ad-1749569273899-0"
+        id="div-gpt-ad-1749571694903-0"
         className="w-full max-w-full"
         style={{
           minHeight: "50px", // Minimum height for interstitial
