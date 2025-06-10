@@ -217,7 +217,7 @@ export default function RootLayout({
                 googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_1', [[250, 250], [336, 280], [300, 250]], 'div-gpt-ad-1749568543258-0').addService(googletag.pubads());
                 
                 // Define ad slot for mobile interstitial
-                googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_interstitial', [], 'div-gpt-ad-1749569273899-0').addService(googletag.pubads());
+                googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_interstitial', ['fluid'], 'div-gpt-ad-1749569273899-0').addService(googletag.pubads());
                 
                 googletag.pubads().enableSingleRequest();
                 googletag.enableServices();
