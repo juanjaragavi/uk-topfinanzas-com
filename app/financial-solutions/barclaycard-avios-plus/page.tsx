@@ -219,8 +219,6 @@ export default function BarclayCardAviosPlusPage() {
                   Additional Features:
                 </h2>
 
-                {/* Removed div with id="uk_topfinanzas_4" */}
-
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00395D] flex items-center justify-center mr-3 mt-0.5">

@@ -53,17 +53,6 @@ export default function CreditCardRecommenderPage() {
               Why Choose Our Credit Card Recommender?
             </h2>
 
-            {/* /23062212598/uk.topfinanzas_com_mob_1 */}
-            <div
-              id="div-gpt-ad-1747926742578-0"
-              style={{ minWidth: "250px", minHeight: "250px" }}
-              className="p-4 flex items-center justify-center w-full min-w-full"
-            >
-              <Script id="gpt-display-1747926742578-0" strategy="lazyOnload">
-                {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1747926742578-0'); });`}
-              </Script>
-            </div>
-
             <div className="space-y-1 mb-6">
               <div className="flex items-start">
                 <div className="flex-shrink-0 rounded-full bg-[#80E67D] px-1 flex items-center justify-center mr-2">
