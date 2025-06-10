@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import MobileBannerAd from "@/components/ads/mobile-banner-ad";
+import MobileInterstitialAd from "@/components/ads/mobile-interstitial-ad";
 
 export function generateMetadata() {
   return {
@@ -31,6 +33,8 @@ export default function BarclayCardAviosPlusPage() {
             <h1 className="text-3xl text-left sm:text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8">
               Barclaycard Avios Plus Credit Card: Premium Travel Rewards
             </h1>
+
+            <MobileBannerAd />
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
@@ -96,6 +100,9 @@ export default function BarclayCardAviosPlusPage() {
                   </Button>
                 </Link>
               </div>
+
+              {/* Mobile Banner Ad */}
+              <MobileBannerAd />
 
               <div className="my-8 text-left sm:text-left">
                 <ResponsiveImage
@@ -165,6 +172,9 @@ export default function BarclayCardAviosPlusPage() {
                   confidence, knowing that you're covered against unexpected
                   situations.
                 </p>
+
+                {/* Mobile Interstitial Ad */}
+                <MobileInterstitialAd />
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">

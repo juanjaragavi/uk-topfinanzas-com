@@ -1,6 +1,7 @@
 import type React from "react";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import { Suspense } from "react";
 import fs from "fs";
 import path from "path";
@@ -12,6 +13,7 @@ import UtmPersister from "@/components/analytics/utm-persister";
 import UtmMonitor from "@/components/analytics/utm-monitor";
 import ResourceHints from "@/components/resource-hints";
 import NavigationProvider from "@/components/providers/navigation-provider";
+import MobileInterstitialAd from "@/components/ads/mobile-interstitial-ad";
 {
   /*import PreloaderProvider from "@/components/providers/preloader-provider";*/
 }
@@ -198,6 +200,32 @@ export default function RootLayout({
           }}
         />
 
+        {/* Google Ad Manager (GPT) Scripts */}
+        <Script
+          src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+        />
+        <Script
+          id="gpt-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.googletag = window.googletag || {cmd: []};
+              googletag.cmd.push(function() {
+                // Define ad slot for mobile banner
+                googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_1', [[250, 250], [336, 280], [300, 250]], 'div-gpt-ad-1749568543258-0').addService(googletag.pubads());
+                
+                // Define ad slot for mobile interstitial
+                googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_interstitial', [], 'div-gpt-ad-1749569273899-0').addService(googletag.pubads());
+                
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+              });
+            `,
+          }}
+        />
+
         <ClientOnly>
           <GoogleTagManager />
         </ClientOnly>
@@ -227,6 +255,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${poppins.variable} font-sans text-left sm:text-left`}>
+        <MobileInterstitialAd />
         <GoogleTagManagerNoScript />
         {/*<PreloaderProvider
           defaultConfig={{

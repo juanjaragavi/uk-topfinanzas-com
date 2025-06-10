@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import MobileBannerAd from "@/components/ads/mobile-banner-ad";
 
 export function generateMetadata() {
   return {
@@ -31,6 +32,8 @@ export default function BarclayCardAviosPlusRequirementsPage() {
             <h1 className="text-3xl text-left sm:text-left md:text-3xl font-bold text-gray-800 mb-4 leading-8">
               Requirements for the Barclaycard Avios Plus Credit Card
             </h1>
+
+            <MobileBannerAd />
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
