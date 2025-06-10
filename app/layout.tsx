@@ -255,7 +255,6 @@ export default function RootLayout({
         />
       </head>
       <body className={`${poppins.variable} font-sans text-left sm:text-left`}>
-        <MobileInterstitialAd />
         <GoogleTagManagerNoScript />
         {/*<PreloaderProvider
           defaultConfig={{
@@ -270,6 +269,7 @@ export default function RootLayout({
         >*/}
         <NavigationProvider>
           <Suspense fallback={null}>
+            <MobileInterstitialAd />
             <UtmPersister />
             {process.env.NODE_ENV === "development" && <UtmMonitor />}
           </Suspense>
