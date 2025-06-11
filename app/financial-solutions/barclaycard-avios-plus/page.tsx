@@ -101,9 +101,6 @@ export default function BarclayCardAviosPlusPage() {
                 </Link>
               </div>
 
-              {/* Mobile Banner Ad */}
-              <MobileBannerAd />
-
               <div className="my-8 text-left sm:text-left">
                 <ResponsiveImage
                   src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"

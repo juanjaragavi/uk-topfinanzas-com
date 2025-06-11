@@ -4,7 +4,6 @@ import { BlogLayout } from "@/components/mdx/blog-layout";
 import Link from "next/link";
 import { FeaturedPostCard } from "@/components/ui/featured-post-card";
 import { useState, useEffect, useCallback } from "react";
-import MobileBannerAd from "@/components/ads/mobile-banner-ad";
 
 export default function FinancialSolutionsPage() {
   // Category definitions
@@ -384,7 +383,6 @@ export default function FinancialSolutionsPage() {
       <h1 className="text-4xl font-bold mb-6 text-left sm:text-left">
         Financial Solutions
       </h1>
-      <MobileBannerAd />
 
       <p className="text-lg text-gray-700 mb-8 leading-tight text-left sm:text-left">
         Find detailed information about the best credit cards available in the
