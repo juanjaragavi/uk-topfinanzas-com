@@ -13,7 +13,6 @@ import UtmPersister from "@/components/analytics/utm-persister";
 import UtmMonitor from "@/components/analytics/utm-monitor";
 import ResourceHints from "@/components/resource-hints";
 import NavigationProvider from "@/components/providers/navigation-provider";
-import MobileInterstitialAd from "@/components/ads/mobile-interstitial-ad";
 {
   /*import PreloaderProvider from "@/components/providers/preloader-provider";*/
 }
@@ -218,9 +217,6 @@ export default function RootLayout({
                 // Define ad slot for mobile banner
                 googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_1', [[250, 250], [336, 280], [300, 250]], 'div-gpt-ad-1749568543258-0').addService(googletag.pubads());
                 
-                // Define ad slot for mobile interstitial
-                googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_interstitial', ['fluid'], 'div-gpt-ad-1749571694903-0').addService(googletag.pubads());
-                
                 googletag.pubads().enableSingleRequest();
                 googletag.enableServices();
               });
@@ -271,7 +267,6 @@ export default function RootLayout({
         >*/}
         <NavigationProvider>
           <Suspense fallback={null}>
-            <MobileInterstitialAd />
             <UtmPersister />
             {process.env.NODE_ENV === "development" && <UtmMonitor />}
           </Suspense>
