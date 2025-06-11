@@ -27,12 +27,12 @@ export default function MobileInterstitialAd() {
   }, []);
 
   return (
-    <div className="my-8 flex justify-center">
+    <div className="w-auto h-auto">
       <div
         id="div-gpt-ad-1749571694903-0"
         className="w-full max-w-full"
         style={{
-          minHeight: "50px", // Minimum height for interstitial
+          minHeight: "auto", // Minimum height for interstitial
         }}
       >
         {/* Interstitial ad will be rendered here by Google Ad Manager */}

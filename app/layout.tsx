@@ -145,6 +145,8 @@ export default function RootLayout({
           content="public, max-age=31536000, immutable"
         />
 
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         {/* Preconnect to media domain to establish early connection */}
         <link
           rel="preconnect"
