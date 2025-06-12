@@ -17,6 +17,8 @@ import NavigationProvider from "@/components/providers/navigation-provider";
   /*import PreloaderProvider from "@/components/providers/preloader-provider";*/
 }
 import ClientOnly from "@/components/ClientOnly";
+import GPTScriptManager from "@/components/ads/gpt-script-manager";
+import AdDebugger from "@/components/ads/ad-debugger";
 
 // Use local font to avoid external requests during build
 // This improves build time and eliminates network dependency
@@ -201,31 +203,16 @@ export default function RootLayout({
           }}
         />
 
-        {/* Google Ad Manager (GPT) Scripts */}
-        <Script
-          src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
-          strategy="afterInteractive"
-          crossOrigin="anonymous"
-        />
-        <Script
-          id="gpt-init"
-          strategy="afterInteractive"
+        {/* Initialize googletag command queue immediately */}
+        <script
           dangerouslySetInnerHTML={{
-            __html: `
-              window.googletag = window.googletag || {cmd: []};
-              googletag.cmd.push(function() {
-                // Define ad slot for mobile banner
-                googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_1', [[250, 250], [336, 280], [300, 250]], 'div-gpt-ad-1749568543258-0').addService(googletag.pubads());
-                
-                googletag.pubads().enableSingleRequest();
-                googletag.enableServices();
-              });
-            `,
+            __html: `window.googletag = window.googletag || {cmd: []};`,
           }}
         />
 
         <ClientOnly>
           <GoogleTagManager />
+          <GPTScriptManager />
         </ClientOnly>
         <ResourceHints />
 
@@ -271,6 +258,7 @@ export default function RootLayout({
             {process.env.NODE_ENV === "development" && <UtmMonitor />}
           </Suspense>
           {children}
+          <AdDebugger />
         </NavigationProvider>
         {/*</PreloaderProvider>*/}
       </body>

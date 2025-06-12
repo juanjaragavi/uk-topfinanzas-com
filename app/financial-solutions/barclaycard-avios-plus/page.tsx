@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import MobileBannerAd from "@/components/ads/mobile-banner-ad";
+import EnhancedMobileBannerAd from "@/components/ads/enhanced-mobile-banner-ad";
 
 export function generateMetadata() {
   return {
@@ -33,7 +33,7 @@ export default function BarclayCardAviosPlusPage() {
               Barclaycard Avios Plus Credit Card: Premium Travel Rewards
             </h1>
 
-            <MobileBannerAd />
+            <EnhancedMobileBannerAd />
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">

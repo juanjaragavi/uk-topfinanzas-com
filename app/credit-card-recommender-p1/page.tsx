@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import MobileBannerAd from "@/components/ads/mobile-banner-ad";
+import EnhancedMobileBannerAd from "@/components/ads/enhanced-mobile-banner-ad";
 
 export default function CreditCardRecommenderPage() {
   const [openFaq, setOpenFaq] = useState<string | null>("benefits");
@@ -30,7 +30,7 @@ export default function CreditCardRecommenderPage() {
               Discover Your Ideal Credit Card
             </h1>
 
-            <MobileBannerAd />
+            <EnhancedMobileBannerAd />
 
             <p className="text-xs leading-4 text-gray-800 mb-5">
               Finding the right card is simple. Maximise rewards, organise your

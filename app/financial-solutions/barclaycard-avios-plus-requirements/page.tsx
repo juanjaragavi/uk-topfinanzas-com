@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import MobileBannerAd from "@/components/ads/mobile-banner-ad";
+import EnhancedMobileBannerAd from "@/components/ads/enhanced-mobile-banner-ad";
 
 export function generateMetadata() {
   return {
@@ -33,7 +33,7 @@ export default function BarclayCardAviosPlusRequirementsPage() {
               Requirements for the Barclaycard Avios Plus Credit Card
             </h1>
 
-            <MobileBannerAd />
+            <EnhancedMobileBannerAd />
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -144,7 +144,6 @@ export default function BarclayCardAviosPlusRequirementsPage() {
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Understanding the Costs
                 </h2>
-
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   It's essential to understand the costs associated with the
