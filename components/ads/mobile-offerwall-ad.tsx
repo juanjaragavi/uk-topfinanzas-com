@@ -243,6 +243,9 @@ export default function MobileOfferwallAd({
     onClose?.();
   };
 
+  // Don't show offerwall on quiz page
+  if (pathname === "/quiz") return null;
+
   if (!isVisible) return null;
 
   // Position styles based on prop
