@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import MobileBannerAd from "@/components/ads/mobile-banner-ad";
 import EnhancedMobileBannerAd from "@/components/ads/enhanced-mobile-banner-ad";
 import MobileInterstitialAd from "@/components/ads/mobile-interstitial-ad";
 import MobileOfferwallAd from "@/components/ads/mobile-offerwall-ad";
@@ -52,38 +51,7 @@ export default function AdDemoPage() {
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="text-3xl font-bold text-gray-900 mb-8">
           Google Ad Manager Demo
-        </h1>
-
-        {/* Banner Ads Section */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-            Banner Ads
-          </h2>
-
-          <div className="space-y-8">
-            {/* Basic Banner Ad */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-lg font-medium text-gray-700 mb-2">
-                Basic Mobile Banner Ad
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Simple implementation with minimal configuration
-              </p>
-              <MobileBannerAd />
-            </div>
-
-            {/* Enhanced Banner Ad */}
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-lg font-medium text-gray-700 mb-2">
-                Enhanced Mobile Banner Ad
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Advanced implementation with error handling and debugging
-              </p>
-              <EnhancedMobileBannerAd />
-            </div>
-          </div>
-        </section>
+        </h1>     
 
         {/* Interstitial Ads Section */}
         <section className="mb-12">
