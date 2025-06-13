@@ -68,7 +68,7 @@ export default function MobileOfferwallAd({
 
   // Handle display triggers
   useEffect(() => {
-    if (hasDisplayed.current || !isAdLoaded) return;
+    if (hasDisplayed.current) return;
 
     let timeoutId: NodeJS.Timeout;
     let scrollHandler: () => void;
@@ -112,10 +112,12 @@ export default function MobileOfferwallAd({
       if (timeoutId) clearTimeout(timeoutId);
       if (scrollHandler) window.removeEventListener("scroll", scrollHandler);
     };
-  }, [isAdLoaded, displayTrigger, delaySeconds, scrollPercentage]);
+  }, [displayTrigger, delaySeconds, scrollPercentage]);
 
   // Initialize ad
   useEffect(() => {
+    if (!isVisible) return; // Don't initialize until visible
+
     let isMounted = true;
     let retryCount = 0;
     const maxRetries = 5;
@@ -205,7 +207,10 @@ export default function MobileOfferwallAd({
           // Display the ad
           window.googletag.display(slotId);
 
-          console.log(`Offerwall ad slot ${slotId} initialized`);
+          // Refresh the specific slot to force ad request
+          window.googletag.pubads().refresh([slotRef.current]);
+
+          console.log(`Offerwall ad slot ${slotId} initialized and displayed`);
         } catch (error) {
           console.error("Error initializing offerwall ad:", error);
           setError("Failed to initialize ad");
@@ -231,14 +236,14 @@ export default function MobileOfferwallAd({
         });
       }
     };
-  }, [pathname, slotId, slotPath, onAdLoaded, onAdError]);
+  }, [isVisible, pathname, slotId, slotPath, onAdLoaded, onAdError]);
 
   const handleClose = () => {
     setIsVisible(false);
     onClose?.();
   };
 
-  if (!isVisible || error) return null;
+  if (!isVisible) return null;
 
   // Position styles based on prop
   const getPositionStyles = () => {
@@ -316,10 +321,22 @@ export default function MobileOfferwallAd({
                 width: "100%",
               }}
             >
-              {!isAdLoaded && (
+              {!isAdLoaded && !error && (
                 <div className="text-center">
                   <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mb-2"></div>
                   <p className="text-gray-500">Loading offers...</p>
+                </div>
+              )}
+              {error && (
+                <div className="text-center">
+                  <div className="text-red-600 font-medium mb-2">Error</div>
+                  <p className="text-sm text-red-500">{error}</p>
+                </div>
+              )}
+              {process.env.NODE_ENV === "development" && (
+                <div className="absolute bottom-2 left-2 text-xs text-gray-400">
+                  Ad Status: {isAdLoaded ? "Loaded" : "Loading"} | Slot:{" "}
+                  {slotId}
                 </div>
               )}
             </div>
