@@ -11,6 +11,7 @@ This directory contains React components for integrating Google Ad Manager (GAM)
 Basic banner ad implementation with minimal configuration.
 
 **Usage:**
+
 ```tsx
 import MobileBannerAd from '@/components/ads/mobile-banner-ad';
 
@@ -23,6 +24,7 @@ import MobileBannerAd from '@/components/ads/mobile-banner-ad';
 Advanced banner ad with error handling, retry logic, and debugging features.
 
 **Usage:**
+
 ```tsx
 import EnhancedMobileBannerAd from '@/components/ads/enhanced-mobile-banner-ad';
 
@@ -38,6 +40,7 @@ import EnhancedMobileBannerAd from '@/components/ads/enhanced-mobile-banner-ad';
 ```
 
 **Features:**
+
 - Automatic retry on GPT loading failure
 - Visual loading states
 - Error handling and display
@@ -49,7 +52,12 @@ import EnhancedMobileBannerAd from '@/components/ads/enhanced-mobile-banner-ad';
 
 Full-screen interstitial ad with multiple display triggers.
 
+### 4. MobileOfferwallAd (`mobile-offerwall-ad.tsx`)
+
+Offerwall ad component with flexible positioning and display triggers.
+
 **Usage:**
+
 ```tsx
 import MobileInterstitialAd from '@/components/ads/mobile-interstitial-ad';
 
@@ -78,6 +86,7 @@ const [showAd, setShowAd] = useState(false);
 ```
 
 **Props:**
+
 - `slotId`: Unique identifier for the ad slot
 - `slotPath`: GAM ad unit path
 - `sizes`: Ad dimensions (default: [[1, 1]] for interstitials)
@@ -90,6 +99,7 @@ const [showAd, setShowAd] = useState(false);
 - `onAdError`: Callback when ad fails to load
 
 **Features:**
+
 - Modal overlay with backdrop
 - Close button
 - Multiple display triggers
@@ -127,6 +137,7 @@ googletag.defineSlot(slotPath, sizes, slotId)
 ## Debugging
 
 In development mode, the enhanced components display:
+
 - Loading states
 - Error messages
 - Slot information
@@ -138,19 +149,23 @@ In development mode, the enhanced components display:
 |-----------|--------------|---------|---------------|
 | Mobile Banner | /23062212598/uk.topfinanzas_com_mob_1 | div-gpt-ad-1749568543258-0 | [[250, 250], [336, 280], [300, 250]] |
 | Mobile Interstitial | /23062212598/uk.topfinanzas_com_mob_interstitial | div-gpt-ad-1749831510729-0 | [[1, 1]] |
+| Mobile Offerwall | /23062212598/uk.topfinanzas_com_mob_offerwall | div-gpt-ad-1749832817468-0 | [[1, 1]] |
 
 ## Troubleshooting
 
 ### Ad Not Displaying
+
 1. Check browser console for errors
 2. Verify ad blocker is disabled
 3. Ensure GPT script is loaded
 4. Check network tab for ad requests
 
 ### Memory Leaks
+
 - Components automatically clean up on unmount
 - Use React DevTools to verify proper cleanup
 
 ### Multiple Ad Requests
+
 - Enable single request mode is handled automatically
 - Avoid creating duplicate slots

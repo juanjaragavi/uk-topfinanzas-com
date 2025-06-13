@@ -9,7 +9,7 @@ declare global {
   }
 }
 
-interface MobileInterstitialAdProps {
+interface MobileOfferwallAdProps {
   slotId?: string;
   slotPath?: string;
   sizes?: Array<[number, number]>;
@@ -17,23 +17,25 @@ interface MobileInterstitialAdProps {
   displayTrigger?: "immediate" | "delay" | "scroll" | "manual";
   delaySeconds?: number;
   scrollPercentage?: number;
+  position?: "full" | "bottom" | "center";
   onClose?: () => void;
   onAdLoaded?: () => void;
   onAdError?: (error: string) => void;
 }
 
-export default function MobileInterstitialAd({
-  slotId = "div-gpt-ad-1749831510729-0",
-  slotPath = "/23062212598/uk.topfinanzas_com_mob_interstitial",
-  sizes = [[1, 1]], // Standard interstitial size
+export default function MobileOfferwallAd({
+  slotId = "div-gpt-ad-1749832817468-0",
+  slotPath = "/23062212598/uk.topfinanzas_com_mob_offerwall",
+  sizes = [[1, 1]], // Standard offerwall size
   zIndex = 9999,
   displayTrigger = "immediate",
-  delaySeconds = 3,
-  scrollPercentage = 50,
+  delaySeconds = 5,
+  scrollPercentage = 75,
+  position = "bottom",
   onClose,
   onAdLoaded,
   onAdError,
-}: MobileInterstitialAdProps) {
+}: MobileOfferwallAdProps) {
   const adContainerRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   const [isAdLoaded, setIsAdLoaded] = useState(false);
@@ -123,7 +125,7 @@ export default function MobileInterstitialAd({
       if (!isMounted) return;
 
       if (!adContainerRef.current) {
-        console.error("Interstitial ad container not found");
+        console.error("Offerwall ad container not found");
         setError("Ad container not found");
         onAdError?.("Ad container not found");
         return;
@@ -133,12 +135,12 @@ export default function MobileInterstitialAd({
         if (retryCount < maxRetries) {
           retryCount++;
           console.log(
-            `GPT not loaded for interstitial, retrying... (${retryCount}/${maxRetries})`
+            `GPT not loaded for offerwall, retrying... (${retryCount}/${maxRetries})`
           );
           setTimeout(initializeAd, retryDelay);
         } else {
           console.error(
-            "GPT failed to load for interstitial after maximum retries"
+            "GPT failed to load for offerwall after maximum retries"
           );
           setError("GPT failed to load");
           onAdError?.("GPT failed to load");
@@ -155,11 +157,11 @@ export default function MobileInterstitialAd({
           );
 
           if (existingSlot) {
-            console.log("Interstitial slot already exists, destroying...");
+            console.log("Offerwall slot already exists, destroying...");
             window.googletag.destroySlots([existingSlot]);
           }
 
-          // Define interstitial slot
+          // Define offerwall slot
           slotRef.current = window.googletag
             .defineSlot(slotPath, sizes, slotId)
             .addService(window.googletag.pubads());
@@ -175,7 +177,7 @@ export default function MobileInterstitialAd({
             .pubads()
             .addEventListener("slotRenderEnded", function (event: any) {
               if (event.slot === slotRef.current) {
-                console.log("Interstitial ad render ended:", {
+                console.log("Offerwall ad render ended:", {
                   isEmpty: event.isEmpty,
                   size: event.size,
                   slotId: event.slot.getSlotElementId(),
@@ -186,8 +188,8 @@ export default function MobileInterstitialAd({
                   setError(null);
                   onAdLoaded?.();
                 } else {
-                  setError("No ad available");
-                  onAdError?.("No ad available");
+                  setError("No offerwall available");
+                  onAdError?.("No offerwall available");
                 }
               }
             });
@@ -196,16 +198,16 @@ export default function MobileInterstitialAd({
             .pubads()
             .addEventListener("slotOnload", function (event: any) {
               if (event.slot === slotRef.current) {
-                console.log("Interstitial ad loaded successfully");
+                console.log("Offerwall ad loaded successfully");
               }
             });
 
           // Display the ad
           window.googletag.display(slotId);
 
-          console.log(`Interstitial ad slot ${slotId} initialized`);
+          console.log(`Offerwall ad slot ${slotId} initialized`);
         } catch (error) {
-          console.error("Error initializing interstitial ad:", error);
+          console.error("Error initializing offerwall ad:", error);
           setError("Failed to initialize ad");
           onAdError?.("Failed to initialize ad");
         }
@@ -225,7 +227,7 @@ export default function MobileInterstitialAd({
       ) {
         window.googletag.cmd.push(function () {
           window.googletag.destroySlots([slotRef.current]);
-          console.log(`Interstitial ad slot ${slotId} destroyed`);
+          console.log(`Offerwall ad slot ${slotId} destroyed`);
         });
       }
     };
@@ -238,29 +240,52 @@ export default function MobileInterstitialAd({
 
   if (!isVisible || error) return null;
 
+  // Position styles based on prop
+  const getPositionStyles = () => {
+    switch (position) {
+      case "full":
+        return "fixed inset-0";
+      case "center":
+        return "fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-2xl w-full mx-4";
+      case "bottom":
+      default:
+        return "fixed bottom-0 left-0 right-0";
+    }
+  };
+
   return (
     <>
-      {/* Backdrop */}
-      <div
-        className="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300"
-        style={{ zIndex }}
-        onClick={handleClose}
-      />
+      {/* Backdrop (only for full and center positions) */}
+      {(position === "full" || position === "center") && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300"
+          style={{ zIndex }}
+          onClick={handleClose}
+        />
+      )}
 
-      {/* Interstitial Container */}
+      {/* Offerwall Container */}
       <div
-        className="fixed inset-0 flex items-center justify-center p-4"
-        style={{ zIndex: zIndex + 1 }}
+        className={`${getPositionStyles()} bg-white shadow-2xl transition-all duration-300`}
+        style={{ zIndex: position === "bottom" ? zIndex : zIndex + 1 }}
       >
-        <div className="relative bg-white rounded-lg shadow-xl max-w-lg w-full">
-          {/* Close Button */}
+        {/* Header */}
+        <div className="flex items-center justify-between p-4 border-b border-gray-200">
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900">
+              Special Offers
+            </h3>
+            <p className="text-sm text-gray-500">
+              Check out these exclusive deals
+            </p>
+          </div>
           <button
             onClick={handleClose}
-            className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
-            aria-label="Close interstitial"
+            className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+            aria-label="Close offerwall"
           >
             <svg
-              className="w-8 h-8"
+              className="w-6 h-6 text-gray-600"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -273,29 +298,42 @@ export default function MobileInterstitialAd({
               />
             </svg>
           </button>
+        </div>
 
-          {/* Ad Container */}
+        {/* Ad Container */}
+        <div
+          className={`${
+            position === "bottom" ? "max-h-96" : "max-h-[70vh]"
+          } overflow-y-auto`}
+        >
           <div className="p-4">
             <div
               ref={adContainerRef}
               id={slotId}
               className="flex items-center justify-center"
               style={{
-                minHeight: "250px",
+                minHeight: position === "bottom" ? "200px" : "400px",
                 width: "100%",
               }}
             >
               {!isAdLoaded && (
-                <div className="text-gray-500">Loading advertisement...</div>
+                <div className="text-center">
+                  <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mb-2"></div>
+                  <p className="text-gray-500">Loading offers...</p>
+                </div>
               )}
             </div>
           </div>
-
-          {/* Optional Footer */}
-          <div className="border-t border-gray-200 px-4 py-2">
-            <p className="text-xs text-gray-500 text-center">Advertisement</p>
-          </div>
         </div>
+
+        {/* Footer (optional) */}
+        {position === "bottom" && (
+          <div className="border-t border-gray-200 px-4 py-2 bg-gray-50">
+            <p className="text-xs text-gray-500 text-center">
+              Advertisement • Swipe up for more
+            </p>
+          </div>
+        )}
       </div>
     </>
   );
