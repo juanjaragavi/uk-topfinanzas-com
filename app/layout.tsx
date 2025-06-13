@@ -19,6 +19,7 @@ import NavigationProvider from "@/components/providers/navigation-provider";
 import ClientOnly from "@/components/ClientOnly";
 import GPTScriptManager from "@/components/ads/gpt-script-manager";
 import AdDebugger from "@/components/ads/ad-debugger";
+import MobileInterstitialAd from "@/components/ads/mobile-interstitial-ad";
 
 // Use local font to avoid external requests during build
 // This improves build time and eliminates network dependency
@@ -254,6 +255,7 @@ export default function RootLayout({
         >*/}
         <NavigationProvider>
           <Suspense fallback={null}>
+            <MobileInterstitialAd />
             <UtmPersister />
             {process.env.NODE_ENV === "development" && <UtmMonitor />}
           </Suspense>
