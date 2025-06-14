@@ -1,0 +1,6 @@
+feat: Fix production image serving and add commit message file
+
+- Chore: Remove lib/documents from .gitignore to allow commit message file to be tracked.
+- Feat: Add commit message file to lib/documents.
+- Fix: Update Apache configuration to correctly serve images from the public directory.
+- Fix: Remove corrupted and empty image files.
