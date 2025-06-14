@@ -162,6 +162,42 @@ const nextConfig = {
         ],
       },
       {
+        // ads.txt file
+        source: "/ads.txt",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "text/plain; charset=UTF-8",
+          },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=86400", // Cache for 24 hours
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+        ],
+      },
+      {
+        // robots.txt file
+        source: "/robots.txt",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "text/plain; charset=UTF-8",
+          },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=86400", // Cache for 24 hours
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+        ],
+      },
+      {
         // For all HTML pages
         source: "/:path*",
         headers: [
