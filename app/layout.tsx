@@ -214,6 +214,18 @@ export default function RootLayout({
           <GoogleTagManager />
         </ClientOnly>
         <GPTScriptManager />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.googletag = window.googletag || {cmd: []};
+              googletag.cmd.push(function() {
+                googletag.defineOutOfPageSlot('/23062212598/uk.topfinanzas_com_mob_interstitial', 'div-gpt-ad-1749571694903-0').addService(googletag.pubads());
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+              });
+            `,
+          }}
+        />
         <ResourceHints />
 
         {/* Explicit favicon and manifest links with proper MIME types */}
@@ -261,7 +273,17 @@ export default function RootLayout({
           <AdDebugger />
         </NavigationProvider>
         {/*</PreloaderProvider>*/}
-        <div id="interstitial-ad-container" />
+        <div id="div-gpt-ad-1749571694903-0">
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                googletag.cmd.push(function() {
+                  googletag.display('div-gpt-ad-1749571694903-0');
+                });
+              `,
+            }}
+          />
+        </div>
       </body>
     </html>
   );

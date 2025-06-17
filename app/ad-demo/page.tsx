@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import EnhancedMobileBannerAd from "@/components/ads/enhanced-mobile-banner-ad";
-import MobileInterstitialAd from "@/components/ads/mobile-interstitial-ad";
 
 export default function AdDemoPage() {
   const [showManualInterstitial, setShowManualInterstitial] = useState(false);
@@ -47,7 +46,11 @@ export default function AdDemoPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <button
-                onClick={() => setInterstitialType("immediate")}
+                onClick={() => {
+                  if (window.triggerInterstitial) {
+                    window.triggerInterstitial();
+                  }
+                }}
                 className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
               >
                 Show Immediate Interstitial
@@ -90,10 +93,6 @@ export default function AdDemoPage() {
 
         {/* Render Interstitial Ads Based on Type */}
         <EnhancedMobileBannerAd />
-        {interstitialType === "immediate" && <MobileInterstitialAd />}
-        {interstitialType === "delay" && <MobileInterstitialAd />}
-        {interstitialType === "scroll" && <MobileInterstitialAd />}
-        {showManualInterstitial && <MobileInterstitialAd />}
 
         {/* Dummy Content for Scroll Testing */}
         <section className="mt-12">

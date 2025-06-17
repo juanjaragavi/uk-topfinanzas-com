@@ -6,6 +6,7 @@ import Script from "next/script";
 declare global {
   interface Window {
     googletag: any;
+    triggerInterstitial: () => void;
   }
 }
 
@@ -31,13 +32,6 @@ export default function GPTScriptManager() {
 
       console.log("Defining ad slots...");
 
-      // Define the interstitial (out-of-page) ad slot
-      window.googletag
-        .defineOutOfPageSlot(
-          "/23062212598/uk.topfinanzas_com_mob_interstitial",
-          "div-gpt-ad-1749571694903-0"
-        )
-        .addService(window.googletag.pubads());
 
       // Define the mobile banner ad slot
       window.googletag
@@ -70,6 +64,7 @@ export default function GPTScriptManager() {
       setSlotsDefined(true);
 
       console.log("GPT services enabled and all ad slots defined.");
+
     });
   };
 

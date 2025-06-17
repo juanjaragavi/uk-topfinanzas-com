@@ -1,1 +1,1 @@
-feat: Push local commits to remote repository
+feat: Refactor ad components and layout
