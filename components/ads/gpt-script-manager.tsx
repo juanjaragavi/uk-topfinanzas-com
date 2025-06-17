@@ -34,7 +34,7 @@ export default function GPTScriptManager() {
       // Define the interstitial (out-of-page) ad slot
       window.googletag.defineOutOfPageSlot(
         "/23062212598/uk.topfinanzas_com_mob_interstitial",
-        "div-gpt-ad-1749831510729-0"
+        "div-gpt-ad-1749571694903-0"
       );
 
       // Define the mobile banner ad slot
@@ -46,13 +46,6 @@ export default function GPTScriptManager() {
           [250, 250],
         ],
         "div-gpt-ad-1749568543258-0"
-      );
-
-      // Define the mobile offerwall ad slot
-      window.googletag.defineSlot(
-        "/23062212598/uk.topfinanzas_com_mob_offerwall",
-        [[1, 1]],
-        "div-gpt-ad-1749832817468-0"
       );
 
       // Enable single request mode
