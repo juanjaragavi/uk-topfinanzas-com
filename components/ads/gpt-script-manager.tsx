@@ -33,8 +33,9 @@ export default function GPTScriptManager() {
 
       // Define the interstitial (out-of-page) ad slot
       window.googletag
-        .defineOutOfPageSlot(
+        .defineSlot(
           "/23062212598/uk.topfinanzas_com_mob_interstitial",
+          ["fluid"],
           "div-gpt-ad-1749571694903-0"
         )
         .addService(window.googletag.pubads());
