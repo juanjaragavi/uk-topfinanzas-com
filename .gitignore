@@ -33,7 +33,6 @@ yarn-error.log*
 next-env.d.ts
 
 # Documents and Prompts
-lib/documents
 
 # Local Images (because all of them all in our CDN)
 # Ignore image files in public/images and its subdirectories but keep the directory structure

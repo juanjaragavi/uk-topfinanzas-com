@@ -1,0 +1,4 @@
+feat: Track previously ignored files
+
+- chore: Update .gitignore to track files in lib/documents
+- feat: Add commit message file
