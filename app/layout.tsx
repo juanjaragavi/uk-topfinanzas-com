@@ -224,7 +224,7 @@ export default function RootLayout({
             __html: `
               window.googletag = window.googletag || {cmd: []};
               googletag.cmd.push(function() {
-                googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_interstitial', [1, 1], 'div-gpt-ad-1749831510729-0').addService(googletag.pubads());
+                googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_interstitial', [1, 1], 'div-gpt-ad-1750177024511-0').addService(googletag.pubads());
                 googletag.pubads().enableSingleRequest();
                 googletag.enableServices();
               });
@@ -278,11 +278,11 @@ export default function RootLayout({
           <AdDebugger />
         </NavigationProvider>
         {/* /23062212598/uk.topfinanzas_com_mob_interstitial */}
-        <div id="div-gpt-ad-1749831510729-0">
+        <div id="div-gpt-ad-1750177024511-0">
           <script
             dangerouslySetInnerHTML={{
               __html: `
-                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1749831510729-0'); });
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1750177024511-0'); });
               `,
             }}
           />

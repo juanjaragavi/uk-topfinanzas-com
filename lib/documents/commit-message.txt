@@ -1,1 +1,1 @@
-refactor(ads): revert to classic GAM implementation for interstitial ad
+feat(layout): update app layout
