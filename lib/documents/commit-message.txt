@@ -1,1 +1,1 @@
-feat: Refactor ad components and layout
+feat(ads): Update interstitial ad slot tags
