@@ -147,7 +147,7 @@ In development mode, the enhanced components display:
 
 | Component | Ad Unit Path | Slot ID | Default Sizes |
 |-----------|--------------|---------|---------------|
-| Mobile Banner | /23062212598/uk.topfinanzas_com_mob_1 | div-gpt-ad-1749568543258-0 | [[250, 250], [336, 280], [300, 250]] |
+| Mobile Banner | /23062212598/uk.topfinanzas_com_mob_2/uk.topfinanzas_com_mob_2 | div-gpt-ad-1750179025531-0 | [[250, 250], [300, 250], [336, 280]] |
 | Mobile Interstitial | /23062212598/uk.topfinanzas_com_mob_interstitial | div-gpt-ad-1749831510729-0 | [[1, 1]] |
 | Mobile Offerwall | /23062212598/uk.topfinanzas_com_mob_offerwall | div-gpt-ad-1749832817468-0 | [[1, 1]] |
 

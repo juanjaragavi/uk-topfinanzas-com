@@ -14,7 +14,7 @@ interface EnhancedMobileBannerAdProps {
 }
 
 export default function EnhancedMobileBannerAd({
-  slotId = "div-gpt-ad-1749568543258-0",
+  slotId = "div-gpt-ad-1750179025531-0",
 }: EnhancedMobileBannerAdProps) {
   const adContainerRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();

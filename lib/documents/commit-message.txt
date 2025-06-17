@@ -1,1 +1,12 @@
-feat(layout): update app layout
+feat: migrate ad unit from uk.topfinanzas_com_mob_1 to uk.topfinanzas_com_mob_2
+
+- Update GPTScriptManager to define new ad slot /23062212598/uk.topfinanzas_com_mob_2/uk.topfinanzas_com_mob_2
+- Replace slot ID from div-gpt-ad-1749568543258-0 to div-gpt-ad-1750179025531-0
+- Update ad sizes order to match new specification: [[250, 250], [300, 250], [336, 280]]
+- Update EnhancedMobileBannerAd component default slot ID
+- Consolidate ad slot definitions by moving interstitial slot to GPTScriptManager
+- Remove duplicate GPT script loading from layout.tsx
+- Update documentation in README.md and AD_TESTING_GUIDE.md
+
+This change ensures all mobile banner ads across the site use the new ad unit
+while maintaining existing functionality and improving configuration management.

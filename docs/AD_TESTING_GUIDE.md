@@ -63,7 +63,7 @@ This guide provides step-by-step instructions for testing the enhanced ad servin
 - No red error messages related to GPT
 - Should see console logs like:
   - "GPT script loaded successfully"
-  - "Ad slot div-gpt-ad-1749568543258-0 initialized and displayed"
+  - "Ad slot div-gpt-ad-1750179025531-0 initialized and displayed"
   - "Ad render ended" messages
 
 ### 4. Network Speed Testing

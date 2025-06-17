@@ -214,23 +214,6 @@ export default function RootLayout({
           <GoogleTagManager />
         </ClientOnly>
         <GPTScriptManager />
-        <script
-          async
-          src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
-          crossOrigin="anonymous"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.googletag = window.googletag || {cmd: []};
-              googletag.cmd.push(function() {
-                googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_interstitial', [1, 1], 'div-gpt-ad-1750177024511-0').addService(googletag.pubads());
-                googletag.pubads().enableSingleRequest();
-                googletag.enableServices();
-              });
-            `,
-          }}
-        />
         <ResourceHints />
 
         {/* Explicit favicon and manifest links with proper MIME types */}
