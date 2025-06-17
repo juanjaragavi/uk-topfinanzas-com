@@ -1,4 +1,4 @@
-fix: Render interstitial ad in a portal
+fix: Use defineSlot for interstitial ad
 
-- Moved the MobileInterstitialAd to a portal rendered in a dedicated container in the root layout.
-- This ensures the interstitial ad is rendered at the top level of the DOM, which is the correct placement for out-of-page ad units.
+- Changed the interstitial ad slot definition from defineOutOfPageSlot to defineSlot with a size of ['fluid'], as specified in the provided ad tag documentation.
+- This aligns the implementation with the ad server's configuration.
