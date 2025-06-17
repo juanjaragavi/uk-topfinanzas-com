@@ -212,8 +212,8 @@ export default function RootLayout({
 
         <ClientOnly>
           <GoogleTagManager />
-          <GPTScriptManager />
         </ClientOnly>
+        <GPTScriptManager />
         <ResourceHints />
 
         {/* Explicit favicon and manifest links with proper MIME types */}

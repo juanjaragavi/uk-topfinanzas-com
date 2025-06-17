@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { createPortal } from "react-dom";
 import EnhancedMobileBannerAd from "@/components/ads/enhanced-mobile-banner-ad";
 import MobileInterstitialAd from "@/components/ads/mobile-interstitial-ad";
 
@@ -91,11 +90,10 @@ export default function AdDemoPage() {
 
         {/* Render Interstitial Ads Based on Type */}
         <EnhancedMobileBannerAd />
-        {interstitialType &&
-          createPortal(
-            <MobileInterstitialAd key={interstitialType} />,
-            document.getElementById("interstitial-ad-container")!
-          )}
+        {interstitialType === "immediate" && <MobileInterstitialAd />}
+        {interstitialType === "delay" && <MobileInterstitialAd />}
+        {interstitialType === "scroll" && <MobileInterstitialAd />}
+        {showManualInterstitial && <MobileInterstitialAd />}
 
         {/* Dummy Content for Scroll Testing */}
         <section className="mt-12">
