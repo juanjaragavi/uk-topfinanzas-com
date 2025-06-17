@@ -1,4 +1,4 @@
-fix: Add missing addService to ad slot definitions
+fix: Render interstitial ad in a portal
 
-- Added the .addService(window.googletag.pubads()) call to both ad slot definitions in GPTScriptManager.
-- This ensures that the ad slots are correctly associated with the pubads service, allowing ads to be fetched and displayed.
+- Moved the MobileInterstitialAd to a portal rendered in a dedicated container in the root layout.
+- This ensures the interstitial ad is rendered at the top level of the DOM, which is the correct placement for out-of-page ad units.
