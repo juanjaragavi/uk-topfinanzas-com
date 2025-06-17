@@ -1,5 +1,8 @@
-feat: Troubleshoot and fix interstitial ad not showing
+feat: Consolidate and track new changes
 
+- chore: Update .gitignore to track files in lib/documents
+- feat: Add commit message file
+- feat: Troubleshoot and fix interstitial ad not showing
 - Refactored the MobileInterstitialAd component to correctly handle interstitial ads.
 - Updated the GPTScriptManager to define the interstitial ad slot as an out-of-page slot.
 - Simplified the rendering logic in the AdDemoPage.
