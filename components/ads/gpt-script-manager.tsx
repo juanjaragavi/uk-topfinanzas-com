@@ -32,21 +32,25 @@ export default function GPTScriptManager() {
       console.log("Defining ad slots...");
 
       // Define the interstitial (out-of-page) ad slot
-      window.googletag.defineOutOfPageSlot(
-        "/23062212598/uk.topfinanzas_com_mob_interstitial",
-        "div-gpt-ad-1749571694903-0"
-      );
+      window.googletag
+        .defineOutOfPageSlot(
+          "/23062212598/uk.topfinanzas_com_mob_interstitial",
+          "div-gpt-ad-1749571694903-0"
+        )
+        .addService(window.googletag.pubads());
 
       // Define the mobile banner ad slot
-      window.googletag.defineSlot(
-        "/23062212598/uk.topfinanzas_com_mob_1",
-        [
-          [300, 250],
-          [336, 280],
-          [250, 250],
-        ],
-        "div-gpt-ad-1749568543258-0"
-      );
+      window.googletag
+        .defineSlot(
+          "/23062212598/uk.topfinanzas_com_mob_1",
+          [
+            [300, 250],
+            [336, 280],
+            [250, 250],
+          ],
+          "div-gpt-ad-1749568543258-0"
+        )
+        .addService(window.googletag.pubads());
 
       // Enable single request mode
       window.googletag.pubads().enableSingleRequest();
