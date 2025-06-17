@@ -1,9 +1,17 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Script from "next/script";
 
+declare global {
+  interface Window {
+    googletag: any;
+  }
+}
+
 export default function GPTScriptManager() {
+  const [slotsDefined, setSlotsDefined] = useState(false);
+
   useEffect(() => {
     // Ensure googletag command queue exists immediately
     if (typeof window !== "undefined") {
@@ -14,17 +22,47 @@ export default function GPTScriptManager() {
   const handleGPTLoad = () => {
     console.log("GPT script loaded successfully");
 
-    // Initialize GPT configuration
     window.googletag = window.googletag || { cmd: [] };
     window.googletag.cmd.push(function () {
+      if (slotsDefined) {
+        console.log("Slots already defined, skipping re-definition.");
+        return;
+      }
+
+      console.log("Defining ad slots...");
+
+      // Define the interstitial (out-of-page) ad slot
+      window.googletag.defineOutOfPageSlot(
+        "/23062212598/uk.topfinanzas_com_mob_interstitial",
+        "div-gpt-ad-1749831510729-0"
+      );
+
+      // Define the mobile banner ad slot
+      window.googletag.defineSlot(
+        "/23062212598/uk.topfinanzas_com_mob_1",
+        [
+          [300, 250],
+          [336, 280],
+          [250, 250],
+        ],
+        "div-gpt-ad-1749568543258-0"
+      );
+
+      // Define the mobile offerwall ad slot
+      window.googletag.defineSlot(
+        "/23062212598/uk.topfinanzas_com_mob_offerwall",
+        [[1, 1]],
+        "div-gpt-ad-1749832817468-0"
+      );
+
       // Enable single request mode
       window.googletag.pubads().enableSingleRequest();
 
       // Enable lazy loading with specific settings
       window.googletag.pubads().enableLazyLoad({
-        fetchMarginPercent: 500, // Fetch ads 5 viewports away
-        renderMarginPercent: 200, // Render ads 2 viewports away
-        mobileScaling: 2.0, // Double the margins on mobile
+        fetchMarginPercent: 500,
+        renderMarginPercent: 200,
+        mobileScaling: 2.0,
       });
 
       // Enable services
@@ -32,8 +70,9 @@ export default function GPTScriptManager() {
 
       // Mark as ready
       window.googletag.pubadsReady = true;
+      setSlotsDefined(true);
 
-      console.log("GPT services enabled with lazy loading");
+      console.log("GPT services enabled and all ad slots defined.");
     });
   };
 
