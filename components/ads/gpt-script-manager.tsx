@@ -35,7 +35,7 @@ export default function GPTScriptManager() {
       window.googletag
         .defineSlot(
           "/23062212598/uk.topfinanzas_com_mob_interstitial",
-          ["1x1"],
+          [1, 1],
           "div-gpt-ad-1749571694903-0"
         )
         .addService(window.googletag.pubads());
