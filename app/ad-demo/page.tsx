@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import EnhancedMobileBannerAd from "@/components/ads/enhanced-mobile-banner-ad";
-// import MobileInterstitialAd from "@/components/ads/mobile-interstitial-ad";
+import MobileInterstitialAd from "@/components/ads/mobile-interstitial-ad";
 import MobileOfferwallAd from "@/components/ads/mobile-offerwall-ad";
 
 export default function AdDemoPage() {
@@ -54,7 +54,7 @@ export default function AdDemoPage() {
         </h1>     
 
         {/* Interstitial Ads Section */}
-        {/* <section className="mb-12">
+        <section className="mb-12">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">
             Interstitial Ads
           </h2>
@@ -108,7 +108,7 @@ export default function AdDemoPage() {
               </div>
             )}
           </div>
-        </section> */}
+        </section>
 
         {/* Offerwall Ads Section */}
         <section className="mb-12">
@@ -185,7 +185,7 @@ export default function AdDemoPage() {
         </section>
 
         {/* Render Interstitial Ads Based on Type */}
-        {/* {interstitialType === "immediate" && (
+        {interstitialType === "immediate" && (
           <MobileInterstitialAd
             displayTrigger="immediate"
             onClose={handleInterstitialClose}
@@ -224,7 +224,7 @@ export default function AdDemoPage() {
             onAdLoaded={handleInterstitialLoaded}
             onAdError={handleInterstitialError}
           />
-        )} */}
+        )}
 
         {/* Render Offerwall Ads Based on Type */}
         {offerwallType === "immediate" && (
