@@ -1,1 +1,1 @@
-feat(ads): implement interstitial ad and refactor GAM integration
+refactor(ads): revert to classic GAM implementation for interstitial ad

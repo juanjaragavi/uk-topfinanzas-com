@@ -32,7 +32,6 @@ export default function GPTScriptManager() {
 
       console.log("Defining ad slots...");
 
-
       // Define the mobile banner ad slot
       window.googletag
         .defineSlot(
@@ -56,15 +55,6 @@ export default function GPTScriptManager() {
         mobileScaling: 2.0,
       });
 
-      // Define the interstitial ad slot
-      window.googletag
-        .defineSlot(
-          "/23062212598/uk.topfinanzas_com_mob_interstitial",
-          [1, 1],
-          "div-gpt-ad-1749831510729-0"
-        )
-        .addService(window.googletag.pubads());
-
       // Enable services
       window.googletag.enableServices();
 
@@ -73,7 +63,6 @@ export default function GPTScriptManager() {
       setSlotsDefined(true);
 
       console.log("GPT services enabled and all ad slots defined.");
-
     });
   };
 
