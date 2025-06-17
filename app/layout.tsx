@@ -19,6 +19,7 @@ import NavigationProvider from "@/components/providers/navigation-provider";
 import ClientOnly from "@/components/ClientOnly";
 import GPTScriptManager from "@/components/ads/gpt-script-manager";
 import AdDebugger from "@/components/ads/ad-debugger";
+import InterstitialAd from "@/components/ads/interstitial-ad";
 
 // Use local font to avoid external requests during build
 // This improves build time and eliminates network dependency
@@ -214,23 +215,6 @@ export default function RootLayout({
           <GoogleTagManager />
         </ClientOnly>
         <GPTScriptManager />
-        <script
-          async
-          src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
-          crossOrigin="anonymous"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.googletag = window.googletag || {cmd: []};
-              googletag.cmd.push(function() {
-                googletag.defineSlot('/23062212598/uk.topfinanzas_com_mob_interstitial', [1, 1], 'div-gpt-ad-1749831510729-0').addService(googletag.pubads());
-                googletag.pubads().enableSingleRequest();
-                googletag.enableServices();
-              });
-            `,
-          }}
-        />
         <ResourceHints />
 
         {/* Explicit favicon and manifest links with proper MIME types */}
@@ -276,18 +260,9 @@ export default function RootLayout({
           </Suspense>
           {children}
           <AdDebugger />
+          <InterstitialAd />
         </NavigationProvider>
         {/*</PreloaderProvider>*/}
-        {/* /23062212598/uk.topfinanzas_com_mob_interstitial */}
-        <div id="div-gpt-ad-1749831510729-0">
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1749831510729-0'); });
-              `,
-            }}
-          />
-        </div>
       </body>
     </html>
   );
