@@ -261,6 +261,7 @@ export default function RootLayout({
           <AdDebugger />
         </NavigationProvider>
         {/*</PreloaderProvider>*/}
+        <div id="interstitial-ad-container" />
       </body>
     </html>
   );
