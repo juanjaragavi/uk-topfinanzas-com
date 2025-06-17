@@ -1,8 +1,4 @@
-feat: Re-implement Google Ad Manager tags
+fix: Add missing addService to ad slot definitions
 
-- Reverted the previous ad implementation to a stable state.
-- Updated the `GPTScriptManager` to define the correct ad slots and `div-gpt-ad` IDs from the PDF.
-- Created a new `MobileInterstitialAd` component to handle the interstitial ad.
-- Removed the `MobileOfferwallAd` component, as it was no longer needed.
-- Updated the `AdDemoPage` to use the new and updated ad components.
-- Restarted the TypeScript server to resolve import issues.
+- Added the .addService(window.googletag.pubads()) call to both ad slot definitions in GPTScriptManager.
+- This ensures that the ad slots are correctly associated with the pubads service, allowing ads to be fetched and displayed.
