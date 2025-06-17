@@ -1,6 +1,3 @@
-refactor: Align Google Ad Manager implementation with official guidelines
+feat: Update ad demo page to reflect new ad serving strategy
 
-- Feat: Centralize ad slot definitions in `GPTScriptManager` to ensure they are loaded in the `<head>`.
-- Fix: Correctly define the interstitial ad as an out-of-page slot using `defineOutOfPageSlot`.
-- Refactor: Simplify ad components (`enhanced-mobile-banner-ad`, `mobile-offerwall-ad`) to only handle ad display, removing slot definition logic.
-- Chore: Remove the `MobileInterstitialAd` component from the layout and delete the corresponding file, as it is no longer needed and was causing incorrect behavior.
+- Chore: Update ad demo page to use the new ad components and remove the old ones.
