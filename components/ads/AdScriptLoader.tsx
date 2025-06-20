@@ -1,15 +1,13 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import { usePathname } from "next/navigation";
-import Script from "next/script";
 
 /**
  * AdScriptLoader component
  *
- * This component handles loading the ad script for TopFinanzas UK.
- * It uses Next.js Script component with "afterInteractive" strategy
- * to ensure the script loads after the page becomes interactive.
+ * This component was previously used for loading ad scripts.
+ * Currently cleaned and ready for future ad implementations.
  */
 export default function AdScriptLoader() {
   const pathname = usePathname();
@@ -19,14 +17,5 @@ export default function AdScriptLoader() {
     return null;
   }
 
-  return (
-    <>
-      <Script
-        id="adzep-script"
-        data-cfasync="false"
-        src="https://autozep.adzep.io/paid/uk.topfinanzas.js"
-        strategy="afterInteractive"
-      />
-    </>
-  );
+  return null;
 }

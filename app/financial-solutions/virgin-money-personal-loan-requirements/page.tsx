@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import EnhancedMobileBannerAd from "@/components/ads/enhanced-mobile-banner-ad";
+
 
 export function generateMetadata() {
   return {
@@ -29,7 +29,7 @@ export default function VirginMoneyPersonalLoanRequirementsPage() {
               Requirements for Virgin Money Personal Loans
             </h1>
 
-            <EnhancedMobileBannerAd />
+            
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">

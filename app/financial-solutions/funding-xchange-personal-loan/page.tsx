@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
-import EnhancedMobileBannerAd from "@/components/ads/enhanced-mobile-banner-ad";
+
 
 export function generateMetadata() {
   return {
@@ -30,7 +30,7 @@ export default function FundingXchangePersonalLoanPage() {
               Funding Xchange: Smart Comparison for Business Finance
             </h1>
 
-            <EnhancedMobileBannerAd />
+            
 
 
             <div className="my-8 text-left sm:text-left">

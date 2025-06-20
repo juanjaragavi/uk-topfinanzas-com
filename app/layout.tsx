@@ -17,8 +17,6 @@ import NavigationProvider from "@/components/providers/navigation-provider";
   /*import PreloaderProvider from "@/components/providers/preloader-provider";*/
 }
 import ClientOnly from "@/components/ClientOnly";
-import GPTScriptManager from "@/components/ads/gpt-script-manager";
-import AdDebugger from "@/components/ads/ad-debugger";
 
 // Use local font to avoid external requests during build
 // This improves build time and eliminates network dependency
@@ -203,17 +201,9 @@ export default function RootLayout({
           }}
         />
 
-        {/* Initialize googletag command queue immediately */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.googletag = window.googletag || {cmd: []};`,
-          }}
-        />
-
         <ClientOnly>
           <GoogleTagManager />
         </ClientOnly>
-        <GPTScriptManager />
         <ResourceHints />
 
         {/* Explicit favicon and manifest links with proper MIME types */}
@@ -258,18 +248,7 @@ export default function RootLayout({
             {process.env.NODE_ENV === "development" && <UtmMonitor />}
           </Suspense>
           {children}
-          <AdDebugger />
         </NavigationProvider>
-        {/* /23062212598/uk.topfinanzas_com_mob_interstitial */}
-        <div id="div-gpt-ad-1750177024511-0">
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1750177024511-0'); });
-              `,
-            }}
-          />
-        </div>
         {/*</PreloaderProvider>*/}
       </body>
     </html>

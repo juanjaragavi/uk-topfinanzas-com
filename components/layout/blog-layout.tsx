@@ -245,11 +245,6 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
 
             {/* Main content */}
             <div className="lg:col-span-8">
-              {/* Ad space for GAM */}
-              <div className="mb-6">
-                <Ad format="horizontal" className="mx-auto mb-6" />
-              </div>
-
               {/* Content */}
               <div>{children}</div>
 
@@ -338,16 +333,6 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
 
             {/* Sidebar */}
             <div className="lg:col-span-3">
-              {/* Ad placeholder */}
-              <div className="mb-8">
-                <Ad
-                  format="square"
-                  className="mx-auto"
-                  fallbackWidth={300}
-                  fallbackHeight={250}
-                />
-              </div>
-
               {/* Recent articles - Updated */}
               <div className="mb-8">
                 <h3 className="text-[12px] font-bold mb-3 pb-2 border-b border-gray-200 text-[#234043]">

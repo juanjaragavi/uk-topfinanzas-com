@@ -1,12 +1,13 @@
-feat: migrate ad unit from uk.topfinanzas_com_mob_1 to uk.topfinanzas_com_mob_2
+feat: Remove AdZep integration and clean up ad-related components
 
-- Update GPTScriptManager to define new ad slot /23062212598/uk.topfinanzas_com_mob_2/uk.topfinanzas_com_mob_2
-- Replace slot ID from div-gpt-ad-1749568543258-0 to div-gpt-ad-1750179025531-0
-- Update ad sizes order to match new specification: [[250, 250], [300, 250], [336, 280]]
-- Update EnhancedMobileBannerAd component default slot ID
-- Consolidate ad slot definitions by moving interstitial slot to GPTScriptManager
-- Remove duplicate GPT script loading from layout.tsx
-- Update documentation in README.md and AD_TESTING_GUIDE.md
+- Delete AdZepScript.tsx component completely
+- Clean AdScriptLoader.tsx by removing AdZep script references
+- Update AdController.tsx with generic ad selectors instead of AdZep-specific ones
+- Remove ad-demo page and related ad testing components
+- Clean up ad-related documentation and configuration files
+- Update financial solution pages and layout components
+- Remove ads.txt and ad testing guides
+- Update privacy policy and cookie policy content
 
-This change ensures all mobile banner ads across the site use the new ad unit
-while maintaining existing functionality and improving configuration management.
+This commit securely removes all AdZep references while maintaining
+the ad controller functionality for future ad implementations.

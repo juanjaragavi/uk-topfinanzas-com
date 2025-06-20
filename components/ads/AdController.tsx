@@ -29,15 +29,17 @@ export default function AdController({
       style.id = "ad-controller-style";
 
       // Target common ad container classes and IDs
-      // Adjust these selectors based on how ADZep ads are rendered in your site
+      // Generic selectors for various ad networks
       style.innerHTML = `
-        /* ADZep ad containers */
-        [data-adzep-ad],
-        .adzep-ad-container,
-        #adzep-ad-container,
-        div[id^="adzep-"],
-        iframe[id^="adzep-"],
-        div[class^="adzep-"] {
+        /* Generic ad containers */
+        [data-ad],
+        .ad-container,
+        #ad-container,
+        div[id^="ad-"],
+        iframe[id^="ad-"],
+        div[class^="ad-"],
+        .advertisement,
+        .ads {
           display: none !important;
           visibility: hidden !important;
           opacity: 0 !important;
