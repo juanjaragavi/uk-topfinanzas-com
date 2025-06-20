@@ -1,13 +1,10 @@
-feat: Remove AdZep integration and clean up ad-related components
+fix: Repair corrupted YAML frontmatter in privacy policy
 
-- Delete AdZepScript.tsx component completely
-- Clean AdScriptLoader.tsx by removing AdZep script references
-- Update AdController.tsx with generic ad selectors instead of AdZep-specific ones
-- Remove ad-demo page and related ad testing components
-- Clean up ad-related documentation and configuration files
-- Update financial solution pages and layout components
-- Remove ads.txt and ad testing guides
-- Update privacy policy and cookie policy content
+- Fix corrupted YAML frontmatter in content/legal/privacy-policy.mdx
+- Restore proper structure with clean title, effectiveDate, and lastUpdated fields
+- Remove corrupted content that was mixed into the frontmatter
+- Resolve build error: "YAMLParseError: Implicit keys need to be on a single line"
+- Ensure privacy policy page renders correctly during static generation
 
-This commit securely removes all AdZep references while maintaining
-the ad controller functionality for future ad implementations.
+This fix resolves the npm run build failure and allows the application
+to build successfully with all 96 pages generated properly.
