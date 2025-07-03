@@ -1,10 +1,11 @@
-fix: Repair corrupted YAML frontmatter in privacy policy
+feat: Add branch synchronization script and documentation
 
-- Fix corrupted YAML frontmatter in content/legal/privacy-policy.mdx
-- Restore proper structure with clean title, effectiveDate, and lastUpdated fields
-- Remove corrupted content that was mixed into the frontmatter
-- Resolve build error: "YAMLParseError: Implicit keys need to be on a single line"
-- Ensure privacy policy page renders correctly during static generation
+- Add scripts/sync-branches.sh for automated branch synchronization
+- Create comprehensive branch sync workflow with safety checks
+- Include pre-flight validation for clean working directory
+- Implement automatic synchronization of main -> dev -> backup branches
+- Add proper error handling and user feedback throughout the process
+- Add GEMINI.md documentation file
 
-This fix resolves the npm run build failure and allows the application
-to build successfully with all 96 pages generated properly.
+This script provides a reliable way to keep all branches synchronized
+and ensures consistent state across the repository branches.
