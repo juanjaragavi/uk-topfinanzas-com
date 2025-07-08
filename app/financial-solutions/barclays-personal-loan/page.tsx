@@ -30,7 +30,7 @@ export default function BarclaysPersonalLoanPage() {
             </h1>
 
             <div
-              id="uk_topfinanzas_1"
+              id="uk_topfinanzas_3"
               className="items-center justify-center flex w-full my-6"
             >
               {/* Empty responsive, centered div */}
@@ -88,7 +88,7 @@ export default function BarclaysPersonalLoanPage() {
                 </div>
 
                 <div
-                  id="uk_topfinanzas_2"
+                  id="uk_topfinanzas_4"
                   className="items-center justify-center flex w-full my-6"
                 >
                   {/* Empty responsive, centered div */}
