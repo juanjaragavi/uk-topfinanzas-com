@@ -128,9 +128,12 @@ export function AdZepNavigationHandler() {
       if (window.AdZepActivateAds) {
         try {
           window.AdZepActivateAds();
-          
+
           if (process.env.NODE_ENV === "development") {
-            console.log("AdZep: Navigation handler activated ads on page load");
+            console.log(
+              "AdZep: Navigation handler activated ads on page load for pathname:",
+              pathname
+            );
           }
         } catch (error) {
           console.warn("Error activating AdZep ads on navigation:", error);
@@ -160,15 +163,18 @@ export function AdZepNavigationHandler() {
         if (window.AdZepActivateAds) {
           try {
             window.AdZepActivateAds();
-            
+
             if (process.env.NODE_ENV === "development") {
-              console.log("AdZep: Navigation handler activated ads on browser navigation");
+              console.log(
+                "AdZep: Navigation handler activated ads on browser navigation for pathname:",
+                pathname
+              );
             }
           } catch (error) {
             console.warn("Error activating AdZep ads on navigation:", error);
           }
         }
-      }, 100);
+      }, 500);
     };
 
     // Listen for popstate (back/forward navigation)
@@ -194,19 +200,24 @@ export function AdZepNavigationHandler() {
       if (window.AdZepActivateAds) {
         try {
           window.AdZepActivateAds();
-          
+
           if (process.env.NODE_ENV === "development") {
-            console.log("AdZep: Navigation handler activated ads on route change to:", pathname);
+            console.log(
+              "AdZep: Navigation handler activated ads on route change to:",
+              pathname
+            );
           }
         } catch (error) {
           console.warn("Error activating AdZep ads on route change:", error);
         }
       } else {
         if (process.env.NODE_ENV === "development") {
-          console.warn("AdZep: window.AdZepActivateAds not available on route change");
+          console.warn(
+            "AdZep: window.AdZepActivateAds not available on route change"
+          );
         }
       }
-    }, 200); // Increased delay to ensure proper Next.js navigation completion
+    }, 1000); // Increased delay to ensure proper Next.js navigation completion
 
     // Cleanup
     return () => {

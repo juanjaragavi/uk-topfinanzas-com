@@ -1,7 +1,8 @@
-feat: Update content across financial solutions, personal finance, and various site pages
+feat: Update content across financial solutions, personal finance, various site pages, and adzep.tsx
 
 This commit includes comprehensive content updates for:
 - Financial solutions pages (credit cards and personal loans)
 - Personal finance articles
 - About Us, Contact Us, and Credit Card Recommender pages
 - Minor updates to blog layout and UTM test page.
+- Updated components/analytics/adzep.tsx
