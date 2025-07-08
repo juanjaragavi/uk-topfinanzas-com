@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -30,7 +29,12 @@ export default function FundingCirclePersonalLoanRequirementsPage() {
               Requirements for Funding Circle Business Loans
             </h1>
 
-            
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -95,6 +99,12 @@ export default function FundingCirclePersonalLoanRequirementsPage() {
                     </div>
                   </div>
 
+                  <div
+                    id="uk_topfinanzas_2"
+                    className="items-center justify-center flex w-full my-6"
+                  >
+                    {/* Empty responsive, centered div */}
+                  </div>
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#004C59] flex items-center justify-center mr-3 mt-0.5">
@@ -118,7 +128,6 @@ export default function FundingCirclePersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Required Documentation:
@@ -247,7 +256,6 @@ export default function FundingCirclePersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Loan Terms and Conditions

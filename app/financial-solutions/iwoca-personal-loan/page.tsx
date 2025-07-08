@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -31,8 +30,12 @@ export default function IwocaPersonalLoanPage() {
               iwoca Flexi-Loan: Fast, Flexible Funding for UK Businesses
             </h1>
 
-            
-
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
@@ -132,7 +135,6 @@ export default function IwocaPersonalLoanPage() {
                   Addressing SME Working Capital Needs
                 </h2>
 
-
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The iwoca Flexi-Loan functions like a credit line, allowing
                   businesses to access funds up to an approved limit (£1,000 to
@@ -143,6 +145,13 @@ export default function IwocaPersonalLoanPage() {
                   actually draw down, making it a cost-effective solution for
                   managing variable capital requirements.
                 </p>
+
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Speed and Simplicity via Technology
@@ -188,7 +197,6 @@ export default function IwocaPersonalLoanPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
-
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
@@ -245,7 +253,6 @@ export default function IwocaPersonalLoanPage() {
                     </div>
                   </div>
                 </div>
-
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Streamlined Application for Businesses

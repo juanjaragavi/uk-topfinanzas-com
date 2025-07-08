@@ -283,7 +283,9 @@ export default function ContactUs() {
       <div className="container mx-auto px-4 py-12 max-w-7xl bg-white">
         <h1 className="text-4xl font-bold text-gray-900 mb-8">Contact Us</h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+<div id="uk_topfinanzas_1" className="items-center justify-center flex w-full my-6">
+              {/* Empty responsive, centered div */}
+            </div>        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Left column - Image and Text */}
           <div className="md:col-span-5 space-y-6">
             <div className="relative w-full h-64 md:h-80 overflow-hidden rounded-xl shadow-md">

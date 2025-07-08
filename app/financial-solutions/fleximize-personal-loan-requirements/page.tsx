@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -30,7 +29,12 @@ export default function FleximizePersonalLoanRequirementsPage() {
               Requirements for Fleximize Business Loans (Flexiloan & Lite)
             </h1>
 
-            
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -53,13 +57,10 @@ export default function FleximizePersonalLoanRequirementsPage() {
                 />
               </div>
 
-              
-
               <section className="my-6">
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Basic Eligibility Criteria for SMEs
                 </h2>
-
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
@@ -122,6 +123,12 @@ export default function FleximizePersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Information & Documentation Needed:
@@ -267,7 +274,6 @@ export default function FleximizePersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Loan Terms and Conditions

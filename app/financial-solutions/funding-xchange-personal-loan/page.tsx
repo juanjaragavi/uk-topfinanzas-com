@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title: "Funding Xchange: SME Finance Comparison Platform - Top Finance UK",
@@ -30,8 +29,12 @@ export default function FundingXchangePersonalLoanPage() {
               Funding Xchange: Smart Comparison for Business Finance
             </h1>
 
-            
-
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
@@ -134,7 +137,6 @@ export default function FundingXchangePersonalLoanPage() {
                   Simplifying the Search for SME Funding
                 </h2>
 
-
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The UK business finance market is diverse and can be complex
                   to navigate. Funding Xchange aims to simplify this by
@@ -144,6 +146,13 @@ export default function FundingXchangePersonalLoanPage() {
                   traditional banks, challenger banks, independent specialist
                   lenders, and alternative finance providers.
                 </p>
+
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Access to Diverse Funding Products
@@ -177,7 +186,6 @@ export default function FundingXchangePersonalLoanPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Data-Driven Matching Technology
                 </h2>
-
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Funding Xchange utilises sophisticated technology and data
@@ -269,7 +277,6 @@ export default function FundingXchangePersonalLoanPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   The Process for Businesses
                 </h2>
-
 
                 <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Using Funding Xchange typically follows these steps:

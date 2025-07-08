@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -28,8 +27,13 @@ export default function RevolutPersonalLoanRequirementsPage() {
             <h1 className="text-3xl text-left sm:text-left md:text-3xl font-bold text-gray-800 mb-4 leading-8">
               Requirements for Revolut Personal Loans
             </h1>
-            
 
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -122,6 +126,12 @@ export default function RevolutPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Required Information (In-App):
@@ -327,7 +337,6 @@ export default function RevolutPersonalLoanRequirementsPage() {
                   Existing Revolut users:
                 </h3>
 
-
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The seamless in-app application and management process makes
                   it highly convenient for those already using Revolut for their
@@ -402,7 +411,6 @@ export default function RevolutPersonalLoanRequirementsPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Tips for a Successful Application
                 </h2>
-
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   To enhance your chances of approval for a Revolut Personal

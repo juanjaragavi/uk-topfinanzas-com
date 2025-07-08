@@ -30,7 +30,9 @@ export default function TravelCreditCardsPage() {
               Spending
             </h1>
 
-            <div className="prose max-w-none">
+<div id="uk_topfinanzas_1" className="items-center justify-center flex w-full my-6">
+              {/* Empty responsive, centered div */}
+            </div>            <div className="prose max-w-none">
               <p className="text-lg text-gray-700 mb-6">
                 The right travel credit card can save you hundreds of pounds in
                 fees and provide valuable benefits when traveling abroad. Our

@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -32,8 +31,12 @@ export default function LloydsBankCreditCardPage() {
               Lloyds Bank Credit Card: Flexible Everyday Banking Solutions
             </h1>
 
-            
-
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
@@ -126,7 +129,6 @@ export default function LloydsBankCreditCardPage() {
                   Everyday Rewards and Benefits
                 </h2>
 
-
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   One of the most attractive features of the Lloyds Bank Credit
                   Card is its Everyday Offers program. This program allows
@@ -142,6 +144,13 @@ export default function LloydsBankCreditCardPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Effective Debt Management Tools
                 </h2>
+
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   For those looking to manage existing credit card debt, the
@@ -232,7 +241,6 @@ export default function LloydsBankCreditCardPage() {
                   Additional Features:
                 </h2>
 
-
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#006A4D] flex items-center justify-center mr-3 mt-0.5">
@@ -289,7 +297,6 @@ export default function LloydsBankCreditCardPage() {
                     </div>
                   </div>
                 </div>
-
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Customer Support and Banking Experience

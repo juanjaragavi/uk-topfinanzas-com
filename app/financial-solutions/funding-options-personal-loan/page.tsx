@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -31,7 +30,12 @@ export default function FundingOptionsPersonalLoanPage() {
               Funding Options: Connecting SMEs with the Right Business Finance
             </h1>
 
-            
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
@@ -143,6 +147,13 @@ export default function FundingOptionsPersonalLoanPage() {
                   businesses significant time and effort compared to approaching
                   multiple lenders individually.
                 </p>
+
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   A Spectrum of Business Finance Solutions

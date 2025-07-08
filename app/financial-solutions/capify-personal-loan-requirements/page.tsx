@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -30,7 +29,12 @@ export default function CapifyPersonalLoanRequirementsPage() {
               Requirements for Capify Business Finance (MCA & Loans)
             </h1>
 
-            
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -236,7 +240,7 @@ export default function CapifyPersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
-                
+
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Finance Terms and Conditions
                 </h2>
@@ -259,6 +263,13 @@ export default function CapifyPersonalLoanRequirementsPage() {
                       Total cost expressed as a factor rate (e.g., 1.2 means
                       repay £1.20 for every £1 borrowed). No fixed term.
                     </div>
+                  </div>
+
+                  <div
+                    id="uk_topfinanzas_2"
+                    className="items-center justify-center flex w-full my-6"
+                  >
+                    {/* Empty responsive, centered div */}
                   </div>
 
                   <div className="flex items-start">

@@ -29,7 +29,9 @@ export default function CreditCardRecommenderPage() {
               Discover Your Ideal Credit Card
             </h1>
 
-            <div id="uk_topfinanzas_1" className="flex w-full my-6">
+<div id="uk_topfinanzas_1" className="items-center justify-center flex w-full my-6">
+              {/* Empty responsive, centered div */}
+            </div>            <div id="uk_topfinanzas_1" className="items-center justify-center flex w-full my-6">
               {/* Empty responsive, centered div */}
             </div>
 
@@ -92,7 +94,7 @@ export default function CreditCardRecommenderPage() {
               informed decisions.
             </p>
 
-            <div id="uk_topfinanzas_2" className="flex w-full my-6">
+            <div id="uk_topfinanzas_2" className="items-center justify-center flex w-full my-6">
               {/* Empty responsive, centered div */}
             </div>
 

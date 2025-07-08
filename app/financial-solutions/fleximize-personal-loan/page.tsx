@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title: "Fleximize: Flexible Business Loans for UK SMEs - Top Finance UK",
@@ -30,7 +29,12 @@ export default function FleximizePersonalLoanPage() {
               Fleximize: Truly Flexible Business Loans for SMEs
             </h1>
 
-            
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
@@ -83,6 +87,13 @@ export default function FleximizePersonalLoanPage() {
                   </div>
                 </div>
 
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#6D2C91] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
@@ -133,7 +144,6 @@ export default function FleximizePersonalLoanPage() {
                   Unparalleled Flexibility: Top-Ups & Holidays
                 </h2>
 
-
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   What sets Fleximize apart is its built-in flexibility.
                   Businesses with a good repayment history can often access
@@ -172,7 +182,6 @@ export default function FleximizePersonalLoanPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Relationship-Driven Approach
                 </h2>
-
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   While leveraging technology for speed, Fleximize emphasizes a
@@ -257,7 +266,6 @@ export default function FleximizePersonalLoanPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Application Process
                 </h2>
-
 
                 <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Fleximize combines technology with a personal touch:

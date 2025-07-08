@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -30,7 +29,12 @@ export default function StarlingBankPersonalLoanPage() {
               Delivered
             </h1>
 
-            
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
@@ -101,8 +105,6 @@ export default function StarlingBankPersonalLoanPage() {
                 </Link>
               </div>
 
-              
-
               <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718136704-fotosprestamo-starlinkbanck1uk.webp"
@@ -131,7 +133,6 @@ export default function StarlingBankPersonalLoanPage() {
                   Ethical and Transparent Borrowing
                 </h2>
 
-
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   As a certified B Corporation, Starling Bank places a strong
                   emphasis on ethical practices. This philosophy extends to its
@@ -156,6 +157,13 @@ export default function StarlingBankPersonalLoanPage() {
                   budget.
                 </p>
 
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
+
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Seamless Digital Experience
                 </h2>
@@ -169,8 +177,6 @@ export default function StarlingBankPersonalLoanPage() {
                   support, reflecting Starling's commitment to a superior
                   digital user experience.
                 </p>
-
-                
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -189,7 +195,6 @@ export default function StarlingBankPersonalLoanPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
-
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
@@ -250,7 +255,6 @@ export default function StarlingBankPersonalLoanPage() {
                     </div>
                   </div>
                 </div>
-
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   The Starling Approach to Lending

@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -30,7 +29,12 @@ export default function MarketFinancePersonalLoanRequirementsPage() {
               Requirements for MarketFinance Business Solutions
             </h1>
 
-            
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -122,6 +126,14 @@ export default function MarketFinancePersonalLoanRequirementsPage() {
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Information & Documentation Needed:
                 </h2>
+
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
+
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The online application is streamlined, but be prepared to
                   provide:

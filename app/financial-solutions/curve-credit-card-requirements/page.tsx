@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -29,7 +28,12 @@ export default function CurveCreditCardRequirementsPage() {
               Requirements for the Curve Card
             </h1>
 
-            
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -56,7 +60,6 @@ export default function CurveCreditCardRequirementsPage() {
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   How to Qualify for the Curve Card
                 </h2>
-
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
@@ -99,6 +102,13 @@ export default function CurveCreditCardRequirementsPage() {
                     </div>
                   </div>
 
+                  <div
+                    id="uk_topfinanzas_2"
+                    className="items-center justify-center flex w-full my-6"
+                  >
+                    {/* Empty responsive, centered div */}
+                  </div>
+
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">
                       <span className="text-white font-bold">➔</span>
@@ -113,7 +123,6 @@ export default function CurveCreditCardRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Application Requirements:
@@ -259,7 +268,6 @@ export default function CurveCreditCardRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Understanding the Costs

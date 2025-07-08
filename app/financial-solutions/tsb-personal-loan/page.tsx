@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -29,7 +28,12 @@ export default function TSBPersonalLoanPage() {
               TSB Personal Loan: Simple, Fair Financing for Your Needs
             </h1>
 
-            
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
@@ -101,8 +105,6 @@ export default function TSBPersonalLoanPage() {
                 </Link>
               </div>
 
-              
-
               <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718136271-fotosprestamo-tbs1uk.webp"
@@ -141,6 +143,13 @@ export default function TSBPersonalLoanPage() {
                   customers.
                 </p>
 
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
+
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Clear Terms and Competitive Rates
                 </h2>
@@ -167,8 +176,6 @@ export default function TSBPersonalLoanPage() {
                   interest paid over the loan's duration, ensuring the loan
                   remains affordable.
                 </p>
-
-                
 
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">

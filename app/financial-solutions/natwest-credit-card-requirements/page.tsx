@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -32,8 +31,12 @@ export default function NatWestCreditCardRequirementsPage() {
               Requirements for the NatWest Credit Card
             </h1>
 
-            
-
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -103,6 +106,12 @@ export default function NatWestCreditCardRequirementsPage() {
                   </div>
                 </div>
 
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Required Documentation:
@@ -296,7 +305,6 @@ export default function NatWestCreditCardRequirementsPage() {
                   Key Benefits and Features
                 </h2>
 
-
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">
@@ -433,7 +441,6 @@ export default function NatWestCreditCardRequirementsPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Is the NatWest Credit Card Right for You?
                 </h2>
-
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   When considering the NatWest Credit Card, it's important to

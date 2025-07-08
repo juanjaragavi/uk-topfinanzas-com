@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -29,7 +28,12 @@ export default function NatWestPersonalLoanRequirementsPage() {
               Requirements for NatWest Personal Loans
             </h1>
 
-            
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -213,6 +217,13 @@ export default function NatWestPersonalLoanRequirementsPage() {
                       estimate of your potential rate and monthly payments
                       without affecting your credit score.
                     </div>
+                  </div>
+
+                  <div
+                    id="uk_topfinanzas_2"
+                    className="items-center justify-center flex w-full my-6"
+                  >
+                    {/* Empty responsive, centered div */}
                   </div>
 
                   <div className="flex items-start">

@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -32,8 +31,12 @@ export default function MonzoCreditCardPage() {
               Monzo Credit Card: Digital-First Banking for Modern Life
             </h1>
 
-            
-
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
@@ -139,6 +142,12 @@ export default function MonzoCreditCardPage() {
                   Real-Time Financial Management
                 </h2>
 
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   At the core of the Monzo Credit Card experience is real-time
@@ -207,7 +216,6 @@ export default function MonzoCreditCardPage() {
                   <h3 className="text-lg font-semibold text-gray-800 mb-3 text-left">
                     Learn More About Credit Cards:
                   </h3>
-
 
                   <ul className="space-y-2 list-disc list-inside text-blue-700 text-left">
                     <li className="text-left">
@@ -311,7 +319,6 @@ export default function MonzoCreditCardPage() {
                     </div>
                   </div>
                 </div>
-
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Innovative Customer Support

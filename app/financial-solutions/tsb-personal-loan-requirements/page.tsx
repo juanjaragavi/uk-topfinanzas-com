@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title: "TSB Personal Loan Requirements: Application Guide - Top Finance UK",
@@ -28,8 +27,12 @@ export default function TSBPersonalLoanRequirementsPage() {
               Requirements for TSB Personal Loans
             </h1>
 
-            
-
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -121,6 +124,12 @@ export default function TSBPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Required Documentation:
@@ -178,7 +187,6 @@ export default function TSBPersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Application Process
@@ -312,7 +320,6 @@ export default function TSBPersonalLoanRequirementsPage() {
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Who Is This Loan Best For?
                 </h2>
-
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   TSB Personal Loans are a good fit for:

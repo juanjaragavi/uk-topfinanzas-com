@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -29,8 +28,12 @@ export default function TSBCreditCardRequirementsPage() {
               Requirements for the TSB Credit Card
             </h1>
 
-            
-
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -101,6 +104,12 @@ export default function TSBCreditCardRequirementsPage() {
                   </div>
                 </div>
 
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Required Documentation:
@@ -159,7 +168,6 @@ export default function TSBCreditCardRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Application Process
@@ -307,7 +315,6 @@ export default function TSBCreditCardRequirementsPage() {
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Key Benefits and Features
                 </h2>
-
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">

@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -32,8 +31,12 @@ export default function RevolutCreditCardRequirementsPage() {
               Requirements for the Revolut Credit Card
             </h1>
 
-            
-
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -129,6 +132,12 @@ export default function RevolutCreditCardRequirementsPage() {
                   </div>
                 </div>
 
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Digital Application Requirements:
@@ -346,7 +355,6 @@ export default function RevolutCreditCardRequirementsPage() {
                   Key Benefits and Features
                 </h2>
 
-
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
@@ -501,7 +509,6 @@ export default function RevolutCreditCardRequirementsPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Is the Revolut Credit Card Right for You?
                 </h2>
-
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   When considering the Revolut Credit Card, it's essential to

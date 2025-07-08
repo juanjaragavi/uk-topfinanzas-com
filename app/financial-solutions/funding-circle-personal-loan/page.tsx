@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title: "Funding Circle Business Loan: Fast SME Financing - Top Finance UK",
@@ -30,7 +29,12 @@ export default function FundingCirclePersonalLoanPage() {
               Funding Circle Business Loan: Fast, Flexible Finance for SMEs
             </h1>
 
-            
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
@@ -131,7 +135,6 @@ export default function FundingCirclePersonalLoanPage() {
                   Fueling Business Growth
                 </h2>
 
-
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Funding Circle loans cater to a wide range of business needs.
                   Whether you require working capital to manage day-to-day
@@ -146,6 +149,12 @@ export default function FundingCirclePersonalLoanPage() {
                   Speed and Efficiency Through Fintech
                 </h2>
 
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Leveraging technology, Funding Circle offers a significantly
@@ -297,7 +306,6 @@ export default function FundingCirclePersonalLoanPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Supporting UK SMEs
                 </h2>
-
 
                 <p className="text-gray-800 text-sm leading-5 mb-4 text-left">
                   Funding Circle has established itself as a major player in the

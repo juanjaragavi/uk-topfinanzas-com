@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -28,8 +27,13 @@ export default function BarclaysPersonalLoanRequirementsPage() {
             <h1 className="text-3xl text-left sm:text-left md:text-3xl font-bold text-gray-800 mb-4 leading-8">
               Requirements for Barclays Personal Loans
             </h1>
-            
 
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -51,7 +55,6 @@ export default function BarclaysPersonalLoanRequirementsPage() {
                   loading="eager"
                 />
               </div>
-
 
               <section className="my-6">
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
@@ -81,6 +84,13 @@ export default function BarclaysPersonalLoanRequirementsPage() {
                       Barclays typically requires applicants to have been
                       resident in the UK for at least 3 years.
                     </div>
+                  </div>
+
+                  <div
+                    id="uk_topfinanzas_2"
+                    className="items-center justify-center flex w-full my-6"
+                  >
+                    {/* Empty responsive, centered div */}
                   </div>
 
                   <div className="flex items-start">
@@ -124,7 +134,6 @@ export default function BarclaysPersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Required Documentation:
@@ -246,7 +255,6 @@ export default function BarclaysPersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Loan Terms and Conditions
@@ -479,9 +487,7 @@ export default function BarclaysPersonalLoanRequirementsPage() {
                 </div>
 
                 <div className="text-left my-8">
-                  <Link
-                    href="https://www.barclays.co.uk/loans/personal-loan/"
-                  >
+                  <Link href="https://www.barclays.co.uk/loans/personal-loan/">
                     <Button className="bg-[#00AEEF] hover:bg-blue-600 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Visit Official Website
                     </Button>

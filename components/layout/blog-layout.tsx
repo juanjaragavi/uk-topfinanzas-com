@@ -112,7 +112,9 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
           {/* Title */}
           <h1 className="text-h1 mb-4">{title}</h1>
 
-          {/* Author and date */}
+<div id="uk_topfinanzas_1" className="items-center justify-center flex w-full my-6">
+              {/* Empty responsive, centered div */}
+            </div>          {/* Author and date */}
           <div className="flex items-center mb-8">
             <Image
               src={authorImage}

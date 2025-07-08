@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -29,8 +28,12 @@ export default function TSBCreditCardPage() {
               TSB Credit Card: Straightforward Banking for Everyday Life
             </h1>
 
-            
-
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
@@ -100,8 +103,6 @@ export default function TSBCreditCardPage() {
                 </Link>
               </div>
 
-              
-
               <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/credit-cards/718645155-top_prestamos-y-tarjetas-uk_v1-06.webp"
@@ -129,7 +130,6 @@ export default function TSBCreditCardPage() {
                   Practical Financial Management
                 </h2>
 
-
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   TSB's approach to credit cards emphasizes practical financial
                   management. The card offers competitive standard interest
@@ -146,6 +146,13 @@ export default function TSBCreditCardPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Targeted Rewards and Savings
                 </h2>
+
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Rather than a complex points system, TSB focuses on providing
@@ -176,8 +183,6 @@ export default function TSBCreditCardPage() {
                   shopping.
                 </p>
 
-                
-
                 {/* Ad Block: Credit Cards */}
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
@@ -195,7 +200,6 @@ export default function TSBCreditCardPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
-
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
@@ -254,7 +258,6 @@ export default function TSBCreditCardPage() {
                     </div>
                   </div>
                 </div>
-
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Customer Support and Service

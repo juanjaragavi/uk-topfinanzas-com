@@ -384,7 +384,9 @@ export default function FinancialSolutionsPage() {
         Financial Solutions
       </h1>
 
-      <p className="text-lg text-gray-700 mb-8 leading-tight text-left sm:text-left">
+<div id="uk_topfinanzas_1" className="items-center justify-center flex w-full my-6">
+              {/* Empty responsive, centered div */}
+            </div>      <p className="text-lg text-gray-700 mb-8 leading-tight text-left sm:text-left">
         Find detailed information about the best credit cards available in the
         UK, requirements for applying, and comprehensive guides to help you
         choose the best option based on your financial needs.

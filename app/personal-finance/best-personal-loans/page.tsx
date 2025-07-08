@@ -19,7 +19,9 @@ export default function BestPersonalLoansPage() {
               Best Personal Loans in the UK: Your Complete Guide
             </h1>
 
-            <div className="my-8 text-left sm:text-left">
+<div id="uk_topfinanzas_1" className="items-center justify-center flex w-full my-6">
+              {/* Empty responsive, centered div */}
+            </div>            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Find the perfect personal loan for your needs with our
                 comprehensive guide to the UK's top lenders, rates, and

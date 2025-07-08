@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -30,8 +29,12 @@ export default function NationwidePersonalLoanPage() {
               Society
             </h1>
 
-            
-
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
@@ -102,8 +105,6 @@ export default function NationwidePersonalLoanPage() {
                 </Link>
               </div>
 
-              
-
               <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718136476-fotosprestamo-nationwide1uk.webp"
@@ -132,6 +133,12 @@ export default function NationwidePersonalLoanPage() {
                   Member-Focused Financing
                 </h2>
 
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Nationwide Personal Loans are available for various purposes,
@@ -172,8 +179,6 @@ export default function NationwidePersonalLoanPage() {
                   planning horizon.
                 </p>
 
-                
-
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
@@ -191,7 +196,6 @@ export default function NationwidePersonalLoanPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
-
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
@@ -254,7 +258,6 @@ export default function NationwidePersonalLoanPage() {
                     </div>
                   </div>
                 </div>
-
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Application Process

@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -29,8 +28,12 @@ export default function SantanderUKCreditCardPage() {
               Santander UK Credit Card: Smart Banking for Modern Life
             </h1>
 
-            
-
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
@@ -125,6 +128,12 @@ export default function SantanderUKCreditCardPage() {
                   Rewarding Your Spending Habits
                 </h2>
 
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   With the Santander UK Credit Card, your everyday purchases
@@ -224,7 +233,6 @@ export default function SantanderUKCreditCardPage() {
                   Additional Features:
                 </h2>
 
-
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#EC0000] flex items-center justify-center mr-3 mt-0.5">
@@ -284,7 +292,6 @@ export default function SantanderUKCreditCardPage() {
                     </div>
                   </div>
                 </div>
-
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Enhanced Customer Experience

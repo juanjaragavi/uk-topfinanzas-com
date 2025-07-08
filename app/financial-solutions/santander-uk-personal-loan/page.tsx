@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -29,8 +28,12 @@ export default function SantanderUKPersonalLoanPage() {
               Santander UK Personal Loan: Simple, Flexible Financing
             </h1>
 
-            
-
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
@@ -103,8 +106,6 @@ export default function SantanderUKPersonalLoanPage() {
                 </Link>
               </div>
 
-              
-
               <div className="my-8 text-left sm:text-left">
                 <Image
                   src="https://media.topfinanzas.com/images/uk/loans/718136214-fotosprestamo-santander1uk.webp"
@@ -132,7 +133,6 @@ export default function SantanderUKPersonalLoanPage() {
                   Funding for Your Plans
                 </h2>
 
-
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Whether you need funds for a new car, home improvements,
                   consolidating debts, or covering unexpected expenses,
@@ -142,6 +142,13 @@ export default function SantanderUKPersonalLoanPage() {
                   range accommodates various financial needs, from smaller
                   projects to more significant investments.
                 </p>
+
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Competitive Rates and Clear Terms
@@ -169,8 +176,6 @@ export default function SantanderUKPersonalLoanPage() {
                   the loan's duration.
                 </p>
 
-                
-
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
@@ -188,7 +193,6 @@ export default function SantanderUKPersonalLoanPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Additional Features:
                 </h2>
-
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
@@ -251,7 +255,6 @@ export default function SantanderUKPersonalLoanPage() {
                     </div>
                   </div>
                 </div>
-
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Streamlined Application Process

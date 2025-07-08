@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -32,8 +31,12 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
               Requirements for the Halifax World Elite Mastercard
             </h1>
 
-            
-
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -56,13 +59,10 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                 />
               </div>
 
-              
-
               <section className="my-6">
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Qualifying for the Halifax World Elite Mastercard
                 </h2>
-
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
@@ -166,6 +166,12 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                   </div>
                 </div>
 
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Understanding the Costs
@@ -263,8 +269,6 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                   </div>
                 </div>
 
-                
-
                 <div className="my-8 text-left sm:text-left">
                   <Link href="/personal-finance/best-personal-loans">
                     <Image
@@ -282,7 +286,6 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Ideal Customer Profiles for the Halifax World Elite Mastercard
                 </h2>
-
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The Halifax World Elite Mastercard is particularly suitable
@@ -386,9 +389,7 @@ export default function HalifaxWorldEliteMastercardRequirementsPage() {
                 </p>
 
                 <div className="text-left my-8">
-                  <Link
-                    href="https://www.halifax.co.uk/creditcards/mastercard-world-elite.html"
-                  >
+                  <Link href="https://www.halifax.co.uk/creditcards/mastercard-world-elite.html">
                     <Button className="bg-[#004C9F] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Visit Official Website
                     </Button>

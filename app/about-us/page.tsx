@@ -212,7 +212,9 @@ export default function AboutUs() {
             Top Finanzas: Your guide to the world of personal finance
           </h1>
 
-          <div className="mb-12">
+<div id="uk_topfinanzas_1" className="items-center justify-center flex w-full my-6">
+              {/* Empty responsive, centered div */}
+            </div>          <div className="mb-12">
             <Image
               src="https://media.topfinanzas.com/images/uk/about-us-uk.webp"
               alt="Top Finanzas UK Team"

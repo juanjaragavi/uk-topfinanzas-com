@@ -19,7 +19,9 @@ export default function PersonalLoansDebtStrategyPage() {
               Personal Loans - A Strategy for Managing Debt
             </h1>
 
-            <div className="my-8 text-left sm:text-left">
+<div id="uk_topfinanzas_1" className="items-center justify-center flex w-full my-6">
+              {/* Empty responsive, centered div */}
+            </div>            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Discover how personal loans can help you consolidate debt and
                 manage your finances efficiently. Learn how to choose the right

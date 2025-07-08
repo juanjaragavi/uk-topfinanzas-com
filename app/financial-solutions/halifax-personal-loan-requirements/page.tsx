@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -29,8 +28,12 @@ export default function HalifaxPersonalLoanRequirementsPage() {
               Requirements for Halifax Personal Loans
             </h1>
 
-            
-
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -57,7 +60,6 @@ export default function HalifaxPersonalLoanRequirementsPage() {
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Basic Eligibility Criteria
                 </h2>
-
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
@@ -124,6 +126,13 @@ export default function HalifaxPersonalLoanRequirementsPage() {
                   </div>
                 </div>
 
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
+
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Required Documentation:
                 </h2>
@@ -180,7 +189,6 @@ export default function HalifaxPersonalLoanRequirementsPage() {
                     </div>
                   </div>
                 </div>
-
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Application Process
@@ -325,7 +333,6 @@ export default function HalifaxPersonalLoanRequirementsPage() {
                 <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
                   Those valuing flexibility:
                 </h3>
-
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The penalty-free early repayment option is a significant

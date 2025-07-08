@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 
-
 export function generateMetadata() {
   return {
     title:
@@ -32,8 +31,12 @@ export default function RevolutCreditCardPage() {
               Revolut Credit Card: Global Banking Without Boundaries
             </h1>
 
-            
-
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
@@ -134,7 +137,6 @@ export default function RevolutCreditCardPage() {
                   Truly Global Spending Power
                 </h2>
 
-
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   At the core of the Revolut Credit Card's appeal is its global
                   functionality. Unlike traditional credit cards that typically
@@ -151,6 +153,13 @@ export default function RevolutCreditCardPage() {
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Multi-Currency Flexibility
                 </h2>
+
+                <div
+                  id="uk_topfinanzas_2"
+                  className="items-center justify-center flex w-full my-6"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The Revolut Credit Card takes international functionality a
@@ -242,7 +251,6 @@ export default function RevolutCreditCardPage() {
                   Additional Features:
                 </h2>
 
-
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3 mt-0.5">
@@ -307,7 +315,6 @@ export default function RevolutCreditCardPage() {
                     </div>
                   </div>
                 </div>
-
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Seamless Digital Experience
