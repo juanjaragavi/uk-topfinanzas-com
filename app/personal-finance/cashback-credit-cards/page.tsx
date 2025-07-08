@@ -19,10 +19,8 @@ export default function CashbackCreditCardsPage() {
             <h1 className="text-3xl text-left sm:text-left md:text-3xl font-bold text-gray-800 mb-4 leading-8">
               Best Cashback Credit Cards for Maximizing Your Rewards
             </h1>
-
-<div id="uk_topfinanzas_1" className="items-center justify-center flex w-full my-6">
-              {/* Empty responsive, centered div */}
-            </div>            <div className="my-8 text-left sm:text-left">
+            
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Discover the top cashback credit cards! Compare benefits like
                 unlimited rewards, flexible redemption options, and introductory

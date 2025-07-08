@@ -1,5 +1,7 @@
-feat: Update content for financial solutions and personal loan pages
+feat: Update content across financial solutions, personal finance, and various site pages
 
 This commit includes comprehensive content updates for:
-- Various financial solutions pages (credit cards and personal loans)
-- Various personal loan pages
+- Financial solutions pages (credit cards and personal loans)
+- Personal finance articles
+- About Us, Contact Us, and Credit Card Recommender pages
+- Minor updates to blog layout and UTM test page.

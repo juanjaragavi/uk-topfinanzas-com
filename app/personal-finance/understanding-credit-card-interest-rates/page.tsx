@@ -19,9 +19,7 @@ export default function UnderstandingCreditCardInterestRatesPage() {
               Understanding Credit Card Interest Rates - A Consumer Guide
             </h1>
 
-<div id="uk_topfinanzas_1" className="items-center justify-center flex w-full my-6">
-              {/* Empty responsive, centered div */}
-            </div>            <div className="my-8 text-left sm:text-left">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Learn how credit card interest rates work, including APR
                 calculations, and discover ways to manage and minimize your debt

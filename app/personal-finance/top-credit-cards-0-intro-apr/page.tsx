@@ -19,9 +19,7 @@ export default function TopCreditCards0IntroAprPage() {
               Top Credit Cards with 0% Intro APR to Help You Save
             </h1>
 
-<div id="uk_topfinanzas_1" className="items-center justify-center flex w-full my-6">
-              {/* Empty responsive, centered div */}
-            </div>            <div className="my-8 text-left sm:text-left">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Discover how 0% intro APR credit cards can help you save on
                 interest, manage large purchases, and consolidate debt

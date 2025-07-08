@@ -18,10 +18,8 @@ export default function GettingOutOfDebtPage() {
             <h1 className="text-3xl text-left sm:text-left md:text-3xl font-bold text-gray-800 mb-4 leading-8">
               Practical Guide to Getting Out of Debt
             </h1>
-
-<div id="uk_topfinanzas_1" className="items-center justify-center flex w-full my-6">
-              {/* Empty responsive, centered div */}
-            </div>            <div className="my-8 text-left sm:text-left">
+            
+            <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Feeling overwhelmed by debt? Get practical strategies for
                 getting out of debt, building an emergency fund, and taking

@@ -212,9 +212,7 @@ export default function AboutUs() {
             Top Finanzas: Your guide to the world of personal finance
           </h1>
 
-<div id="uk_topfinanzas_1" className="items-center justify-center flex w-full my-6">
-              {/* Empty responsive, centered div */}
-            </div>          <div className="mb-12">
+          <div className="mb-12">
             <Image
               src="https://media.topfinanzas.com/images/uk/about-us-uk.webp"
               alt="Top Finanzas UK Team"
@@ -224,7 +222,6 @@ export default function AboutUs() {
               priority
             />
           </div>
-
           <section className="mb-12">
             <p className="text-lg mb-6">
               At Top Finanzas, we firmly believe that good financial management
@@ -255,7 +252,6 @@ export default function AboutUs() {
               strengthens your financial autonomy.
             </p>
           </section>
-
           <section className="mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
               Our Commitment
@@ -310,7 +306,6 @@ export default function AboutUs() {
               </li>
             </ul>
           </section>
-
           <section className="mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
               Empowering Your Financial Decisions
@@ -327,7 +322,6 @@ export default function AboutUs() {
               planning your retirement.
             </p>
           </section>
-
           <section className="mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-8">
               Frequently Asked Questions
@@ -373,7 +367,6 @@ export default function AboutUs() {
               ))}
             </div>
           </section>
-
           <section className="mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-left">
               Testimonials

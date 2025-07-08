@@ -21,9 +21,7 @@ export default function CreditCardTypesBenefitsPage() {
               Credit Cards - Types, Benefits, and Keys to Financial Health
             </h1>
 
-<div id="uk_topfinanzas_1" className="items-center justify-center flex w-full my-6">
-              {/* Empty responsive, centered div */}
-            </div>            <div className="my-8 text-left sm:text-left">
+            <div className="my-8 text-left sm:text-left">
               <p className="text-left sm:text-left text-lg text-gray-800 mb-4 leading-5">
                 Discover everything you need to know about credit cards, from
                 types and benefits to tips for responsible usage and maintaining

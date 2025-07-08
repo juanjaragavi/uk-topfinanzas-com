@@ -384,9 +384,7 @@ export default function FinancialSolutionsPage() {
         Financial Solutions
       </h1>
 
-<div id="uk_topfinanzas_1" className="items-center justify-center flex w-full my-6">
-              {/* Empty responsive, centered div */}
-            </div>      <p className="text-lg text-gray-700 mb-8 leading-tight text-left sm:text-left">
+      <p className="text-lg text-gray-700 mb-8 leading-tight text-left sm:text-left">
         Find detailed information about the best credit cards available in the
         UK, requirements for applying, and comprehensive guides to help you
         choose the best option based on your financial needs.
@@ -413,7 +411,6 @@ export default function FinancialSolutionsPage() {
           </button>
         ))}
       </div>
-
 
       {activeCategory === "creditCards" && (
         <div className="mb-8">
@@ -481,7 +478,6 @@ export default function FinancialSolutionsPage() {
               </button>
             ))}
           </div>
-
 
           {/* Loans grid with fixed positioning for Image components */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

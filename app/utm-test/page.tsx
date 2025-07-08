@@ -57,9 +57,7 @@ function UtmTestContent() {
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-2xl font-bold mb-4">UTM Parameter Test Page</h1>
 
-<div id="uk_topfinanzas_1" className="items-center justify-center flex w-full my-6">
-              {/* Empty responsive, centered div */}
-            </div>      <p className="mb-4">
+      <p className="mb-4">
         This page tests whether UTM parameters are persisted across navigation.
         Check your browser console to see the logged UTM parameters.
       </p>

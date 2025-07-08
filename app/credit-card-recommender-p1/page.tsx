@@ -29,9 +29,10 @@ export default function CreditCardRecommenderPage() {
               Discover Your Ideal Credit Card
             </h1>
 
-<div id="uk_topfinanzas_1" className="items-center justify-center flex w-full my-6">
-              {/* Empty responsive, centered div */}
-            </div>            <div id="uk_topfinanzas_1" className="items-center justify-center flex w-full my-6">
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-6"
+            >
               {/* Empty responsive, centered div */}
             </div>
 
@@ -40,7 +41,6 @@ export default function CreditCardRecommenderPage() {
               spending and enjoy exclusive benefits. Explore and choose the
               ideal card for you!
             </p>
-
             <div className="my-8 text-left sm:text-left">
               <Link href="/financial-solutions/barclaycard-avios-plus">
                 <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
@@ -53,11 +53,9 @@ export default function CreditCardRecommenderPage() {
                 </Button>
               </Link>
             </div>
-
             <h2 className="text-lg leading-5 font-bold text-gray-800 mb-6">
               Why Choose Our Credit Card Recommender?
             </h2>
-
             <div className="space-y-1 mb-6">
               <div className="flex items-start">
                 <div className="flex-shrink-0 rounded-full bg-[#80E67D] px-1 flex items-center justify-center mr-2">
@@ -86,24 +84,23 @@ export default function CreditCardRecommenderPage() {
                 </div>
               </div>
             </div>
-
             <p className="text-left text-sm leading-5 text-gray-800 mb-4">
               Our recommendations are designed to connect your financial goals
               with cards that suit your needs. From cashback to travel rewards,
               we give you clear, easy-to-understand options so you can make
               informed decisions.
             </p>
-
-            <div id="uk_topfinanzas_2" className="items-center justify-center flex w-full my-6">
+            <div
+              id="uk_topfinanzas_2"
+              className="items-center justify-center flex w-full my-6"
+            >
               {/* Empty responsive, centered div */}
             </div>
-
             <p className="text-left text-sm leading-5 text-gray-800 mb-5">
               With our guide, you'll transform your credit card into a tool that
               simplifies your finances and helps you achieve your goals without
               complications.
             </p>
-
             <div className="mt-6 mb-4">
               <Link href="/financial-solutions/halifax-world-elite-mastercard">
                 <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
@@ -116,7 +113,6 @@ export default function CreditCardRecommenderPage() {
                 </Button>
               </Link>
             </div>
-
             <p className="text-left text-sm mb-6">
               <Link
                 className="text-blue-500"
@@ -125,7 +121,6 @@ export default function CreditCardRecommenderPage() {
                 Learn How to Apply
               </Link>
             </p>
-
             <div className="mt-6 mb-6 border rounded">
               {/* FAQ Item 1: Benefits */}
               <button
@@ -265,14 +260,12 @@ export default function CreditCardRecommenderPage() {
                 </div>
               )}
             </div>
-
             <p className="text-left text-sm leading-5 text-gray-800 mb-8">
               Make your credit card an ally in achieving your financial goals.
               From cashback to travel rewards, choose an option that simplifies
               your life and maximises your benefits. Explore our recommendations
               and find the card that best suits you.
             </p>
-
             <div className="my-8 text-left sm:text-left">
               <Link href="/financial-solutions/barclaycard-avios-plus">
                 <Image
