@@ -22,7 +22,10 @@ export default function AdZepLinkTracker() {
 
       if (link) {
         // Call activateAds for any link or button interaction
-        activateAds();
+        // Use setTimeout to ensure this doesn't interfere with navigation
+        setTimeout(() => {
+          activateAds();
+        }, 0);
 
         // Log for debugging in development
         if (process.env.NODE_ENV === "development") {
@@ -35,20 +38,15 @@ export default function AdZepLinkTracker() {
       }
     };
 
-    // Track various interaction events
-    const events = ["click", "mousedown", "touchstart"];
-
-    events.forEach((eventType) => {
-      document.addEventListener(eventType, handleLinkInteraction, {
-        passive: true,
-      });
+    // Only track click events to avoid interfering with navigation
+    // Remove mousedown and touchstart that could block normal navigation
+    document.addEventListener("click", handleLinkInteraction, {
+      passive: true,
     });
 
     // Cleanup
     return () => {
-      events.forEach((eventType) => {
-        document.removeEventListener(eventType, handleLinkInteraction);
-      });
+      document.removeEventListener("click", handleLinkInteraction);
     };
   }, [activateAds]);
 

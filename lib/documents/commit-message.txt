@@ -1,14 +1,17 @@
-fix: Resolve AdZep ad display issue on internal navigation
+fix: Resolve navigation refresh issue and improve AdZep tracking
 
-- Fix AdZepNavigationHandler to properly handle Next.js internal navigation
-- Add usePathname hook to detect route changes and trigger ad activation
-- Ensure window.AdZepActivateAds() is called on all navigation types:
-  * Initial page load
-  * Internal navigation (Next.js Link components)
-  * Browser back/forward navigation
-  * Direct URL access
-- Add detailed development logging for debugging navigation events
-- Update documentation to reflect improved navigation handling
+- Remove conflicting AdZep trackers from credit card recommender page
+- Fix AdZepLinkTracker to prevent navigation interference by:
+  * Removing mousedown and touchstart events that block navigation
+  * Adding setTimeout wrapper to avoid blocking link navigation
+  * Using only passive click events for better performance
+- Enhance AdZepNavigationHandler with better debugging and timing:
+  * Increase navigation completion delay to 200ms
+  * Add detailed development logging for navigation events
+  * Improve error handling and availability checks
+- Add text-left CSS class to all paragraph elements for consistency
+- Ensure AdZep ads activate properly on all navigation types while
+  preserving normal Next.js Link component behavior
 
-This resolves the issue where AdZep ads only displayed after manual
-page reload and not during internal site navigation.
+This resolves the issue where internal links were refreshing pages
+instead of navigating smoothly through Next.js routing.

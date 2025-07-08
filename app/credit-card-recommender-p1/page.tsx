@@ -6,9 +6,6 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import AdZepLinkTracker, {
-  AdZepFormTracker,
-} from "@/components/analytics/adzep-trackers";
 
 export default function CreditCardRecommenderPage() {
   const [openFaq, setOpenFaq] = useState<string | null>("benefits");
@@ -23,27 +20,20 @@ export default function CreditCardRecommenderPage() {
 
   return (
     <main className="bg-white min-h-screen flex flex-col">
-      {/* Enhanced AdZep tracking for this interactive page */}
-      <AdZepLinkTracker />
-      <AdZepFormTracker />
-
       <Header />
 
-      <article className="bg-white py-8 md:py-12">
+      <article className="text-left bg-white py-8 md:py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-lg md:text-2xl font-bold text-gray-800 mb-4 leading-5">
               Discover Your Ideal Credit Card
             </h1>
 
-            <div
-              id="uk_topfinanzas_1"
-              className="flex w-full my-6"
-            >
+            <div id="uk_topfinanzas_1" className="flex w-full my-6">
               {/* Empty responsive, centered div */}
             </div>
 
-            <p className="text-xs leading-4 text-gray-800 mb-5">
+            <p className="text-left text-xs leading-4 text-gray-800 mb-5">
               Finding the right card is simple. Maximise rewards, organise your
               spending and enjoy exclusive benefits. Explore and choose the
               ideal card for you!
@@ -95,21 +85,18 @@ export default function CreditCardRecommenderPage() {
               </div>
             </div>
 
-            <p className="text-sm leading-5 text-gray-800 mb-4">
+            <p className="text-left text-sm leading-5 text-gray-800 mb-4">
               Our recommendations are designed to connect your financial goals
               with cards that suit your needs. From cashback to travel rewards,
               we give you clear, easy-to-understand options so you can make
               informed decisions.
             </p>
 
-            <div
-              id="uk_topfinanzas_2"
-              className="flex w-full my-6"
-            >
+            <div id="uk_topfinanzas_2" className="flex w-full my-6">
               {/* Empty responsive, centered div */}
             </div>
 
-            <p className="text-sm leading-5 text-gray-800 mb-5">
+            <p className="text-left text-sm leading-5 text-gray-800 mb-5">
               With our guide, you'll transform your credit card into a tool that
               simplifies your finances and helps you achieve your goals without
               complications.
@@ -165,7 +152,7 @@ export default function CreditCardRecommenderPage() {
               </button>
               {openFaq === "benefits" && (
                 <div className="p-4 text-gray-700" id="faq-benefits-content">
-                  <p>
+                  <p className="text-left">
                     A card with no annual fee helps you save on recurring costs
                     while enjoying key benefits such as cashback or points for
                     purchases.
@@ -200,7 +187,7 @@ export default function CreditCardRecommenderPage() {
               </button>
               {openFaq === "cashback" && (
                 <div className="p-4 text-gray-700" id="faq-cashback-content">
-                  <p>
+                  <p className="text-left">
                     You receive a percentage of your purchases as cash that you
                     can use to reduce balances or spend as you prefer.
                   </p>
@@ -234,7 +221,7 @@ export default function CreditCardRecommenderPage() {
               </button>
               {openFaq === "travelers" && (
                 <div className="p-4 text-gray-700" id="faq-travelers-content">
-                  <p>
+                  <p className="text-left">
                     Cards with air miles accumulation or access to VIP lounges
                     are ideal for frequent travellers, allowing you to save on
                     flights and enjoy exclusive benefits.
@@ -269,7 +256,7 @@ export default function CreditCardRecommenderPage() {
               </button>
               {openFaq === "online" && (
                 <div className="p-4 text-gray-700" id="faq-online-content">
-                  <p>
+                  <p className="text-left">
                     Yes, many cards offer advanced technology such as dynamic
                     CVV and instant alerts to protect your transactions.
                   </p>
@@ -277,7 +264,7 @@ export default function CreditCardRecommenderPage() {
               )}
             </div>
 
-            <p className="text-sm leading-5 text-gray-800 mb-8">
+            <p className="text-left text-sm leading-5 text-gray-800 mb-8">
               Make your credit card an ally in achieving your financial goals.
               From cashback to travel rewards, choose an option that simplifies
               your life and maximises your benefits. Explore our recommendations

@@ -185,7 +185,11 @@ export function AdZepNavigationHandler() {
     // Only run in the browser
     if (typeof window === "undefined") return;
 
-    // Small delay to ensure page content is loaded after navigation
+    if (process.env.NODE_ENV === "development") {
+      console.log("AdZep: Pathname changed to:", pathname);
+    }
+
+    // Longer delay to ensure page content and Next.js routing is complete
     const timer = setTimeout(() => {
       if (window.AdZepActivateAds) {
         try {
@@ -197,8 +201,12 @@ export function AdZepNavigationHandler() {
         } catch (error) {
           console.warn("Error activating AdZep ads on route change:", error);
         }
+      } else {
+        if (process.env.NODE_ENV === "development") {
+          console.warn("AdZep: window.AdZepActivateAds not available on route change");
+        }
       }
-    }, 100);
+    }, 200); // Increased delay to ensure proper Next.js navigation completion
 
     // Cleanup
     return () => {
