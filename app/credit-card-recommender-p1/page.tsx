@@ -6,7 +6,9 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-
+import AdZepLinkTracker, {
+  AdZepFormTracker,
+} from "@/components/analytics/adzep-trackers";
 
 export default function CreditCardRecommenderPage() {
   const [openFaq, setOpenFaq] = useState<string | null>("benefits");
@@ -21,6 +23,10 @@ export default function CreditCardRecommenderPage() {
 
   return (
     <main className="bg-white min-h-screen flex flex-col">
+      {/* Enhanced AdZep tracking for this interactive page */}
+      <AdZepLinkTracker />
+      <AdZepFormTracker />
+
       <Header />
 
       <article className="bg-white py-8 md:py-12">
@@ -29,8 +35,6 @@ export default function CreditCardRecommenderPage() {
             <h1 className="text-lg md:text-2xl font-bold text-gray-800 mb-4 leading-5">
               Discover Your Ideal Credit Card
             </h1>
-
-            
 
             <p className="text-xs leading-4 text-gray-800 mb-5">
               Finding the right card is simple. Maximise rewards, organise your
