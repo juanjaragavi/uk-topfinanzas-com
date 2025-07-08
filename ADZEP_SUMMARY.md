@@ -14,8 +14,9 @@ The AdZep tag has been successfully implemented in your Next.js project with the
 
 **Automatic Function Invocation** (`/components/analytics/adzep.tsx`)
 
-* `window.AdZepActivateAds()` called on page load
-* `window.AdZepActivateAds()` called on navigation changes
+* `window.AdZepActivateAds()` called on initial page load
+* `window.AdZepActivateAds()` called on internal navigation (Next.js routing)
+* `window.AdZepActivateAds()` called on browser navigation (back/forward)
 * `window.AdZepActivateAds()` called on link clicks
 
 ### 🚀 Advanced Features

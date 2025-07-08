@@ -2,6 +2,7 @@
 
 import Script from "next/script";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 /**
  * AdZep Analytics Script Component
@@ -113,8 +114,11 @@ export function AdZepLinkHandler() {
  * AdZep Navigation Handler
  * - Integrates with Next.js navigation to call activateAds on route changes
  * - Works with the existing UTM tracking system
+ * - Properly handles both internal navigation and browser back/forward
  */
 export function AdZepNavigationHandler() {
+  const pathname = usePathname();
+
   useEffect(() => {
     // Only run in the browser
     if (typeof window === "undefined") return;
@@ -124,6 +128,10 @@ export function AdZepNavigationHandler() {
       if (window.AdZepActivateAds) {
         try {
           window.AdZepActivateAds();
+          
+          if (process.env.NODE_ENV === "development") {
+            console.log("AdZep: Navigation handler activated ads on page load");
+          }
         } catch (error) {
           console.warn("Error activating AdZep ads on navigation:", error);
         }
@@ -152,6 +160,10 @@ export function AdZepNavigationHandler() {
         if (window.AdZepActivateAds) {
           try {
             window.AdZepActivateAds();
+            
+            if (process.env.NODE_ENV === "development") {
+              console.log("AdZep: Navigation handler activated ads on browser navigation");
+            }
           } catch (error) {
             console.warn("Error activating AdZep ads on navigation:", error);
           }
@@ -167,6 +179,32 @@ export function AdZepNavigationHandler() {
       window.removeEventListener("popstate", handleNavigation);
     };
   }, []);
+
+  // This useEffect will trigger on every pathname change (Next.js internal navigation)
+  useEffect(() => {
+    // Only run in the browser
+    if (typeof window === "undefined") return;
+
+    // Small delay to ensure page content is loaded after navigation
+    const timer = setTimeout(() => {
+      if (window.AdZepActivateAds) {
+        try {
+          window.AdZepActivateAds();
+          
+          if (process.env.NODE_ENV === "development") {
+            console.log("AdZep: Navigation handler activated ads on route change to:", pathname);
+          }
+        } catch (error) {
+          console.warn("Error activating AdZep ads on route change:", error);
+        }
+      }
+    }, 100);
+
+    // Cleanup
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [pathname]); // This will trigger on every route change
 
   return null;
 }

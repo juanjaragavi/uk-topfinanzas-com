@@ -1,9 +1,14 @@
-style: Optimize AdZep ad container positioning on credit card recommender page
+fix: Resolve AdZep ad display issue on internal navigation
 
-- Remove unnecessary centering CSS classes from uk_topfinanzas_1 and uk_topfinanzas_2 containers
-- Simplify ad container styling from 'flex justify-center items-center w-full my-6' to 'flex w-full my-6'
-- Improve ad display positioning and layout consistency
-- Enhances AdZep ad integration and responsiveness
+- Fix AdZepNavigationHandler to properly handle Next.js internal navigation
+- Add usePathname hook to detect route changes and trigger ad activation
+- Ensure window.AdZepActivateAds() is called on all navigation types:
+  * Initial page load
+  * Internal navigation (Next.js Link components)
+  * Browser back/forward navigation
+  * Direct URL access
+- Add detailed development logging for debugging navigation events
+- Update documentation to reflect improved navigation handling
 
-This styling optimization ensures better ad placement and positioning
-within the credit card recommender page layout.
+This resolves the issue where AdZep ads only displayed after manual
+page reload and not during internal site navigation.
