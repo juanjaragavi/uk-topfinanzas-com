@@ -36,6 +36,13 @@ export default function CreditCardRecommenderPage() {
               Discover Your Ideal Credit Card
             </h1>
 
+            <div
+              id="uk_topfinanzas_1"
+              className="flex justify-center items-center w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
+
             <p className="text-xs leading-4 text-gray-800 mb-5">
               Finding the right card is simple. Maximise rewards, organise your
               spending and enjoy exclusive benefits. Explore and choose the
@@ -100,6 +107,13 @@ export default function CreditCardRecommenderPage() {
               simplifies your finances and helps you achieve your goals without
               complications.
             </p>
+
+            <div
+              id="uk_topfinanzas_2"
+              className="flex justify-center items-center w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="mt-6 mb-4">
               <Link href="/financial-solutions/halifax-world-elite-mastercard">
