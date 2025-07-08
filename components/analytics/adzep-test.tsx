@@ -23,7 +23,7 @@ export default function AdZepTest() {
     const checkScript = () => {
       setIsScriptLoaded(
         typeof window !== "undefined" &&
-          typeof window.activateAds === "function"
+          typeof window.AdZepActivateAds === "function"
       );
     };
 
@@ -45,8 +45,8 @@ export default function AdZepTest() {
   };
 
   const handleDirectActivation = () => {
-    if (window.activateAds) {
-      window.activateAds();
+    if (window.AdZepActivateAds) {
+      window.AdZepActivateAds();
       setLastActivation(new Date().toLocaleTimeString() + " (direct)");
       setActivationCount((prev) => prev + 1);
     }

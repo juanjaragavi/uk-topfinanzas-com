@@ -1,10 +1,11 @@
-refactor: Reposition content around uk_topfinanzas_2 ad container
+fix: Correct AdZep tag implementation by replacing window.activateAds() with window.AdZepActivateAds()
 
-- Move explanatory paragraph after uk_topfinanzas_2 ad container
-- Improve content flow and ad placement positioning
-- Optimize user experience with better content sequencing
-- Maintain semantic structure while enhancing ad visibility
-- Clear commit message file for workflow process
+- Updated components/analytics/adzep-test.tsx to use correct function name
+- Fixed ADZEP_IMPLEMENTATION.md documentation references  
+- Updated ADZEP_SUMMARY.md with correct function calls
+- Ensures AdZep advertisements display properly
+- Maintains consistency across all AdZep activation logic
 
-This adjustment ensures better integration between content and
-advertising spaces while preserving readability and user engagement.
+This correction resolves the issue where AdZep ads were not displaying
+due to incorrect function invocation, ensuring proper ad activation
+throughout the Next.js application.

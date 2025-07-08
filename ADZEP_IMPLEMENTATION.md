@@ -68,7 +68,7 @@ The AdZep script is loaded with Next.js optimization:
 
 ### Function Invocation
 
-The `window.activateAds()` function is called automatically:
+The `window.AdZepActivateAds()` function is called automatically:
 
 1. **On page load**: When the page initially loads
 2. **On navigation**: When users navigate between pages
@@ -247,7 +247,7 @@ Use manual triggers for:
 
 1. Check browser console for AdZep-related logs
 2. Verify script is loaded in Network tab
-3. Test `window.activateAds()` manually in console
+3. Test `window.AdZepActivateAds()` manually in console
 4. Check performance marks for timing issues
 
 ## Future Enhancements

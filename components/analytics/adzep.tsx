@@ -52,9 +52,9 @@ export default function AdZep() {
  */
 export function useAdZep() {
   const activateAds = () => {
-    if (typeof window !== "undefined" && window.activateAds) {
+    if (typeof window !== "undefined" && window.AdZepActivateAds) {
       try {
-        window.activateAds();
+        window.AdZepActivateAds();
       } catch (error) {
         console.warn("Error activating AdZep ads:", error);
       }
@@ -66,7 +66,7 @@ export function useAdZep() {
 
 /**
  * AdZep Link Click Handler Component
- * - Automatically calls window.activateAds() on link clicks
+ * - Automatically calls window.AdZepActivateAds() on link clicks
  * - Handles both internal and external links
  */
 export function AdZepLinkHandler() {
@@ -79,9 +79,9 @@ export function AdZepLinkHandler() {
       const target = event.target as HTMLElement;
       const link = target.closest("a");
 
-      if (link && window.activateAds) {
+      if (link && window.AdZepActivateAds) {
         try {
-          window.activateAds();
+          window.AdZepActivateAds();
         } catch (error) {
           console.warn("Error activating AdZep ads on link click:", error);
         }
@@ -92,9 +92,9 @@ export function AdZepLinkHandler() {
     document.addEventListener("click", handleLinkClick);
 
     // Initial activation on page load
-    if (window.activateAds) {
+    if (window.AdZepActivateAds) {
       try {
-        window.activateAds();
+        window.AdZepActivateAds();
       } catch (error) {
         console.warn("Error activating AdZep ads on page load:", error);
       }
@@ -121,9 +121,9 @@ export function AdZepNavigationHandler() {
 
     // Call activateAds on initial page load
     const activateOnLoad = () => {
-      if (window.activateAds) {
+      if (window.AdZepActivateAds) {
         try {
-          window.activateAds();
+          window.AdZepActivateAds();
         } catch (error) {
           console.warn("Error activating AdZep ads on navigation:", error);
         }
@@ -131,12 +131,12 @@ export function AdZepNavigationHandler() {
     };
 
     // Activate immediately if script is already loaded
-    if (window.activateAds) {
+    if (window.AdZepActivateAds) {
       activateOnLoad();
     } else {
       // Wait for script to load if not available yet
       const checkAndActivate = () => {
-        if (window.activateAds) {
+        if (window.AdZepActivateAds) {
           activateOnLoad();
         } else {
           setTimeout(checkAndActivate, 100); // Check every 100ms
@@ -149,9 +149,9 @@ export function AdZepNavigationHandler() {
     const handleNavigation = () => {
       // Small delay to ensure page content is loaded
       setTimeout(() => {
-        if (window.activateAds) {
+        if (window.AdZepActivateAds) {
           try {
-            window.activateAds();
+            window.AdZepActivateAds();
           } catch (error) {
             console.warn("Error activating AdZep ads on navigation:", error);
           }
@@ -171,9 +171,9 @@ export function AdZepNavigationHandler() {
   return null;
 }
 
-// Type declaration for window.activateAds
+// Type declaration for window.AdZepActivateAds
 declare global {
   interface Window {
-    activateAds?: () => void;
+    AdZepActivateAds?: () => void;
   }
 }
