@@ -102,18 +102,18 @@ export default function CreditCardRecommenderPage() {
               informed decisions.
             </p>
 
-            <p className="text-sm leading-5 text-gray-800 mb-5">
-              With our guide, you'll transform your credit card into a tool that
-              simplifies your finances and helps you achieve your goals without
-              complications.
-            </p>
-
             <div
               id="uk_topfinanzas_2"
               className="flex justify-center items-center w-full my-6"
             >
               {/* Empty responsive, centered div */}
             </div>
+
+            <p className="text-sm leading-5 text-gray-800 mb-5">
+              With our guide, you'll transform your credit card into a tool that
+              simplifies your finances and helps you achieve your goals without
+              complications.
+            </p>
 
             <div className="mt-6 mb-4">
               <Link href="/financial-solutions/halifax-world-elite-mastercard">
