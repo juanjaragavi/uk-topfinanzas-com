@@ -38,7 +38,7 @@ export default function CreditCardRecommenderPage() {
 
             <div
               id="uk_topfinanzas_1"
-              className="flex justify-center items-center w-full my-6"
+              className="flex w-full my-6"
             >
               {/* Empty responsive, centered div */}
             </div>
@@ -104,7 +104,7 @@ export default function CreditCardRecommenderPage() {
 
             <div
               id="uk_topfinanzas_2"
-              className="flex justify-center items-center w-full my-6"
+              className="flex w-full my-6"
             >
               {/* Empty responsive, centered div */}
             </div>
