@@ -71,7 +71,8 @@ try {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 5,
+  maximumScale: 1, // Set maximumScale to 1 to prevent unwanted zooming on iOS
+  userScalable: false, // Explicitly disable user scaling
   themeColor: "#ffffff",
 };
 

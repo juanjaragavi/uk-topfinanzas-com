@@ -1,8 +1,7 @@
-feat: Update content across financial solutions, personal finance, various site pages, and adzep.tsx
+fix: Resolve UI zoom issue on iOS devices
 
-This commit includes comprehensive content updates for:
-- Financial solutions pages (credit cards and personal loans)
-- Personal finance articles
-- About Us, Contact Us, and Credit Card Recommender pages
-- Minor updates to blog layout and UTM test page.
-- Updated components/analytics/adzep.tsx
+This commit addresses the unexpected UI zoom on iOS devices (Safari and Chrome) when the keyboard activates on the 'app/quiz/page.tsx' by modifying the viewport settings in 'app/layout.tsx'.
+
+Changes include:
+- Set `maximumScale` to 1 in `app/layout.tsx` to prevent zooming.
+- Explicitly set `userScalable` to `false` in `app/layout.tsx` to disable user scaling.
