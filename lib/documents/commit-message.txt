@@ -1,7 +1,5 @@
-fix: Resolve UI zoom issue on iOS devices
+chore: Update layout and commit message file
 
-This commit addresses the unexpected UI zoom on iOS devices (Safari and Chrome) when the keyboard activates on the 'app/quiz/page.tsx' by modifying the viewport settings in 'app/layout.tsx'.
-
-Changes include:
-- Set `maximumScale` to 1 in `app/layout.tsx` to prevent zooming.
-- Explicitly set `userScalable` to `false` in `app/layout.tsx` to disable user scaling.
+This commit includes:
+- Updates to app/layout.tsx.
+- The commit message file itself has been updated.
