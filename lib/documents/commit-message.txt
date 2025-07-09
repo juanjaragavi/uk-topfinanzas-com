@@ -1,7 +1,7 @@
-fix: Resolve UI zoom issue on iOS devices
+feat: Implement AdZep tag
 
-This commit addresses the unexpected UI zoom behavior on iOS devices when the keyboard is activated on the quiz page.
+This commit implements the AdZep tag in the Next.js project according to the provided instructions.
 
 Changes include:
-- Updated `app/layout.tsx`: Set `maximumScale` to `1` in the viewport meta tag to prevent unwanted scaling.
-- Updated `components/steps/step3.tsx`: Changed the font size of input fields (email and first name) from `text-sm` (14px) to `text-base` (16px) to prevent iOS from automatically zooming on input focus.
+- Updated `app/layout.tsx`: Imported and added `AdZepLinkHandler` to ensure `window.AdZepActivateAds()` is called on all link clicks, in addition to page loads and navigation changes already handled by `AdZepNavigationHandler`.
+- The `AdZep` component continues to load the AdZep script in the `<head>` section.

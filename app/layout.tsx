@@ -11,7 +11,10 @@ import GoogleTagManager, {
 } from "@/components/analytics/gtm";
 import UtmPersister from "@/components/analytics/utm-persister";
 import UtmMonitor from "@/components/analytics/utm-monitor";
-import AdZep, { AdZepNavigationHandler } from "@/components/analytics/adzep";
+import AdZep, {
+  AdZepNavigationHandler,
+  AdZepLinkHandler,
+} from "@/components/analytics/adzep";
 import AdZepTest from "@/components/analytics/adzep-test";
 import ResourceHints from "@/components/resource-hints";
 import NavigationProvider from "@/components/providers/navigation-provider";
@@ -249,6 +252,7 @@ export default function RootLayout({
           <Suspense fallback={null}>
             <UtmPersister />
             <AdZepNavigationHandler />
+            <AdZepLinkHandler />
             {process.env.NODE_ENV === "development" && <UtmMonitor />}
             {process.env.NODE_ENV === "development" && <AdZepTest />}
           </Suspense>
