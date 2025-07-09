@@ -187,7 +187,7 @@ export default function Step3({
             onChange={handleEmailChange}
             onBlur={() => validateEmail(email)}
             required
-            className={`h-9 text-sm ${
+            className={`h-9 text-base ${
               errors.email
                 ? "border-red-500 focus-visible:ring-red-500"
                 : "border-[#2E74B5] focus-visible:ring-[#8DC63F]"
@@ -214,7 +214,7 @@ export default function Step3({
             onChange={handleFirstNameChange}
             onBlur={() => validateFirstName(firstName)}
             required
-            className={`h-9 text-sm ${
+            className={`h-9 text-base ${
               errors.firstName
                 ? "border-red-500 focus-visible:ring-red-500"
                 : "border-[#2E74B5] focus-visible:ring-[#8DC63F]"
