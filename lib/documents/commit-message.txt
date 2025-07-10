@@ -1,6 +1,8 @@
-fix: Use correct environment variables for ConvertKit API
+fix(kit-integration): Align payload with API requirements
 
-This commit fixes the ConvertKit integration by using the correct environment variables for the API key and URL.
+This commit resolves a validation error that prevented user information from being added to KIT. The `email` field was being sent incorrectly, causing the API to reject the payload.
 
 Changes include:
-- Updated `app/api/subscribe/route.ts` to use `NEXT_PUBLIC_KIT_API_KEY` and `KIT_API_URL` to ensure the environment variables are loaded correctly on the server.
+- Updated `app/api/subscribe/route.ts` to correctly handle the `email_address` field and ensure the `state` is set to "active".
+- Modified `components/credit-card-form.tsx` to send `email_address` instead of `email` and include the `state: "active"` field.
+- Ensured the `last_name` field is correctly nested within the `fields` object in the payload.

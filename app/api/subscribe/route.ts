@@ -1,8 +1,7 @@
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
-  const { email_address, first_name, last_name, ...fields } =
-    await request.json();
+  const { email_address, first_name, ...fields } = await request.json();
 
   if (!email_address || !first_name) {
     return NextResponse.json(
@@ -12,7 +11,8 @@ export async function POST(request: Request) {
   }
 
   const API_KEY = process.env.NEXT_PUBLIC_KIT_API_KEY;
-  const API_URL = process.env.KIT_API_URL || "https://api.kit.com/v4/subscribers";
+  const API_URL =
+    process.env.KIT_API_URL || "https://api.kit.com/v4/subscribers";
 
   if (!API_KEY || !API_URL) {
     return NextResponse.json(
@@ -22,9 +22,9 @@ export async function POST(request: Request) {
   }
 
   const data = {
-    email: email_address,
+    email_address,
     first_name,
-    last_name,
+    state: "active",
     fields,
   };
 
