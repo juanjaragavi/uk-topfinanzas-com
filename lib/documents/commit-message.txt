@@ -1,8 +1,7 @@
-feat(convertkit): Map quiz responses to API payload
+feat(convertkit): Fully map quiz responses to API payload
 
-This commit aligns the quiz response data with the ConvertKit API payload structure, ensuring that user information is correctly mapped and sent.
+This commit ensures all quiz response data is correctly mapped to the ConvertKit API payload structure, resolving the issue of missing fields.
 
 Changes include:
-- Modified `components/credit-card-form.tsx` to dynamically map quiz answers to the `kitData` object.
-- Ensured the payload includes the mandatory `pais: "Reino Unido"` and `quiz_tarjetas: "SI"` key-value pairs.
-- Removed hardcoded values from the `fields` object, allowing for flexible data mapping based on user input.
+- Updated `components/credit-card-form.tsx` to dynamically map all quiz answers to the `kitData` object, ensuring all fields in the `payload-create-user-kit.json` schema are populated.
+- Removed hardcoded null values and replaced them with dynamic data from the form state.
