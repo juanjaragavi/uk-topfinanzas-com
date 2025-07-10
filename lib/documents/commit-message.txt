@@ -1,7 +1,7 @@
-feat(convertkit): Fully map quiz responses to API payload
+fix(convertkit): Correctly handle nested fields in API route
 
-This commit ensures all quiz response data is correctly mapped to the ConvertKit API payload structure, resolving the issue of missing fields.
+This commit resolves the issue where nested fields were not being correctly processed by the API route.
 
 Changes include:
-- Updated `components/credit-card-form.tsx` to dynamically map all quiz answers to the `kitData` object, ensuring all fields in the `payload-create-user-kit.json` schema are populated.
-- Removed hardcoded null values and replaced them with dynamic data from the form state.
+- Updated `app/api/subscribe/route.ts` to correctly destructure the `fields` object from the request body.
+- Ensured that the `api_key` is included in the payload sent to the ConvertKit API.

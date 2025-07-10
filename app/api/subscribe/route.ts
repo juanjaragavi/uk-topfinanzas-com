@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
-  const { email_address, first_name, ...fields } = await request.json();
+  const { email_address, first_name, state, fields } = await request.json();
 
   if (!email_address || !first_name) {
     return NextResponse.json(
@@ -22,9 +22,10 @@ export async function POST(request: Request) {
   }
 
   const data = {
+    api_key: API_KEY,
     email_address,
     first_name,
-    state: "active",
+    state,
     fields,
   };
 
@@ -33,7 +34,6 @@ export async function POST(request: Request) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "X-Kit-Api-Key": API_KEY,
       },
       body: JSON.stringify(data),
     });
