@@ -1,7 +1,7 @@
-fix(convertkit): Correctly handle nested fields in API route
+fix(convertkit): Send API key as a header
 
-This commit resolves the issue where nested fields were not being correctly processed by the API route.
+This commit resolves the authentication issue with the ConvertKit API by sending the API key as a header instead of in the request body.
 
 Changes include:
-- Updated `app/api/subscribe/route.ts` to correctly destructure the `fields` object from the request body.
-- Ensured that the `api_key` is included in the payload sent to the ConvertKit API.
+- Updated `app/api/subscribe/route.ts` to include the `X-Kit-Api-Key` header in the request.
+- Removed the `api_key` from the request body.

@@ -22,7 +22,6 @@ export async function POST(request: Request) {
   }
 
   const data = {
-    api_key: API_KEY,
     email_address,
     first_name,
     state,
@@ -34,6 +33,7 @@ export async function POST(request: Request) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "X-Kit-Api-Key": API_KEY,
       },
       body: JSON.stringify(data),
     });
