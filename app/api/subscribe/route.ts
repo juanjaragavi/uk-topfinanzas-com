@@ -11,8 +11,8 @@ export async function POST(request: Request) {
     );
   }
 
-  const API_KEY = process.env.KIT_API_KEY;
-  const API_URL = process.env.KIT_API_URL;
+  const API_KEY = process.env.NEXT_PUBLIC_KIT_API_KEY;
+  const API_URL = process.env.KIT_API_URL || "https://api.kit.com/v4/subscribers";
 
   if (!API_KEY || !API_URL) {
     return NextResponse.json(
