@@ -1,7 +1,9 @@
-feat: Implement AdZep tag
+feat: Add ConvertKit subscriber action to quiz forms
 
-This commit implements the AdZep tag in the Next.js project according to the provided instructions.
+This commit introduces a new action to the quiz configuration that adds a user as a subscriber to a ConvertKit list upon quiz completion.
 
 Changes include:
-- Updated `app/layout.tsx`: Imported and added `AdZepLinkHandler` to ensure `window.AdZepActivateAds()` is called on all link clicks, in addition to page loads and navigation changes already handled by `AdZepNavigationHandler`.
-- The `AdZep` component continues to load the AdZep script in the `<head>` section.
+- Created a new API route at `app/api/subscribe/route.ts` to handle the ConvertKit subscription logic securely on the server-side.
+- Modified the `handleSubmit` function in `components/credit-card-form.tsx` to send the user's data to the new `/api/subscribe` endpoint.
+- Removed the old `lib/utils/kit-integration.js` file as it is no longer needed.
+- Added `.env.production.local` to manage production-specific environment variables.

@@ -31,7 +31,7 @@ const COOKIE_NAMES = {
 // Cookie validation configuration - use safe defaults during SSR
 const getCookieConfig = () => {
   // Only access environment variables on the client side
-  if (typeof window === 'undefined') {
+  if (typeof window === "undefined") {
     // Server-side: return safe defaults
     return {
       VALIDATION_ENABLED: true,
@@ -39,11 +39,15 @@ const getCookieConfig = () => {
       DEFAULT_EXPIRATION: 30,
     };
   }
-  
+
   // Client-side: can safely access environment variables
   return {
-    VALIDATION_ENABLED: process.env.NEXT_PUBLIC_COOKIE_VALIDATION_ENABLED !== 'false',
-    SHORT_EXPIRATION: parseInt(process.env.NEXT_PUBLIC_COOKIE_SHORT_EXPIRATION || '1', 10),
+    VALIDATION_ENABLED:
+      process.env.NEXT_PUBLIC_COOKIE_VALIDATION_ENABLED !== "false",
+    SHORT_EXPIRATION: parseInt(
+      process.env.NEXT_PUBLIC_COOKIE_SHORT_EXPIRATION || "1",
+      10
+    ),
     DEFAULT_EXPIRATION: 30,
   };
 };
@@ -88,11 +92,11 @@ export default function CreditCardForm() {
   // Check if user is registered based on cookies on component mount
   useEffect(() => {
     if (!mounted) return;
-    
+
     const cookieConfig = getCookieConfig();
     // Skip cookie validation entirely if disabled via environment variable
     if (!cookieConfig.VALIDATION_ENABLED) {
-      console.log('[QUIZ] Cookie validation temporarily disabled');
+      console.log("[QUIZ] Cookie validation temporarily disabled");
       setIsRegisteredUser(false);
       return;
     }
@@ -237,27 +241,19 @@ export default function CreditCardForm() {
 
       // Send data to Kit API only if not a registered user or if we have new email data
       if (!isRegisteredUser || formData.email) {
-        const apiKey = process.env.NEXT_PUBLIC_KIT_API_KEY || '';
-        
-        if (!apiKey) {
-          console.error("Kit API key is not configured");
-          // Continue with redirect anyway
-        } else {
-          const headers = {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-            "X-Kit-Api-Key": apiKey,
-          };
-
-          // Make the API request
-          const response = await fetch("https://api.kit.com/v4/subscribers", {
+        try {
+          const response = await fetch("/api/subscribe", {
             method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
             body: JSON.stringify(kitData),
-            headers: headers,
           });
 
           const result = await response.json();
-          console.log("Kit API response:", result);
+          console.log("Subscription API response:", result);
+        } catch (error) {
+          console.error("Error calling subscription API:", error);
         }
       }
     } catch (error) {
@@ -265,12 +261,14 @@ export default function CreditCardForm() {
     } finally {
       const cookieConfig = getCookieConfig();
       // Determine cookie expiration based on configuration
-      const cookieExpiration = cookieConfig.VALIDATION_ENABLED 
-        ? cookieConfig.DEFAULT_EXPIRATION 
+      const cookieExpiration = cookieConfig.VALIDATION_ENABLED
+        ? cookieConfig.DEFAULT_EXPIRATION
         : cookieConfig.SHORT_EXPIRATION;
 
       // Set cookies to indicate quiz completion and user registration
-      Cookies.set(COOKIE_NAMES.QUIZ_COMPLETED, "true", { expires: cookieExpiration }); 
+      Cookies.set(COOKIE_NAMES.QUIZ_COMPLETED, "true", {
+        expires: cookieExpiration,
+      });
 
       // Save user registration status and data for future visits
       if (formData.email) {
@@ -278,21 +276,25 @@ export default function CreditCardForm() {
         const registrationData = {
           email: formData.email,
           firstName: formData.firstName,
-          ...((!cookieConfig.VALIDATION_ENABLED) && { 
-            _temporaryMode: true, 
-            _timestamp: new Date().toISOString() 
-          })
+          ...(!cookieConfig.VALIDATION_ENABLED && {
+            _temporaryMode: true,
+            _timestamp: new Date().toISOString(),
+          }),
         };
 
-        Cookies.set(COOKIE_NAMES.USER_REGISTERED, "true", { expires: cookieExpiration });
-        Cookies.set(
-          COOKIE_NAMES.USER_DATA,
-          JSON.stringify(registrationData),
-          { expires: cookieExpiration }
-        );
+        Cookies.set(COOKIE_NAMES.USER_REGISTERED, "true", {
+          expires: cookieExpiration,
+        });
+        Cookies.set(COOKIE_NAMES.USER_DATA, JSON.stringify(registrationData), {
+          expires: cookieExpiration,
+        });
 
         // Log the current cookie validation status for debugging
-        console.log(`[QUIZ] Cookie validation: ${cookieConfig.VALIDATION_ENABLED ? 'enabled' : 'disabled'}, expiration: ${cookieExpiration} days`);
+        console.log(
+          `[QUIZ] Cookie validation: ${
+            cookieConfig.VALIDATION_ENABLED ? "enabled" : "disabled"
+          }, expiration: ${cookieExpiration} days`
+        );
       }
 
       // Redirect to UK results page using Next.js router
