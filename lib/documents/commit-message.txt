@@ -1,8 +1,8 @@
-fix(kit-integration): Align payload with API requirements
+feat(convertkit): Map quiz responses to API payload
 
-This commit resolves a validation error that prevented user information from being added to KIT. The `email` field was being sent incorrectly, causing the API to reject the payload.
+This commit aligns the quiz response data with the ConvertKit API payload structure, ensuring that user information is correctly mapped and sent.
 
 Changes include:
-- Updated `app/api/subscribe/route.ts` to correctly handle the `email_address` field and ensure the `state` is set to "active".
-- Modified `components/credit-card-form.tsx` to send `email_address` instead of `email` and include the `state: "active"` field.
-- Ensured the `last_name` field is correctly nested within the `fields` object in the payload.
+- Modified `components/credit-card-form.tsx` to dynamically map quiz answers to the `kitData` object.
+- Ensured the payload includes the mandatory `pais: "Reino Unido"` and `quiz_tarjetas: "SI"` key-value pairs.
+- Removed hardcoded values from the `fields` object, allowing for flexible data mapping based on user input.
