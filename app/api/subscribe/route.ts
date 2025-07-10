@@ -11,11 +11,17 @@ export async function POST(request: Request) {
     );
   }
 
-  const API_KEY = process.env.NEXT_PUBLIC_KIT_API_KEY;
-  const API_URL = "https://api.kit.com/v4/subscribers";
+  const API_KEY = process.env.KIT_API_KEY;
+  const API_URL = process.env.KIT_API_URL;
+
+  if (!API_KEY || !API_URL) {
+    return NextResponse.json(
+      { error: "API key or URL is not configured" },
+      { status: 500 }
+    );
+  }
 
   const data = {
-    api_key: API_KEY,
     email: email_address,
     first_name,
     last_name,
@@ -27,6 +33,7 @@ export async function POST(request: Request) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "X-Kit-Api-Key": API_KEY,
       },
       body: JSON.stringify(data),
     });

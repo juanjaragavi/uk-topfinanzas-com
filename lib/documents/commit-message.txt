@@ -1,9 +1,7 @@
-feat: Add ConvertKit subscriber action to quiz forms
+fix: Correct ConvertKit API authentication
 
-This commit introduces a new action to the quiz configuration that adds a user as a subscriber to a ConvertKit list upon quiz completion.
+This commit fixes the ConvertKit integration by correctly authenticating with the API.
 
 Changes include:
-- Created a new API route at `app/api/subscribe/route.ts` to handle the ConvertKit subscription logic securely on the server-side.
-- Modified the `handleSubmit` function in `components/credit-card-form.tsx` to send the user's data to the new `/api/subscribe` endpoint.
-- Removed the old `lib/utils/kit-integration.js` file as it is no longer needed.
-- Added `.env.production.local` to manage production-specific environment variables.
+- Updated `app/api/subscribe/route.ts` to send the API key in the `X-Kit-Api-Key` header instead of the request body.
+- The API route now uses the `KIT_API_KEY` and `KIT_API_URL` environment variables for better security and configuration.
