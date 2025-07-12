@@ -3,6 +3,4 @@ feat: integrate quiz data with Google Sheets
 This commit introduces Google Sheets integration for the quiz data. The quiz form now sends the filled data to a specified Google Sheet.
 
 Changes include:
-- Added a new API route `app/api/sheets/route.ts` to handle Google Sheets integration.
-- Updated `components/credit-card-form.tsx` to send quiz data to the new API route.
-- Removed the `gcp-auth/` directory, which is no longer needed.
+- Modified `app/layout.tsx`

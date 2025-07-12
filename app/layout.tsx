@@ -143,7 +143,7 @@ export default function RootLayout({
             __html: criticalCSS,
           }}
         />
-
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta
           httpEquiv="Cache-Control"
           content="public, max-age=31536000, immutable"
