@@ -1,1 +1,4 @@
-fix: Ensure .clinerules directory is tracked and committed
+feat: Update project documentation and workflow
+
+- Update GEMINI.md with the latest project information.
+- Clear the commit message file for the next commit.
