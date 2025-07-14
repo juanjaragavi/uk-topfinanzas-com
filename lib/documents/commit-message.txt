@@ -1,1 +1,1 @@
-feat: Add .clinerules directory for custom instructions
+fix: Ensure .clinerules directory is tracked and committed

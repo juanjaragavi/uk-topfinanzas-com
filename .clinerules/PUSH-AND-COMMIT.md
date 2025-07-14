@@ -14,7 +14,7 @@ This procedure is initiated when the user issues the prompt "Push and commit our
 
     ```json
     {
-      "repo_path": "/Users/macbookpro/GitHub/budgetbee"
+      "repo_path": "/Users/macbookpro/GitHub/uk-topfinanzas-com"
     }
     ```
 
