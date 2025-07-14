@@ -1,6 +1,1 @@
-feat: integrate quiz data with Google Sheets
-
-This commit introduces Google Sheets integration for the quiz data. The quiz form now sends the filled data to a specified Google Sheet.
-
-Changes include:
-- Modified `app/layout.tsx`
+feat: Add .clinerules directory for custom instructions
