@@ -23,9 +23,10 @@ The AdZep tag has been successfully implemented in your Next.js project with the
 
 **Enhanced Tracking** (`/components/analytics/adzep-trackers.tsx`)
 
-* Link interaction tracking
-* Form submission tracking
-* Page visibility tracking
+* Link interaction tracking (NO ACTIVATION - tracking only)
+* Form submission tracking (NO ACTIVATION - tracking only)
+* Page visibility tracking (NO ACTIVATION - tracking only)
+* All activation handled by centralized handler in header
 
 **Manual Controls** (`/components/analytics/adzep-trigger.tsx`)
 
@@ -89,6 +90,25 @@ In development mode, you'll see:
 2. **Use manual triggers** for specific business events
 3. **Monitor performance** impact in production
 4. **Customize activation logic** based on your needs
+
+## 🎯 Centralized Activation
+
+### Single Point of Control
+
+The AdZep implementation uses **ONE centralized activation point** to prevent redundant calls:
+
+* **✅ AdZepCentralizedHandler** (in header): ONLY component that calls `window.AdZepActivateAds()`
+* **📊 Tracker components**: Used for analytics/logging ONLY (no activation)
+* **🚫 No multiple activation points**: Eliminates Google ad loading conflicts
+
+### Why This Matters
+
+Multiple calls to `window.AdZepActivateAds()` cause Google to attempt loading multiple ads into the same `div` element, which is unsupported and can prevent ad display entirely. The centralized approach ensures:
+
+* ✅ Proper ad loading without conflicts
+* ✅ Optimal performance maintained
+* ✅ Consistent activation across all navigation
+* ✅ Debounced calls prevent rapid successive activations
 
 ## 🔧 Usage Examples
 

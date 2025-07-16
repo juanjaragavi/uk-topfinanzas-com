@@ -67,8 +67,9 @@ export function useAdZep() {
 
 /**
  * AdZep Link Click Handler Component
- * - Automatically calls window.AdZepActivateAds() on link clicks
- * - Handles both internal and external links
+ * - Simplified version that only handles link click tracking
+ * - Does NOT call window.AdZepActivateAds() (handled by centralized handler)
+ * - Kept for potential future link-specific analytics
  */
 export function AdZepLinkHandler() {
   useEffect(() => {
@@ -80,26 +81,16 @@ export function AdZepLinkHandler() {
       const target = event.target as HTMLElement;
       const link = target.closest("a");
 
-      if (link && window.AdZepActivateAds) {
-        try {
-          window.AdZepActivateAds();
-        } catch (error) {
-          console.warn("Error activating AdZep ads on link click:", error);
-        }
+      if (link && process.env.NODE_ENV === "development") {
+        console.log("AdZep: Link click detected", {
+          href: link.href,
+          text: link.textContent?.trim(),
+        });
       }
     };
 
-    // Add event listener for link clicks
+    // Add event listener for link clicks (passive tracking only)
     document.addEventListener("click", handleLinkClick);
-
-    // Initial activation on page load
-    if (window.AdZepActivateAds) {
-      try {
-        window.AdZepActivateAds();
-      } catch (error) {
-        console.warn("Error activating AdZep ads on page load:", error);
-      }
-    }
 
     // Cleanup
     return () => {
@@ -112,9 +103,9 @@ export function AdZepLinkHandler() {
 
 /**
  * AdZep Navigation Handler
- * - Integrates with Next.js navigation to call activateAds on route changes
- * - Works with the existing UTM tracking system
- * - Properly handles both internal navigation and browser back/forward
+ * - Simplified version that only handles navigation tracking
+ * - Does NOT call window.AdZepActivateAds() (handled by centralized handler)
+ * - Kept for potential future navigation-specific analytics
  */
 export function AdZepNavigationHandler() {
   const pathname = usePathname();
@@ -123,107 +114,98 @@ export function AdZepNavigationHandler() {
     // Only run in the browser
     if (typeof window === "undefined") return;
 
-    // Call activateAds on initial page load
-    const activateOnLoad = () => {
+    if (process.env.NODE_ENV === "development") {
+      console.log("AdZep: Navigation detected to pathname:", pathname);
+    }
+  }, [pathname]);
+
+  return null;
+}
+
+/**
+ * AdZep Centralized Handler
+ * - Single centralized component for AdZep activation
+ * - Integrates with navigation to call window.AdZepActivateAds() once per event
+ * - Eliminates redundant calls and multiple invocation points
+ * - Designed to be used in the Header component for consistent activation
+ * - Includes debouncing to prevent rapid successive calls
+ */
+export function AdZepCentralizedHandler() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    // Only run in the browser
+    if (typeof window === "undefined") return;
+
+    // Debounce mechanism to prevent rapid successive calls
+    let lastActivationTime = 0;
+    const DEBOUNCE_DELAY = 500; // 500ms debounce
+
+    // Single activation function with proper error handling and debouncing
+    const activateAds = () => {
+      const now = Date.now();
+      
+      // Check if we're within the debounce period
+      if (now - lastActivationTime < DEBOUNCE_DELAY) {
+        if (process.env.NODE_ENV === "development") {
+          console.log("AdZep: Activation skipped due to debounce");
+        }
+        return;
+      }
+
       if (window.AdZepActivateAds) {
         try {
           window.AdZepActivateAds();
+          lastActivationTime = now;
 
           if (process.env.NODE_ENV === "development") {
             console.log(
-              "AdZep: Navigation handler activated ads on page load for pathname:",
-              pathname
+              "AdZep: Centralized activation successful for pathname:",
+              pathname,
+              "at",
+              new Date().toISOString()
             );
           }
         } catch (error) {
-          console.warn("Error activating AdZep ads on navigation:", error);
+          console.warn("AdZep: Error during centralized activation:", error);
+        }
+      } else {
+        if (process.env.NODE_ENV === "development") {
+          console.warn("AdZep: window.AdZepActivateAds not available");
         }
       }
     };
 
     // Activate immediately if script is already loaded
     if (window.AdZepActivateAds) {
-      activateOnLoad();
+      activateAds();
     } else {
-      // Wait for script to load if not available yet
-      const checkAndActivate = () => {
-        if (window.AdZepActivateAds) {
-          activateOnLoad();
-        } else {
-          setTimeout(checkAndActivate, 100); // Check every 100ms
-        }
+      // Single timeout to wait for script loading
+      const timeoutId = setTimeout(() => {
+        activateAds();
+      }, 1000);
+
+      return () => {
+        clearTimeout(timeoutId);
       };
-      checkAndActivate();
     }
 
-    // Listen for navigation events (works with Next.js router)
-    const handleNavigation = () => {
-      // Small delay to ensure page content is loaded
+    // Listen for browser navigation (back/forward)
+    const handleBrowserNavigation = () => {
+      // Use a shorter delay for browser navigation but still debounced
       setTimeout(() => {
-        if (window.AdZepActivateAds) {
-          try {
-            window.AdZepActivateAds();
-
-            if (process.env.NODE_ENV === "development") {
-              console.log(
-                "AdZep: Navigation handler activated ads on browser navigation for pathname:",
-                pathname
-              );
-            }
-          } catch (error) {
-            console.warn("Error activating AdZep ads on navigation:", error);
-          }
-        }
-      }, 500);
+        activateAds();
+      }, 100);
     };
 
-    // Listen for popstate (back/forward navigation)
-    window.addEventListener("popstate", handleNavigation);
+    // Add browser navigation listener
+    window.addEventListener("popstate", handleBrowserNavigation);
 
     // Cleanup
     return () => {
-      window.removeEventListener("popstate", handleNavigation);
+      window.removeEventListener("popstate", handleBrowserNavigation);
     };
-  }, []);
-
-  // This useEffect will trigger on every pathname change (Next.js internal navigation)
-  useEffect(() => {
-    // Only run in the browser
-    if (typeof window === "undefined") return;
-
-    if (process.env.NODE_ENV === "development") {
-      console.log("AdZep: Pathname changed to:", pathname);
-    }
-
-    // Longer delay to ensure page content and Next.js routing is complete
-    const timer = setTimeout(() => {
-      if (window.AdZepActivateAds) {
-        try {
-          window.AdZepActivateAds();
-
-          if (process.env.NODE_ENV === "development") {
-            console.log(
-              "AdZep: Navigation handler activated ads on route change to:",
-              pathname
-            );
-          }
-        } catch (error) {
-          console.warn("Error activating AdZep ads on route change:", error);
-        }
-      } else {
-        if (process.env.NODE_ENV === "development") {
-          console.warn(
-            "AdZep: window.AdZepActivateAds not available on route change"
-          );
-        }
-      }
-    }, 1000); // Increased delay to ensure proper Next.js navigation completion
-
-    // Cleanup
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [pathname]); // This will trigger on every route change
+  }, [pathname]); // Trigger on pathname changes for Next.js navigation
 
   return null;
 }

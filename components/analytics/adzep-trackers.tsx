@@ -6,12 +6,11 @@ import { useAdZep } from "./adzep";
 /**
  * Enhanced AdZep Link Tracker
  * - Provides enhanced link tracking for specific pages
- * - Can be imported and used in pages that need additional tracking
- * - Integrates with the main AdZep system
+ * - DOES NOT call activateAds() - activation is handled by AdZepCentralizedHandler
+ * - Can be imported and used in pages that need additional tracking/logging
+ * - Integrates with the main AdZep system for analytics purposes only
  */
 export default function AdZepLinkTracker() {
-  const { activateAds } = useAdZep();
-
   useEffect(() => {
     // Only run in the browser
     if (typeof window === "undefined") return;
@@ -21,25 +20,20 @@ export default function AdZepLinkTracker() {
       const link = target.closest("a, button");
 
       if (link) {
-        // Call activateAds for any link or button interaction
-        // Use setTimeout to ensure this doesn't interfere with navigation
-        setTimeout(() => {
-          activateAds();
-        }, 0);
-
-        // Log for debugging in development
+        // Only log for debugging/tracking purposes
+        // AdZep activation is handled by AdZepCentralizedHandler in header
         if (process.env.NODE_ENV === "development") {
-          console.log("AdZep: Link interaction detected", {
+          console.log("AdZep: Link interaction detected (tracking only)", {
             type: link.tagName,
             href: link.getAttribute("href"),
             text: link.textContent?.substring(0, 50),
+            note: "Activation handled by AdZepCentralizedHandler"
           });
         }
       }
     };
 
-    // Only track click events to avoid interfering with navigation
-    // Remove mousedown and touchstart that could block normal navigation
+    // Only track click events for logging/analytics purposes
     document.addEventListener("click", handleLinkInteraction, {
       passive: true,
     });
@@ -48,27 +42,28 @@ export default function AdZepLinkTracker() {
     return () => {
       document.removeEventListener("click", handleLinkInteraction);
     };
-  }, [activateAds]);
+  }, []); // Removed activateAds dependency since we're not calling it
 
   return null;
 }
 
 /**
  * AdZep Form Tracker
- * - Tracks form submissions and interactions
+ * - Tracks form submissions and interactions for analytics
+ * - DOES NOT call activateAds() - activation is handled by AdZepCentralizedHandler
  * - Useful for contact forms, quiz forms, etc.
  */
 export function AdZepFormTracker() {
-  const { activateAds } = useAdZep();
-
   useEffect(() => {
     if (typeof window === "undefined") return;
 
     const handleFormSubmit = (event: Event) => {
-      activateAds();
-
+      // Only log for debugging/tracking purposes
+      // AdZep activation is handled by AdZepCentralizedHandler in header
       if (process.env.NODE_ENV === "development") {
-        console.log("AdZep: Form submission detected");
+        console.log("AdZep: Form submission detected (tracking only)", {
+          note: "Activation handled by AdZepCentralizedHandler"
+        });
       }
     };
 
@@ -79,14 +74,18 @@ export function AdZepFormTracker() {
         target.tagName === "SELECT" ||
         target.tagName === "TEXTAREA"
       ) {
-        activateAds();
+        // Only log for debugging/tracking purposes
+        if (process.env.NODE_ENV === "development") {
+          console.log("AdZep: Form interaction detected (tracking only)", {
+            elementType: target.tagName,
+            note: "Activation handled by AdZepCentralizedHandler"
+          });
+        }
       }
     };
 
-    // Track form submissions
+    // Track form submissions and interactions for analytics only
     document.addEventListener("submit", handleFormSubmit);
-
-    // Track form interactions
     document.addEventListener("change", handleFormInteraction);
     document.addEventListener("focus", handleFormInteraction);
 
@@ -95,28 +94,29 @@ export function AdZepFormTracker() {
       document.removeEventListener("change", handleFormInteraction);
       document.removeEventListener("focus", handleFormInteraction);
     };
-  }, [activateAds]);
+  }, []); // Removed activateAds dependency since we're not calling it
 
   return null;
 }
 
 /**
  * AdZep Page Tracker
- * - Tracks page visibility changes
- * - Activates ads when page becomes visible
+ * - Tracks page visibility changes for analytics
+ * - DOES NOT call activateAds() - activation is handled by AdZepCentralizedHandler
+ * - Useful for monitoring page engagement
  */
 export function AdZepPageTracker() {
-  const { activateAds } = useAdZep();
-
   useEffect(() => {
     if (typeof window === "undefined") return;
 
     const handleVisibilityChange = () => {
       if (!document.hidden) {
-        activateAds();
-
+        // Only log for debugging/tracking purposes
+        // AdZep activation is handled by AdZepCentralizedHandler in header
         if (process.env.NODE_ENV === "development") {
-          console.log("AdZep: Page became visible");
+          console.log("AdZep: Page became visible (tracking only)", {
+            note: "Activation handled by AdZepCentralizedHandler"
+          });
         }
       }
     };
@@ -126,7 +126,7 @@ export function AdZepPageTracker() {
     return () => {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
-  }, [activateAds]);
+  }, []); // Removed activateAds dependency since we're not calling it
 
   return null;
 }

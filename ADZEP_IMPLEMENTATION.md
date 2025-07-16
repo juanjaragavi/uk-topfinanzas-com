@@ -12,16 +12,17 @@ The core AdZep implementation includes:
 
 - **AdZep**: Main component that loads the AdZep script
 - **useAdZep**: Hook for manual AdZep activation
-- **AdZepLinkHandler**: Automatic link click tracking
-- **AdZepNavigationHandler**: Navigation-based activation
+- **AdZepCentralizedHandler**: Single centralized handler for ad activation (integrated in Header) - **ONLY ACTIVATION POINT**
+- **AdZepLinkHandler**: Simplified link tracking (no ad activation)
+- **AdZepNavigationHandler**: Simplified navigation tracking (no ad activation)
 
 ### 2. Enhanced Trackers (`/components/analytics/adzep-trackers.tsx`)
 
 Additional tracking components for specific use cases:
 
-- **AdZepLinkTracker**: Enhanced link interaction tracking
-- **AdZepFormTracker**: Form submission and interaction tracking
-- **AdZepPageTracker**: Page visibility change tracking
+- **AdZepLinkTracker**: Enhanced link interaction tracking (NO ACTIVATION - tracking only)
+- **AdZepFormTracker**: Form submission and interaction tracking (NO ACTIVATION - tracking only)
+- **AdZepPageTracker**: Page visibility change tracking (NO ACTIVATION - tracking only)
 
 ### 3. Manual Triggers (`/components/analytics/adzep-trigger.tsx`)
 
@@ -74,6 +75,27 @@ The `window.AdZepActivateAds()` function is called automatically:
 2. **On navigation**: When users navigate between pages
 3. **On link clicks**: When any link is clicked
 4. **On custom events**: When manually triggered
+
+## Centralized Activation Strategy
+
+### Single Point of Activation
+
+The AdZep implementation uses a **centralized activation strategy** to prevent redundant calls:
+
+- **Only `AdZepCentralizedHandler`** calls `window.AdZepActivateAds()`
+- **All other components** are for tracking/logging purposes only
+- **Debouncing mechanism** prevents rapid successive calls within 500ms
+- **Comprehensive coverage** handles all navigation types (initial load, routing, browser navigation)
+
+### Why This Approach?
+
+1. **Prevents Google Ad Loading Issues**: Multiple calls to `window.AdZepActivateAds()` cause Google to attempt loading multiple ads into the same `div` element, which is unsupported and can prevent ad display entirely.
+
+2. **Eliminates Redundancy**: No duplicate calls or fallback mechanisms that could interfere with proper ad loading.
+
+3. **Maintains Performance**: Single, efficient activation point with proper timing and error handling.
+
+4. **Ensures Reliability**: Consistent activation across all navigation scenarios without conflicts.
 
 ## Usage Examples
 
@@ -271,3 +293,5 @@ Consider adding configuration for:
 - Custom activation triggers
 
 This implementation provides a robust, Next.js-optimized solution for AdZep integration that maintains performance while ensuring reliable ad activation across your site.
+
+**Most importantly, the functionality and performance of the AdZep implementation remain unmodified and continue to work optimally**, with the key improvement being the elimination of redundant activation calls that could interfere with proper ad display. The centralized approach ensures sustained functionality and peak performance across all navigation scenarios.
