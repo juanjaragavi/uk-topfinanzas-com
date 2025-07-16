@@ -1,10 +1,1 @@
-feat: Centralize AdZep activation to prevent redundant calls
-
-- Implement AdZepCentralizedHandler as single activation point in header
-- Add debouncing mechanism to prevent rapid successive calls within 500ms
-- Remove activation calls from tracker components (AdZepLinkTracker, AdZepFormTracker, AdZepPageTracker)
-- Convert tracker components to analytics/logging only functionality
-- Remove redundant AdZepNavigationHandler and AdZepLinkHandler from layout
-- Update documentation to reflect centralized activation strategy
-- Prevent Google ad loading conflicts by eliminating multiple activation points
-- Maintain optimal performance while ensuring reliable ad display
+feat: Update .clinerules and add new instruction files
