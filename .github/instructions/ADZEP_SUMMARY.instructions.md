@@ -1,3 +1,7 @@
+---
+applyTo: "**"
+---
+
 # AdZep Implementation Summary
 
 ## ✅ Implementation Complete
@@ -8,51 +12,51 @@ The AdZep tag has been successfully implemented in your Next.js project with the
 
 **Script Loading** (`/components/analytics/adzep.tsx`)
 
-* AdZep script loaded with Next.js optimization
-* Integrated into `app/layout.tsx` for global availability
-* Includes error handling and performance monitoring
+- AdZep script loaded with Next.js optimization
+- Integrated into `app/layout.tsx` for global availability
+- Includes error handling and performance monitoring
 
 **Automatic Function Invocation** (`/components/analytics/adzep.tsx`)
 
-* `window.AdZepActivateAds()` called on initial page load
-* `window.AdZepActivateAds()` called on internal navigation (Next.js routing)
-* `window.AdZepActivateAds()` called on browser navigation (back/forward)
-* `window.AdZepActivateAds()` called on link clicks
+- `window.AdZepActivateAds()` called on initial page load
+- `window.AdZepActivateAds()` called on internal navigation (Next.js routing)
+- `window.AdZepActivateAds()` called on browser navigation (back/forward)
+- `window.AdZepActivateAds()` called on link clicks
 
 ### 🚀 Advanced Features
 
 **Enhanced Tracking** (`/components/analytics/adzep-trackers.tsx`)
 
-* Link interaction tracking
-* Form submission tracking
-* Page visibility tracking
+- Link interaction tracking
+- Form submission tracking
+- Page visibility tracking
 
 **Manual Controls** (`/components/analytics/adzep-trigger.tsx`)
 
-* Custom trigger components
-* Pre-configured buttons and links
-* Programmatic activation hook
+- Custom trigger components
+- Pre-configured buttons and links
+- Programmatic activation hook
 
 **Development Tools** (`/components/analytics/adzep-test.tsx`)
 
-* Test panel (development mode only)
-* Real-time status monitoring
-* Activation counter and logging
+- Test panel (development mode only)
+- Real-time status monitoring
+- Activation counter and logging
 
 ## 🛠️ Files Modified/Created
 
 ### New Files Created
 
-* `/components/analytics/adzep.tsx` - Main AdZep component
-* `/components/analytics/adzep-trackers.tsx` - Enhanced tracking
-* `/components/analytics/adzep-trigger.tsx` - Manual triggers
-* `/components/analytics/adzep-test.tsx` - Development testing
-* `/ADZEP_IMPLEMENTATION.md` - Comprehensive documentation
+- `/components/analytics/adzep.tsx` - Main AdZep component
+- `/components/analytics/adzep-trackers.tsx` - Enhanced tracking
+- `/components/analytics/adzep-trigger.tsx` - Manual triggers
+- `/components/analytics/adzep-test.tsx` - Development testing
+- `/ADZEP_IMPLEMENTATION.md` - Comprehensive documentation
 
 ### Files Modified
 
-* `/app/layout.tsx` - Added AdZep integration
-* `/app/credit-card-recommender-p1/page.tsx` - Example enhanced tracking
+- `/app/layout.tsx` - Added AdZep integration
+- `/app/credit-card-recommender-p1/page.tsx` - Example enhanced tracking
 
 ## 🎮 How It Works
 
@@ -69,10 +73,10 @@ Once deployed, the system works automatically:
 
 In development mode, you'll see:
 
-* Black test panel in top-right corner
-* Console logs for all AdZep activities
-* Real-time status of script loading
-* Activation counters and timestamps
+- Black test panel in top-right corner
+- Console logs for all AdZep activities
+- Real-time status of script loading
+- Activation counters and timestamps
 
 ## 🚀 Next Steps
 
@@ -120,7 +124,7 @@ In development mode, you'll see:
 
     function MyComponent() {
     const { activateAds } = useAdZep();
-    
+
     const handleCustomEvent = () => {
         activateAds(); // Manual activation
     };
@@ -129,12 +133,12 @@ In development mode, you'll see:
 
 ## ✅ Benefits of This Implementation
 
-* **Next.js Optimized**: Uses Next.js best practices for script loading
-* **Performance Focused**: Minimal impact on page speed and interactivity
-* **Automatic**: Works without manual intervention
-* **Flexible**: Can be customized for specific needs
-* **Debuggable**: Comprehensive logging and testing tools
-* **Maintainable**: Well-structured and documented code
-* **Future-Proof**: Easy to extend and modify
+- **Next.js Optimized**: Uses Next.js best practices for script loading
+- **Performance Focused**: Minimal impact on page speed and interactivity
+- **Automatic**: Works without manual intervention
+- **Flexible**: Can be customized for specific needs
+- **Debuggable**: Comprehensive logging and testing tools
+- **Maintainable**: Well-structured and documented code
+- **Future-Proof**: Easy to extend and modify
 
 Your AdZep implementation is now ready for production! 🎉

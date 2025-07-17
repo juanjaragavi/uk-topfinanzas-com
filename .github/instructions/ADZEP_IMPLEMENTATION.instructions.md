@@ -1,3 +1,7 @@
+---
+applyTo: "**"
+---
+
 # AdZep Integration Guide
 
 ## Overview
