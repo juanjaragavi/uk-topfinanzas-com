@@ -28,13 +28,6 @@ export default function StarlingBankCreditCardPage() {
               Starling Bank Credit Card: Digital Banking with Purpose
             </h1>
 
-            <div
-              id="uk_topfinanzas_3"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 The Starling Bank Credit Card extends the award-winning digital
@@ -70,13 +63,6 @@ export default function StarlingBankCreditCardPage() {
                   </div>
                 </div>
 
-                <div
-                  id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-6"
-                >
-                  {/* Empty responsive, centered div */}
-                </div>
-
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#250E62] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
@@ -105,6 +91,24 @@ export default function StarlingBankCreditCardPage() {
                   </div>
                 </div>
               </div>
+
+              <div
+                id="uk_topfinanzas_3"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
+
+              <div
+                id="uk_topfinanzas_4"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/starling-bank-credit-card-requirements">

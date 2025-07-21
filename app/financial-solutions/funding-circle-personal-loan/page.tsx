@@ -29,13 +29,6 @@ export default function FundingCirclePersonalLoanPage() {
               Funding Circle Business Loan: Fast, Flexible Finance for SMEs
             </h1>
 
-            <div
-              id="uk_topfinanzas_3"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Funding Circle provides fast and flexible business loans
@@ -100,6 +93,15 @@ export default function FundingCirclePersonalLoanPage() {
                 </div>
               </div>
 
+              <div
+                id="uk_topfinanzas_3"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/funding-circle-personal-loan-requirements">
                   <Button className="bg-[#004C59] hover:bg-teal-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -149,13 +151,6 @@ export default function FundingCirclePersonalLoanPage() {
                   Speed and Efficiency Through Fintech
                 </h2>
 
-                <div
-                  id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-6"
-                >
-                  {/* Empty responsive, centered div */}
-                </div>
-
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Leveraging technology, Funding Circle offers a significantly
                   faster application and decision process compared to many
@@ -164,6 +159,15 @@ export default function FundingCirclePersonalLoanPage() {
                   is crucial for SMEs needing quick access to capital to seize
                   opportunities or manage cash flow effectively.
                 </p>
+
+                <div
+                  id="uk_topfinanzas_4"
+                  className="items-center justify-center flex w-full my-8"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
+
+                <hr className="my-8" />
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Flexible Terms for Business Cycles

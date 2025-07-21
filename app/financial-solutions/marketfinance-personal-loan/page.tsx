@@ -30,13 +30,6 @@ export default function MarketFinancePersonalLoanPage() {
               MarketFinance: Smart Business Finance Solutions for UK SMEs
             </h1>
 
-            <div
-              id="uk_topfinanzas_3"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 MarketFinance offers a range of fast, flexible finance options
@@ -96,6 +89,15 @@ export default function MarketFinancePersonalLoanPage() {
                 </div>
               </div>
 
+              <div
+                id="uk_topfinanzas_3"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/marketfinance-personal-loan-requirements">
                   <Button className="bg-[#003DA5] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -147,13 +149,6 @@ export default function MarketFinancePersonalLoanPage() {
                   Flexible Business Loans for Growth
                 </h2>
 
-                <div
-                  id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-6"
-                >
-                  {/* Empty responsive, centered div */}
-                </div>
-
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   MarketFinance also provides unsecured business loans,
                   typically ranging from £10,000 to £500,000. These loans can be
@@ -163,6 +158,15 @@ export default function MarketFinancePersonalLoanPage() {
                   often spanning 1 to 4 years, with fixed interest rates
                   providing budget certainty.
                 </p>
+
+                <div
+                  id="uk_topfinanzas_4"
+                  className="items-center justify-center flex w-full my-8"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
+
+                <hr className="my-8" />
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Technology-Driven Speed and Simplicity

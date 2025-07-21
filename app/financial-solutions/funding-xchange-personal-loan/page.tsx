@@ -29,13 +29,6 @@ export default function FundingXchangePersonalLoanPage() {
               Funding Xchange: Smart Comparison for Business Finance
             </h1>
 
-            <div
-              id="uk_topfinanzas_3"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Funding Xchange provides an intelligent platform for UK SMEs to
@@ -101,6 +94,15 @@ export default function FundingXchangePersonalLoanPage() {
                 </div>
               </div>
 
+              <div
+                id="uk_topfinanzas_3"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/funding-xchange-personal-loan-requirements">
                   <Button className="bg-[#008C95] hover:bg-teal-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -147,16 +149,18 @@ export default function FundingXchangePersonalLoanPage() {
                   lenders, and alternative finance providers.
                 </p>
 
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
+                  Access to Diverse Funding Products
+                </h2>
+
                 <div
                   id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-6"
+                  className="items-center justify-center flex w-full my-8"
                 >
                   {/* Empty responsive, centered div */}
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-                  Access to Diverse Funding Products
-                </h2>
+                <hr className="my-8" />
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Through Funding Xchange, businesses can explore a broad range

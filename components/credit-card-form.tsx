@@ -240,6 +240,19 @@ export default function CreditCardForm() {
       // Send data to Kit API only if not a registered user or if we have new email data
       if (!isRegisteredUser || formData.email) {
         try {
+          // Send data to Google Sheets
+          const sheetsData = {
+            ...formData,
+            ...utmParams,
+          };
+          await fetch("/api/sheets", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(sheetsData),
+          });
+
           const response = await fetch("/api/subscribe", {
             method: "POST",
             headers: {

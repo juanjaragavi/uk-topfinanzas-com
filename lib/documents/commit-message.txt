@@ -1,7 +1,9 @@
-fix(convertkit): Send API key as a header
+feat: optimize ad placement and layout
 
-This commit resolves the authentication issue with the ConvertKit API by sending the API key as a header instead of in the request body.
+Refactored the ad unit placement across multiple financial product pages to improve user experience and ad performance.
 
-Changes include:
-- Updated `app/api/subscribe/route.ts` to include the `X-Kit-Api-Key` header in the request.
-- Removed the `api_key` from the request body.
+- Repositioned CTA buttons to appear above ad blocks for better visibility and user interaction.
+- Increased spacing around ad units to create clearer visual separation from other content.
+- Added horizontal rules as visual separators between ad units and surrounding elements.
+
+These changes align with recommendations from the Google Ads Manager to enhance usability and prevent accidental ad clicks.

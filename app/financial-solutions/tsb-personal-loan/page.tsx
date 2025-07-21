@@ -28,13 +28,6 @@ export default function TSBPersonalLoanPage() {
               TSB Personal Loan: Simple, Fair Financing for Your Needs
             </h1>
 
-            <div
-              id="uk_topfinanzas_3"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 TSB Personal Loans offer clear terms, competitive rates, and a
@@ -97,6 +90,15 @@ export default function TSBPersonalLoanPage() {
                 </div>
               </div>
 
+              <div
+                id="uk_topfinanzas_3"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/tsb-personal-loan-requirements">
                   <Button className="bg-[#0A4D8C] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -145,10 +147,12 @@ export default function TSBPersonalLoanPage() {
 
                 <div
                   id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-6"
+                  className="items-center justify-center flex w-full my-8"
                 >
                   {/* Empty responsive, centered div */}
                 </div>
+
+                <hr className="my-8" />
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Clear Terms and Competitive Rates

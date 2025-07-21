@@ -31,13 +31,6 @@ export default function LloydsBankCreditCardPage() {
               Lloyds Bank Credit Card: Flexible Everyday Banking Solutions
             </h1>
 
-            <div
-              id="uk_topfinanzas_3"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 The Lloyds Bank Credit Card offers a balance of everyday value
@@ -93,6 +86,15 @@ export default function LloydsBankCreditCardPage() {
                 </div>
               </div>
 
+              <div
+                id="uk_topfinanzas_3"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/lloyds-bank-credit-card-requirements">
                   <Button className="bg-[#006A4D] hover:bg-green-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -145,13 +147,6 @@ export default function LloydsBankCreditCardPage() {
                   Effective Debt Management Tools
                 </h2>
 
-                <div
-                  id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-6"
-                >
-                  {/* Empty responsive, centered div */}
-                </div>
-
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   For those looking to manage existing credit card debt, the
                   Lloyds Bank Credit Card offers competitive balance transfer
@@ -164,6 +159,15 @@ export default function LloydsBankCreditCardPage() {
                   either the minimum payment, a fixed amount, or the full
                   balance each month.
                 </p>
+
+                <div
+                  id="uk_topfinanzas_4"
+                  className="items-center justify-center flex w-full my-8"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
+
+                <hr className="my-8" />
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Security and Protection

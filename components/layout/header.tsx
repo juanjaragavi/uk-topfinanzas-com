@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { logos } from "@/lib/images/logos";
 import { headerNavigation } from "@/lib/navigation/headerNavigation";
 import { headerContent } from "@/lib/texts/header/content";
+import { AdZepCentralizedHandler } from "@/components/analytics/adzep";
 // Removed searchIndex, SearchItem
 
 export function Header() {
@@ -96,7 +97,11 @@ export function Header() {
   // Removed search-related console log
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
+    <>
+      {/* AdZep Centralized Handler - Single point of activation */}
+      <AdZepCentralizedHandler />
+      
+      <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo - optimized to reduce LCP */}
@@ -495,5 +500,6 @@ export function Header() {
         </AnimatePresence>
       </div>
     </header>
+    </>
   );
 }

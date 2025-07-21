@@ -28,13 +28,6 @@ export default function SantanderUKCreditCardPage() {
               Santander UK Credit Card: Smart Banking for Modern Life
             </h1>
 
-            <div
-              id="uk_topfinanzas_3"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 The Santander UK Credit Card combines competitive cashback
@@ -95,6 +88,15 @@ export default function SantanderUKCreditCardPage() {
                 </div>
               </div>
 
+              <div
+                id="uk_topfinanzas_3"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/santander-uk-credit-card-requirements">
                   <Button className="bg-[#EC0000] hover:bg-red-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -128,13 +130,6 @@ export default function SantanderUKCreditCardPage() {
                   Rewarding Your Spending Habits
                 </h2>
 
-                <div
-                  id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-6"
-                >
-                  {/* Empty responsive, centered div */}
-                </div>
-
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   With the Santander UK Credit Card, your everyday purchases
                   become more valuable through the card's cashback program.
@@ -147,6 +142,15 @@ export default function SantanderUKCreditCardPage() {
                   or making occasional larger purchases, your spending
                   consistently generates returns.
                 </p>
+
+                <div
+                  id="uk_topfinanzas_4"
+                  className="items-center justify-center flex w-full my-8"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
+
+                <hr className="my-8" />
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Flexible Financial Management

@@ -29,13 +29,6 @@ export default function StarlingBankPersonalLoanPage() {
               Delivered
             </h1>
 
-            <div
-              id="uk_topfinanzas_3"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Starling Bank Personal Loans combine competitive rates with the
@@ -97,6 +90,15 @@ export default function StarlingBankPersonalLoanPage() {
                 </div>
               </div>
 
+              <div
+                id="uk_topfinanzas_3"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/starling-bank-personal-loan-requirements">
                   <Button className="bg-[#250E62] hover:bg-purple-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -157,16 +159,18 @@ export default function StarlingBankPersonalLoanPage() {
                   budget.
                 </p>
 
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
+                  Seamless Digital Experience
+                </h2>
+
                 <div
                   id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-6"
+                  className="items-center justify-center flex w-full my-8"
                 >
                   {/* Empty responsive, centered div */}
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-                  Seamless Digital Experience
-                </h2>
+                <hr className="my-8" />
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   The entire loan process, from application to management, is
