@@ -30,13 +30,6 @@ export default function CapifyPersonalLoanPage() {
               Capify: Flexible Financing Solutions for UK Businesses
             </h1>
 
-            <div
-              id="uk_topfinanzas_3"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Capify offers fast, accessible funding options tailored for UK
@@ -86,13 +79,6 @@ export default function CapifyPersonalLoanPage() {
                   </div>
                 </div>
 
-                <div
-                  id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-6"
-                >
-                  {/* Empty responsive, centered div */}
-                </div>
-
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
@@ -106,6 +92,15 @@ export default function CapifyPersonalLoanPage() {
                 </div>
               </div>
 
+              <div
+                id="uk_topfinanzas_3"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/capify-personal-loan-requirements">
                   <Button className="bg-[#00AEEF] hover:bg-blue-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -113,6 +108,15 @@ export default function CapifyPersonalLoanPage() {
                   </Button>
                 </Link>
               </div>
+
+              <div
+                id="uk_topfinanzas_4"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
 
               <div className="my-8 text-left sm:text-left">
                 <Image

@@ -29,13 +29,6 @@ export default function BarclaysPersonalLoanPage() {
               Partner
             </h1>
 
-            <div
-              id="uk_topfinanzas_3"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Barclays Personal Loans combine competitive rates with the
@@ -87,13 +80,6 @@ export default function BarclaysPersonalLoanPage() {
                   </div>
                 </div>
 
-                <div
-                  id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-6"
-                >
-                  {/* Empty responsive, centered div */}
-                </div>
-
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
@@ -107,6 +93,15 @@ export default function BarclaysPersonalLoanPage() {
                 </div>
               </div>
 
+              <div
+                id="uk_topfinanzas_3"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/barclays-personal-loan-requirements">
                   <Button className="bg-[#00AEEF] hover:bg-blue-600 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -114,6 +109,15 @@ export default function BarclaysPersonalLoanPage() {
                   </Button>
                 </Link>
               </div>
+
+              <div
+                id="uk_topfinanzas_4"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
 
               <div className="my-8 text-left sm:text-left">
                 <Image

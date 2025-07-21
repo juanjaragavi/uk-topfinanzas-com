@@ -29,19 +29,6 @@ export default function CreditCardRecommenderPage() {
               Discover Your Ideal Credit Card
             </h1>
 
-            <div
-              id="uk_topfinanzas_1"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
-            <p className="text-left text-xs leading-4 text-gray-800 mb-5">
-              Finding the right card is simple. Maximise rewards, organise your
-              spending and enjoy exclusive benefits. Explore and choose the
-              ideal card for you!
-            </p>
-
             <div className="my-8 text-left sm:text-left">
               <Link href="/financial-solutions/lloyds-bank-credit-card">
                 <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
@@ -54,6 +41,21 @@ export default function CreditCardRecommenderPage() {
                 </Button>
               </Link>
             </div>
+
+            <div
+              id="uk_topfinanzas_1"
+              className="items-center justify-center flex w-full my-8"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
+
+            <hr className="my-8" />
+
+            <p className="text-left text-xs leading-4 text-gray-800 mb-5">
+              Finding the right card is simple. Maximise rewards, organise your
+              spending and enjoy exclusive benefits. Explore and choose the
+              ideal card for you!
+            </p>
 
             <h2 className="text-lg leading-5 font-bold text-gray-800 mb-6">
               Why Choose Our Credit Card Recommender?
@@ -95,19 +97,6 @@ export default function CreditCardRecommenderPage() {
               informed decisions.
             </p>
 
-            <div
-              id="uk_topfinanzas_2"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
-            <p className="text-left text-sm leading-5 text-gray-800 mb-5">
-              With our guide, you'll transform your credit card into a tool that
-              simplifies your finances and helps you achieve your goals without
-              complications.
-            </p>
-
             <div className="mt-6 mb-4">
               <Link href="/financial-solutions/santander-uk-credit-card">
                 <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
@@ -120,6 +109,21 @@ export default function CreditCardRecommenderPage() {
                 </Button>
               </Link>
             </div>
+
+            <div
+              id="uk_topfinanzas_2"
+              className="items-center justify-center flex w-full my-8"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
+
+            <hr className="my-8" />
+
+            <p className="text-left text-sm leading-5 text-gray-800 mb-5">
+              With our guide, you'll transform your credit card into a tool that
+              simplifies your finances and helps you achieve your goals without
+              complications.
+            </p>
 
             <p className="text-left text-sm mb-6">
               <Link

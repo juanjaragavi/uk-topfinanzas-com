@@ -32,13 +32,6 @@ export default function BarclayCardAviosPlusPage() {
               Barclaycard Avios Plus Credit Card: Premium Travel Rewards
             </h1>
 
-            <div
-              id="uk_topfinanzas_3"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">
                 The Barclaycard Avios Plus Credit Card is designed for frequent
@@ -96,6 +89,15 @@ export default function BarclayCardAviosPlusPage() {
                 </div>
               </div>
 
+              <div
+                id="uk_topfinanzas_3"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/barclaycard-avios-plus-requirements">
                   <Button className="bg-[#00395D] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -145,10 +147,12 @@ export default function BarclayCardAviosPlusPage() {
 
                 <div
                   id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-6"
+                  className="items-center justify-center flex w-full my-8"
                 >
                   {/* Empty responsive, centered div */}
                 </div>
+
+                <hr className="my-8" />
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Exclusive Premium Benefits

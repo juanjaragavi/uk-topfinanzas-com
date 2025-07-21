@@ -30,13 +30,6 @@ export default function FundingOptionsPersonalLoanPage() {
               Funding Options: Connecting SMEs with the Right Business Finance
             </h1>
 
-            <div
-              id="uk_topfinanzas_3"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Funding Options is a leading business finance marketplace that
@@ -102,6 +95,15 @@ export default function FundingOptionsPersonalLoanPage() {
                 </div>
               </div>
 
+              <div
+                id="uk_topfinanzas_3"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/funding-options-personal-loan-requirements">
                   <Button className="bg-[#FDB913] hover:bg-yellow-500 text-black font-medium text-md py-2 px-8 rounded-full w-full">
@@ -148,16 +150,18 @@ export default function FundingOptionsPersonalLoanPage() {
                   multiple lenders individually.
                 </p>
 
+                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
+                  A Spectrum of Business Finance Solutions
+                </h2>
+
                 <div
                   id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-6"
+                  className="items-center justify-center flex w-full my-8"
                 >
                   {/* Empty responsive, centered div */}
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
-                  A Spectrum of Business Finance Solutions
-                </h2>
+                <hr className="my-8" />
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Funding Options facilitates access to a wide array of business

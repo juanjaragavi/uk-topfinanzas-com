@@ -27,13 +27,6 @@ export default function CurveCreditCardPage() {
               Curve Credit Card: Your Cards United in One Smart Solution
             </h1>
 
-            <div
-              id="uk_topfinanzas_3"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 The Curve Card revolutionizes how you use credit and debit cards
@@ -79,13 +72,6 @@ export default function CurveCreditCardPage() {
                   </div>
                 </div>
 
-                <div
-                  id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-6"
-                >
-                  {/* Empty responsive, centered div */}
-                </div>
-
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3">
                     <span className="text-white font-bold">➔</span>
@@ -101,6 +87,15 @@ export default function CurveCreditCardPage() {
                 </div>
               </div>
 
+              <div
+                id="uk_topfinanzas_3"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/curve-credit-card-requirements">
                   <Button className="bg-[#E33292] hover:bg-pink-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -108,6 +103,15 @@ export default function CurveCreditCardPage() {
                   </Button>
                 </Link>
               </div>
+
+              <div
+                id="uk_topfinanzas_4"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
 
               <div className="my-8 text-left sm:text-left">
                 <Image

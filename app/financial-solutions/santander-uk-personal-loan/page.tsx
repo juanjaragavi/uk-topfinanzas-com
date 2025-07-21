@@ -28,13 +28,6 @@ export default function SantanderUKPersonalLoanPage() {
               Santander UK Personal Loan: Simple, Flexible Financing
             </h1>
 
-            <div
-              id="uk_topfinanzas_3"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Santander UK Personal Loans offer straightforward borrowing with
@@ -98,6 +91,15 @@ export default function SantanderUKPersonalLoanPage() {
                 </div>
               </div>
 
+              <div
+                id="uk_topfinanzas_3"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/santander-uk-personal-loan-requirements">
                   <Button className="bg-[#EC0000] hover:bg-red-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -135,7 +137,7 @@ export default function SantanderUKPersonalLoanPage() {
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Whether you need funds for a new car, home improvements,
-                  consolidating debts, or covering unexpected expenses,
+                  consolidating existing debts, or covering unexpected expenses,
                   Santander Personal Loans offer flexibility. You can typically
                   borrow between £1,000 and £25,000, with existing Santander
                   customers potentially eligible to borrow up to £35,000. This
@@ -145,10 +147,12 @@ export default function SantanderUKPersonalLoanPage() {
 
                 <div
                   id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-6"
+                  className="items-center justify-center flex w-full my-8"
                 >
                   {/* Empty responsive, centered div */}
                 </div>
+
+                <hr className="my-8" />
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Competitive Rates and Clear Terms

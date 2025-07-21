@@ -28,13 +28,6 @@ export default function HalifaxPersonalLoanPage() {
               Halifax Personal Loan: Reliable Financing from a Household Name
             </h1>
 
-            <div
-              id="uk_topfinanzas_3"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 font-medium mb-8 leading-5 text-left">
                 Halifax Personal Loans offer competitive rates, flexible terms,
@@ -100,6 +93,15 @@ export default function HalifaxPersonalLoanPage() {
                 </div>
               </div>
 
+              <div
+                id="uk_topfinanzas_3"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
+
               <div className="text-left my-8">
                 <Link href="/financial-solutions/halifax-personal-loan-requirements">
                   <Button className="bg-[#007A87] hover:bg-teal-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
@@ -136,13 +138,6 @@ export default function HalifaxPersonalLoanPage() {
                   Funding Life's Important Steps
                 </h2>
 
-                <div
-                  id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-6"
-                >
-                  {/* Empty responsive, centered div */}
-                </div>
-
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">
                   Whether you're planning home improvements, consolidating
                   debts, purchasing a car, or financing a significant life
@@ -152,6 +147,15 @@ export default function HalifaxPersonalLoanPage() {
                   ensuring you can access the right level of funding for your
                   plans.
                 </p>
+
+                <div
+                  id="uk_topfinanzas_4"
+                  className="items-center justify-center flex w-full my-8"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
+
+                <hr className="my-8" />
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   Competitive Rates and Clear Terms
