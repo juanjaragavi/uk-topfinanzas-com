@@ -29,6 +29,12 @@ export default function CreditCardRecommenderPage() {
               Discover Your Ideal Credit Card
             </h1>
 
+            <p className="text-left text-xs leading-4 text-gray-800 mb-5">
+              Finding the right card is simple. Maximise rewards, organise your
+              spending and enjoy exclusive benefits. Explore and choose the
+              ideal card for you!
+            </p>
+
             <div
               id="uk_topfinanzas_1"
               className="items-center justify-center flex w-full my-6"
@@ -36,23 +42,7 @@ export default function CreditCardRecommenderPage() {
               {/* Empty responsive, centered div */}
             </div>
 
-            <p className="text-left text-xs leading-4 text-gray-800 mb-5">
-              Finding the right card is simple. Maximise rewards, organise your
-              spending and enjoy exclusive benefits. Explore and choose the
-              ideal card for you!
-            </p>
-            <div className="my-8 text-left sm:text-left">
-              <Link href="/financial-solutions/barclaycard-avios-plus">
-                <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
-                  <div className="flex items-center space-x-1">
-                    <span>Accept Recommendation</span>
-                    <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
-                      <span className="text-[#80E67D] text-xs">➔</span>
-                    </div>
-                  </div>
-                </Button>
-              </Link>
-            </div>
+            <div className="my-8 text-left sm:text-left"></div>
             <h2 className="text-lg leading-5 font-bold text-gray-800 mb-6">
               Why Choose Our Credit Card Recommender?
             </h2>
@@ -84,6 +74,18 @@ export default function CreditCardRecommenderPage() {
                 </div>
               </div>
             </div>
+
+            <Link href="/financial-solutions/barclaycard-avios-plus">
+              <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
+                <div className="flex items-center space-x-1">
+                  <span>Accept Recommendation</span>
+                  <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
+                    <span className="text-[#80E67D] text-xs">➔</span>
+                  </div>
+                </div>
+              </Button>
+            </Link>
+
             <p className="text-left text-sm leading-5 text-gray-800 mb-4">
               Our recommendations are designed to connect your financial goals
               with cards that suit your needs. From cashback to travel rewards,
