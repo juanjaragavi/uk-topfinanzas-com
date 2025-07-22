@@ -1,5 +1,13 @@
-refactor: Update AdZep tracking on recommender page
+feat: Add comprehensive .github/copilot-instructions.md for AI coding agents
 
-- Refine AdZepLinkTracker and AdZepFormTracker implementation
-- Optimize event handling for better performance
-- Adjust component structure for improved readability
+- Created detailed copilot instructions covering Next.js 14+ App Router architecture
+- Documented dual analytics system (GTM + AdZep) with automatic activation patterns
+- Added multi-step form architecture patterns for financial product recommendations
+- Included UK market specifics with FCA compliance considerations
+- Documented critical workflows including automated git workflow and port 3004 dev server
+- Added TypeScript strict mode patterns and Shadcn/UI component conventions
+- Included Google Sheets API integration patterns and environment management
+- Added performance monitoring and development testing tool documentation
+- Provided project-specific gotchas and file naming conventions
+
+This guide enables AI agents to be immediately productive in the UK financial services codebase by understanding the "why" behind architectural decisions and providing actionable guidance for development workflows.
