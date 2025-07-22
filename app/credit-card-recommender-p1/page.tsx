@@ -86,7 +86,7 @@ export default function CreditCardRecommenderPage() {
               </Button>
             </Link>
 
-            <p className="text-left text-sm leading-5 text-gray-800 mb-4">
+            <p className="text-left text-sm leading-5 text-gray-800 my-4">
               Our recommendations are designed to connect your financial goals
               with cards that suit your needs. From cashback to travel rewards,
               we give you clear, easy-to-understand options so you can make

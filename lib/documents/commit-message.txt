@@ -1,6 +1,5 @@
-feat: Integrate AdZep for enhanced analytics
+refactor: Update AdZep tracking on recommender page
 
-- Add AdZep script loading and automatic activation
-- Implement enhanced tracking for links, forms, and page visibility
-- Introduce manual triggers and a development test panel
-- Update credit card recommender page with AdZep trackers
+- Refine AdZepLinkTracker and AdZepFormTracker implementation
+- Optimize event handling for better performance
+- Adjust component structure for improved readability
