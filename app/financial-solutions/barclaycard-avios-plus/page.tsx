@@ -100,7 +100,7 @@ export default function BarclayCardAviosPlusPage() {
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/barclaycard-avios-plus-requirements">
-                  <Button className="bg-[#006A4D] hover:bg-green-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
+                  <Button className="bg-[#00395D] hover:bg-green-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                     View Requirements
                   </Button>
                 </Link>

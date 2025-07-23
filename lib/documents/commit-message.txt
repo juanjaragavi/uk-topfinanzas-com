@@ -1,3 +1,4 @@
-feat: Relocate ad unit and horizontal rule on product pages
+feat: Complete AdZep integration and update Barclaycard Avios Plus page
 
-Relocated the ad unit div (uk_topfinanzas_3) and its accompanying <hr> element to appear directly below the main product description paragraph on all relevant product pages within the `app/financial-solutions` directory. This change improves user experience by optimizing ad placement. "Requirements" pages were explicitly excluded from this modification.
+This commit finalizes the AdZep integration, including script loading, automatic function invocation, enhanced tracking, and manual controls.
+Updated the Barclaycard Avios Plus financial solution page.

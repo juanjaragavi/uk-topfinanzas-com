@@ -26,17 +26,13 @@ const nextConfig = {
     return [
       {
         // Apply these headers to all static assets
-        source: "/(fonts|images)/(.*)",
+        source:
+          "/((?:fonts|images|media)/.*|favicon.png|apple-touch-icon.png|favicon.ico|site.webmanifest)",
         headers: [
           {
             key: "Cache-Control",
             value: "public, max-age=31536000, immutable",
           },
-          {
-            key: "X-Content-Type-Options",
-            value: "nosniff",
-          },
-          // Removed temporary broad CORS header for local assets
         ],
       },
       {
@@ -88,61 +84,9 @@ const nextConfig = {
         ],
       },
       {
-        // Static media files
-        source: "/media/(.*)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        // Font files
-        source: "/fonts/(.*)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
-      },
-      {
-        // Static root files
-        source: "/(favicon.png|apple-touch-icon.png)",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-          {
-            key: "Content-Type",
-            value: "image/png",
-          },
-        ],
-      },
-      {
-        // Favicon ICO
-        source: "/favicon.ico",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-          {
-            key: "Content-Type",
-            value: "image/x-icon",
-          },
-        ],
-      },
-      {
-        // Web manifest file
+        // Web manifest file - specific headers
         source: "/site.webmanifest",
         headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
           {
             key: "Content-Type",
             value: "application/manifest+json",
@@ -240,13 +184,6 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "storage.googleapis.com",
-        port: "",
-        pathname: "/**",
-      },
-      // Allow any domain temporarily for debugging
-      {
-        protocol: "https",
-        hostname: "**",
         port: "",
         pathname: "/**",
       },
