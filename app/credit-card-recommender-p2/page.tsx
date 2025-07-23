@@ -172,10 +172,22 @@ export default function CreditCardRecommenderPage() {
 
             <p className="text-left text-sm leading-5 text-gray-800 mb-4">
               Our recommendations are designed to connect your financial goals
-              with cards that suit your needs. From cashback to travel rewards,
-              we give you clear, easy-to-understand options so you can make
-              informed decisions.
+              with cards that suit your needs.
             </p>
+
+            <div
+              id="uk_topfinanzas_2"
+              className="items-center justify-center flex w-full my-8"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
+
+            <p className="text-left text-sm leading-5 text-gray-800 mb-4">
+              From cashback to travel rewards, we give you clear,
+              easy-to-understand options so you can make informed decisions.
+            </p>
+
+            <hr className="my-8" />
 
             <div className="mt-6 mb-4">
               <Link href="/financial-solutions/santander-uk-credit-card">
@@ -189,15 +201,6 @@ export default function CreditCardRecommenderPage() {
                 </Button>
               </Link>
             </div>
-
-            <div
-              id="uk_topfinanzas_2"
-              className="items-center justify-center flex w-full my-8"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
-            <hr className="my-8" />
 
             <p className="text-left text-sm leading-5 text-gray-800 mb-5">
               With our guide, you'll transform your credit card into a tool that

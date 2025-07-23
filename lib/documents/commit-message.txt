@@ -1,13 +1,3 @@
-feat: Upgrade Next.js to v15 and React to v19
+feat: Update credit card recommender pages
 
-This commit upgrades the project's Next.js framework to the latest stable version (15.4.3) and React to 19.1.0.
-
-Key changes include:
-- Updated core Next.js and React dependencies in `package.json`.
-- Applied Next.js codemods for automatic migration of API usages and font imports.
-- Resolved `TypeError: Cannot read properties of undefined (reading 'ReactCurrentDispatcher')` by explicitly setting `react-dom` version.
-- Fixed `conflicting public file and page file for /favicon.ico` error by removing the `app/api/favicon/route.ts` and adjusting `app/layout.tsx` to use `public/favicon.png` as the primary favicon.
-- Addressed image warnings related to `fill` prop by ensuring parent elements have `position: relative` in `app/page.tsx`, `app/blog/page.tsx`, `app/personal-finance/page.tsx`, and `components/layout/header.tsx`.
-- Removed deprecated `optimizeFonts` and `swcMinify` configurations from `next.config.mjs`.
-
-The application now builds and runs locally without critical errors.
+This commit includes updates to `app/credit-card-recommender-p2/page.tsx` and `app/credit-card-recommender-p3/page.tsx`.

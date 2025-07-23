@@ -54,6 +54,39 @@ export default function CreditCardRecommenderPage() {
               {/* Empty responsive, centered div */}
             </div>
 
+            <h2 className="text-lg leading-5 font-bold text-gray-800 mb-6">
+              Why Choose Our Credit Card Recommender?
+            </h2>
+
+            <div className="space-y-1 mb-6">
+              <div className="flex items-start">
+                <div className="flex-shrink-0 rounded-full bg-[#F97316] px-1 flex items-center justify-center mr-2">
+                  <span className="text-white font-bold text-sm">✓</span>
+                </div>
+                <div className="text-sm">
+                  <span className="font-bold">Personalised Options</span>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="flex-shrink-0 rounded-full bg-[#F97316] px-1 flex items-center justify-center mr-2">
+                  <span className="text-white font-bold text-sm">✓</span>
+                </div>
+                <div className="text-sm">
+                  <span className="font-bold">Completely Free</span>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="flex-shrink-0 rounded-full bg-[#F97316] px-1 flex items-center justify-center mr-2">
+                  <span className="text-white font-bold text-sm">✓</span>
+                </div>
+                <div className="text-sm">
+                  <span className="font-bold">Expert Advice</span>
+                </div>
+              </div>
+            </div>
+
             <div className="my-8 text-left sm:text-left">
               <AnimatePresence mode="wait">
                 {!cardRevealed && !isShuffling ? (
@@ -135,39 +168,6 @@ export default function CreditCardRecommenderPage() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
-
-            <h2 className="text-lg leading-5 font-bold text-gray-800 mb-6">
-              Why Choose Our Credit Card Recommender?
-            </h2>
-
-            <div className="space-y-1 mb-6">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 rounded-full bg-[#F97316] px-1 flex items-center justify-center mr-2">
-                  <span className="text-white font-bold text-sm">✓</span>
-                </div>
-                <div className="text-sm">
-                  <span className="font-bold">Personalised Options</span>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 rounded-full bg-[#F97316] px-1 flex items-center justify-center mr-2">
-                  <span className="text-white font-bold text-sm">✓</span>
-                </div>
-                <div className="text-sm">
-                  <span className="font-bold">Completely Free</span>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 rounded-full bg-[#F97316] px-1 flex items-center justify-center mr-2">
-                  <span className="text-white font-bold text-sm">✓</span>
-                </div>
-                <div className="text-sm">
-                  <span className="font-bold">Expert Advice</span>
-                </div>
-              </div>
             </div>
 
             <p className="text-left text-sm leading-5 text-gray-800 mb-4">
