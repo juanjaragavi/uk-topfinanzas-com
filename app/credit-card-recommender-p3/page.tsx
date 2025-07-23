@@ -6,9 +6,12 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function CreditCardRecommenderPage() {
   const [openFaq, setOpenFaq] = useState<string | null>("benefits");
+  const [isShuffling, setIsShuffling] = useState(false);
+  const [cardRevealed, setCardRevealed] = useState(false);
 
   const toggleFaq = (id: string) => {
     if (openFaq === id) {
@@ -16,6 +19,15 @@ export default function CreditCardRecommenderPage() {
     } else {
       setOpenFaq(id);
     }
+  };
+
+  const handleRevealCard = () => {
+    setIsShuffling(true);
+    // Simulate shuffling animation for 2 seconds, then reveal the card
+    setTimeout(() => {
+      setIsShuffling(false);
+      setCardRevealed(true);
+    }, 2000);
   };
 
   return (
@@ -43,16 +55,86 @@ export default function CreditCardRecommenderPage() {
             </p>
 
             <div className="my-8 text-left sm:text-left">
-              <Link href="/financial-solutions/starling-bank-credit-card">
-                <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
-                  <div className="flex items-center space-x-1">
-                    <span>Accept Recommendation</span>
-                    <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
-                      <span className="text-[#80E67D] text-xs">➔</span>
+              <AnimatePresence mode="wait">
+                {!cardRevealed && !isShuffling ? (
+                  <motion.div
+                    key="reveal-button"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <Button
+                      onClick={handleRevealCard}
+                      className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center"
+                    >
+                      <div className="flex items-center space-x-1">
+                        <span>Reveal Your Recommended Card</span>
+                        <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
+                          <span className="text-[#80E67D] text-xs">🎴</span>
+                        </div>
+                      </div>
+                    </Button>
+                  </motion.div>
+                ) : isShuffling ? (
+                  <motion.div
+                    key="shuffling"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="flex flex-col items-center space-y-4"
+                  >
+                    <div className="flex space-x-2">
+                      {[0, 1, 2].map((index) => (
+                        <motion.div
+                          key={index}
+                          className="w-16 h-24 bg-gradient-to-br from-[#80E67D] to-[#6AD167] rounded-lg shadow-lg flex items-center justify-center"
+                          animate={{
+                            y: [0, -10, 0],
+                            rotateY: [0, 180, 360],
+                            scale: [1, 1.1, 1],
+                          }}
+                          transition={{
+                            duration: 0.8,
+                            repeat: 2,
+                            delay: index * 0.2,
+                            ease: "easeInOut",
+                          }}
+                        >
+                          <span className="text-white text-xl font-bold">
+                            ?
+                          </span>
+                        </motion.div>
+                      ))}
                     </div>
-                  </div>
-                </Button>
-              </Link>
+                    <motion.p
+                      animate={{ opacity: [0.5, 1, 0.5] }}
+                      transition={{ duration: 1, repeat: Infinity }}
+                      className="text-sm text-gray-600 font-medium"
+                    >
+                      Shuffling cards to find your perfect match...
+                    </motion.p>
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="revealed-card"
+                    initial={{ opacity: 0, scale: 0.8, rotateY: 180 }}
+                    animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                  >
+                    <Link href="/financial-solutions/starling-bank-credit-card">
+                      <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
+                        <div className="flex items-center space-x-1">
+                          <span>🌟 Starling Bank Credit Card</span>
+                          <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
+                            <span className="text-[#80E67D] text-xs">➔</span>
+                          </div>
+                        </div>
+                      </Button>
+                    </Link>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
             <h2 className="text-lg leading-5 font-bold text-gray-800 mb-6">

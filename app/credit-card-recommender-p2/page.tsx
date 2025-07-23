@@ -6,9 +6,11 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function CreditCardRecommenderPage() {
   const [openFaq, setOpenFaq] = useState<string | null>("benefits");
+  const [showRecommendations, setShowRecommendations] = useState(false);
 
   const toggleFaq = (id: string) => {
     if (openFaq === id) {
@@ -16,6 +18,10 @@ export default function CreditCardRecommenderPage() {
     } else {
       setOpenFaq(id);
     }
+  };
+
+  const handleRevealRecommendations = () => {
+    setShowRecommendations(true);
   };
 
   return (
@@ -30,17 +36,97 @@ export default function CreditCardRecommenderPage() {
             </h1>
 
             <div className="my-8 text-left sm:text-left">
-              <Link href="/financial-solutions/lloyds-bank-credit-card">
-                <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
-                  <div className="flex items-center space-x-1">
-                    <span>Accept Recommendation</span>
-                    <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
-                      <span className="text-[#80E67D] text-xs">➔</span>
-                    </div>
-                  </div>
-                </Button>
-              </Link>
+              <AnimatePresence mode="wait">
+                {!showRecommendations ? (
+                  <motion.div
+                    key="reveal-button"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <Button
+                      onClick={handleRevealRecommendations}
+                      className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center"
+                    >
+                      <div className="flex items-center space-x-1">
+                        <span className="text-center text-sm">
+                          Unveil our suggested Financial Products
+                        </span>
+                        <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
+                          <span className="text-[#80E67D] text-xs">➔</span>
+                        </div>
+                      </div>
+                    </Button>
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="recommendations"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, staggerChildren: 0.1 }}
+                    className="space-y-4"
+                  >
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.1 }}
+                    >
+                      <Link href="/financial-solutions/lloyds-bank-credit-card">
+                        <Button className="bg-[#006A4D] hover:bg-[#006A4D] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
+                          <div className="flex items-center space-x-1">
+                            <span>Lloyds Bank Credit Card</span>
+                            <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
+                              <span className="text-[#80E67D] text-xs">➔</span>
+                            </div>
+                          </div>
+                        </Button>
+                      </Link>
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.2 }}
+                    >
+                      <Link href="/financial-solutions/santander-uk-credit-card">
+                        <Button className="bg-[#ea2424] hover:bg-[#ea2424] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
+                          <div className="flex items-center space-x-1">
+                            <span>Santander UK Credit Card</span>
+                            <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
+                              <span className="text-[#80E67D] text-xs">➔</span>
+                            </div>
+                          </div>
+                        </Button>
+                      </Link>
+                    </motion.div>
+
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.3 }}
+                    >
+                      <Link href="/financial-solutions/monzo-credit-card">
+                        <Button className="bg-[#80111b] hover:bg-[#80111b] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
+                          <div className="flex items-center space-x-1">
+                            <span>Monzo Credit Card</span>
+                            <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
+                              <span className="text-[#80E67D] text-xs">➔</span>
+                            </div>
+                          </div>
+                        </Button>
+                      </Link>
+                    </motion.div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
+
+            <p className="text-left text-xs leading-4 text-gray-800 mb-5">
+              Finding the right card is simple. Maximise rewards, organise your
+              spending and enjoy exclusive benefits. Explore and choose the
+              ideal card for you!
+            </p>
 
             <div
               id="uk_topfinanzas_1"
@@ -50,12 +136,6 @@ export default function CreditCardRecommenderPage() {
             </div>
 
             <hr className="my-8" />
-
-            <p className="text-left text-xs leading-4 text-gray-800 mb-5">
-              Finding the right card is simple. Maximise rewards, organise your
-              spending and enjoy exclusive benefits. Explore and choose the
-              ideal card for you!
-            </p>
 
             <h2 className="text-lg leading-5 font-bold text-gray-800 mb-6">
               Why Choose Our Credit Card Recommender?
