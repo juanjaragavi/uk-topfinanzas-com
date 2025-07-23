@@ -41,18 +41,18 @@ export default function CreditCardRecommenderPage() {
               Discover Your Ideal Credit Card
             </h1>
 
+            <p className="text-left text-xs leading-4 text-gray-800 mb-5">
+              Finding the right card is simple. Maximise rewards, organise your
+              spending and enjoy exclusive benefits. Explore and choose the
+              ideal card for you!
+            </p>
+
             <div
               id="uk_topfinanzas_1"
               className="items-center justify-center flex w-full my-6"
             >
               {/* Empty responsive, centered div */}
             </div>
-
-            <p className="text-left text-xs leading-4 text-gray-800 mb-5">
-              Finding the right card is simple. Maximise rewards, organise your
-              spending and enjoy exclusive benefits. Explore and choose the
-              ideal card for you!
-            </p>
 
             <div className="my-8 text-left sm:text-left">
               <AnimatePresence mode="wait">
