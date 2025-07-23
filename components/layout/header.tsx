@@ -100,7 +100,6 @@ export function Header() {
     <>
       {/* AdZep Centralized Handler - Single point of activation */}
       <AdZepCentralizedHandler />
-      
       <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -126,7 +125,9 @@ export function Header() {
             {/* Categories Dropdown */}
             <div className="relative">
               <button
-                ref={(el) => setMenuButtonRef(el, "categories")}
+                ref={el => {
+                  setMenuButtonRef(el, "categories");
+                }}
                 className="text-link hover:text-primary flex items-center space-x-1 text-sm"
                 onClick={(e) => {
                   // Prevent default browser action but DON'T stop propagation
@@ -155,7 +156,9 @@ export function Header() {
 
               {activeMegaMenu === "categories" && (
                 <div
-                  ref={(el) => setMegaMenuRef(el, "categories")}
+                  ref={el => {
+                    setMegaMenuRef(el, "categories");
+                  }}
                   className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10"
                 >
                   <div className="py-1">
@@ -177,7 +180,9 @@ export function Header() {
             {/* Blog Menu Item with Mega Menu */}
             <div className="relative">
               <button
-                ref={(el) => setMenuButtonRef(el, "blog")}
+                ref={el => {
+                  setMenuButtonRef(el, "blog");
+                }}
                 className="text-link hover:text-primary flex items-center space-x-1 text-sm"
                 onClick={(e) => {
                   // Prevent default browser action but DON'T stop propagation
@@ -206,7 +211,9 @@ export function Header() {
 
               {activeMegaMenu === "blog" && (
                 <div
-                  ref={(el) => setMegaMenuRef(el, "blog")}
+                  ref={el => {
+                    setMegaMenuRef(el, "blog");
+                  }}
                   className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-auto max-w-4xl rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10" // Centered
                   style={{
                     width: "calc(min(90vw, 900px))", // Kept width constraint
@@ -222,7 +229,7 @@ export function Header() {
                     {headerNavigation.blogMegaMenu.columns.map(
                       (column, idx) => (
                         // Each link column gets its own grid space (col-span-1 implicitly)
-                        <div key={idx} className="col-span-1">
+                        (<div key={idx} className="col-span-1">
                           {" "}
                           {/* Explicitly col-span-1 */}
                           <h3 className="text-h3 uppercase tracking-wide mb-3">
@@ -247,18 +254,18 @@ export function Header() {
                               </li>
                             ))}
                           </ul>
-                        </div>
+                        </div>)
                       )
                     )}
                     {/* Featured Posts Column */}
                     {headerNavigation.blogMegaMenu.featuredPosts && (
                       // Ensure this is also col-span-1 in the 4-col grid
-                      <div className="col-span-1">
+                      (<div className="col-span-1">
                         <h3 className="text-h3 uppercase tracking-wide mb-3">
                           {headerNavigation.blogMegaMenu.featuredPosts.title}
                         </h3>
                         {/* Changed internal grid to single column */}
-                        <div className="grid grid-cols-1 gapx-2">
+                        <div className="grid grid-cols-1 gapx-2 relative">
                           {" "}
                           {/* Reduced gap */}
                           {headerNavigation.blogMegaMenu.featuredPosts.posts.map(
@@ -324,7 +331,7 @@ export function Header() {
                             </svg>
                           </Link>
                         </div>
-                      </div>
+                      </div>)
                     )}
                   </div>
                 </div>

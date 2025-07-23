@@ -264,7 +264,7 @@ export default function Home() {
       <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
           {/* Featured post - Using standard Next.js Image component */}
-          <div className="mb-12">
+          <div className="mb-12 relative">
             <FeaturedPostCard
               title="Best Personal Loans in the UK: Your Complete Guide"
               description="Comprehensive guide to the UK's top personal loans, including rates, terms, and application requirements from leading lenders like Nationwide, Santander, and Barclays."

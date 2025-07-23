@@ -1,10 +1,13 @@
-feat: Update color schemes for credit card recommender pages
+feat: Upgrade Next.js to v15 and React to v19
 
-- Recommender v1: Reduced intensity of neon green colors (#80E67D → #71C96C, #6AD167 → #5BAD56)
-- Recommender v2: Replaced green with standard UI blue colors (#80E67D → #3B82F6, #6AD167 → #2563EB)  
-- Recommender v3: Implemented orange color scheme (#80E67D → #F97316, #6AD167 → #EA580C)
-- Updated all UI elements including buttons, check marks, arrows, and animations
-- Maintained consistent color palettes across each version
-- All files compile successfully with no errors
+This commit upgrades the project's Next.js framework to the latest stable version (15.4.3) and React to 19.1.0.
 
-Changes improve visual distinction between recommender versions while maintaining accessibility and brand consistency.
+Key changes include:
+- Updated core Next.js and React dependencies in `package.json`.
+- Applied Next.js codemods for automatic migration of API usages and font imports.
+- Resolved `TypeError: Cannot read properties of undefined (reading 'ReactCurrentDispatcher')` by explicitly setting `react-dom` version.
+- Fixed `conflicting public file and page file for /favicon.ico` error by removing the `app/api/favicon/route.ts` and adjusting `app/layout.tsx` to use `public/favicon.png` as the primary favicon.
+- Addressed image warnings related to `fill` prop by ensuring parent elements have `position: relative` in `app/page.tsx`, `app/blog/page.tsx`, `app/personal-finance/page.tsx`, and `components/layout/header.tsx`.
+- Removed deprecated `optimizeFonts` and `swcMinify` configurations from `next.config.mjs`.
+
+The application now builds and runs locally without critical errors.

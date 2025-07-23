@@ -155,20 +155,6 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
 
-        {/* Module/nomodule pattern for modern browsers */}
-        <script
-          type="module"
-          dangerouslySetInnerHTML={{
-            __html: "document.documentElement.dataset.jsEnabled = 'module';",
-          }}
-        />
-        <script
-          noModule
-          dangerouslySetInnerHTML={{
-            __html: "document.documentElement.dataset.jsEnabled = 'nomodule';",
-          }}
-        />
-
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -225,7 +211,6 @@ export default function RootLayout({
         />
 
         {/* Fallback api routes for browsers that might have issues with static files */}
-        <link rel="alternate icon" href="/api/favicon" type="image/x-icon" />
         <link
           rel="alternate"
           href="/api/webmanifest"

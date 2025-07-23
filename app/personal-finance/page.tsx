@@ -178,7 +178,7 @@ export default function PersonalFinanceArchivePage() {
           filteredPosts.map((post, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col"
+              className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col relative"
             >
               <div className="relative h-48 w-full">
                 <Image

@@ -266,11 +266,8 @@ const nextConfig = {
     optimizeCss: true,
     optimizePackageImports: ["next/font", "framer-motion", "lucide-react"],
   },
-  optimizeFonts: true,
   // Add compression to improve loading speeds
   compress: true,
-  // Improve build times and reduce memory usage
-  swcMinify: true,
   poweredByHeader: false,
 };
 
