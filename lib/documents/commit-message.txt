@@ -1,35 +1,10 @@
-Enhancement: Interactive UI Animations for Credit Card Recommenders
+feat: Update color schemes for credit card recommender pages
 
-This commit introduces engaging interactive animations and improved user experience across the credit card recommender pages:
+- Recommender v1: Reduced intensity of neon green colors (#80E67D → #71C96C, #6AD167 → #5BAD56)
+- Recommender v2: Replaced green with standard UI blue colors (#80E67D → #3B82F6, #6AD167 → #2563EB)  
+- Recommender v3: Implemented orange color scheme (#80E67D → #F97316, #6AD167 → #EA580C)
+- Updated all UI elements including buttons, check marks, arrows, and animations
+- Maintained consistent color palettes across each version
+- All files compile successfully with no errors
 
-## Key Improvements:
-
-### Interactive Animation Features:
-- Added Framer Motion library integration for smooth animations
-- Implemented animated card reveal system in credit-card-recommender-p2 with multiple recommendation options
-- Created card shuffling animation in credit-card-recommender-p3 with dramatic reveal effect
-- Enhanced user engagement through progressive disclosure patterns
-
-### UI/UX Enhancements:
-- Replaced static "Accept Recommendation" buttons with interactive reveal mechanisms
-- Added staggered animations for multiple recommendation reveals
-- Implemented card shuffle animation with 3D rotation effects
-- Improved visual feedback and loading states
-
-### Animation Details:
-- **P2 Page**: Multi-step reveal showing Lloyds Bank, Santander UK, and Monzo credit cards with staggered entrance animations
-- **P3 Page**: Card shuffling simulation followed by Starling Bank credit card reveal with 3D flip animation
-- Enhanced button interactions with hover states and micro-animations
-
-### Technical Updates:
-- Added AnimatePresence for smooth component transitions
-- Implemented motion variants for consistent animation patterns
-- Optimized animation performance with proper exit animations
-- Added proper accessibility considerations for motion-sensitive users
-
-### Content Organization:
-- Minor formatting improvements in personal finance content
-- Enhanced readability with consistent text spacing
-- Reorganized content structure in P3 page for better flow (moved description before ad placement)
-
-These changes significantly improve user engagement while maintaining the professional financial services aesthetic and UK market compliance.
+Changes improve visual distinction between recommender versions while maintaining accessibility and brand consistency.

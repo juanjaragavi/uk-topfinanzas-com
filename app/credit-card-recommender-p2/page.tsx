@@ -47,14 +47,14 @@ export default function CreditCardRecommenderPage() {
                   >
                     <Button
                       onClick={handleRevealRecommendations}
-                      className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center"
+                      className="bg-[#3B82F6] hover:bg-[#2563EB] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center"
                     >
                       <div className="flex items-center space-x-1">
                         <span className="text-center text-sm">
                           Unveil our suggested Financial Products
                         </span>
                         <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
-                          <span className="text-[#80E67D] text-xs">➔</span>
+                          <span className="text-[#3B82F6] text-xs">➔</span>
                         </div>
                       </div>
                     </Button>
@@ -77,7 +77,7 @@ export default function CreditCardRecommenderPage() {
                           <div className="flex items-center space-x-1">
                             <span>Lloyds Bank Credit Card</span>
                             <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
-                              <span className="text-[#80E67D] text-xs">➔</span>
+                              <span className="text-[#006A4D] text-xs">➔</span>
                             </div>
                           </div>
                         </Button>
@@ -94,7 +94,7 @@ export default function CreditCardRecommenderPage() {
                           <div className="flex items-center space-x-1">
                             <span>Santander UK Credit Card</span>
                             <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
-                              <span className="text-[#80E67D] text-xs">➔</span>
+                              <span className="text-[#ea2424] text-xs">➔</span>
                             </div>
                           </div>
                         </Button>
@@ -111,7 +111,7 @@ export default function CreditCardRecommenderPage() {
                           <div className="flex items-center space-x-1">
                             <span>Monzo Credit Card</span>
                             <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
-                              <span className="text-[#80E67D] text-xs">➔</span>
+                              <span className="text-[#80111b] text-xs">➔</span>
                             </div>
                           </div>
                         </Button>
@@ -143,7 +143,7 @@ export default function CreditCardRecommenderPage() {
 
             <div className="space-y-1 mb-6">
               <div className="flex items-start">
-                <div className="flex-shrink-0 rounded-full bg-[#80E67D] px-1 flex items-center justify-center mr-2">
+                <div className="flex-shrink-0 rounded-full bg-[#3B82F6] px-1 flex items-center justify-center mr-2">
                   <span className="text-white font-bold text-sm">✓</span>
                 </div>
                 <div className="text-sm">
@@ -152,7 +152,7 @@ export default function CreditCardRecommenderPage() {
               </div>
 
               <div className="flex items-start">
-                <div className="flex-shrink-0 rounded-full bg-[#80E67D] px-1 flex items-center justify-center mr-2">
+                <div className="flex-shrink-0 rounded-full bg-[#3B82F6] px-1 flex items-center justify-center mr-2">
                   <span className="text-white font-bold text-sm">✓</span>
                 </div>
                 <div className="text-sm">
@@ -161,7 +161,7 @@ export default function CreditCardRecommenderPage() {
               </div>
 
               <div className="flex items-start">
-                <div className="flex-shrink-0 rounded-full bg-[#80E67D] px-1 flex items-center justify-center mr-2">
+                <div className="flex-shrink-0 rounded-full bg-[#3B82F6] px-1 flex items-center justify-center mr-2">
                   <span className="text-white font-bold text-sm">✓</span>
                 </div>
                 <div className="text-sm">
@@ -179,11 +179,11 @@ export default function CreditCardRecommenderPage() {
 
             <div className="mt-6 mb-4">
               <Link href="/financial-solutions/santander-uk-credit-card">
-                <Button className="bg-[#80E67D] hover:bg-[#6AD167] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
+                <Button className="bg-[#3B82F6] hover:bg-[#2563EB] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
                   <div className="flex items-center space-x-1">
                     <span>Our Top Recommendation</span>
                     <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
-                      <span className="text-[#80E67D] text-xs">➔</span>
+                      <span className="text-[#3B82F6] text-xs">➔</span>
                     </div>
                   </div>
                 </Button>
