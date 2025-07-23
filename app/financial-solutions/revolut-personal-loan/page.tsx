@@ -35,6 +35,15 @@ export default function RevolutPersonalLoanPage() {
                 app, providing a modern alternative to traditional bank loans.
               </p>
 
+              <div
+                id="uk_topfinanzas_3"
+                className="items-center justify-center flex w-full my-8"
+              >
+                {/* Empty responsive, centered div */}
+              </div>
+
+              <hr className="my-8" />
+
               <div className="space-y-2 mb-8">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 size-5 rounded-full bg-[#191C33] flex items-center justify-center mr-3">
@@ -87,15 +96,6 @@ export default function RevolutPersonalLoanPage() {
                   </div>
                 </div>
               </div>
-
-              <div
-                id="uk_topfinanzas_3"
-                className="items-center justify-center flex w-full my-8"
-              >
-                {/* Empty responsive, centered div */}
-              </div>
-
-              <hr className="my-8" />
 
               <div className="text-left my-8">
                 <Link href="/financial-solutions/revolut-personal-loan-requirements">

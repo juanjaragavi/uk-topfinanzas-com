@@ -1,3 +1,3 @@
-feat: Update credit card recommender pages
+feat: Relocate ad unit and horizontal rule on product pages
 
-This commit includes updates to `app/credit-card-recommender-p2/page.tsx` and `app/credit-card-recommender-p3/page.tsx`.
+Relocated the ad unit div (uk_topfinanzas_3) and its accompanying <hr> element to appear directly below the main product description paragraph on all relevant product pages within the `app/financial-solutions` directory. This change improves user experience by optimizing ad placement. "Requirements" pages were explicitly excluded from this modification.

@@ -90,15 +90,6 @@ export default function TSBPersonalLoanPage() {
                 </div>
               </div>
 
-              <div
-                id="uk_topfinanzas_3"
-                className="items-center justify-center flex w-full my-8"
-              >
-                {/* Empty responsive, centered div */}
-              </div>
-
-              <hr className="my-8" />
-
               <div className="text-left my-8">
                 <Link href="/financial-solutions/tsb-personal-loan-requirements">
                   <Button className="bg-[#0A4D8C] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
