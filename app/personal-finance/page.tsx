@@ -138,6 +138,16 @@ export default function PersonalFinanceArchivePage() {
       date: "3 April 2025",
       category: "creditCards",
     },
+    {
+      title:
+        "What Is Financial Health? A Quick Guide to Checking Your Vitals | Top Finance UK",
+      slug: "what-is-financial-health",
+      description:
+        "A simple UK-focused guide to checking your money vitals—cash flow, savings, borrowing, and habits—plus quick steps to improve your financial health.",
+      image: "https://media.topfinanzas.com/images/uk/what-is-financial-health.webp",
+      date: "13 August 2025",
+      category: "guide",
+    },
     // Add other posts here as needed
   ];
 

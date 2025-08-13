@@ -259,6 +259,15 @@ import { CustomComponent } from "./custom-component";
 - **Open Graph**: Social media optimization
 - **Sitemap**: Dynamic sitemap generation
 
+## Agent Authoring Directive
+
+- Whenever the agent is prompted to generate a new blog post or article for this UK site:
+  - First, review `lib/documents/blog-post-generation-prompt.md` to follow the latest content generation rules and UK localisation requirements.
+  - Also consult `lib/documents/topfinanzas-us-topic-outline.csv` to determine article type (pillar vs cluster), tentative title, content focus, and related cluster/pillar context.
+  - Use the UK sitemap at `https://uk.topfinanzas.com/sitemap.xml` to avoid duplicating already published content and to build correct internal links.
+  - Produce content in UK English conventions (en-GB) and ensure internal links point to the `uk.topfinanzas.com` domain.
+  - If the funnel stage is TOFU, create the new blog post under `app/personal-finance`, matching the structure and layout used by existing articles in that directory, but write entirely new, original content.
+
 ## Git Workflow
 
 ### 1. Branch Strategy

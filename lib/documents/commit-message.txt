@@ -1,4 +1,37 @@
-feat: Complete AdZep integration and update Barclaycard Avios Plus page
+feat(personal-finance): add "What Is Financial Health?" TOFU article and list it in archive
 
-This commit finalizes the AdZep integration, including script loading, automatic function invocation, enhanced tracking, and manual controls.
-Updated the Barclaycard Avios Plus financial solution page.
+- Add new UK-focused article:
+  - app/personal-finance/what-is-financial-health/page.tsx
+  - Informational TOFU content in UK English
+  - Consistent structure (Header, sections, CTA, AIContentDisclaimer, CompactFooter)
+  - Internal links to existing UK pages:
+    • /personal-finance/understanding-credit-card-interest-rates
+    • /personal-finance/getting-out-of-debt
+    • /personal-finance/top-credit-cards-0-intro-apr
+    • /personal-finance/credit-card-types-benefits
+    • /personal-finance (CTA)
+- Update archive listing:
+  - app/personal-finance/page.tsx
+  - Add PostItem for "What Is Financial Health?" under category "guide" with image, description, and date
+
+perf(preloader): reduce default preloader display time to ~1s
+
+- components/preloader/Preloader.tsx
+  - Set default duration to 1000ms
+  - Keep a short 100ms post-completion delay
+  - Maintain a 0.3s fade-out transition
+  - Result: preloader is visible for ~1.0–1.2s on non-quiz pages
+
+docs(content): include content generation references used for article creation
+
+- lib/documents/blog-post-generation-prompt.md (added)
+- lib/documents/topfinanzas-us-topic-outline.csv (added)
+
+chore: minor repository housekeeping
+
+- .clinerules/RULES.md (minor updates, no functional code changes)
+- app/blog/page.tsx (minor updates, no functional changes)
+
+Notes:
+- Verified UK sitemap to avoid duplication before adding the new article.
+- PreloaderProvider remains commented-out in app/layout.tsx; defaults are respected via the component.

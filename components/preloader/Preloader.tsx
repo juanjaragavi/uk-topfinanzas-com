@@ -16,7 +16,7 @@ interface PreloaderProps {
 }
 
 const Preloader: React.FC<PreloaderProps> = ({
-  duration = 4000,
+  duration = 1000,
   onComplete,
   showLogo = true,
   showProgress = true,
@@ -45,7 +45,7 @@ const Preloader: React.FC<PreloaderProps> = ({
         setTimeout(() => {
           setIsVisible(false);
           onComplete?.();
-        }, 300);
+        }, 100);
       }
     }, 16); // 60fps
 
@@ -58,7 +58,7 @@ const Preloader: React.FC<PreloaderProps> = ({
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
           className="fixed inset-0 z-[9999] flex items-center justify-center"
           style={{ backgroundColor }}
         >
