@@ -144,7 +144,19 @@ export default function PersonalFinanceArchivePage() {
       slug: "what-is-financial-health",
       description:
         "A simple UK-focused guide to checking your money vitals—cash flow, savings, borrowing, and habits—plus quick steps to improve your financial health.",
-      image: "https://media.topfinanzas.com/images/uk/what-is-financial-health.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/what-is-financial-health.webp",
+      date: "13 August 2025",
+      category: "guide",
+    },
+    {
+      title:
+        "Money Management for Beginners: Where Do I Even Start? | Top Finance UK",
+      slug: "money-management-for-beginners",
+      description:
+        "New to personal finance? Learn simple UK-based steps to budget, save, manage debt, and build steady money habits that stick.",
+      image:
+        "https://media.topfinanzas.com/images/uk/money-management-for-beginners.webp",
       date: "13 August 2025",
       category: "guide",
     },
