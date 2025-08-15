@@ -1,19 +1,22 @@
-feat(personal-finance): add “Money Management for Beginners” pillar article and update archive listing
+feat(content): add “Setting Financial Goals” TOFU article (UK) and update archive
 
-- Created new pillar intro article at app/personal-finance/money-management-for-beginners/page.tsx
-  - UK-focused money management guide covering: definition, importance, common mistakes, first steps (30‑day plan), simple budgeting methods, habit tips, and a realistic UK example
-  - Added internal links to existing UK pages:
-    • /personal-finance/understanding-credit-card-interest-rates
-    • /personal-finance/credit-card-types-benefits
-    • /personal-finance/top-credit-cards-0-intro-apr
-    • /personal-finance/best-personal-loans
-    • /personal-finance/getting-out-of-debt
-    • /personal-finance
-  - Structured and styled to match existing Personal Finance articles (Header/CompactFooter/AIContentDisclaimer, semantic sections)
+- Create new route: app/personal-finance/setting-financial-goals/page.tsx
+  - SEO-optimised UK English article (~TOFU) on setting SMART financial goals
+  - Consistent layout using Header, CompactFooter, AIContentDisclaimer
+  - Includes internal links to existing UK pages:
+    - /personal-finance/what-is-financial-health
+    - /personal-finance/money-management-for-beginners
+    - /personal-finance/understanding-credit-card-interest-rates
+    - /personal-finance/top-credit-cards-0-intro-apr
+    - /personal-finance/getting-out-of-debt
+    - /personal-finance/best-personal-loans
+    - /personal-finance
+  - Featured image placeholder: https://media.topfinanzas.com/images/uk/setting-financial-goals.webp
 
-- Updated archive at app/personal-finance/page.tsx
-  - Added new card entry for “Money Management for Beginners” with slug, description, image, date, category
+- Update archive listing: app/personal-finance/page.tsx
+  - Add new post card for “Setting Financial Goals”
+  - Category: guide, Date: 15 August 2025, Image + description added
 
-Meta:
-- Verified internal link targets exist in UK sitemap
-- No breaking changes to layouts/components
+Notes:
+- Validated topic against UK sitemap to avoid duplication
+- Matches existing personal-finance article structure and styling

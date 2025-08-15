@@ -160,6 +160,17 @@ export default function PersonalFinanceArchivePage() {
       date: "13 August 2025",
       category: "guide",
     },
+    {
+      title:
+        "Setting Financial Goals: A Beginner's Guide to Personal Finance Planning | Top Finance UK",
+      slug: "setting-financial-goals",
+      description:
+        "Learn how to set SMART financial goals, align your budget, and build habits that stick. A simple UK-focused personal finance guide for beginners.",
+      image:
+        "https://media.topfinanzas.com/images/uk/setting-financial-goals.webp",
+      date: "15 August 2025",
+      category: "guide",
+    },
     // Add other posts here as needed
   ];
 
