@@ -1,24 +1,14 @@
-🚀 Performance Enhancement & Blog Content Creation
+Add WARP.md configuration file for AI assistant integration
 
-## Performance Optimizations
-- Enhanced Next.js configuration with unified caching headers for static assets
-- Optimized image delivery system with CDN integration
-- Improved security by removing wildcard hostname patterns
+Added comprehensive WARP.md file to provide guidance for AI assistants when working with the UK TopFinanzas codebase. This file includes:
+- Project overview and architecture details
+- Common development commands and workflows
+- Git workflow automation instructions
+- Environment configuration requirements
+- UK market specific compliance guidelines
+- Development patterns and best practices
+- Performance optimization settings
+- Testing and debugging guidelines
+- Deployment checklist and procedures
 
-## New Content Addition
-- Created comprehensive "Side Hustle or Second Job" article (950+ words)
-- Integrated SEO-optimized content targeting UK personal finance keywords
-- Added article to main blog listing and Personal Finance category
-- Established internal linking strategy to existing content
-
-## Documentation Improvements
-- Created comprehensive blog post integration instructions
-- Documented step-by-step workflow for future content additions
-- Added quality control checklist for blog content visibility
-
-## Technical Enhancements
-- Improved blog architecture with category-specific filtering
-- Enhanced URL structure for better SEO performance
-- Optimized image generation workflow with AI prompts
-
-Files changed: next.config.mjs, blog pages, integration docs
+This configuration helps maintain consistency when working with AI-powered development tools across the project
