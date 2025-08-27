@@ -171,6 +171,16 @@ export default function PersonalFinanceArchivePage() {
       date: "15 August 2025",
       category: "guide",
     },
+    {
+      title:
+        "Side Hustle or Second Job? How to Choose the Right Income Booster",
+      slug: "side-hustle-or-second-job",
+      description:
+        "With rising living costs across the UK, many people are seeking ways to boost their income. Whether you're considering a traditional second job or exploring the world of side hustles, making the right choice can significantly impact your personal finance goals and lifestyle.",
+      image: "https://media.topfinanzas.com/images/side-hustle-second-job.webp",
+      date: "27 August 2025",
+      category: "guide",
+    },
     // Add other posts here as needed
   ];
 

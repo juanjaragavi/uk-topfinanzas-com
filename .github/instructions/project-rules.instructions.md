@@ -256,7 +256,18 @@ import { CustomComponent } from "./custom-component";
 - **Component Usage**: Embedded React components
 - **SEO**: Proper metadata for all content
 
-### 2. SEO Optimization
+### 2. Blog Post Integration
+
+When creating new blog articles, they must be integrated across multiple locations:
+
+- **Blog Listing**: Add to `app/blog/page.tsx` allPosts array
+- **Homepage**: Consider featuring on main page
+- **Sidebar**: Update recent articles in blog layout
+- **Navigation**: Add to header featured posts if standout content
+
+**Reference**: See `/.github/instructions/BLOG_POST_INTEGRATION.instructions.md` for detailed procedures.
+
+### 3. SEO Optimization
 
 - **Meta Tags**: Comprehensive metadata
 - **Schema Markup**: Structured data
