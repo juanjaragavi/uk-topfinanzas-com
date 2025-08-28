@@ -195,6 +195,7 @@ export default function CreditCardFormToProduct() {
           monto_empresa: null,
           newsletter: null,
           pais: "Reino Unido",
+          marca: "Top Finanzas",
           phone_number: null,
           preferencia_1_cupo_de_credito_alto: null,
           preferencia_2_sin_buro: null,
