@@ -19,6 +19,16 @@ export default function BestPersonalLoansPage() {
               Best Personal Loans in the UK: Your Complete Guide
             </h1>
 
+            {/* Placeholder `<div>` for the Ad Unit 'uk_topfinanzas_3' - centered and responsive */}
+            <div
+              id="uk_topfinanzas_3"
+              className="items-center justify-center flex w-full my-8"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
+
+            <hr className="my-8" />
+
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Find the perfect personal loan for your needs with our
@@ -346,6 +356,16 @@ export default function BestPersonalLoansPage() {
                     your needs, not because of pressure from the lender
                   </li>
                 </ul>
+
+                {/* Placeholder `<div>` for the Ad Unit 'uk_topfinanzas_4' - centered and responsive */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="items-center justify-center flex w-full my-8"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
+
+                <hr className="my-8" />
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Finding Your Ideal Financial Solution

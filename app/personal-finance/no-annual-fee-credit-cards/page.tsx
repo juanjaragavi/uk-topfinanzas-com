@@ -15,6 +15,13 @@ export default function NoAnnualFeeCreditCards() {
         <h1 className="text-2xl font-bold text-gray-900 mb-4">
           Top Credit Cards With No Annual Fees
         </h1>
+        {/* Placeholder `<div>` for the Ad Unit 'uk_topfinanzas_3' - centered and responsive */}
+        <div
+          id="uk_topfinanzas_3"
+          className="items-center justify-center flex w-full my-8"
+        >
+          {/* Empty responsive, centered div */}
+        </div>
         <p className="text-gray-800 mb-6 text-sm leading-5 font-light">
           Finding the right credit card can be a game-changer, especially when
           you want valuable rewards without the added expense of an annual fee.
@@ -86,7 +93,7 @@ export default function NoAnnualFeeCreditCards() {
           </ul>
         </section>
 
-        <section className="my-8">
+  <section className="my-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
             Types of No Annual Fee Cards
           </h2>
@@ -128,7 +135,7 @@ export default function NoAnnualFeeCreditCards() {
           </ul>
         </section>
 
-        <section className="my-8">
+  <section className="my-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
             Explore Specific No Annual Fee Cards
           </h2>
@@ -198,7 +205,7 @@ export default function NoAnnualFeeCreditCards() {
           </p>
         </section>
 
-        <section className="my-8">
+  <section className="my-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
             Choosing the Right Card for You
           </h2>
@@ -233,6 +240,14 @@ export default function NoAnnualFeeCreditCards() {
         </section>
 
         <section className="my-8">
+          {/* Placeholder `<div>` for the Ad Unit 'uk_topfinanzas_4' - centered and responsive */}
+          <div
+            id="uk_topfinanzas_4"
+            className="items-center justify-center flex w-full my-8"
+          >
+            {/* Empty responsive, centered div */}
+          </div>
+
           <h2 className="text-xl font-bold text-gray-900 mb-4">
             Maximize Rewards Without Extra Costs
           </h2>

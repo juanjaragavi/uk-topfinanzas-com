@@ -18,6 +18,13 @@ export default function SideHustleOrSecondJobPage() {
             <h1 className="text-3xl text-left sm:text-left md:text-3xl font-bold text-gray-800 mb-4 leading-8">
               Side Hustle or Second Job? How to Choose the Right Income Booster
             </h1>
+            {/* Placeholder `<div>` for the Ad Unit 'uk_topfinanzas_3' - centered and responsive */}
+            <div
+              id="uk_topfinanzas_3"
+              className="items-center justify-center flex w-full my-8"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
@@ -202,6 +209,14 @@ export default function SideHustleOrSecondJobPage() {
                   </a>{" "}
                   can complement your income-boosting efforts.
                 </p>
+
+                {/* Placeholder `<div>` for the Ad Unit 'uk_topfinanzas_4' - centered and responsive */}
+                <div
+                  id="uk_topfinanzas_4"
+                  className="items-center justify-center flex w-full my-8"
+                >
+                  {/* Empty responsive, centered div */}
+                </div>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Taking the Next Step

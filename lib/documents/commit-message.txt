@@ -1,5 +1,31 @@
 ✨ Add brand field to Kit API integration for enhanced tracking
+feat(ads): insert AdZep ad placeholders across personal-finance posts
 
+Add standardized ad placeholder <div>s to personal-finance articles:
+- uk_topfinanzas_3: immediately after the main <h1>
+- uk_topfinanzas_4: immediately before the last <h2>
+
+Also fixes a small className typo in money-management-for-beginners and
+standardizes markup in best-personal-loans.
+
+Affected files:
+- app/personal-finance/best-personal-loans/page.tsx
+- app/personal-finance/best-rewards-credit-cards/page.tsx
+- app/personal-finance/cashback-credit-cards/page.tsx
+- app/personal-finance/credit-card-types-benefits/page.tsx
+- app/personal-finance/getting-out-of-debt/page.tsx
+- app/personal-finance/money-management-for-beginners/page.tsx
+- app/personal-finance/no-annual-fee-credit-cards/page.tsx
+- app/personal-finance/personal-loans-debt-strategy/page.tsx
+- app/personal-finance/setting-financial-goals/page.tsx
+- app/personal-finance/side-hustle-or-second-job/page.tsx
+- app/personal-finance/tips-for-choosing-an-online-loan/page.tsx
+- app/personal-finance/top-credit-cards-0-intro-apr/page.tsx
+- app/personal-finance/travel-credit-cards/page.tsx
+- app/personal-finance/understanding-credit-card-interest-rates/page.tsx
+- app/personal-finance/what-is-financial-health/page.tsx
+
+Refs: AdZep integration guidelines and placement rules.
 ## Changes Made
 - Added "marca": "Top Finanzas" field to Kit API payload in both credit card forms
 - Updated payload-create-user-kit.json documentation to reflect new brand field
