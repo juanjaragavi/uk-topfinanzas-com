@@ -181,6 +181,16 @@ export default function PersonalFinanceArchivePage() {
       date: "27 August 2025",
       category: "guide",
     },
+    {
+      title:
+        "Beyond Spreadsheets: Create a Personal Finance Budget You'll Actually Stick To | Top Finance UK",
+      slug: "creating-a-budget-youll-actually-stick-to",
+      description:
+        "A modern UK-friendly budgeting guide covering 50/30/20, zero‑based budgeting, digital pots, and a 7‑day quick start — built to help you actually stick to it.",
+      image: "https://media.topfinanzas.com/images/uk/modern-budget-guide.webp",
+      date: "4 September 2025",
+      category: "guide",
+    },
     // Add other posts here as needed
   ];
 

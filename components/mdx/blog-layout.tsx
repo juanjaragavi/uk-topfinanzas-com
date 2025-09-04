@@ -61,6 +61,30 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   <SidebarSeparator />
                   {/* Recent Articles - Updated */}
                   <SidebarRecentArticles>
+                    {/* Budget Article */}
+                    <div className="flex items-center gap-3">
+                      <Image
+                        src="https://media.topfinanzas.com/images/uk/modern-budget-guide.webp"
+                        alt="Create a Personal Finance Budget You'll Actually Stick To"
+                        width={50}
+                        height={50}
+                        loading="lazy"
+                        priority={false}
+                        className="rounded-md object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src =
+                            "https://media.topfinanzas.com/images/placeholder-image.webp";
+                        }}
+                      />
+                      <div>
+                        <Link
+                          href="/personal-finance/creating-a-budget-youll-actually-stick-to"
+                          className="text-sm font-medium hover:underline line-clamp-2"
+                        >
+                          Create a Budget You'll Actually Stick To
+                        </Link>
+                      </div>
+                    </div>
                     {/* Article 1 */}
                     <div className="flex items-center gap-3">
                       <Image
@@ -69,7 +93,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                         width={50}
                         height={50}
                         loading="lazy"
-                        priority={false}  
+                        priority={false}
                         className="rounded-md object-cover" // Added object-cover
                         onError={(e) => {
                           e.currentTarget.src =
@@ -94,7 +118,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                         width={50}
                         height={50}
                         loading="lazy"
-                        priority={false} 
+                        priority={false}
                         className="rounded-md object-cover"
                         onError={(e) => {
                           e.currentTarget.src =
@@ -118,7 +142,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                         width={50}
                         height={50}
                         loading="lazy"
-                        priority={false} 
+                        priority={false}
                         className="rounded-md object-cover"
                         onError={(e) => {
                           e.currentTarget.src =
@@ -142,7 +166,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                         width={50}
                         height={50}
                         loading="lazy"
-                        priority={false} 
+                        priority={false}
                         className="rounded-md object-cover"
                         onError={(e) => {
                           e.currentTarget.src =

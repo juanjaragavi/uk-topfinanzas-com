@@ -1,44 +1,19 @@
-✨ Add brand field to Kit API integration for enhanced tracking
-feat(ads): insert AdZep ad placeholders across personal-finance posts
+feat(personal-finance): add TOFU budgeting article for UK audience — “Beyond Spreadsheets: Create a Personal Finance Budget You’ll Actually Stick To”
 
-Add standardized ad placeholder <div>s to personal-finance articles:
-- uk_topfinanzas_3: immediately after the main <h1>
-- uk_topfinanzas_4: immediately before the last <h2>
+- create new route: app/personal-finance/creating-a-budget-youll-actually-stick-to/page.tsx
+- add route metadata: app/personal-finance/creating-a-budget-youll-actually-stick-to/metadata.ts (OG, keywords, section)
+- UK-focused content, informal-educational tone; includes internal links to related UK guides
+- includes AdZep ad placeholders (uk_topfinanzas_3, uk_topfinanzas_4)
 
-Also fixes a small className typo in money-management-for-beginners and
-standardizes markup in best-personal-loans.
+chore(blog): list new article in /blog archive
+- update app/blog/page.tsx with post card, image, and date
 
-Affected files:
-- app/personal-finance/best-personal-loans/page.tsx
-- app/personal-finance/best-rewards-credit-cards/page.tsx
-- app/personal-finance/cashback-credit-cards/page.tsx
-- app/personal-finance/credit-card-types-benefits/page.tsx
-- app/personal-finance/getting-out-of-debt/page.tsx
-- app/personal-finance/money-management-for-beginners/page.tsx
-- app/personal-finance/no-annual-fee-credit-cards/page.tsx
-- app/personal-finance/personal-loans-debt-strategy/page.tsx
-- app/personal-finance/setting-financial-goals/page.tsx
-- app/personal-finance/side-hustle-or-second-job/page.tsx
-- app/personal-finance/tips-for-choosing-an-online-loan/page.tsx
-- app/personal-finance/top-credit-cards-0-intro-apr/page.tsx
-- app/personal-finance/travel-credit-cards/page.tsx
-- app/personal-finance/understanding-credit-card-interest-rates/page.tsx
-- app/personal-finance/what-is-financial-health/page.tsx
+chore(personal-finance): add article to Personal Finance archive grid
+- update app/personal-finance/page.tsx with new “guide” card
 
-Refs: AdZep integration guidelines and placement rules.
-## Changes Made
-- Added "marca": "Top Finanzas" field to Kit API payload in both credit card forms
-- Updated payload-create-user-kit.json documentation to reflect new brand field
-- Enhanced data tracking consistency across all user registration points
+chore(layout): add article to sidebar recent articles
+- update components/mdx/blog-layout.tsx
 
-## Technical Details
-- Modified components/credit-card-form.tsx to include brand field
-- Modified components/credit-card-form-to-product.tsx to include brand field  
-- Updated lib/documents/payload-create-user-kit.json template
-
-## Impact
-- Improved analytics and user attribution tracking
-- Better brand identification in ConvertKit integration
-- Enhanced data consistency for UK market segmentation
-
-Files modified: 2 form components + 1 documentation file
+Notes:
+- No breaking changes; styling and structure match existing patterns.
+- Aligns with content rules (TOFU, informational intent, UK en‑GB).
