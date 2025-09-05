@@ -311,7 +311,7 @@ export default function CreditCardFormToProduct() {
 
       // Redirect to UK results page using Next.js router
       // regardless of API response to ensure good user experience
-      router.push("/financial-solutions/lloyds-bank-credit-card");
+      router.push("https://linkly.link/2ERav");
     }
   };
 

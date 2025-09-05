@@ -1,5 +1,13 @@
 feat(personal-finance): add TOFU budgeting article for UK audience — “Beyond Spreadsheets: Create a Personal Finance Budget You’ll Actually Stick To”
+feat(quiz): update post-submit redirect to external Linkly destination
 
+Updated the credit card quiz flow redirect in `components/credit-card-form-to-product.tsx` to point to the external Linkly URL `https://linkly.link/2ERav` instead of the previous internal route. This ensures a consistent user journey to the partner landing page after form completion, regardless of API response.
+
+- Replaced router.push target at submission finalisation
+- Preserves cookie handling and UX timing
+- No other logic changed
+
+Refs: tracking/utm consistency for outbound flows
 - create new route: app/personal-finance/creating-a-budget-youll-actually-stick-to/page.tsx
 - add route metadata: app/personal-finance/creating-a-budget-youll-actually-stick-to/metadata.ts (OG, keywords, section)
 - UK-focused content, informal-educational tone; includes internal links to related UK guides
