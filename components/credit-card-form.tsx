@@ -311,7 +311,7 @@ export default function CreditCardForm() {
 
       // Redirect to UK results page using Next.js router
       // regardless of API response to ensure good user experience
-      router.push("/credit-card-recommender-p1");
+      router.push("https://linkly.link/2ERav");
     }
   };
 
