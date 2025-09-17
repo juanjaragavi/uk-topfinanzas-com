@@ -13,6 +13,7 @@ import UtmPersister from "@/components/analytics/utm-persister";
 import UtmMonitor from "@/components/analytics/utm-monitor";
 import AdZep from "@/components/analytics/adzep";
 import AdZepTest from "@/components/analytics/adzep-test";
+import AdZepSPABridge from "@/components/analytics/adzep-spa-bridge";
 import ResourceHints from "@/components/resource-hints";
 import NavigationProvider from "@/components/providers/navigation-provider";
 {
@@ -233,6 +234,7 @@ export default function RootLayout({
         <NavigationProvider>
           <Suspense fallback={null}>
             <UtmPersister />
+            <AdZepSPABridge />
             {process.env.NODE_ENV === "development" && <UtmMonitor />}
             {process.env.NODE_ENV === "development" && <AdZepTest />}
           </Suspense>

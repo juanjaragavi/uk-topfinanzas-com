@@ -42,3 +42,6 @@ public/images/**/*.png
 public/images/**/*.gif
 public/images/**/*.svg
 public/images/**/*.webp
+
+# Ignore file for testing the formatting of Strict markdown documents
+lib/documents/document.md

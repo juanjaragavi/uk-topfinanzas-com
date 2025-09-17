@@ -29,6 +29,13 @@ Additional tracking components for specific use cases:
 
 ### 3. Manual Triggers (`/components/analytics/adzep-trigger.tsx`)
 
+### 4. SPA Bridge and Activation Utilities (New)
+
+- `/components/analytics/adzep-spa-bridge.tsx`: SPA-safe coordination that waits for ad containers, triggers activation with retries after navigation, and manages a lightweight overlay for article pages without covering interstitials.
+- `/lib/ads/activate-adzep.ts`: Singleton activation utility with guarded state (activated, activationInProgress, lastActivation, activationAttempts), `pageHasAdUnits`, `waitForContainers`, and `hasRenderedCreative` helpers.
+- `/lib/ads/overlay.ts`: Minimal overlay utilities `ensureOverlay`, `showOverlay`, `hideOverlay` used on article pages while ad units initialize.
+- `/lib/ads/config.ts`: Central configuration for container selectors, timeouts, and retry counts. Update this to add/remove container selectors as needed.
+
 Components for manual AdZep activation:
 
 - **AdZepTrigger**: Wrapper component for custom trigger events
@@ -42,7 +49,8 @@ Components for manual AdZep activation:
 The AdZep script is loaded globally in `app/layout.tsx`:
 
 ```tsx
-import AdZep, { AdZepNavigationHandler } from "@/components/analytics/adzep";
+import AdZep from "@/components/analytics/adzep";
+import AdZepSPABridge from "@/components/analytics/adzep-spa-bridge";
 
 // In the head section:
 <ClientOnly>
@@ -54,7 +62,7 @@ import AdZep, { AdZepNavigationHandler } from "@/components/analytics/adzep";
 <NavigationProvider>
   <Suspense fallback={null}>
     <UtmPersister />
-    <AdZepNavigationHandler />
+    <AdZepSPABridge />
     {process.env.NODE_ENV === "development" && <UtmMonitor />}
   </Suspense>
   {children}
@@ -72,12 +80,17 @@ The AdZep script is loaded with Next.js optimization:
 
 ### Function Invocation
 
-The `window.AdZepActivateAds()` function is called automatically:
+The `window.AdZepActivateAds()` function is called automatically via the SPA bridge and activation utility with stateful guarding:
 
 1. **On page load**: When the page initially loads
 2. **On navigation**: When users navigate between pages
-3. **On link clicks**: When any link is clicked
-4. **On custom events**: When manually triggered
+3. **After containers mount**: Post-navigation, after known ad containers are present
+4. **With retries**: If no creatives render, the system re-attempts activation a few times with backoff
+5. **On custom events**: When manually triggered via `useAdZep()`
+
+The SPA bridge uses timeouts from `lib/ads/config.ts` and ensures no duplicate or overlapping calls. If a page has no ad units, it exits quickly without showing the overlay unnecessarily.
+
+Interstitial Coordination: The overlay uses `pointer-events: none` and a z-index lower than typical interstitials to avoid covering them. The overlay auto-hides once activation starts verifying or after a short grace period.
 
 ## Usage Examples
 

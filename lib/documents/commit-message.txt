@@ -1,1 +1,21 @@
-feat: Implement enhanced cookie validation and user registration handling
+feat(ads): SPA-safe AdZep activation with deferred init, retries, and overlay
+
+- Add activation utility (lib/ads/activate-adzep.ts)
+  - Singleton guarded state: activated, activationInProgress, lastActivation, activationAttempts
+  - Wait for AdZep function with timeout + retries
+  - Helpers: pageHasAdUnits, waitForContainers (MutationObserver + timeout), hasRenderedCreative
+- Add lightweight article overlay (lib/ads/overlay.ts)
+  - ensureOverlay/showOverlay/hideOverlay; pointer-events: none; safe z-index
+- Add SPA bridge (components/analytics/adzep-spa-bridge.tsx)
+  - Waits for containers on initial load and route changes
+  - Calls activateAdZep with tuned timeouts; verifies creative and retries with backoff
+  - Uses overlay only on article/ad pages; hides promptly to avoid interstitial suppression
+- Add central config (lib/ads/config.ts)
+  - container selectors, article path prefixes, timeouts & retry counts
+- Integrate bridge in layout (app/layout.tsx)
+  - Wire AdZepSPABridge under Suspense alongside analytics
+- Update docs (.github/instructions/ADZEP_IMPLEMENTATION.instructions.md)
+  - Document new SPA bridge, utilities, configuration, and interstitial-friendly behavior
+- Adjust project copilot instructions and .gitignore entries
+
+Refs: BudgetBee pattern adaptation; ensures consistent ad rendering on initial load and SPA navigations without duplicate activations.

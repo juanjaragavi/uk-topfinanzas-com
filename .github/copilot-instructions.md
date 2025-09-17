@@ -11,6 +11,7 @@ This is a **Next.js 14+ App Router** financial comparison site for the UK market
 - **Form Architecture**: Multi-step forms using React Hook Form + Zod in `/components/forms/` and `/components/steps/`
 - **Content System**: MDX support for blog content in `/content/` with custom components
 - **API Integration**: Google Sheets API for data collection at `/app/api/sheets/`
+- **Environment Management**: Multiple env files (`.env`, `.env.production`, `.env.local`) with strict production controls
 
 ### Project-Specific Patterns
 
@@ -35,6 +36,12 @@ The project has sophisticated analytics with **automatic AdZep activation**:
 - Auto-activates on navigation via `AdZepNavigationHandler`
 - Manual triggers available via `useAdZep()` hook
 - Development testing panel with `AdZepTest` component
+
+**Navigation Tracking**: AdZep integrates with Next.js navigation system properly:
+- Router changes trigger AdZep activation using `usePathname()` hook
+- Back/forward navigation is handled via `popstate` events
+- Client-side navigation is properly tracked on every route change
+- Initial page load activation is handled separately
 
 #### 3. Multi-Step Form Pattern
 
@@ -87,6 +94,8 @@ bash ./scripts/git-workflow.sh
 - Production environment files stored in `/opt/app/` with strict permissions
 - Google Sheets API requires `GOOGLE_SERVICE_ACCOUNT_EMAIL` and `GOOGLE_PRIVATE_KEY`
 - AdZep integration requires UK-specific script URL
+- Kit.com API integration for newsletter subscriptions
+- Multiple environment files in use: `.env`, `.env.production`, `.env.local`
 
 ## Code Quality Standards
 
@@ -114,6 +123,7 @@ Component.displayName = "Component";
 - Use `cn()` utility for class merging
 - Custom text sizing with `getTextClass()` utility
 - Consistent spacing and color tokens
+- Local font loading (Poppins) to avoid external requests
 
 ## API Architecture
 
@@ -132,6 +142,13 @@ export async function POST(req: Request) {
   // Sheet handling logic...
 }
 ```
+
+### API Route Patterns
+
+- All API routes use Next.js 14 App Router pattern: `app/api/*/route.ts`
+- Environment variables for external integrations (Google Sheets, Kit.com, SendGrid)
+- Consistent error handling and response formatting
+- CORS configuration in `cors-config.json` for cross-origin requests
 
 ## Analytics & Performance
 
@@ -183,3 +200,14 @@ export const metadata: Metadata = {
 - Constants: Centralized in `/lib/constants.ts`
 
 This project prioritizes UK financial compliance, performance optimization, and comprehensive analytics tracking. Always consider FCA regulations when working with financial content.
+
+## Instruction Files System
+
+The project uses a comprehensive instruction system at `.github/instructions/` with specific rules for different scenarios:
+
+- **`project-rules.instructions.md`**: Core project architecture and development standards
+- **`ADZEP_IMPLEMENTATION.instructions.md`**: Complete AdZep analytics integration guide
+- **`BLOG_POST_INTEGRATION.instructions.md`**: Blog content integration workflow
+- **`PUSH-AND-COMMIT.instructions.md`**: Automated git workflow procedures
+
+**Critical**: Always check and follow the instruction files before making changes. These contain project-specific implementation details and workflows that override general best practices.
