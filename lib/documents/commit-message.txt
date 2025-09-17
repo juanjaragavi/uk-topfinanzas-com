@@ -19,3 +19,14 @@ feat(ads): SPA-safe AdZep activation with deferred init, retries, and overlay
 - Adjust project copilot instructions and .gitignore entries
 
 Refs: BudgetBee pattern adaptation; ensures consistent ad rendering on initial load and SPA navigations without duplicate activations.
+
+---
+
+feat(content): add Personal Finance article on combining finances after marriage or moving in (UK)
+
+- New TOFU guide under personal finance: combine-finances-after-marriage-or-moving-in
+- UK-focused, informational tone; links to relevant internal resources
+- Matches existing article layout with Header, CompactFooter, ad placeholders, and AI content disclaimer
+- Adds practical models (separate, hybrid, fully joint), fair split methods, 5‑step setup, and UK‑centric credit considerations
+
+Note: Remember to integrate into blog listing, personal-finance archive, and sidebar recent posts per BLOG_POST_INTEGRATION instructions.
