@@ -37,7 +37,7 @@ export default async function CookiePolicyPage() {
   });
 
   return (
-    <main className="bg-white min-h-screen flex flex-col bg-gray-50">
+    <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
       <div className="container mx-auto px-4 py-12">

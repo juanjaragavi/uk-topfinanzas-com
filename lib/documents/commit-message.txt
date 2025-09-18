@@ -1,22 +1,14 @@
-feat(ads): SPA-safe AdZep activation with deferred init, retries, and overlay
+UK credit card recommender: Remove orange UI elements and align layout with US version
 
-- Add activation utility (lib/ads/activate-adzep.ts)
-  - Singleton guarded state: activated, activationInProgress, lastActivation, activationAttempts
-  - Wait for AdZep function with timeout + retries
-  - Helpers: pageHasAdUnits, waitForContainers (MutationObserver + timeout), hasRenderedCreative
-- Add lightweight article overlay (lib/ads/overlay.ts)
-  - ensureOverlay/showOverlay/hideOverlay; pointer-events: none; safe z-index
-- Add SPA bridge (components/analytics/adzep-spa-bridge.tsx)
-  - Waits for containers on initial load and route changes
-  - Calls activateAdZep with tuned timeouts; verifies creative and retries with backoff
-  - Uses overlay only on article/ad pages; hides promptly to avoid interstitial suppression
-- Add central config (lib/ads/config.ts)
-  - container selectors, article path prefixes, timeouts & retry counts
-- Integrate bridge in layout (app/layout.tsx)
-  - Wire AdZepSPABridge under Suspense alongside analytics
-- Update docs (.github/instructions/ADZEP_IMPLEMENTATION.instructions.md)
-  - Document new SPA bridge, utilities, configuration, and interstitial-friendly behavior
-- Adjust project copilot instructions and .gitignore entries
+- Remove introductory title and paragraph from top of page
+- Move green main title section to top position
+- Reposition uk_topfinanzas_1 ad placeholder below main title
+- Replace orange UI elements with teal theme throughout
+- Add centered hero section with GBP limit option buttons
+- Update all six CTA buttons to link to UK financial-solutions routes
+- Maintain original US layout structure with UK localization
+- Preserve both ad placeholder divs (uk_topfinanzas_1, uk_topfinanzas_2)
+- Include Well Done panel, FAQ section, Stay Tuned panel, and bottom banner
 
 Refs: BudgetBee pattern adaptation; ensures consistent ad rendering on initial load and SPA navigations without duplicate activations.
 
