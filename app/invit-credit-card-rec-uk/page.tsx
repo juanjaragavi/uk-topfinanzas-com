@@ -34,20 +34,13 @@ export default function InvitCreditCardRecUKPage() {
     <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
-      <article className="text-left bg-white py-8 md:py-12">
+      <article className="text-left bg-white py-8 md:py-12 w-11/12 mx-auto">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-center text-teal-700 font-bold text-xl md:text-2xl leading-6 md:leading-8 mb-4">
+            <h2 className="text-center text-[#1A9C8F] font-bold text-lg md:text-2xl leading-6 md:leading-8 mb-4">
               We’ve discovered a few cards that unlock remarkable boundaries for
               you.
             </h2>
-            <p className="text-center text-sm text-gray-700 mb-2">
-              Please select the limit option below that aligns with your daily
-              requirements:
-            </p>
-            <p className="text-center text-xs text-gray-500 mb-6">
-              By Top Finance
-            </p>
 
             <div
               id="uk_topfinanzas_1"
@@ -56,112 +49,49 @@ export default function InvitCreditCardRecUKPage() {
               {/* Empty responsive, centered div */}
             </div>
 
-            {/* Centered limit options (green buttons), per US layout */}
-            <div className="grid grid-cols-1 gap-3 my-4">
-              <Button className="bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 w-full rounded-md">
-                £1000 CREDIT CARD
-              </Button>
-              <Button className="bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 w-full rounded-md">
-                £2500 CREDIT CARD
-              </Button>
-              <Button className="bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 w-full rounded-md">
-                £5000 CREDIT CARD
-              </Button>
-              <Button className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 w-full rounded-md">
-                MORE OPTIONS
-              </Button>
-            </div>
-
-            <h2 className="text-lg leading-5 font-bold text-gray-800 mb-6">
-              Why Choose Our Credit Card Recommender?
-            </h2>
-
-            <div className="space-y-1 mb-6">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 rounded-full bg-teal-600 px-1 flex items-center justify-center mr-2">
-                  <span className="text-white font-bold text-sm">✓</span>
-                </div>
-                <div className="text-sm">
-                  <span className="font-bold">Personalised Options</span>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 rounded-full bg-teal-600 px-1 flex items-center justify-center mr-2">
-                  <span className="text-white font-bold text-sm">✓</span>
-                </div>
-                <div className="text-sm">
-                  <span className="font-bold">Completely Free</span>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <div className="flex-shrink-0 rounded-full bg-teal-600 px-1 flex items-center justify-center mr-2">
-                  <span className="text-white font-bold text-sm">✓</span>
-                </div>
-                <div className="text-sm">
-                  <span className="font-bold">Expert Advice</span>
-                </div>
-              </div>
-            </div>
-
-            <p className="text-left text-sm leading-5 text-gray-800 mb-4">
-              Our recommendations are designed to connect your financial goals
-              with cards that suit your needs. From cashback to travel rewards,
-              we give you clear, easy-to-understand options so you can make
-              informed decisions.
+            <p className="px-2 text-center text-sm text-gray-900 mb-2">
+              Please select the limit option below that aligns with your daily
+              requirements:
+            </p>
+            <p className="text-center text-xs text-gray-800 mb-6">
+              By Top Finance
             </p>
 
-            {/* UK product quick links – six CTAs (keep styling/structure consistent) */}
+            {/* Centered limit options (green buttons), per US layout */}
             <div className="grid grid-cols-1 gap-3 my-4">
-              <Link href="/financial-solutions/barclaycard-avios-plus">
-                <Button className="bg-[#0F766E] hover:bg-[#0D6560] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
-                  Barclaycard Avios Plus
-                </Button>
-              </Link>
-              <Link href="/financial-solutions/lloyds-bank-credit-card">
-                <Button className="bg-[#0F766E] hover:bg-[#0D6560] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
-                  Lloyds Bank Credit Card
-                </Button>
-              </Link>
               <Link href="/financial-solutions/curve-credit-card">
-                <Button className="bg-[#0F766E] hover:bg-[#0D6560] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
-                  Curve Credit Card
+                <Button className="bg-[#1A9C8F] hover:bg-[#168B7F] text-white font-semibold py-4 my-1 w-full mx-auto rounded-xl">
+                  £1000 CREDIT CARD
                 </Button>
               </Link>
               <Link href="/financial-solutions/santander-uk-credit-card">
-                <Button className="bg-[#0F766E] hover:bg-[#0D6560] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
-                  Santander UK Credit Card
+                <Button className="bg-[#1A9C8F] hover:bg-[#168B7F] text-white font-semibold py-4 my-1 w-full mx-auto rounded-xl">
+                  £2500 CREDIT CARD
                 </Button>
               </Link>
               <Link href="/financial-solutions/starling-bank-credit-card">
-                <Button className="bg-[#0F766E] hover:bg-[#0D6560] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
-                  Starling Bank Credit Card
+                <Button className="bg-[#1A9C8F] hover:bg-[#168B7F] text-white font-semibold py-4 my-1 w-full mx-auto rounded-xl">
+                  £5000 CREDIT CARD
                 </Button>
               </Link>
               <Link href="/financial-solutions/natwest-credit-card">
-                <Button className="bg-[#0F766E] hover:bg-[#0D6560] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
-                  NatWest Credit Card
+                <Button className="bg-[#1A9C8F] hover:bg-[#168B7F] text-white font-semibold py-4 my-1 w-full mx-auto rounded-xl">
+                  MORE OPTIONS
                 </Button>
               </Link>
             </div>
 
-            <div
-              id="uk_topfinanzas_2"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
             {/* Well Done info panel + accept CTA (matching US layout) */}
-            <section className="mb-6">
-              <div className="bg-gray-50 border border-gray-200 rounded-md p-4 relative">
+            <section className="text-left mb-6">
+              <div className="bg-gray-50 border border-gray-200 rounded-md px-4 py-6 relative">
                 <div
-                  className="absolute left-0 top-0 h-full w-1 bg-teal-600 rounded-l-md"
+                  className="absolute left-0 top-0 h-full w-1 bg-[#1A9C8F] rounded-l-md"
                   aria-hidden="true"
                 />
-                <h3 className="text-teal-700 font-semibold mb-2">Well Done</h3>
-                <p className="text-sm text-gray-700">
+                <h3 className="text-[#1A9C8F] text-xl font-semibold mb-2">
+                  Well Done
+                </h3>
+                <p className="text-md text-gray-900">
                   Your card is prepared for you. Select the limit option that
                   suits you best and begin enjoying perks like 0% APR, cashback,
                   points, and more. If none of these options fits your
@@ -169,16 +99,16 @@ export default function InvitCreditCardRecUKPage() {
                   your consideration.
                 </p>
               </div>
-              <div className="mt-4">
+              <div className="mt-6">
                 <Link href="/financial-solutions/barclaycard-avios-plus">
-                  <Button className="bg-teal-700 hover:bg-teal-800 text-white font-semibold py-2 w-full rounded-md uppercase tracking-wide">
+                  <Button className="bg-[#1A9C8F] hover:bg-[#168B7F] text-white font-semibold py-4 my-1 w-full mx-auto rounded-xl">
                     ACCEPT RECOMMENDATION
                   </Button>
                 </Link>
               </div>
             </section>
 
-            <div className="mt-6 mb-6 border rounded">
+            <div className="mb-6 border rounded">
               {/* FAQ Item 1: Benefits */}
               <button
                 type="button"
@@ -188,7 +118,7 @@ export default function InvitCreditCardRecUKPage() {
               >
                 <h3
                   className={`font-medium text-lg leading-5 ${
-                    openFaq === "benefits" ? "text-green-500" : "text-sky-600"
+                    openFaq === "benefits" ? "text-[#1A9C8F]" : "text-sky-600"
                   }`}
                 >
                   What are the benefits of a card with no annual fee?
@@ -197,7 +127,7 @@ export default function InvitCreditCardRecUKPage() {
                   className={`text-xl transition-transform ${
                     openFaq === "benefits" ? "transform rotate-180" : "" // Changed to rotate for better icon indication
                   } ${
-                    openFaq === "benefits" ? "text-green-500" : "text-sky-700"
+                    openFaq === "benefits" ? "text-[#1A9C8F]" : "text-sky-700"
                   }`}
                   aria-hidden="true" // Hide decorative icon from screen readers
                 >
@@ -205,7 +135,7 @@ export default function InvitCreditCardRecUKPage() {
                 </span>
               </button>
               {openFaq === "benefits" && (
-                <div className="p-4 text-gray-700" id="faq-benefits-content">
+                <div className="p-4 text-gray-900" id="faq-benefits-content">
                   <p className="text-left">
                     A card with no annual fee helps you save on recurring costs
                     while enjoying key benefits such as cashback or points for
@@ -223,7 +153,7 @@ export default function InvitCreditCardRecUKPage() {
               >
                 <h3
                   className={`font-medium text-lg leading-5 ${
-                    openFaq === "cashback" ? "text-green-500" : "text-sky-600"
+                    openFaq === "cashback" ? "text-[#1A9C8F]" : "text-sky-600"
                   }`}
                 >
                   How does cashback work?
@@ -232,7 +162,7 @@ export default function InvitCreditCardRecUKPage() {
                   className={`text-xl transition-transform ${
                     openFaq === "cashback" ? "transform rotate-180" : ""
                   } ${
-                    openFaq === "cashback" ? "text-green-500" : "text-sky-700"
+                    openFaq === "cashback" ? "text-[#1A9C8F]" : "text-sky-700"
                   }`}
                   aria-hidden="true"
                 >
@@ -240,7 +170,7 @@ export default function InvitCreditCardRecUKPage() {
                 </span>
               </button>
               {openFaq === "cashback" && (
-                <div className="p-4 text-gray-700" id="faq-cashback-content">
+                <div className="p-4 text-gray-900" id="faq-cashback-content">
                   <p className="text-left">
                     You receive a percentage of your purchases as cash that you
                     can use to reduce balances or spend as you prefer.
@@ -257,7 +187,7 @@ export default function InvitCreditCardRecUKPage() {
               >
                 <h3
                   className={`font-medium text-lg leading-5 ${
-                    openFaq === "travelers" ? "text-green-500" : "text-sky-600"
+                    openFaq === "travelers" ? "text-[#1A9C8F]" : "text-sky-600"
                   }`}
                 >
                   What's the best option for travellers?
@@ -266,7 +196,7 @@ export default function InvitCreditCardRecUKPage() {
                   className={`text-xl transition-transform ${
                     openFaq === "travelers" ? "transform rotate-180" : ""
                   } ${
-                    openFaq === "travelers" ? "text-green-500" : "text-sky-700"
+                    openFaq === "travelers" ? "text-[#1A9C8F]" : "text-sky-700"
                   }`}
                   aria-hidden="true"
                 >
@@ -274,7 +204,7 @@ export default function InvitCreditCardRecUKPage() {
                 </span>
               </button>
               {openFaq === "travelers" && (
-                <div className="p-4 text-gray-700" id="faq-travelers-content">
+                <div className="p-4 text-gray-900" id="faq-travelers-content">
                   <p className="text-left">
                     Cards with air miles accumulation or access to VIP lounges
                     are ideal for frequent travellers, allowing you to save on
@@ -292,7 +222,7 @@ export default function InvitCreditCardRecUKPage() {
               >
                 <h3
                   className={`font-medium text-lg leading-6 ${
-                    openFaq === "online" ? "text-green-500" : "text-sky-600"
+                    openFaq === "online" ? "text-[#1A9C8F]" : "text-sky-600"
                   }`}
                 >
                   Is it safe to use credit cards online?
@@ -301,7 +231,7 @@ export default function InvitCreditCardRecUKPage() {
                   className={`text-xl transition-transform ${
                     openFaq === "online" ? "transform rotate-180" : ""
                   } ${
-                    openFaq === "online" ? "text-green-500" : "text-sky-700"
+                    openFaq === "online" ? "text-[#1A9C8F]" : "text-sky-700"
                   }`}
                   aria-hidden="true"
                 >
@@ -309,7 +239,7 @@ export default function InvitCreditCardRecUKPage() {
                 </span>
               </button>
               {openFaq === "online" && (
-                <div className="p-4 text-gray-700" id="faq-online-content">
+                <div className="p-4 text-gray-900" id="faq-online-content">
                   <p className="text-left">
                     Yes, many cards offer advanced technology such as dynamic
                     CVV and instant alerts to protect your transactions.
@@ -318,15 +248,24 @@ export default function InvitCreditCardRecUKPage() {
               )}
             </div>
 
+            <div
+              id="uk_topfinanzas_2"
+              className="items-center justify-center flex w-full my-6"
+            >
+              {/* Empty responsive, centered div */}
+            </div>
+
             {/* Stay Tuned panel (matching US layout copy, UK spelling) */}
-            <section className="mb-6">
+            <section className="text-left mb-6">
               <div className="bg-gray-50 border border-gray-200 rounded-md p-4 relative">
                 <div
-                  className="absolute left-0 top-0 h-full w-1 bg-teal-600 rounded-l-md"
+                  className="absolute left-0 top-0 h-full w-1 bg-[#1A9C8F] rounded-l-md"
                   aria-hidden="true"
                 />
-                <h3 className="text-gray-800 font-semibold mb-2">Stay Tuned</h3>
-                <p className="text-sm text-gray-700">
+                <h3 className="text-gray-800 font-semibold mb-2 mt-4">
+                  Stay Tuned
+                </h3>
+                <p className="text-sm text-gray-900 mb-4">
                   If you're looking for additional assistance in boosting your
                   credit score or optimising your credit card usage while
                   avoiding banks capitalising on your situation, please explore
@@ -335,13 +274,6 @@ export default function InvitCreditCardRecUKPage() {
                 </p>
               </div>
             </section>
-
-            <p className="text-left text-sm leading-5 text-gray-800 mb-8">
-              Make your credit card an ally in achieving your financial goals.
-              From cashback to travel rewards, choose an option that simplifies
-              your life and maximises your benefits. Explore our recommendations
-              and find the card that best suits you.
-            </p>
 
             {/* Bottom promotional banner (HTML markup as requested) */}
             <div className="my-8 text-left sm:text-left">
@@ -357,14 +289,14 @@ export default function InvitCreditCardRecUKPage() {
                   <p className="text-[#B45309] text-sm font-semibold">
                     🔔 Limited offer!
                   </p>
-                  <h4 className="text-gray-800 font-bold">
+                  <h4 className="text-gray-900 font-bold">
                     CARD WITH NO ANNUAL FEE
                   </h4>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-800 text-sm">
                     The most requested among our readers! Check it out today...
                   </p>
                   <Link
-                    href="/financial-solutions/barclaycard-avios-plus"
+                    href="/financial-solutions/lloyds-bank-credit-card"
                     className="w-full"
                   >
                     <Button className="bg-[#E11D48] hover:bg-[#BE123C] text-white font-semibold py-2 w-full rounded-md">
