@@ -8,9 +8,11 @@ function buildOverlay(): HTMLDivElement {
   const el = document.createElement("div");
   el.id = "adzep-article-overlay";
   el.style.position = "fixed";
-  el.style.inset = "0";
-  el.style.background = "rgba(255,255,255,0.85)"; // soft white veil
-  el.style.backdropFilter = "blur(1px)";
+  el.style.bottom = "24px";
+  el.style.right = "24px";
+  el.style.width = "auto";
+  el.style.height = "auto";
+  el.style.background = "transparent"; // Remove white background
   el.style.zIndex = "2147483640"; // below potential interstitials that often use 2147483647
   el.style.display = "none";
   el.style.alignItems = "center";

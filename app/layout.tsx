@@ -9,11 +9,14 @@ import "./globals.css";
 import GoogleTagManager, {
   GoogleTagManagerNoScript,
 } from "@/components/analytics/gtm";
+import GoogleAds from "@/components/analytics/google-ads";
+import GoogleAdManager from "@/components/analytics/gam";
 import UtmPersister from "@/components/analytics/utm-persister";
 import UtmMonitor from "@/components/analytics/utm-monitor";
 import AdZep from "@/components/analytics/adzep";
 import AdZepTest from "@/components/analytics/adzep-test";
 import AdZepSPABridge from "@/components/analytics/adzep-spa-bridge";
+import AnalyticsValidationPanel from "@/components/analytics/validation-panel";
 import ResourceHints from "@/components/resource-hints";
 import NavigationProvider from "@/components/providers/navigation-provider";
 {
@@ -192,8 +195,11 @@ export default function RootLayout({
 
         <ClientOnly>
           <GoogleTagManager />
+          <GoogleAds />
+          <GoogleAdManager />
           <AdZep />
         </ClientOnly>
+
         <ResourceHints />
 
         {/* Explicit favicon and manifest links with proper MIME types */}
@@ -237,6 +243,7 @@ export default function RootLayout({
             <AdZepSPABridge />
             {process.env.NODE_ENV === "development" && <UtmMonitor />}
             {process.env.NODE_ENV === "development" && <AdZepTest />}
+            {process.env.NODE_ENV === "development" && <AnalyticsValidationPanel />}
           </Suspense>
           {children}
         </NavigationProvider>

@@ -1,16 +1,18 @@
-feat(uk-recommender): Redesign UK credit card recommender page layout and styling
+feat(preloader): Redesign custom preloader for minimal visual disruption
 
-- Restructure page layout to match US version hierarchy and flow
-- Move main title section to top position after header
-- Reposition ad placeholder (uk_topfinanzas_1) below main title
-- Replace teal color scheme with standardized #1A9C8F theme throughout
-- Simplify layout by removing intermediate info section and product links
-- Update CTA buttons with proper UK financial-solutions routing
-- Enhance FAQ section with improved color coordination and spacing
-- Maintain responsive design with proper container constraints (w-11/12)
-- Preserve both ad placeholder divs for optimal ad rendering
-- Include "Well Done", FAQ, "Stay Tuned", and promotional banner sections
-- Update text colors for better contrast and readability (gray-900)
-- Standardize button styling with consistent padding and border radius
+- Remove white fullscreen overlay from AdZep preloader
+- Reposition pulsing dot to bottom right corner (24px from edges)
+- Change overlay background to transparent for zero visual interference
+- Maintain all preloader functionality and ad activation logic
+- Preserve animation and timing for seamless user experience
 
-This redesign aligns the UK page with the established US layout pattern while maintaining UK-specific content, ensuring consistent user experience across regions and optimal ad placement for revenue generation.
+feat(analytics): Enhance analytics infrastructure with comprehensive tracking
+
+- Add Google Ads integration with conversion tracking (AW-17359006951)
+- Implement Google Ad Manager (GAM) with UK-specific ad slots
+- Enhance GTM with UTM parameter integration and validation
+- Add analytics validation panel for development debugging
+- Improve UTM persister with intelligent parameter validation
+- Create analytics validator with comprehensive test suite
+
+The preloader redesign eliminates dual overlay confusion while maintaining AdZep functionality. The analytics enhancements provide robust multi-platform tracking with proper UTM attribution and campaign data propagation across GTM, Google Ads, and GAM systems.
