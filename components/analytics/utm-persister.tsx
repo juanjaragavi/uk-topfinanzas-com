@@ -67,13 +67,13 @@ function validateUtmSource(source: string): boolean {
 
   if (UTM_SOURCE_PATTERN.test(normalizedSource)) {
     console.debug(
-      `UTM Persister: Accepting dynamic utm_source value: ${normalizedSource}`
+      `UTM Persister: Accepting dynamic utm_source value: ${normalizedSource}`,
     );
     return true;
   }
 
   console.warn(
-    `UTM Persister: Rejected utm_source value due to invalid characters: ${source}`
+    `UTM Persister: Rejected utm_source value due to invalid characters: ${source}`,
   );
   return false;
 }
@@ -93,7 +93,7 @@ function validateGoogleAdsCampaign(campaign: string): boolean {
  * Based on proven Astro.js implementation
  */
 function getRelevantUtmParams(
-  searchParams: URLSearchParams
+  searchParams: URLSearchParams,
 ): Record<string, string> {
   const relevantParams: Record<string, string> = {};
 
@@ -116,7 +116,7 @@ function getRelevantUtmParams(
             relevantParams[param] = value;
           } else {
             console.warn(
-              `UTM Persister: Invalid Google Ads campaign format: ${value}`
+              `UTM Persister: Invalid Google Ads campaign format: ${value}`,
             );
           }
         } else {
@@ -152,7 +152,7 @@ export default function UtmPersister() {
 
     if (hasValidUtmParams) {
       console.debug(
-        "UTM Persister: Found valid UTM parameters in URL, storing to sessionStorage"
+        "UTM Persister: Found valid UTM parameters in URL, storing to sessionStorage",
       );
 
       // Save validated UTM parameters to sessionStorage
@@ -179,7 +179,7 @@ export default function UtmPersister() {
 
     // Don't run on initial render or when URL already has UTM params
     const urlHasUtmParams = UTM_PARAM_KEYS.some((param) =>
-      searchParams.has(param)
+      searchParams.has(param),
     );
     if (urlHasUtmParams) return;
 

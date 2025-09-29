@@ -38,6 +38,7 @@ The project has sophisticated analytics with **automatic AdZep activation**:
 - Development testing panel with `AdZepTest` component
 
 **Navigation Tracking**: AdZep integrates with Next.js navigation system properly:
+
 - Router changes trigger AdZep activation using `usePathname()` hook
 - Back/forward navigation is handled via `popstate` events
 - Client-side navigation is properly tracked on every route change
@@ -112,7 +113,7 @@ bash ./scripts/git-workflow.sh
 const Component = React.forwardRef<HTMLDivElement, ComponentProps>(
   ({ className, ...props }, ref) => (
     <div className={cn("base-styles", className)} ref={ref} {...props} />
-  )
+  ),
 );
 Component.displayName = "Component";
 ```

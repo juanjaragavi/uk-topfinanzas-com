@@ -4,6 +4,32 @@ const SERVING_CONFIG =
   "projects/absolute-brook-452020-d5/locations/global/collections/default_collection/engines/topfinanzas-uk-search-engi_1744641181584/servingConfigs/default_search";
 const BASE_ENDPOINT = "https://discoveryengine.googleapis.com/v1"; // Base endpoint
 
+interface VertexSearchSnippet {
+  htmlSnippet?: string;
+}
+
+interface VertexSearchDerivedStructData {
+  htmlTitle?: string;
+  link?: string;
+  snippets?: VertexSearchSnippet[];
+}
+
+interface VertexSearchResult {
+  id?: string;
+  document?: {
+    derivedStructData?: VertexSearchDerivedStructData;
+  };
+}
+
+function isVertexSearchResultArray(
+  value: unknown,
+): value is VertexSearchResult[] {
+  return (
+    Array.isArray(value) &&
+    value.every((item) => typeof item === "object" && item !== null)
+  );
+}
+
 export async function POST(request: Request) {
   const API_KEY = process.env.VERTEX_AI_SEARCH_API_KEY;
 
@@ -12,7 +38,7 @@ export async function POST(request: Request) {
     console.error("VERTEX_AI_SEARCH_API_KEY environment variable is not set.");
     return NextResponse.json(
       { error: "Search configuration error on server." },
-      { status: 500 }
+      { status: 500 },
     );
   }
 
@@ -50,31 +76,35 @@ export async function POST(request: Request) {
     if (!response.ok) {
       const errorBody = await response.text();
       console.error(
-        `[API Search Route] Vertex AI Error ${response.status}: ${errorBody}`
+        `[API Search Route] Vertex AI Error ${response.status}: ${errorBody}`,
       );
       throw new Error(
-        `Vertex AI Search API request failed with status ${response.status}`
+        `Vertex AI Search API request failed with status ${response.status}`,
       );
     }
 
     // Parse the successful response
     const data = await response.json();
 
+    const rawResults: VertexSearchResult[] = isVertexSearchResultArray(
+      data.results,
+    )
+      ? data.results
+      : [];
+
     // Extract and format the results for the frontend
     // Ensure we handle cases where parts of the response might be missing
-    const formattedResults =
-      data.results?.map((result: any) => ({
-        id: result.id,
-        title:
-          result.document?.derivedStructData?.htmlTitle || "Untitled Result",
-        link: result.document?.derivedStructData?.link,
-        snippet:
-          result.document?.derivedStructData?.snippets?.[0]?.htmlSnippet ||
-          "No snippet available.",
-      })) || []; // Default to an empty array if data.results is null/undefined
+    const formattedResults = rawResults.map((result) => ({
+      id: result.id,
+      title: result.document?.derivedStructData?.htmlTitle || "Untitled Result",
+      link: result.document?.derivedStructData?.link,
+      snippet:
+        result.document?.derivedStructData?.snippets?.[0]?.htmlSnippet ||
+        "No snippet available.",
+    }));
 
     console.log(
-      `[API Search Route] Found ${formattedResults.length} results for query: "${query}"`
+      `[API Search Route] Found ${formattedResults.length} results for query: "${query}"`,
     );
 
     // Return the formatted results to the client
@@ -85,7 +115,7 @@ export async function POST(request: Request) {
     // Return a generic error response to the client
     return NextResponse.json(
       { error: "Failed to fetch search results." },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -98,6 +128,6 @@ export async function GET() {
       message:
         'Method Not Allowed. Please use POST with a JSON body containing a "query" field.',
     },
-    { status: 405 }
+    { status: 405 },
   );
 }

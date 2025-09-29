@@ -46,7 +46,7 @@ const getCookieConfig = () => {
       process.env.NEXT_PUBLIC_COOKIE_VALIDATION_ENABLED !== "false",
     SHORT_EXPIRATION: parseInt(
       process.env.NEXT_PUBLIC_COOKIE_SHORT_EXPIRATION || "1",
-      10
+      10,
     ),
     DEFAULT_EXPIRATION: 30,
   };
@@ -305,7 +305,7 @@ export default function CreditCardForm() {
         console.log(
           `[QUIZ] Cookie validation: ${
             cookieConfig.VALIDATION_ENABLED ? "enabled" : "disabled"
-          }, expiration: ${cookieExpiration} days`
+          }, expiration: ${cookieExpiration} days`,
         );
       }
 

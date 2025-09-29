@@ -9,7 +9,7 @@ interface PostFrontmatter {
   date?: string;
   featuredImage?: string;
   categories?: Array<{ name: string; slug: string }>;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 interface PostData {
@@ -24,7 +24,7 @@ interface PostData {
 // Function to scan a directory and check for metadata.ts existence
 async function checkMetadataExistence(
   dirPath: string,
-  categoryName: string
+  categoryName: string,
 ): Promise<void> {
   // Changed return type
   const fullDirPath = path.join(process.cwd(), dirPath);
@@ -33,18 +33,18 @@ async function checkMetadataExistence(
   try {
     const entries = await fs.readdir(fullDirPath, { withFileTypes: true });
     console.log(
-      `[checkMetadataExistence] Found ${entries.length} entries in ${dirPath}`
+      `[checkMetadataExistence] Found ${entries.length} entries in ${dirPath}`,
     );
 
     for (const entry of entries) {
       if (entry.isDirectory()) {
         const slug = entry.name;
         console.log(
-          `[checkMetadataExistence] Processing directory entry: ${slug}`
+          `[checkMetadataExistence] Processing directory entry: ${slug}`,
         );
         if (slug.endsWith("-requirements") || slug.endsWith("-application")) {
           console.log(
-            `[checkMetadataExistence] Skipping auxiliary directory: ${slug}`
+            `[checkMetadataExistence] Skipping auxiliary directory: ${slug}`,
           );
           continue;
         }
@@ -53,7 +53,7 @@ async function checkMetadataExistence(
         try {
           await fs.access(metadataPath, fs.constants.F_OK); // Check if file exists and is accessible
           console.log(
-            `[checkMetadataExistence] FOUND metadata.ts for slug: ${slug} in ${categoryName}`
+            `[checkMetadataExistence] FOUND metadata.ts for slug: ${slug} in ${categoryName}`,
           );
         } catch (accessError) {
           // Log only if it's not a 'Not Found' error, or specifically log 'Not Found'
@@ -62,25 +62,25 @@ async function checkMetadataExistence(
             (accessError as NodeJS.ErrnoException).code === "ENOENT"
           ) {
             console.warn(
-              `[checkMetadataExistence] NOT FOUND metadata.ts for slug: ${slug} in ${categoryName} (Path: ${metadataPath})`
+              `[checkMetadataExistence] NOT FOUND metadata.ts for slug: ${slug} in ${categoryName} (Path: ${metadataPath})`,
             );
           } else {
             console.error(
               `[checkMetadataExistence] Error accessing metadata.ts for slug: ${slug} in ${categoryName}:`,
-              accessError
+              accessError,
             );
           }
         }
       } else {
         console.log(
-          `[checkMetadataExistence] Skipping non-directory entry: ${entry.name}`
+          `[checkMetadataExistence] Skipping non-directory entry: ${entry.name}`,
         );
       }
     }
   } catch (error) {
     console.error(
       `[checkMetadataExistence] Error reading directory ${fullDirPath}:`,
-      error
+      error,
     );
   }
   console.log(`[checkMetadataExistence] Finished scanning ${dirPath}.`);
@@ -89,27 +89,27 @@ async function checkMetadataExistence(
 export async function GET(request: Request) {
   try {
     console.log(
-      "API route /api/posts called (DEBUGGING - Checking Metadata Existence)"
+      "API route /api/posts called (DEBUGGING - Checking Metadata Existence)",
     );
 
     // Run checks but don't collect posts for now
     await checkMetadataExistence("app/personal-finance", "Personal Finance");
     await checkMetadataExistence(
       "app/financial-solutions",
-      "Financial Solutions"
+      "Financial Solutions",
     );
 
     // Return an empty array for now to prevent frontend errors,
     // focus is on checking the server logs for the existence messages.
     console.log(
-      "API route finished checks. Returning empty array for debugging."
+      "API route finished checks. Returning empty array for debugging.",
     );
     return NextResponse.json([]);
   } catch (error) {
     console.error("Failed to get posts in API route:", error);
     return NextResponse.json(
       { error: "Failed to load posts" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

@@ -55,7 +55,7 @@ export default function UTMTracker() {
               } else if (sessionStorage.getItem(param)) {
                 url.searchParams.set(
                   param,
-                  sessionStorage.getItem(param) || ""
+                  sessionStorage.getItem(param) || "",
                 );
               }
             });

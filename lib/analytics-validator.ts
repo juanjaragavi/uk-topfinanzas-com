@@ -5,10 +5,14 @@
  * Based on proven Astro.js implementation patterns
  */
 
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
 interface ValidationResult {
   passed: boolean;
   message: string;
-  data?: any;
+  data?: unknown;
   timestamp: string;
 }
 
@@ -158,7 +162,7 @@ class AnalyticsValidator {
 
           if (test.required && !result.passed) {
             console.error(
-              `Analytics Validator: Required test failed - ${test.name}`
+              `Analytics Validator: Required test failed - ${test.name}`,
             );
           }
         } catch (error) {
@@ -190,7 +194,7 @@ class AnalyticsValidator {
       "utm_content",
     ];
     const storedParams = utmParams.filter(
-      (param) => sessionStorage.getItem(param) !== null
+      (param) => sessionStorage.getItem(param) !== null,
     );
 
     return {
@@ -346,16 +350,21 @@ class AnalyticsValidator {
    * DataLayer Validation
    */
   private validateDataLayer(): ValidationResult {
-    const hasDataLayer =
-      typeof window.dataLayer !== "undefined" &&
-      Array.isArray(window.dataLayer);
+    if (Array.isArray(window.dataLayer)) {
+      const entries = window.dataLayer.length;
+
+      return {
+        passed: true,
+        message: `DataLayer initialized with ${entries} entries`,
+        data: { dataLayerLength: entries },
+        timestamp: new Date().toISOString(),
+      };
+    }
 
     return {
-      passed: hasDataLayer,
-      message: hasDataLayer
-        ? `DataLayer initialized with ${window.dataLayer.length} entries`
-        : "DataLayer not found or not properly initialized",
-      data: hasDataLayer ? { dataLayerLength: window.dataLayer.length } : null,
+      passed: false,
+      message: "DataLayer not found or not properly initialized",
+      data: null,
       timestamp: new Date().toISOString(),
     };
   }
@@ -372,13 +381,23 @@ class AnalyticsValidator {
       };
     }
 
-    const utmEvents = window.dataLayer.filter(
-      (item) =>
-        item.event === "utm_parameters_loaded" ||
-        item.utm_source ||
-        item.utm_campaign ||
-        item.utm_medium
-    );
+    const utmEvents = window.dataLayer.filter((item) => {
+      if (!isRecord(item)) {
+        return false;
+      }
+
+      const eventValue = item["event"];
+      const utmSource = item["utm_source"];
+      const utmCampaign = item["utm_campaign"];
+      const utmMedium = item["utm_medium"];
+
+      return (
+        eventValue === "utm_parameters_loaded" ||
+        typeof utmSource === "string" ||
+        typeof utmCampaign === "string" ||
+        typeof utmMedium === "string"
+      );
+    });
 
     return {
       passed: utmEvents.length > 0,
@@ -435,12 +454,27 @@ class AnalyticsValidator {
       };
     }
 
-    const googleAdsConfigs = window.dataLayer.filter(
-      (item) =>
-        (item[0] === "config" && item[1] && item[1].startsWith("AW-")) ||
-        (item.event && item.event.includes("google")) ||
-        item.send_to
-    );
+    const googleAdsConfigs = window.dataLayer.filter((item) => {
+      if (Array.isArray(item)) {
+        const [command, id] = item;
+        return (
+          command === "config" && typeof id === "string" && id.startsWith("AW-")
+        );
+      }
+
+      if (isRecord(item)) {
+        const eventValue = item["event"];
+        const sendToValue = item["send_to"];
+
+        return (
+          (typeof eventValue === "string" &&
+            eventValue.toLowerCase().includes("google")) ||
+          typeof sendToValue !== "undefined"
+        );
+      }
+
+      return false;
+    });
 
     return {
       passed: googleAdsConfigs.length > 0,
@@ -474,16 +508,15 @@ class AnalyticsValidator {
    * GAM Ad Slots Validation
    */
   private validateGAMSlots(): ValidationResult {
-    const hasSlots =
-      typeof window.gamSlots !== "undefined" &&
-      Object.keys(window.gamSlots || {}).length > 0;
+    const slotKeys = window.gamSlots ? Object.keys(window.gamSlots) : [];
+    const hasSlots = slotKeys.length > 0;
 
     return {
       passed: hasSlots,
       message: hasSlots
-        ? `GAM ad slots defined: ${Object.keys(window.gamSlots).join(", ")}`
+        ? `GAM ad slots defined: ${slotKeys.join(", ")}`
         : "No GAM ad slots found",
-      data: hasSlots ? Object.keys(window.gamSlots) : null,
+      data: hasSlots ? slotKeys : null,
       timestamp: new Date().toISOString(),
     };
   }
@@ -492,7 +525,9 @@ class AnalyticsValidator {
    * GAM Services Validation
    */
   private validateGAMServices(): ValidationResult {
-    if (!window.googletag) {
+    const googletag = window.googletag;
+
+    if (!googletag) {
       return {
         passed: false,
         message: "GPT library not available",
@@ -503,12 +538,12 @@ class AnalyticsValidator {
     // Check if pubads service is available
     let servicesEnabled = false;
     try {
-      window.googletag.cmd.push(() => {
-        servicesEnabled = typeof window.googletag.pubads === "function";
+      googletag.cmd.push(() => {
+        servicesEnabled = typeof googletag.pubads === "function";
       });
     } catch (error) {
       // Fallback check
-      servicesEnabled = typeof window.googletag.pubads === "function";
+      servicesEnabled = typeof googletag.pubads === "function";
     }
 
     return {
@@ -544,10 +579,17 @@ class AnalyticsValidator {
 
     // Check dataLayer
     if (window.dataLayer) {
-      checks.dataLayer = window.dataLayer.some(
-        (item) =>
-          item.utm_source === utmSource || item.campaign_source === utmSource
-      );
+      checks.dataLayer = window.dataLayer.some((item) => {
+        if (!isRecord(item)) {
+          return false;
+        }
+
+        const candidates = [item["utm_source"], item["campaign_source"]].filter(
+          (value): value is string => typeof value === "string",
+        );
+
+        return candidates.some((value) => value === utmSource);
+      });
     }
 
     // Check gtag availability for conversion tracking
@@ -621,16 +663,16 @@ class AnalyticsValidator {
     const passed = this.results.filter((r) => r.passed).length;
     const total = this.results.length;
     const requiredTests = this.results.filter((r) =>
-      r.message.includes("Required test failed")
+      r.message.includes("Required test failed"),
     );
 
     console.log(
-      `Analytics Validator: Validation complete - ${passed}/${total} tests passed`
+      `Analytics Validator: Validation complete - ${passed}/${total} tests passed`,
     );
 
     if (requiredTests.length > 0) {
       console.error(
-        `Analytics Validator: ${requiredTests.length} required tests failed`
+        `Analytics Validator: ${requiredTests.length} required tests failed`,
       );
     }
 
@@ -679,15 +721,4 @@ export type { ValidationResult, ValidationSuite, ValidationTest };
 // Development helper to run validation from console
 if (typeof window !== "undefined") {
   window.analyticsValidator = analyticsValidator;
-}
-
-declare global {
-  interface Window {
-    analyticsValidator: AnalyticsValidator;
-    google_tag_manager: any;
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
-    googletag: any;
-    gamSlots: Record<string, any>;
-  }
 }

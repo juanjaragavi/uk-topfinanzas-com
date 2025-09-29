@@ -476,7 +476,7 @@ export default function CreditCardTypesBenefitsPage() {
                 >
                   {/* Empty responsive, centered div */}
                 </div>
-                
+
                 <h2 className="text-left sm:text-left text-xl font-bold text-gray-800 mb-4">
                   Your Path to Financial Freedom: Take Control with Knowledge
                 </h2>

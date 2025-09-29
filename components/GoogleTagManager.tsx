@@ -26,7 +26,7 @@ export default function GoogleTagManager() {
             window.performance?.measure(
               "gtm-execution",
               "gtm-start",
-              "gtm-loaded"
+              "gtm-loaded",
             );
           }
         }}

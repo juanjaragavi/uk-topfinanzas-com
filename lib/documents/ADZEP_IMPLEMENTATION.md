@@ -108,7 +108,9 @@ The AdZep system works automatically once integrated into the layout. No additio
 For pages that need enhanced tracking, add the tracker components:
 
 ```tsx
-import AdZepLinkTracker, { AdZepFormTracker } from "@/components/analytics/adzep-trackers";
+import AdZepLinkTracker, {
+  AdZepFormTracker,
+} from "@/components/analytics/adzep-trackers";
 
 export default function MyPage() {
   return (
@@ -130,7 +132,7 @@ import { useAdZep } from "@/components/analytics/adzep";
 
 function MyComponent() {
   const { activateAds } = useAdZep();
-  
+
   const handleSpecialEvent = () => {
     // Your custom logic
     activateAds(); // Manually trigger AdZep

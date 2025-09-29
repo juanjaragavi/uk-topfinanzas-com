@@ -42,7 +42,7 @@ export function Footer() {
                     item.href === "/blog" ||
                     item.href.startsWith("/credit-cards") ||
                     item.href === "/contact-us" ||
-                    item.href === "/about-us"
+                    item.href === "/about-us",
                 )
                 .map((item) => (
                   <li key={item.href}>

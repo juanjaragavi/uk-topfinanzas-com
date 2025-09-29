@@ -17,13 +17,6 @@ export type ActivateOptions = {
   retryDelay?: number; // delay between attempts
 };
 
-// Window typing
-declare global {
-  interface Window {
-    AdZepActivateAds?: () => void;
-  }
-}
-
 function sleep(ms: number) {
   return new Promise((res) => setTimeout(res, ms));
 }
@@ -31,7 +24,7 @@ function sleep(ms: number) {
 export function pageHasAdUnits(): boolean {
   if (typeof document === "undefined") return false;
   return adZepConfig.containerSelectors.some((sel) =>
-    document.querySelector(sel)
+    document.querySelector(sel),
   );
 }
 
@@ -69,7 +62,7 @@ export function waitForContainers(timeoutMs: number): Promise<boolean> {
           resolve(true);
         }
       },
-      { once: true }
+      { once: true },
     );
   });
 }
@@ -91,7 +84,7 @@ export function hasRenderedCreative(container: Element | null): boolean {
 }
 
 async function waitForAdZepFunction(
-  options?: ActivateOptions
+  options?: ActivateOptions,
 ): Promise<boolean> {
   const timeout = options?.timeout ?? adZepConfig.defaultActivationTimeoutMs;
   const attempts = options?.retryAttempts ?? adZepConfig.defaultRetryAttempts;
@@ -119,9 +112,7 @@ async function waitForAdZepFunction(
 }
 
 // Serialize activations; if in progress, short-circuit unless force
-export async function activateAdZep(
-  options?: ActivateOptions
-): Promise<{
+export async function activateAdZep(options?: ActivateOptions): Promise<{
   success: boolean;
   reason?: string;
   attempts: number;

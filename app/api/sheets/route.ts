@@ -21,7 +21,7 @@ export async function POST(req: Request) {
     // Ensure the sheet exists, create it if it doesn't
     const spreadsheet = await sheets.spreadsheets.get({ spreadsheetId });
     const sheetExists = spreadsheet.data.sheets?.some(
-      (s) => s.properties?.title === sheetName
+      (s) => s.properties?.title === sheetName,
     );
 
     if (!sheetExists) {
@@ -101,7 +101,7 @@ export async function POST(req: Request) {
       error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json(
       { error: "Failed to add data to sheet", details: errorMessage },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

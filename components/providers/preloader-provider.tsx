@@ -26,7 +26,7 @@ interface PreloaderContextType {
 }
 
 const PreloaderContext = createContext<PreloaderContextType | undefined>(
-  undefined
+  undefined,
 );
 
 export const usePreloader = () => {
@@ -77,7 +77,7 @@ export const PreloaderProvider: React.FC<PreloaderProviderProps> = ({
       setConfig({ ...defaultConfig, ...customConfig });
       setIsLoading(true);
     },
-    [defaultConfig]
+    [defaultConfig],
   );
 
   const hidePreloader = useCallback(() => {

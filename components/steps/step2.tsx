@@ -51,6 +51,7 @@ export default function Step2({ formData, updateFormData }: Step2Props) {
       >
         {options.map((option, index) => (
           <OptionButton
+            key={option.id}
             id={option.id}
             label={option.label}
             selected={selected === option.id}

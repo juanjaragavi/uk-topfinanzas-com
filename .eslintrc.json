@@ -1,0 +1,32 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "overrides": [
+    {
+      "files": ["app/**/page.tsx"],
+      "rules": {
+        "react/no-unescaped-entities": "off"
+      }
+    },
+    {
+      "files": [
+        "app/cookie-policy/page.tsx",
+        "app/privacy-policy/page.tsx",
+        "app/terms/page.tsx"
+      ],
+      "rules": {
+        "react-hooks/rules-of-hooks": "off"
+      }
+    },
+    {
+      "files": [
+        "components/credit-card-form.tsx",
+        "components/credit-card-form-to-product.tsx",
+        "components/forms/credit-card-application-form.tsx",
+        "components/mdx/blog-layout.tsx"
+      ],
+      "rules": {
+        "react/no-unescaped-entities": "off"
+      }
+    }
+  ]
+}

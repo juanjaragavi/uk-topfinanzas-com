@@ -6,80 +6,82 @@
 
 /* Base element styles */
 :root {
-    --primary-color: #222442;
-    --background-color: #ffffff;
-    --text-color: #222222;
-    --font-sans: var(--font-poppins), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --primary-color: #222442;
+  --background-color: #ffffff;
+  --text-color: #222222;
+  --font-sans:
+    var(--font-poppins), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-sans);
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.5;
 }
 
 /* Header styles - critical for initial render */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    background-color: var(--background-color);
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    position: relative;
-    z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: var(--background-color);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 50;
 }
 
 /* Banner section - critical for LCP */
 .banner-section {
-    position: relative;
-    padding: 4rem 1rem;
-    overflow: hidden;
+  position: relative;
+  padding: 4rem 1rem;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
-    .banner-section {
-        padding: 6rem 1rem;
-    }
+  .banner-section {
+    padding: 6rem 1rem;
+  }
 }
 
 @media (min-width: 1024px) {
-    .banner-section {
-        padding: 10rem 1rem;
-    }
+  .banner-section {
+    padding: 10rem 1rem;
+  }
 }
 
 /* Typography styles for banner */
 h1 {
-    font-size: 1.875rem;
-    font-weight: 700;
-    line-height: 1.25;
-    margin-bottom: 1rem;
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
-    h1 {
-        font-size: 2.25rem;
-    }
+  h1 {
+    font-size: 2.25rem;
+  }
 }
 
 @media (min-width: 1024px) {
-    h1 {
-        font-size: 3rem;
-    }
+  h1 {
+    font-size: 3rem;
+  }
 }
 
 /* Container and layout styles */
 .container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /* Skip non-critical styles */

@@ -43,7 +43,7 @@ export function BackToTop() {
           className={cn(
             "bg-[#8DC63F] fixed bottom-4 right-4 z-50 h-10 w-10 p-0 rounded-full shadow-lg", // Fixed position, size, padding removed, rounded, shadow
             "transition-opacity duration-300",
-            isVisible ? "opacity-100" : "opacity-0" // Fade in/out
+            isVisible ? "opacity-100" : "opacity-0", // Fade in/out
           )}
           onClick={scrollToTop}
           aria-label="Scroll back to top"

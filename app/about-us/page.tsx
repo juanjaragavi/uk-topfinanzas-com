@@ -397,8 +397,8 @@ export default function AboutUs() {
                           index === 0
                             ? "https://media.topfinanzas.com/images/uk/james-davies.webp"
                             : index === 1
-                            ? "https://media.topfinanzas.com/images/uk/sarah-wilson.webp"
-                            : "https://media.topfinanzas.com/images/uk/robert-mitchell.webp"
+                              ? "https://media.topfinanzas.com/images/uk/sarah-wilson.webp"
+                              : "https://media.topfinanzas.com/images/uk/robert-mitchell.webp"
                         }
                         alt={testimonial.name}
                         width={56}

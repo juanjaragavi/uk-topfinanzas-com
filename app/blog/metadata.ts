@@ -13,7 +13,14 @@ export const metadata: Metadata = {
     url: "https://uk.topfinanzas.com/blog", // Assuming this is the blog URL
     type: "website",
     // Optional: Add a general blog image
-    images: [{ url: 'https://media.topfinanzas.com/images/best-personal-loans.webp', width: 1200, height: 630, alt: 'TopFinance UK Blog' }],
+    images: [
+      {
+        url: "https://media.topfinanzas.com/images/best-personal-loans.webp",
+        width: 1200,
+        height: 630,
+        alt: "TopFinance UK Blog",
+      },
+    ],
     // section: "Blog", // Removed as it's not valid for type 'website'
   },
   twitter: {
@@ -21,6 +28,6 @@ export const metadata: Metadata = {
     title: "TopFinance UK Blog: Personal Finance & Financial Solutions",
     description:
       "Explore articles on credit cards, loans, debt management, savings, and more financial topics relevant to the UK market.",
-    images: ['https://media.topfinanzas.com/images/best-personal-loans.webp'],
+    images: ["https://media.topfinanzas.com/images/best-personal-loans.webp"],
   },
 };

@@ -26,7 +26,7 @@ export default function CashbackCreditCardsPage() {
             >
               {/* Empty responsive, centered div */}
             </div>
-            
+
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Discover the top cashback credit cards! Compare benefits like

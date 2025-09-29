@@ -206,7 +206,7 @@ export default function ContactUs() {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -270,7 +270,7 @@ export default function ContactUs() {
       setSubmitError(
         error instanceof Error
           ? error.message
-          : "An unexpected error occurred. Please try again."
+          : "An unexpected error occurred. Please try again.",
       );
     } finally {
       setIsSubmitting(false);
@@ -538,8 +538,8 @@ export default function ContactUs() {
                     isSubmitting
                       ? "bg-gray-400 cursor-not-allowed text-white"
                       : formData.acceptTerms
-                      ? "bg-[#8DC63F] hover:bg-[#6BA828] text-white"
-                      : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                        ? "bg-[#8DC63F] hover:bg-[#6BA828] text-white"
+                        : "bg-gray-300 text-gray-500 cursor-not-allowed"
                   }`}
                 >
                   {isSubmitting ? "Sending..." : "SEND MESSAGE"}

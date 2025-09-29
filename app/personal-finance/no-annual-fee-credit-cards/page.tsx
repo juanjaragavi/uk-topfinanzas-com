@@ -93,7 +93,7 @@ export default function NoAnnualFeeCreditCards() {
           </ul>
         </section>
 
-  <section className="my-8">
+        <section className="my-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
             Types of No Annual Fee Cards
           </h2>
@@ -135,7 +135,7 @@ export default function NoAnnualFeeCreditCards() {
           </ul>
         </section>
 
-  <section className="my-8">
+        <section className="my-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
             Explore Specific No Annual Fee Cards
           </h2>
@@ -205,7 +205,7 @@ export default function NoAnnualFeeCreditCards() {
           </p>
         </section>
 
-  <section className="my-8">
+        <section className="my-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
             Choosing the Right Card for You
           </h2>

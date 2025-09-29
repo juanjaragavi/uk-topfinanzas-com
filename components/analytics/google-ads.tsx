@@ -105,7 +105,7 @@ export default function GoogleAds() {
 export function trackGoogleAdsConversion(
   conversionLabel: string,
   value?: number,
-  currency = "GBP"
+  currency = "GBP",
 ) {
   if (typeof window !== "undefined" && window.gtag) {
     window.gtag("event", "conversion", {
@@ -124,19 +124,15 @@ export function trackGoogleAdsConversion(
  * Function to track custom events
  * Call this for tracking user interactions and custom events
  */
-export function trackGoogleAdsEvent(eventName: string, parameters: any = {}) {
+export function trackGoogleAdsEvent(
+  eventName: string,
+  parameters: Record<string, unknown> = {},
+) {
   if (typeof window !== "undefined" && window.gtag) {
     window.gtag("event", eventName, {
       ...parameters,
       send_to: GOOGLE_ADS_ID,
     });
     console.debug(`Google Ads: Event tracked - ${eventName}`, parameters);
-  }
-}
-
-// Type declaration for gtag
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
   }
 }

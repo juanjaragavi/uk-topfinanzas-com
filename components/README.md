@@ -24,9 +24,7 @@ Main layout component for blog pages. It includes:
 Usage:
 
 ```tsx
-<BlogLayout metadata={postMetadata}>
-  {/* Blog content */}
-</BlogLayout>
+<BlogLayout metadata={postMetadata}>{/* Blog content */}</BlogLayout>
 ```
 
 ## MDX Components
@@ -38,9 +36,7 @@ Component for rendering individual blog posts. It takes post metadata and conten
 Usage:
 
 ```tsx
-<BlogPost metadata={postMetadata}>
-  {compiledMdxContent}
-</BlogPost>
+<BlogPost metadata={postMetadata}>{compiledMdxContent}</BlogPost>
 ```
 
 ### Blog Layout (MDX Version) (`/mdx/blog-layout.tsx`)

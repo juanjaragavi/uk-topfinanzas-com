@@ -257,7 +257,7 @@ export default function BlogArchivePage() {
   };
 
   const allPostsSorted: PostItem[] = [...allPosts].sort(
-    (a, b) => parseDate(b.date) - parseDate(a.date)
+    (a, b) => parseDate(b.date) - parseDate(a.date),
   );
 
   // Filter posts based on active category
@@ -266,25 +266,25 @@ export default function BlogArchivePage() {
 
     if (activeCategory === "personalFinance") {
       filteredPosts = allPostsSorted.filter(
-        (post) => post.category === "Personal Finance"
+        (post) => post.category === "Personal Finance",
       );
     } else if (activeCategory === "financialSolutions") {
       filteredPosts = allPostsSorted.filter(
-        (post) => post.category === "Financial Solutions"
+        (post) => post.category === "Financial Solutions",
       );
     } else if (activeCategory === "creditCards") {
       filteredPosts = allPostsSorted.filter(
         (post) =>
           post.title.toLowerCase().includes("credit card") ||
           post.slug.toLowerCase().includes("credit-card") ||
-          post.description.toLowerCase().includes("credit card")
+          post.description.toLowerCase().includes("credit card"),
       );
     } else if (activeCategory === "loans") {
       filteredPosts = allPostsSorted.filter(
         (post) =>
           post.title.toLowerCase().includes("loan") ||
           post.slug.toLowerCase().includes("loan") ||
-          post.description.toLowerCase().includes("loan")
+          post.description.toLowerCase().includes("loan"),
       );
     }
 

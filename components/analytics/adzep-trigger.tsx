@@ -3,7 +3,7 @@
 import React from "react";
 import { useAdZep } from "./adzep";
 
-interface AdZepTriggerProps {
+interface AdZepTriggerProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
    * The event that should trigger AdZep activation
    * @default "click"
@@ -19,11 +19,6 @@ interface AdZepTriggerProps {
    * Optional className for the wrapper
    */
   className?: string;
-
-  /**
-   * Additional props to pass to the wrapper element
-   */
-  [key: string]: any;
 }
 
 /**
@@ -60,19 +55,25 @@ export default function AdZepTrigger({
     }
   };
 
-  const eventProps = {
-    [trigger === "click"
-      ? "onClick"
-      : trigger === "hover"
-      ? "onMouseEnter"
-      : trigger === "focus"
-      ? "onFocus"
-      : trigger === "mouseenter"
-      ? "onMouseEnter"
-      : trigger === "mouseleave"
-      ? "onMouseLeave"
-      : "onClick"]: handleTrigger,
-  };
+  const eventProps: Partial<React.HTMLAttributes<HTMLDivElement>> = {};
+
+  switch (trigger) {
+    case "click":
+      eventProps.onClick = handleTrigger;
+      break;
+    case "hover":
+    case "mouseenter":
+      eventProps.onMouseEnter = handleTrigger;
+      break;
+    case "mouseleave":
+      eventProps.onMouseLeave = handleTrigger;
+      break;
+    case "focus":
+      eventProps.onFocus = handleTrigger;
+      break;
+    default:
+      eventProps.onClick = handleTrigger;
+  }
 
   return (
     <div className={className} {...eventProps} {...props}>

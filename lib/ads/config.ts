@@ -53,6 +53,6 @@ export const adZepConfig: AdZepConfig = {
 export function isArticlePath(pathname: string | null | undefined): boolean {
   if (!pathname) return false;
   return adZepConfig.articlePathPrefixes.some(
-    (p) => pathname === p || pathname.startsWith(p + "/")
+    (p) => pathname === p || pathname.startsWith(p + "/"),
   );
 }

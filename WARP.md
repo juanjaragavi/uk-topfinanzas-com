@@ -9,6 +9,7 @@ UK TopFinanzas is a Next.js 14+ financial services comparison website for the UK
 ## Common Development Commands
 
 ### Development & Build
+
 ```bash
 npm run dev      # Start development server on port 3004 with Turbo
 npm run build    # Production build
@@ -17,25 +18,31 @@ npm run lint     # Run ESLint
 ```
 
 ### Git Workflow (CRITICAL)
+
 **NEVER commit directly** - always use the automated workflow script:
+
 ```bash
 bash ./scripts/git-workflow.sh  # Handles commits, merges to main/backup branches
 ```
+
 - Reads commit message from `/lib/documents/commit-message.txt`
 - Automatically handles merge conflicts
 - Synchronizes dev/main/backup branches
 
 ### Branch Synchronization
+
 ```bash
 bash ./scripts/sync-branches.sh  # Sync all branches with main
 ```
 
 ### Production Deployment (on server)
+
 ```bash
 sudo bash ./scripts/deploy_update.sh  # Pull, build, and restart with PM2
 ```
 
 ### Cookie Validation Control
+
 ```bash
 bash ./scripts/cookie-validation-control.sh {config|disable|enable|test|deploy}
 ```
@@ -43,6 +50,7 @@ bash ./scripts/cookie-validation-control.sh {config|disable|enable|test|deploy}
 ## Architecture & Project Structure
 
 ### Core Technologies
+
 - **Framework**: Next.js 14+ with App Router
 - **Language**: TypeScript with strict mode
 - **Styling**: Tailwind CSS with mobile-first approach
@@ -52,6 +60,7 @@ bash ./scripts/cookie-validation-control.sh {config|disable|enable|test|deploy}
 - **Content**: MDX support for blog posts
 
 ### Directory Structure
+
 ```
 /app              # Next.js App Router pages and API routes
   /api            # API endpoints (sheets, subscribe, search, etc.)
@@ -77,26 +86,30 @@ bash ./scripts/cookie-validation-control.sh {config|disable|enable|test|deploy}
 ### Key System Components
 
 #### Analytics Layer (`/components/analytics/`)
+
 - **AdZep Integration**: Automatically activates on navigation
 - **GTM**: Loads before AdZep in layout
 - **Development Tools**: AdZepTest component for testing
 - **Usage**: `useAdZep()` hook for programmatic activation
 
 #### Multi-Step Forms (`/components/steps/`)
+
 - Three-step credit application flow
 - State management through `formData` prop
 - Progress indicators and validation
 - Auto-scrolls to top on step changes
 
 #### API Integration (`/app/api/`)
+
 - **Google Sheets**: Form data collection endpoint
-- **Email**: SendGrid integration for notifications  
+- **Email**: SendGrid integration for notifications
 - **Search**: Vertex AI search functionality
 - **Newsletter**: Kit.com subscription management
 
 ### Environment Configuration
 
 #### Required Environment Variables
+
 ```bash
 # API Keys (stored in .env.production or .env.local)
 GOOGLE_SERVICE_ACCOUNT_EMAIL    # Google Sheets service account
@@ -117,6 +130,7 @@ NEXT_PUBLIC_COOKIE_SHORT_EXPIRATION    # days (default: 1)
 ## UK Market Specific Requirements
 
 ### Compliance & Localization
+
 - **Currency**: Always GBP (£) formatting with proper thousand separators
 - **Date Format**: DD/MM/YYYY (UK standard)
 - **Language**: en-GB localization
@@ -125,6 +139,7 @@ NEXT_PUBLIC_COOKIE_SHORT_EXPIRATION    # days (default: 1)
 - **Required Terms**: "representative example" where regulations require
 
 ### Content Guidelines
+
 - Include regulatory disclaimers for financial products
 - Use UK-specific financial terminology
 - Comply with FCA advertising standards
@@ -133,6 +148,7 @@ NEXT_PUBLIC_COOKIE_SHORT_EXPIRATION    # days (default: 1)
 ## Development Patterns
 
 ### Component Pattern
+
 ```tsx
 // Standard component structure with @/ imports
 import { cn } from "@/lib/utils";
@@ -144,16 +160,18 @@ export default function ComponentName({ className, ...props }: ComponentProps) {
 ```
 
 ### Shadcn/UI Forwarded Ref Pattern
+
 ```tsx
 const Component = React.forwardRef<HTMLDivElement, ComponentProps>(
   ({ className, ...props }, ref) => (
     <div className={cn("base-styles", className)} ref={ref} {...props} />
-  )
+  ),
 );
 Component.displayName = "Component";
 ```
 
 ### Analytics Tracking
+
 ```tsx
 // DO NOT manually call window.AdZepActivateAds()
 // AdZep auto-activates via AdZepNavigationHandler
@@ -166,6 +184,7 @@ const { activateAds } = useAdZep();
 ## Performance Optimizations
 
 ### Next.js Configuration
+
 - Standalone output mode for production
 - Image optimization with Next/Image component
 - Local font loading (Poppins) to avoid external requests
@@ -173,6 +192,7 @@ const { activateAds } = useAdZep();
 - Turbopack enabled for faster development builds
 
 ### Critical Performance Settings
+
 - Port 3004 for both development and production
 - PM2 process manager for production (`uk-topfinanzas-com` process name)
 - Webpack build workers and parallel compilation enabled
@@ -181,6 +201,7 @@ const { activateAds } = useAdZep();
 ## Testing & Debugging
 
 ### Analytics Testing
+
 ```bash
 # Development mode includes comprehensive logging
 # Check browser console for:
@@ -190,6 +211,7 @@ const { activateAds } = useAdZep();
 ```
 
 ### Form Testing
+
 - Multi-step forms validate on each step
 - Check `/app/api/sheets/` for Google Sheets integration
 - Form data persists across steps via state management

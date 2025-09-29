@@ -14,7 +14,7 @@ const DynamicPagination = dynamic(
   {
     ssr: false,
     loading: () => <div className="flex justify-center mt-8 h-10"></div>,
-  }
+  },
 );
 
 // Interface for post frontmatter
@@ -25,7 +25,7 @@ interface PostFrontmatter {
   featuredImage?: string;
   description: string;
   excerpt?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 // Interface for post data, matching the structure used in blog archive
@@ -198,7 +198,7 @@ export default function Home() {
     const startIndex = (currentPage - 1) * postsPerPage;
     const postsToDisplay = sortedPosts.slice(
       startIndex,
-      startIndex + postsPerPage
+      startIndex + postsPerPage,
     );
     return { paginatedPosts: postsToDisplay, totalPages: calculatedTotalPages };
   }, [currentPage, postsPerPage]);

@@ -25,7 +25,7 @@ export default function BestRewardsCreditCardsPage() {
             >
               {/* Empty responsive, centered div */}
             </div>
-            
+
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Discover the best rewards credit cards that turn your everyday
@@ -274,7 +274,7 @@ export default function BestRewardsCreditCardsPage() {
                 >
                   {/* Empty responsive, centered div */}
                 </div>
-                
+
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Find the Perfect Card to Maximize Your Rewards
                 </h2>

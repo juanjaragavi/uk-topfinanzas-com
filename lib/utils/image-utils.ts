@@ -40,7 +40,7 @@ export function fixImageUrl(url: string): string {
   }
 
   // Force HTTPS
-  let fixedUrl = url.replace(/^http:\/\//i, "https://");
+  const fixedUrl = url.replace(/^http:\/\//i, "https://");
 
   // Handle relative URLs
   if (fixedUrl.startsWith("/")) {

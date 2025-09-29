@@ -17,7 +17,7 @@ The application uses a local advertisement system defined in `/lib/ads/advertise
 See `/lib/ads/advertisements.ts` for:
 
 - Advertisement interface definitions
-- Advertisement data management  
+- Advertisement data management
 - Filtering by format and status
 - Random advertisement selection
 

@@ -12,7 +12,7 @@
 export function generateTinyPlaceholder(
   originalSrc: string,
   width: number = 20,
-  quality: number = 10
+  quality: number = 10,
 ): string {
   // Check if URL is valid and has all parts needed for manipulation
   try {
@@ -43,7 +43,7 @@ export function generateTinyPlaceholder(
 export function generateBlurSvg(
   width: number = 100,
   height: number = 100,
-  color: string = "#f3f4f6"
+  color: string = "#f3f4f6",
 ): string {
   // Create a simple SVG with a blurred rectangle
   const svg = `
@@ -68,10 +68,10 @@ export function generateBlurSvg(
  * @returns Data URL with RGB values
  */
 export function generateColorBlurDataUrl(
-  rgbColor: [number, number, number] = [243, 244, 246]
+  rgbColor: [number, number, number] = [243, 244, 246],
 ): string {
   const [r, g, b] = rgbColor;
   return `data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mN8${Buffer.from(
-    String.fromCharCode(r, g, b)
+    String.fromCharCode(r, g, b),
   ).toString("base64")}/APC+AAAAASUVORK5CYII=`;
 }

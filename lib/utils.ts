@@ -13,7 +13,7 @@ export function cn(...inputs: ClassValue[]) {
  */
 export function getTextClass(
   type: "h1" | "h2" | "h3" | "body" | "meta" | "link" | "list",
-  variant?: "default" | "large" | "small"
+  variant?: "default" | "large" | "small",
 ): string {
   const baseClass = `text-${type}`;
 

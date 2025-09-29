@@ -111,7 +111,7 @@ height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Ma
  */
 export function pushGTMEvent(
   eventName: string,
-  eventData: Record<string, any> = {}
+  eventData: Record<string, unknown> = {},
 ) {
   if (typeof window !== "undefined" && window.dataLayer) {
     window.dataLayer.push({
@@ -128,10 +128,10 @@ export function pushGTMEvent(
 export function pushGTMConversion(
   conversionName: string,
   value?: number,
-  currency = "GBP"
+  currency = "GBP",
 ) {
   if (typeof window !== "undefined" && window.dataLayer) {
-    const conversionData: Record<string, any> = {
+    const conversionData: Record<string, unknown> = {
       event: "conversion",
       conversion_name: conversionName,
       value: value,
@@ -148,14 +148,7 @@ export function pushGTMConversion(
     window.dataLayer.push(conversionData);
     console.debug(
       `GTM: Conversion tracked - ${conversionName}`,
-      conversionData
+      conversionData,
     );
-  }
-}
-
-// Type declaration for dataLayer
-declare global {
-  interface Window {
-    dataLayer: any[];
   }
 }

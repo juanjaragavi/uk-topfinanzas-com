@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { motion } from "framer-motion"
-import type { ReactNode } from "react"
+import { motion } from "framer-motion";
+import type { ReactNode } from "react";
 
 interface AnimatedTextProps {
-  children: ReactNode
-  className?: string
-  delay?: number
-  duration?: number
-  once?: boolean
-  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | "div"
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+  duration?: number;
+  once?: boolean;
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | "div";
 }
 
 export const AnimatedText: React.FC<AnimatedTextProps> = ({
@@ -22,7 +22,7 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
   once = true,
   as = "div",
 }) => {
-  const Component = motion[as] || motion.div
+  const Component = motion[as] || motion.div;
 
   return (
     <Component
@@ -34,6 +34,5 @@ export const AnimatedText: React.FC<AnimatedTextProps> = ({
     >
       {children}
     </Component>
-  )
-}
-
+  );
+};

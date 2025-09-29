@@ -27,7 +27,7 @@ export const CreditCardApplicationForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -109,8 +109,8 @@ export const CreditCardApplicationForm = () => {
                 step < currentStep
                   ? "text-primary"
                   : step === currentStep
-                  ? "text-secondary"
-                  : "text-gray-300"
+                    ? "text-secondary"
+                    : "text-gray-300"
               }`}
             >
               <div
@@ -118,8 +118,8 @@ export const CreditCardApplicationForm = () => {
                   step < currentStep
                     ? "bg-primary text-white border-primary"
                     : step === currentStep
-                    ? "border-secondary"
-                    : "border-gray-300"
+                      ? "border-secondary"
+                      : "border-gray-300"
                 } mx-auto`}
               >
                 {step < currentStep ? (
@@ -145,8 +145,8 @@ export const CreditCardApplicationForm = () => {
                 {step === 1
                   ? "Personal Info"
                   : step === 2
-                  ? "Financial Info"
-                  : "Review"}
+                    ? "Financial Info"
+                    : "Review"}
               </div>
               {step < 3 && (
                 <div
@@ -536,10 +536,10 @@ export const CreditCardApplicationForm = () => {
                     {formData.cardType === "citi-double-cash"
                       ? "Citi Double Cash"
                       : formData.cardType === "chase-freedom"
-                      ? "Chase Freedom"
-                      : formData.cardType === "amex-gold"
-                      ? "American Express Gold"
-                      : "Discover it"}
+                        ? "Chase Freedom"
+                        : formData.cardType === "amex-gold"
+                          ? "American Express Gold"
+                          : "Discover it"}
                   </p>
                 </div>
               </div>

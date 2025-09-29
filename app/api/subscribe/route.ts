@@ -6,7 +6,7 @@ export async function POST(request: Request) {
   if (!email_address || !first_name) {
     return NextResponse.json(
       { error: "Email and first name are required" },
-      { status: 400 }
+      { status: 400 },
     );
   }
 
@@ -17,7 +17,7 @@ export async function POST(request: Request) {
   if (!API_KEY || !API_URL) {
     return NextResponse.json(
       { error: "API key or URL is not configured" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 
@@ -42,7 +42,7 @@ export async function POST(request: Request) {
       const errorData = await response.json();
       return NextResponse.json(
         { error: errorData },
-        { status: response.status }
+        { status: response.status },
       );
     }
 
@@ -52,7 +52,7 @@ export async function POST(request: Request) {
     console.error("Error subscribing user:", error);
     return NextResponse.json(
       { error: "Internal Server Error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

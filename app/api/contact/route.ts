@@ -12,7 +12,7 @@ export async function POST(request: Request) {
       console.error("Validation Error: Missing required fields", body);
       return NextResponse.json(
         { message: "Missing required fields" },
-        { status: 400 }
+        { status: 400 },
       );
     }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -20,7 +20,7 @@ export async function POST(request: Request) {
       console.error("Validation Error: Invalid email format", email);
       return NextResponse.json(
         { message: "Invalid email format" },
-        { status: 400 }
+        { status: 400 },
       );
     }
     // Add phone validation if needed
@@ -33,11 +33,11 @@ export async function POST(request: Request) {
 
     if (!apiKey || !senderEmail || !recipientEmail) {
       console.error(
-        "Server Configuration Error: Missing SendGrid environment variables"
+        "Server Configuration Error: Missing SendGrid environment variables",
       );
       return NextResponse.json(
         { message: "Server configuration error. Please contact support." },
-        { status: 500 } // Internal Server Error
+        { status: 500 }, // Internal Server Error
       );
     }
 
@@ -116,21 +116,21 @@ export async function POST(request: Request) {
 
     // --- Send Email ---
     console.log(
-      `Attempting to send email from ${senderEmail} to ${recipientEmail}`
+      `Attempting to send email from ${senderEmail} to ${recipientEmail}`,
     );
     await transporter.sendMail(mailOptions);
     console.log("Email sent successfully via SendGrid");
 
     return NextResponse.json(
       { message: "Message sent successfully!" },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
     console.error("Error processing contact form:", error);
     // Avoid exposing detailed errors to the client
     return NextResponse.json(
       { message: "Failed to send message due to a server error." },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

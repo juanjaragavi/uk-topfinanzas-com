@@ -65,7 +65,7 @@ try {
   // Read the critical CSS file
   criticalCSS = fs.readFileSync(
     path.join(process.cwd(), "app/critical.css"),
-    "utf8"
+    "utf8",
   );
 } catch (e) {
   console.warn("Failed to read critical CSS:", e);
@@ -188,7 +188,7 @@ export default function RootLayout({
                 ],
               },
               null,
-              2
+              2,
             ),
           }}
         />
@@ -243,7 +243,9 @@ export default function RootLayout({
             <AdZepSPABridge />
             {process.env.NODE_ENV === "development" && <UtmMonitor />}
             {process.env.NODE_ENV === "development" && <AdZepTest />}
-            {process.env.NODE_ENV === "development" && <AnalyticsValidationPanel />}
+            {process.env.NODE_ENV === "development" && (
+              <AnalyticsValidationPanel />
+            )}
           </Suspense>
           {children}
         </NavigationProvider>

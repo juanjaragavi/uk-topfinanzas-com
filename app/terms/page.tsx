@@ -15,7 +15,7 @@ export default async function TermsPage() {
   // Read the MDX file
   const filePath = path.join(
     process.cwd(),
-    "content/legal/terms-conditions.mdx"
+    "content/legal/terms-conditions.mdx",
   );
   let source = "# Terms and Conditions\n\nContent not found.";
 

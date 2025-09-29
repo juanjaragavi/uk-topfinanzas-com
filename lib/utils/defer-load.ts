@@ -34,7 +34,7 @@ export function loadScriptAsync(
   src: string,
   id?: string,
   onLoad?: () => void,
-  defer: boolean = true
+  defer: boolean = true,
 ): void {
   if (typeof window === "undefined") return;
 
@@ -63,7 +63,7 @@ export function loadScriptAsync(
 export function loadScriptDeferred(
   src: string,
   id?: string,
-  onLoad?: () => void
+  onLoad?: () => void,
 ): void {
   executeAfterLoad(() => loadScriptAsync(src, id, onLoad));
 }

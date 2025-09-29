@@ -15,7 +15,7 @@ export default async function CookiePolicyPage() {
   // Read the MDX file
   const filePath = path.join(
     process.cwd(),
-    "content/legal/cookie-policy.mdx" // Updated path
+    "content/legal/cookie-policy.mdx", // Updated path
   );
   let source = "# Cookie Policy\n\nContent not found.";
 

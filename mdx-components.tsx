@@ -28,7 +28,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <h3
         className={cn(
           "text-3xl font-semibold mt-8 mb-4 text-gray-900",
-          className
+          className,
         )}
         {...props}
       />
@@ -37,7 +37,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <h4
         className={cn(
           "text-xl font-semibold mt-8 mb-4 text-gray-900",
-          className
+          className,
         )}
         {...props}
       />
@@ -73,7 +73,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <blockquote
         className={cn(
           "border-l-4 border-blue-500 pl-4 py-1 mb-4 italic text-gray-700 bg-blue-50 rounded-r",
-          className
+          className,
         )}
         {...props}
       />
@@ -133,7 +133,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
           href={linkHref}
           className={cn(
             "text-blue-600 hover:text-blue-800 hover:underline",
-            className
+            className,
           )}
           {...props}
         />
@@ -145,7 +145,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <pre
         className={cn(
           "p-4 bg-gray-900 rounded-xl mb-6 overflow-x-auto text-white",
-          className
+          className,
         )}
         {...props}
       />
@@ -154,7 +154,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <code
         className={cn(
           "bg-gray-100 rounded px-1 py-0.5 text-gray-800 font-mono text-sm",
-          className
+          className,
         )}
         {...props}
       />
@@ -182,7 +182,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <th
         className={cn(
           "px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider",
-          className
+          className,
         )}
         {...props}
       />

@@ -1,4 +1,7 @@
-fix(analytics): allow adwords and dynamic UTM sources
 
-- extend UTM persister validation to keep google ads utm_source values
-- accept partner-specific identifiers with pattern-based fallback logging
+chore: integrate prettier formatting
+
+- add prettier dev dependency with npm format script and ignore defaults
+- run automated formatting pass across app, components, and shared libs
+- tighten analytics typings to satisfy tsc and lint after format sweep
+

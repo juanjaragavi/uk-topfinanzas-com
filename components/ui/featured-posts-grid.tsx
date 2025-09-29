@@ -29,7 +29,7 @@ export function FeaturedPostsGrid({
     ? posts.filter(
         (post) =>
           post.category.toLowerCase() === filter.toLowerCase() ||
-          post.type?.toLowerCase() === filter.toLowerCase()
+          post.type?.toLowerCase() === filter.toLowerCase(),
       )
     : posts;
 

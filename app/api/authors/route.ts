@@ -14,7 +14,7 @@ export async function GET() {
     console.error("Error fetching authors data:", error);
     return NextResponse.json(
       { error: "Failed to load authors data" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

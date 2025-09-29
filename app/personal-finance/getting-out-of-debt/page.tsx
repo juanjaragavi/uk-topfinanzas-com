@@ -25,7 +25,7 @@ export default function GettingOutOfDebtPage() {
             >
               {/* Empty responsive, centered div */}
             </div>
-            
+
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
                 Feeling overwhelmed by debt? Get practical strategies for

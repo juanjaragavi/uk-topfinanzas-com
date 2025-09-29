@@ -54,7 +54,7 @@ export const advertisements: Advertisement[] = [
  * @returns Array of advertisements matching the format
  */
 export function getAdsByFormat(
-  format: Advertisement["format"]
+  format: Advertisement["format"],
 ): Advertisement[] {
   return advertisements.filter((ad) => ad.format === format && ad.active);
 }
@@ -66,7 +66,7 @@ export function getAdsByFormat(
  * @returns A random advertisement matching the format, or undefined if none found
  */
 export function getRandomAd(
-  format: Advertisement["format"]
+  format: Advertisement["format"],
 ): Advertisement | undefined {
   const ads = getAdsByFormat(format);
   if (ads.length === 0) return undefined;

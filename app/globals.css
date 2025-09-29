@@ -24,7 +24,12 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
   font-family: var(--font-poppins);
   @apply text-gray-900;
 }
@@ -60,7 +65,6 @@ body {
 }
 
 @layer components {
-
   /* Heading Typography */
   .text-h1 {
     @apply text-[16px] font-bold text-gray-800 leading-7;

@@ -5,26 +5,58 @@ import { useEffect } from "react";
 
 const GAM_NETWORK_CODE = "21879825561";
 
+type GoogletagSize = [number, number] | Array<[number, number]>;
+
+interface GoogletagPubAdsService {
+  enableSingleRequest: () => void;
+  setTargeting: (key: string, value: string | string[]) => void;
+  refresh: (slots?: GoogletagSlot[]) => void;
+}
+
+interface GoogletagSlot {
+  addService: (service: GoogletagPubAdsService) => unknown;
+}
+
+interface GoogletagNamespace {
+  cmd: Array<() => void>;
+  pubads: () => GoogletagPubAdsService;
+  enableServices: () => void;
+  defineSlot: (
+    adUnitPath: string,
+    size: GoogletagSize,
+    elementId: string,
+  ) => GoogletagSlot;
+  display: (id: string) => void;
+}
+
+export type { GoogletagNamespace, GoogletagSlot };
+
 export default function GoogleAdManager() {
   useEffect(() => {
     // Initialize GAM after component mount
     if (typeof window !== "undefined") {
       // Define GPT command queue
-      window.googletag = window.googletag || { cmd: [] };
+      if (!window.googletag) {
+        window.googletag = { cmd: [] } as unknown as GoogletagNamespace;
+      } else if (!Array.isArray(window.googletag.cmd)) {
+        window.googletag.cmd = [];
+      }
+
+      const googletag = window.googletag as unknown as GoogletagNamespace;
 
       console.debug(
-        `GAM: Initializing Google Ad Manager with network code ${GAM_NETWORK_CODE}`
+        `GAM: Initializing Google Ad Manager with network code ${GAM_NETWORK_CODE}`,
       );
 
       // Wait for GPT script to load, then initialize
       const initializeGAM = () => {
-        if (window.googletag && window.googletag.cmd) {
-          window.googletag.cmd.push(() => {
+        if (googletag && googletag.cmd) {
+          googletag.cmd.push(() => {
             // Enable single request mode for better performance
-            window.googletag.pubads().enableSingleRequest();
+            googletag.pubads().enableSingleRequest();
 
             // Enable services
-            window.googletag.enableServices();
+            googletag.enableServices();
 
             // Set targeting based on UTM parameters if available
             const utmSource = sessionStorage.getItem("utm_source");
@@ -32,21 +64,19 @@ export default function GoogleAdManager() {
             const utmMedium = sessionStorage.getItem("utm_medium");
 
             if (utmSource) {
-              window.googletag.pubads().setTargeting("utm_source", utmSource);
+              googletag.pubads().setTargeting("utm_source", utmSource);
             }
             if (utmCampaign) {
-              window.googletag
-                .pubads()
-                .setTargeting("utm_campaign", utmCampaign);
+              googletag.pubads().setTargeting("utm_campaign", utmCampaign);
             }
             if (utmMedium) {
-              window.googletag.pubads().setTargeting("utm_medium", utmMedium);
+              googletag.pubads().setTargeting("utm_medium", utmMedium);
             }
 
             // Set additional targeting for UK market
-            window.googletag.pubads().setTargeting("country", "UK");
-            window.googletag.pubads().setTargeting("language", "en");
-            window.googletag.pubads().setTargeting("site", "topfinanzas_uk");
+            googletag.pubads().setTargeting("country", "UK");
+            googletag.pubads().setTargeting("language", "en");
+            googletag.pubads().setTargeting("site", "topfinanzas_uk");
 
             console.debug("GAM: Services enabled and targeting configured");
           });
@@ -155,9 +185,10 @@ export function GAMAdSlot({
 }: GAMAdSlotProps) {
   useEffect(() => {
     if (typeof window !== "undefined" && window.googletag) {
-      window.googletag.cmd.push(() => {
+      const googletag = window.googletag;
+      googletag.cmd.push(() => {
         // Display the ad slot
-        window.googletag.display(slotId);
+        googletag.display(slotId);
         console.debug(`GAM: Displaying ad slot ${slotId}`);
       });
     }
@@ -184,30 +215,26 @@ export function GAMAdSlot({
 export function refreshGAMads(slotIds?: string[]) {
   if (typeof window !== "undefined" && window.googletag) {
     window.googletag.cmd.push(() => {
-      if (slotIds && window.gamSlots) {
+      const pubads = window.googletag?.pubads();
+      if (!pubads) {
+        return;
+      }
+
+      if (slotIds && slotIds.length > 0 && window.gamSlots) {
         // Refresh specific slots
         const slotsToRefresh = slotIds
-          .map((id) => window.gamSlots[id])
-          .filter((slot) => slot);
+          .map((id) => window.gamSlots?.[id])
+          .filter((slot): slot is GoogletagSlot => Boolean(slot));
 
         if (slotsToRefresh.length > 0) {
-          window.googletag.pubads().refresh(slotsToRefresh);
+          pubads.refresh(slotsToRefresh);
           console.debug("GAM: Refreshed specific ad slots", slotIds);
         }
       } else {
         // Refresh all slots
-        window.googletag.pubads().refresh();
+        pubads.refresh();
         console.debug("GAM: Refreshed all ad slots");
       }
     });
-  }
-}
-
-// Type declarations for GAM
-declare global {
-  interface Window {
-    googletag: any;
-    gamSlots: Record<string, any>;
-    defineGAMAdSlots: () => void;
   }
 }

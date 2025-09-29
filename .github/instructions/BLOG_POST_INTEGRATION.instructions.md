@@ -177,24 +177,20 @@ When creating new blog articles, they must be added to multiple locations across
 1. **Create the article file**: `/app/personal-finance/[slug]/page.tsx` or `/app/financial-solutions/[slug]/page.tsx`
 
 2. **Update Blog Listing** (`app/blog/page.tsx`):
-
    - Add entry to `allPosts` array
    - Use current date to ensure it appears first
    - Ensure slug matches directory name exactly
 
 3. **Update Category Archive** (Required for proper categorization):
-
    - **Personal Finance**: Add to `app/personal-finance/page.tsx` `allPosts` array
    - **Financial Solutions**: Add to `app/financial-solutions/page.tsx` if exists
    - Choose appropriate category filter for filtering functionality
 
 4. **Consider Homepage Feature** (`app/page.tsx`):
-
    - If it's a major/important article, replace the featured post on homepage
    - Use horizontal orientation for homepage feature
 
 5. **Update Sidebar Recent Articles** (`components/mdx/blog-layout.tsx`):
-
    - Add to top of recent articles list
    - Remove oldest article to maintain 4-5 items
 

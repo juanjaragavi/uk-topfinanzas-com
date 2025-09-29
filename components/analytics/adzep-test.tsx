@@ -23,7 +23,7 @@ export default function AdZepTest() {
     const checkScript = () => {
       setIsScriptLoaded(
         typeof window !== "undefined" &&
-          typeof window.AdZepActivateAds === "function"
+          typeof window.AdZepActivateAds === "function",
       );
     };
 

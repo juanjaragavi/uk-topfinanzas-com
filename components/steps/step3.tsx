@@ -22,7 +22,7 @@ interface Step3Props {
       email: string;
       firstName: string;
       receiveMessages: boolean;
-    }>
+    }>,
   ) => void;
   onSubmit: (e?: React.FormEvent) => void;
 }
@@ -35,7 +35,7 @@ export default function Step3({
   const [email, setEmail] = useState(formData.email);
   const [firstName, setFirstName] = useState(formData.firstName);
   const [receiveMessages, setReceiveMessages] = useState(
-    formData.receiveMessages
+    formData.receiveMessages,
   );
   const [errors, setErrors] = useState<{
     email: string | null;
