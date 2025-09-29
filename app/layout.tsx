@@ -121,7 +121,7 @@ export const metadata: Metadata = {
 
   // Use simplified favicon configuration
   icons: {
-    icon: "/favicon.png",
+    icon: "https://media.topfinanzas.com/images/favicon.png",
     apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest", // Use relative path for local manifest
@@ -203,7 +203,7 @@ export default function RootLayout({
         <ResourceHints />
 
         {/* Explicit favicon and manifest links with proper MIME types */}
-        <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192" />
+        <link rel="icon" href="https://media.topfinanzas.com/images/favicon.png" type="image/png" sizes="192x192" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link
           rel="apple-touch-icon"

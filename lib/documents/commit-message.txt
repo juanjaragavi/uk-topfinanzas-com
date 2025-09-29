@@ -1,7 +1,9 @@
 
-chore: integrate prettier formatting
+fix: point favicon assets to cdn
 
-- add prettier dev dependency with npm format script and ignore defaults
-- run automated formatting pass across app, components, and shared libs
-- tighten analytics typings to satisfy tsc and lint after format sweep
+- swap local favicon references for https://media.topfinanzas.com/images/favicon.png across layout and manifests
+- update preloader logo to load from cdn-hosted image to ensure consistent branding
+
+
+chore: integrate prettier formatting
 
