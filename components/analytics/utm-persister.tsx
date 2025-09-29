@@ -41,7 +41,10 @@ const VALID_UTM_SOURCES = [
   "banner",
   "retargeting",
   "remarketing",
+  "adwords",
 ];
+
+const UTM_SOURCE_PATTERN = /^[a-z0-9._-]{1,100}$/i;
 
 // Google Ads campaign pattern validation
 const GOOGLE_ADS_CAMPAIGN_PATTERN = /^[a-zA-Z0-9_-]+$/;
@@ -54,7 +57,25 @@ function validateUtmSource(source: string): boolean {
   if (!source || typeof source !== "string") return false;
 
   const normalizedSource = source.toLowerCase().trim();
-  return VALID_UTM_SOURCES.includes(normalizedSource);
+  if (!normalizedSource) {
+    return false;
+  }
+
+  if (VALID_UTM_SOURCES.includes(normalizedSource)) {
+    return true;
+  }
+
+  if (UTM_SOURCE_PATTERN.test(normalizedSource)) {
+    console.debug(
+      `UTM Persister: Accepting dynamic utm_source value: ${normalizedSource}`
+    );
+    return true;
+  }
+
+  console.warn(
+    `UTM Persister: Rejected utm_source value due to invalid characters: ${source}`
+  );
+  return false;
 }
 
 /**

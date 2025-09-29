@@ -1,12 +1,4 @@
-feat(content): Add comprehensive mindful spending guide for UK personal finance
+fix(analytics): allow adwords and dynamic UTM sources
 
-- Create new SEO-optimized article "Ditching the Impulse Buys: A Practical Guide to Mindful Spending"
-- Add complete directory structure at /app/personal-finance/ditching-impulse-buys-mindful-spending/
-- Implement UK-focused content with practical spending strategies and pause techniques
-- Include metadata.ts with comprehensive SEO optimization and OpenGraph tags
-- Add strategic internal links to existing personal finance content
-- Structure content for TOFU audience with educational, actionable advice
-- Follow established site patterns with proper ad placement and responsive design
-- Target main keyword "personal finance" naturally throughout content
-
-The new article provides practical strategies for conscious spending decisions, helping UK readers develop better financial habits through proven techniques like the 24-hour rule, spending boundaries, and needs vs wants analysis.
+- extend UTM persister validation to keep google ads utm_source values
+- accept partner-specific identifiers with pattern-based fallback logging
