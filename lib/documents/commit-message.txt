@@ -1,9 +1,10 @@
 
+feat: upsert quiz registrations in sheets
+
+- fetch existing rows, add missing header, and lookup by normalized email
+- update row in place when email exists or append a new row otherwise
+- require email in API request to avoid orphaned spreadsheet entries
+
+
 fix: point favicon assets to cdn
-
-- swap local favicon references for https://media.topfinanzas.com/images/favicon.png across layout and manifests
-- update preloader logo to load from cdn-hosted image to ensure consistent branding
-
-
-chore: integrate prettier formatting
 

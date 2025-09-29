@@ -203,7 +203,12 @@ export default function RootLayout({
         <ResourceHints />
 
         {/* Explicit favicon and manifest links with proper MIME types */}
-        <link rel="icon" href="https://media.topfinanzas.com/images/favicon.png" type="image/png" sizes="192x192" />
+        <link
+          rel="icon"
+          href="https://media.topfinanzas.com/images/favicon.png"
+          type="image/png"
+          sizes="192x192"
+        />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link
           rel="apple-touch-icon"

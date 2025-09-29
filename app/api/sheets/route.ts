@@ -5,6 +5,18 @@ export async function POST(req: Request) {
   const body = await req.json();
 
   try {
+    const emailInput =
+      typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
+
+    if (!emailInput) {
+      return NextResponse.json(
+        {
+          error: "Email is required to upsert quiz registration",
+        },
+        { status: 400 },
+      );
+    }
+
     const auth = new google.auth.GoogleAuth({
       credentials: {
         client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
@@ -33,68 +45,105 @@ export async function POST(req: Request) {
       });
     }
 
-    // Get the last row of the sheet to append data
-    const range = `${sheetName}!A:A`;
-    const response = await sheets.spreadsheets.values.get({
+    const headers = [
+      "Timestamp",
+      "Preference",
+      "Income",
+      "Email",
+      "First Name",
+      "UTM Source",
+      "UTM Medium",
+      "UTM Campaign",
+      "UTM Term",
+      "UTM Content",
+    ];
+
+    const sheetRange = `${sheetName}!A:J`;
+    const existingValuesResponse = await sheets.spreadsheets.values.get({
       spreadsheetId,
-      range,
+      range: sheetRange,
+      majorDimension: "ROWS",
     });
 
-    const numRows = response.data.values ? response.data.values.length : 0;
-    const appendRow = numRows + 1;
+    let sheetValues = existingValuesResponse.data.values ?? [];
 
-    // Define headers if the sheet is empty
-    if (numRows === 0) {
-      const headers = [
-        [
-          "Timestamp",
-          "Preference",
-          "Income",
-          "Email",
-          "First Name",
-          "UTM Source",
-          "UTM Medium",
-          "UTM Campaign",
-          "UTM Term",
-          "UTM Content",
-        ],
-      ];
+    if (sheetValues.length === 0) {
       await sheets.spreadsheets.values.update({
         spreadsheetId,
         range: `${sheetName}!A1`,
         valueInputOption: "USER_ENTERED",
         requestBody: {
-          values: headers,
+          values: [headers],
         },
+      });
+
+      sheetValues = [headers];
+    }
+
+    const emailColumnIndex = headers.indexOf("Email");
+    const headerCell = sheetValues[0]?.[emailColumnIndex];
+    const sheetHasHeader =
+      typeof headerCell === "string" &&
+      headerCell.trim().toLowerCase() === "email";
+
+    const rowValues = [
+      new Date().toISOString(),
+      body.preferenceText ?? "",
+      body.incomeText ?? "",
+      body.email ?? "",
+      body.firstName ?? "",
+      body.utm_source ?? "",
+      body.utm_medium ?? "",
+      body.utm_campaign ?? "",
+      body.utm_term ?? "",
+      body.utm_content ?? "",
+    ];
+
+    const dataStartIndex = sheetHasHeader ? 1 : 0;
+    let existingRowIndex = -1;
+
+    for (let i = dataStartIndex; i < sheetValues.length; i += 1) {
+      const rowEmail = sheetValues[i]?.[emailColumnIndex];
+      if (
+        typeof rowEmail === "string" &&
+        rowEmail.trim().toLowerCase() === emailInput
+      ) {
+        existingRowIndex = i;
+        break;
+      }
+    }
+
+    if (existingRowIndex !== -1) {
+      const rowNumber = existingRowIndex + 1;
+      await sheets.spreadsheets.values.update({
+        spreadsheetId,
+        range: `${sheetName}!A${rowNumber}:J${rowNumber}`,
+        valueInputOption: "USER_ENTERED",
+        requestBody: {
+          values: [rowValues],
+        },
+      });
+
+      return NextResponse.json({
+        message: "Registration updated",
+        action: "updated",
       });
     }
 
-    // Append form data
-    const values = [
-      [
-        new Date().toISOString(),
-        body.preferenceText,
-        body.incomeText,
-        body.email,
-        body.firstName,
-        body.utm_source || "",
-        body.utm_medium || "",
-        body.utm_campaign || "",
-        body.utm_term || "",
-        body.utm_content || "",
-      ],
-    ];
-
     await sheets.spreadsheets.values.append({
       spreadsheetId,
-      range: `${sheetName}!A${appendRow}`,
+      range: sheetName,
       valueInputOption: "USER_ENTERED",
+      insertDataOption: "INSERT_ROWS",
       requestBody: {
-        values,
+        values: [rowValues],
       },
     });
 
-    return NextResponse.json({ message: "Data added to sheet" });
+    return NextResponse.json({
+      message: "Registration created",
+      action: "created",
+    });
   } catch (error) {
     console.error("Error adding data to sheet:", error);
     const errorMessage =
