@@ -19,7 +19,12 @@ const nextConfig = {
   basePath: "",
   // Add rewrites for static files - using simpler approach
   async rewrites() {
-    return [];
+    return [
+      {
+        source: "/favicon.png",
+        destination: "https://media.topfinanzas.com/images/favicon.png",
+      },
+    ];
   },
   // Add cache headers for static assets
   async headers() {

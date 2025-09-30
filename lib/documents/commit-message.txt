@@ -1,4 +1,8 @@
+fix: serve favicon from cdn rewrite
 
+- proxy /favicon.png requests to media.topfinanzas.com in next.config.mjs
+- update manifest and layout icons to reuse the local path
+- ensure browsers resolve the icon without 404s in production
 feat: prevent duplicate quiz registrations
 
 - gate client submission with state guards and clearer status messaging
