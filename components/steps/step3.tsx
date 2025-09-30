@@ -25,12 +25,18 @@ interface Step3Props {
     }>,
   ) => void;
   onSubmit: (e?: React.FormEvent) => void;
+  isSubmitting?: boolean;
+  submissionStatus?: "idle" | "success" | "duplicate" | "error";
+  submissionMessage?: string | null;
 }
 
 export default function Step3({
   formData,
   updateFormData,
   onSubmit,
+  isSubmitting = false,
+  submissionStatus = "idle",
+  submissionMessage,
 }: Step3Props) {
   const [email, setEmail] = useState(formData.email);
   const [firstName, setFirstName] = useState(formData.firstName);
@@ -263,15 +269,30 @@ export default function Step3({
         <button
           type="button"
           onClick={handleFormSubmit}
-          disabled={!receiveMessages}
+          disabled={!receiveMessages || isSubmitting}
+          aria-busy={isSubmitting}
           className={`w-full py-3 text-sm font-medium rounded-full transition-colors shadow-md ${
-            receiveMessages
+            receiveMessages && !isSubmitting
               ? "bg-[#8DC63F] hover:bg-[#6BA828] text-white"
               : "bg-gray-300 text-gray-500 cursor-not-allowed"
           }`}
         >
-          {step3Strings.button}
+          {isSubmitting ? "Sending..." : step3Strings.button}
         </button>
+        {submissionStatus !== "idle" && submissionMessage && (
+          <p
+            className={`mt-3 text-xs text-left ${
+              submissionStatus === "error"
+                ? "text-red-500"
+                : submissionStatus === "duplicate"
+                  ? "text-[#2E74B5]"
+                  : "text-[#8DC63F]"
+            }`}
+            role={submissionStatus === "error" ? "alert" : undefined}
+          >
+            {submissionMessage}
+          </p>
+        )}
       </motion.div>
 
       <div className="mt-8">

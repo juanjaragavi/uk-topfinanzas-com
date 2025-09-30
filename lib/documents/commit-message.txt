@@ -1,10 +1,7 @@
 
-feat: upsert quiz registrations in sheets
+feat: prevent duplicate quiz registrations
 
-- fetch existing rows, add missing header, and lookup by normalized email
-- update row in place when email exists or append a new row otherwise
-- require email in API request to avoid orphaned spreadsheet entries
-
-
-fix: point favicon assets to cdn
+- gate client submission with state guards and clearer status messaging
+- persist registration cookies consistently and fire conversions after sheets success
+- return 409 for existing sheet entries to keep analytics and storage aligned
 

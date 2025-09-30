@@ -114,20 +114,13 @@ export async function POST(req: Request) {
     }
 
     if (existingRowIndex !== -1) {
-      const rowNumber = existingRowIndex + 1;
-      await sheets.spreadsheets.values.update({
-        spreadsheetId,
-        range: `${sheetName}!A${rowNumber}:J${rowNumber}`,
-        valueInputOption: "USER_ENTERED",
-        requestBody: {
-          values: [rowValues],
+      return NextResponse.json(
+        {
+          message: "Registration already exists",
+          action: "duplicate",
         },
-      });
-
-      return NextResponse.json({
-        message: "Registration updated",
-        action: "updated",
-      });
+        { status: 409 },
+      );
     }
 
     await sheets.spreadsheets.values.append({
@@ -140,10 +133,13 @@ export async function POST(req: Request) {
       },
     });
 
-    return NextResponse.json({
-      message: "Registration created",
-      action: "created",
-    });
+    return NextResponse.json(
+      {
+        message: "Registration created",
+        action: "created",
+      },
+      { status: 201 },
+    );
   } catch (error) {
     console.error("Error adding data to sheet:", error);
     const errorMessage =
