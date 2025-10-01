@@ -1,4 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
+import {
+  RECOMMENDER_LOCK_COOKIE,
+  parseLockFromRequestCookie,
+} from "@/lib/navigation/recommender-lock";
+
+const QUIZ_PATHS = ["/quiz", "/quiz-2"];
+
+function isRestrictedQuizPath(pathname: string): boolean {
+  return QUIZ_PATHS.some(
+    (basePath) => pathname === basePath || pathname.startsWith(`${basePath}/`),
+  );
+}
 
 export function middleware(request: NextRequest) {
   // Check if the request is for a static file
@@ -13,6 +25,20 @@ export function middleware(request: NextRequest) {
     pathname.includes("/images/")
   ) {
     return NextResponse.next();
+  }
+
+  if (isRestrictedQuizPath(pathname)) {
+    const lock = parseLockFromRequestCookie(
+      request.cookies.get(RECOMMENDER_LOCK_COOKIE),
+    );
+
+    if (lock) {
+      const targetUrl = request.nextUrl.clone();
+      targetUrl.pathname = lock.pathname;
+      targetUrl.search = lock.search ?? "";
+
+      return NextResponse.redirect(targetUrl, 307);
+    }
   }
 
   // For other requests, continue normally

@@ -1,6 +1,9 @@
-style: remove visitor counter shadow
+feat: prevent quiz access after recommender visit
+
+- add recommender lock helper and guard hook to persist recommender paths
+- redirect quiz pages to saved recommendations while keeping UTM parameters
+- block quiz entry server-side via middleware when lock cookie is present
+
 
 - drop the extra shadow around the visitor counter chip in all form steps
-- keep the layout consistent with the updated flat chip styling pass
-
 

@@ -7,8 +7,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import useRecommenderPageGuard from "@/hooks/use-recommender-page-guard";
 
 export default function CreditCardRecommenderPage() {
+  useRecommenderPageGuard();
   const [openFaq, setOpenFaq] = useState<string | null>("benefits");
   const [isShuffling, setIsShuffling] = useState(false);
   const [cardRevealed, setCardRevealed] = useState(false);
