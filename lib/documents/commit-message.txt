@@ -1,11 +1,6 @@
-fix: serve favicon from cdn rewrite
+style: remove visitor counter shadow
 
-- proxy /favicon.png requests to media.topfinanzas.com in next.config.mjs
-- update manifest and layout icons to reuse the local path
-- ensure browsers resolve the icon without 404s in production
-feat: prevent duplicate quiz registrations
+- drop the extra shadow around the visitor counter chip in all form steps
+- keep the layout consistent with the updated flat chip styling pass
 
-- gate client submission with state guards and clearer status messaging
-- persist registration cookies consistently and fire conversions after sheets success
-- return 409 for existing sheet entries to keep analytics and storage aligned
 
