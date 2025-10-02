@@ -16,6 +16,13 @@ import { trackGoogleAdsConversion } from "@/components/analytics/google-ads";
 
 type SubmissionStatus = "idle" | "success" | "duplicate" | "error";
 
+const buildKitFields = (fields: Record<string, string | null | undefined>) =>
+  Object.fromEntries(
+    Object.entries(fields).filter(
+      ([, value]) => value !== undefined && value !== null && value !== "",
+    ),
+  );
+
 const GOOGLE_ADS_CONVERSION_LABEL =
   process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL ?? "";
 const GTM_CONVERSION_EVENT_NAME = "quiz_lead_submitted";
@@ -255,67 +262,69 @@ export default function CreditCardForm() {
       const apiFirstName = nameParts[0] || "";
       const apiLastName = nameParts.slice(1).join(" ") || "";
 
+      const kitFields = {
+        acepto_politicas_de_tratamiento_de_datos_y_terminos_y_condiciones:
+          formData.receiveMessages ? "1" : "0",
+        beneficio_empresa: null,
+        contacto: null,
+        cual_es_tu_ingreso_mensual: formData.incomeText || formData.income,
+        cuanto_dinero_necesitas: null,
+        date_created: new Date().toISOString(),
+        describe_tu_necesidad: null,
+        elige_el_grupo_que_mejor_describe_tu_situacion_actual: null,
+        estas_reportado_en_buro_de_credito: null,
+        flujo_prestamos_2: null,
+        last_name: apiLastName,
+        monto_empresa: null,
+        newsletter: null,
+        pais: "Reino Unido",
+        marca: "Top Finanzas",
+        phone_number: null,
+        preferencia_1_cupo_de_credito_alto: null,
+        preferencia_2_sin_buro: null,
+        preferencia_3_millas_y_puntos: null,
+        preferencia_4_credito_inmediato: null,
+        preferencia_5_sin_anualidad: null,
+        preferencia_6_cashback: null,
+        que_es_lo_que_mas_importante_en_una_tarjeta_de_credito:
+          formData.preferenceText || formData.preference,
+        quickemailverification_free: null,
+        quickemailverification_result: null,
+        quickemailverification_safe_to_send: null,
+        quiz_campana_leads: null,
+        quiz_prestamos: null,
+        quiz_prestamos_2: null,
+        quiz_prestamos_bbva: null,
+        quiz_prestamos_credilikeme: null,
+        quiz_prestamos_discover: null,
+        quiz_prestamos_empresarial_sabadell: null,
+        quiz_prestamos_upstart: null,
+        quiz_prestamo_kueski: null,
+        quiz_tarjetas: "SI",
+        quiz_tarjeta_bbva_azul: null,
+        quiz_tarjeta_citi_double_cash: null,
+        quiz_tarjeta_hsbc_zero: null,
+        quiz_tarjeta_nubank: null,
+        quiz_tarjeta_nubank_2: null,
+        quiz_tarjeta_platacard: null,
+        quiz_tarjeta_stori: null,
+        quiz_tarjeta_visa_signature: null,
+        recovery: null,
+        reingresar_flujo_tarjetas: null,
+        tarjetas_neobancos: null,
+        utm_adgroup: utmParams.utm_adgroup || null,
+        utm_campaign: utmParams.utm_campaign || null,
+        utm_content: utmParams.utm_content || null,
+        utm_medium: utmParams.utm_medium || null,
+        utm_source: utmParams.utm_source || null,
+        utm_term: utmParams.utm_term || null,
+      };
+
       const kitData = {
         first_name: apiFirstName,
         email_address: formData.email,
         state: "active",
-        fields: {
-          acepto_politicas_de_tratamiento_de_datos_y_terminos_y_condiciones:
-            formData.receiveMessages ? "1" : "0",
-          beneficio_empresa: null,
-          contacto: null,
-          cual_es_tu_ingreso_mensual: formData.incomeText || formData.income,
-          cuanto_dinero_necesitas: null,
-          date_created: new Date().toISOString(),
-          describe_tu_necesidad: null,
-          elige_el_grupo_que_mejor_describe_tu_situacion_actual: null,
-          estas_reportado_en_buro_de_credito: null,
-          flujo_prestamos_2: null,
-          last_name: apiLastName,
-          monto_empresa: null,
-          newsletter: null,
-          pais: "Reino Unido",
-          marca: "Top Finanzas",
-          phone_number: null,
-          preferencia_1_cupo_de_credito_alto: null,
-          preferencia_2_sin_buro: null,
-          preferencia_3_millas_y_puntos: null,
-          preferencia_4_credito_inmediato: null,
-          preferencia_5_sin_anualidad: null,
-          preferencia_6_cashback: null,
-          que_es_lo_que_mas_importante_en_una_tarjeta_de_credito:
-            formData.preferenceText || formData.preference,
-          quickemailverification_free: null,
-          quickemailverification_result: null,
-          quickemailverification_safe_to_send: null,
-          quiz_campana_leads: null,
-          quiz_prestamos: null,
-          quiz_prestamos_2: null,
-          quiz_prestamos_bbva: null,
-          quiz_prestamos_credilikeme: null,
-          quiz_prestamos_discover: null,
-          quiz_prestamos_empresarial_sabadell: null,
-          quiz_prestamos_upstart: null,
-          quiz_prestamo_kueski: null,
-          quiz_tarjetas: "SI",
-          quiz_tarjeta_bbva_azul: null,
-          quiz_tarjeta_citi_double_cash: null,
-          quiz_tarjeta_hsbc_zero: null,
-          quiz_tarjeta_nubank: null,
-          quiz_tarjeta_nubank_2: null,
-          quiz_tarjeta_platacard: null,
-          quiz_tarjeta_stori: null,
-          quiz_tarjeta_visa_signature: null,
-          recovery: null,
-          reingresar_flujo_tarjetas: null,
-          tarjetas_neobancos: null,
-          utm_adgroup: utmParams.utm_adgroup || null,
-          utm_campaign: utmParams.utm_campaign || null,
-          utm_content: utmParams.utm_content || null,
-          utm_medium: utmParams.utm_medium || null,
-          utm_source: utmParams.utm_source || null,
-          utm_term: utmParams.utm_term || null,
-        },
+        fields: buildKitFields(kitFields),
       };
 
       const sheetsPayload = {

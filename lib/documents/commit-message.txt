@@ -1,9 +1,7 @@
-feat: prevent quiz access after recommender visit
+refactor: normalize kit payload in credit card forms
 
-- add recommender lock helper and guard hook to persist recommender paths
-- redirect quiz pages to saved recommendations while keeping UTM parameters
-- block quiz entry server-side via middleware when lock cookie is present
+- add shared buildKitFields helper to strip empty values
+- reuse helper in both quiz-to-product and generic credit card submissions
+- avoid sending undefined or blank custom fields to Kit CRM
 
-
-- drop the extra shadow around the visitor counter chip in all form steps
 
