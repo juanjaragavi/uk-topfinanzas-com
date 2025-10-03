@@ -1,7 +1,9 @@
-refactor: normalize kit payload in credit card forms
+feat: add new blog article on salary negotiation
 
-- add shared buildKitFields helper to strip empty values
-- reuse helper in both quiz-to-product and generic credit card submissions
-- avoid sending undefined or blank custom fields to Kit CRM
+- create "How to Confidently Ask for a Raise" article in personal-finance category
+- include UK-specific salary research tips and conversation scripts
+- add preparation checklist and response handling guidance
+- integrate article into blog listing page with October 2025 date
+- include three internal links to existing financial health content
 
 
