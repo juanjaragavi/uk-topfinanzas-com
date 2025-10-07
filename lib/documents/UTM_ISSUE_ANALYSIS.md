@@ -64,7 +64,7 @@ Check Google Cloud Console for API quota errors
 
 **Production URL had**:
 
-```
+```bash
 utm_campaign=22524445886
 utm_content=banner
 utm_term=open

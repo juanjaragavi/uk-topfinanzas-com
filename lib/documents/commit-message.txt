@@ -1,1 +1,1 @@
-feat: migrate contact endpoint to brevo
+chore: relocate production docs into lib folder
