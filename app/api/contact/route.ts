@@ -1,137 +1,161 @@
-// Start of code to add/replace in app/api/contact/route.ts
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer"; // Make sure nodemailer is installed (npm install nodemailer)
+
+const BREVO_API_BASE_URL = "https://api.brevo.com/v3";
+const CONTACT_LIST_IDS = [9, 5];
+
+interface ContactRequestBody {
+  name?: unknown;
+  lastName?: unknown;
+  email?: unknown;
+  phone?: unknown;
+  message?: unknown;
+  acceptTerms?: unknown;
+}
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
-    const { name, lastName, email, phone, message, acceptTerms } = body;
+    const body = (await request.json()) as ContactRequestBody;
+    const name = typeof body.name === "string" ? body.name.trim() : "";
+    const lastName =
+      typeof body.lastName === "string" ? body.lastName.trim() : "";
+    const email = typeof body.email === "string" ? body.email.trim() : "";
+    const phone = typeof body.phone === "string" ? body.phone.trim() : "";
+    const message =
+      typeof body.message === "string" ? body.message.trim() : "";
+    const acceptTerms = body.acceptTerms === true;
 
-    // --- Basic Input Validation ---
     if (!name || !lastName || !email || !phone || !message || !acceptTerms) {
-      console.error("Validation Error: Missing required fields", body);
+      console.error("[Contact API] Missing required fields", body);
       return NextResponse.json(
         { message: "Missing required fields" },
         { status: 400 },
       );
     }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     if (!emailRegex.test(email)) {
-      console.error("Validation Error: Invalid email format", email);
+      console.error("[Contact API] Invalid email format", email);
       return NextResponse.json(
         { message: "Invalid email format" },
         { status: 400 },
       );
     }
-    // Add phone validation if needed
 
-    // --- Nodemailer Configuration ---
-    // Ensure environment variables are loaded correctly
-    const apiKey = process.env.SENDGRID_API_KEY;
-    const senderEmail = process.env.SENDER_EMAIL;
-    const recipientEmail = process.env.RECIPIENT_EMAIL;
+    const apiKey = process.env.BREVO_API_KEY;
 
-    if (!apiKey || !senderEmail || !recipientEmail) {
-      console.error(
-        "Server Configuration Error: Missing SendGrid environment variables",
-      );
+    if (!apiKey) {
+      console.error("[Contact API] Missing BREVO_API_KEY environment variable");
       return NextResponse.json(
         { message: "Server configuration error. Please contact support." },
-        { status: 500 }, // Internal Server Error
+        { status: 500 },
       );
     }
 
-    const transporter = nodemailer.createTransport({
-      host: "smtp.sendgrid.net",
-      port: 587,
-      secure: false, // Use false for port 587 (STARTTLS)
-      auth: {
-        user: "apikey", // SendGrid requires the literal string 'apikey'
-        pass: apiKey,
-      },
-      // Optional: Add timeout settings
-      // connectionTimeout: 10000, // 10 seconds
-      // greetingTimeout: 10000, // 10 seconds
-      // socketTimeout: 10000, // 10 seconds
-    });
+    const timestamp = Math.floor(Date.now() / 1000);
+    const extId = `topfinanzas-uk-contact-${timestamp}`;
 
-    // Verify transporter connection (optional but recommended for debugging)
-    try {
-      await transporter.verify();
-      console.log("Nodemailer transporter verified successfully.");
-    } catch (verifyError) {
-      console.error("Nodemailer transporter verification failed:", verifyError);
-      // Decide if you want to stop execution or just log the error
-      // return NextResponse.json({ message: 'Email server connection error.' }, { status: 503 }); // Service Unavailable
-    }
-
-    // --- Email Content ---
-    const htmlMessage = `
-      <!DOCTYPE html>
-      <html>
-      <head>
-        <style>
-          body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-          .container { max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 5px; }
-          h1 { color: #2E74B5; margin-bottom: 20px; }
-          .info-row { margin-bottom: 10px; }
-          .label { font-weight: bold; margin-right: 10px; }
-          .message-box { background-color: #f9f9f9; padding: 15px; border-radius: 5px; margin-top: 20px; }
-          .footer { margin-top: 30px; font-size: 12px; color: #777; border-top: 1px solid #e0e0e0; padding-top: 10px; }
-        </style>
-      </head>
-      <body>
-        <div class="container">
-          <h1>New Contact Form Submission</h1>
-          <div class="info-row"><span class="label">Name:</span> ${name} ${lastName}</div>
-          <div class="info-row"><span class="label">Email:</span> ${email}</div>
-          <div class="info-row"><span class="label">Phone:</span> ${phone}</div>
-          <div class="message-box">
-            <span class="label">Message:</span>
-            <p>${message.replace(/\n/g, "<br>")}</p>
-          </div>
-          <div class="footer">This email was sent from the TopFinanzas UK Contact Form.</div>
-        </div>
-      </body>
-      </html>
-    `;
-
-    const mailOptions = {
-      from: `"TopFinanzas UK Contact" <${senderEmail}>`, // Use verified sender email
-      to: recipientEmail, // Use recipient from env var
-      replyTo: email, // Set reply-to to the user's email
-      subject: `New Contact Form Submission from ${name} ${lastName}`,
-      text: `
-        You received a new message from your contact form:
-
-        Name: ${name} ${lastName}
-        Email: ${email}
-        Phone: ${phone}
-
-        Message:
-        ${message}
-      `,
-      html: htmlMessage,
+    const attributes: Record<string, string> = {
+      FIRSTNAME: name,
+      LASTNAME: lastName,
+      COUNTRIES: "United Kingdom",
     };
 
-    // --- Send Email ---
-    console.log(
-      `Attempting to send email from ${senderEmail} to ${recipientEmail}`,
-    );
-    await transporter.sendMail(mailOptions);
-    console.log("Email sent successfully via SendGrid");
+    if (phone) {
+      attributes.SMS = phone;
+    }
+
+    attributes.CONSENT = "1";
+
+    const contactPayload = {
+      email,
+      attributes,
+      ext_id: extId,
+      updateEnabled: true,
+      listIds: CONTACT_LIST_IDS,
+    };
+
+    console.log("[Contact API] Sending contact to Brevo", {
+      email,
+      listIds: CONTACT_LIST_IDS,
+    });
+
+    const brevoResponse = await fetch(`${BREVO_API_BASE_URL}/contacts`, {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "content-type": "application/json",
+        "api-key": apiKey,
+      },
+      body: JSON.stringify(contactPayload),
+    });
+
+    if (!brevoResponse.ok) {
+      const errorData = await brevoResponse.json().catch(() => ({}));
+      console.error("[Contact API] Brevo error", {
+        status: brevoResponse.status,
+        error: errorData,
+      });
+      return NextResponse.json(
+        {
+          message:
+            errorData?.message ||
+            "Failed to process contact request. Please try again later.",
+        },
+        { status: brevoResponse.status },
+      );
+    }
+
+    console.log("[Contact API] Contact synced with Brevo", {
+      email,
+      extId,
+      listIds: CONTACT_LIST_IDS,
+    });
+
+    if (message) {
+      try {
+        const noteText = `Origin: Contact form\nPhone: ${phone}\n\nMessage:\n${message}`;
+        const noteResponse = await fetch(
+          `${BREVO_API_BASE_URL}/contacts/${encodeURIComponent(email)}/notes`,
+          {
+            method: "POST",
+            headers: {
+              accept: "application/json",
+              "content-type": "application/json",
+              "api-key": apiKey,
+            },
+            body: JSON.stringify({ text: noteText }),
+          },
+        );
+
+        if (!noteResponse.ok) {
+          const noteError = await noteResponse.json().catch(() => ({}));
+          console.error("[Contact API] Failed to attach Brevo note", {
+            status: noteResponse.status,
+            error: noteError,
+          });
+        } else {
+          console.log("[Contact API] Note stored in Brevo for contact", {
+            email,
+          });
+        }
+      } catch (noteError) {
+        console.error("[Contact API] Unexpected error storing Brevo note", {
+          email,
+          error: noteError,
+        });
+      }
+    }
 
     return NextResponse.json(
       { message: "Message sent successfully!" },
       { status: 200 },
     );
   } catch (error) {
-    console.error("Error processing contact form:", error);
-    // Avoid exposing detailed errors to the client
+    console.error("[Contact API] Unexpected server error", error);
     return NextResponse.json(
       { message: "Failed to send message due to a server error." },
       { status: 500 },
     );
   }
 }
-// End of code to add/replace

@@ -1,1 +1,1 @@
-chore: refine invit credit page intro copy
+feat: migrate contact endpoint to brevo
