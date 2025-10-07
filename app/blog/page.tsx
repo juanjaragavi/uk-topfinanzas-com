@@ -176,7 +176,8 @@ export default function BlogArchivePage() {
       slug: "how-to-ask-for-a-raise",
       description:
         "Learn exactly what to say when asking for a pay rise. This UK-focused guide includes preparation steps, conversation scripts, salary research tips, and how to handle both positive and negative responses professionally.",
-      image: "https://media.topfinanzas.com/images/uk/how-to-ask-for-a-raise.webp",
+      image:
+        "https://media.topfinanzas.com/images/uk/how-to-ask-for-a-raise.webp",
       category: "Personal Finance",
       categoryPath: "/personal-finance",
       date: "3 October 2025",

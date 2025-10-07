@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start -p 3004",
     "lint": "next lint",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "test:brevo": "node scripts/test-brevo-new-contact.js",
+    "test:brevo-direct": "node scripts/test-brevo-direct.js",
+    "test:brevo-api": "node scripts/test-brevo-integration.js"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
