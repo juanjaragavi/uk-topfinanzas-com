@@ -42,6 +42,12 @@ export default function InvitCreditCardRecUKPage() {
               you.
             </h2>
 
+            <p className="px-2 text-left text-sm text-gray-900 mb-2">
+              We sifted through the latest UK offers to match you with cards
+              that keep everyday spending flexible while stacking meaningful
+              rewards.
+            </p>
+
             <div
               id="uk_topfinanzas_1"
               className="items-center justify-center flex w-full my-6"
@@ -49,7 +55,7 @@ export default function InvitCreditCardRecUKPage() {
               {/* Empty responsive, centered div */}
             </div>
 
-            <p className="px-2 text-center text-sm text-gray-900 mb-2">
+            <p className="px-2 text-left text-sm text-gray-900 mb-2">
               Please select the limit option below that aligns with your daily
               requirements:
             </p>
@@ -91,7 +97,7 @@ export default function InvitCreditCardRecUKPage() {
                 <h3 className="text-[#1A9C8F] text-xl font-semibold mb-2">
                   Well Done
                 </h3>
-                <p className="text-md text-gray-900">
+                <p className="text-left text-md text-gray-900">
                   Your card is prepared for you. Select the limit option that
                   suits you best and begin enjoying perks like 0% APR, cashback,
                   points, and more. If none of these options fits your
@@ -265,7 +271,7 @@ export default function InvitCreditCardRecUKPage() {
                 <h3 className="text-gray-800 font-semibold mb-2 mt-4">
                   Stay Tuned
                 </h3>
-                <p className="text-sm text-gray-900 mb-4">
+                <p className="text-left text-sm text-gray-900 mb-4">
                   If you're looking for additional assistance in boosting your
                   credit score or optimising your credit card usage while
                   avoiding banks capitalising on your situation, please explore

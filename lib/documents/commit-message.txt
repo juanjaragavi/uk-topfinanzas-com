@@ -1,12 +1,1 @@
-Enhanced Google Sheets API logging for UTM parameter troubleshooting
-
-Added comprehensive logging to /app/api/sheets/route.ts to diagnose production failures when UTM parameters are present:
-- Request body analysis (field presence, sizes, UTM values)
-- Environment variable validation
-- Authentication success confirmation
-- Enhanced error context (error details, UTM presence, payload size)
-
-This will capture the exact failure mode in production when forms are submitted with UTM parameters, which currently return 500 errors while submissions without UTM parameters succeed.
-
-
-
+chore: refine invit credit page intro copy
