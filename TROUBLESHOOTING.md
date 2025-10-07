@@ -95,9 +95,9 @@ node scripts/test-full-flow.js
 
 1. Start the dev server if not running:
 
-    ```bash
-    npm run dev
-    ```
+   ```bash
+   npm run dev
+   ```
 
 2. Open <http://localhost:3004/quiz> in your browser
 

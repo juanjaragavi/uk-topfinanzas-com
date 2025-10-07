@@ -234,8 +234,8 @@ Success log format:
 
 ```markdown
 [Brevo API] Contact created successfully: {
-  email: 'user@example.com',
-  ext_id: 'topfinanzas-uk-1704628800'
+email: 'user@example.com',
+ext_id: 'topfinanzas-uk-1704628800'
 }
 ```
 

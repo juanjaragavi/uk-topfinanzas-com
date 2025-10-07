@@ -71,14 +71,14 @@ Already configured in `.env.local` for development ✅
 
 ```markdown
 User Form (Step 3)
-    ↓
+↓
 components/credit-card-form.tsx
-    ↓ (Kit.com format)
+↓ (Kit.com format)
 /api/subscribe
-    ↓ (Transform to Brevo format)
-    ↓ (Add COUNTRIES + generate ext_id)
+↓ (Transform to Brevo format)
+↓ (Add COUNTRIES + generate ext_id)
 Brevo API v3
-    ↓
+↓
 Contact Created in Lists 9 & 5
 ```
 
