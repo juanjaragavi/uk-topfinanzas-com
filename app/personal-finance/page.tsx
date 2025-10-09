@@ -191,6 +191,17 @@ export default function PersonalFinanceArchivePage() {
       date: "4 September 2025",
       category: "guide",
     },
+    {
+      title:
+        "What Is 'Lifestyle Creep' and How Is It Silently Draining Your Wallet? | Top Finance UK",
+      slug: "what-is-lifestyle-creep",
+      description:
+        "Discover how lifestyle creep gradually increases your spending as your income grows, and learn practical strategies to prevent this silent wealth-drainer from sabotaging your personal finance goals whilst still enjoying life.",
+      image:
+        "https://media.topfinanzas.com/images/uk/what-is-lifestyle-creep-silent-wallet-drain.webp",
+      date: "9 October 2025",
+      category: "guide",
+    },
     // Add other posts here as needed
   ];
 

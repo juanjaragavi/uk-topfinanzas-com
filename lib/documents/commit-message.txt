@@ -1,8 +1,28 @@
+feat(blog): Add comprehensive lifestyle creep personal finance guide
 
-refactor: surface credit card results without animations
+- Create new blog article "What Is Lifestyle Creep and How Is It Silently Draining Your Wallet"
+- Add SEO-optimized content (~1,000 words) for TOFU audience
+- Include UK-specific financial examples and GBP currency formatting
+- Integrate 3 strategic internal links to related personal finance articles
+- Add article to blog listing page (app/blog/page.tsx)
+- Add article to Personal Finance category page (app/personal-finance/page.tsx)
+- Update blog sidebar with new article as most recent (components/mdx/blog-layout.tsx)
+- Follow Money Management pillar content strategy
+- Implement proper heading hierarchy (H1, H2, H3)
+- Include AdZep ad unit placeholder
+- Add AI Content Disclaimer component
+- Create article summary documentation (lib/documents/lifestyle-creep-article-summary.md)
 
-- remove framer-motion reveal flows from recommender steps two and three
-- present recommended cards as immediate CTA buttons with refreshed hover states
-- tidy WARP overview formatting and align ConvertKit env variable table
+Article covers:
+- Definition and explanation of lifestyle creep
+- How lifestyle inflation sneaks into budgets
+- Financial impact with real UK scenarios
+- Warning signs and detection methods
+- Practical prevention strategies (50-30-20 rule)
+- Balance between enjoying income and building wealth
 
-
+Path: /app/personal-finance/what-is-lifestyle-creep/page.tsx
+Category: Personal Finance (Guide)
+Date: 9 October 2025
+SEO Intent: Informational
+Funnel Stage: TOFU

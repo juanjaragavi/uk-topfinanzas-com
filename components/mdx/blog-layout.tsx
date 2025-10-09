@@ -61,6 +61,30 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   <SidebarSeparator />
                   {/* Recent Articles - Updated */}
                   <SidebarRecentArticles>
+                    {/* Lifestyle Creep Article - NEW */}
+                    <div className="flex items-center gap-3">
+                      <Image
+                        src="https://media.topfinanzas.com/images/uk/what-is-lifestyle-creep-silent-wallet-drain.webp"
+                        alt="What Is Lifestyle Creep and How Is It Silently Draining Your Wallet"
+                        width={50}
+                        height={50}
+                        loading="lazy"
+                        priority={false}
+                        className="rounded-md object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src =
+                            "https://media.topfinanzas.com/images/placeholder-image.webp";
+                        }}
+                      />
+                      <div>
+                        <Link
+                          href="/personal-finance/what-is-lifestyle-creep"
+                          className="text-sm font-medium hover:underline line-clamp-2"
+                        >
+                          What Is Lifestyle Creep?
+                        </Link>
+                      </div>
+                    </div>
                     {/* Budget Article */}
                     <div className="flex items-center gap-3">
                       <Image
@@ -131,54 +155,6 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
                           Top Rewards Credit Cards
-                        </Link>
-                      </div>
-                    </div>
-                    {/* Article 3 */}
-                    <div className="flex items-center gap-3">
-                      <Image
-                        src="https://media.topfinanzas.com/images/barclaycard-avios-plus.webp"
-                        alt="Barclaycard Avios Plus"
-                        width={50}
-                        height={50}
-                        loading="lazy"
-                        priority={false}
-                        className="rounded-md object-cover"
-                        onError={(e) => {
-                          e.currentTarget.src =
-                            "https://media.topfinanzas.com/images/placeholder-image.webp";
-                        }}
-                      />
-                      <div>
-                        <Link
-                          href="/financial-solutions/barclaycard-avios-plus"
-                          className="text-sm font-medium hover:underline line-clamp-2"
-                        >
-                          Barclaycard Avios Plus Credit Card
-                        </Link>
-                      </div>
-                    </div>
-                    {/* Article 4 */}
-                    <div className="flex items-center gap-3">
-                      <Image
-                        src="https://media.topfinanzas.com/images/uk/Top_Finance_how_to_get_out_of_debt.webp"
-                        alt="Practical Guide to Getting Out of Debt"
-                        width={50}
-                        height={50}
-                        loading="lazy"
-                        priority={false}
-                        className="rounded-md object-cover"
-                        onError={(e) => {
-                          e.currentTarget.src =
-                            "https://media.topfinanzas.com/images/placeholder-image.webp";
-                        }}
-                      />
-                      <div>
-                        <Link
-                          href="/personal-finance/getting-out-of-debt"
-                          className="text-sm font-medium hover:underline line-clamp-2"
-                        >
-                          Practical Guide to Getting Out of Debt
                         </Link>
                       </div>
                     </div>
