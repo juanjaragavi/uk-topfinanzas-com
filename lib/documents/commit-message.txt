@@ -1,1 +1,5 @@
-chore: relocate production docs into lib folder
+feat: restore convertkit subscriber sync
+
+- add convertkit client utilities and dual-delivery handling in subscribe route
+- treat brevo duplicates as success, enhance tests, and refresh troubleshooting scripts
+- document convertkit restoration and update env guidance for new KIT_API_KEY

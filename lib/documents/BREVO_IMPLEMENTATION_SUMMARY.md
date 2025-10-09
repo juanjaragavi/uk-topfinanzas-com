@@ -15,7 +15,7 @@ The migration from Kit.com to Brevo has been successfully completed and tested. 
 
 - Replaced Kit.com API endpoint with Brevo v3 contacts API
 - Changed authentication from `X-Kit-Api-Key` header to `api-key` header
-- Updated environment variable from `NEXT_PUBLIC_KIT_API_KEY` to `BREVO_API_KEY`
+- Updated environment variable from `KIT_API_KEY` to `BREVO_API_KEY`
 - Transformed data structure from Kit.com format to Brevo format
 - Maintained full backward compatibility with frontend
 
@@ -162,7 +162,7 @@ npm run test:brevo-api
 - [ ] Confirm `ext_id` format is consistent
 - [ ] Validate UTM parameters are being captured
 - [ ] Archive old Kit.com data (optional)
-- [ ] Remove `NEXT_PUBLIC_KIT_API_KEY` environment variable (optional cleanup)
+- [ ] Remove `KIT_API_KEY` environment variable (optional cleanup)
 
 ## Environment Variables
 
@@ -177,7 +177,7 @@ BREVO_API_KEY=your_brevo_api_key_here
 
 ```bash
 # These are no longer needed and can be removed:
-NEXT_PUBLIC_KIT_API_KEY
+KIT_API_KEY
 KIT_API_URL
 ```
 

@@ -132,7 +132,7 @@ BREVO_API_KEY=your_brevo_api_key_here
 
 ```bash
 # These can be removed:
-# NEXT_PUBLIC_KIT_API_KEY
+# KIT_API_KEY
 # KIT_API_URL
 ```
 

@@ -5,7 +5,7 @@
  *
  * This script tests the complete data flow:
  * 1. Google Sheets API (/api/sheets)
- * 2. Brevo API (/api/subscribe)
+ * 2. Brevo + ConvertKit API (/api/subscribe)
  *
  * Usage: node scripts/test-full-flow.js
  */
@@ -78,8 +78,8 @@ async function testGoogleSheets() {
   }
 }
 
-async function testBrevo() {
-  console.log("\n🔍 Testing Brevo API...");
+async function testMarketingIntegrations() {
+  console.log("\n🔍 Testing Brevo + ConvertKit integrations...");
   console.log("Endpoint: POST /api/subscribe");
   console.log("Payload:", JSON.stringify(testData.kitPayload, null, 2));
 
@@ -97,25 +97,34 @@ async function testBrevo() {
     console.log(`\n✅ Response Status: ${response.status}`);
     console.log("Response Body:", JSON.stringify(data, null, 2));
 
-    if (response.status === 200 || response.status === 201) {
-      console.log("✅ SUCCESS: Contact added to Brevo");
+    const brevoResult = data?.brevo;
+    const convertKitResult = data?.convertkit;
 
-      if (data.id) {
-        console.log(`📧 Contact ID: ${data.id}`);
-      }
+    const brevoSuccess = Boolean(brevoResult?.success);
+    const convertKitSuccess = Boolean(convertKitResult?.success);
 
-      if (data.ext_id) {
-        console.log(`🔑 External ID: ${data.ext_id}`);
-      }
-
-      return true;
+    if (brevoSuccess) {
+      console.log(`✅ Brevo Success (status ${brevoResult.status})`);
     } else {
-      console.log("❌ FAILED: Unexpected response status");
-      return false;
+      console.log("❌ Brevo Failed", brevoResult);
     }
+
+    if (convertKitResult) {
+      if (convertKitSuccess) {
+        console.log(
+          `✅ ConvertKit Success (status ${convertKitResult.status})`,
+        );
+      } else {
+        console.log("❌ ConvertKit Failed", convertKitResult);
+      }
+    } else {
+      console.log("⚠️  ConvertKit response missing in API payload");
+    }
+
+    return { brevoSuccess, convertKitSuccess };
   } catch (error) {
     console.error("❌ ERROR:", error.message);
-    return false;
+    return { brevoSuccess: false, convertKitSuccess: false };
   }
 }
 
@@ -129,6 +138,7 @@ async function runTests() {
   const results = {
     sheets: false,
     brevo: false,
+    convertkit: false,
   };
 
   // Test Google Sheets first (matches actual form flow)
@@ -138,7 +148,9 @@ async function runTests() {
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
   // Test Brevo API
-  results.brevo = await testBrevo();
+  const marketingResults = await testMarketingIntegrations();
+  results.brevo = marketingResults.brevoSuccess;
+  results.convertkit = marketingResults.convertKitSuccess;
 
   // Summary
   console.log("\n==============================================");
@@ -148,8 +160,11 @@ async function runTests() {
     `Google Sheets API: ${results.sheets ? "✅ PASSED" : "❌ FAILED"}`,
   );
   console.log(`Brevo API: ${results.brevo ? "✅ PASSED" : "❌ FAILED"}`);
+  console.log(
+    `ConvertKit API: ${results.convertkit ? "✅ PASSED" : "❌ FAILED"}`,
+  );
 
-  const allPassed = results.sheets && results.brevo;
+  const allPassed = results.sheets && results.brevo && results.convertkit;
   console.log(
     `\n${allPassed ? "✅ ALL TESTS PASSED" : "❌ SOME TESTS FAILED"}`,
   );

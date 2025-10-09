@@ -22,8 +22,7 @@ export async function POST(request: Request) {
       typeof body.lastName === "string" ? body.lastName.trim() : "";
     const email = typeof body.email === "string" ? body.email.trim() : "";
     const phone = typeof body.phone === "string" ? body.phone.trim() : "";
-    const message =
-      typeof body.message === "string" ? body.message.trim() : "";
+    const message = typeof body.message === "string" ? body.message.trim() : "";
     const acceptTerms = body.acceptTerms === true;
 
     if (!name || !lastName || !email || !phone || !message || !acceptTerms) {

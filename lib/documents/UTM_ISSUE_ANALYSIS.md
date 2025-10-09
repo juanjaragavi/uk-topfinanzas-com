@@ -111,7 +111,7 @@ export async function POST(req: Request) {
       console.log("[Sheets API] Missing email");
       return NextResponse.json(
         { error: "Email is required to upsert quiz registration" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -147,7 +147,7 @@ export async function POST(req: Request) {
       error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json(
       { error: "Failed to add data to sheet", details: errorMessage },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

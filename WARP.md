@@ -61,7 +61,7 @@ bash ./scripts/cookie-validation-control.sh {config|disable|enable|test|deploy}
 
 ### Directory Structure
 
-```
+```markdown
 /app              # Next.js App Router pages and API routes
   /api            # API endpoints (sheets, subscribe, search, etc.)
   /blog           # Blog pages and categories
@@ -118,7 +118,7 @@ GOOGLE_SHEET_ID                 # Target spreadsheet ID
 SENDGRID_API_KEY               # Email service
 SENDER_EMAIL                   # System email sender
 RECIPIENT_EMAIL                # Form submission recipient
-NEXT_PUBLIC_KIT_API_KEY        # Kit.com newsletter
+KIT_API_KEY        # Kit.com newsletter
 
 # Cookie Validation
 NEXT_PUBLIC_COOKIE_VALIDATION_ENABLED  # true/false

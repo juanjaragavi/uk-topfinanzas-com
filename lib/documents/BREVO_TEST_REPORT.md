@@ -337,7 +337,7 @@ All commands added to `package.json` for easy access.
 ### 3. Environment Variables
 
 **Required**: `BREVO_API_KEY` in production  
-**Optional Cleanup**: Remove `NEXT_PUBLIC_KIT_API_KEY` and `KIT_API_URL` after successful migration
+**Optional Cleanup**: Remove `KIT_API_KEY` and `KIT_API_URL` after successful migration
 
 ---
 
