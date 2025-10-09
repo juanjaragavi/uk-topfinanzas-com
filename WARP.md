@@ -62,25 +62,25 @@ bash ./scripts/cookie-validation-control.sh {config|disable|enable|test|deploy}
 ### Directory Structure
 
 ```markdown
-/app              # Next.js App Router pages and API routes
-  /api            # API endpoints (sheets, subscribe, search, etc.)
-  /blog           # Blog pages and categories
-  /credit-card-recommender-p[1-3]  # Multi-step form pages
+/app # Next.js App Router pages and API routes
+/api # API endpoints (sheets, subscribe, search, etc.)
+/blog # Blog pages and categories
+/credit-card-recommender-p[1-3] # Multi-step form pages
 /components
-  /analytics      # AdZep and GTM tracking components
-  /forms          # Form components with validation
-  /steps          # Multi-step form step components (step1, step2, step3)
-  /ui             # Shadcn/UI components
-  /layout         # Page layouts (blog-layout, etc.)
-  /mdx            # MDX rendering components
+/analytics # AdZep and GTM tracking components
+/forms # Form components with validation
+/steps # Multi-step form step components (step1, step2, step3)
+/ui # Shadcn/UI components
+/layout # Page layouts (blog-layout, etc.)
+/mdx # MDX rendering components
 /lib
-  /documents      # commit-message.txt for git workflow
-  /ads            # Local advertisement management
-  /utils          # Utility functions (cn, getTextClass, etc.)
-  /constants.ts   # App-wide constants and strings
-/content          # MDX content files
-/scripts          # Deployment and workflow automation scripts
-/public           # Static assets (images, fonts, manifests)
+/documents # commit-message.txt for git workflow
+/ads # Local advertisement management
+/utils # Utility functions (cn, getTextClass, etc.)
+/constants.ts # App-wide constants and strings
+/content # MDX content files
+/scripts # Deployment and workflow automation scripts
+/public # Static assets (images, fonts, manifests)
 ```
 
 ### Key System Components

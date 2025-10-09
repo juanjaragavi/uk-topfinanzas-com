@@ -25,12 +25,12 @@ The ConvertKit (Kit.com) subscriber integration has been reinstated alongside th
 
 ## Required Environment Variables
 
-| Variable          | Purpose                                |
-| ----------------- | -------------------------------------- |
-| `BREVO_API_KEY`   | Brevo contacts API authentication       |
-| `KIT_API_KEY`     | ConvertKit subscriber API (preferred)   |
-| `NEXT_PUBLIC_KIT_API_KEY` | Fallback ConvertKit key (legacy) |
-| `KIT_API_URL`     | Optional override for ConvertKit API    |
+| Variable                  | Purpose                               |
+| ------------------------- | ------------------------------------- |
+| `BREVO_API_KEY`           | Brevo contacts API authentication     |
+| `KIT_API_KEY`             | ConvertKit subscriber API (preferred) |
+| `NEXT_PUBLIC_KIT_API_KEY` | Fallback ConvertKit key (legacy)      |
+| `KIT_API_URL`             | Optional override for ConvertKit API  |
 
 > **Note:** Avoid committing real secrets. Update production/staging configuration to include `KIT_API_KEY` before deploying.
 

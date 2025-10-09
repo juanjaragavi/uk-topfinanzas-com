@@ -6,13 +6,11 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, Suspense } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import useRecommenderPageGuard from "@/hooks/use-recommender-page-guard";
 
 function CreditCardRecommenderContent() {
   useRecommenderPageGuard();
   const [openFaq, setOpenFaq] = useState<string | null>("benefits");
-  const [showRecommendations, setShowRecommendations] = useState(false);
 
   const toggleFaq = (id: string) => {
     if (openFaq === id) {
@@ -20,10 +18,6 @@ function CreditCardRecommenderContent() {
     } else {
       setOpenFaq(id);
     }
-  };
-
-  const handleRevealRecommendations = () => {
-    setShowRecommendations(true);
   };
 
   return (
@@ -37,91 +31,39 @@ function CreditCardRecommenderContent() {
               Discover Your Ideal Credit Card
             </h1>
 
-            <div className="my-8 text-left sm:text-left">
-              <AnimatePresence mode="wait">
-                {!showRecommendations ? (
-                  <motion.div
-                    key="reveal-button"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <Button
-                      onClick={handleRevealRecommendations}
-                      className="bg-[#3B82F6] hover:bg-[#2563EB] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center"
-                    >
-                      <div className="flex items-center space-x-1">
-                        <span className="text-center text-sm">
-                          Unveil our suggested Financial Products
-                        </span>
-                        <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
-                          <span className="text-[#3B82F6] text-xs">➔</span>
-                        </div>
-                      </div>
-                    </Button>
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="recommendations"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, staggerChildren: 0.1 }}
-                    className="space-y-4"
-                  >
-                    <motion.div
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.1 }}
-                    >
-                      <Link href="/financial-solutions/lloyds-bank-credit-card">
-                        <Button className="bg-[#006A4D] hover:bg-[#006A4D] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
-                          <div className="flex items-center space-x-1">
-                            <span>Lloyds Bank Credit Card</span>
-                            <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
-                              <span className="text-[#006A4D] text-xs">➔</span>
-                            </div>
-                          </div>
-                        </Button>
-                      </Link>
-                    </motion.div>
+            <div className="grid grid-cols-1 my-8 items-center justify-center text-left sm:text-left space-y-4">
+              <Link href="/financial-solutions/lloyds-bank-credit-card">
+                <Button className="bg-[#006A4D] hover:bg-[#00563d] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
+                  <div className="flex items-center space-x-1">
+                    <span>Lloyds Bank Credit Card</span>
+                    <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
+                      <span className="text-[#006A4D] text-xs">➔</span>
+                    </div>
+                  </div>
+                </Button>
+              </Link>
 
-                    <motion.div
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.2 }}
-                    >
-                      <Link href="/financial-solutions/santander-uk-credit-card">
-                        <Button className="bg-[#ea2424] hover:bg-[#ea2424] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
-                          <div className="flex items-center space-x-1">
-                            <span>Santander UK Credit Card</span>
-                            <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
-                              <span className="text-[#ea2424] text-xs">➔</span>
-                            </div>
-                          </div>
-                        </Button>
-                      </Link>
-                    </motion.div>
+              <Link href="/financial-solutions/santander-uk-credit-card">
+                <Button className="bg-[#EA2424] hover:bg-[#c81d1d] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
+                  <div className="flex items-center space-x-1">
+                    <span>Santander UK Credit Card</span>
+                    <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
+                      <span className="text-[#EA2424] text-xs">➔</span>
+                    </div>
+                  </div>
+                </Button>
+              </Link>
 
-                    <motion.div
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.3 }}
-                    >
-                      <Link href="/financial-solutions/monzo-credit-card">
-                        <Button className="bg-[#80111b] hover:bg-[#80111b] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
-                          <div className="flex items-center space-x-1">
-                            <span>Monzo Credit Card</span>
-                            <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
-                              <span className="text-[#80111b] text-xs">➔</span>
-                            </div>
-                          </div>
-                        </Button>
-                      </Link>
-                    </motion.div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              <Link href="/financial-solutions/monzo-credit-card">
+                <Button className="bg-[#80111B] hover:bg-[#650d14] text-white font-medium text-md py-2 w-full rounded-full inline-flex items-center justify-center">
+                  <div className="flex items-center space-x-1">
+                    <span>Monzo Credit Card</span>
+                    <div className="bg-white rounded-full w-4 h-4 flex items-center justify-center">
+                      <span className="text-[#80111B] text-xs">➔</span>
+                    </div>
+                  </div>
+                </Button>
+              </Link>
             </div>
 
             <p className="text-left text-xs leading-4 text-gray-800 mb-5">

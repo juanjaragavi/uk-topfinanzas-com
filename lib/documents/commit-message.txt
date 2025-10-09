@@ -1,5 +1,8 @@
-feat: restore convertkit subscriber sync
 
-- add convertkit client utilities and dual-delivery handling in subscribe route
-- treat brevo duplicates as success, enhance tests, and refresh troubleshooting scripts
-- document convertkit restoration and update env guidance for new KIT_API_KEY
+refactor: surface credit card results without animations
+
+- remove framer-motion reveal flows from recommender steps two and three
+- present recommended cards as immediate CTA buttons with refreshed hover states
+- tidy WARP overview formatting and align ConvertKit env variable table
+
+
