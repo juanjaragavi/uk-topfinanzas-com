@@ -5,11 +5,11 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import useRecommenderPageGuard from "@/hooks/use-recommender-page-guard";
 
-export default function CreditCardRecommenderPage() {
+function CreditCardRecommenderPageContent() {
   useRecommenderPageGuard();
   const [openFaq, setOpenFaq] = useState<string | null>("benefits");
   const [isShuffling, setIsShuffling] = useState(false);
@@ -380,5 +380,13 @@ export default function CreditCardRecommenderPage() {
 
       <CompactFooter />
     </main>
+  );
+}
+
+export default function CreditCardRecommenderPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CreditCardRecommenderPageContent />
+    </Suspense>
   );
 }
