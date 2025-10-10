@@ -1,3 +1,4 @@
+feat: align lead integrations with unified attribution schema
 feat(blog): Add comprehensive lifestyle creep personal finance guide
 
 - Create new blog article "What Is Lifestyle Creep and How Is It Silently Draining Your Wallet"

@@ -1,6 +1,21 @@
 import { google } from "googleapis";
 import { NextResponse } from "next/server";
 
+import { BRAND_STATIC_FIELDS } from "@/lib/constants";
+
+const pickString = (...values: unknown[]) => {
+  for (const value of values) {
+    if (typeof value === "string") {
+      const trimmed = value.trim();
+      if (trimmed !== "") {
+        return trimmed;
+      }
+    }
+  }
+
+  return "";
+};
+
 export async function POST(req: Request) {
   const body = await req.json();
 
@@ -15,6 +30,13 @@ export async function POST(req: Request) {
     hasUTMCampaign: !!body.utm_campaign,
     hasUTMTerm: !!body.utm_term,
     hasUTMContent: !!body.utm_content,
+    hasSource: !!body.source,
+    hasMedium: !!body.medium,
+    hasCampaign: !!body.campaign,
+    hasTerm: !!body.term,
+    hasContent: !!body.content,
+    hasPais: !!(body.Pais || body.pais),
+    hasMarca: !!(body.Marca || body.marca),
     bodyKeys: Object.keys(body),
     bodySize: JSON.stringify(body).length,
     utmValues: {
@@ -83,6 +105,13 @@ export async function POST(req: Request) {
       "Income",
       "Email",
       "First Name",
+      "Pais",
+      "Marca",
+      "Source",
+      "Medium",
+      "Campaign",
+      "Term",
+      "Content",
       "UTM Source",
       "UTM Medium",
       "UTM Campaign",
@@ -90,7 +119,7 @@ export async function POST(req: Request) {
       "UTM Content",
     ];
 
-    const sheetRange = `${sheetName}!A:J`;
+    const sheetRange = `${sheetName}!A:Q`;
     const existingValuesResponse = await sheets.spreadsheets.values.get({
       spreadsheetId,
       range: sheetRange,
@@ -118,17 +147,42 @@ export async function POST(req: Request) {
       typeof headerCell === "string" &&
       headerCell.trim().toLowerCase() === "email";
 
+    const preferenceValue = pickString(body.preferenceText, body.preference);
+    const incomeValue = pickString(body.incomeText, body.income);
+    const paisValue = pickString(
+      body.Pais,
+      body.pais,
+      BRAND_STATIC_FIELDS.Pais,
+    );
+    const marcaValue = pickString(
+      body.Marca,
+      body.marca,
+      BRAND_STATIC_FIELDS.Marca,
+    );
+    const sourceValue = pickString(body.source, body.utm_source);
+    const mediumValue = pickString(body.medium, body.utm_medium);
+    const campaignValue = pickString(body.campaign, body.utm_campaign);
+    const termValue = pickString(body.term, body.utm_term);
+    const contentValue = pickString(body.content, body.utm_content);
+
     const rowValues = [
       new Date().toISOString(),
-      body.preferenceText ?? "",
-      body.incomeText ?? "",
+      preferenceValue,
+      incomeValue,
       body.email ?? "",
       body.firstName ?? "",
-      body.utm_source ?? "",
-      body.utm_medium ?? "",
-      body.utm_campaign ?? "",
-      body.utm_term ?? "",
-      body.utm_content ?? "",
+      paisValue,
+      marcaValue,
+      sourceValue,
+      mediumValue,
+      campaignValue,
+      termValue,
+      contentValue,
+      body.utm_source ?? sourceValue,
+      body.utm_medium ?? mediumValue,
+      body.utm_campaign ?? campaignValue,
+      body.utm_term ?? termValue,
+      body.utm_content ?? contentValue,
     ];
 
     const dataStartIndex = sheetHasHeader ? 1 : 0;

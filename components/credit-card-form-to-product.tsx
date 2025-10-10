@@ -9,7 +9,12 @@ import Step1 from "./steps/step1";
 import Step2 from "./steps/step2";
 import Step3 from "./steps/step3";
 import Logo from "./ui/logo";
-import { formStrings } from "@/lib/constants";
+import {
+  BRAND_STATIC_FIELDS,
+  BRAND_STATIC_FIELDS_LOWER,
+  UTM_PARAM_KEYS,
+  formStrings,
+} from "@/lib/constants";
 import { step1Strings, step2Strings } from "@/lib/strings";
 import { pushGTMConversion } from "@/components/analytics/gtm";
 import { trackGoogleAdsConversion } from "@/components/analytics/google-ads";
@@ -26,15 +31,6 @@ const buildKitFields = (fields: Record<string, string | null | undefined>) =>
 const GOOGLE_ADS_CONVERSION_LABEL =
   process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL ?? "";
 const GTM_CONVERSION_EVENT_NAME = "quiz_lead_submitted";
-
-// Define UTM parameters array
-const UTM_PARAM_KEYS = [
-  "utm_source",
-  "utm_medium",
-  "utm_campaign",
-  "utm_term",
-  "utm_content",
-];
 
 // Cookie names for user tracking
 const COOKIE_NAMES = {
@@ -253,10 +249,26 @@ export default function CreditCardFormToProduct() {
       const utmParams: Record<string, string> = {};
       UTM_PARAM_KEYS.forEach((param) => {
         const value = sessionStorage.getItem(param);
-        if (value) {
+        if (typeof value === "string") {
           utmParams[param] = value;
         }
       });
+
+      const utmFieldsForSheets = UTM_PARAM_KEYS.reduce<Record<string, string>>(
+        (acc, key) => {
+          acc[key] = utmParams[key] ?? "";
+          return acc;
+        },
+        {},
+      );
+
+      const normalizedHiddenFields = {
+        source: utmParams.utm_source ?? "",
+        medium: utmParams.utm_medium ?? "",
+        campaign: utmParams.utm_campaign ?? "",
+        term: utmParams.utm_term ?? "",
+        content: utmParams.utm_content ?? "",
+      };
 
       const nameParts = formData.firstName.trim().split(" ");
       const apiFirstName = nameParts[0] || "";
@@ -277,8 +289,8 @@ export default function CreditCardFormToProduct() {
         last_name: apiLastName,
         monto_empresa: null,
         newsletter: null,
-        pais: "Reino Unido",
-        marca: "Top Finanzas",
+        pais: BRAND_STATIC_FIELDS_LOWER.pais,
+        marca: BRAND_STATIC_FIELDS_LOWER.marca,
         phone_number: null,
         preferencia_1_cupo_de_credito_alto: null,
         preferencia_2_sin_buro: null,
@@ -312,6 +324,11 @@ export default function CreditCardFormToProduct() {
         recovery: null,
         reingresar_flujo_tarjetas: null,
         tarjetas_neobancos: null,
+        source: normalizedHiddenFields.source || null,
+        medium: normalizedHiddenFields.medium || null,
+        campaign: normalizedHiddenFields.campaign || null,
+        term: normalizedHiddenFields.term || null,
+        content: normalizedHiddenFields.content || null,
         utm_adgroup: utmParams.utm_adgroup || null,
         utm_campaign: utmParams.utm_campaign || null,
         utm_content: utmParams.utm_content || null,
@@ -329,7 +346,10 @@ export default function CreditCardFormToProduct() {
 
       const sheetsPayload = {
         ...formData,
-        ...utmParams,
+        ...utmFieldsForSheets,
+        ...normalizedHiddenFields,
+        ...BRAND_STATIC_FIELDS,
+        ...BRAND_STATIC_FIELDS_LOWER,
       };
 
       const sheetsResponse = await fetch("/api/sheets", {

@@ -60,18 +60,47 @@ const buildBrevoAttributes = (
     "CARD_PREFERENCE",
     fields.que_es_lo_que_mas_importante_en_una_tarjeta_de_credito ?? undefined,
   );
-  assignIfString(attributes, "PAIS", fields.pais ?? undefined);
-  assignIfString(attributes, "MARCA", fields.marca ?? undefined);
+  assignIfString(attributes, "PAIS", fields.pais ?? fields.Pais ?? undefined);
+  assignIfString(
+    attributes,
+    "MARCA",
+    fields.marca ?? fields.Marca ?? undefined,
+  );
   assignIfString(
     attributes,
     "QUIZ_TARJETAS",
     fields.quiz_tarjetas ?? undefined,
   );
-  assignIfString(attributes, "UTM_SOURCE", fields.utm_source ?? undefined);
-  assignIfString(attributes, "UTM_MEDIUM", fields.utm_medium ?? undefined);
-  assignIfString(attributes, "UTM_CAMPAIGN", fields.utm_campaign ?? undefined);
-  assignIfString(attributes, "UTM_TERM", fields.utm_term ?? undefined);
-  assignIfString(attributes, "UTM_CONTENT", fields.utm_content ?? undefined);
+  assignIfString(
+    attributes,
+    "UTM_SOURCE",
+    fields.utm_source ?? fields.source ?? undefined,
+  );
+  assignIfString(
+    attributes,
+    "UTM_MEDIUM",
+    fields.utm_medium ?? fields.medium ?? undefined,
+  );
+  assignIfString(
+    attributes,
+    "UTM_CAMPAIGN",
+    fields.utm_campaign ?? fields.campaign ?? undefined,
+  );
+  assignIfString(
+    attributes,
+    "UTM_TERM",
+    fields.utm_term ?? fields.term ?? undefined,
+  );
+  assignIfString(
+    attributes,
+    "UTM_CONTENT",
+    fields.utm_content ?? fields.content ?? undefined,
+  );
+  assignIfString(attributes, "SOURCE", fields.source ?? undefined);
+  assignIfString(attributes, "MEDIUM", fields.medium ?? undefined);
+  assignIfString(attributes, "CAMPAIGN", fields.campaign ?? undefined);
+  assignIfString(attributes, "TERM", fields.term ?? undefined);
+  assignIfString(attributes, "CONTENT", fields.content ?? undefined);
   assignIfString(
     attributes,
     "CONSENT",

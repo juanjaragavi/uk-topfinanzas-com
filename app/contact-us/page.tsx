@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useEffect, useState } from "react";
+import type { ChangeEvent, FormEvent } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -11,16 +12,71 @@ import Link from "next/link";
 import { FaLinkedin, FaInstagram } from "react-icons/fa";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { BRAND_STATIC_FIELDS, UTM_PARAM_KEYS } from "@/lib/constants";
+
+interface ContactFormState {
+  name: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  message: string;
+  acceptTerms: boolean;
+  utm_source: string;
+  utm_medium: string;
+  utm_campaign: string;
+  utm_term: string;
+  utm_content: string;
+  source: string;
+  medium: string;
+  campaign: string;
+  term: string;
+  content: string;
+  Pais: string;
+  Marca: string;
+  pais: string;
+  marca: string;
+}
+
+type ContactFormStringKeys = {
+  [K in keyof ContactFormState]: ContactFormState[K] extends string ? K : never;
+}[keyof ContactFormState];
+
+const initialFormState: ContactFormState = {
+  name: "",
+  lastName: "",
+  email: "",
+  phone: "",
+  message: "",
+  acceptTerms: false,
+  utm_source: "",
+  utm_medium: "",
+  utm_campaign: "",
+  utm_term: "",
+  utm_content: "",
+  source: "",
+  medium: "",
+  campaign: "",
+  term: "",
+  content: "",
+  Pais: BRAND_STATIC_FIELDS.Pais,
+  Marca: BRAND_STATIC_FIELDS.Marca,
+  pais: BRAND_STATIC_FIELDS.Pais,
+  marca: BRAND_STATIC_FIELDS.Marca,
+};
+
+const UTM_TO_PLAIN_FIELD: Record<
+  (typeof UTM_PARAM_KEYS)[number],
+  ContactFormStringKeys
+> = {
+  utm_source: "source",
+  utm_medium: "medium",
+  utm_campaign: "campaign",
+  utm_term: "term",
+  utm_content: "content",
+};
 
 export default function ContactUs() {
-  const [formData, setFormData] = useState({
-    name: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
-    acceptTerms: false,
-  });
+  const [formData, setFormData] = useState<ContactFormState>(initialFormState);
 
   const [errors, setErrors] = useState<{
     name: string | null;
@@ -41,6 +97,35 @@ export default function ContactUs() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const utmUpdates: Partial<Record<keyof ContactFormState, string>> = {};
+
+    UTM_PARAM_KEYS.forEach((param) => {
+      const value = sessionStorage.getItem(param);
+      if (typeof value === "string" && value.trim() !== "") {
+        utmUpdates[param as keyof ContactFormState] = value;
+        const mappedKey = UTM_TO_PLAIN_FIELD[param];
+        if (mappedKey) {
+          utmUpdates[mappedKey] = value;
+        }
+      }
+    });
+
+    if (Object.keys(utmUpdates).length > 0) {
+      setFormData(
+        (prev) =>
+          ({
+            ...prev,
+            ...utmUpdates,
+          }) as ContactFormState,
+      );
+    }
+  }, []);
 
   const validateEmail = (email: string): boolean => {
     if (!email) {
@@ -206,10 +291,16 @@ export default function ContactUs() {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData(
+      (prev) =>
+        ({
+          ...prev,
+          [name]: value,
+        }) as ContactFormState,
+    );
 
     // Live validation
     if (name === "email" && value.length > 5) {
@@ -257,14 +348,15 @@ export default function ContactUs() {
       }
 
       setSubmitSuccess(true);
-      setFormData({
+      setFormData((prev) => ({
+        ...prev,
         name: "",
         lastName: "",
         email: "",
         phone: "",
         message: "",
         acceptTerms: false,
-      });
+      }));
     } catch (error) {
       console.error("Error sending message:", error);
       setSubmitError(

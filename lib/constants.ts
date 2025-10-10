@@ -5,6 +5,24 @@ export const metadata = {
   description: "Find the perfect credit card tailored to your needs",
 };
 
+export const UTM_PARAM_KEYS = [
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "utm_term",
+  "utm_content",
+] as const;
+
+export const BRAND_STATIC_FIELDS = {
+  Pais: "Reino Unido",
+  Marca: "Top Finanzas",
+} as const;
+
+export const BRAND_STATIC_FIELDS_LOWER = {
+  pais: BRAND_STATIC_FIELDS.Pais,
+  marca: BRAND_STATIC_FIELDS.Marca,
+} as const;
+
 export const commonStrings = {
   copyright: "© Top Networks Inc. 2025",
   important: {
