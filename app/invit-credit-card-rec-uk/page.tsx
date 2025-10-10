@@ -6,12 +6,9 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function InvitCreditCardRecUKPage() {
   const [openFaq, setOpenFaq] = useState<string | null>("benefits");
-  const [isShuffling, setIsShuffling] = useState(false);
-  const [cardRevealed, setCardRevealed] = useState(false);
 
   const toggleFaq = (id: string) => {
     if (openFaq === id) {
@@ -19,15 +16,6 @@ export default function InvitCreditCardRecUKPage() {
     } else {
       setOpenFaq(id);
     }
-  };
-
-  const handleRevealCard = () => {
-    setIsShuffling(true);
-    // Simulate shuffling animation for 2 seconds, then reveal the card
-    setTimeout(() => {
-      setIsShuffling(false);
-      setCardRevealed(true);
-    }, 2000);
   };
 
   return (

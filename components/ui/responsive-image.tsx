@@ -14,7 +14,7 @@ type ResponsiveImageProps = ImageProps & {
  */
 export default function ResponsiveImage({
   src,
-  alt,
+  alt = "",
   width,
   height,
   fill,
@@ -28,6 +28,11 @@ export default function ResponsiveImage({
   style,
   ...props
 }: ResponsiveImageProps) {
+  if (process.env.NODE_ENV !== "production" && !alt) {
+    console.warn(
+      "ResponsiveImage rendered without an alt description; consider providing descriptive text for accessibility.",
+    );
+  }
   // When using fill, we need to ensure the parent container has position relative
   const containerStyle: CSSProperties = fill
     ? { position: "relative", ...style }
@@ -50,9 +55,8 @@ export default function ResponsiveImage({
   const defaultSizes = fill && !sizes ? "100vw" : sizes;
 
   // Prepare image props
-  const imageProps: ImageProps = {
+  const imageProps: Omit<ImageProps, "alt"> = {
     src,
-    alt,
     fill,
     sizes: defaultSizes,
     quality,
@@ -82,7 +86,7 @@ export default function ResponsiveImage({
       className={`overflow-hidden ${containerClassName}`}
       style={containerStyle}
     >
-      <Image {...imageProps} />
+      <Image {...imageProps} alt={alt} />
     </div>
   );
 }

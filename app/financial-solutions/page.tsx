@@ -3,7 +3,7 @@
 import { BlogLayout } from "@/components/mdx/blog-layout";
 import Link from "next/link";
 import { FeaturedPostCard } from "@/components/ui/featured-post-card";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 
 export default function FinancialSolutionsPage() {
   // Category definitions

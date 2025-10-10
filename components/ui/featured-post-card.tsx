@@ -64,9 +64,9 @@ export function FeaturedPostCard({
             src={image}
             alt={title}
             fill
-            priority={true}
+            priority={priority}
             style={{ objectFit: "cover" }}
-            loading="eager"
+            loading={priority ? "eager" : "lazy"}
             sizes={
               orientation === "horizontal"
                 ? "(max-width: 768px) 100vw, 33vw"

@@ -6,7 +6,6 @@ export interface FeaturedPostsGridProps {
   posts: Array<Omit<FeaturedPostCardProps, "orientation" | "imageHeight">>;
   title?: string;
   description?: string;
-  animateItems?: boolean;
   columns?: 1 | 2 | 3 | 4;
   filter?: string | null;
   showHeader?: boolean;
@@ -19,7 +18,6 @@ export function FeaturedPostsGrid({
   posts,
   title = "Latest Articles",
   description,
-  animateItems = true,
   columns = 3,
   filter = null,
   showHeader = true,
@@ -55,7 +53,7 @@ export function FeaturedPostsGrid({
         key={filter || "all"} // Keep key for re-rendering on filter change
         className={`grid ${gridColsClass} gap-6`} // Basic grid styles
       >
-        {filteredPosts.map((post, index) => (
+        {filteredPosts.map((post) => (
           // No motion.div wrapper, just the card directly or a simple div if needed for key
           <div key={post.slug}>
             {" "}

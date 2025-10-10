@@ -542,6 +542,10 @@ class AnalyticsValidator {
         servicesEnabled = typeof googletag.pubads === "function";
       });
     } catch (error) {
+      console.warn(
+        "[AnalyticsValidator] Error while verifying GAM services",
+        error,
+      );
       // Fallback check
       servicesEnabled = typeof googletag.pubads === "function";
     }

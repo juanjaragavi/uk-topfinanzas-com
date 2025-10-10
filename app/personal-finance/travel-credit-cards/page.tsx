@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";

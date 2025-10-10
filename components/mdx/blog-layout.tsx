@@ -7,13 +7,9 @@ import { ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
-  Sidebar,
   SidebarAd,
   SidebarCategories,
   SidebarContent,
-  SidebarFooter,
-  SidebarHeader,
-  SidebarInput,
   SidebarNewsletter,
   SidebarProvider,
   SidebarRecentArticles,
@@ -46,6 +42,10 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
 
       <section className="bg-gradient-to-b from-white to-gray-50 py-10">
         <div className="container mx-auto px-4">
+          <div className="mb-10 text-left max-w-3xl">
+            <h1 className="text-3xl font-bold text-gray-900 mb-3">{title}</h1>
+            <p className="text-gray-600 leading-relaxed">{description}</p>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             {/* Main content */}
             <div className="lg:col-span-8">

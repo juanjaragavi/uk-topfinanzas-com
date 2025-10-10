@@ -2,10 +2,7 @@
 
 import { useState, useCallback, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
-// Standard Next.js Image component
 import { FeaturedPostCard } from "@/components/ui/featured-post-card";
-import { FeaturedPostsGrid } from "@/components/ui/featured-posts-grid";
 import { motion, AnimatePresence } from "framer-motion";
 import { BlogLayout } from "@/components/mdx/blog-layout"; // Assuming this layout is suitable
 import { Button } from "@/components/ui/button"; // For pagination
@@ -313,7 +310,7 @@ export default function BlogArchivePage() {
     }
 
     return filteredPosts;
-  }, [allPosts, activeCategory]);
+  }, [activeCategory, allPostsSorted]);
 
   // Get filtered posts
   const filteredPosts = filterPosts();

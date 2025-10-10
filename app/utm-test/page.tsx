@@ -1,21 +1,18 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { useEffect, Suspense } from "react";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
-import Link from "next/link";
-import { UtmTester, testUtmPersistence } from "@/components/analytics/utm-test";
+import { testUtmPersistence } from "@/components/analytics/utm-test";
 import { Button } from "@/components/ui/button";
 
 // Client Component that uses useSearchParams
 function UtmTestContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [currentUrl, setCurrentUrl] = useState("");
 
   // Get the current URL with query parameters
   useEffect(() => {
-    setCurrentUrl(window.location.href);
     // Initial test on page load
     testUtmPersistence();
   }, []);

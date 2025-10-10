@@ -30,7 +30,6 @@ export function pageHasAdUnits(): boolean {
 
 export function waitForContainers(timeoutMs: number): Promise<boolean> {
   if (typeof document === "undefined") return Promise.resolve(false);
-  const start = Date.now();
 
   return new Promise((resolve) => {
     if (pageHasAdUnits()) return resolve(true);
@@ -171,7 +170,8 @@ export async function activateAdZep(options?: ActivateOptions): Promise<{
         startedAt,
         finishedAt: Date.now(),
       };
-    } catch (err) {
+    } catch (error) {
+      console.error("[AdZep] Error during activation call", error);
       return {
         success: false,
         reason: "adzep-call-error",

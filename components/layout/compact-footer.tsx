@@ -5,7 +5,6 @@ import { BackToTop } from "@/components/ui/back-to-top"; // Import the new compo
 // Import content from lib directory
 import { logos } from "@/lib/images/logos";
 import { footerNavigation } from "@/lib/navigation/footerNavigation";
-import { footerContent } from "@/lib/texts/footer/content";
 
 export function CompactFooter() {
   return (

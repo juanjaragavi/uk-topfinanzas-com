@@ -4,8 +4,14 @@
 
 import Image, { ImageProps } from "next/image";
 
-export function OptimizedImage(props: ImageProps) {
+export function OptimizedImage({ alt, ...props }: ImageProps) {
+  if (process.env.NODE_ENV !== "production" && alt == null) {
+    console.warn(
+      "OptimizedImage requires an alt attribute; defaulting to empty string.",
+    );
+  }
+
   // Return the standard Image component with the same props
   // to ensure any lingering references still work
-  return <Image {...props} />;
+  return <Image alt={alt ?? ""} {...props} />;
 }

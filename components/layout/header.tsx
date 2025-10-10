@@ -1,11 +1,10 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react"; // Removed Search, Loader2
-import { Button } from "@/components/ui/button";
 // Removed Input, SearchResults, useDebouncedCallback
 
 // Import content from lib directory

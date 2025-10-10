@@ -37,7 +37,7 @@ export default function GoogleTagManager({ id = GTM_ID }: { id?: string }) {
       {/* Initialize dataLayer before GTM loads */}
       <Script
         id="gtm-datalayer-init"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];

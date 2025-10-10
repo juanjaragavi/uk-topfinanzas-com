@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import { useAdZep } from "./adzep";
 
 /**
  * Enhanced AdZep Link Tracker
@@ -57,7 +56,7 @@ export function AdZepFormTracker() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const handleFormSubmit = (event: Event) => {
+    const handleFormSubmit = () => {
       // Only log for debugging/tracking purposes
       // AdZep activation is handled by AdZepCentralizedHandler in header
       if (process.env.NODE_ENV === "development") {

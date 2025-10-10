@@ -2,23 +2,6 @@ import { NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
 
-// Define the structure for the frontmatter data we want to extract
-interface PostFrontmatter {
-  title: string;
-  description: string;
-  date?: string;
-  featuredImage?: string;
-  categories?: Array<{ name: string; slug: string }>;
-  [key: string]: unknown;
-}
-
-interface PostData {
-  slug: string;
-  frontmatter: PostFrontmatter;
-  category: string;
-  categoryPath: string;
-}
-
 // --- Simplified Logic for Debugging File Existence ---
 
 // Function to scan a directory and check for metadata.ts existence
@@ -86,7 +69,7 @@ async function checkMetadataExistence(
   console.log(`[checkMetadataExistence] Finished scanning ${dirPath}.`);
 }
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
     console.log(
       "API route /api/posts called (DEBUGGING - Checking Metadata Existence)",

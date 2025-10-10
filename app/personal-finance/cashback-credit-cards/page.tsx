@@ -1,6 +1,5 @@
 import { Header } from "@/components/layout/header"; // Add Header import
 import { CompactFooter } from "@/components/layout/compact-footer"; // Add CompactFooter import
-import { Button } from "@/components/ui/button"; // Keep Button import if needed, or remove if not
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image"; // Add Image import
 import Link from "next/link"; // Add Link import

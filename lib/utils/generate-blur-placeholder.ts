@@ -25,9 +25,9 @@ export function generateTinyPlaceholder(
 
     // Otherwise add them as new query parameters
     return `${originalSrc}?w=${width}&q=${quality}`;
-  } catch (e) {
+  } catch (error) {
     // If the URL is invalid, return the original
-    console.warn("Invalid URL for placeholder generation:", originalSrc);
+    console.warn("Invalid URL for placeholder generation:", originalSrc, error);
     return originalSrc;
   }
 }

@@ -4,23 +4,9 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
 import { Button } from "@/components/ui/button";
-import { AnimatedText } from "@/components/ui/animated-text";
 import Link from "next/link";
 import Image from "next/image";
 import { ReactNode } from "react"; // Added ReactNode import
-import {
-  Sidebar,
-  SidebarAd,
-  SidebarCategories,
-  SidebarContent,
-  SidebarFooter,
-  SidebarHeader,
-  SidebarInput,
-  SidebarNewsletter,
-  SidebarProvider,
-  SidebarRecentArticles,
-  SidebarSeparator,
-} from "@/components/ui/sidebar"; // Added Sidebar imports
 
 interface BlogLayoutProps {
   children: ReactNode;
@@ -52,11 +38,6 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
     views = 0,
     commentCount = 0,
   } = metadata || {};
-
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Formulario enviado");
-  };
 
   return (
     <main className="bg-white min-h-screen flex flex-col">
@@ -179,6 +160,25 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
               Share
             </Button>
           </div>
+
+          {featuredImage && (
+            <div className="mb-8">
+              <Image
+                src={featuredImage}
+                alt={title}
+                width={1200}
+                height={675}
+                className="w-full h-auto rounded-2xl"
+                priority
+              />
+            </div>
+          )}
+
+          {excerpt && (
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              {excerpt}
+            </p>
+          )}
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             {/* Social share sidebar (desktop) */}

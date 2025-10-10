@@ -1,9 +1,9 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { readFileSync } from "fs";
 import { join } from "path";
 
 // This is a route to handle site.webmanifest requests
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     // Read the site.webmanifest from the public directory
     const manifestPath = join(process.cwd(), "public", "site.webmanifest");
@@ -27,7 +27,7 @@ export async function GET(request: NextRequest) {
 }
 
 // Handle OPTIONS requests for CORS preflight
-export async function OPTIONS(request: NextRequest) {
+export async function OPTIONS() {
   return new NextResponse(null, {
     status: 200,
     headers: {

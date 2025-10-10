@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie"; // Import Cookies
@@ -89,21 +89,21 @@ export default function CreditCardForm() {
   const totalSteps = 3;
   const progress = Math.round(((step - 1) / (totalSteps - 1)) * 100) || 0;
 
-  const updateFormData = (data: Partial<typeof formData>) => {
+  const updateFormData = useCallback((data: Partial<typeof formData>) => {
     setFormData((prev) => ({ ...prev, ...data }));
-  };
+  }, []);
 
-  const getPreferenceText = (id: string): string => {
+  const getPreferenceText = useCallback((id: string): string => {
     const option = step1Strings.options.find((opt) => opt.id === id);
     return option ? option.label : "";
-  };
+  }, []);
 
-  const getIncomeText = (id: string): string => {
+  const getIncomeText = useCallback((id: string): string => {
     const option = step2Strings.options.find((opt) => opt.id === id);
     return option ? option.label : "";
-  };
+  }, []);
 
-  const triggerConversionEvents = () => {
+  const triggerConversionEvents = useCallback(() => {
     if (!GOOGLE_ADS_CONVERSION_LABEL) {
       console.warn(
         "[QUIZ] Google Ads conversion label is not configured; skipping Ad conversion event.",
@@ -113,9 +113,9 @@ export default function CreditCardForm() {
     }
 
     pushGTMConversion(GTM_CONVERSION_EVENT_NAME);
-  };
+  }, []);
 
-  const persistRegistrationCookies = () => {
+  const persistRegistrationCookies = useCallback(() => {
     const cookieConfig = getCookieConfig();
     const cookieExpiration = cookieConfig.VALIDATION_ENABLED
       ? cookieConfig.DEFAULT_EXPIRATION
@@ -148,7 +148,7 @@ export default function CreditCardForm() {
         }, expiration: ${cookieExpiration} days`,
       );
     }
-  };
+  }, [formData.email, formData.firstName]);
 
   // Set mounted state
   useEffect(() => {
@@ -187,7 +187,7 @@ export default function CreditCardForm() {
         console.error("Error parsing saved user data:", error);
       }
     }
-  }, [mounted]);
+  }, [mounted, updateFormData]);
 
   useEffect(() => {
     if (formData.preference) {
@@ -198,7 +198,229 @@ export default function CreditCardForm() {
     if (formData.income) {
       updateFormData({ incomeText: getIncomeText(formData.income) });
     }
-  }, [formData.preference, formData.income]);
+  }, [
+    formData.preference,
+    formData.income,
+    updateFormData,
+    getPreferenceText,
+    getIncomeText,
+  ]);
+
+  useEffect(() => {
+    if (!isRegisteredUser) {
+      hasAutoSubmittedRef.current = false;
+    }
+  }, [isRegisteredUser]);
+
+  const router = useRouter();
+
+  const handleSubmit = useCallback(
+    async (e?: React.FormEvent) => {
+      e?.preventDefault();
+
+      if (isSubmitting) {
+        return;
+      }
+
+      console.log("[QUIZ] Form submission attempt", formData);
+      setIsSubmitting(true);
+      setSubmissionStatus("idle");
+      setSubmissionMessage(null);
+
+      try {
+        const utmParams: Record<string, string> = {};
+        UTM_PARAM_KEYS.forEach((param) => {
+          const value = sessionStorage.getItem(param);
+          if (typeof value === "string") {
+            utmParams[param] = value;
+          }
+        });
+
+        const utmFieldsForSheets = UTM_PARAM_KEYS.reduce<
+          Record<string, string>
+        >((acc, key) => {
+          acc[key] = utmParams[key] ?? "";
+          return acc;
+        }, {});
+
+        const normalizedHiddenFields = {
+          source: utmParams.utm_source ?? "",
+          medium: utmParams.utm_medium ?? "",
+          campaign: utmParams.utm_campaign ?? "",
+          term: utmParams.utm_term ?? "",
+          content: utmParams.utm_content ?? "",
+        };
+
+        const nameParts = formData.firstName.trim().split(" ");
+        const apiFirstName = nameParts[0] || "";
+        const apiLastName = nameParts.slice(1).join(" ") || "";
+
+        const kitFields = {
+          acepto_politicas_de_tratamiento_de_datos_y_terminos_y_condiciones:
+            formData.receiveMessages ? "1" : "0",
+          beneficio_empresa: null,
+          contacto: null,
+          cual_es_tu_ingreso_mensual: formData.incomeText || formData.income,
+          cuanto_dinero_necesitas: null,
+          date_created: new Date().toISOString(),
+          describe_tu_necesidad: null,
+          elige_el_grupo_que_mejor_describe_tu_situacion_actual: null,
+          estas_reportado_en_buro_de_credito: null,
+          flujo_prestamos_2: null,
+          last_name: apiLastName,
+          monto_empresa: null,
+          newsletter: null,
+          pais: BRAND_STATIC_FIELDS_LOWER.pais,
+          marca: BRAND_STATIC_FIELDS_LOWER.marca,
+          phone_number: null,
+          preferencia_1_cupo_de_credito_alto: null,
+          preferencia_2_sin_buro: null,
+          preferencia_3_millas_y_puntos: null,
+          preferencia_4_credito_inmediato: null,
+          preferencia_5_sin_anualidad: null,
+          preferencia_6_cashback: null,
+          que_es_lo_que_mas_importante_en_una_tarjeta_de_credito:
+            formData.preferenceText || formData.preference,
+          quickemailverification_free: null,
+          quickemailverification_result: null,
+          quickemailverification_safe_to_send: null,
+          quiz_campana_leads: null,
+          quiz_prestamos: null,
+          quiz_prestamos_2: null,
+          quiz_prestamos_bbva: null,
+          quiz_prestamos_credilikeme: null,
+          quiz_prestamos_discover: null,
+          quiz_prestamos_empresarial_sabadell: null,
+          quiz_prestamos_upstart: null,
+          quiz_prestamo_kueski: null,
+          quiz_tarjetas: "SI",
+          quiz_tarjeta_bbva_azul: null,
+          quiz_tarjeta_citi_double_cash: null,
+          quiz_tarjeta_hsbc_zero: null,
+          quiz_tarjeta_nubank: null,
+          quiz_tarjeta_nubank_2: null,
+          quiz_tarjeta_platacard: null,
+          quiz_tarjeta_stori: null,
+          quiz_tarjeta_visa_signature: null,
+          recovery: null,
+          reingresar_flujo_tarjetas: null,
+          tarjetas_neobancos: null,
+          source: normalizedHiddenFields.source || null,
+          medium: normalizedHiddenFields.medium || null,
+          campaign: normalizedHiddenFields.campaign || null,
+          term: normalizedHiddenFields.term || null,
+          content: normalizedHiddenFields.content || null,
+          utm_adgroup: utmParams.utm_adgroup || null,
+          utm_campaign: utmParams.utm_campaign || null,
+          utm_content: utmParams.utm_content || null,
+          utm_medium: utmParams.utm_medium || null,
+          utm_source: utmParams.utm_source || null,
+          utm_term: utmParams.utm_term || null,
+        };
+
+        const kitData = {
+          first_name: apiFirstName,
+          email_address: formData.email,
+          state: "active",
+          fields: buildKitFields(kitFields),
+        };
+
+        const sheetsPayload = {
+          ...formData,
+          ...utmFieldsForSheets,
+          ...normalizedHiddenFields,
+          ...BRAND_STATIC_FIELDS,
+          ...BRAND_STATIC_FIELDS_LOWER,
+        };
+
+        const sheetsResponse = await fetch("/api/sheets", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(sheetsPayload),
+        });
+
+        const sheetsResult = await sheetsResponse.json().catch(() => ({}));
+
+        if (sheetsResponse.status === 409) {
+          console.info("[QUIZ] Duplicate submission detected", sheetsResult);
+          persistRegistrationCookies();
+          setSubmissionStatus("duplicate");
+          setSubmissionMessage(
+            "We already have your latest details. Redirecting you to your offers.",
+          );
+
+          setTimeout(() => {
+            router.push("https://linkly.link/2ERav");
+          }, 800);
+          return;
+        }
+
+        if (!sheetsResponse.ok) {
+          throw new Error(
+            (sheetsResult as { error?: string })?.error ||
+              "Failed to add registration to sheet",
+          );
+        }
+
+        if (!isRegisteredUser || formData.email) {
+          try {
+            const subscribeResponse = await fetch("/api/subscribe", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(kitData),
+            });
+
+            if (!subscribeResponse.ok) {
+              const subscribeError = await subscribeResponse
+                .json()
+                .catch(() => null);
+              console.error("[QUIZ] Subscription API error", subscribeError);
+            } else {
+              const subscribeResult = await subscribeResponse
+                .json()
+                .catch(() => null);
+              console.log("Subscription API response:", subscribeResult);
+            }
+          } catch (subscriptionError) {
+            console.error(
+              "[QUIZ] Error calling subscription API",
+              subscriptionError,
+            );
+          }
+        }
+
+        triggerConversionEvents();
+        persistRegistrationCookies();
+        setSubmissionStatus("success");
+        setSubmissionMessage(
+          "Thanks! Redirecting you to your tailored credit card options.",
+        );
+
+        setTimeout(() => {
+          router.push("https://linkly.link/2ERav");
+        }, 800);
+      } catch (error) {
+        console.error("[QUIZ] Error handling submission", error);
+        setSubmissionStatus("error");
+        setSubmissionMessage(
+          "We couldn’t confirm your registration. Please try again in a moment.",
+        );
+        setIsSubmitting(false);
+      }
+    },
+    [
+      formData,
+      isSubmitting,
+      isRegisteredUser,
+      persistRegistrationCookies,
+      router,
+      triggerConversionEvents,
+    ],
+  );
 
   useEffect(() => {
     if (
@@ -218,219 +440,19 @@ export default function CreditCardForm() {
         return () => clearTimeout(timer);
       }
 
-      const timer = setTimeout(() => setStep(step + 1), 500);
+      const timer = setTimeout(() => setStep((current) => current + 1), 500);
       return () => clearTimeout(timer);
     }
 
     return undefined;
-  }, [formData, step, isRegisteredUser]);
-
-  useEffect(() => {
-    if (!isRegisteredUser) {
-      hasAutoSubmittedRef.current = false;
-    }
-  }, [isRegisteredUser]);
-
-  const router = useRouter();
-
-  const handleSubmit = async (e?: React.FormEvent) => {
-    e?.preventDefault();
-
-    if (isSubmitting) {
-      return;
-    }
-
-    console.log("[QUIZ] Form submission attempt", formData);
-    setIsSubmitting(true);
-    setSubmissionStatus("idle");
-    setSubmissionMessage(null);
-
-    try {
-      const utmParams: Record<string, string> = {};
-      UTM_PARAM_KEYS.forEach((param) => {
-        const value = sessionStorage.getItem(param);
-        if (typeof value === "string") {
-          utmParams[param] = value;
-        }
-      });
-
-      const utmFieldsForSheets = UTM_PARAM_KEYS.reduce<Record<string, string>>(
-        (acc, key) => {
-          acc[key] = utmParams[key] ?? "";
-          return acc;
-        },
-        {},
-      );
-
-      const normalizedHiddenFields = {
-        source: utmParams.utm_source ?? "",
-        medium: utmParams.utm_medium ?? "",
-        campaign: utmParams.utm_campaign ?? "",
-        term: utmParams.utm_term ?? "",
-        content: utmParams.utm_content ?? "",
-      };
-
-      const nameParts = formData.firstName.trim().split(" ");
-      const apiFirstName = nameParts[0] || "";
-      const apiLastName = nameParts.slice(1).join(" ") || "";
-
-      const kitFields = {
-        acepto_politicas_de_tratamiento_de_datos_y_terminos_y_condiciones:
-          formData.receiveMessages ? "1" : "0",
-        beneficio_empresa: null,
-        contacto: null,
-        cual_es_tu_ingreso_mensual: formData.incomeText || formData.income,
-        cuanto_dinero_necesitas: null,
-        date_created: new Date().toISOString(),
-        describe_tu_necesidad: null,
-        elige_el_grupo_que_mejor_describe_tu_situacion_actual: null,
-        estas_reportado_en_buro_de_credito: null,
-        flujo_prestamos_2: null,
-        last_name: apiLastName,
-        monto_empresa: null,
-        newsletter: null,
-        pais: BRAND_STATIC_FIELDS_LOWER.pais,
-        marca: BRAND_STATIC_FIELDS_LOWER.marca,
-        phone_number: null,
-        preferencia_1_cupo_de_credito_alto: null,
-        preferencia_2_sin_buro: null,
-        preferencia_3_millas_y_puntos: null,
-        preferencia_4_credito_inmediato: null,
-        preferencia_5_sin_anualidad: null,
-        preferencia_6_cashback: null,
-        que_es_lo_que_mas_importante_en_una_tarjeta_de_credito:
-          formData.preferenceText || formData.preference,
-        quickemailverification_free: null,
-        quickemailverification_result: null,
-        quickemailverification_safe_to_send: null,
-        quiz_campana_leads: null,
-        quiz_prestamos: null,
-        quiz_prestamos_2: null,
-        quiz_prestamos_bbva: null,
-        quiz_prestamos_credilikeme: null,
-        quiz_prestamos_discover: null,
-        quiz_prestamos_empresarial_sabadell: null,
-        quiz_prestamos_upstart: null,
-        quiz_prestamo_kueski: null,
-        quiz_tarjetas: "SI",
-        quiz_tarjeta_bbva_azul: null,
-        quiz_tarjeta_citi_double_cash: null,
-        quiz_tarjeta_hsbc_zero: null,
-        quiz_tarjeta_nubank: null,
-        quiz_tarjeta_nubank_2: null,
-        quiz_tarjeta_platacard: null,
-        quiz_tarjeta_stori: null,
-        quiz_tarjeta_visa_signature: null,
-        recovery: null,
-        reingresar_flujo_tarjetas: null,
-        tarjetas_neobancos: null,
-        source: normalizedHiddenFields.source || null,
-        medium: normalizedHiddenFields.medium || null,
-        campaign: normalizedHiddenFields.campaign || null,
-        term: normalizedHiddenFields.term || null,
-        content: normalizedHiddenFields.content || null,
-        utm_adgroup: utmParams.utm_adgroup || null,
-        utm_campaign: utmParams.utm_campaign || null,
-        utm_content: utmParams.utm_content || null,
-        utm_medium: utmParams.utm_medium || null,
-        utm_source: utmParams.utm_source || null,
-        utm_term: utmParams.utm_term || null,
-      };
-
-      const kitData = {
-        first_name: apiFirstName,
-        email_address: formData.email,
-        state: "active",
-        fields: buildKitFields(kitFields),
-      };
-
-      const sheetsPayload = {
-        ...formData,
-        ...utmFieldsForSheets,
-        ...normalizedHiddenFields,
-        ...BRAND_STATIC_FIELDS,
-        ...BRAND_STATIC_FIELDS_LOWER,
-      };
-
-      const sheetsResponse = await fetch("/api/sheets", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(sheetsPayload),
-      });
-
-      const sheetsResult = await sheetsResponse.json().catch(() => ({}));
-
-      if (sheetsResponse.status === 409) {
-        console.info("[QUIZ] Duplicate submission detected", sheetsResult);
-        persistRegistrationCookies();
-        setSubmissionStatus("duplicate");
-        setSubmissionMessage(
-          "We already have your latest details. Redirecting you to your offers.",
-        );
-
-        setTimeout(() => {
-          router.push("https://linkly.link/2ERav");
-        }, 800);
-        return;
-      }
-
-      if (!sheetsResponse.ok) {
-        throw new Error(
-          (sheetsResult as { error?: string })?.error ||
-            "Failed to add registration to sheet",
-        );
-      }
-
-      if (!isRegisteredUser || formData.email) {
-        try {
-          const subscribeResponse = await fetch("/api/subscribe", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(kitData),
-          });
-
-          if (!subscribeResponse.ok) {
-            const subscribeError = await subscribeResponse
-              .json()
-              .catch(() => null);
-            console.error("[QUIZ] Subscription API error", subscribeError);
-          } else {
-            const subscribeResult = await subscribeResponse
-              .json()
-              .catch(() => null);
-            console.log("Subscription API response:", subscribeResult);
-          }
-        } catch (subscriptionError) {
-          console.error(
-            "[QUIZ] Error calling subscription API",
-            subscriptionError,
-          );
-        }
-      }
-
-      triggerConversionEvents();
-      persistRegistrationCookies();
-      setSubmissionStatus("success");
-      setSubmissionMessage(
-        "Thanks! Redirecting you to your tailored credit card options.",
-      );
-
-      setTimeout(() => {
-        router.push("https://linkly.link/2ERav");
-      }, 800);
-    } catch (error) {
-      console.error("[QUIZ] Error handling submission", error);
-      setSubmissionStatus("error");
-      setSubmissionMessage(
-        "We couldn’t confirm your registration. Please try again in a moment.",
-      );
-      setIsSubmitting(false);
-    }
-  };
+  }, [
+    formData.preference,
+    formData.income,
+    step,
+    totalSteps,
+    isRegisteredUser,
+    handleSubmit,
+  ]);
 
   return (
     <div className="bg-white flex flex-col h-[100dvh]">

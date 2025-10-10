@@ -4,7 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { FeaturedPostsGrid } from "@/components/ui/featured-posts-grid";
 import { FeaturedPostCard } from "@/components/ui/featured-post-card";
-import { useEffect, useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import dynamic from "next/dynamic";
 
@@ -167,19 +167,8 @@ const allPosts: PostData[] = [
 // --- End of Hardcoded Data ---
 
 export default function Home() {
-  const [isMobile, setIsMobile] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6; // Number of posts per page for homepage
-
-  // Check if we're on mobile
-  useEffect(() => {
-    const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkIfMobile();
-    window.addEventListener("resize", checkIfMobile);
-    return () => window.removeEventListener("resize", checkIfMobile);
-  }, []);
 
   // Calculate paginated posts using useMemo
   const { paginatedPosts, totalPages } = useMemo(() => {
@@ -282,7 +271,6 @@ export default function Home() {
           <FeaturedPostsGrid
             posts={featuredPostsData}
             title="Latest Articles"
-            animateItems={true}
             columns={3}
           />
 
