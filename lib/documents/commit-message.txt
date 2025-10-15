@@ -1,14 +1,6 @@
-fix: resolve GAM 'googletag not ready' console warnings
+chore: clear commit message file for next workflow cycle
 
-Fixed race condition in Google Ad Manager initialization that was causing repeated console warnings. The GPT script now properly coordinates with slot definition using onLoad callback, eliminating retry loops and console spam.
-
-Changes:
-- Added onLoad handler to GPT script for proper timing coordination
-- Removed retry loop causing console warnings
-- Added duplicate slot prevention checks
-- Improved error handling with try-catch blocks
-- Added comprehensive fix documentation
+Routine maintenance - cleared commit-message.txt file contents to prepare for the next development cycle.
 
 Files modified:
-- components/analytics/gam.tsx
-- lib/documents/gam-fix-explanation.md (new)
+- lib/documents/commit-message.txt
