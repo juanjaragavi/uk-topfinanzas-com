@@ -1,4 +1,58 @@
-chore(quiz): stop persisting cookies when validation is disabled
+feat: Add inflation-proof personal finance article for UK market
 
-- skip quiz cookie storage to keep repeat submissions open when validation is off
-- mirror the guard for the product redirect form to maintain consistent behaviour
+Created comprehensive TOFU article on inflation-proofing finances with 7 actionable strategies for UK households. Article targets "personal finance" keyword with informational SEO intent.
+
+## Content Details
+- Title: "Inflation-Proof Your Life: 7 Smart Money Moves to Make When Prices Are High"
+- Category: Personal Finance (TOFU funnel stage)
+- Word count: ~950 words (optimal for TOFU content)
+- Date: 15 October 2025
+
+## Key Features
+- 7 practical money management strategies for high-inflation periods
+- UK-specific examples with GBP budgets
+- 10+ internal links to existing articles
+- Real-world scenario (£2,400 monthly budget example)
+- Actionable next steps and checklist
+
+## Files Created
+- `/app/personal-finance/inflation-proof-your-life/page.tsx` - Main article
+- `/lib/documents/blog-post-inflation-proof-summary.md` - Documentation
+- `/lib/documents/blog-post-integration-checklist.md` - Integration tracking
+
+## Site Integration
+- Updated `/app/blog/page.tsx` - Added to blog listing (newest first)
+- Updated `/app/personal-finance/page.tsx` - Added to category archive
+- Updated `/components/mdx/blog-layout.tsx` - Added to sidebar recent articles
+
+## Technical Implementation
+- Next.js 14 App Router structure
+- TypeScript with proper types
+- Responsive design with Tailwind CSS
+- Next.js Image optimization
+- AdZep ad units integrated (uk_topfinanzas_3, uk_topfinanzas_4)
+- Proper SEO structure (H1, H2, H3)
+- AIContentDisclaimer component
+
+## UK Market Compliance
+- British English (en-GB) throughout
+- UK-specific terminology (council tax, direct debits, etc.)
+- FCA-compliant educational content
+- GBP currency formatting
+- No personalized financial advice
+
+## SEO Optimization
+- Primary keyword: "personal finance"
+- Secondary keywords: inflation, money management, budget
+- Long-tail: inflation-proof, smart money moves
+- Optimized meta descriptions and alt text
+- Strategic internal linking
+
+## Content Quality
+- Practical, actionable advice
+- No fabricated statistics
+- Cautious, educational tone
+- Real UK household examples
+- Mobile-first responsive design
+
+All files compiled successfully with zero errors.

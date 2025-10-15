@@ -42,6 +42,18 @@ export default function BlogArchivePage() {
     // Personal Finance Posts
     {
       title:
+        "Inflation-Proof Your Life: 7 Smart Money Moves to Make When Prices Are High | Top Finance UK",
+      slug: "inflation-proof-your-life",
+      description:
+        "Discover seven practical strategies to protect your purchasing power during high inflation. Learn how to cut invisible spending leaks, lock in fixed rates, build emergency buffers, and keep your personal finance on track when costs are rising.",
+      image:
+        "https://media.topfinanzas.com/images/inflation-proof-your-life-7-smart-money-moves.webp",
+      category: "Personal Finance",
+      categoryPath: "/personal-finance",
+      date: "15 October 2025",
+    },
+    {
+      title:
         "Best Personal Loans in the UK: Your Complete Guide | Top Finance UK",
       slug: "best-personal-loans",
       description: "Comprehensive guide to the UK's top personal loans...",

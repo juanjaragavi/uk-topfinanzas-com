@@ -61,7 +61,31 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   <SidebarSeparator />
                   {/* Recent Articles - Updated */}
                   <SidebarRecentArticles>
-                    {/* Lifestyle Creep Article - NEW */}
+                    {/* Inflation-Proof Article - NEW */}
+                    <div className="flex items-center gap-3">
+                      <Image
+                        src="https://media.topfinanzas.com/images/inflation-proof-your-life-7-smart-money-moves.webp"
+                        alt="Inflation-Proof Your Life: 7 Smart Money Moves"
+                        width={50}
+                        height={50}
+                        loading="lazy"
+                        priority={false}
+                        className="rounded-md object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src =
+                            "https://media.topfinanzas.com/images/placeholder-image.webp";
+                        }}
+                      />
+                      <div>
+                        <Link
+                          href="/personal-finance/inflation-proof-your-life"
+                          className="text-sm font-medium hover:underline line-clamp-2"
+                        >
+                          Inflation-Proof Your Life: 7 Smart Money Moves
+                        </Link>
+                      </div>
+                    </div>
+                    {/* Lifestyle Creep Article */}
                     <div className="flex items-center gap-3">
                       <Image
                         src="https://media.topfinanzas.com/images/uk/what-is-lifestyle-creep-silent-wallet-drain.webp"
@@ -118,31 +142,6 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                         height={50}
                         loading="lazy"
                         priority={false}
-                        className="rounded-md object-cover" // Added object-cover
-                        onError={(e) => {
-                          e.currentTarget.src =
-                            "https://media.topfinanzas.com/images/placeholder-image.webp";
-                        }}
-                      />
-                      <div>
-                        <Link
-                          href="/personal-finance/best-personal-loans"
-                          className="text-sm font-medium hover:underline line-clamp-2" // Added line-clamp
-                        >
-                          Best Personal Loans in the UK
-                        </Link>
-                        {/* Optional: Add date if available */}
-                      </div>
-                    </div>
-                    {/* Article 2 */}
-                    <div className="flex items-center gap-3">
-                      <Image
-                        src="https://media.topfinanzas.com/images/uk/Top_Finance_uk_credit_cards.webp" // Placeholder
-                        alt="Top Rewards Credit Cards"
-                        width={50}
-                        height={50}
-                        loading="lazy"
-                        priority={false}
                         className="rounded-md object-cover"
                         onError={(e) => {
                           e.currentTarget.src =
@@ -151,10 +150,10 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                       />
                       <div>
                         <Link
-                          href="/personal-finance/best-rewards-credit-cards"
+                          href="/personal-finance/best-personal-loans"
                           className="text-sm font-medium hover:underline line-clamp-2"
                         >
-                          Top Rewards Credit Cards
+                          Best Personal Loans in the UK
                         </Link>
                       </div>
                     </div>
