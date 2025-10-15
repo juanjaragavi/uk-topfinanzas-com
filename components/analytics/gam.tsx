@@ -24,7 +24,7 @@ interface GoogletagNamespace {
   defineSlot: (
     adUnitPath: string,
     size: GoogletagSize,
-    elementId: string,
+    elementId: string
   ) => GoogletagSlot;
   display: (id: string) => void;
 }
@@ -45,7 +45,7 @@ export default function GoogleAdManager() {
       const googletag = window.googletag as unknown as GoogletagNamespace;
 
       console.debug(
-        `GAM: Initializing Google Ad Manager with network code ${GAM_NETWORK_CODE}`,
+        `GAM: Initializing Google Ad Manager with network code ${GAM_NETWORK_CODE}`
       );
 
       // Wait for GPT script to load, then initialize
@@ -98,6 +98,12 @@ export default function GoogleAdManager() {
         id="gam-gpt"
         src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
         strategy="afterInteractive"
+        onLoad={() => {
+          // Script has loaded, now it's safe to define ad slots
+          if (typeof window !== "undefined" && window.defineGAMAdSlots) {
+            window.defineGAMAdSlots();
+          }
+        }}
       />
 
       {/* GAM configuration script */}
@@ -110,55 +116,66 @@ export default function GoogleAdManager() {
             
             // Define ad slots function
             window.defineGAMAdSlots = function() {
-              if (!window.googletag || !window.googletag.defineSlot) {
-                console.warn('GAM: googletag not ready, retrying...');
-                setTimeout(window.defineGAMAdSlots, 100);
+              // Check if GPT is fully loaded with proper methods
+              if (!window.googletag || 
+                  typeof window.googletag.defineSlot !== 'function' ||
+                  typeof window.googletag.pubads !== 'function') {
+                // Don't spam console, just wait silently
                 return;
               }
               
+              // Use the command queue to ensure execution happens after GPT is ready
               window.googletag.cmd.push(function() {
-                // Define common ad slots for UK TopFinanzas
-                
-                // Header banner slot
-                if (!window.gamSlots) window.gamSlots = {};
-                
-                window.gamSlots.header = window.googletag.defineSlot(
-                  '/${GAM_NETWORK_CODE}/uk_topfinanzas_header',
-                  [[728, 90], [970, 90], [320, 50]],
-                  'gam-header-ad'
-                ).addService(window.googletag.pubads());
-                
-                // Sidebar ad slot
-                window.gamSlots.sidebar = window.googletag.defineSlot(
-                  '/${GAM_NETWORK_CODE}/uk_topfinanzas_sidebar',
-                  [[300, 250], [336, 280], [300, 600]],
-                  'gam-sidebar-ad'
-                ).addService(window.googletag.pubads());
-                
-                // Content ad slot
-                window.gamSlots.content = window.googletag.defineSlot(
-                  '/${GAM_NETWORK_CODE}/uk_topfinanzas_content',
-                  [[728, 90], [300, 250], [336, 280]],
-                  'gam-content-ad'
-                ).addService(window.googletag.pubads());
-                
-                // Footer ad slot
-                window.gamSlots.footer = window.googletag.defineSlot(
-                  '/${GAM_NETWORK_CODE}/uk_topfinanzas_footer',
-                  [[728, 90], [970, 90], [320, 50]],
-                  'gam-footer-ad'
-                ).addService(window.googletag.pubads());
-                
-                console.debug('GAM: Ad slots defined for network ${GAM_NETWORK_CODE}');
+                try {
+                  // Define common ad slots for UK TopFinanzas
+                  
+                  // Header banner slot
+                  if (!window.gamSlots) window.gamSlots = {};
+                  
+                  if (!window.gamSlots.header) {
+                    window.gamSlots.header = window.googletag.defineSlot(
+                      '/${GAM_NETWORK_CODE}/uk_topfinanzas_header',
+                      [[728, 90], [970, 90], [320, 50]],
+                      'gam-header-ad'
+                    ).addService(window.googletag.pubads());
+                  }
+                  
+                  // Sidebar ad slot
+                  if (!window.gamSlots.sidebar) {
+                    window.gamSlots.sidebar = window.googletag.defineSlot(
+                      '/${GAM_NETWORK_CODE}/uk_topfinanzas_sidebar',
+                      [[300, 250], [336, 280], [300, 600]],
+                      'gam-sidebar-ad'
+                    ).addService(window.googletag.pubads());
+                  }
+                  
+                  // Content ad slot
+                  if (!window.gamSlots.content) {
+                    window.gamSlots.content = window.googletag.defineSlot(
+                      '/${GAM_NETWORK_CODE}/uk_topfinanzas_content',
+                      [[728, 90], [300, 250], [336, 280]],
+                      'gam-content-ad'
+                    ).addService(window.googletag.pubads());
+                  }
+                  
+                  // Footer ad slot
+                  if (!window.gamSlots.footer) {
+                    window.gamSlots.footer = window.googletag.defineSlot(
+                      '/${GAM_NETWORK_CODE}/uk_topfinanzas_footer',
+                      [[728, 90], [970, 90], [320, 50]],
+                      'gam-footer-ad'
+                    ).addService(window.googletag.pubads());
+                  }
+                  
+                  console.debug('GAM: Ad slots defined for network ${GAM_NETWORK_CODE}');
+                } catch (error) {
+                  console.error('GAM: Error defining ad slots:', error);
+                }
               });
             };
             
-            // Initialize ad slots when DOM is ready
-            if (document.readyState === 'loading') {
-              document.addEventListener('DOMContentLoaded', window.defineGAMAdSlots);
-            } else {
-              window.defineGAMAdSlots();
-            }
+            // Don't execute immediately - wait for the script onLoad callback
+            // which will call defineGAMAdSlots when GPT is ready
           `,
         }}
       />
