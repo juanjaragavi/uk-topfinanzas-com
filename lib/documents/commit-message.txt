@@ -1,15 +1,21 @@
-fix(quiz): disable redirect when cookie validation is off
+fix(quiz): Replace broken linkly.link redirect with internal Credit Card Recommender P1 page
 
-Skip quiz-to-recommender redirect when validation is disabled, allowing repeat form submissions for testing. This matches the existing cookie persistence guard behavior.
+- Fixed Quiz form redirection failure caused by broken external URL (linkly.link/2ERav returning 404)
+- Replaced external redirect with internal route to /credit-card-recommender-p1
+- Updated redirect URLs in both credit-card-form.tsx and credit-card-form-to-product.tsx (4 occurrences total)
+- Applied fix to both duplicate submission and successful submission handlers
+- Created QUIZ_REDIRECT_FIX.md documentation with problem analysis and solution details
 
-## Changes
-- Updated `/app/quiz/page.tsx` to check `NEXT_PUBLIC_COOKIE_VALIDATION_ENABLED` before redirecting
-- Updated `/app/quiz-2/page.tsx` with the same validation check
-- Ensures users can resubmit forms when validation is disabled
-- Maintains redirect functionality when validation is enabled
+Benefits:
+- Eliminates 404 errors and Gigalixir error page issues
+- Provides faster, more reliable internal navigation
+- Improves user experience by keeping users within the site ecosystem
+- Better analytics tracking of user flow
+- No dependency on external link shortening services
 
-## Behavior
-- When `NEXT_PUBLIC_COOKIE_VALIDATION_ENABLED=false`: No automatic redirect, allows repeat submissions
-- When `NEXT_PUBLIC_COOKIE_VALIDATION_ENABLED=true`: Normal redirect behavior preserved
+Impact: Critical bug fix - users can now successfully complete the Quiz and access their credit card recommendations
 
-This enables production testing with UTM parameters without automatic redirects.
+Related files:
+- components/credit-card-form.tsx
+- components/credit-card-form-to-product.tsx
+- QUIZ_REDIRECT_FIX.md (new)

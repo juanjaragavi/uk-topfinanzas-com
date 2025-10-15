@@ -351,7 +351,7 @@ export default function CreditCardForm() {
           );
 
           setTimeout(() => {
-            router.push("https://linkly.link/2ERav");
+            router.push("/credit-card-recommender-p1");
           }, 800);
           return;
         }
@@ -400,7 +400,7 @@ export default function CreditCardForm() {
         );
 
         setTimeout(() => {
-          router.push("https://linkly.link/2ERav");
+          router.push("/credit-card-recommender-p1");
         }, 800);
       } catch (error) {
         console.error("[QUIZ] Error handling submission", error);

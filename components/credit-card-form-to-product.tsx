@@ -343,7 +343,7 @@ export default function CreditCardFormToProduct() {
         const sheetsResult = await sheetsResponse.json().catch(() => ({}));
 
         if (sheetsResponse.status === 409) {
-          console.info("[QUIZ-to-product] Duplicate submission", sheetsResult);
+          console.info("[QUIZ] Duplicate submission detected", sheetsResult);
           persistRegistrationCookies();
           setSubmissionStatus("duplicate");
           setSubmissionMessage(
@@ -351,7 +351,7 @@ export default function CreditCardFormToProduct() {
           );
 
           setTimeout(() => {
-            router.push("https://linkly.link/2ERav");
+            router.push("/credit-card-recommender-p1");
           }, 800);
           return;
         }
@@ -403,10 +403,10 @@ export default function CreditCardFormToProduct() {
         );
 
         setTimeout(() => {
-          router.push("https://linkly.link/2ERav");
+          router.push("/credit-card-recommender-p1");
         }, 800);
       } catch (error) {
-        console.error("[QUIZ-to-product] Error handling submission", error);
+        console.error("[QUIZ] Error handling submission", error);
         setSubmissionStatus("error");
         setSubmissionMessage(
           "We couldn’t confirm your registration. Please try again in a moment.",
