@@ -1,3 +1,4 @@
-chore(blog): remove unused imports from index page
+chore(quiz): stop persisting cookies when validation is disabled
 
-- clean up unused Image and FeaturedPostsGrid imports in app/blog/page.tsx to clear lint warnings
+- skip quiz cookie storage to keep repeat submissions open when validation is off
+- mirror the guard for the product redirect form to maintain consistent behaviour

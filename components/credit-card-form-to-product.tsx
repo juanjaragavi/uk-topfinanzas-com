@@ -117,9 +117,14 @@ export default function CreditCardFormToProduct() {
 
   const persistRegistrationCookies = useCallback(() => {
     const cookieConfig = getCookieConfig();
-    const cookieExpiration = cookieConfig.VALIDATION_ENABLED
-      ? cookieConfig.DEFAULT_EXPIRATION
-      : cookieConfig.SHORT_EXPIRATION;
+    if (!cookieConfig.VALIDATION_ENABLED) {
+      console.log(
+        "[QUIZ] Cookie validation disabled; skipping cookie persistence",
+      );
+      return;
+    }
+
+    const cookieExpiration = cookieConfig.DEFAULT_EXPIRATION;
 
     Cookies.set(COOKIE_NAMES.QUIZ_COMPLETED, "true", {
       expires: cookieExpiration,
@@ -129,10 +134,6 @@ export default function CreditCardFormToProduct() {
       const registrationData = {
         email: formData.email,
         firstName: formData.firstName,
-        ...(!cookieConfig.VALIDATION_ENABLED && {
-          _temporaryMode: true,
-          _timestamp: new Date().toISOString(),
-        }),
       };
 
       Cookies.set(COOKIE_NAMES.USER_REGISTERED, "true", {
@@ -143,9 +144,7 @@ export default function CreditCardFormToProduct() {
       });
 
       console.log(
-        `[QUIZ] Cookie validation: ${
-          cookieConfig.VALIDATION_ENABLED ? "enabled" : "disabled"
-        }, expiration: ${cookieExpiration} days`,
+        `[QUIZ] Cookie validation: enabled, expiration: ${cookieExpiration} days`,
       );
     }
   }, [formData.email, formData.firstName]);
