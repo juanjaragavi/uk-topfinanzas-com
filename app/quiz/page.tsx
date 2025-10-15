@@ -14,6 +14,15 @@ export default function Home() {
   const [isRedirecting, setIsRedirecting] = useState(false);
 
   useEffect(() => {
+    // Check if cookie validation is enabled - only redirect if it is
+    const validationEnabled =
+      process.env.NEXT_PUBLIC_COOKIE_VALIDATION_ENABLED !== "false";
+
+    if (!validationEnabled) {
+      // Validation disabled - skip redirect to allow repeat submissions
+      return;
+    }
+
     const lock = readRecommenderLockFromClient();
     if (!lock) {
       return;
