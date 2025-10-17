@@ -74,13 +74,22 @@ export default function AdZepSPABridge() {
       // If no known ad containers appear within wait window, drop quickly
       const containersPresent = await waitForContainers(waitMs);
 
-      // Decide activation parameters
+      // Decide activation parameters with longer timeout for initial load
       const activationTimeout = firstLoadRef.current
-        ? Math.max(adZepConfig.defaultActivationTimeoutMs, 8000)
+        ? Math.max(adZepConfig.defaultActivationTimeoutMs, 12000) // Increased from 8000
         : adZepConfig.defaultActivationTimeoutMs;
 
       // If there are containers or the path is article-like, attempt activation
       if (containersPresent || isArticlePath(pathname || "")) {
+        // Log activation attempt for debugging
+        if (process.env.NODE_ENV === "development") {
+          console.log("[AdZep SPA Bridge] Attempting activation", {
+            containersPresent,
+            activationTimeout,
+            firstLoad: firstLoadRef.current,
+          });
+        }
+
         await activateAdZep({ timeout: activationTimeout });
 
         // Post-activation verification and possible retries

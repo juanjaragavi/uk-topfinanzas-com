@@ -25,8 +25,11 @@ export interface AdZepConfig {
 }
 
 export const adZepConfig: AdZepConfig = {
-  // Known generic container patterns; adjust as concrete IDs/classes become available
+  // Known AdZep container patterns - includes uk_topfinanzas_* IDs
   containerSelectors: [
+    // Primary AdZep containers (uk_topfinanzas_1, uk_topfinanzas_2, etc.)
+    "[id^='uk_topfinanzas_']",
+    // Generic patterns for future use
     "[data-ad-slot]",
     "[data-adzep]",
     "[id^='adzep-']",
@@ -47,14 +50,15 @@ export const adZepConfig: AdZepConfig = {
     "/quiz",
     "/quiz-2",
   ],
-  initialContainerWaitMs: 10000,
-  navigationContainerWaitMs: 4000,
-  defaultActivationTimeoutMs: 5000,
-  defaultRetryAttempts: 2,
-  defaultRetryDelayMs: 600,
-  verifyRetries: 3,
-  verifyDelayMs: 1200,
-  overlayGraceMs: 1800,
+  // Increased timeout for initial load to ensure AdZep script is ready
+  initialContainerWaitMs: 15000, // Increased from 10000
+  navigationContainerWaitMs: 6000, // Increased from 4000
+  defaultActivationTimeoutMs: 8000, // Increased from 5000
+  defaultRetryAttempts: 3, // Increased from 2
+  defaultRetryDelayMs: 800, // Increased from 600
+  verifyRetries: 4, // Increased from 3
+  verifyDelayMs: 1500, // Increased from 1200
+  overlayGraceMs: 2000, // Slightly increased from 1800
 };
 
 export function isArticlePath(pathname: string | null | undefined): boolean {

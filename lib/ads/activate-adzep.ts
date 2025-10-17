@@ -151,6 +151,9 @@ export async function activateAdZep(options?: ActivateOptions): Promise<{
   try {
     const found = await waitForAdZepFunction(options);
     if (!found) {
+      if (process.env.NODE_ENV === "development") {
+        console.warn("[AdZep] window.AdZepActivateAds function not found after waiting");
+      }
       return {
         success: false,
         reason: "adzep-fn-missing",
@@ -161,9 +164,15 @@ export async function activateAdZep(options?: ActivateOptions): Promise<{
     }
 
     try {
+      if (process.env.NODE_ENV === "development") {
+        console.log("[AdZep] Calling window.AdZepActivateAds()");
+      }
       window.AdZepActivateAds?.();
       state.activated = true;
       state.lastActivation = Date.now();
+      if (process.env.NODE_ENV === "development") {
+        console.log("[AdZep] Activation successful");
+      }
       return {
         success: true,
         attempts: state.activationAttempts,
