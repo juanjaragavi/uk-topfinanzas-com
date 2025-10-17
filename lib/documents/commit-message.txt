@@ -1,75 +1,37 @@
-fix: Resolve AdZep ad unit rendering issues with proper container detection and timing
+fix: Prevent AdZep overlay persistence on credit card product pages
 
-## Critical Bug Fix
-Ad units with IDs `uk_topfinanzas_3`, `uk_topfinanzas_4`, etc. were not rendering properly. Console showed warnings that AdZep was not ready, and ads failed to display despite containers being present in the DOM.
+- Add 3-second maximum timeout for overlay display in adzep-spa-bridge.tsx
+- Implement proper cleanup of overlay timeout when hiding manually
+- Add smooth fade-in/fade-out transitions to overlay.ts
+- Make overlay more subtle (smaller dot, lighter color, slower animation)
+- Add development logging to track overlay hide events
 
-## Root Cause
-1. **Missing Container Selectors**: The AdZep configuration didn't include the actual container ID pattern `[id^='uk_topfinanzas_']` used in production
-2. **Insufficient Timeouts**: Initial timeouts (10s, 5s, 4s) were too short for AdZep script to fully load and initialize
-3. **Timing Issues**: Activation attempted before `window.AdZepActivateAds()` function was available
+This fix addresses the issue where an empty overlay was appearing and persisting on credit card product articles (e.g., /financial-solutions/santander-uk-credit-card) shortly after page load.
 
-## Solution
-Implemented three-part fix to ensure reliable ad rendering:
+**Root Cause:**
+The overlay system had no maximum timeout and relied entirely on ad creative detection or verification retries (up to 6 seconds). If hasRenderedCreative() failed to detect ads properly, the overlay could persist indefinitely, creating a poor user experience.
 
-### 1. Added Primary Container Selector (`/lib/ads/config.ts`)
-- Added `[id^='uk_topfinanzas_']` as first selector in containerSelectors array
-- Now properly detects uk_topfinanzas_1, uk_topfinanzas_2, uk_topfinanzas_3, uk_topfinanzas_4, etc.
-- Maintains backward compatibility with generic selectors
+**Solution:**
+1. Added overlayTimeout ref to track 3-second maximum display time
+2. Overlay now hides automatically after 3 seconds regardless of ad rendering status
+3. Proper timeout cleanup when manually hiding overlay
+4. Smooth fade transitions (opacity 0→1 on show, 1→0 on hide with 200ms delay)
+5. More subtle visual design (8px dot, lighter gray, 1.5s animation, lower opacity)
 
-### 2. Increased Timeouts and Retries (`/lib/ads/config.ts`)
-- initialContainerWaitMs: 10000ms → 15000ms (+50%)
-- navigationContainerWaitMs: 4000ms → 6000ms (+50%)
-- defaultActivationTimeoutMs: 5000ms → 8000ms (+60%)
-- defaultRetryAttempts: 2 → 3 (+1 attempt)
-- defaultRetryDelayMs: 600ms → 800ms (+200ms)
-- verifyRetries: 3 → 4 (+1 verification)
-- verifyDelayMs: 1200ms → 1500ms (+300ms)
+**Overlay Lifecycle (After Fix):**
+- Show → Fade in → Start 3s timeout → Wait for ad detection
+- Whichever comes first triggers hide:
+  * Ad detected → Clear timeout, hide immediately
+  * 4 retries done → Clear timeout, hide
+  * 3s timeout → Hide regardless
+- Result: Always hides within 3 seconds maximum with smooth fade-out
 
-Rationale: External script loading varies by network/device conditions
+**Benefits:**
+- Guaranteed cleanup within 3 seconds
+- No persistent loading indicators
+- Smoother, less intrusive UX
+- Proper timeout management
+- Better debugging with console logs
+- Ads continue to load normally
 
-### 3. Enhanced Initial Load Handling (`/components/analytics/adzep-spa-bridge.tsx`)
-- Increased first-load activation timeout to 12000ms (from 8000ms)
-- Added development mode logging for debugging:
-  - Container detection status
-  - Activation timeout values
-  - Success/failure indicators
-
-### 4. Improved Debug Logging (`/lib/ads/activate-adzep.ts`)
-- Added "[AdZep] Calling window.AdZepActivateAds()" log
-- Added "[AdZep] Activation successful" confirmation
-- Added warning when function not found
-- All logging is development-only (no production impact)
-
-## Technical Impact
-- **Detection**: AdZep containers now properly detected via ID pattern
-- **Success Rate**: Improved from ~70% to ~95%+ ad render success
-- **Timing**: More generous timeouts accommodate real-world conditions
-- **Debugging**: Enhanced logging helps diagnose remaining issues
-- **Performance**: +0.5s max initial load (acceptable trade-off for reliability)
-
-## Testing Completed
-- ✅ Ad containers detected on financial-solutions pages
-- ✅ Ads render in uk_topfinanzas_3 and uk_topfinanzas_4 containers
-- ✅ Navigation between articles maintains ad rendering
-- ✅ Mobile interstitials display correctly
-- ✅ No impact on quiz page exclusion (previous fix maintained)
-- ✅ Console logs confirm proper activation sequence
-
-## Files Modified
-- `/lib/ads/config.ts` - Updated selectors and timing configuration
-- `/components/analytics/adzep-spa-bridge.tsx` - Enhanced initial load timeout and logging
-- `/lib/ads/activate-adzep.ts` - Added comprehensive debug logging
-- `/ADZEP_RENDERING_FIX.md` - Complete technical documentation
-
-## Expected Console Output (Dev Mode)
-```
-[AdZep SPA Bridge] Attempting activation {containersPresent: true, activationTimeout: 12000, firstLoad: true}
-[AdZep] Calling window.AdZepActivateAds()
-[AdZep] Activation successful
-```
-
-## Related
-- Maintains quiz page exclusion from previous fix (QUIZ_AD_OVERLAY_FIX.md)
-- Backward compatible with existing AdZep implementation
-- No breaking changes to ad infrastructure
-- Production builds exclude all debug logging
+Documentation: See ADZEP_OVERLAY_PERSISTENCE_FIX.md for complete technical details and testing checklist.

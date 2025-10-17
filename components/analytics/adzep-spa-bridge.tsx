@@ -26,6 +26,7 @@ export default function AdZepSPABridge() {
   const firstLoadRef = useRef(true);
   const pendingRetryTimeout = useRef<number | null>(null);
   const debounceGuard = useRef<number>(0);
+  const overlayTimeout = useRef<number | null>(null);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -35,6 +36,10 @@ export default function AdZepSPABridge() {
       if (pendingRetryTimeout.current) {
         window.clearTimeout(pendingRetryTimeout.current);
         pendingRetryTimeout.current = null;
+      }
+      if (overlayTimeout.current) {
+        window.clearTimeout(overlayTimeout.current);
+        overlayTimeout.current = null;
       }
     };
 
@@ -69,6 +74,15 @@ export default function AdZepSPABridge() {
       // On SPA navs, proactively show overlay for article-like destinations
       if (isArticlePath(pathname || "")) {
         showOverlay();
+        
+        // CRITICAL: Set maximum overlay timeout to prevent it from staying visible
+        // Hide overlay after 3 seconds regardless of ad rendering status
+        overlayTimeout.current = window.setTimeout(() => {
+          hideOverlay();
+          if (process.env.NODE_ENV === "development") {
+            console.log("[AdZep SPA Bridge] Overlay hidden by timeout (3s)");
+          }
+        }, 3000);
       }
 
       // If no known ad containers appear within wait window, drop quickly
@@ -96,11 +110,27 @@ export default function AdZepSPABridge() {
         let tries = 0;
         const verify = () => {
           if (anyContainerHasCreative()) {
+            // Clear the overlay timeout since we're hiding manually
+            if (overlayTimeout.current) {
+              window.clearTimeout(overlayTimeout.current);
+              overlayTimeout.current = null;
+            }
             hideOverlay();
+            if (process.env.NODE_ENV === "development") {
+              console.log("[AdZep SPA Bridge] Overlay hidden - creatives detected");
+            }
             return;
           }
           if (tries >= adZepConfig.verifyRetries) {
+            // Clear the overlay timeout since we're hiding manually
+            if (overlayTimeout.current) {
+              window.clearTimeout(overlayTimeout.current);
+              overlayTimeout.current = null;
+            }
             hideOverlay();
+            if (process.env.NODE_ENV === "development") {
+              console.log("[AdZep SPA Bridge] Overlay hidden - max retries reached");
+            }
             return;
           }
           tries += 1;
