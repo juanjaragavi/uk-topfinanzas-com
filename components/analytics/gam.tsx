@@ -24,7 +24,7 @@ interface GoogletagNamespace {
   defineSlot: (
     adUnitPath: string,
     size: GoogletagSize,
-    elementId: string
+    elementId: string,
   ) => GoogletagSlot;
   display: (id: string) => void;
 }
@@ -45,7 +45,7 @@ export default function GoogleAdManager() {
       const googletag = window.googletag as unknown as GoogletagNamespace;
 
       console.debug(
-        `GAM: Initializing Google Ad Manager with network code ${GAM_NETWORK_CODE}`
+        `GAM: Initializing Google Ad Manager with network code ${GAM_NETWORK_CODE}`,
       );
 
       // Wait for GPT script to load, then initialize

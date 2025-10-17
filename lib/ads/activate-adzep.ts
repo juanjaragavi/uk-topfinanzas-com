@@ -152,7 +152,9 @@ export async function activateAdZep(options?: ActivateOptions): Promise<{
     const found = await waitForAdZepFunction(options);
     if (!found) {
       if (process.env.NODE_ENV === "development") {
-        console.warn("[AdZep] window.AdZepActivateAds function not found after waiting");
+        console.warn(
+          "[AdZep] window.AdZepActivateAds function not found after waiting",
+        );
       }
       return {
         success: false,

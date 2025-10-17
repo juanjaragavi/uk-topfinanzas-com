@@ -16,7 +16,7 @@ export function buildUrlWithUtmParams(baseUrl: string): string {
   }
 
   const utmParams: Record<string, string> = {};
-  
+
   // Collect UTM parameters from sessionStorage
   UTM_PARAM_KEYS.forEach((param) => {
     const value = sessionStorage.getItem(param);
@@ -32,10 +32,10 @@ export function buildUrlWithUtmParams(baseUrl: string): string {
 
   // Build query string
   const queryString = new URLSearchParams(utmParams).toString();
-  
+
   // Check if the base URL already has query parameters
   const separator = baseUrl.includes("?") ? "&" : "?";
-  
+
   return `${baseUrl}${separator}${queryString}`;
 }
 
@@ -46,7 +46,7 @@ export function buildUrlWithUtmParams(baseUrl: string): string {
  */
 export function redirectWithUtmParams(url: string): void {
   const fullUrl = buildUrlWithUtmParams(url);
-  
+
   if (typeof window !== "undefined") {
     window.location.href = fullUrl;
   }

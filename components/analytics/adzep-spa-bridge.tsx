@@ -74,7 +74,7 @@ export default function AdZepSPABridge() {
       // On SPA navs, proactively show overlay for article-like destinations
       if (isArticlePath(pathname || "")) {
         showOverlay();
-        
+
         // CRITICAL: Set maximum overlay timeout to prevent it from staying visible
         // Hide overlay after 3 seconds regardless of ad rendering status
         overlayTimeout.current = window.setTimeout(() => {
@@ -117,7 +117,9 @@ export default function AdZepSPABridge() {
             }
             hideOverlay();
             if (process.env.NODE_ENV === "development") {
-              console.log("[AdZep SPA Bridge] Overlay hidden - creatives detected");
+              console.log(
+                "[AdZep SPA Bridge] Overlay hidden - creatives detected",
+              );
             }
             return;
           }
@@ -129,7 +131,9 @@ export default function AdZepSPABridge() {
             }
             hideOverlay();
             if (process.env.NODE_ENV === "development") {
-              console.log("[AdZep SPA Bridge] Overlay hidden - max retries reached");
+              console.log(
+                "[AdZep SPA Bridge] Overlay hidden - max retries reached",
+              );
             }
             return;
           }

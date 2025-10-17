@@ -1,37 +1,38 @@
-fix: Prevent AdZep overlay persistence on credit card product pages
+fix: Prevent empty overlays on blog listing and category pages
 
-- Add 3-second maximum timeout for overlay display in adzep-spa-bridge.tsx
-- Implement proper cleanup of overlay timeout when hiding manually
-- Add smooth fade-in/fade-out transitions to overlay.ts
-- Make overlay more subtle (smaller dot, lighter color, slower animation)
-- Add development logging to track overlay hide events
+- Refine isArticlePath() logic to exclude listing/archive pages
+- Add two-step validation: prefix match + listing page check
+- Prevent overlay from showing on /blog, /personal-finance, /financial-solutions, /credit-cards
+- Maintain overlay functionality on individual article pages with ad containers
 
-This fix addresses the issue where an empty overlay was appearing and persisting on credit card product articles (e.g., /financial-solutions/santander-uk-credit-card) shortly after page load.
+This fix addresses the issue where empty overlays were appearing on blog listing pages (like /blog, /personal-finance) for 3 seconds after page load, even though these pages don't have any ad containers.
 
 **Root Cause:**
-The overlay system had no maximum timeout and relied entirely on ad creative detection or verification retries (up to 6 seconds). If hasRenderedCreative() failed to detect ads properly, the overlay could persist indefinitely, creating a poor user experience.
+The isArticlePath() function treated both listing pages and individual article pages the same. It returned true for both /blog (no ads) and /blog/best-personal-loans (has ads), causing the overlay to show on ALL paths matching article prefixes. Listing pages don't have ad containers (uk_topfinanzas_3, uk_topfinanzas_4), so the overlay would persist for the full 3-second timeout.
 
 **Solution:**
-1. Added overlayTimeout ref to track 3-second maximum display time
-2. Overlay now hides automatically after 3 seconds regardless of ad rendering status
-3. Proper timeout cleanup when manually hiding overlay
-4. Smooth fade transitions (opacity 0→1 on show, 1→0 on hide with 200ms delay)
-5. More subtle visual design (8px dot, lighter gray, 1.5s animation, lower opacity)
+Enhanced isArticlePath() with two-step validation:
+1. Check if path matches article prefixes (/blog, /personal-finance, etc.)
+2. Check if it's an exact match (listing page) or sub-path (article)
+3. Return false for exact matches (listings), true for sub-paths (articles)
 
-**Overlay Lifecycle (After Fix):**
-- Show → Fade in → Start 3s timeout → Wait for ad detection
-- Whichever comes first triggers hide:
-  * Ad detected → Clear timeout, hide immediately
-  * 4 retries done → Clear timeout, hide
-  * 3s timeout → Hide regardless
-- Result: Always hides within 3 seconds maximum with smooth fade-out
+**Results:**
+- /blog → isArticlePath() = false → No overlay shown
+- /blog/best-personal-loans → isArticlePath() = true → Overlay shows briefly during ad init
+- /personal-finance → isArticlePath() = false → No overlay shown
+- /personal-finance/cashback-credit-cards → isArticlePath() = true → Overlay shows until ads load
 
 **Benefits:**
-- Guaranteed cleanup within 3 seconds
-- No persistent loading indicators
-- Smoother, less intrusive UX
-- Proper timeout management
-- Better debugging with console logs
-- Ads continue to load normally
+- Listing pages load instantly without any overlay
+- No wasted AdZep activation attempts on pages without ads
+- Individual articles still show brief overlay during legitimate ad initialization
+- Better user experience - no confusing 3-second empty overlays
+- Reduced CPU usage on listing pages
+- Only Offerwall and Interstitials remain as full-screen elements (no empty overlays)
 
-Documentation: See ADZEP_OVERLAY_PERSISTENCE_FIX.md for complete technical details and testing checklist.
+**Performance Impact:**
+- Before: Listing pages showed overlay for 3 seconds, wasted ad activation attempts
+- After: Listing pages load instantly, zero ad-related overhead
+- Article pages: Unchanged behavior (brief overlay during ad init)
+
+Documentation: See ADZEP_BLOG_OVERLAY_FIX.md for complete technical details and testing checklist.

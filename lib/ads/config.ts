@@ -46,10 +46,7 @@ export const adZepConfig: AdZepConfig = {
     "/credit-cards",
   ],
   // Pages where ads should NEVER be activated
-  excludedPaths: [
-    "/quiz",
-    "/quiz-2",
-  ],
+  excludedPaths: ["/quiz", "/quiz-2"],
   // Increased timeout for initial load to ensure AdZep script is ready
   initialContainerWaitMs: 15000, // Increased from 10000
   navigationContainerWaitMs: 6000, // Increased from 4000
@@ -63,9 +60,23 @@ export const adZepConfig: AdZepConfig = {
 
 export function isArticlePath(pathname: string | null | undefined): boolean {
   if (!pathname) return false;
-  return adZepConfig.articlePathPrefixes.some(
+
+  // Check if path matches article prefixes
+  const matchesPrefix = adZepConfig.articlePathPrefixes.some(
     (p) => pathname === p || pathname.startsWith(p + "/"),
   );
+
+  if (!matchesPrefix) return false;
+
+  // Exclude listing/archive pages (exact matches of prefixes)
+  // These are category pages without ad containers
+  const isListingPage = adZepConfig.articlePathPrefixes.some(
+    (p) => pathname === p,
+  );
+
+  // Only consider it an article path if it's NOT a listing page
+  // i.e., it's a sub-path like /blog/article-slug or /personal-finance/article-slug
+  return !isListingPage;
 }
 
 export function isExcludedPath(pathname: string | null | undefined): boolean {
