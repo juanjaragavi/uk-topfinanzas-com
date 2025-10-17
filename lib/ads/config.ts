@@ -6,6 +6,8 @@ export interface AdZepConfig {
   containerSelectors: string[];
   // Path prefixes that usually represent article/content pages with ads
   articlePathPrefixes: string[];
+  // Path prefixes where ads should NEVER be shown (quiz pages, registration flows, etc.)
+  excludedPaths: string[];
   // Maximum time to wait for containers on initial load (ms)
   initialContainerWaitMs: number;
   // Maximum time to wait for containers on SPA navigations (ms)
@@ -40,6 +42,11 @@ export const adZepConfig: AdZepConfig = {
     "/personal-finance",
     "/credit-cards",
   ],
+  // Pages where ads should NEVER be activated
+  excludedPaths: [
+    "/quiz",
+    "/quiz-2",
+  ],
   initialContainerWaitMs: 10000,
   navigationContainerWaitMs: 4000,
   defaultActivationTimeoutMs: 5000,
@@ -53,6 +60,13 @@ export const adZepConfig: AdZepConfig = {
 export function isArticlePath(pathname: string | null | undefined): boolean {
   if (!pathname) return false;
   return adZepConfig.articlePathPrefixes.some(
+    (p) => pathname === p || pathname.startsWith(p + "/"),
+  );
+}
+
+export function isExcludedPath(pathname: string | null | undefined): boolean {
+  if (!pathname) return false;
+  return adZepConfig.excludedPaths.some(
     (p) => pathname === p || pathname.startsWith(p + "/"),
   );
 }

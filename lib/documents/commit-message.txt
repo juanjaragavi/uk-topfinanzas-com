@@ -1,28 +1,44 @@
-feat: Update Quiz CTA to redirect to external link with UTM preservation
+fix: Prevent ad overlay on Quiz pages blocking form submission
 
-## Changes
-- Created new URL builder utility (`/lib/utils/url-builder.ts`) for handling external redirects with UTM parameters
-- Updated both quiz form components to redirect to https://linkly.link/2ERav instead of internal `/credit-card-recommender-p1` route
-- UTM parameters (source, medium, campaign, term, content) are now automatically preserved and appended to the external redirect URL
+## Critical Bug Fix
+Users reported an overlay appearing after completing the Quiz form (entering name), which prevented clicking the CTA button and completing submission. Investigation revealed AdZep activation was attempting to render ads on Quiz pages despite ads being explicitly disabled.
 
-## Technical Details
-- New `buildUrlWithUtmParams()` function reads UTM params from sessionStorage and appends to any URL
-- New `redirectWithUtmParams()` function handles external redirects with UTM preservation
-- Uses `window.location.href` for proper external navigation instead of Next.js router
-- Backward compatible: works with or without UTM parameters
+## Root Cause
+The AdZep SPA Bridge was activating ads on ALL pages, including `/quiz` and `/quiz-2`. While `<AdController disableAds={true} />` hides ad containers with CSS, it doesn't prevent the AdZep activation process, which shows an overlay while waiting for ad units to load.
+
+## Solution
+Implemented path exclusion system to completely skip ad activation on specific pages:
+
+### Changes to `/lib/ads/config.ts`
+- Added `excludedPaths` property to `AdZepConfig` interface
+- Added `/quiz` and `/quiz-2` to exclusion list
+- Created `isExcludedPath()` helper function to check if current path should never show ads
+
+### Changes to `/components/analytics/adzep-spa-bridge.tsx`
+- Import `isExcludedPath` from config
+- Added early exit in `handleRouteComplete()` for excluded paths
+- Added exclusion check in `handleRouteStart()` to prevent overlay
+- Explicitly hide overlay when on excluded paths
+
+## Technical Impact
+- Quiz pages: NO ad activation, NO overlay, NO ad units
+- Other pages: Ad activation continues normally (blog, financial solutions, etc.)
+- Performance: Reduced unnecessary activation attempts on quiz pages
+- UX: Quiz forms now fully functional without ad interference
+
+## Testing Completed
+- ✅ Quiz form completion works without overlay
+- ✅ CTA button remains clickable throughout form
+- ✅ Form submission and redirect to external link works
+- ✅ Ads still activate correctly on blog/article pages
 
 ## Files Modified
-- `/components/credit-card-form.tsx` - Updated 2 redirect locations
-- `/components/credit-card-form-to-product.tsx` - Updated 2 redirect locations  
-- `/lib/utils/url-builder.ts` - New utility file created
-
-## Testing Required
-- Verify external redirect works from both /quiz and /quiz-2 pages
-- Confirm UTM parameters are preserved in destination URL
-- Check that analytics/conversion events still fire correctly
-- Test with and without UTM parameters present
+- `/lib/ads/config.ts` - Added excluded paths configuration
+- `/components/analytics/adzep-spa-bridge.tsx` - Added exclusion logic
+- `/QUIZ_AD_OVERLAY_FIX.md` - Comprehensive documentation
 
 ## Related
-- External link router managed by Linkly: https://linkly.link/2ERav
-- Maintains all existing analytics, conversion tracking, and cookie persistence
-- No impact on Google Sheets or Kit.com integration
+- Original implementation: Quiz CTA external redirect with UTM preservation
+- Issue: Overlay blocking form submission reported by users
+- AdController component still functional for CSS-based ad hiding
+- No impact on analytics tracking, conversion events, or form data collection

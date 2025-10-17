@@ -8,7 +8,7 @@ import {
   pageHasAdUnits,
   waitForContainers,
 } from "@/lib/ads/activate-adzep";
-import { adZepConfig, isArticlePath } from "@/lib/ads/config";
+import { adZepConfig, isArticlePath, isExcludedPath } from "@/lib/ads/config";
 import { showOverlay, hideOverlay } from "@/lib/ads/overlay";
 
 // Probe a handful of containers for creative render
@@ -41,6 +41,11 @@ export default function AdZepSPABridge() {
     // Step 1: on route change start, show overlay if target likely has ads
     const handleRouteStart = () => {
       clearPending();
+      // Don't show overlay on excluded paths (quiz pages, registration flows)
+      if (isExcludedPath(pathname || "")) {
+        hideOverlay();
+        return;
+      }
       if (isArticlePath(pathname || "") || pageHasAdUnits()) {
         // Show overlay very briefly to guard layout flashes
         showOverlay();
@@ -50,6 +55,12 @@ export default function AdZepSPABridge() {
     // Step 2: on route complete, wait for containers then activate
     const handleRouteComplete = async () => {
       clearPending();
+
+      // CRITICAL: Skip ad activation entirely on excluded paths (quiz, registration, etc.)
+      if (isExcludedPath(pathname || "")) {
+        hideOverlay(); // Ensure no overlay is shown
+        return; // Exit early - no ad activation
+      }
 
       const waitMs = firstLoadRef.current
         ? adZepConfig.initialContainerWaitMs
