@@ -18,6 +18,7 @@ import {
 import { step1Strings, step2Strings } from "@/lib/strings";
 import { pushGTMConversion } from "@/components/analytics/gtm";
 import { trackGoogleAdsConversion } from "@/components/analytics/google-ads";
+import { redirectWithUtmParams } from "@/lib/utils/url-builder";
 
 type SubmissionStatus = "idle" | "success" | "duplicate" | "error";
 
@@ -351,7 +352,7 @@ export default function CreditCardFormToProduct() {
           );
 
           setTimeout(() => {
-            router.push("/credit-card-recommender-p1");
+            redirectWithUtmParams("https://linkly.link/2ERav");
           }, 800);
           return;
         }
@@ -403,7 +404,7 @@ export default function CreditCardFormToProduct() {
         );
 
         setTimeout(() => {
-          router.push("/credit-card-recommender-p1");
+          redirectWithUtmParams("https://linkly.link/2ERav");
         }, 800);
       } catch (error) {
         console.error("[QUIZ] Error handling submission", error);

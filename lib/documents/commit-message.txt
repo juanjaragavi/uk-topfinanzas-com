@@ -1,6 +1,28 @@
-chore: clear commit message file for next workflow cycle
+feat: Update Quiz CTA to redirect to external link with UTM preservation
 
-Routine maintenance - cleared commit-message.txt file contents to prepare for the next development cycle.
+## Changes
+- Created new URL builder utility (`/lib/utils/url-builder.ts`) for handling external redirects with UTM parameters
+- Updated both quiz form components to redirect to https://linkly.link/2ERav instead of internal `/credit-card-recommender-p1` route
+- UTM parameters (source, medium, campaign, term, content) are now automatically preserved and appended to the external redirect URL
 
-Files modified:
-- lib/documents/commit-message.txt
+## Technical Details
+- New `buildUrlWithUtmParams()` function reads UTM params from sessionStorage and appends to any URL
+- New `redirectWithUtmParams()` function handles external redirects with UTM preservation
+- Uses `window.location.href` for proper external navigation instead of Next.js router
+- Backward compatible: works with or without UTM parameters
+
+## Files Modified
+- `/components/credit-card-form.tsx` - Updated 2 redirect locations
+- `/components/credit-card-form-to-product.tsx` - Updated 2 redirect locations  
+- `/lib/utils/url-builder.ts` - New utility file created
+
+## Testing Required
+- Verify external redirect works from both /quiz and /quiz-2 pages
+- Confirm UTM parameters are preserved in destination URL
+- Check that analytics/conversion events still fire correctly
+- Test with and without UTM parameters present
+
+## Related
+- External link router managed by Linkly: https://linkly.link/2ERav
+- Maintains all existing analytics, conversion tracking, and cookie persistence
+- No impact on Google Sheets or Kit.com integration
