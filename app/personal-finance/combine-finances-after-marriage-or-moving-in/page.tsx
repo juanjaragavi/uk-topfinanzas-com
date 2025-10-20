@@ -272,7 +272,7 @@ export default function CombineFinancesAfterMarriagePage() {
             <div className="mt-12 mb-6 text-center">
               <Link
                 href="/personal-finance"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full inline-block transition-colors text-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                className="cta-button-blue"
               >
                 Explore More Personal Finance Guides
               </Link>

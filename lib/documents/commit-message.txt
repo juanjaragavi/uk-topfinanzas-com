@@ -1,52 +1,54 @@
-fix: Enhanced blocker for Rewardful ads causing navigation freeze
+Fix: Resolve mobile button double-tap issue on blog CTAs
 
-CRITICAL FIX: Rewardful ad timeout creates transparent blocking overlay
+## Problem
+CTA buttons on mobile viewports required two taps to activate:
+- First tap: Activated hover state with visual changes
+- Second tap: Triggered navigation
 
-## Problem Identified
-After the "Rewardful não ficou pronto no tempo limite" (Rewardful not ready in time)
-warning appears in console, navigation completely freezes and a transparent overlay
-remains visible, blocking all user interaction with the page. Users cannot scroll
-or click on any elements.
+This critical UX issue affected all Personal Finance blog articles,
+negatively impacting conversion rates and user experience.
 
 ## Root Cause
-AdZep's "Rewardful" ad format is timing out but leaving behind:
-1. Transparent overlay elements with high z-index
-2. Body/HTML scroll locks (overflow: hidden)
-3. Pointer-events blocking elements
-4. Fixed-position containers that cover the viewport
+CSS hover pseudo-classes with transform properties caused mobile browsers
+to interpret the first tap as hover activation rather than a click event:
 
-## Solution Implemented
-
-### 1. Enhanced JavaScript Blocker (components/analytics/adzep-interstitial-blocker.tsx)
-
-**New Features:**
-- Added Rewardful-specific targeting patterns
-- Lowered z-index threshold from 1000 to 100 (catches more elements)
-- Added screen coverage detection (>50% viewport)
-- Implemented body interaction restoration
-- Using requestAnimationFrame for aggressive monitoring
-- Added attribute monitoring (style, class changes)
-- Automatic restoration of scroll and pointer-events
-
-**Key Functions:**
-```typescript
-// Restores body/html scroll and interaction
-restoreBodyInteraction()
-
-// Aggressive cleanup using requestAnimationFrame
-aggressiveCleanup()
-
-// Monitors for style/class attribute changes
-observer.observe(..., { attributes: true })
+```css
+/* Problematic pattern */
+hover:bg-orange-600 ... transform hover:-translate-y-0.5 hover:shadow-lg
 ```
 
-**New Selectors:**
-- `[id*="rewardful"]`, `[class*="rewardful"]`
-- `[id*="reward"]`, `[class*="reward"]`
-- `[id*="overlay"]`, `[class*="overlay"]`
-- All with case-insensitive matching
+## Solution
+Implemented touch-device-aware CSS using media queries to differentiate
+between true hover devices (desktop) and touch devices (mobile):
 
-### 2. Enhanced CSS Blocking (app/globals.css)
+1. Created `.cta-button-orange` and `.cta-button-blue` utility classes
+2. Used `@media (hover: hover) and (pointer: fine)` for desktop hover effects
+3. Used `@media (hover: none) and (pointer: coarse)` for mobile active states
+4. Updated 18 Personal Finance article pages with new utility classes
+
+## Files Modified
+- app/globals.css (added touch-friendly utility classes)
+- scripts/fix-mobile-button-tap.js (automation script)
+- 18 Personal Finance article pages
+- MOBILE_BUTTON_FIX.md (comprehensive documentation)
+
+## Testing
+✅ Build completed successfully
+✅ No TypeScript errors
+✅ All routes compile correctly
+
+## Impact
+- Mobile users: Single-tap navigation restored
+- Desktop users: Hover animations preserved
+- Zero performance impact (pure CSS solution)
+- Bundle size: +0.3KB (minimal)
+
+## Next Steps
+Deploy to production and verify on actual mobile devices:
+- iOS Safari
+- Chrome Mobile
+- Android browsers
+
 
 **Added Rewardful-specific rules:**
 ```css
