@@ -219,3 +219,33 @@ body {
   height: 0 !important;
   overflow: hidden !important;
 }
+
+/* Disable AdZep interstitial overlays and backgrounds on blog/article pages */
+/* Target interstitial containers and backgrounds */
+[id*="interstitial"],
+[class*="interstitial"],
+[id*="Interstitial"],
+[class*="Interstitial"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Disable any full-screen overlays or backdrops created by ad scripts */
+div[style*="position: fixed"][style*="z-index"],
+div[style*="position:fixed"][style*="z-index"] {
+  /* Only target elements that look like overlays */
+}
+
+/* Specific targeting for AdZep interstitial elements */
+[data-adzep-interstitial],
+[data-ad-type="interstitial"],
+.adzep-interstitial-overlay,
+.adzep-interstitial-background {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
