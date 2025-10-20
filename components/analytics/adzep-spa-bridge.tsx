@@ -9,7 +9,6 @@ import {
   waitForContainers,
 } from "@/lib/ads/activate-adzep";
 import { adZepConfig, isArticlePath, isExcludedPath } from "@/lib/ads/config";
-import { showOverlay, hideOverlay } from "@/lib/ads/overlay";
 
 // Probe a handful of containers for creative render
 function anyContainerHasCreative(): boolean {
@@ -46,9 +45,9 @@ export default function AdZepSPABridge() {
     // Step 1: on route change start, show overlay if target likely has ads
     const handleRouteStart = () => {
       clearPending();
+      // OVERLAY DISABLED: Overlay functionality removed to prevent unsolicited blur
       // Don't show overlay on excluded paths (quiz pages, registration flows)
       if (isExcludedPath(pathname || "")) {
-        hideOverlay();
         return;
       }
       // DISABLED: Overlay causes unsolicited blur blocking content
@@ -64,8 +63,7 @@ export default function AdZepSPABridge() {
 
       // CRITICAL: Skip ad activation entirely on excluded paths (quiz, registration, etc.)
       if (isExcludedPath(pathname || "")) {
-        hideOverlay(); // Ensure no overlay is shown
-        return; // Exit early - no ad activation
+        return; // Exit early - no ad activation, no overlay
       }
 
       const waitMs = firstLoadRef.current
