@@ -44,7 +44,7 @@ export default function SettingFinancialGoalsPage() {
                   width={800}
                   height={450}
                   className="w-full h-auto rounded-xl"
-                  priority={true}
+                  priority={false}
                   fetchPriority="high"
                   quality={85}
                   loading="eager"

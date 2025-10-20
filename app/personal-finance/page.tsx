@@ -266,7 +266,7 @@ export default function PersonalFinanceArchivePage() {
                     e.currentTarget.src =
                       "https://media.topfinanzas.com/images/placeholder-image.webp";
                   }} // Fallback image
-                  priority={true}
+                  priority={false}
                   fetchPriority="high"
                   quality={85}
                   loading="eager"

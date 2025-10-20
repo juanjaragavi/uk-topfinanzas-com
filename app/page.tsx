@@ -7,6 +7,7 @@ import { FeaturedPostCard } from "@/components/ui/featured-post-card";
 import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 // Dynamically import components that aren't needed for the initial render
 const DynamicPagination = dynamic(
@@ -218,25 +219,35 @@ export default function Home() {
     <main className="bg-white min-h-screen flex flex-col">
       <Header />
 
-      {/* Banner Section - Refactored to use CSS background images for better LCP */}
-      <section
-        className="relative py-16 md:py-24 lg:py-40 overflow-hidden bg-cover bg-center bg-no-repeat"
-        // Apply mobile background by default, override with media query for desktop
-        style={{
-          backgroundImage:
-            "url('https://media.topfinanzas.com/images/banner-home-mobile.webp')",
-        }}
-      >
-        {/* Inline style for desktop background using media query */}
-        <style jsx>{`
-          @media (min-width: 768px) {
-            section {
-              background-image: url("https://media.topfinanzas.com/images/banner-home.webp");
-            }
-          }
-        `}</style>
+      {/* Banner Section - Optimized with Next.js Image component for better LCP */}
+      <section className="relative py-16 md:py-24 lg:py-40 overflow-hidden">
+        {/* Desktop banner image */}
+        <Image
+          src="https://media.topfinanzas.com/images/banner-home.webp"
+          alt="Top Finance UK - Financial guidance banner"
+          fill
+          priority
+          quality={85}
+          sizes="100vw"
+          className="object-cover object-center hidden md:block"
+          style={{ objectFit: "cover" }}
+        />
+
+        {/* Mobile banner image */}
+        <Image
+          src="https://media.topfinanzas.com/images/banner-home-mobile.webp"
+          alt="Top Finance UK - Financial guidance banner"
+          fill
+          priority
+          quality={85}
+          sizes="100vw"
+          className="object-cover object-center md:hidden"
+          style={{ objectFit: "cover" }}
+        />
+
         {/* Background Overlay */}
         <div className="absolute inset-0 bg-black opacity-30 md:opacity-25 z-[1]"></div>
+
         {/* Content */}
         <div className="container mx-auto px-4 text-left relative z-[2]">
           <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 drop-shadow-lg leading-tight">
