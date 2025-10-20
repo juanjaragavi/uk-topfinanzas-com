@@ -5,11 +5,11 @@ import { usePathname } from "next/navigation";
 
 /**
  * AdZep Interstitial Blocker
- * 
+ *
  * This component actively monitors and removes ALL blocking overlays
  * created by AdZep, including interstitials, rewardful ads, and any
  * transparent overlays that freeze navigation.
- * 
+ *
  * It uses MutationObserver to detect when AdZep creates blocking
  * elements and immediately removes them.
  */
@@ -38,7 +38,7 @@ export default function AdZepInterstitialBlocker() {
         document.body.style.position = "";
         document.body.style.height = "";
         document.body.style.pointerEvents = "";
-        
+
         // Also check documentElement
         if (document.documentElement) {
           document.documentElement.style.overflow = "";
@@ -72,8 +72,8 @@ export default function AdZepInterstitialBlocker() {
         '[class*="Overlay"]',
         // Ad-specific patterns
         '[data-ad-type="interstitial"]',
-        '[data-adzep-interstitial]',
-        '[data-ad-overlay]',
+        "[data-adzep-interstitial]",
+        "[data-ad-overlay]",
         // Fixed position elements with high z-index
         'div[style*="position: fixed"][style*="z-index"]',
         'div[style*="position:fixed"][style*="z-index"]',
@@ -86,14 +86,14 @@ export default function AdZepInterstitialBlocker() {
           const elements = document.querySelectorAll(selector);
           elements.forEach((el) => {
             const htmlEl = el as HTMLElement;
-            
+
             // Check if this looks like a blocking overlay
             const style = window.getComputedStyle(htmlEl);
             const zIndex = parseInt(style.zIndex || "0", 10);
             const position = style.position;
             const width = htmlEl.offsetWidth;
             const height = htmlEl.offsetHeight;
-            
+
             // If it's a high z-index fixed/absolute element, it's likely blocking
             if (
               (position === "fixed" || position === "absolute") &&
@@ -103,13 +103,18 @@ export default function AdZepInterstitialBlocker() {
               !htmlEl.classList.contains("navigation-provider") // Don't remove navigation
             ) {
               // Additional check: if it's covering a large portion of the screen
-              if (width > window.innerWidth * 0.5 || height > window.innerHeight * 0.5) {
+              if (
+                width > window.innerWidth * 0.5 ||
+                height > window.innerHeight * 0.5
+              ) {
                 if (process.env.NODE_ENV === "development") {
                   console.log(
                     "[AdZep Blocker] Removing blocking element:",
                     htmlEl.id || htmlEl.className,
-                    "z-index:", zIndex,
-                    "position:", position
+                    "z-index:",
+                    zIndex,
+                    "position:",
+                    position,
                   );
                 }
                 htmlEl.remove();
@@ -137,7 +142,7 @@ export default function AdZepInterstitialBlocker() {
     const aggressiveCleanup = () => {
       removeBlockingElements();
       restoreBodyInteraction();
-      
+
       // Continue monitoring
       frameId = requestAnimationFrame(aggressiveCleanup);
     };
@@ -157,7 +162,7 @@ export default function AdZepInterstitialBlocker() {
         mutation.addedNodes.forEach((node) => {
           if (node.nodeType === Node.ELEMENT_NODE) {
             const el = node as HTMLElement;
-            
+
             // Check if the added element is potentially blocking
             if (
               el.id?.toLowerCase().includes("interstitial") ||

@@ -55,6 +55,7 @@ html[style*="overflow: hidden"] {
 ```
 
 **Why this alone isn't enough:**
+
 - AdZep may inject inline styles with `!important`
 - Elements created after CSS loads aren't affected
 - Some overlays use dynamic z-index values
@@ -66,6 +67,7 @@ html[style*="overflow: hidden"] {
 **Key Features:**
 
 1. **requestAnimationFrame Monitoring**
+
    ```typescript
    const aggressiveCleanup = () => {
      removeBlockingElements();
@@ -73,11 +75,13 @@ html[style*="overflow: hidden"] {
      frameId = requestAnimationFrame(aggressiveCleanup);
    };
    ```
+
    - Runs at ~60fps (every ~16ms)
    - Catches blocking elements immediately
    - Much faster than setInterval
 
 2. **Body Interaction Restoration**
+
    ```typescript
    const restoreBodyInteraction = () => {
      document.body.style.overflow = "";
@@ -87,6 +91,7 @@ html[style*="overflow: hidden"] {
      // ...
    };
    ```
+
    - Removes all scroll/interaction locks
    - Restores normal page behavior
    - Runs after every cleanup
@@ -106,6 +111,7 @@ html[style*="overflow: hidden"] {
      attributeFilter: ["style", "class"], // NEW
    });
    ```
+
    - Detects new elements being added
    - Detects style changes on existing elements
    - Detects class changes that might hide/show overlays
@@ -113,16 +119,19 @@ html[style*="overflow: hidden"] {
 #### Layer 3: Smart Targeting (Intelligent)
 
 **Path-Based Activation:**
+
 - Only runs on article pages where freezing occurs
 - Preserves ad functionality on homepage, quiz, etc.
 - No unnecessary processing on excluded pages
 
 **Element Filtering:**
+
 - Preserves actual ad containers (`uk_topfinanzas_*`)
 - Preserves legitimate UI elements
 - Only removes overlay-like blocking elements
 
 **Screen Coverage Detection:**
+
 ```typescript
 if (width > window.innerWidth * 0.5 || height > window.innerHeight * 0.5) {
   // This covers more than 50% of the screen - likely an overlay
@@ -158,10 +167,7 @@ if (
 }
 
 // Size detection
-if (
-  width > window.innerWidth * 0.5 ||
-  height > window.innerHeight * 0.5
-) {
+if (width > window.innerWidth * 0.5 || height > window.innerHeight * 0.5) {
   // Covers significant screen area
 }
 ```
@@ -178,18 +184,19 @@ if (
 
 ### Performance Characteristics
 
-| Metric | Value | Notes |
-|--------|-------|-------|
-| Response Time | <16ms | Via requestAnimationFrame |
-| CPU Usage | Minimal | Browser-optimized RAF |
-| Memory Impact | Low | No memory leaks |
-| DOM Queries | Targeted | Specific selectors only |
+| Metric        | Value    | Notes                     |
+| ------------- | -------- | ------------------------- |
+| Response Time | <16ms    | Via requestAnimationFrame |
+| CPU Usage     | Minimal  | Browser-optimized RAF     |
+| Memory Impact | Low      | No memory leaks           |
+| DOM Queries   | Targeted | Specific selectors only   |
 
 ## Files Modified
 
 ### 1. components/analytics/adzep-interstitial-blocker.tsx
 
 **Changes:**
+
 - +100 lines of enhanced detection logic
 - Changed from setInterval to requestAnimationFrame
 - Added restoreBodyInteraction() function
@@ -205,6 +212,7 @@ if (
 ### 2. app/globals.css
 
 **Changes:**
+
 - +40 lines of CSS rules
 - Added Rewardful blocking patterns
 - Added body/html scroll restoration
@@ -221,18 +229,19 @@ if (
 
 ### Test Scenarios
 
-| Scenario | Expected | Status |
-|----------|----------|--------|
-| Load article page | No freeze | ✅ To verify |
-| Rewardful timeout warning | Page still scrolls | ✅ To verify |
-| After timeout | Can click elements | ✅ To verify |
-| Transparent overlay | Removed immediately | ✅ To verify |
-| Regular ads | Still display | ✅ Preserved |
-| Body scroll | Never locks | ✅ To verify |
+| Scenario                  | Expected            | Status       |
+| ------------------------- | ------------------- | ------------ |
+| Load article page         | No freeze           | ✅ To verify |
+| Rewardful timeout warning | Page still scrolls  | ✅ To verify |
+| After timeout             | Can click elements  | ✅ To verify |
+| Transparent overlay       | Removed immediately | ✅ To verify |
+| Regular ads               | Still display       | ✅ Preserved |
+| Body scroll               | Never locks         | ✅ To verify |
 
 ## Expected User Experience
 
 ### Before Fix
+
 1. User navigates to article page
 2. Rewardful ad starts loading
 3. "Rewardful não ficou pronto" warning appears
@@ -242,6 +251,7 @@ if (
 7. ❌ Must refresh page
 
 ### After Fix
+
 1. User navigates to article page
 2. Rewardful ad starts loading
 3. "Rewardful não ficou pronto" warning appears
@@ -282,6 +292,7 @@ console.log(window.getComputedStyle(document.body).position);
 If issues occur:
 
 1. **Quick fix:** Disable blocker in `app/layout.tsx`
+
    ```typescript
    // Comment out this line:
    // <AdZepInterstitialBlocker />

@@ -201,6 +201,45 @@ body {
     background-position: center center;
     /* Keep centered for desktop */
   }
+
+  /* Touch-friendly CTA button styles */
+  /* Prevents double-tap issue on mobile by only applying hover effects on devices with true hover capability */
+  .cta-button-base {
+    @apply font-semibold py-3 px-6 rounded-full inline-block transition-colors text-lg shadow-md;
+  }
+
+  .cta-button-orange {
+    @apply cta-button-base bg-orange-500 text-white;
+  }
+
+  .cta-button-blue {
+    @apply cta-button-base bg-blue-600 text-white;
+  }
+
+  /* Only apply hover effects (including transforms) on devices with true hover capability */
+  /* This prevents the double-tap issue on mobile touch devices */
+  @media (hover: hover) and (pointer: fine) {
+    .cta-button-orange:hover {
+      @apply bg-orange-600 shadow-lg;
+      transform: translateY(-2px);
+    }
+
+    .cta-button-blue:hover {
+      @apply bg-blue-700 shadow-lg;
+      transform: translateY(-2px);
+    }
+  }
+
+  /* For touch devices, provide simple active state feedback without transforms */
+  @media (hover: none) and (pointer: coarse) {
+    .cta-button-orange:active {
+      @apply bg-orange-600;
+    }
+
+    .cta-button-blue:active {
+      @apply bg-blue-700;
+    }
+  }
 }
 
 /* Force hide any overlay elements that might be created by ad scripts */
@@ -286,5 +325,3 @@ html[style*="overflow: hidden"] {
   height: auto !important;
   pointer-events: auto !important;
 }
-
-
