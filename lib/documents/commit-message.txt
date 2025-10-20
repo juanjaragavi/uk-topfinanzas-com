@@ -1,46 +1,67 @@
-feat: Complete removal of overlay functionality from AdZep integration
+fix: Block AdZep interstitial overlays on blog/article pages
 
-BREAKING CHANGE: Overlay system completely removed
+CRITICAL FIX: AdZep's interstitial ads were covering blog content
 
-## Changes Made
+## Problem Identified
+Console analysis revealed that AdZep was creating interstitial ad units
+(uk_topfinanzas_com_mob_interstitial) that covered the entire page with
+a blur overlay, blocking users from accessing blog article content.
 
-### Overlay Utilities (lib/ads/overlay.ts)
-- Gutted all overlay creation and display logic
-- All functions (ensureOverlay, showOverlay, hideOverlay, destroyOverlay) are now no-ops
-- No DOM manipulation or overlay elements are created
+This was NOT our custom overlay - it was AdZep's own interstitial ad format
+being activated on pages where it shouldn't appear.
 
-### SPA Bridge (components/analytics/adzep-spa-bridge.tsx)
-- Removed overlayTimeout ref completely
-- Removed all overlay-related logic from route handlers
-- Removed showOverlay/hideOverlay function calls
-- Cleaned up comments and code to focus only on AdZep activation
-- Maintained full AdZep activation functionality
+## Solution Implemented
 
-### Global CSS (app/globals.css)
-- Added comprehensive CSS rules to force-hide any overlay elements
-- Targets all possible overlay ID and class patterns
-- Uses !important to ensure overlays cannot appear
+### 1. Enhanced CSS Blocking (app/globals.css)
+Added comprehensive CSS rules to hide:
+- All interstitial-related elements (by ID and class)
+- Fixed-position overlays created by ad scripts
+- AdZep-specific interstitial containers
 
-### Documentation (lib/documents/OVERLAY_COMPLETE_REMOVAL.md)
-- Created comprehensive documentation of changes
-- Included testing checklist
-- Documented what remains working
+### 2. Active Interstitial Blocker Component (NEW)
+Created AdZepInterstitialBlocker component that:
+- Monitors DOM for interstitial creation using MutationObserver
+- Immediately removes interstitial overlays on blog/article pages
+- Runs periodic cleanup to catch delayed injections
+- Only activates on article paths (/blog/, /personal-finance/, /financial-solutions/)
+- Preserves actual ad containers (uk_topfinanzas_1, uk_topfinanzas_2, etc.)
+
+### 3. Integration (app/layout.tsx)
+- Imported AdZepInterstitialBlocker
+- Added to Suspense block for client-side execution
+- Runs on all pages but only blocks on article paths
+
+## Files Modified
+- app/globals.css - Added interstitial blocking CSS rules
+- components/analytics/adzep-interstitial-blocker.tsx - NEW active blocker
+- app/layout.tsx - Integrated blocker component
+
+## Technical Details
+
+The blocker targets elements with:
+- IDs/classes containing "interstitial"
+- data-ad-type="interstitial" attributes
+- Fixed/absolute positioning with z-index > 1000
+- Full-screen coverage characteristics
+
+It uses:
+- MutationObserver for real-time detection
+- setInterval for periodic cleanup (1s intervals)
+- Conditional activation based on pathname
+- Development logging for debugging
+
+## Expected Results
+✅ Blog articles load without overlay
+✅ Content immediately accessible
+✅ Regular ad units (uk_topfinanzas_3, uk_topfinanzas_4) still display
+✅ AdZep activation continues normally
+✅ No interstitial blocking on non-article pages
 
 ## Impact
+🟢 NO BREAKING CHANGES to ad revenue on other pages
+🟢 Interstitials can still show on homepage, quiz, etc.
+🟢 Only blocks interstitials on blog/article content pages
 
-✅ AdZep activation continues to work normally
-✅ Ad units (uk_topfinanzas_3, uk_topfinanzas_4, etc.) still render
-✅ Navigation triggers ad activation properly
-✅ Path exclusions (quiz pages) still work
-✅ Development logging remains functional
+Resolves: AdZep interstitial overlay blocking blog content
 
-❌ Custom overlay no longer appears on any page
-❌ No blur effect blocking blog content
-❌ No visual interference with page content
-
-## Result
-
-Only AdZep's own ad units, activated by window.AdZepActivateAds(), can add visual elements to pages. No custom overlay system interferes with user experience on blog posts or any other pages.
-
-Resolves: Overlay appearing over blog posts and blocking content
 
