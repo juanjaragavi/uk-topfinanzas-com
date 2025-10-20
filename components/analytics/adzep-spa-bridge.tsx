@@ -25,7 +25,6 @@ export default function AdZepSPABridge() {
   const firstLoadRef = useRef(true);
   const pendingRetryTimeout = useRef<number | null>(null);
   const debounceGuard = useRef<number>(0);
-  const overlayTimeout = useRef<number | null>(null);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -36,25 +35,12 @@ export default function AdZepSPABridge() {
         window.clearTimeout(pendingRetryTimeout.current);
         pendingRetryTimeout.current = null;
       }
-      if (overlayTimeout.current) {
-        window.clearTimeout(overlayTimeout.current);
-        overlayTimeout.current = null;
-      }
     };
 
-    // Step 1: on route change start, show overlay if target likely has ads
+    // Step 1: on route change start - no overlay logic
     const handleRouteStart = () => {
       clearPending();
-      // OVERLAY DISABLED: Overlay functionality removed to prevent unsolicited blur
-      // Don't show overlay on excluded paths (quiz pages, registration flows)
-      if (isExcludedPath(pathname || "")) {
-        return;
-      }
-      // DISABLED: Overlay causes unsolicited blur blocking content
-      // Keeping AdZep activation but removing visual overlay
-      // if (isArticlePath(pathname || "") || pageHasAdUnits()) {
-      //   showOverlay();
-      // }
+      // Just clear pending operations, no overlay
     };
 
     // Step 2: on route complete, wait for containers then activate
@@ -63,31 +49,19 @@ export default function AdZepSPABridge() {
 
       // CRITICAL: Skip ad activation entirely on excluded paths (quiz, registration, etc.)
       if (isExcludedPath(pathname || "")) {
-        return; // Exit early - no ad activation, no overlay
+        return; // Exit early - no ad activation
       }
 
       const waitMs = firstLoadRef.current
         ? adZepConfig.initialContainerWaitMs
         : adZepConfig.navigationContainerWaitMs;
 
-      // DISABLED: Overlay causes unsolicited blur blocking content on blog/article pages
-      // Keeping AdZep activation logic but removing visual overlay
-      // if (isArticlePath(pathname || "")) {
-      //   showOverlay();
-      //   overlayTimeout.current = window.setTimeout(() => {
-      //     hideOverlay();
-      //     if (process.env.NODE_ENV === "development") {
-      //       console.log("[AdZep SPA Bridge] Overlay hidden by timeout (3s)");
-      //     }
-      //   }, 3000);
-      // }
-
-      // If no known ad containers appear within wait window, drop quickly
+      // No overlay logic - just wait for containers and activate
       const containersPresent = await waitForContainers(waitMs);
 
       // Decide activation parameters with longer timeout for initial load
       const activationTimeout = firstLoadRef.current
-        ? Math.max(adZepConfig.defaultActivationTimeoutMs, 12000) // Increased from 8000
+        ? Math.max(adZepConfig.defaultActivationTimeoutMs, 12000)
         : adZepConfig.defaultActivationTimeoutMs;
 
       // If there are containers or the path is article-like, attempt activation
@@ -107,20 +81,16 @@ export default function AdZepSPABridge() {
         let tries = 0;
         const verify = () => {
           if (anyContainerHasCreative()) {
-            // Overlay disabled - just log for debugging
+            // Just log for debugging - no overlay logic
             if (process.env.NODE_ENV === "development") {
-              console.log(
-                "[AdZep SPA Bridge] Creatives detected (overlay disabled)",
-              );
+              console.log("[AdZep SPA Bridge] Creatives detected");
             }
             return;
           }
           if (tries >= adZepConfig.verifyRetries) {
-            // Overlay disabled - just log for debugging
+            // Just log for debugging - no overlay logic
             if (process.env.NODE_ENV === "development") {
-              console.log(
-                "[AdZep SPA Bridge] Max retries reached (overlay disabled)",
-              );
+              console.log("[AdZep SPA Bridge] Max retries reached");
             }
             return;
           }
@@ -135,9 +105,6 @@ export default function AdZepSPABridge() {
         };
 
         verify();
-      } else {
-        // No containers, nothing to do
-        // Overlay disabled - no action needed
       }
 
       firstLoadRef.current = false;

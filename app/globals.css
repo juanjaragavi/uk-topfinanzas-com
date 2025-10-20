@@ -202,3 +202,20 @@ body {
     /* Keep centered for desktop */
   }
 }
+
+/* Force hide any overlay elements that might be created by ad scripts */
+#adzep-article-overlay,
+#adzep-article-overlay-disabled,
+[id*="adzep-overlay"],
+[class*="adzep-overlay"],
+[id*="ad-overlay"],
+[class*="ad-overlay"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
