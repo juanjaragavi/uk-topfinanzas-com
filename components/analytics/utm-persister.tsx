@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
 
 // Define the UTM parameters we want to track
@@ -11,6 +11,10 @@ const UTM_PARAM_KEYS = [
   "utm_term",
   "utm_content",
 ];
+
+// Global state to track user interactions and prevent interference
+let userIsInteracting = false;
+let interactionTimeout: NodeJS.Timeout | null = null;
 
 // Valid UTM sources for intelligent validation (from Astro.js proven implementation)
 const VALID_UTM_SOURCES = [
@@ -137,6 +141,43 @@ export default function UtmPersister() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const router = useRouter();
+  const urlReplacementTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Set up global interaction listeners to prevent URL modifications during clicks
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const handleInteractionStart = () => {
+      userIsInteracting = true;
+      if (interactionTimeout) {
+        clearTimeout(interactionTimeout);
+      }
+      // Keep the flag true for a short period after interaction
+      interactionTimeout = setTimeout(() => {
+        userIsInteracting = false;
+      }, 500);
+    };
+
+    // Listen for various interaction events
+    document.addEventListener("mousedown", handleInteractionStart, {
+      passive: true,
+    });
+    document.addEventListener("touchstart", handleInteractionStart, {
+      passive: true,
+    });
+    document.addEventListener("keydown", handleInteractionStart, {
+      passive: true,
+    });
+
+    return () => {
+      document.removeEventListener("mousedown", handleInteractionStart);
+      document.removeEventListener("touchstart", handleInteractionStart);
+      document.removeEventListener("keydown", handleInteractionStart);
+      if (interactionTimeout) {
+        clearTimeout(interactionTimeout);
+      }
+    };
+  }, []);
 
   // Store UTM parameters in sessionStorage when they appear in the URL
   useEffect(() => {
@@ -211,9 +252,39 @@ export default function UtmPersister() {
         currentParams.toString() ? `?${currentParams.toString()}` : ""
       }`;
 
-      // Use replace to avoid adding to browser history
-      router.replace(newUrl, { scroll: false });
+      // CRITICAL FIX: Defer URL replacement to avoid interfering with click handlers
+      // Clear any existing timeout
+      if (urlReplacementTimeoutRef.current) {
+        clearTimeout(urlReplacementTimeoutRef.current);
+      }
+
+      // Use requestIdleCallback or setTimeout to ensure clicks are processed first
+      urlReplacementTimeoutRef.current = setTimeout(() => {
+        // CRITICAL: Only replace URL if user is NOT currently interacting
+        if (!userIsInteracting && document.visibilityState === "visible") {
+          // Use replace to avoid adding to browser history
+          router.replace(newUrl, { scroll: false });
+        } else if (userIsInteracting) {
+          // If user is interacting, retry after the interaction completes
+          console.debug(
+            "UTM Persister: Deferring URL update due to user interaction",
+          );
+          urlReplacementTimeoutRef.current = setTimeout(() => {
+            if (!userIsInteracting && document.visibilityState === "visible") {
+              router.replace(newUrl, { scroll: false });
+            }
+          }, 600);
+        }
+      }, 150); // Increased delay to ensure click events complete
     }
+
+    // Cleanup timeout on unmount or when dependencies change
+    return () => {
+      if (urlReplacementTimeoutRef.current) {
+        clearTimeout(urlReplacementTimeoutRef.current);
+        urlReplacementTimeoutRef.current = null;
+      }
+    };
   }, [pathname, searchParams, router]);
 
   return null; // This component doesn't render anything

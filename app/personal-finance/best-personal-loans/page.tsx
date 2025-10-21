@@ -398,10 +398,7 @@ export default function BestPersonalLoansPage() {
 
               {/* CTA Button */}
               <div className="mt-12 mb-6 text-center">
-                <Link
-                  href="/financial-solutions"
-                  className="cta-button-orange"
-                >
+                <Link href="/financial-solutions" className="cta-button-orange">
                   Explore Top Personal Loan Options
                 </Link>
               </div>

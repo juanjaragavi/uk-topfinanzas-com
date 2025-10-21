@@ -778,10 +778,7 @@ export default function GettingOutOfDebtPage() {
 
               {/* CTA Button */}
               <div className="mt-12 mb-6 text-center">
-                <Link
-                  href="/financial-solutions"
-                  className="cta-button-orange"
-                >
+                <Link href="/financial-solutions" className="cta-button-orange">
                   Explore Debt Management Solutions
                 </Link>
               </div>
