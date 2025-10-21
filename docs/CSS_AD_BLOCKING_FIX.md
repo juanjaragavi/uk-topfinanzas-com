@@ -82,6 +82,7 @@ While we successfully disabled the `AdZepInterstitialBlocker` JavaScript compone
 
 ```markdown
 User Flow:
+
 1. User clicks AdWords campaign → lands on /quiz page with UTM parameters
 2. User fills form (Name: Juan, Email: juanamillo@gmail.com)
 3. User submits form
@@ -237,51 +238,49 @@ These rules **enable** interaction rather than block it, ensuring users can alwa
 
 1. **Specific Targeting**:
 
-    ```css
-    /* ✅ GOOD: Specific, known malicious elements */
-    .known-malicious-overlay-class,
-    #specific-malicious-id {
-    display: none;
-    }
+   ```css
+   /* ✅ GOOD: Specific, known malicious elements */
+   .known-malicious-overlay-class,
+   #specific-malicious-id {
+     display: none;
+   }
 
-    /* ❌ BAD: Broad patterns that match everything */
-    [id*="interstitial"],
-    [class*="overlay"] {
-    display: none !important;
-    }
-    ```
+   /* ❌ BAD: Broad patterns that match everything */
+   [id*="interstitial"],
+   [class*="overlay"] {
+     display: none !important;
+   }
+   ```
 
 2. **Whitelist Legitimate Networks**:
 
-    ```css
-    /* ✅ GOOD: Exclude legitimate ad networks */
-    [id*="overlay"]:not([data-adzep]):not([id^="uk_topfinanzas_"]) {
-    /* Only target if NOT from AdZep */
-    }
-    ```
+   ```css
+   /* ✅ GOOD: Exclude legitimate ad networks */
+   [id*="overlay"]:not([data-adzep]):not([id^="uk_topfinanzas_"]) {
+     /* Only target if NOT from AdZep */
+   }
+   ```
 
 3. **Never Use `!important` for Blocking**:
 
-    ```css
-    /* ❌ BAD: Impossible to override */
-    pointer-events: none !important;
+   ```css
+   /* ❌ BAD: Impossible to override */
+   pointer-events: none !important;
 
-    /* ✅ GOOD: Can be overridden if needed */
-    pointer-events: none;
-    ```
+   /* ✅ GOOD: Can be overridden if needed */
+   pointer-events: none;
+   ```
 
 4. **Test in Production Context**:
-
-    - Test with actual AdWords campaigns
-    - Test complete user journeys
-    - Verify ads remain interactive
-    - Monitor revenue metrics
+   - Test with actual AdWords campaigns
+   - Test complete user journeys
+   - Verify ads remain interactive
+   - Monitor revenue metrics
 
 5. **Coordinate with Ad Network**:
-
-    - Work with AdZep to understand ad unit structure
-    - Get official CSS class names for legitimate ads
-    - Implement whitelist-based approach
+   - Work with AdZep to understand ad unit structure
+   - Get official CSS class names for legitimate ads
+   - Implement whitelist-based approach
 
 ## ✨ Summary
 

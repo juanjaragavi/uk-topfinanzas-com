@@ -17,6 +17,7 @@ import AdZep from "@/components/analytics/adzep";
 import AdZepTest from "@/components/analytics/adzep-test";
 import AdZepSPABridge from "@/components/analytics/adzep-spa-bridge";
 import AdZepInterstitialBlocker from "@/components/analytics/adzep-interstitial-blocker";
+import AdZepAccessibilityFix from "@/components/analytics/adzep-accessibility-fix";
 import AnalyticsValidationPanel from "@/components/analytics/validation-panel";
 import ResourceHints from "@/components/resource-hints";
 import NavigationProvider from "@/components/providers/navigation-provider";
@@ -244,6 +245,7 @@ export default function RootLayout({
             <UtmLinkInjector />
             <AdZepSPABridge />
             <AdZepInterstitialBlocker />
+            <AdZepAccessibilityFix />
             {process.env.NODE_ENV === "development" && <UtmMonitor />}
             {process.env.NODE_ENV === "development" && <AdZepTest />}
             {process.env.NODE_ENV === "development" && (
