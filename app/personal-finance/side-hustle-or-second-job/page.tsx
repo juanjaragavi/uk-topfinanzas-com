@@ -251,10 +251,7 @@ export default function SideHustleOrSecondJobPage() {
 
               {/* CTA Button */}
               <div className="mt-12 mb-6 text-center">
-                <Link
-                  href="/personal-finance"
-                  className="cta-button-orange"
-                >
+                <Link href="/personal-finance" className="cta-button-orange">
                   Explore More Personal Finance Tips
                 </Link>
               </div>

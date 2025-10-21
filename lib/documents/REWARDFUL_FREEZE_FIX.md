@@ -103,6 +103,7 @@ html[style*="overflow: hidden"] {
    - **Added:** Generic overlay patterns
 
 4. **MutationObserver with Attributes**
+
    ```typescript
    observer.observe(document.documentElement, {
      childList: true,

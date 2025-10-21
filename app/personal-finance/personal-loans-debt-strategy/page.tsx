@@ -374,10 +374,7 @@ export default function PersonalLoansDebtStrategyPage() {
 
               {/* CTA Button */}
               <div className="mt-12 mb-6 text-center">
-                <Link
-                  href="/financial-solutions"
-                  className="cta-button-orange"
-                >
+                <Link href="/financial-solutions" className="cta-button-orange">
                   Find a Loan for Your Debt Strategy
                 </Link>
               </div>

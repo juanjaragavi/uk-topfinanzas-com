@@ -88,9 +88,18 @@ export default function AdZepSPABridge() {
             return;
           }
           if (tries >= adZepConfig.verifyRetries) {
-            // Just log for debugging - no overlay logic
+            // Only log error if we're on a page that should have ads
             if (process.env.NODE_ENV === "development") {
-              console.log("[AdZep SPA Bridge] Max retries reached");
+              const shouldHaveAds = isArticlePath(pathname || "");
+              if (shouldHaveAds) {
+                console.warn(
+                  "[AdZep SPA Bridge] Max retries reached on article page",
+                );
+              } else {
+                console.log(
+                  "[AdZep SPA Bridge] No ad units expected on this page",
+                );
+              }
             }
             return;
           }

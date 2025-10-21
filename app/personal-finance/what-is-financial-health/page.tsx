@@ -255,10 +255,7 @@ export default function WhatIsFinancialHealthPage() {
 
               {/* CTA Button */}
               <div className="mt-12 mb-6 text-center">
-                <Link
-                  href="/personal-finance"
-                  className="cta-button-blue"
-                >
+                <Link href="/personal-finance" className="cta-button-blue">
                   Explore More Personal Finance Guides
                 </Link>
               </div>

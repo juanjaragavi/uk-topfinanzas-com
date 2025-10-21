@@ -11,6 +11,7 @@ import GoogleTagManager, {
 import GoogleAds from "@/components/analytics/google-ads";
 import GoogleAdManager from "@/components/analytics/gam";
 import UtmPersister from "@/components/analytics/utm-persister";
+import UtmLinkInjector from "@/components/analytics/utm-link-injector";
 import UtmMonitor from "@/components/analytics/utm-monitor";
 import AdZep from "@/components/analytics/adzep";
 import AdZepTest from "@/components/analytics/adzep-test";
@@ -240,6 +241,7 @@ export default function RootLayout({
         <NavigationProvider>
           <Suspense fallback={null}>
             <UtmPersister />
+            <UtmLinkInjector />
             <AdZepSPABridge />
             <AdZepInterstitialBlocker />
             {process.env.NODE_ENV === "development" && <UtmMonitor />}
