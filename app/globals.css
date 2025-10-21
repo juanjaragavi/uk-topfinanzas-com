@@ -242,76 +242,42 @@ body {
   }
 }
 
-/* Force hide any overlay elements that might be created by ad scripts */
-#adzep-article-overlay,
-#adzep-article-overlay-disabled,
-[id*="adzep-overlay"],
-[class*="adzep-overlay"],
-[id*="ad-overlay"],
-[class*="ad-overlay"] {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-  position: absolute !important;
-  width: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
-}
-
-/* Disable AdZep interstitial overlays and backgrounds on blog/article pages */
-/* Target interstitial containers and backgrounds */
-[id*="interstitial"],
-[class*="interstitial"],
-[id*="Interstitial"],
-[class*="Interstitial"] {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-
-/* CRITICAL: Block Rewardful ad overlays that freeze navigation */
-/* These are the ones causing the "Rewardful não ficou pronto" issue */
-[id*="rewardful"],
-[class*="rewardful"],
-[id*="Rewardful"],
-[class*="Rewardful"],
-[id*="reward"],
-[class*="reward"],
-[data-ad-type="rewardful"],
-[data-rewardful] {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-  position: absolute !important;
-  width: 0 !important;
-  height: 0 !important;
-  z-index: -9999 !important;
-}
-
-/* Block any overlay patterns */
-[id*="overlay"],
-[class*="overlay"],
-[id*="Overlay"],
-[class*="Overlay"] {
-  /* Only block if they look like ad overlays, not legitimate UI overlays */
-}
-
-/* Specific targeting for AdZep blocking elements */
-[data-adzep-interstitial],
-[data-ad-type="interstitial"],
-[data-ad-overlay],
-.adzep-interstitial-overlay,
-.adzep-interstitial-background,
-.adzep-rewardful-overlay,
-.ad-overlay-background {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
+/* ⚠️ AdZep Overlay/Ad Blocking CSS Rules COMPLETELY REMOVED ⚠️
+ * 
+ * Previously, this CSS file contained multiple aggressive rules that blocked ALL AdZep elements:
+ * 
+ * REMOVED RULES:
+ * - #adzep-article-overlay, [id*="adzep-overlay"] - Blocked our own overlay utilities
+ * - [id*="interstitial"], [class*="interstitial"] - Blocked interstitial ads
+ * - [id*="rewardful"], [class*="rewardful"] - Blocked offerwall/rewardful ads  
+ * - [id*="overlay"], [class*="overlay"] - Blocked generic overlays
+ * - Various data attributes and specific classes
+ * 
+ * These rules used display:none !important and pointer-events:none !important,
+ * which completely prevented AdZep ads from displaying or being interactive.
+ * 
+ * CRITICAL PRODUCTION BUG CAUSED:
+ * 1. Interstitial ads would load but be completely non-clickable
+ * 2. Close buttons on ads were unresponsive (pointer-events: none)
+ * 3. Users couldn't dismiss ads, completely blocking their journey
+ * 4. Revenue generation was 100% blocked
+ * 5. Issue persisted even after JavaScript component fixes
+ * 
+ * ROOT CAUSE: CSS !important rules override all JavaScript
+ * Even though we disabled AdZepInterstitialBlocker component, these CSS rules
+ * were still active and blocking all ad interactions globally.
+ * 
+ * SOLUTION: ALL blocking CSS rules have been PERMANENTLY REMOVED
+ * AdZep's own ad units include proper close buttons and controls.
+ * They should be allowed to display and function normally.
+ * 
+ * If problematic overlays appear in the future, implement a targeted solution:
+ * 1. Use specific data attributes to identify malicious elements
+ * 2. Whitelist legitimate ad network domains (AdZep)
+ * 3. Don't use broad pattern matching like [id*="interstitial"]
+ * 4. Never use !important on blocking rules
+ * 5. Test thoroughly before deploying
+ */
 
 /* Prevent body from being locked by ad scripts */
 body.ad-loading,
