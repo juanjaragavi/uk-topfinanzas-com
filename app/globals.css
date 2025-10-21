@@ -291,3 +291,33 @@ html[style*="overflow: hidden"] {
   height: auto !important;
   pointer-events: auto !important;
 }
+
+/* Remove lingering backdrop/overlay elements after ads are dismissed
+ * These rules target ONLY orphaned backdrop elements that remain after ad closure
+ * They do NOT block the ad units themselves - only cleanup leftover backdrops
+ */
+
+/* Target AdZep backdrop elements that commonly remain after ad dismissal */
+body > div[style*="position: fixed"][style*="inset: 0"]:not([id*="uk_topfinanzas"]):empty,
+body > div[style*="position: fixed"][style*="z-index"][style*="background"]:not([id*="uk_topfinanzas"]):empty,
+body > div[class*="backdrop"]:empty,
+body > div[class*="overlay"]:empty:not([id*="uk_topfinanzas"]) {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+/* Remove backdrop-filter blur effects from body when no active ads */
+body:not(:has([id^="uk_topfinanzas_"][style*="display"][style*="block"])),
+body:not(:has([data-adzep-active])) {
+  backdrop-filter: none !important;
+  filter: none !important;
+}
+
+/* Ensure main content containers are not blurred when ads are dismissed */
+main,
+#__next,
+[id*="root"],
+.container {
+  backdrop-filter: none !important;
+  filter: none !important;
+}
