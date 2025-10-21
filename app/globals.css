@@ -298,8 +298,14 @@ html[style*="overflow: hidden"] {
  */
 
 /* Target AdZep backdrop elements that commonly remain after ad dismissal */
-body > div[style*="position: fixed"][style*="inset: 0"]:not([id*="uk_topfinanzas"]):empty,
-body > div[style*="position: fixed"][style*="z-index"][style*="background"]:not([id*="uk_topfinanzas"]):empty,
+body
+  > div[style*="position: fixed"][style*="inset: 0"]:not(
+    [id*="uk_topfinanzas"]
+  ):empty,
+body
+  > div[style*="position: fixed"][style*="z-index"][style*="background"]:not(
+    [id*="uk_topfinanzas"]
+  ):empty,
 body > div[class*="backdrop"]:empty,
 body > div[class*="overlay"]:empty:not([id*="uk_topfinanzas"]) {
   display: none !important;
