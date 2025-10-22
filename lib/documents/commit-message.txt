@@ -1,53 +1,25 @@
-Fix: Prevent AdZep from setting aria-hidden on body element
+Fix: Update lifestyle creep article image URL across all pages
 
-ACCESSIBILITY ISSUE DISCOVERED:
-Chrome DevTools Console showed the following error when interstitial ads displayed:
+ISSUE:
+The lifestyle creep article was using an incorrect image URL that didn't match 
+the standardized URL pattern used for other articles. This caused inconsistency 
+in image references across multiple pages.
 
-"Blocked aria-hidden on a <body> element because it would hide the entire 
-accessibility tree from assistive technology users. For more details, see 
-the aria-hidden section of the WAI-ARIA specification at 
-https://w3c.github.io/aria/#aria-hidden"
+FILES MODIFIED:
+1. app/blog/page.tsx - Updated image URL in allPosts array
+2. app/personal-finance/page.tsx - Updated image URL in posts list
+3. components/mdx/blog-layout.tsx - Updated image URL in recent articles sidebar
+4. lib/documents/lifestyle-creep-article-summary.md - Updated documentation
 
-ROOT CAUSE:
-AdZep's interstitial ad script attempts to set aria-hidden="true" on the <body> 
-element when displaying ads. This is blocked by browsers because it would:
-- Hide the entire page from screen readers
-- Make the site completely inaccessible to assistive technology users
-- Violate WCAG 2.1 accessibility guidelines
-- Trigger browser console warnings
+CHANGES:
+- Old URL: https://media.topfinanzas.com/images/uk/what-is-lifestyle-creep-silent-wallet-drain.webp
+- New URL: https://media.topfinanzas.com/images/lifestyle-creep-personal-finance.webp
 
-While the browser blocks the attribute, the warning still appears in console
-and indicates poor accessibility practices.
-
-SOLUTION IMPLEMENTED:
-Created AdZepAccessibilityFix component that:
-1. Monitors the <body> element using MutationObserver
-2. Immediately removes aria-hidden attribute if AdZep tries to set it
-3. Runs periodic checks (every 1s) as fallback
-4. Ensures page remains accessible to screen readers at all times
-5. Prevents console warnings from appearing
-
-TECHNICAL IMPLEMENTATION:
-
-New Component: /components/analytics/adzep-accessibility-fix.tsx
-- Uses MutationObserver to watch for aria-hidden attribute changes on body
-- Removes aria-hidden immediately when detected
-- Includes interval-based fallback for robustness
-- Clean component lifecycle with proper cleanup
-
-Integration: Added to app/layout.tsx
-- Loads with other analytics components
-- Runs on all pages automatically
-- No configuration needed
-
-WHY THIS MATTERS:
-1. Accessibility Compliance: Ensures WCAG 2.1 compliance
-2. Screen Reader Support: Maintains access for visually impaired users
-3. Clean Console: Eliminates browser warnings
-4. Best Practices: Follows WAI-ARIA specification properly
-5. Legal Compliance: Meets accessibility legal requirements (ADA, Section 508)
-
-WHAT THIS FIXES:
+IMPACT:
+- Ensures consistent image URL pattern across the site
+- Maintains proper image loading for the lifestyle creep article
+- Updates documentation to reflect correct image path
+- No functional changes, purely URL standardization
 ✅ Removes aria-hidden="true" from body element before browser blocks it
 ✅ Eliminates Chrome DevTools console warning
 ✅ Ensures page remains accessible to screen readers
