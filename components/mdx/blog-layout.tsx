@@ -88,7 +88,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     {/* Lifestyle Creep Article */}
                     <div className="flex items-center gap-3">
                       <Image
-                        src="https://media.topfinanzas.com/images/uk/what-is-lifestyle-creep-silent-wallet-drain.webp"
+                        src="https://media.topfinanzas.com/images/lifestyle-creep-personal-finance.webp"
                         alt="What Is Lifestyle Creep and How Is It Silently Draining Your Wallet"
                         width={50}
                         height={50}

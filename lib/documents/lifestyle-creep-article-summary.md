@@ -97,7 +97,7 @@ The article has been successfully integrated into:
 
 **Primary Image:**
 
-- URL: `https://media.topfinanzas.com/images/uk/what-is-lifestyle-creep-silent-wallet-drain.webp`
+- URL: `https://media.topfinanzas.com/images/lifestyle-creep-personal-finance.webp`
 - Alt Text: "Understanding lifestyle creep and its impact on personal finance in the UK"
 - Dimensions: 800x450px
 - Format: WebP
