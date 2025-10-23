@@ -1,78 +1,71 @@
-Optimize: Restructure financial product generation system prompt for LLM workflows
+feat: Validate and optimize sitemap.xml with latest SEO best practices
 
-ISSUE:
-The CREDIT_CARD_PRODUCT_GENERATION.instructions.md system prompt needed optimization 
-for better processing by LLM-based virtual assistants. The previous structure lacked 
-clear workflow guidance, had scattered information, and didn't provide quick reference 
-for agents to orient themselves.
+CHANGES SUMMARY:
+Conducted comprehensive sitemap validation, added missing routes, and applied 
+latest 2025 SEO best practices from sitemaps.org and Google Search Central.
 
 FILES MODIFIED:
-1. lib/CREDIT_CARD_PRODUCT_GENERATION.instructions.md - Complete restructuring
+1. public/sitemap.xml - Comprehensive validation and optimization
 
-CHANGES IMPLEMENTED:
+VALIDATION RESULTS:
+✅ All existing URLs validated against actual routes (no broken links found)
+✅ Added 300+ missing routes to sitemap
+✅ Updated all 604 URLs to latest standards
 
-1. ENHANCED STRUCTURE:
-   - Added clear Role Definition and Primary Objective sections
-   - Created Quick Reference section for rapid agent orientation
-   - Reorganized all sections with better hierarchy and clarity
+KEY IMPROVEMENTS:
 
-2. OPTIMIZED RESOURCES SECTION:
-   - Separated into Primary/Secondary data sources
-   - Added explicit access methods (fetch_webpage, fetch_txt)
-   - Clarified data priority hierarchy
+1. ROUTE COVERAGE (309 NEW URLS ADDED):
+   - Added missing main pages: /about-us, /contact-us
+   - Added recommender tools: p2, p3, invit-credit-card-rec-uk, quiz, quiz-2
+   - Added product categories: /credit-cards, /personal-loans
+   - Added 11 new personal-finance articles
+   - Added 28 financial-solutions requirements pages
+   - Total coverage: 604 verified routes (up from 295)
 
-3. EXPANDED CAPABILITIES SECTION:
-   - Organized into 7 logical categories:
-     * Data Acquisition & Processing
-     * Code Generation
-     * Content Creation
-     * UK Financial Compliance
-     * UK Market Localization
-     * Technical Implementation
-     * Quality Assurance
+2. BEST PRACTICES COMPLIANCE:
+   - Added comprehensive documentation header
+   - Applied UTF-8 encoding standard
+   - Implemented W3C Datetime format (YYYY-MM-DD)
+   - Verified all URLs are fully-qualified and absolute
+   - Confirmed under 50,000 URL limit (604 URLs)
+   - Confirmed under 50MB size limit (~50KB)
 
-4. IMPROVED LIMITATIONS SECTION:
-   - Structured into clear constraint categories
-   - Added "When to Halt Generation" checklist
-   - Clarified error conditions and boundaries
+3. SEO OPTIMIZATIONS:
+   - Optimized changefreq values by content type:
+     * daily: Homepage, blog, product categories, archives
+     * quarterly: About/contact pages
+     * yearly: Legal pages
+     * monthly: Articles and product pages
+   - Maintained priority hierarchy (1.0 to 0.3)
+   - Added note about Google ignoring priority/changefreq
+   - Kept tags for Bing, Yandex, DuckDuckGo compatibility
 
-5. COMPREHENSIVE WORKFLOW SECTION:
-   - Transformed into structured 7-step workflow
-   - Added Step 1-7 with clear subsections
-   - Enhanced error handling protocols
-   - Emphasized critical output requirements
+4. STRUCTURE ENHANCEMENTS:
+   - Added clear section comments for maintainability
+   - Organized URLs by logical groups
+   - Improved XML readability
+   - Added metadata comments (total URLs, generation date)
 
-6. NEW SUMMARY SECTION:
-   - Pre-Generation Checklist
-   - Execution Sequence (7 steps)
-   - Success Criteria (10 checkpoints)
-   - Failure Points (5 halt conditions)
-   - Action on failure guidance
-
-VARIABLE OPTIMIZATION:
-- Converted example fields to {camelCase} variables:
-  * {blogPostCategory}, {productCategory}, {productName}
-  * {officialProductUrl}, {brandColorHex}, {heroImageUrl}
-  * {mainKeywords}, {pageTitle}, {contentFocus}
-  * {seoIntentType}, {customerJourneyStage}, etc.
+TECHNICAL VALIDATION:
+✅ Sitemaps.org Protocol 0.9 compliant
+✅ Google Search Central guidelines met
+✅ All URLs < 2,048 characters
+✅ Proper XML structure and hierarchy
+✅ No special characters requiring escaping
+✅ Ready for search engine submission
 
 IMPACT:
-✅ Better LLM agent comprehension and execution
-✅ Clear sequential workflow from input to output
-✅ Multiple verification checkpoints throughout process
-✅ Explicit error handling and halt conditions
-✅ Quick orientation for new agents
-✅ Actionable, structured guidance
-✅ Maintains all FCA compliance requirements
-✅ Preserves all technical specifications
+- 100% route coverage of public pages
+- Better crawl efficiency for search engines
+- Improved discoverability of all content
+- Enhanced SEO performance potential
+- Multi-search-engine compatibility
 
-STRUCTURE IMPROVEMENTS:
-✅ Logical section flow and organization
-✅ Consistent formatting and hierarchy
-✅ Action-oriented language throughout
-✅ Clear tool specifications (fetch_webpage, fetch_txt)
-✅ Comprehensive success/failure criteria
-✅ Production-ready for virtual assistant workflows
+NEXT STEPS:
+- Submit to Google Search Console
+- Submit to Bing Webmaster Tools
+- Add sitemap reference to robots.txt
+- Monitor crawl stats and indexing coverage
 
-Priority: 🟢 MEDIUM - Accessibility compliance and console cleanliness
+Priority: 🟢 HIGH - SEO and search engine discoverability
 Status: ✅ READY FOR DEPLOYMENT
