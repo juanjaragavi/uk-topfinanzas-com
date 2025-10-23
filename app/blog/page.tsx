@@ -39,6 +39,17 @@ export default function BlogArchivePage() {
 
   // Combine posts from both categories
   const allPosts: PostItem[] = [
+    // Financial Solutions - Credit Cards
+    {
+      title: "Zopa Credit Card: Award-Winning Card Management | Top Finance UK",
+      slug: "zopa-credit-card",
+      description:
+        "Discover the Zopa Credit Card with effortless app management, Credit Cushion feature, no foreign fees, and award-winning customer service. Best Credit Card Provider at British Bank Awards 2024 & 2025.",
+      image: "https://media.topfinanzas.com/images/uk/zopa-credit-card.webp",
+      category: "Financial Solutions",
+      categoryPath: "/financial-solutions",
+      date: "23 October 2025",
+    },
     // Personal Finance Posts
     {
       title:
@@ -302,7 +313,7 @@ export default function BlogArchivePage() {
   };
 
   const allPostsSorted: PostItem[] = [...allPosts].sort(
-    (a, b) => parseDate(b.date) - parseDate(a.date),
+    (a, b) => parseDate(b.date) - parseDate(a.date)
   );
 
   // Filter posts based on active category
@@ -311,25 +322,25 @@ export default function BlogArchivePage() {
 
     if (activeCategory === "personalFinance") {
       filteredPosts = allPostsSorted.filter(
-        (post) => post.category === "Personal Finance",
+        (post) => post.category === "Personal Finance"
       );
     } else if (activeCategory === "financialSolutions") {
       filteredPosts = allPostsSorted.filter(
-        (post) => post.category === "Financial Solutions",
+        (post) => post.category === "Financial Solutions"
       );
     } else if (activeCategory === "creditCards") {
       filteredPosts = allPostsSorted.filter(
         (post) =>
           post.title.toLowerCase().includes("credit card") ||
           post.slug.toLowerCase().includes("credit-card") ||
-          post.description.toLowerCase().includes("credit card"),
+          post.description.toLowerCase().includes("credit card")
       );
     } else if (activeCategory === "loans") {
       filteredPosts = allPostsSorted.filter(
         (post) =>
           post.title.toLowerCase().includes("loan") ||
           post.slug.toLowerCase().includes("loan") ||
-          post.description.toLowerCase().includes("loan"),
+          post.description.toLowerCase().includes("loan")
       );
     }
 
