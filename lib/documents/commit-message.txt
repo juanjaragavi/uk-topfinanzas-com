@@ -1,35 +1,46 @@
-feat: Add Zopa Credit Card product pages with FCA-compliant content
+feat: Add Yonder Credit Card product pages and fix category separation
 
 Product Page Generation:
-- Create comprehensive benefits page (~1,100 words) at /app/financial-solutions/zopa-credit-card/page.tsx
-- Create detailed requirements page (~900 words) at /app/financial-solutions/zopa-credit-card-requirements/page.tsx
-- Highlight key features: app management, Credit Cushion, no foreign fees, award-winning service
-- Include representative APR 34.9% variable with FCA-compliant disclaimers
-- Feature British Bank Awards recognition (2021, 2024, 2025)
+- Create comprehensive benefits page (~1,027 words) at /app/financial-solutions/yonder-credit-card/page.tsx
+- Create detailed requirements page (~892 words) at /app/financial-solutions/yonder-credit-card-requirements/page.tsx
+- Highlight key features: 1 point per £1 spent, no foreign fees, £10 welcome offer, award-winning app
+- Include representative APR 32.0% variable with FCA-compliant disclaimers
+- Feature credit limits up to £10,000 and 15-day interest-free period
 
 Technical Implementation:
-- Use Zopa brand color (#6CE6B5) for all CTAs and UI accents
+- Use Yonder brand color (#e88267) for all CTAs and UI accents
+- Add cdn.prod.website-files.com to Next.js image optimization remote patterns
 - Include two ad containers: uk_topfinanzas_3 and uk_topfinanzas_4
 - Add cross-links between benefits and requirements pages
-- Implement 6 internal links to related credit card and personal finance resources
+- Implement internal links to related credit card resources
 - Generate complete metadata with UK-specific SEO optimization
 
+Category Separation Fix:
+- Remove Yonder and Zopa product entries from /app/personal-finance/page.tsx
+- Update CREDIT_CARD_PRODUCT_GENERATION.instructions.md to prevent future mixing
+- Clarify that products belong ONLY in Financial Solutions category
+- Clarify that Personal Finance page is ONLY for educational guides
+- Maintain proper content separation across site
+
 FCA Compliance:
-- Include representative APR example (34.9% based on £1,200 credit limit)
+- Include representative APR example (32.0% based on £1,200 credit limit)
 - Add mandatory risk warnings and credit subject to status disclaimers
-- Reference Zopa Bank Limited FCA registration (800542)
+- Reference Yonder Technology Ltd FCA registration (946219)
 - Include "not financial advice" disclaimers on both pages
 - Use British English throughout with UK terminology
 
 Site Integration:
-- Add Zopa Credit Card entry to /app/blog/page.tsx allPosts array (top position)
-- Add entry to /app/personal-finance/page.tsx with "creditCards" category tag
-- Ensure product visibility across blog and personal finance archives
+- Add Yonder Credit Card entry to /app/blog/page.tsx allPosts array (Financial Solutions category)
+- Remove product entries from personal-finance page (now educational content only)
+- Ensure proper category organization across blog
 - Date: 23 October 2025
 
 Files Created/Modified:
-- /app/financial-solutions/zopa-credit-card/page.tsx (NEW)
-- /app/financial-solutions/zopa-credit-card-requirements/page.tsx (NEW)
-- /app/blog/page.tsx (Zopa entry added)
-- /app/personal-finance/page.tsx (Zopa entry added)
+- /app/financial-solutions/yonder-credit-card/page.tsx (NEW)
+- /app/financial-solutions/yonder-credit-card-requirements/page.tsx (NEW)
+- /app/blog/page.tsx (Yonder entry added to Financial Solutions)
+- /app/personal-finance/page.tsx (Product entries removed)
+- /next.config.mjs (Added cdn.prod.website-files.com remote pattern)
+- /lib/CREDIT_CARD_PRODUCT_GENERATION.instructions.md (Updated workflow)
+
 

@@ -12,11 +12,11 @@ Generate a financial product page pair (benefits and requirements), following th
 
 - **Blog Post Category:** Financial Solutions
 - **Product Category:** Credit Cards (or Personal Loans)
-- **Product Name:** Barclaycard Avios Plus
-- **Provider:** Barclaycard
-- **Official Product URL:** <https://www.barclaycard.co.uk/credit-cards/avios-plus>
-- **Main Keywords:** Credit Cards, Barclaycard Avios Plus
-- **Page Title:** Discover the Benefits of Barclaycard Avios Plus
+- **Product Name:** Yonder Credit Card
+- **Provider:** Yonder
+- **Official Product URL:** <https://www.yonder.com/credit-cards/free-credit-card>
+- **Main Keywords:** Credit Cards, Yonder Credit Card
+- **Page Title:** Discover the Benefits of Yonder Credit Card
 - **Content Focus:** Product features, benefits, eligibility, application process
 - **SEO Intent Type:** Commercial/Transactional
 - **Funnel Stage:** MOFU/BOFU (Consideration/Decision)
@@ -25,7 +25,7 @@ Generate a financial product page pair (benefits and requirements), following th
 
 ## Brand and Visual Assets
 
-- **Brand Color:** #00395D (hex color code for primary brand buttons/accents)
+- **Brand Color:** #e88267 (hex color code for primary brand buttons/accents)
 - **Hero Image URL:** {Full URL to product hero image from CSV or CDN}
 - **Requirements Image URL:** {Full URL to requirements page image from CSV or CDN}
 
@@ -37,7 +37,7 @@ Generate a financial product page pair (benefits and requirements), following th
 
 **Official Product Website**
 
-- **URL**: <https://www.barclaycard.co.uk/credit-cards/avios-plus>
+- **URL**: <https://www.yonder.com/credit-cards/free-credit-card>
 - **Access method**: Use `fetch_webpage` tool
 - **Priority**: Highest - always prioritize for current rates, fees, terms
 - **Extract**:
@@ -54,7 +54,7 @@ Generate a financial product page pair (benefits and requirements), following th
 
 **CSV Topic Outline Database**
 
-- **Location**: <https://media.topfinanzas.com/documents/topfinanzas-us-topic-outline.csv>
+- **Location**: `lib/documents/topfinanzas-us-topic-outline.csv`
 - **Access method**: Use `fetch_txt` tool
 - **Purpose**: Supplement official data, provide SEO metadata, brand colors, image URLs
 - **Extract**:
@@ -80,17 +80,17 @@ Generate a financial product page pair (benefits and requirements), following th
 
 1. **Read System Prompt**: First, locate and read the complete system prompt at `/lib/CREDIT_CARD_PRODUCT_GENERATION.instructions.md` to understand all requirements, structures, and compliance rules.
 
-2. **Browse the Official Product URL**: Navigate to <https://www.barclaycard.co.uk/credit-cards/avios-plus> using `fetch_webpage` and extract all relevant information:
+2. **Browse the Official Product URL**: Navigate to <https://www.yonder.com/credit-cards/free-credit-card> using `fetch_webpage` and extract all relevant information:
    - Product features and benefits (minimum 4 key features)
    - APR rates and interest rate information
    - Annual fees, application fees, and other charges
    - Eligibility criteria (age, residency, income requirements, credit score)
    - Welcome bonuses or introductory offers
-   - Reward structures (e.g., Avios earning rates)
+   - Reward structures (e.g., Yonder Credit Card earning rates)
    - Any special terms, conditions, or promotional offers
    - FCA-required representative APR examples and risk warnings
 
-3. **Supplement with CSV Data**: Use `fetch_txt` to access the CSV at <https://media.topfinanzas.com/documents/topfinanzas-us-topic-outline.csv>. Cross-reference the extracted information with the corresponding product row to ensure:
+3. **Supplement with CSV Data**: Use `fetch_txt` to access the CSV at `lib/documents/topfinanzas-us-topic-outline.csv`. Cross-reference the extracted information with the corresponding product row to ensure:
    - Brand color hex code is available
    - Hero and requirements image URLs are provided
    - SEO metadata (keywords, page title) is complete
@@ -121,8 +121,8 @@ Generate a financial product page pair (benefits and requirements), following th
    - `AIContentDisclaimer` component at the end of each page
 
 7. **Directory Placement**: Create files at:
-   - `/app/financial-solutions/barclaycard-avios-plus/page.tsx` (benefits page)
-   - `/app/financial-solutions/barclaycard-avios-plus-requirements/page.tsx` (requirements page)
+   - `/app/financial-solutions/yonder-credit-card/page.tsx` (benefits page)
+   - `/app/financial-solutions/yonder-credit-card-requirements/page.tsx` (requirements page)
 
 8. **Content Length**: Follow guidelines based on product type:
    - Credit Card Benefits Page: 800-1,200 words
@@ -135,13 +135,13 @@ Generate a financial product page pair (benefits and requirements), following th
 TWO complete Next.js page components:
 
 1. **Main Product Benefits Page**
-   - **File**: `/app/financial-solutions/barclaycard-avios-plus/page.tsx`
+   - **File**: `/app/financial-solutions/yonder-credit-card/page.tsx`
    - **Focus**: Features, benefits, rewards, value propositions
    - **Sections**: Introduction, key features, detailed benefits, CTAs
    - **Links**: Requirements page, related products, relevant guides
 
 2. **Requirements Page**
-   - **File**: `/app/financial-solutions/barclaycard-avios-plus-requirements/page.tsx`
+   - **File**: `/app/financial-solutions/yonder-credit-card-requirements/page.tsx`
    - **Focus**: Eligibility, application process, costs, documentation
    - **Sections**: Qualification criteria, required docs, costs/fees, application steps, FAQs
    - **Links**: Benefits page, related products, personal finance guides
@@ -150,7 +150,7 @@ Both files must:
 
 - Use `data-category="credit-cards"` attribute
 - Include complete `generateMetadata()` function
-- Apply brand color (#00395D) to buttons and accents
+- Apply brand color (#e88267) to buttons and accents
 - Contain FCA-compliant disclaimers and representative APR examples
 - Follow existing template structure and styling patterns
 - Be production-ready with no placeholders or TODOs
@@ -161,7 +161,7 @@ Both files must:
 
 Review these existing pages for structure and styling patterns:
 
-- `/app/financial-solutions/barclaycard-avios-plus/page.tsx` (if it exists)
+- `/app/financial-solutions/yonder-credit-card/page.tsx` (if it exists)
 - `/app/financial-solutions/hsbc-personal-loan/page.tsx`
 - Any other credit card product pages in `/app/financial-solutions/`
 

@@ -121,7 +121,7 @@ export default function UtmLinkInjector() {
             });
           }
         }
-      } catch (error) {
+      } catch {
         // Skip if URL parsing fails
         return;
       }
