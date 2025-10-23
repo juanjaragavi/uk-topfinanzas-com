@@ -36,6 +36,15 @@ export default function PersonalFinanceArchivePage() {
   // Array of all posts in this category
   const allPosts: PostItem[] = [
     {
+      title: "Zopa Credit Card: Award-Winning Card Management | Top Finance UK",
+      slug: "zopa-credit-card",
+      description:
+        "Discover the Zopa Credit Card with effortless app management, Credit Cushion feature, no foreign fees, and award-winning customer service. Best Credit Card Provider at British Bank Awards 2024 & 2025.",
+      image: "https://media.topfinanzas.com/images/uk/zopa-credit-card.webp",
+      date: "23 October 2025",
+      category: "creditCards",
+    },
+    {
       title:
         "Inflation-Proof Your Life: 7 Smart Money Moves to Make When Prices Are High | Top Finance UK",
       slug: "inflation-proof-your-life",

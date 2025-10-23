@@ -1,27 +1,35 @@
-feat: Add financial uncoupling article and implement auto-publishing workflow
+feat: Add Zopa Credit Card product pages with FCA-compliant content
 
-Article Generation:
-- Create comprehensive 950-word guide on separating finances during relationship breakups
-- Include 7 actionable steps: paperwork gathering, separation planning, account closure, debt management, utility updates, credit file cleanup, and financial rebuilding
-- Add 6 strategic internal links to related UK personal finance resources
-- Feature UK-specific guidance (FCA references, MoneyHelper, Citizens Advice, StepChange)
-- Include practical example (Sarah & Tom case study) and compliance disclaimers
+Product Page Generation:
+- Create comprehensive benefits page (~1,100 words) at /app/financial-solutions/zopa-credit-card/page.tsx
+- Create detailed requirements page (~900 words) at /app/financial-solutions/zopa-credit-card-requirements/page.tsx
+- Highlight key features: app management, Credit Cushion, no foreign fees, award-winning service
+- Include representative APR 34.9% variable with FCA-compliant disclaimers
+- Feature British Bank Awards recognition (2021, 2024, 2025)
+
+Technical Implementation:
+- Use Zopa brand color (#6CE6B5) for all CTAs and UI accents
+- Include two ad containers: uk_topfinanzas_3 and uk_topfinanzas_4
+- Add cross-links between benefits and requirements pages
+- Implement 6 internal links to related credit card and personal finance resources
+- Generate complete metadata with UK-specific SEO optimization
+
+FCA Compliance:
+- Include representative APR example (34.9% based on £1,200 credit limit)
+- Add mandatory risk warnings and credit subject to status disclaimers
+- Reference Zopa Bank Limited FCA registration (800542)
+- Include "not financial advice" disclaimers on both pages
+- Use British English throughout with UK terminology
 
 Site Integration:
-- Add article entry to /app/blog/page.tsx allPosts array (dated 23 October 2025)
-- Add article entry to /app/personal-finance/page.tsx with "guide" category tag
-- Ensure visibility on main blog listing and personal finance category archive
+- Add Zopa Credit Card entry to /app/blog/page.tsx allPosts array (top position)
+- Add entry to /app/personal-finance/page.tsx with "creditCards" category tag
+- Ensure product visibility across blog and personal finance archives
+- Date: 23 October 2025
 
-System Workflow Enhancement:
-- Update TOFU_BLOG_POST_GENERATION.instructions.md with mandatory Step 8 auto-publishing
-- Update CREDIT_CARD_PRODUCT_GENERATION.instructions.md with mandatory Step 8 auto-publishing
-- Add TypeScript code examples for blog/category array updates
-- Enforce post-publication integration as required (non-optional) step
-- Prevent future "orphaned" content by automating index updates
+Files Created/Modified:
+- /app/financial-solutions/zopa-credit-card/page.tsx (NEW)
+- /app/financial-solutions/zopa-credit-card-requirements/page.tsx (NEW)
+- /app/blog/page.tsx (Zopa entry added)
+- /app/personal-finance/page.tsx (Zopa entry added)
 
-Files Modified:
-- /app/personal-finance/financial-uncoupling-separating-finances-during-breakup/page.tsx (NEW)
-- /app/blog/page.tsx (article entry added)
-- /app/personal-finance/page.tsx (article entry added)
-- /lib/TOFU_BLOG_POST_GENERATION.instructions.md (Step 8 added)
-- /lib/CREDIT_CARD_PRODUCT_GENERATION.instructions.md (Step 8 added)
