@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import {
   activateAdZep,
   hasRenderedCreative,
-  pageHasAdUnits,
   waitForContainers,
 } from "@/lib/ads/activate-adzep";
 import { adZepConfig, isArticlePath, isExcludedPath } from "@/lib/ads/config";

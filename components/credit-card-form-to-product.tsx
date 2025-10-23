@@ -3,7 +3,6 @@
 import type React from "react";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useRouter } from "next/navigation";
 import Cookies from "js-cookie"; // Import Cookies
 import Step1 from "./steps/step1";
 import Step2 from "./steps/step2";
@@ -212,8 +211,6 @@ export default function CreditCardFormToProduct() {
     }
   }, [isRegisteredUser]);
 
-  const router = useRouter();
-
   const handleSubmit = useCallback(
     async (e?: React.FormEvent) => {
       e?.preventDefault();
@@ -420,7 +417,6 @@ export default function CreditCardFormToProduct() {
       isSubmitting,
       isRegisteredUser,
       persistRegistrationCookies,
-      router,
       triggerConversionEvents,
     ],
   );

@@ -40,9 +40,9 @@ Each page must be:
 1. `/app/financial-solutions/{productSlug}/page.tsx` (benefits page)
 2. `/app/financial-solutions/{productSlug}-requirements/page.tsx` (requirements page)
 3. **Automatic Post-Publication Integration** (REQUIRED):
-   - Add the product to `/app/blog/page.tsx` in the `allPosts` array
-   - Add the product to `/app/personal-finance/page.tsx` in the `allPosts` array (if relevant to Personal Finance category)
-   - Update both arrays immediately after generating the page components
+   - Add the product to `/app/blog/page.tsx` in the `allPosts` array under "Financial Solutions" category
+   - **DO NOT** add products to `/app/personal-finance/page.tsx` - that page is ONLY for educational guides and articles, NOT individual product pages
+   - Update the blog array immediately after generating the page components
 
 **Key Tools**:
 
@@ -144,7 +144,7 @@ This page details eligibility criteria and application process:
 
 ### Available Field Schema (Dataset Structure)
 
-You will find the Schema in the <https://media.topfinanzas.com/documents/topfinanzas-us-topic-outline.csv> file. Each row of the schema contains the following columns:
+You will find the Schema in the `lib/documents/topfinanzas-us-topic-outline.csv` file. Each row of the schema contains the following columns:
 
 - **Product Category:** Type of financial product (e.g., Credit Card, Personal Loan, Mortgage)
 - **Product Name:** Official name of the financial product
@@ -208,7 +208,7 @@ of features, requirements, and terms without excessive verbosity.
 
 **CSV Topic Outline Database**
 
-- **Location**: <https://media.topfinanzas.com/documents/topfinanzas-us-topic-outline.csv>
+- **Location**: `lib/documents/topfinanzas-us-topic-outline.csv`
 - **Access method**: Use `fetch_txt` tool
 - **Purpose**: Supplement official data, provide SEO metadata, brand colors, image URLs
 - **Contains**: Product category, provider, keywords, page titles, brand colors, image URLs, content focus
@@ -379,7 +379,7 @@ When you receive a user request with product details including the **Official Pr
 
 **Retrieve Supporting Resources**
 
-- Use `fetch_txt` to access CSV Topic Outline (<https://media.topfinanzas.com/documents/topfinanzas-us-topic-outline.csv>)
+- Use `fetch_txt` to access CSV Topic Outline (`lib/documents/topfinanzas-us-topic-outline.csv`)
 - Use `fetch_txt` to retrieve UK Sitemap (<https://uk.topfinanzas.com/sitemap.xml>)
 - Identify internal linking opportunities from sitemap
 
@@ -454,19 +454,19 @@ When you receive a user request with product details including the **Official Pr
 
 **Automatically Add to Site Indexes**
 
-After generating both page components, you MUST immediately update the following files to make the product visible on public-facing pages:
+After generating both page components, you MUST immediately update the following file to make the product visible on public-facing pages:
 
 1. **Blog Main Page** (`/app/blog/page.tsx`):
-   - Add new entry to the `allPosts` array
-   - Include: title, slug, description, image, category ("Financial Solutions"), categoryPath, date
-   - Place at the top of the array (most recent first)
+   - Add new entry to the `allPosts` array under the "Financial Solutions" category section
+   - Include: title, slug, description, image, category ("Financial Solutions"), categoryPath ("/financial-solutions"), date
+   - Place at the top of the "Financial Solutions" section (most recent first)
    - Use `replace_string_in_file` tool to update
 
-2. **Personal Finance Category Page** (`/app/personal-finance/page.tsx`) - IF APPLICABLE:
-   - Only add if the product is relevant to Personal Finance topics (e.g., credit cards, personal loans)
-   - Add new entry to the `allPosts` array with appropriate category tag
-   - Place at the top of the array
-   - Use `replace_string_in_file` tool to update
+**IMPORTANT**:
+
+- **DO NOT** add product pages to `/app/personal-finance/page.tsx`
+- The Personal Finance page is ONLY for educational guides and comparison articles, NOT individual product pages
+- Product pages belong exclusively in the Financial Solutions category
 
 **Example Entry Format for Blog Page**:
 

@@ -41,6 +41,18 @@ export default function BlogArchivePage() {
   const allPosts: PostItem[] = [
     // Financial Solutions - Credit Cards
     {
+      title:
+        "Yonder Credit Card: Epic Rewards with No Foreign Transaction Fees | Top Finance UK",
+      slug: "yonder-credit-card",
+      description:
+        "The Yonder Free Credit Card earns 1 point per £1 spent with no fees abroad, plus a £10 welcome offer and 1,000 bonus points when you spend £1,000 in 30 days.",
+      image:
+        "https://cdn.prod.website-files.com/6209512878b45f39119ebfb5/6839943447d06a3292522ecd_head-p-800.webp",
+      category: "Financial Solutions",
+      categoryPath: "/financial-solutions",
+      date: "23 October 2025",
+    },
+    {
       title: "Zopa Credit Card: Award-Winning Card Management | Top Finance UK",
       slug: "zopa-credit-card",
       description:
