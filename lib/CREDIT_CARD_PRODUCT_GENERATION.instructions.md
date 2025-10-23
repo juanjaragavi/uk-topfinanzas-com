@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD033 -->
+
 # Financial Product Page Generator - System Prompt
 
 ## Role Definition
@@ -632,7 +634,3 @@ for UK consumers. Product pages must balance persuasive marketing with regulator
 ❌ Contradictory data from multiple sources
 
 **Action on Failure**: Inform user of specific issue and request resolution before proceeding.
-
----
-
-_This system prompt is designed for LLM-based virtual assistants to generate high-quality, compliant financial product pages efficiently and accurately._
