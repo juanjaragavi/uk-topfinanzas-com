@@ -227,11 +227,69 @@ export default function PersonalFinanceArchivePage() {
     // Add other posts here as needed
   ];
 
+  // Date parsing utility function
+  const parseDate = (dateString: string): number => {
+    if (!dateString) return 0;
+    const value = dateString.trim();
+    const patterns = [
+      /^(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})$/,
+      /^([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})$/,
+      /^(\d{4})-(\d{2})-(\d{2})$/,
+    ];
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    for (const pattern of patterns) {
+      const match = value.match(pattern);
+      if (match) {
+        let day: number, month: number, year: number;
+        if (pattern === patterns[0]) {
+          day = parseInt(match[1], 10);
+          month = monthNames.findIndex(
+            (m) => m.toLowerCase() === match[2].toLowerCase()
+          );
+          year = parseInt(match[3], 10);
+        } else if (pattern === patterns[1]) {
+          month = monthNames.findIndex(
+            (m) => m.toLowerCase() === match[1].toLowerCase()
+          );
+          day = parseInt(match[2], 10);
+          year = parseInt(match[3], 10);
+        } else {
+          year = parseInt(match[1], 10);
+          month = parseInt(match[2], 10) - 1;
+          day = parseInt(match[3], 10);
+        }
+        if (month !== -1 && !isNaN(day) && !isNaN(year)) {
+          return Date.UTC(year, month, day);
+        }
+      }
+    }
+    const t = Date.parse(value);
+    return isNaN(t) ? 0 : t;
+  };
+
+  // Sort posts by date (newest first)
+  const sortedPosts = [...allPosts].sort(
+    (a, b) => parseDate(b.date || "") - parseDate(a.date || "")
+  );
+
   // Filter posts based on the selected category
   const filteredPosts =
     activeCategory === "all"
-      ? allPosts
-      : allPosts.filter((post) => post.category === activeCategory);
+      ? sortedPosts
+      : sortedPosts.filter((post) => post.category === activeCategory);
 
   const content = (
     <div data-category="personal-finance">
