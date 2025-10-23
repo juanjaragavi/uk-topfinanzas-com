@@ -1,71 +1,9 @@
-feat: Validate and optimize sitemap.xml with latest SEO best practices
+Refactor: Reorganize blog generation workflow with separate instruction files
 
-CHANGES SUMMARY:
-Conducted comprehensive sitemap validation, added missing routes, and applied 
-latest 2025 SEO best practices from sitemaps.org and Google Search Central.
-
-FILES MODIFIED:
-1. public/sitemap.xml - Comprehensive validation and optimization
-
-VALIDATION RESULTS:
-✅ All existing URLs validated against actual routes (no broken links found)
-✅ Added 300+ missing routes to sitemap
-✅ Updated all 604 URLs to latest standards
-
-KEY IMPROVEMENTS:
-
-1. ROUTE COVERAGE (309 NEW URLS ADDED):
-   - Added missing main pages: /about-us, /contact-us
-   - Added recommender tools: p2, p3, invit-credit-card-rec-uk, quiz, quiz-2
-   - Added product categories: /credit-cards, /personal-loans
-   - Added 11 new personal-finance articles
-   - Added 28 financial-solutions requirements pages
-   - Total coverage: 604 verified routes (up from 295)
-
-2. BEST PRACTICES COMPLIANCE:
-   - Added comprehensive documentation header
-   - Applied UTF-8 encoding standard
-   - Implemented W3C Datetime format (YYYY-MM-DD)
-   - Verified all URLs are fully-qualified and absolute
-   - Confirmed under 50,000 URL limit (604 URLs)
-   - Confirmed under 50MB size limit (~50KB)
-
-3. SEO OPTIMIZATIONS:
-   - Optimized changefreq values by content type:
-     * daily: Homepage, blog, product categories, archives
-     * quarterly: About/contact pages
-     * yearly: Legal pages
-     * monthly: Articles and product pages
-   - Maintained priority hierarchy (1.0 to 0.3)
-   - Added note about Google ignoring priority/changefreq
-   - Kept tags for Bing, Yandex, DuckDuckGo compatibility
-
-4. STRUCTURE ENHANCEMENTS:
-   - Added clear section comments for maintainability
-   - Organized URLs by logical groups
-   - Improved XML readability
-   - Added metadata comments (total URLs, generation date)
-
-TECHNICAL VALIDATION:
-✅ Sitemaps.org Protocol 0.9 compliant
-✅ Google Search Central guidelines met
-✅ All URLs < 2,048 characters
-✅ Proper XML structure and hierarchy
-✅ No special characters requiring escaping
-✅ Ready for search engine submission
-
-IMPACT:
-- 100% route coverage of public pages
-- Better crawl efficiency for search engines
-- Improved discoverability of all content
-- Enhanced SEO performance potential
-- Multi-search-engine compatibility
-
-NEXT STEPS:
-- Submit to Google Search Console
-- Submit to Bing Webmaster Tools
-- Add sitemap reference to robots.txt
-- Monitor crawl stats and indexing coverage
-
-Priority: 🟢 HIGH - SEO and search engine discoverability
-Status: ✅ READY FOR DEPLOYMENT
+- Add TOFU_BLOG_POST_GENERATION.instructions.md for TOFU blog article generation
+- Update CREDIT_CARD_PRODUCT_GENERATION.instructions.md with enhanced documentation
+- Create prompt-to-generate-tofu-posts.md user-facing template
+- Create prompt-to-generate-credit-card-products-posts.md user-facing template
+- Remove deprecated blog-post-generation-prompt.md
+- Improve separation of concerns between system prompts and user prompts
+- Enhance compliance guidelines and workflow documentation
