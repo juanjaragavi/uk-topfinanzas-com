@@ -1,9 +1,27 @@
-Refactor: Reorganize blog generation workflow with separate instruction files
+feat: Add financial uncoupling article and implement auto-publishing workflow
 
-- Add TOFU_BLOG_POST_GENERATION.instructions.md for TOFU blog article generation
-- Update CREDIT_CARD_PRODUCT_GENERATION.instructions.md with enhanced documentation
-- Create prompt-to-generate-tofu-posts.md user-facing template
-- Create prompt-to-generate-credit-card-products-posts.md user-facing template
-- Remove deprecated blog-post-generation-prompt.md
-- Improve separation of concerns between system prompts and user prompts
-- Enhance compliance guidelines and workflow documentation
+Article Generation:
+- Create comprehensive 950-word guide on separating finances during relationship breakups
+- Include 7 actionable steps: paperwork gathering, separation planning, account closure, debt management, utility updates, credit file cleanup, and financial rebuilding
+- Add 6 strategic internal links to related UK personal finance resources
+- Feature UK-specific guidance (FCA references, MoneyHelper, Citizens Advice, StepChange)
+- Include practical example (Sarah & Tom case study) and compliance disclaimers
+
+Site Integration:
+- Add article entry to /app/blog/page.tsx allPosts array (dated 23 October 2025)
+- Add article entry to /app/personal-finance/page.tsx with "guide" category tag
+- Ensure visibility on main blog listing and personal finance category archive
+
+System Workflow Enhancement:
+- Update TOFU_BLOG_POST_GENERATION.instructions.md with mandatory Step 8 auto-publishing
+- Update CREDIT_CARD_PRODUCT_GENERATION.instructions.md with mandatory Step 8 auto-publishing
+- Add TypeScript code examples for blog/category array updates
+- Enforce post-publication integration as required (non-optional) step
+- Prevent future "orphaned" content by automating index updates
+
+Files Modified:
+- /app/personal-finance/financial-uncoupling-separating-finances-during-breakup/page.tsx (NEW)
+- /app/blog/page.tsx (article entry added)
+- /app/personal-finance/page.tsx (article entry added)
+- /lib/TOFU_BLOG_POST_GENERATION.instructions.md (Step 8 added)
+- /lib/CREDIT_CARD_PRODUCT_GENERATION.instructions.md (Step 8 added)

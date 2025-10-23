@@ -39,12 +39,17 @@ Each page must be:
 
 1. `/app/financial-solutions/{productSlug}/page.tsx` (benefits page)
 2. `/app/financial-solutions/{productSlug}-requirements/page.tsx` (requirements page)
+3. **Automatic Post-Publication Integration** (REQUIRED):
+   - Add the product to `/app/blog/page.tsx` in the `allPosts` array
+   - Add the product to `/app/personal-finance/page.tsx` in the `allPosts` array (if relevant to Personal Finance category)
+   - Update both arrays immediately after generating the page components
 
 **Key Tools**:
 
 - `fetch_webpage` - Browse official product URLs
 - `fetch_txt` - Retrieve CSV and sitemap data
 - Workspace file system - Read template files for reference
+- `replace_string_in_file` - Update blog and category page arrays
 
 ---
 
@@ -445,6 +450,40 @@ When you receive a user request with product details including the **Official Pr
 - Verify AIContentDisclaimer, Header, and CompactFooter components included
 - Ensure no WordPress blocks or explanatory text—pure Next.js code only
 
+### Step 8: Post-Publication Integration (REQUIRED)
+
+**Automatically Add to Site Indexes**
+
+After generating both page components, you MUST immediately update the following files to make the product visible on public-facing pages:
+
+1. **Blog Main Page** (`/app/blog/page.tsx`):
+   - Add new entry to the `allPosts` array
+   - Include: title, slug, description, image, category ("Financial Solutions"), categoryPath, date
+   - Place at the top of the array (most recent first)
+   - Use `replace_string_in_file` tool to update
+
+2. **Personal Finance Category Page** (`/app/personal-finance/page.tsx`) - IF APPLICABLE:
+   - Only add if the product is relevant to Personal Finance topics (e.g., credit cards, personal loans)
+   - Add new entry to the `allPosts` array with appropriate category tag
+   - Place at the top of the array
+   - Use `replace_string_in_file` tool to update
+
+**Example Entry Format for Blog Page**:
+
+```typescript
+{
+  title: "Product Name: Value Proposition | Top Finance UK",
+  slug: "product-slug",
+  description: "Brief product description focusing on key benefits",
+  image: "https://media.topfinanzas.com/images/uk/product-image.webp",
+  category: "Financial Solutions",
+  categoryPath: "/financial-solutions",
+  date: "DD Month YYYY", // Current date in UK format
+}
+```
+
+**CRITICAL**: This step is NOT optional. Product pages that are not added to these indexes will remain invisible to users browsing the site. Always complete this integration step immediately after generating the page components.
+
 ### Error Handling
 
 **If Issues Occur**
@@ -590,47 +629,3 @@ Be especially mindful of FCA regulations, local financial institutions (FCA, ICO
 for UK consumers. Product pages must balance persuasive marketing with regulatory compliance and consumer protection.
 
 </EthicalGuidelines>
-
----
-
-## Summary: Complete Workflow for LLM Agents
-
-### Pre-Generation Checklist
-
-✅ User has provided all required variables ({productName}, {officialProductUrl}, {brandColorHex}, etc.)  
-✅ Official product URL is accessible  
-✅ CSV data source is available  
-✅ Template files can be accessed for reference
-
-### Execution Sequence
-
-1. **Fetch Data** → Use `fetch_webpage` for official URL, `fetch_txt` for CSV and sitemap
-2. **Analyze Templates** → Read existing pages in `/app/financial-solutions/` for patterns
-3. **Synthesize Information** → Merge official data with CSV data, prioritize official source
-4. **Plan Structure** → Determine sections, headings, content length, internal links
-5. **Verify Compliance** → Ensure FCA requirements, disclaimers, risk warnings are included
-6. **Generate Code** → Create TWO complete .tsx files with proper TypeScript and Next.js conventions
-7. **Quality Check** → Validate completeness, accuracy, style consistency, and code validity
-
-### Success Criteria
-
-✅ TWO production-ready .tsx files generated  
-✅ All imports, metadata, and exports are correct  
-✅ British English and UK terminology used throughout  
-✅ FCA-compliant with representative APR and risk warnings  
-✅ Brand colors applied correctly  
-✅ Ad containers with correct IDs included  
-✅ 2-3 internal links added  
-✅ AIContentDisclaimer, Header, CompactFooter components included  
-✅ Code matches existing template patterns  
-✅ No WordPress blocks or explanatory text—pure Next.js code only
-
-### Failure Points (Halt Generation)
-
-❌ Official product URL inaccessible  
-❌ Critical data missing (APR, fees, eligibility, brand color)  
-❌ CSV or sitemap unavailable  
-❌ Template files cannot be read  
-❌ Contradictory data from multiple sources
-
-**Action on Failure**: Inform user of specific issue and request resolution before proceeding.
