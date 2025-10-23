@@ -1,11 +1,19 @@
-feat: Add date-based sorting to all content listing pages
+feat: Add missing credit card products to Financial Solutions page
 
-Implemented consistent date parsing and sorting across all content pages to ensure latest posts appear first:
+Added three missing credit card products to the Financial Solutions category page:
 
-- Added parseDate utility function to parse multiple date formats (DD MMM YYYY, MMM DD YYYY, YYYY-MM-DD)
-- Updated /app/financial-solutions/page.tsx: Sort credit cards and loans by date (newest first)
-- Updated /app/credit-cards/page.tsx: Sort credit card listings by date
-- Updated /app/personal-loans/page.tsx: Sort loan listings by date
-- Updated /app/personal-finance/page.tsx: Sort personal finance posts by date
+- Added Barclaycard Avios Plus Credit Card (Traditional Banks category)
+  * Premium travel rewards with generous Avios points
+  * Dated 23 October 2025
+  
+- Added Yonder Credit Card (Fintech Solutions category)
+  * Free credit card with 1 point per £1 spent
+  * No foreign transaction fees
+  * Dated 23 October 2025
+  
+- Added Zopa Credit Card (Fintech Solutions category)
+  * Award-winning card management app
+  * Credit Cushion feature and instant notifications
+  * Dated 23 October 2025
 
-All pages now display content in reverse chronological order (newest first), ensuring users see the most recent posts at the top of each listing.
+All products now visible at https://uk.topfinanzas.com/financial-solutions with proper filtering by category type.
