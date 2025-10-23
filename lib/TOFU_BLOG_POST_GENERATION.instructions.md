@@ -38,13 +38,17 @@ Generate **one complete Next.js page component** (`page.tsx`) for each commissio
 **Output Deliverables**:
 
 1. `/app/personal-finance/{slug}/page.tsx` (or `/app/financial-solutions/{slug}/page.tsx` if the content focus demands it)
-2. Integration checklist summary covering required follow-up updates (blog listing, category page, sidebar, navigation)
+2. **Automatic Post-Publication Integration** (REQUIRED):
+   - Add the article to `/app/blog/page.tsx` in the `allPosts` array
+   - Add the article to `/app/personal-finance/page.tsx` in the `allPosts` array
+   - Update both arrays immediately after generating the page component
 
 **Key Tools**:
 
 - `fetch_txt` - retrieve CSV schema and sitemap data
 - `fetch_webpage` - validate facts against official UK sources
 - Workspace file system - inspect existing article templates for structure and class usage
+- `replace_string_in_file` - update blog and category page arrays
 
 ---
 
@@ -199,10 +203,63 @@ After generating the article component, plan updates across the site (see `.gith
 - Produce a full `page.tsx` component with imports, metadata, JSX hierarchy, and closing tags
 - Include hero image, ad placeholders, CTA, internal links, and disclaimer
 
-### Step 7: Quality Assurance and Integration Notes
+### Step 7: Quality Assurance
 
 - Confirm TypeScript validity, consistent class names, and accessible alt text
-- Summarise integration steps (listing, category page, sidebar, navigation) for follow-up work
+- Verify all required components are included and properly imported
+- Check that ad container div IDs are correct: `uk_topfinanzas_3` and `uk_topfinanzas_4`
+
+### Step 8: Post-Publication Integration (REQUIRED)
+
+**Automatically Add to Site Indexes**
+
+After generating the blog article component, you MUST immediately update the following files to make the article visible on public-facing pages:
+
+1. **Blog Main Page** (`/app/blog/page.tsx`):
+   - Add new entry to the `allPosts` array
+   - Include: title, slug, description, image, category ("Personal Finance"), categoryPath, date
+   - Place at the top of the array (most recent first)
+   - Use `replace_string_in_file` tool to update
+
+2. **Personal Finance Category Page** (`/app/personal-finance/page.tsx`):
+   - Add new entry to the `allPosts` array
+   - Include appropriate category tag (e.g., "guide", "creditCards", "loans", "debt")
+   - Place at the top of the array
+   - Use `replace_string_in_file` tool to update
+
+**Example Entry Format for Blog Page**:
+
+```typescript
+{
+  title: "Article Title | Top Finance UK",
+  slug: "article-slug",
+  description: "Compelling article description focusing on value to reader",
+  image: "https://media.topfinanzas.com/images/uk/article-image.webp",
+  category: "Personal Finance",
+  categoryPath: "/personal-finance",
+  date: "DD Month YYYY", // Current date in UK format (e.g., "23 October 2025")
+}
+```
+
+**Example Entry Format for Personal Finance Category Page**:
+
+```typescript
+{
+  title: "Article Title | Top Finance UK",
+  slug: "article-slug",
+  description: "Brief article description",
+  image: "https://media.topfinanzas.com/images/uk/article-image.webp",
+  date: "DD Month YYYY",
+  category: "guide", // Options: "guide", "creditCards", "loans", "debt"
+}
+```
+
+**CRITICAL**: This step is NOT optional. Articles that are not added to these indexes will remain invisible to users browsing the site. Always complete this integration step immediately after generating the page component.
+
+### Step 9: Optional Enhancements
+
+- Consider updating the blog sidebar in `components/mdx/blog-layout.tsx` if this is a flagship article
+- For standout content, suggest featuring on homepage or header navigation
 
 </ExpectedBehaviorAndInteraction>
 
@@ -304,38 +361,3 @@ export default function {ComponentName}Page() {
 - Avoid sensationalist language; keep promises realistic and highlight potential risks alongside benefits
 
 </EthicalGuidelines>
-
----
-
-## Summary: Complete Workflow for LLM Agents
-
-### Pre-Generation Checklist
-
-✅ Required user inputs supplied (pillar, keyword, title, content focus, funnel stage)  
-✅ Topic outline row located in the CSV  
-✅ Sitemap retrieved for current internal URLs  
-✅ Template articles reviewed for structural alignment
-
-### Execution Sequence
-
-1. Research the CSV row and related cluster entries
-2. Draft an outline that satisfies SEO intent and funnel stage guidance
-3. Generate the complete Next.js page component with metadata, ads, hero image, internal links, CTA, and disclaimer
-4. Provide integration checklist notes referencing required follow-up files
-
-### Success Criteria
-
-✅ Article component compiles without TypeScript errors  
-✅ Metadata, headings, and internal links align with SEO strategy  
-✅ Tone remains FCA-aware with no personalised advice  
-✅ Word count meets the recommended range for the article type  
-✅ CTA and integration notes supplied
-
-### Failure Points (Halt Generation)
-
-❌ Missing or ambiguous CSV data (keyword, title, content focus)  
-❌ Sitemap inaccessible (cannot guarantee internal links)  
-❌ Required UK compliance context unavailable  
-❌ Conflicting funnel stage or placement instructions
-
-**Action on Failure**: Notify the user with the specific blocker and request clarification or additional resources before continuing.

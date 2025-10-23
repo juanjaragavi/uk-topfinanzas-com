@@ -203,6 +203,18 @@ export default function BlogArchivePage() {
       categoryPath: "/personal-finance",
       date: "9 October 2025",
     },
+    {
+      title:
+        "Financial Uncoupling: A Compassionate Guide to Separating Finances During a Breakup",
+      slug: "financial-uncoupling-separating-finances-during-breakup",
+      description:
+        "Practical UK guidance on untangling joint accounts, managing shared debts, protecting your credit, and rebuilding financial independence after a relationship ends.",
+      image:
+        "https://media.topfinanzas.com/images/uk/financial-uncoupling-separating-finances-during-breakup.webp",
+      category: "Personal Finance",
+      categoryPath: "/personal-finance",
+      date: "23 October 2025",
+    },
     // Financial Solutions Posts (Add relevant ones)
     // Example: Add a few key ones, more can be added later
     {
