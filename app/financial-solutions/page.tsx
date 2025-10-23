@@ -364,6 +364,36 @@ export default function FinancialSolutionsPage() {
       date: "2 April 2025",
       type: "fintech",
     },
+    {
+      title: "Barclaycard Avios Plus Credit Card",
+      slug: "barclaycard-avios-plus",
+      description:
+        "The Barclaycard Avios Plus Credit Card offers premium travel perks and generous Avios points to enhance your travel experience and reward your everyday spending.",
+      image:
+        "https://media.topfinanzas.com/images/uk/credit-cards/718645348-top_prestamos-y-tarjetas-uk_v1-04.webp",
+      date: "23 October 2025",
+      type: "traditional",
+    },
+    {
+      title: "Yonder Credit Card",
+      slug: "yonder-credit-card",
+      description:
+        "The Yonder Free Credit Card earns 1 point per £1 spent with no fees abroad, plus a £10 welcome offer and 1,000 bonus points when you spend £1,000 in 30 days.",
+      image:
+        "https://media.topfinanzas.com/images/uk/credit-cards/719907902-top_prestamos-y-tarjetas-uk_v1-24.webp",
+      date: "23 October 2025",
+      type: "fintech",
+    },
+    {
+      title: "Zopa Credit Card",
+      slug: "zopa-credit-card",
+      description:
+        "The Zopa Credit Card puts you in complete control with an intuitive app, instant notifications, and innovative features like Credit Cushion – all backed by award-winning customer service.",
+      image:
+        "https://media.topfinanzas.com/images/uk/credit-cards/719908108-top_prestamos-y-tarjetas-uk_v1-26.webp",
+      date: "23 October 2025",
+      type: "fintech",
+    },
   ];
 
   // Date parsing utility function
