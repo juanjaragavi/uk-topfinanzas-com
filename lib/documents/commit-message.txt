@@ -1,52 +1,78 @@
-Fix: Update lifestyle creep article image URL across all pages
+Optimize: Restructure financial product generation system prompt for LLM workflows
 
 ISSUE:
-The lifestyle creep article was using an incorrect image URL that didn't match 
-the standardized URL pattern used for other articles. This caused inconsistency 
-in image references across multiple pages.
+The CREDIT_CARD_PRODUCT_GENERATION.instructions.md system prompt needed optimization 
+for better processing by LLM-based virtual assistants. The previous structure lacked 
+clear workflow guidance, had scattered information, and didn't provide quick reference 
+for agents to orient themselves.
 
 FILES MODIFIED:
-1. app/blog/page.tsx - Updated image URL in allPosts array
-2. app/personal-finance/page.tsx - Updated image URL in posts list
-3. components/mdx/blog-layout.tsx - Updated image URL in recent articles sidebar
-4. lib/documents/lifestyle-creep-article-summary.md - Updated documentation
+1. lib/CREDIT_CARD_PRODUCT_GENERATION.instructions.md - Complete restructuring
 
-CHANGES:
-- Old URL: https://media.topfinanzas.com/images/uk/what-is-lifestyle-creep-silent-wallet-drain.webp
-- New URL: https://media.topfinanzas.com/images/lifestyle-creep-personal-finance.webp
+CHANGES IMPLEMENTED:
+
+1. ENHANCED STRUCTURE:
+   - Added clear Role Definition and Primary Objective sections
+   - Created Quick Reference section for rapid agent orientation
+   - Reorganized all sections with better hierarchy and clarity
+
+2. OPTIMIZED RESOURCES SECTION:
+   - Separated into Primary/Secondary data sources
+   - Added explicit access methods (fetch_webpage, fetch_txt)
+   - Clarified data priority hierarchy
+
+3. EXPANDED CAPABILITIES SECTION:
+   - Organized into 7 logical categories:
+     * Data Acquisition & Processing
+     * Code Generation
+     * Content Creation
+     * UK Financial Compliance
+     * UK Market Localization
+     * Technical Implementation
+     * Quality Assurance
+
+4. IMPROVED LIMITATIONS SECTION:
+   - Structured into clear constraint categories
+   - Added "When to Halt Generation" checklist
+   - Clarified error conditions and boundaries
+
+5. COMPREHENSIVE WORKFLOW SECTION:
+   - Transformed into structured 7-step workflow
+   - Added Step 1-7 with clear subsections
+   - Enhanced error handling protocols
+   - Emphasized critical output requirements
+
+6. NEW SUMMARY SECTION:
+   - Pre-Generation Checklist
+   - Execution Sequence (7 steps)
+   - Success Criteria (10 checkpoints)
+   - Failure Points (5 halt conditions)
+   - Action on failure guidance
+
+VARIABLE OPTIMIZATION:
+- Converted example fields to {camelCase} variables:
+  * {blogPostCategory}, {productCategory}, {productName}
+  * {officialProductUrl}, {brandColorHex}, {heroImageUrl}
+  * {mainKeywords}, {pageTitle}, {contentFocus}
+  * {seoIntentType}, {customerJourneyStage}, etc.
 
 IMPACT:
-- Ensures consistent image URL pattern across the site
-- Maintains proper image loading for the lifestyle creep article
-- Updates documentation to reflect correct image path
-- No functional changes, purely URL standardization
-✅ Removes aria-hidden="true" from body element before browser blocks it
-✅ Eliminates Chrome DevTools console warning
-✅ Ensures page remains accessible to screen readers
-✅ Maintains WCAG 2.1 AA compliance
-✅ Follows WAI-ARIA best practices
+✅ Better LLM agent comprehension and execution
+✅ Clear sequential workflow from input to output
+✅ Multiple verification checkpoints throughout process
+✅ Explicit error handling and halt conditions
+✅ Quick orientation for new agents
+✅ Actionable, structured guidance
+✅ Maintains all FCA compliance requirements
+✅ Preserves all technical specifications
 
-WHAT REMAINS WORKING:
-✅ Ads display and function normally
-✅ Interstitial ads work correctly
-✅ Close buttons remain clickable
-✅ Revenue generation continues
-✅ No impact on ad functionality
-
-Build Status:
-✅ Compiled successfully in 21.0s
-✅ Generating static pages (111/111)
-✅ No errors or warnings
-
-Files Modified:
-- components/analytics/adzep-accessibility-fix.tsx: NEW component
-- app/layout.tsx: Added AdZepAccessibilityFix import and integration
-
-Testing Notes:
-- Console warning will no longer appear
-- aria-hidden attribute prevented from being set on body
-- Screen readers maintain full page access
-- Ads continue to display and function normally
+STRUCTURE IMPROVEMENTS:
+✅ Logical section flow and organization
+✅ Consistent formatting and hierarchy
+✅ Action-oriented language throughout
+✅ Clear tool specifications (fetch_webpage, fetch_txt)
+✅ Comprehensive success/failure criteria
+✅ Production-ready for virtual assistant workflows
 
 Priority: 🟢 MEDIUM - Accessibility compliance and console cleanliness
 Status: ✅ READY FOR DEPLOYMENT
