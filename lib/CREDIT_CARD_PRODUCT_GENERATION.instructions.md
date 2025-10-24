@@ -41,8 +41,11 @@ Each page must be:
 2. `/app/financial-solutions/{productSlug}-requirements/page.tsx` (requirements page)
 3. **Automatic Post-Publication Integration** (REQUIRED):
    - Add the product to `/app/blog/page.tsx` in the `allPosts` array under "Financial Solutions" category
+   - Add the product to `/app/financial-solutions/page.tsx` in the appropriate content array:
+     - For credit cards: add to `creditCardsContent` array with appropriate `type` ("traditional", "neobank", or "fintech")
+     - For personal loans: add to `allLoansContent` array with appropriate `type` ("personal", "sme_fintech", "neobank", "marketplace", or "guide")
    - **DO NOT** add products to `/app/personal-finance/page.tsx` - that page is ONLY for educational guides and articles, NOT individual product pages
-   - Update the blog array immediately after generating the page components
+   - Update both arrays immediately after generating the page components
 
 **Key Tools**:
 
@@ -454,7 +457,7 @@ When you receive a user request with product details including the **Official Pr
 
 **Automatically Add to Site Indexes**
 
-After generating both page components, you MUST immediately update the following file to make the product visible on public-facing pages:
+After generating both page components, you MUST immediately update the following TWO files to make the product visible on public-facing pages:
 
 1. **Blog Main Page** (`/app/blog/page.tsx`):
    - Add new entry to the `allPosts` array under the "Financial Solutions" category section
@@ -462,11 +465,23 @@ After generating both page components, you MUST immediately update the following
    - Place at the top of the "Financial Solutions" section (most recent first)
    - Use `replace_string_in_file` tool to update
 
+2. **Financial Solutions Category Page** (`/app/financial-solutions/page.tsx`):
+   - **For Credit Cards**: Add new entry to the `creditCardsContent` array
+     - Include: title, slug, description, image, date, type
+     - `type` must be one of: "traditional" (major banks), "neobank" (Monzo, Starling, etc.), or "fintech" (Curve, Bip, etc.)
+     - Place at the top of the array (most recent first)
+   - **For Personal Loans**: Add new entry to the `allLoansContent` array
+     - Include: title, slug, description, image, date, type
+     - `type` must be one of: "personal" (traditional banks), "sme_fintech" (business loans), "neobank" (digital banks), "marketplace" (comparison platforms), or "guide" (educational content)
+     - Place at the top of the array (most recent first)
+   - Use `replace_string_in_file` tool to update
+
 **IMPORTANT**:
 
 - **DO NOT** add product pages to `/app/personal-finance/page.tsx`
 - The Personal Finance page is ONLY for educational guides and comparison articles, NOT individual product pages
-- Product pages belong exclusively in the Financial Solutions category
+- Product pages must be added to BOTH the Blog page AND the Financial Solutions category page
+- Failing to add to Financial Solutions page will hide the product from the category listing
 
 **Example Entry Format for Blog Page**:
 
@@ -482,7 +497,33 @@ After generating both page components, you MUST immediately update the following
 }
 ```
 
-**CRITICAL**: This step is NOT optional. Product pages that are not added to these indexes will remain invisible to users browsing the site. Always complete this integration step immediately after generating the page components.
+**Example Entry Format for Financial Solutions Page (Credit Card)**:
+
+```typescript
+{
+  title: "Product Name",
+  slug: "product-slug",
+  description: "Brief product description focusing on key benefits and APR",
+  image: "https://media.topfinanzas.com/images/uk/product-image.webp",
+  date: "DD Month YYYY",
+  type: "fintech", // or "traditional" or "neobank"
+}
+```
+
+**Example Entry Format for Financial Solutions Page (Personal Loan)**:
+
+```typescript
+{
+  title: "Product Name",
+  slug: "product-slug",
+  description: "Brief product description focusing on key benefits",
+  image: "https://media.topfinanzas.com/images/uk/loans/product-image.webp",
+  date: "DD Month YYYY",
+  type: "personal", // or "sme_fintech", "neobank", "marketplace", "guide"
+}
+```
+
+**CRITICAL**: This step is NOT optional. Product pages that are not added to BOTH indexes will remain invisible or partially visible to users browsing the site. Always complete BOTH integration steps immediately after generating the page components.
 
 ### Error Handling
 

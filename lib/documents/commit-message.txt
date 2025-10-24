@@ -1,19 +1,11 @@
-feat: Add missing credit card products to Financial Solutions page
+Add Capital One UK and Marbles credit card product pages with comprehensive requirements documentation
 
-Added three missing credit card products to the Financial Solutions category page:
-
-- Added Barclaycard Avios Plus Credit Card (Traditional Banks category)
-  * Premium travel rewards with generous Avios points
-  * Dated 23 October 2025
-  
-- Added Yonder Credit Card (Fintech Solutions category)
-  * Free credit card with 1 point per £1 spent
-  * No foreign transaction fees
-  * Dated 23 October 2025
-  
-- Added Zopa Credit Card (Fintech Solutions category)
-  * Award-winning card management app
-  * Credit Cushion feature and instant notifications
-  * Dated 23 October 2025
-
-All products now visible at https://uk.topfinanzas.com/financial-solutions with proper filtering by category type.
+- Create Capital One UK Classic Card benefits and requirements pages
+- Create Marbles Credit Card benefits and requirements pages
+- Update CREDIT_CARD_PRODUCT_GENERATION.instructions.md with dual-indexing requirements
+- Update prompt template for Capital One UK product generation
+- Add complete product details, eligibility criteria, costs, and application processes
+- Include FCA-compliant disclaimers and representative APR examples
+- Add internal linking to related financial guides and educational content
+- Implement brand color styling (#1E1F39 for Capital One, #ec8117 for Marbles)
+- All pages include AIContentDisclaimer and follow project design patterns

@@ -265,12 +265,39 @@ export default function FinancialSolutionsPage() {
   // List of credit card content with types
   const creditCardsContent = [
     {
+      title: "Capital One UK Classic Card",
+      slug: "capital-one-uk-credit-card",
+      description:
+        "The Capital One UK Classic Card helps you build your credit score with a starting credit limit of £200-£1,500, flexible payments, and no annual fee. Get a decision in 60 seconds.",
+      image:
+        "https://media.topfinanzas.com/images/uk/capital-one-uk-credit-card.webp",
+      date: "23 October 2025",
+      type: "traditional",
+    },
+    {
+      title: "Marbles Credit Card",
+      slug: "marbles-credit-card",
+      description:
+        "The Marbles Credit Card helps you manage your finances with a manageable credit limit from £250 to £1,500, FastCheck eligibility checker, no annual fee, and flexible account management tools. Representative APR 34.9% (variable).",
+      image: "https://media.topfinanzas.com/images/uk/marbles-credit-card.webp",
+      date: "23 October 2025",
+      type: "fintech",
+    },
+    {
+      title: "Aqua Credit Card",
+      slug: "aqua-credit-card",
+      description:
+        "The Aqua Credit Card offers personalised credit limits, expert support tools, and 24/7 fraud protection to help you build better credit with confidence and security. Representative APR 34.9% (variable).",
+      image: "https://media.topfinanzas.com/images/uk/aqua-credit-card.webp",
+      date: "23 October 2025",
+      type: "fintech",
+    },
+    {
       title: "Bip Credit Card",
       slug: "bip-credit-card",
       description:
         "Discover the Bip Credit Card - a revolutionary cardless credit solution with no hidden fees, spending caps, and instant balance updates. Representative APR 34.9% (variable).",
-      image:
-        "https://media.topfinanzas.com/images/uk/bip-credit-card.webp",
+      image: "https://media.topfinanzas.com/images/uk/bip-credit-card.webp",
       date: "23 October 2025",
       type: "fintech",
     },
@@ -379,8 +406,7 @@ export default function FinancialSolutionsPage() {
       slug: "barclaycard-avios-plus",
       description:
         "The Barclaycard Avios Plus Credit Card offers premium travel perks and generous Avios points to enhance your travel experience and reward your everyday spending.",
-      image:
-        "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
+      image: "https://media.topfinanzas.com/images/barclaycard-avios-plus.webp",
       date: "23 October 2025",
       type: "traditional",
     },
@@ -399,8 +425,7 @@ export default function FinancialSolutionsPage() {
       slug: "zopa-credit-card",
       description:
         "The Zopa Credit Card puts you in complete control with an intuitive app, instant notifications, and innovative features like Credit Cushion – all backed by award-winning customer service.",
-      image:
-        "https://media.topfinanzas.com/images/uk/zopa-credit-card.webp",
+      image: "https://media.topfinanzas.com/images/uk/zopa-credit-card.webp",
       date: "23 October 2025",
       type: "fintech",
     },
@@ -436,12 +461,12 @@ export default function FinancialSolutionsPage() {
         if (pattern === patterns[0]) {
           day = parseInt(match[1], 10);
           month = monthNames.findIndex(
-            (m) => m.toLowerCase() === match[2].toLowerCase()
+            (m) => m.toLowerCase() === match[2].toLowerCase(),
           );
           year = parseInt(match[3], 10);
         } else if (pattern === patterns[1]) {
           month = monthNames.findIndex(
-            (m) => m.toLowerCase() === match[1].toLowerCase()
+            (m) => m.toLowerCase() === match[1].toLowerCase(),
           );
           day = parseInt(match[2], 10);
           year = parseInt(match[3], 10);
@@ -461,11 +486,11 @@ export default function FinancialSolutionsPage() {
 
   // Sort and filter content based on selected category and type
   const sortedCreditCards = [...creditCardsContent].sort(
-    (a, b) => parseDate(b.date || "") - parseDate(a.date || "")
+    (a, b) => parseDate(b.date || "") - parseDate(a.date || ""),
   );
 
   const sortedLoans = [...allLoansContent].sort(
-    (a, b) => parseDate(b.date || "") - parseDate(a.date || "")
+    (a, b) => parseDate(b.date || "") - parseDate(a.date || ""),
   );
 
   const filteredCreditCards =

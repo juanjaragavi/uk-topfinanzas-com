@@ -165,12 +165,12 @@ export default function CreditCardsArchivePage() {
         if (pattern === patterns[0]) {
           day = parseInt(match[1], 10);
           month = monthNames.findIndex(
-            (m) => m.toLowerCase() === match[2].toLowerCase()
+            (m) => m.toLowerCase() === match[2].toLowerCase(),
           );
           year = parseInt(match[3], 10);
         } else if (pattern === patterns[1]) {
           month = monthNames.findIndex(
-            (m) => m.toLowerCase() === match[1].toLowerCase()
+            (m) => m.toLowerCase() === match[1].toLowerCase(),
           );
           day = parseInt(match[2], 10);
           year = parseInt(match[3], 10);
@@ -190,7 +190,7 @@ export default function CreditCardsArchivePage() {
 
   // Sort posts by date (newest first)
   const sortedCreditCards = [...creditCardsContent].sort(
-    (a, b) => parseDate(b.date || "") - parseDate(a.date || "")
+    (a, b) => parseDate(b.date || "") - parseDate(a.date || ""),
   );
 
   // No filtering needed, just display the sorted credit card content

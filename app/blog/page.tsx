@@ -41,12 +41,34 @@ export default function BlogArchivePage() {
   const allPosts: PostItem[] = [
     // Financial Solutions - Credit Cards
     {
+      title:
+        "Capital One UK Classic Card: Build Your Credit Score - Top Finance UK",
+      slug: "capital-one-uk-credit-card",
+      description:
+        "The Capital One UK Classic Card helps you build your credit score with a starting credit limit of £200-£1,500, flexible payments, and no annual fee. Get a decision in 60 seconds.",
+      image:
+        "https://media.topfinanzas.com/images/uk/capital-one-uk-credit-card.webp",
+      category: "Financial Solutions",
+      categoryPath: "/financial-solutions",
+      date: "23 October 2025",
+    },
+    {
+      title:
+        "Aqua Credit Card: Build Better Credit with Smart Features | Top Finance UK",
+      slug: "aqua-credit-card",
+      description:
+        "The Aqua Credit Card offers personalised credit limits, expert support tools, and 24/7 fraud protection to help you build better credit with confidence and security. Representative APR 34.9% (variable).",
+      image: "https://media.topfinanzas.com/images/uk/aqua-credit-card.webp",
+      category: "Financial Solutions",
+      categoryPath: "/financial-solutions",
+      date: "23 October 2025",
+    },
+    {
       title: "Bip Credit Card: Cardless Credit You Control | Top Finance UK",
       slug: "bip-credit-card",
       description:
         "Discover the Bip Credit Card - a revolutionary cardless credit solution with no hidden fees, spending caps, and instant balance updates. Representative APR 34.9% (variable).",
-      image:
-        "https://media.topfinanzas.com/images/uk/bip-credit-card.webp",
+      image: "https://media.topfinanzas.com/images/uk/bip-credit-card.webp",
       category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "23 October 2025",
@@ -69,6 +91,17 @@ export default function BlogArchivePage() {
       description:
         "Discover the Zopa Credit Card with effortless app management, Credit Cushion feature, no foreign fees, and award-winning customer service. Best Credit Card Provider at British Bank Awards 2024 & 2025.",
       image: "https://media.topfinanzas.com/images/uk/zopa-credit-card.webp",
+      category: "Financial Solutions",
+      categoryPath: "/financial-solutions",
+      date: "23 October 2025",
+    },
+    {
+      title:
+        "Marbles Credit Card: Stay in Control of Your Finances | Top Finance UK",
+      slug: "marbles-credit-card",
+      description:
+        "The Marbles Credit Card helps you manage your finances with a manageable credit limit from £250 to £1,500, FastCheck eligibility checker, no annual fee, and flexible account management tools. Representative APR 34.9% (variable).",
+      image: "https://media.topfinanzas.com/images/uk/marbles-credit-card.webp",
       category: "Financial Solutions",
       categoryPath: "/financial-solutions",
       date: "23 October 2025",
@@ -336,7 +369,7 @@ export default function BlogArchivePage() {
   };
 
   const allPostsSorted: PostItem[] = [...allPosts].sort(
-    (a, b) => parseDate(b.date) - parseDate(a.date)
+    (a, b) => parseDate(b.date) - parseDate(a.date),
   );
 
   // Filter posts based on active category
@@ -345,25 +378,25 @@ export default function BlogArchivePage() {
 
     if (activeCategory === "personalFinance") {
       filteredPosts = allPostsSorted.filter(
-        (post) => post.category === "Personal Finance"
+        (post) => post.category === "Personal Finance",
       );
     } else if (activeCategory === "financialSolutions") {
       filteredPosts = allPostsSorted.filter(
-        (post) => post.category === "Financial Solutions"
+        (post) => post.category === "Financial Solutions",
       );
     } else if (activeCategory === "creditCards") {
       filteredPosts = allPostsSorted.filter(
         (post) =>
           post.title.toLowerCase().includes("credit card") ||
           post.slug.toLowerCase().includes("credit-card") ||
-          post.description.toLowerCase().includes("credit card")
+          post.description.toLowerCase().includes("credit card"),
       );
     } else if (activeCategory === "loans") {
       filteredPosts = allPostsSorted.filter(
         (post) =>
           post.title.toLowerCase().includes("loan") ||
           post.slug.toLowerCase().includes("loan") ||
-          post.description.toLowerCase().includes("loan")
+          post.description.toLowerCase().includes("loan"),
       );
     }
 
