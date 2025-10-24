@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD033 MD041 MD036 -->
 
 # Empty Overlay Fix - Quick Summary
 
@@ -44,7 +44,7 @@ npm run dev
 
 **Look for:**
 
-```
+```bash
 [AdZep Backdrop Cleaner] Removing orphaned backdrop: ...
 [AdZep Backdrop Cleaner] Cleaned up X orphaned backdrop(s)
 [AdZep] Calling window.AdZepActivateAds()

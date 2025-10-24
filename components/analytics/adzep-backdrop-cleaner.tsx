@@ -145,7 +145,7 @@ export default function AdZepBackdropCleaner() {
                   id: child.id,
                   className: child.className,
                   tagName: child.tagName,
-                }
+                },
               );
             }
 
@@ -169,7 +169,7 @@ export default function AdZepBackdropCleaner() {
 
         if (process.env.NODE_ENV === "development") {
           console.log(
-            `[AdZep Backdrop Cleaner] Cleaned up ${removedCount} orphaned backdrop(s) and restored body overflow`
+            `[AdZep Backdrop Cleaner] Cleaned up ${removedCount} orphaned backdrop(s) and restored body overflow`,
           );
         }
       }

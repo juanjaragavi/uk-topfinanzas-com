@@ -265,6 +265,56 @@ export default function FinancialSolutionsPage() {
   // List of credit card content with types
   const creditCardsContent = [
     {
+      title: "M&S Rewards Credit Card",
+      slug: "ms-rewards-credit-card",
+      description:
+        "The M&S Rewards Credit Card offers reward points on all spending at M&S and beyond, exclusive member benefits, and competitive rates with no annual fee. Representative 23.9% APR (variable).",
+      image:
+        "https://media.topfinanzas.com/images/uk/ms-rewards-credit-card.webp",
+      date: "24 October 2025",
+      type: "traditional",
+    },
+    {
+      title: "Tesco Bank Clubcard Credit Cards",
+      slug: "tesco-bank-clubcard-credit-cards",
+      description:
+        "Discover Tesco Bank Clubcard Credit Cards offering 0% introductory rates, low APR options, and Clubcard points on everyday spending. Representative 24.9% APR (variable). Build credit whilst earning rewards.",
+      image:
+        "https://media.topfinanzas.com/images/uk/tesco-bank-clubcard-credit-cards.webp",
+      date: "24 October 2025",
+      type: "traditional",
+    },
+    {
+      title: "American Express Preferred Rewards Gold Credit Card",
+      slug: "american-express-preferred-rewards-gold-credit-card",
+      description:
+        "The American Express Gold Card offers premium Membership Rewards points, comprehensive travel insurance, and exclusive lifestyle benefits with a £140 annual fee. Representative 24.9% APR (variable).",
+      image:
+        "https://media.topfinanzas.com/images/uk/american-express-preferred-rewards-gold-credit-card.webp",
+      date: "24 October 2025",
+      type: "traditional",
+    },
+    {
+      title: "Nationwide Building Society Credit Card",
+      slug: "nationwide-building-society-credit-card",
+      description:
+        "Nationwide's Member Credit Card offers two introductory 0% options: up to 24 months on balance transfers or 15 months on purchases. Representative 24.9% APR (variable). Available exclusively to Nationwide members.",
+      image:
+        "https://media.topfinanzas.com/images/uk/nationwide-building-society-credit-card.webp",
+      date: "24 October 2025",
+      type: "traditional",
+    },
+    {
+      title: "HSBC Rewards Credit Card",
+      slug: "hsbc-rewards-credit-card",
+      description:
+        "The HSBC Rewards Credit Card offers reward points on everyday spending, 0% interest on purchases for 6 months, and a £25 welcome bonus. Representative 26.9% APR (variable).",
+      image:
+        "https://media.topfinanzas.com/images/uk/hsbc-rewards-credit-card.webp",
+      date: "24 October 2025",
+      type: "traditional",
+    },
+    {
       title: "Ocean Credit Card",
       slug: "ocean-credit-card",
       description:

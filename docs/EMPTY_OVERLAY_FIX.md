@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD033 MD041 MD036 -->
 
 # AdZep Empty Overlay Fix
 
@@ -6,7 +6,7 @@
 
 When users click on certain links or buttons, an empty blurred overlay appears instead of showing the interstitial ad unit with a 'Close' button. The console logs show:
 
-```
+```bash
 Render ended: gpt_unit_/28062819508/uk_topfinanzas_com_mob_interstitial_0, isDisplay: false
 Div de anuncio no encontrada para slotId uk_topfinanzas_com_mob_3
 ```
@@ -145,7 +145,7 @@ Verified that `window.AdZepActivateAds()` is being called correctly:
 
 2. **Monitor Console Output**
 
-   ```
+   ```bash
    [AdZep Backdrop Cleaner] Removing orphaned backdrop: { id: "", className: "...", tagName: "DIV" }
    [AdZep Backdrop Cleaner] Cleaned up 1 orphaned backdrop(s) and restored body overflow
    [AdZep] Calling window.AdZepActivateAds()
@@ -236,7 +236,7 @@ Verified that `window.AdZepActivateAds()` is being called correctly:
 
 1. **Check Console Logs**
 
-   ```
+   ```bash
    [AdZep Backdrop Cleaner] Removing orphaned backdrop: ...
    ```
 
@@ -249,6 +249,7 @@ Verified that `window.AdZepActivateAds()` is being called correctly:
 
 3. **Adjust Detection Logic**
    If needed, update `isBackdropElement()` in `adzep-backdrop-cleaner.tsx`:
+
    ```typescript
    const hasBackdropName =
      htmlElement.className?.toLowerCase().includes("backdrop") ||
@@ -269,6 +270,7 @@ Verified that `window.AdZepActivateAds()` is being called correctly:
 
 2. **Add Whitelisting**
    Exclude specific elements from removal:
+
    ```typescript
    if (child.hasAttribute("data-legitimate-ad")) {
      continue;

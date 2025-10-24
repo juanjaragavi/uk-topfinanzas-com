@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD013 MD024 MD033 MD036 MD041 -->
 
 # Financial Product Page Generator - System Prompt
 

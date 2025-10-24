@@ -1,5 +1,3 @@
-<!-- markdownlint-disable MD033 MD041 MD036 -->
-
 # Financial Product Page Generation Request
 
 Generate a financial product page pair (benefits and requirements), following these rules:
@@ -12,7 +10,7 @@ Generate a financial product page pair (benefits and requirements), following th
 
 - **Blog Post Category:** Financial Solutions
 - **Product Category:** Credit Cards (or Personal Loans)
-- **Product Name:** [Product Name Here]
+- **Product Name:** [Product Name]
 - **Provider:** [Provider Name]
 - **Official Product URL:** [Official URL]
 - **Main Keywords:** Credit Cards, [Product Name]
@@ -35,9 +33,9 @@ Generate a financial product page pair (benefits and requirements), following th
 
 ### Primary Data Source
 
-**Official Product Website**
+#### Official Product Website
 
-- **URL**: [Official product URL]
+- **URL**: [Official URL]
 - **Access method**: Use `fetch_webpage` tool
 - **Priority**: Highest - always prioritize for current rates, fees, terms
 - **Extract**:
@@ -52,7 +50,7 @@ Generate a financial product page pair (benefits and requirements), following th
 
 ### Secondary Data Source
 
-**CSV Topic Outline Database**
+#### CSV Topic Outline Database
 
 - **Location**: `lib/documents/topfinanzas-us-topic-outline.csv`
 - **Access method**: Use `fetch_txt` tool
@@ -67,7 +65,7 @@ Generate a financial product page pair (benefits and requirements), following th
 
 ### Internal Linking Resource
 
-**UK Site Sitemap**
+#### UK Site Sitemap
 
 - **Location**: <https://uk.topfinanzas.com/sitemap.xml>
 - **Access method**: Use `fetch_txt` tool
@@ -80,7 +78,7 @@ Generate a financial product page pair (benefits and requirements), following th
 
 1. **Read System Prompt**: First, locate and read the complete system prompt at `/lib/CREDIT_CARD_PRODUCT_GENERATION.instructions.md` to understand all requirements, structures, and compliance rules.
 
-2. **Browse the Official Product URL**: Navigate to [Official product URL] using `fetch_webpage` and extract all relevant information:
+2. **Browse the Official Product URL**: Navigate to [Official URL] using `fetch_webpage` and extract all relevant information:
    - Product features and benefits (minimum 4 key features)
    - APR rates and interest rate information
    - Annual fees, application fees, and other charges
@@ -135,13 +133,13 @@ Generate a financial product page pair (benefits and requirements), following th
 TWO complete Next.js page components:
 
 1. **Main Product Benefits Page**
-   - **File**: `/app/financial-solutions/ocean-credit-card/page.tsx`
+   - **File**: `/app/financial-solutions/[product-slug]/page.tsx`
    - **Focus**: Features, benefits, rewards, value propositions
    - **Sections**: Introduction, key features, detailed benefits, CTAs
    - **Links**: Requirements page, related products, relevant guides
 
 2. **Requirements Page**
-   - **File**: `/app/financial-solutions/ocean-credit-card-requirements/page.tsx`
+   - **File**: `/app/financial-solutions/[product-slug]-requirements/page.tsx`
    - **Focus**: Eligibility, application process, costs, documentation
    - **Sections**: Qualification criteria, required docs, costs/fees, application steps, FAQs
    - **Links**: Benefits page, related products, personal finance guides
@@ -150,7 +148,7 @@ Both files must:
 
 - Use `data-category="credit-cards"` attribute
 - Include complete `generateMetadata()` function
-- Apply brand color (#0a629c) to buttons and accents
+- Apply brand color (#[hexcode]) to buttons and accents
 - Contain FCA-compliant disclaimers and representative APR examples
 - Follow existing template structure and styling patterns
 - Be production-ready with no placeholders or TODOs

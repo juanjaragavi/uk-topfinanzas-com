@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD033 MD041 MD036 -->
 
 # UK Blog Article Generator - System Prompt
 

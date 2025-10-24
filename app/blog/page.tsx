@@ -42,6 +42,66 @@ export default function BlogArchivePage() {
     // Financial Solutions - Credit Cards
     {
       title:
+        "M&S Rewards Credit Card: Earn Points on Every Purchase - Top Finance UK",
+      slug: "ms-rewards-credit-card",
+      description:
+        "Discover the M&S Rewards Credit Card offering reward points on all spending at M&S and beyond, exclusive member benefits, and competitive rates. Representative 23.9% APR (variable).",
+      image:
+        "https://media.topfinanzas.com/images/uk/ms-rewards-credit-card.webp",
+      category: "Financial Solutions",
+      categoryPath: "/financial-solutions",
+      date: "24 October 2025",
+    },
+    {
+      title:
+        "Tesco Bank Clubcard Credit Cards: Earn Points on Every Purchase - Top Finance UK",
+      slug: "tesco-bank-clubcard-credit-cards",
+      description:
+        "Discover Tesco Bank Clubcard Credit Cards offering 0% introductory rates, low APR options, and Clubcard points on everyday spending. Representative 24.9% APR (variable). Build credit whilst earning rewards.",
+      image:
+        "https://media.topfinanzas.com/images/uk/tesco-bank-clubcard-credit-cards.webp",
+      category: "Financial Solutions",
+      categoryPath: "/financial-solutions",
+      date: "24 October 2025",
+    },
+    {
+      title:
+        "American Express Preferred Rewards Gold Credit Card: Exclusive Travel & Lifestyle Benefits - Top Finance UK",
+      slug: "american-express-preferred-rewards-gold-credit-card",
+      description:
+        "The American Express Gold Card offers premium Membership Rewards points, comprehensive travel insurance, and exclusive lifestyle benefits with a £140 annual fee. Representative 24.9% APR (variable).",
+      image:
+        "https://media.topfinanzas.com/images/uk/american-express-preferred-rewards-gold-credit-card.webp",
+      category: "Financial Solutions",
+      categoryPath: "/financial-solutions",
+      date: "24 October 2025",
+    },
+    {
+      title:
+        "Nationwide Building Society Credit Card: Exclusive Member Benefits & 0% Offers - Top Finance UK",
+      slug: "nationwide-building-society-credit-card",
+      description:
+        "Nationwide's Member Credit Card offers two introductory 0% options: up to 24 months on balance transfers or 15 months on purchases. Representative 24.9% APR (variable). Available exclusively to Nationwide members.",
+      image:
+        "https://media.topfinanzas.com/images/uk/nationwide-building-society-credit-card.webp",
+      category: "Financial Solutions",
+      categoryPath: "/financial-solutions",
+      date: "24 October 2025",
+    },
+    {
+      title:
+        "HSBC Rewards Credit Card: Earn Points on Every Purchase - Top Finance UK",
+      slug: "hsbc-rewards-credit-card",
+      description:
+        "The HSBC Rewards Credit Card offers reward points on everyday spending, 0% interest on purchases for 6 months, and a £25 welcome bonus. Representative 26.9% APR (variable).",
+      image:
+        "https://media.topfinanzas.com/images/uk/hsbc-rewards-credit-card.webp",
+      category: "Financial Solutions",
+      categoryPath: "/financial-solutions",
+      date: "24 October 2025",
+    },
+    {
+      title:
         "Ocean Credit Card: Check Your Eligibility in 60 Seconds - Top Finance UK",
       slug: "ocean-credit-card",
       description:
