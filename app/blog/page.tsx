@@ -41,6 +41,17 @@ export default function BlogArchivePage() {
   const allPosts: PostItem[] = [
     // Financial Solutions - Credit Cards
     {
+      title: "Bip Credit Card: Cardless Credit You Control | Top Finance UK",
+      slug: "bip-credit-card",
+      description:
+        "Discover the Bip Credit Card - a revolutionary cardless credit solution with no hidden fees, spending caps, and instant balance updates. Representative APR 34.9% (variable).",
+      image:
+        "https://media.topfinanzas.com/images/uk/bip-credit-card.webp",
+      category: "Financial Solutions",
+      categoryPath: "/financial-solutions",
+      date: "23 October 2025",
+    },
+    {
       title:
         "Yonder Credit Card: Epic Rewards with No Foreign Transaction Fees | Top Finance UK",
       slug: "yonder-credit-card",
