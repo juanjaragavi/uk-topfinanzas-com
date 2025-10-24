@@ -265,6 +265,35 @@ export default function FinancialSolutionsPage() {
   // List of credit card content with types
   const creditCardsContent = [
     {
+      title: "John Lewis Partnership Card",
+      slug: "john-lewis-partnership-card",
+      description:
+        "The John Lewis Partnership Credit Card lets you earn valuable points on everyday purchases at John Lewis, Waitrose, and beyond. Enjoy double points for 60 days and exclusive cardholder offers. Representative 29.9% APR (variable).",
+      image:
+        "https://media.topfinanzas.com/images/uk/john-lewis-partnership-card.webp",
+      date: "23 October 2025",
+      type: "traditional",
+    },
+    {
+      title: "118 118 Money Credit Card",
+      slug: "118-118-money-credit-card",
+      description:
+        "The 118 118 Money Credit Card offers guaranteed personalised credit limits and transparent terms to help you build or rebuild your credit score with expert support. Representative 49.0% APR (variable).",
+      image:
+        "https://media.topfinanzas.com/images/uk/118-118-money-credit-card.webp",
+      date: "23 October 2025",
+      type: "fintech",
+    },
+    {
+      title: "Vanquis Credit Card",
+      slug: "vanquis-credit-card",
+      description:
+        "Vanquis Credit Cards offer personalised limits from £250-£7,000, award-winning credit building features, and 0% balance transfers for up to 19 months. Named Credit Builder Card Provider of the Year 2023-2025. Representative 37.9% APR (variable).",
+      image: "https://media.topfinanzas.com/images/uk/vanquis-credit-card.webp",
+      date: "23 October 2025",
+      type: "traditional",
+    },
+    {
       title: "Capital One UK Classic Card",
       slug: "capital-one-uk-credit-card",
       description:

@@ -1,11 +1,13 @@
-Add Capital One UK and Marbles credit card product pages with comprehensive requirements documentation
+Add John Lewis Partnership Card product pages with comprehensive benefits and requirements documentation
 
-- Create Capital One UK Classic Card benefits and requirements pages
-- Create Marbles Credit Card benefits and requirements pages
-- Update CREDIT_CARD_PRODUCT_GENERATION.instructions.md with dual-indexing requirements
-- Update prompt template for Capital One UK product generation
-- Add complete product details, eligibility criteria, costs, and application processes
-- Include FCA-compliant disclaimers and representative APR examples
-- Add internal linking to related financial guides and educational content
-- Implement brand color styling (#1E1F39 for Capital One, #ec8117 for Marbles)
+- Create John Lewis Partnership Card benefits page with rewards structure and features
+- Create John Lewis Partnership Card requirements page with eligibility criteria
+- Add product to blog page (allPosts array) under Financial Solutions category
+- Add product to financial solutions page (creditCardsContent array) as traditional card type
+- Include detailed rewards information: double points for 60 days, automatic vouchers, exclusive perks
+- Document complete costs: 29.9% APR (variable), no annual fee, cash withdrawal fees
+- Add FCA-compliant disclaimers and representative APR examples
+- Implement brand color styling (#DFFF7B for John Lewis)
+- Include comprehensive FAQ section and step-by-step application process
+- Add internal linking to related rewards and credit card guides
 - All pages include AIContentDisclaimer and follow project design patterns
