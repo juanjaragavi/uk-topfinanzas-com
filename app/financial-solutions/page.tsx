@@ -265,6 +265,15 @@ export default function FinancialSolutionsPage() {
   // List of credit card content with types
   const creditCardsContent = [
     {
+      title: "Ocean Credit Card",
+      slug: "ocean-credit-card",
+      description:
+        "The Ocean Credit Card offers credit limits from £200 to £8,000 with no annual fee. Check your eligibility with QuickCheck without affecting your credit score. Representative 39.9% APR (variable).",
+      image: "https://media.topfinanzas.com/images/uk/ocean-credit-card.webp",
+      date: "23 October 2025",
+      type: "fintech",
+    },
+    {
       title: "Fluid Credit Card",
       slug: "fluid-credit-card",
       description:

@@ -42,6 +42,17 @@ export default function BlogArchivePage() {
     // Financial Solutions - Credit Cards
     {
       title:
+        "Ocean Credit Card: Check Your Eligibility in 60 Seconds - Top Finance UK",
+      slug: "ocean-credit-card",
+      description:
+        "The Ocean Credit Card offers credit limits from £200 to £8,000 with no annual fee. Check your eligibility with QuickCheck without affecting your credit score. Representative 39.9% APR (variable).",
+      image: "https://media.topfinanzas.com/images/uk/ocean-credit-card.webp",
+      category: "Financial Solutions",
+      categoryPath: "/financial-solutions",
+      date: "23 October 2025",
+    },
+    {
+      title:
         "Fluid Credit Card: Cut Your Credit Card Costs with Balance Transfers - Top Finance UK",
       slug: "fluid-credit-card",
       description:
