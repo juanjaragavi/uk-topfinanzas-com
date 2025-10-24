@@ -42,6 +42,17 @@ export default function BlogArchivePage() {
     // Financial Solutions - Credit Cards
     {
       title:
+        "Fluid Credit Card: Cut Your Credit Card Costs with Balance Transfers - Top Finance UK",
+      slug: "fluid-credit-card",
+      description:
+        "The Fluid Credit Card offers 0% interest on balance transfers for 9 months (3% fee), helping you save on interest charges and clear your credit card debt faster. Representative 34.9% APR (variable).",
+      image: "https://media.topfinanzas.com/images/uk/fluid-credit-card.webp",
+      category: "Financial Solutions",
+      categoryPath: "/financial-solutions",
+      date: "23 October 2025",
+    },
+    {
+      title:
         "John Lewis Partnership Card: Earn Rewards on Everyday Shopping - Top Finance UK",
       slug: "john-lewis-partnership-card",
       description:

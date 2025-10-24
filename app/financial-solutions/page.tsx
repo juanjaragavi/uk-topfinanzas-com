@@ -265,6 +265,15 @@ export default function FinancialSolutionsPage() {
   // List of credit card content with types
   const creditCardsContent = [
     {
+      title: "Fluid Credit Card",
+      slug: "fluid-credit-card",
+      description:
+        "The Fluid Credit Card offers 0% interest on balance transfers for 9 months (3% fee), helping you save on interest charges and clear your credit card debt faster. Representative 34.9% APR (variable).",
+      image: "https://media.topfinanzas.com/images/uk/fluid-credit-card.webp",
+      date: "23 October 2025",
+      type: "fintech",
+    },
+    {
       title: "John Lewis Partnership Card",
       slug: "john-lewis-partnership-card",
       description:

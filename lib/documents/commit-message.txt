@@ -1,13 +1,16 @@
-Add John Lewis Partnership Card product pages with comprehensive benefits and requirements documentation
+Add Fluid Credit Card product pages with comprehensive balance transfer benefits and requirements documentation
 
-- Create John Lewis Partnership Card benefits page with rewards structure and features
-- Create John Lewis Partnership Card requirements page with eligibility criteria
+- Create Fluid Credit Card benefits page with 0% balance transfer offer and features
+- Create Fluid Credit Card requirements page with eligibility criteria and exclusion rules
 - Add product to blog page (allPosts array) under Financial Solutions category
-- Add product to financial solutions page (creditCardsContent array) as traditional card type
-- Include detailed rewards information: double points for 60 days, automatic vouchers, exclusive perks
-- Document complete costs: 29.9% APR (variable), no annual fee, cash withdrawal fees
+- Add product to financial solutions page (creditCardsContent array) as fintech card type
+- Include detailed balance transfer information: 9 months 0% APR, 3% fee, 60-day application window
+- Document complete costs: 34.9% APR (variable), no annual fee, credit limits £250-£4,000
+- Add FastCheck eligibility tool information (60-second check, no credit impact)
+- Include comprehensive exclusion criteria (bankruptcy, CCJ, existing NewDay cards)
 - Add FCA-compliant disclaimers and representative APR examples
-- Implement brand color styling (#DFFF7B for John Lewis)
-- Include comprehensive FAQ section and step-by-step application process
-- Add internal linking to related rewards and credit card guides
+- Implement brand color styling (#642667 for Fluid)
+- Include detailed FAQ section and step-by-step application process
+- Add internal linking to debt management and credit card guides
 - All pages include AIContentDisclaimer and follow project design patterns
+- Update prompt template for future product generation

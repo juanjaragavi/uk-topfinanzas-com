@@ -12,11 +12,11 @@ Generate a financial product page pair (benefits and requirements), following th
 
 - **Blog Post Category:** Financial Solutions
 - **Product Category:** Credit Cards (or Personal Loans)
-- **Product Name:** John Lewis Partnership Card
-- **Provider:** John Lewis Money
-- **Official Product URL:** <https://www.johnlewisfinance.com/partnership-credit-card>
-- **Main Keywords:** Credit Cards, John Lewis Partnership Card
-- **Page Title:** Discover the Benefits of John Lewis Partnership Card
+- **Product Name:** Fluid Credit Card
+- **Provider:** Fluid
+- **Official Product URL:** <https://fluid.co.uk>
+- **Main Keywords:** Credit Cards, Fluid Credit Card
+- **Page Title:** Discover the Benefits of Fluid Credit Card
 - **Content Focus:** Product features, benefits, eligibility, application process
 - **SEO Intent Type:** Commercial/Transactional
 - **Funnel Stage:** MOFU/BOFU (Consideration/Decision)
@@ -25,9 +25,9 @@ Generate a financial product page pair (benefits and requirements), following th
 
 ## Brand and Visual Assets
 
-- **Brand Color:** #DFFF7B (hex color code for primary brand buttons/accents)
-- **Hero Image URL:** <https://media.topfinanzas.com/images/uk/john-lewis-partnership-card.webp>
-- **Requirements Image URL:** <https://media.topfinanzas.com/images/uk/john-lewis-partnership-card-requirements.webp>
+- **Brand Color:** #642667 (hex color code for primary brand buttons/accents)
+- **Hero Image URL:** <https://media.topfinanzas.com/images/uk/fluid-credit-card.webp>
+- **Requirements Image URL:** <https://media.topfinanzas.com/images/uk/fluid-credit-card-requirements.webp>
 
 ## Data Sources
 
@@ -37,7 +37,7 @@ Generate a financial product page pair (benefits and requirements), following th
 
 **Official Product Website**
 
-- **URL**: <https://www.johnlewisfinance.com/partnership-credit-card>
+- **URL**: <https://fluid.co.uk>
 - **Access method**: Use `fetch_webpage` tool
 - **Priority**: Highest - always prioritize for current rates, fees, terms
 - **Extract**:
@@ -80,13 +80,13 @@ Generate a financial product page pair (benefits and requirements), following th
 
 1. **Read System Prompt**: First, locate and read the complete system prompt at `/lib/CREDIT_CARD_PRODUCT_GENERATION.instructions.md` to understand all requirements, structures, and compliance rules.
 
-2. **Browse the Official Product URL**: Navigate to <https://www.johnlewisfinance.com/partnership-credit-card> using `fetch_webpage` and extract all relevant information:
+2. **Browse the Official Product URL**: Navigate to <https://fluid.co.uk> using `fetch_webpage` and extract all relevant information:
    - Product features and benefits (minimum 4 key features)
    - APR rates and interest rate information
    - Annual fees, application fees, and other charges
    - Eligibility criteria (age, residency, income requirements, credit score)
    - Welcome bonuses or introductory offers
-   - Reward structures (e.g., John Lewis Partnership Card earning rates)
+   - Reward structures (e.g., Fluid Credit Card earning rates)
    - Any special terms, conditions, or promotional offers
    - FCA-required representative APR examples and risk warnings
 
@@ -121,8 +121,8 @@ Generate a financial product page pair (benefits and requirements), following th
    - `AIContentDisclaimer` component at the end of each page
 
 7. **Directory Placement**: Create files at:
-   - `/app/financial-solutions/john-lewis-partnership-card/page.tsx` (benefits page)
-   - `/app/financial-solutions/john-lewis-partnership-card-requirements/page.tsx` (requirements page)
+   - `/app/financial-solutions/fluid-credit-card/page.tsx` (benefits page)
+   - `/app/financial-solutions/fluid-credit-card-requirements/page.tsx` (requirements page)
 
 8. **Content Length**: Follow guidelines based on product type:
    - Credit Card Benefits Page: 800-1,200 words
@@ -135,13 +135,13 @@ Generate a financial product page pair (benefits and requirements), following th
 TWO complete Next.js page components:
 
 1. **Main Product Benefits Page**
-   - **File**: `/app/financial-solutions/john-lewis-partnership-card/page.tsx`
+   - **File**: `/app/financial-solutions/fluid-credit-card/page.tsx`
    - **Focus**: Features, benefits, rewards, value propositions
    - **Sections**: Introduction, key features, detailed benefits, CTAs
    - **Links**: Requirements page, related products, relevant guides
 
 2. **Requirements Page**
-   - **File**: `/app/financial-solutions/john-lewis-partnership-card-requirements/page.tsx`
+   - **File**: `/app/financial-solutions/fluid-credit-card-requirements/page.tsx`
    - **Focus**: Eligibility, application process, costs, documentation
    - **Sections**: Qualification criteria, required docs, costs/fees, application steps, FAQs
    - **Links**: Benefits page, related products, personal finance guides
@@ -150,7 +150,7 @@ Both files must:
 
 - Use `data-category="credit-cards"` attribute
 - Include complete `generateMetadata()` function
-- Apply brand color (#DFFF7B) to buttons and accents
+- Apply brand color (#642667) to buttons and accents
 - Contain FCA-compliant disclaimers and representative APR examples
 - Follow existing template structure and styling patterns
 - Be production-ready with no placeholders or TODOs
