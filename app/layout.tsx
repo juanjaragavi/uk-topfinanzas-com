@@ -18,6 +18,7 @@ import AdZepTest from "@/components/analytics/adzep-test";
 import AdZepSPABridge from "@/components/analytics/adzep-spa-bridge";
 import AdZepInterstitialBlocker from "@/components/analytics/adzep-interstitial-blocker";
 import AdZepAccessibilityFix from "@/components/analytics/adzep-accessibility-fix";
+import AdZepBackdropCleaner from "@/components/analytics/adzep-backdrop-cleaner";
 import AnalyticsValidationPanel from "@/components/analytics/validation-panel";
 import ResourceHints from "@/components/resource-hints";
 import NavigationProvider from "@/components/providers/navigation-provider";
@@ -67,7 +68,7 @@ try {
   // Read the critical CSS file
   criticalCSS = fs.readFileSync(
     path.join(process.cwd(), "app/critical.css"),
-    "utf8",
+    "utf8"
   );
 } catch (e) {
   console.warn("Failed to read critical CSS:", e);
@@ -190,7 +191,7 @@ export default function RootLayout({
                 ],
               },
               null,
-              2,
+              2
             ),
           }}
         />
@@ -246,6 +247,7 @@ export default function RootLayout({
             <AdZepSPABridge />
             <AdZepInterstitialBlocker />
             <AdZepAccessibilityFix />
+            <AdZepBackdropCleaner />
             {process.env.NODE_ENV === "development" && <UtmMonitor />}
             {process.env.NODE_ENV === "development" && <AdZepTest />}
             {process.env.NODE_ENV === "development" && (

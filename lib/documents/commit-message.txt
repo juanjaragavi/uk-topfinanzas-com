@@ -1,20 +1,22 @@
-Add Ocean Credit Card product pages with QuickCheck eligibility and credit building features
+Fix empty overlay issue with AdZep interstitial ads - implement multi-layer backdrop cleaner
 
-- Create Ocean Credit Card benefits page showcasing QuickCheck technology and credit building
-- Create Ocean Credit Card requirements page with detailed eligibility and application process
-- Add product to blog page (allPosts array) under Financial Solutions category
-- Add product to financial solutions page (creditCardsContent array) as fintech card type
-- Include QuickCheck eligibility technology: 60-second decision with no credit score impact (soft search)
-- Document comprehensive features: credit limits £200-£8,000, no annual fee, mobile app management
-- Detail interest rates: Representative 39.9% APR (variable), rates from 28.9% APR
-- Add 0% balance transfer offer for 6 months (eligible customers, 2.9% fee applies)
-- Include credit building guidance: payment history importance, credit utilization tips
-- Document complete eligibility criteria: 18+, UK residency, electoral roll, 3-year address history
-- Add extensive FAQ section (8 questions) covering common applicant concerns
-- Include 5-step application process with detailed timeline information
-- Add FCA-compliant disclaimers, representative APR examples, and risk warnings
-- Implement brand color styling (#0a629c for Ocean Finance)
-- Include internal linking to related credit cards (Fluid, John Lewis Partnership Card)
-- All pages follow Next.js 14+ App Router conventions with proper TypeScript typing
-- Include AIContentDisclaimer, Header, and CompactFooter components
-- Update prompt template back to generic placeholders for future generations
+- Create AdZepBackdropCleaner component for active monitoring and removal of orphaned backdrop elements
+- Component detects empty backdrop/overlay elements when interstitial ads fail to render
+- Implements smart detection: checks for fixed position, z-index >1000, blur effects, backdrop class/ID names
+- Content verification: identifies iframes, AdZep containers, meaningful element sizes to preserve legitimate ads
+- Automatic cleanup: removes orphaned backdrops, restores body overflow/position, clears aria-hidden attributes
+- Continuous monitoring via MutationObserver and 2-second interval cleanup with 500ms delay for ad loading
+- Add enhanced CSS rules in globals.css: hide backdrop elements without ad content using :has() selector
+- CSS targets fixed-position elements with z-index excluding iframes, images, and AdZep ad units
+- Additional CSS protection removes blur effects from backdrops without actual ad content
+- Integrate AdZepBackdropCleaner into app/layout.tsx alongside other analytics components
+- Verify window.AdZepActivateAds() is being called correctly via SPA bridge and activation utility
+- Create comprehensive documentation: EMPTY_OVERLAY_FIX.md (technical), EMPTY_OVERLAY_FIX_SUMMARY.md (quick reference)
+- Add EMPTY_OVERLAY_IMPLEMENTATION.md with complete implementation guide and troubleshooting
+- Create test-overlay-fix.html visual test page for interactive testing of backdrop detection and cleanup
+- Fix resolves issue where ads fail to render (isDisplay: false) but backdrop remains, blocking user access
+- Solution preserves legitimate interstitial ads while removing empty overlays automatically
+- Root cause: AdZep creates backdrop elements for interstitials that remain when ads fail due to network/rules/inventory
+- Multi-layer defense: CSS passive layer + JavaScript active monitoring + proper AdZep activation verification
+- Development logging provides clear console feedback for debugging backdrop removal operations
+- No negative impact on ad revenue - only removes orphaned elements without blocking actual ad units

@@ -312,6 +312,22 @@ body > div[class*="overlay"]:empty:not([id*="uk_topfinanzas"]) {
   pointer-events: none !important;
 }
 
+/* Enhanced: Hide backdrop elements that have no meaningful content
+ * Targets backdrops created by ad scripts that fail to render ads
+ */
+body > div[style*="position: fixed"][style*="z-index"]:not([id*="uk_topfinanzas"]):not(:has(iframe)):not(:has(img)):not(:has([id^="google_ads"])) {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.3s ease-out !important;
+}
+
+/* Additional protection: Hide fixed overlays with blur that have no ad content */
+body > div[style*="backdrop-filter"]:not([id*="uk_topfinanzas"]):not(:has(iframe)):not(:has([id^="uk_topfinanzas_"])) {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  backdrop-filter: none !important;
+}
+
 /* Remove backdrop-filter blur effects from body when no active ads */
 body:not(:has([id^="uk_topfinanzas_"][style*="display"][style*="block"])),
 body:not(:has([data-adzep-active])) {
