@@ -1,9 +1,10 @@
-feat(credit-cards): synchronize credit card listings with latest October 2025 products
+feat(instructions): add credit-cards page integration to product generation workflow
 
-- Added 18 new credit card products from October 2025 to credit-cards archive page
-- Synchronized credit card content array with financial-solutions page
-- Added RBS, Bank of Scotland, First Direct, Co-operative Bank, M&S, Tesco, Amex Gold, Nationwide, HSBC products
-- Added Ocean, Fluid, John Lewis, 118 118 Money, Vanquis, Capital One, Marbles, Aqua, Bip credit cards
-- Reorganized card categories: Traditional Bank Cards, Neobank Cards, Fintech Cards
-- Maintained date sorting functionality for chronological display
-- Improved content organization and user experience
+- Updated CREDIT_CARD_PRODUCT_GENERATION.instructions.md to require THREE file updates for credit cards
+- Credit card products must now be added to: Blog page + Financial Solutions page + Credit Cards page
+- Personal loan products remain at TWO files: Blog page + Financial Solutions page
+- Added explicit section in Step 8 for Credit Cards Main Category Page (/app/credit-cards/page.tsx)
+- Updated Quick Reference section to reflect new workflow requirements
+- Modified CRITICAL section to clarify different requirements for credit cards vs loans
+- Ensures new credit card products are visible on dedicated /credit-cards archive page
+- Improves content discoverability and user experience for credit card browsing

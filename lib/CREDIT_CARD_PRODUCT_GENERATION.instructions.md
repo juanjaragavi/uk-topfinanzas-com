@@ -44,8 +44,9 @@ Each page must be:
    - Add the product to `/app/financial-solutions/page.tsx` in the appropriate content array:
      - For credit cards: add to `creditCardsContent` array with appropriate `type` ("traditional", "neobank", or "fintech")
      - For personal loans: add to `allLoansContent` array with appropriate `type` ("personal", "sme_fintech", "neobank", "marketplace", or "guide")
+   - **For credit cards ONLY**: Also add to `/app/credit-cards/page.tsx` in the `creditCardsContent` array
    - **DO NOT** add products to `/app/personal-finance/page.tsx` - that page is ONLY for educational guides and articles, NOT individual product pages
-   - Update both arrays immediately after generating the page components
+   - Update all required arrays immediately after generating the page components
 
 **Key Tools**:
 
@@ -457,7 +458,7 @@ When you receive a user request with product details including the **Official Pr
 
 **Automatically Add to Site Indexes**
 
-After generating both page components, you MUST immediately update the following TWO files to make the product visible on public-facing pages:
+After generating both page components, you MUST immediately update the following THREE files to make the product visible on public-facing pages:
 
 1. **Blog Main Page** (`/app/blog/page.tsx`):
    - Add new entry to the `allPosts` array under the "Financial Solutions" category section
@@ -476,12 +477,21 @@ After generating both page components, you MUST immediately update the following
      - Place at the top of the array (most recent first)
    - Use `replace_string_in_file` tool to update
 
+3. **Credit Cards Main Category Page** (`/app/credit-cards/page.tsx`) - **FOR CREDIT CARDS ONLY**:
+   - Add new entry to the `creditCardsContent` array (same structure as Financial Solutions page)
+   - Include: title, slug, description, image, date, type
+   - `type` must be one of: "traditional" (major banks), "neobank" (Monzo, Starling, etc.), or "fintech" (Curve, Bip, etc.)
+   - Place at the top of the array (most recent first)
+   - This page provides a dedicated credit card archive view for users specifically browsing credit cards
+   - Use `replace_string_in_file` tool to update
+
 **IMPORTANT**:
 
 - **DO NOT** add product pages to `/app/personal-finance/page.tsx`
 - The Personal Finance page is ONLY for educational guides and comparison articles, NOT individual product pages
-- Product pages must be added to BOTH the Blog page AND the Financial Solutions category page
-- Failing to add to Financial Solutions page will hide the product from the category listing
+- **Credit card products** must be added to THREE pages: Blog page, Financial Solutions page, AND Credit Cards page
+- **Loan products** must be added to TWO pages: Blog page AND Financial Solutions page (NOT Credit Cards page)
+- Failing to add to all required pages will hide the product from category listings or make it partially visible
 
 **Example Entry Format for Blog Page**:
 
@@ -523,7 +533,10 @@ After generating both page components, you MUST immediately update the following
 }
 ```
 
-**CRITICAL**: This step is NOT optional. Product pages that are not added to BOTH indexes will remain invisible or partially visible to users browsing the site. Always complete BOTH integration steps immediately after generating the page components.
+**CRITICAL**: This step is NOT optional. Product pages that are not added to all required indexes will remain invisible or partially visible to users browsing the site. Always complete integration steps immediately after generating the page components:
+
+- **Credit Cards**: Add to Blog page + Financial Solutions page + Credit Cards page (3 files)
+- **Personal Loans**: Add to Blog page + Financial Solutions page (2 files)
 
 ### Error Handling
 
