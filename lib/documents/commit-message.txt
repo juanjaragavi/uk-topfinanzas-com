@@ -1,26 +1,9 @@
-Add new UK credit card product pages and requirements documentation
+feat(credit-cards): synchronize credit card listings with latest October 2025 products
 
-- Create Bank of Scotland Credit Cards product page with comprehensive card type overview
-- Add First Direct Credit Card main product page with detailed features and benefits
-- Create First Direct Credit Card Requirements page with eligibility criteria and application guidance
-- Add RBS Purchase & Balance Transfer Card product page highlighting dual 0% offers
-- Create RBS Purchase & Balance Transfer Card Requirements page with qualification details
-- Add The Co-operative Bank Credit Card product page emphasizing ethical banking and cashback rewards
-- Create The Co-operative Bank Credit Card Requirements page with membership and income criteria
-- Implement consistent page structure across all new product pages with:
-  * Responsive hero images from media.topfinanzas.com CDN
-  * AdZep ad unit containers (uk_topfinanzas_3 and uk_topfinanzas_4)
-  * Structured benefit highlights with icon bullets
-  * Related article sections linking to personal finance content
-  * AI content disclaimers and representative APR examples
-  * Call-to-action buttons linking to requirements pages
-  * Mobile-first responsive design with Tailwind CSS
-- Use proper Next.js metadata generation for SEO optimization
-- Include UK-specific regulatory information and FCA compliance statements
-- Add Section 75 protection details where applicable
-- Integrate with existing site components (Header, CompactFooter, ResponsiveImage, AIContentDisclaimer)
-- Follow project coding standards with TypeScript and proper import organization
-- Maintain consistent brand colors for each financial institution
-- Optimize images with proper sizing, quality settings, and lazy loading
-- All pages follow UK English localization and financial terminology
-- Content structured for UK market with appropriate credit card terminology and regulations
+- Added 18 new credit card products from October 2025 to credit-cards archive page
+- Synchronized credit card content array with financial-solutions page
+- Added RBS, Bank of Scotland, First Direct, Co-operative Bank, M&S, Tesco, Amex Gold, Nationwide, HSBC products
+- Added Ocean, Fluid, John Lewis, 118 118 Money, Vanquis, Capital One, Marbles, Aqua, Bip credit cards
+- Reorganized card categories: Traditional Bank Cards, Neobank Cards, Fintech Cards
+- Maintained date sorting functionality for chronological display
+- Improved content organization and user experience
