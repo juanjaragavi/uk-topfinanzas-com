@@ -1,22 +1,26 @@
-Fix empty overlay issue with AdZep interstitial ads - implement multi-layer backdrop cleaner
+Add new UK credit card product pages and requirements documentation
 
-- Create AdZepBackdropCleaner component for active monitoring and removal of orphaned backdrop elements
-- Component detects empty backdrop/overlay elements when interstitial ads fail to render
-- Implements smart detection: checks for fixed position, z-index >1000, blur effects, backdrop class/ID names
-- Content verification: identifies iframes, AdZep containers, meaningful element sizes to preserve legitimate ads
-- Automatic cleanup: removes orphaned backdrops, restores body overflow/position, clears aria-hidden attributes
-- Continuous monitoring via MutationObserver and 2-second interval cleanup with 500ms delay for ad loading
-- Add enhanced CSS rules in globals.css: hide backdrop elements without ad content using :has() selector
-- CSS targets fixed-position elements with z-index excluding iframes, images, and AdZep ad units
-- Additional CSS protection removes blur effects from backdrops without actual ad content
-- Integrate AdZepBackdropCleaner into app/layout.tsx alongside other analytics components
-- Verify window.AdZepActivateAds() is being called correctly via SPA bridge and activation utility
-- Create comprehensive documentation: EMPTY_OVERLAY_FIX.md (technical), EMPTY_OVERLAY_FIX_SUMMARY.md (quick reference)
-- Add EMPTY_OVERLAY_IMPLEMENTATION.md with complete implementation guide and troubleshooting
-- Create test-overlay-fix.html visual test page for interactive testing of backdrop detection and cleanup
-- Fix resolves issue where ads fail to render (isDisplay: false) but backdrop remains, blocking user access
-- Solution preserves legitimate interstitial ads while removing empty overlays automatically
-- Root cause: AdZep creates backdrop elements for interstitials that remain when ads fail due to network/rules/inventory
-- Multi-layer defense: CSS passive layer + JavaScript active monitoring + proper AdZep activation verification
-- Development logging provides clear console feedback for debugging backdrop removal operations
-- No negative impact on ad revenue - only removes orphaned elements without blocking actual ad units
+- Create Bank of Scotland Credit Cards product page with comprehensive card type overview
+- Add First Direct Credit Card main product page with detailed features and benefits
+- Create First Direct Credit Card Requirements page with eligibility criteria and application guidance
+- Add RBS Purchase & Balance Transfer Card product page highlighting dual 0% offers
+- Create RBS Purchase & Balance Transfer Card Requirements page with qualification details
+- Add The Co-operative Bank Credit Card product page emphasizing ethical banking and cashback rewards
+- Create The Co-operative Bank Credit Card Requirements page with membership and income criteria
+- Implement consistent page structure across all new product pages with:
+  * Responsive hero images from media.topfinanzas.com CDN
+  * AdZep ad unit containers (uk_topfinanzas_3 and uk_topfinanzas_4)
+  * Structured benefit highlights with icon bullets
+  * Related article sections linking to personal finance content
+  * AI content disclaimers and representative APR examples
+  * Call-to-action buttons linking to requirements pages
+  * Mobile-first responsive design with Tailwind CSS
+- Use proper Next.js metadata generation for SEO optimization
+- Include UK-specific regulatory information and FCA compliance statements
+- Add Section 75 protection details where applicable
+- Integrate with existing site components (Header, CompactFooter, ResponsiveImage, AIContentDisclaimer)
+- Follow project coding standards with TypeScript and proper import organization
+- Maintain consistent brand colors for each financial institution
+- Optimize images with proper sizing, quality settings, and lazy loading
+- All pages follow UK English localization and financial terminology
+- Content structured for UK market with appropriate credit card terminology and regulations

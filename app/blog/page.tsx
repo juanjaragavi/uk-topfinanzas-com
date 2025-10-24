@@ -42,6 +42,54 @@ export default function BlogArchivePage() {
     // Financial Solutions - Credit Cards
     {
       title:
+        "RBS Purchase & Balance Transfer Card: Save on Interest with 0% Offers - Top Finance UK",
+      slug: "rbs-purchase-balance-transfer-card",
+      description:
+        "The RBS Purchase & Balance Transfer Card offers 0% interest on purchases for up to 20 months and 0% on balance transfers for up to 18 months. No annual fee. Representative 24.9% APR (variable).",
+      image:
+        "https://media.topfinanzas.com/images/uk/rbs-purchase-balance-transfer-card.webp",
+      category: "Financial Solutions",
+      categoryPath: "/financial-solutions",
+      date: "24 October 2025",
+    },
+    {
+      title:
+        "Bank of Scotland Credit Cards: Flexible Options for Every Need - Top Finance UK",
+      slug: "bank-of-scotland-credit-cards",
+      description:
+        "Discover Bank of Scotland credit cards with options for everyday spending, balance transfers, large purchases, and credit building. Check eligibility with One Check without affecting your credit score.",
+      image:
+        "https://media.topfinanzas.com/images/uk/bank-of-scotland-credit-cards.webp",
+      category: "Financial Solutions",
+      categoryPath: "/financial-solutions",
+      date: "24 October 2025",
+    },
+    {
+      title:
+        "First Direct Credit Card: Straightforward Banking with Competitive Rates - Top Finance UK",
+      slug: "first-direct-credit-card",
+      description:
+        "Discover the First Direct 1st Credit Card with 0% interest on purchases for 12 months, competitive rates, no annual fee, and award-winning 24/7 customer service. Representative 24.9% APR (variable).",
+      image:
+        "https://media.topfinanzas.com/images/uk/first-direct-credit-card.webp",
+      category: "Financial Solutions",
+      categoryPath: "/financial-solutions",
+      date: "24 October 2025",
+    },
+    {
+      title:
+        "The Co-operative Bank Credit Card: Ethical Banking with Cashback Rewards - Top Finance UK",
+      slug: "the-co-operative-bank-credit-card",
+      description:
+        "Discover The Co-operative Members Credit Card offering 0.5% cashback at Co-op stores, 0.3% everywhere else, with no annual fee. Join the UK's original ethical bank. Representative 18.2% APR (variable).",
+      image:
+        "https://media.topfinanzas.com/images/uk/the-co-operative-bank-credit-card.webp",
+      category: "Financial Solutions",
+      categoryPath: "/financial-solutions",
+      date: "24 October 2025",
+    },
+    {
+      title:
         "M&S Rewards Credit Card: Earn Points on Every Purchase - Top Finance UK",
       slug: "ms-rewards-credit-card",
       description:

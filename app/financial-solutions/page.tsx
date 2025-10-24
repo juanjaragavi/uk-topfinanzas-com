@@ -265,6 +265,46 @@ export default function FinancialSolutionsPage() {
   // List of credit card content with types
   const creditCardsContent = [
     {
+      title: "RBS Purchase & Balance Transfer Card",
+      slug: "rbs-purchase-balance-transfer-card",
+      description:
+        "The RBS Purchase & Balance Transfer Card offers 0% interest on purchases for up to 20 months and 0% on balance transfers for up to 18 months. No annual fee. Representative 24.9% APR (variable).",
+      image:
+        "https://media.topfinanzas.com/images/uk/rbs-purchase-balance-transfer-card.webp",
+      date: "24 October 2025",
+      type: "traditional",
+    },
+    {
+      title: "Bank of Scotland Credit Cards",
+      slug: "bank-of-scotland-credit-cards",
+      description:
+        "Bank of Scotland offers credit cards for everyday spending, balance transfers, large purchases, and credit building. Check eligibility with One Check without affecting your credit score. Part of Lloyds Banking Group.",
+      image:
+        "https://media.topfinanzas.com/images/uk/bank-of-scotland-credit-cards.webp",
+      date: "24 October 2025",
+      type: "traditional",
+    },
+    {
+      title: "First Direct Credit Card",
+      slug: "first-direct-credit-card",
+      description:
+        "The First Direct 1st Credit Card offers 0% interest on purchases for 12 months, competitive rates with no annual fee, and award-winning 24/7 customer service. Representative 24.9% APR (variable).",
+      image:
+        "https://media.topfinanzas.com/images/uk/first-direct-credit-card.webp",
+      date: "24 October 2025",
+      type: "traditional",
+    },
+    {
+      title: "The Co-operative Bank Credit Card",
+      slug: "the-co-operative-bank-credit-card",
+      description:
+        "The Co-operative Members Credit Card offers 0.5% cashback at Co-op stores and 0.3% everywhere else, with no annual fee. Join the UK's original ethical bank with customer-led values since 1872. Representative 18.2% APR (variable).",
+      image:
+        "https://media.topfinanzas.com/images/uk/the-co-operative-bank-credit-card.webp",
+      date: "24 October 2025",
+      type: "traditional",
+    },
+    {
       title: "M&S Rewards Credit Card",
       slug: "ms-rewards-credit-card",
       description:
