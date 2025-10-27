@@ -2,6 +2,7 @@
 
 import Script from "next/script";
 import { useEffect } from "react";
+import { analyticsLogger } from "@/lib/logger";
 
 const GTM_ID = "GTM-MR76NXR3"; // Default GTM ID
 
@@ -21,7 +22,7 @@ export default function GoogleTagManager({ id = GTM_ID }: { id?: string }) {
           site_section: "uk_topfinanzas",
           page_type: "general",
         });
-        console.debug("GTM: Enhanced configuration loaded");
+        analyticsLogger.debug("GTM: Enhanced configuration loaded");
       } else {
         // Retry if dataLayer not ready yet
         setTimeout(initializeGTMExtras, 500);
@@ -60,7 +61,7 @@ export default function GoogleTagManager({ id = GTM_ID }: { id?: string }) {
                     event: 'utm_parameters_loaded',
                     ...utmData
                   });
-                  console.debug('GTM: UTM parameters pushed to dataLayer', utmData);
+                  analyticsLogger.debug('GTM: UTM parameters pushed to dataLayer', utmData);
                 }
               }
             }
@@ -118,7 +119,7 @@ export function pushGTMEvent(
       event: eventName,
       ...eventData,
     });
-    console.debug(`GTM: Event pushed - ${eventName}`, eventData);
+    analyticsLogger.debug(`GTM: Event pushed - ${eventName}`, eventData);
   }
 }
 
@@ -146,7 +147,7 @@ export function pushGTMConversion(
     if (utmCampaign) conversionData.utm_campaign = utmCampaign;
 
     window.dataLayer.push(conversionData);
-    console.debug(
+    analyticsLogger.debug(
       `GTM: Conversion tracked - ${conversionName}`,
       conversionData,
     );

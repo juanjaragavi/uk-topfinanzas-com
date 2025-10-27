@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { analyticsLogger } from "@/lib/logger";
 
 /**
  * UTM Link Injector
@@ -68,7 +69,11 @@ export default function UtmLinkInjector() {
         return href;
       } catch (error) {
         // If URL parsing fails, return original href
-        console.warn("UTM Link Injector: Error processing URL:", href, error);
+        analyticsLogger.warn(
+          "UTM Link Injector: Error processing URL:",
+          href,
+          error,
+        );
         return href;
       }
     };
@@ -115,10 +120,13 @@ export default function UtmLinkInjector() {
           link.href = modifiedHref;
 
           if (process.env.NODE_ENV === "development") {
-            console.debug("UTM Link Injector: Added UTM params to link", {
-              original: link.href,
-              modified: modifiedHref,
-            });
+            analyticsLogger.debug(
+              "UTM Link Injector: Added UTM params to link",
+              {
+                original: link.href,
+                modified: modifiedHref,
+              },
+            );
           }
         }
       } catch {
@@ -139,7 +147,7 @@ export default function UtmLinkInjector() {
         (param) => sessionStorage.getItem(param) !== null,
       );
       if (storedParams.length > 0) {
-        console.debug(
+        analyticsLogger.debug(
           "UTM Link Injector: Active with params:",
           storedParams.join(", "),
         );

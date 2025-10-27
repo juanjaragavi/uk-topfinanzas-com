@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
+import { analyticsLogger } from "@/lib/logger";
 
 // Define the UTM parameters we want to monitor
 const UTM_PARAM_KEYS = [
@@ -21,37 +22,37 @@ export default function UtmMonitor() {
     // Don't run on server
     if (typeof window === "undefined") return;
 
-    console.log("\n===== UTM MONITOR =====");
-    console.log(`Page: ${pathname}`);
+    analyticsLogger.info("\n===== UTM MONITOR =====");
+    analyticsLogger.info(`Page: ${pathname}`);
 
     // Check URL for UTM parameters
     const urlParams = new URLSearchParams(window.location.search);
-    console.log("UTM Parameters in URL:");
+    analyticsLogger.info("UTM Parameters in URL:");
     let foundInUrl = false;
 
     UTM_PARAM_KEYS.forEach((param) => {
       if (urlParams.has(param)) {
-        console.log(`- ${param}: ${urlParams.get(param)}`);
+        analyticsLogger.info(`- ${param}: ${urlParams.get(param)}`);
         foundInUrl = true;
       }
     });
 
-    if (!foundInUrl) console.log("- None found in URL");
+    if (!foundInUrl) analyticsLogger.info("- None found in URL");
 
     // Check sessionStorage for UTM parameters
-    console.log("UTM Parameters in sessionStorage:");
+    analyticsLogger.info("UTM Parameters in sessionStorage:");
     let foundInStorage = false;
 
     UTM_PARAM_KEYS.forEach((param) => {
       const value = sessionStorage.getItem(param);
       if (value !== null) {
-        console.log(`- ${param}: ${value}`);
+        analyticsLogger.info(`- ${param}: ${value}`);
         foundInStorage = true;
       }
     });
 
-    if (!foundInStorage) console.log("- None found in sessionStorage");
-    console.log("=======================\n");
+    if (!foundInStorage) analyticsLogger.info("- None found in sessionStorage");
+    analyticsLogger.info("=======================\n");
   }, [pathname, searchParams]);
 
   return null; // This component doesn't render anything

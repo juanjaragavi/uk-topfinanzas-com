@@ -2,6 +2,7 @@
 
 import Image, { ImageProps } from "next/image";
 import { CSSProperties } from "react";
+import { logger } from "@/lib/logger";
 
 type ResponsiveImageProps = ImageProps & {
   containerClassName?: string;
@@ -29,7 +30,7 @@ export default function ResponsiveImage({
   ...props
 }: ResponsiveImageProps) {
   if (process.env.NODE_ENV !== "production" && !alt) {
-    console.warn(
+    logger.warn(
       "ResponsiveImage rendered without an alt description; consider providing descriptive text for accessibility.",
     );
   }

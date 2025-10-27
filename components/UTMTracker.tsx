@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { logger } from "@/lib/logger";
 
 export default function UTMTracker() {
   useEffect(() => {
@@ -63,7 +64,7 @@ export default function UTMTracker() {
             link.href = url.toString();
           } catch (e) {
             // Handle invalid URLs silently
-            console.warn("Error processing link:", link.href, e);
+            logger.warn("Error processing link:", link.href, e);
           }
         });
       };

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
+import { apiLogger } from "@/lib/logger";
 
 // --- Simplified Logic for Debugging File Existence ---
 
@@ -11,67 +12,60 @@ async function checkMetadataExistence(
 ): Promise<void> {
   // Changed return type
   const fullDirPath = path.join(process.cwd(), dirPath);
-  console.log(`[checkMetadataExistence] Scanning directory: ${fullDirPath}`);
+  apiLogger.debug("Checking metadata existence", { fullDirPath });
 
   try {
     const entries = await fs.readdir(fullDirPath, { withFileTypes: true });
-    console.log(
-      `[checkMetadataExistence] Found ${entries.length} entries in ${dirPath}`,
-    );
+    apiLogger.debug("Found entries in directory", {
+      count: entries.length,
+      dirPath,
+    });
 
     for (const entry of entries) {
       if (entry.isDirectory()) {
         const slug = entry.name;
-        console.log(
-          `[checkMetadataExistence] Processing directory entry: ${slug}`,
-        );
+        apiLogger.debug("Processing directory entry", { slug });
+
         if (slug.endsWith("-requirements") || slug.endsWith("-application")) {
-          console.log(
-            `[checkMetadataExistence] Skipping auxiliary directory: ${slug}`,
-          );
+          apiLogger.debug("Skipping auxiliary directory", { slug });
           continue;
         }
 
         const metadataPath = path.join(fullDirPath, slug, "metadata.ts");
         try {
           await fs.access(metadataPath, fs.constants.F_OK); // Check if file exists and is accessible
-          console.log(
-            `[checkMetadataExistence] FOUND metadata.ts for slug: ${slug} in ${categoryName}`,
-          );
+          apiLogger.debug("Found metadata.ts", { slug, categoryName });
         } catch (accessError) {
           // Log only if it's not a 'Not Found' error, or specifically log 'Not Found'
           if (
             accessError instanceof Error &&
             (accessError as NodeJS.ErrnoException).code === "ENOENT"
           ) {
-            console.warn(
-              `[checkMetadataExistence] NOT FOUND metadata.ts for slug: ${slug} in ${categoryName} (Path: ${metadataPath})`,
-            );
+            apiLogger.warn("Metadata.ts not found", {
+              slug,
+              categoryName,
+              metadataPath,
+            });
           } else {
-            console.error(
-              `[checkMetadataExistence] Error accessing metadata.ts for slug: ${slug} in ${categoryName}:`,
-              accessError,
-            );
+            apiLogger.error("Error accessing metadata.ts", accessError, {
+              slug,
+              categoryName,
+            });
           }
         }
       } else {
-        console.log(
-          `[checkMetadataExistence] Skipping non-directory entry: ${entry.name}`,
-        );
+        apiLogger.debug("Skipping non-directory entry", { name: entry.name });
       }
     }
   } catch (error) {
-    console.error(
-      `[checkMetadataExistence] Error reading directory ${fullDirPath}:`,
-      error,
-    );
+    apiLogger.error("Error reading directory", error, { fullDirPath });
   }
-  console.log(`[checkMetadataExistence] Finished scanning ${dirPath}.`);
+  apiLogger.debug("Finished scanning directory", { dirPath });
 }
 
 export async function GET() {
   try {
-    console.log(
+    apiLogger.debug(
       "API route /api/posts called (DEBUGGING - Checking Metadata Existence)",
     );
 
@@ -84,12 +78,12 @@ export async function GET() {
 
     // Return an empty array for now to prevent frontend errors,
     // focus is on checking the server logs for the existence messages.
-    console.log(
+    apiLogger.info(
       "API route finished checks. Returning empty array for debugging.",
     );
     return NextResponse.json([]);
   } catch (error) {
-    console.error("Failed to get posts in API route:", error);
+    apiLogger.error("Failed to get posts in API route", error);
     return NextResponse.json(
       { error: "Failed to load posts" },
       { status: 500 },

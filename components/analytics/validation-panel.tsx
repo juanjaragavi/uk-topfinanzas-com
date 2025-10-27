@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { analyticsLogger } from "@/lib/logger";
 import analyticsValidator, {
   type ValidationResult,
 } from "@/lib/analytics-validator";
@@ -26,7 +27,7 @@ export default function AnalyticsValidationPanel() {
       setResults(validationResults);
       setSummary(analyticsValidator.getSummary());
     } catch (error) {
-      console.error("Validation failed:", error);
+      analyticsLogger.error("Validation failed:", error);
     } finally {
       setIsRunning(false);
     }

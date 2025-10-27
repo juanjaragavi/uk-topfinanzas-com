@@ -4,6 +4,7 @@ import {
   subscribeToConvertKit,
   type ConvertKitSubscriberPayload,
 } from "@/lib/kit/convertkit-client";
+import { apiLogger } from "@/lib/logger";
 
 type KitFields = Record<string, string | null | undefined>;
 
@@ -121,7 +122,7 @@ const parseJson = async (response: Response) => {
   try {
     return JSON.parse(text);
   } catch (error) {
-    console.warn("[Brevo API] Failed to parse JSON response", error);
+    apiLogger.warn("Brevo API: Failed to parse JSON response", { error });
     return text;
   }
 };
@@ -152,7 +153,7 @@ const sendToBrevo = async (
       const duplicateContact = errorCode === "duplicate_parameter";
 
       if (duplicateContact) {
-        console.info("[Brevo API] Contact already exists", {
+        apiLogger.info("Brevo API: Contact already exists", {
           email: metadata.email,
           ext_id: metadata.extId,
           status: response.status,
@@ -167,7 +168,7 @@ const sendToBrevo = async (
         };
       }
 
-      console.error("[Brevo API] Error response", {
+      apiLogger.error("Brevo API: Error response", undefined, {
         status: response.status,
         body: responseBody,
       });
@@ -185,7 +186,7 @@ const sendToBrevo = async (
       };
     }
 
-    console.log("[Brevo API] Contact processed", {
+    apiLogger.info("Brevo API: Contact processed", {
       email: metadata.email,
       ext_id: metadata.extId,
       status: response.status,
@@ -199,7 +200,7 @@ const sendToBrevo = async (
     };
   } catch (error) {
     const durationMs = performance.now() - startedAt;
-    console.error("[Brevo API] Network or unexpected error", error);
+    apiLogger.error("Brevo API: Network or unexpected error", error);
 
     return {
       success: false,
@@ -279,9 +280,10 @@ export async function POST(request: Request) {
   }
 
   if (!convertKitResult.success) {
-    console.error(
-      "[ConvertKit API] Subscription failed but Brevo succeeded",
-      convertKitResult,
+    apiLogger.error(
+      "ConvertKit API: Subscription failed but Brevo succeeded",
+      undefined,
+      { convertKitResult },
     );
   }
 

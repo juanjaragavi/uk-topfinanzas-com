@@ -220,7 +220,10 @@ export default function Home() {
       <Header />
 
       {/* Banner Section - Optimized with Next.js Image component for better LCP */}
-      <section className="relative py-16 md:py-24 lg:py-40 overflow-hidden">
+      <section
+        className="relative py-16 md:py-24 lg:py-40 overflow-hidden"
+        style={{ position: "relative" }}
+      >
         {/* Desktop banner image */}
         <Image
           src="https://media.topfinanzas.com/images/banner-home.webp"

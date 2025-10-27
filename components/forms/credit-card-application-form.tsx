@@ -1,6 +1,7 @@
 "use client";
 
 import type React from "react";
+import { formLogger } from "@/lib/logger";
 
 import { useState } from "react";
 import ClientOnly from "../ClientOnly";
@@ -46,7 +47,7 @@ export const CreditCardApplicationForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // In a real application, you would submit the form data to your backend here
-    console.log("Form submitted:", formData);
+    formLogger.info("Form submitted:", formData);
     setIsSubmitted(true);
   };
 

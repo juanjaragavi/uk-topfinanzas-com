@@ -2,6 +2,7 @@
  * Global image optimization helper to consistently improve image loading performance
  */
 import { useEffect } from "react";
+import { logger } from "@/lib/logger";
 
 /**
  * A React hook to preload critical images on the page
@@ -33,7 +34,7 @@ export function useImagePreloader(imageUrls: string[], priority = false) {
     // We don't need to handle the results, just initiate the preloading
     Promise.allSettled(preloadPromises).then(() => {
       if (process.env.NODE_ENV === "development") {
-        console.log(`Preloaded ${imageUrls.length} images`);
+        logger.info(`Preloaded ${imageUrls.length} images`);
       }
     });
   }, [imageUrls, priority]);

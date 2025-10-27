@@ -59,7 +59,7 @@ export function FeaturedPostCard({
       data-post-type={type}
     >
       <div className={imageContainerClasses} style={{ position: "relative" }}>
-        <Link href={postUrl} className="block h-full">
+        <Link href={postUrl} className="block h-full relative">
           <Image
             src={image}
             alt={title}

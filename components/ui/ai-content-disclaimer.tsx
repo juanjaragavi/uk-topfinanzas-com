@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { logger } from "@/lib/logger";
 
 /**
  * AI Content Disclaimer Component
@@ -31,7 +32,7 @@ export function AIContentDisclaimer() {
           setAuthor(data.authors[0]); // Default to first author for server rendering
         }
       } catch (error) {
-        console.error("Failed to load authors:", error);
+        logger.error("Failed to load authors:", error);
 
         // Fallback: If API fetch fails, try to load authors directly
         import("@/lib/data/authors.json")
@@ -45,7 +46,7 @@ export function AIContentDisclaimer() {
             }
           })
           .catch((err) => {
-            console.error("Failed to load authors from direct import:", err);
+            logger.error("Failed to load authors from direct import:", err);
           });
       }
     };
@@ -127,7 +128,7 @@ export function AIContentDisclaimerStatic() {
         }
       })
       .catch((error) => {
-        console.error("Failed to load authors:", error);
+        logger.error("Failed to load authors:", error);
       });
   }, []);
 

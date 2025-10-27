@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { readFileSync } from "fs";
 import { join } from "path";
+import { apiLogger } from "@/lib/logger";
 
 // This is a route to handle site.webmanifest requests
 export async function GET() {
@@ -21,7 +22,7 @@ export async function GET() {
       },
     });
   } catch (error) {
-    console.error("Error serving webmanifest:", error);
+    apiLogger.error("Error serving webmanifest", error);
     return new NextResponse(null, { status: 404 });
   }
 }

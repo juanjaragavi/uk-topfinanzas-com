@@ -2,6 +2,7 @@
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { logger } from "@/lib/logger";
 
 import { ReactNode } from "react";
 import Link from "next/link";
@@ -33,7 +34,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Aquí iría la lógica de suscripción
-    console.log("Formulario enviado");
+    logger.info("Formulario enviado");
   };
 
   return (

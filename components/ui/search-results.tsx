@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Loader2, AlertCircle } from "lucide-react";
+import { logger } from "@/lib/logger";
 import { SearchItem } from "@/lib/search-index"; // Import the interface
 
 interface SearchResultsProps {
@@ -17,7 +18,7 @@ export function SearchResults({
   onResultClick,
 }: SearchResultsProps) {
   // Log received props
-  console.log("[SearchResults] Rendering with props:", {
+  logger.info("[SearchResults] Rendering with props:", {
     results,
     isLoading,
     error,
@@ -25,7 +26,7 @@ export function SearchResults({
 
   // --- Debugging Change: Prioritize showing results if they exist ---
   if (results.length > 0) {
-    console.log("[SearchResults] Rendering results list because length > 0"); // Added log
+    logger.info("[SearchResults] Rendering results list because length > 0"); // Added log
     return (
       <ul className="divide-y divide-gray-100">
         {results.map((item) => (

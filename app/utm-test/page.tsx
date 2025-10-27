@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import { testUtmPersistence } from "@/components/analytics/utm-test";
 import { Button } from "@/components/ui/button";
+import { utmLogger } from "@/lib/logger";
 
 // Client Component that uses useSearchParams
 function UtmTestContent() {
@@ -46,7 +47,7 @@ function UtmTestContent() {
       url = `${path}?${params.toString()}`;
     }
 
-    console.log(`Navigating to: ${url}`);
+    utmLogger.info(`Navigating to: ${url}`);
     router.push(url);
   };
 

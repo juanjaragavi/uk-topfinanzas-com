@@ -8,6 +8,7 @@ import {
   waitForContainers,
 } from "@/lib/ads/activate-adzep";
 import { adZepConfig, isArticlePath, isExcludedPath } from "@/lib/ads/config";
+import { adzepLogger } from "@/lib/logger";
 
 // Probe a handful of containers for creative render
 function anyContainerHasCreative(): boolean {
@@ -63,57 +64,52 @@ export default function AdZepSPABridge() {
         ? Math.max(adZepConfig.defaultActivationTimeoutMs, 12000)
         : adZepConfig.defaultActivationTimeoutMs;
 
-      // If there are containers or the path is article-like, attempt activation
-      if (containersPresent || isArticlePath(pathname || "")) {
-        // Log activation attempt for debugging
-        if (process.env.NODE_ENV === "development") {
-          console.log("[AdZep SPA Bridge] Attempting activation", {
-            containersPresent,
-            activationTimeout,
-            firstLoad: firstLoadRef.current,
-          });
-        }
-
-        await activateAdZep({ timeout: activationTimeout });
-
-        // Post-activation verification and possible retries
-        let tries = 0;
-        const verify = () => {
-          if (anyContainerHasCreative()) {
-            // Just log for debugging - no overlay logic
-            if (process.env.NODE_ENV === "development") {
-              console.log("[AdZep SPA Bridge] Creatives detected");
-            }
-            return;
-          }
-          if (tries >= adZepConfig.verifyRetries) {
-            // Only log error if we're on a page that should have ads
-            if (process.env.NODE_ENV === "development") {
-              const shouldHaveAds = isArticlePath(pathname || "");
-              if (shouldHaveAds) {
-                console.warn(
-                  "[AdZep SPA Bridge] Max retries reached on article page",
-                );
-              } else {
-                console.log(
-                  "[AdZep SPA Bridge] No ad units expected on this page",
-                );
-              }
-            }
-            return;
-          }
-          tries += 1;
-          pendingRetryTimeout.current = window.setTimeout(async () => {
-            await activateAdZep({
-              timeout: activationTimeout,
-              retryAttempts: 1,
-            });
-            verify();
-          }, adZepConfig.verifyDelayMs);
-        };
-
-        verify();
+      // ALWAYS attempt activation on non-excluded pages (even if no containers detected yet)
+      // This ensures ads activate even if Offerwall or other ad units load after initial check
+      if (process.env.NODE_ENV === "development") {
+        adzepLogger.info("Attempting activation", {
+          containersPresent,
+          activationTimeout,
+          firstLoad: firstLoadRef.current,
+          pathname: pathname || "unknown",
+        });
       }
+
+      await activateAdZep({ timeout: activationTimeout });
+
+      // Post-activation verification and possible retries
+      let tries = 0;
+      const verify = () => {
+        if (anyContainerHasCreative()) {
+          // Just log for debugging - no overlay logic
+          if (process.env.NODE_ENV === "development") {
+            adzepLogger.debug("Creatives detected");
+          }
+          return;
+        }
+        if (tries >= adZepConfig.verifyRetries) {
+          // Only log error if we're on a page that should have ads
+          if (process.env.NODE_ENV === "development") {
+            const shouldHaveAds = isArticlePath(pathname || "");
+            if (shouldHaveAds) {
+              adzepLogger.warn("Max retries reached on article page");
+            } else {
+              adzepLogger.debug("No ad units expected on this page");
+            }
+          }
+          return;
+        }
+        tries += 1;
+        pendingRetryTimeout.current = window.setTimeout(async () => {
+          await activateAdZep({
+            timeout: activationTimeout,
+            retryAttempts: 1,
+          });
+          verify();
+        }, adZepConfig.verifyDelayMs);
+      };
+
+      verify();
 
       firstLoadRef.current = false;
     };

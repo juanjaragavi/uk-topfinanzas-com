@@ -13,6 +13,7 @@ import { FaLinkedin, FaInstagram } from "react-icons/fa";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { BRAND_STATIC_FIELDS, UTM_PARAM_KEYS } from "@/lib/constants";
+import { logger } from "@/lib/logger";
 
 interface ContactFormState {
   name: string;
@@ -358,7 +359,7 @@ export default function ContactUs() {
         acceptTerms: false,
       }));
     } catch (error) {
-      console.error("Error sending message:", error);
+      logger.error("Error sending message:", error);
       setSubmitError(
         error instanceof Error
           ? error.message
@@ -378,7 +379,10 @@ export default function ContactUs() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Left column - Image and Text */}
           <div className="md:col-span-5 space-y-6">
-            <div className="relative w-full h-64 md:h-80 overflow-hidden rounded-xl shadow-md">
+            <div
+              className="relative w-full h-64 md:h-80 overflow-hidden rounded-xl shadow-md"
+              style={{ position: "relative" }}
+            >
               <Image
                 src="https://media.topfinanzas.com/images/uk/contact-us-uk.webp"
                 alt="Contact TopFinanzas UK"

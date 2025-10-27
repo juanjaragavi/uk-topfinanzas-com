@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { apiLogger } from "@/lib/logger";
 
 const SERVING_CONFIG =
   "projects/absolute-brook-452020-d5/locations/global/collections/default_collection/engines/topfinanzas-uk-search-engi_1744641181584/servingConfigs/default_search";
@@ -35,7 +36,7 @@ export async function POST(request: Request) {
 
   // Check if the API key is configured
   if (!API_KEY) {
-    console.error("VERTEX_AI_SEARCH_API_KEY environment variable is not set.");
+    apiLogger.error("VERTEX_AI_SEARCH_API_KEY environment variable is not set");
     return NextResponse.json(
       { error: "Search configuration error on server." },
       { status: 500 },
@@ -52,7 +53,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ results: [] });
     }
 
-    console.log(`[API Search Route] Received query: "${query}"`);
+    apiLogger.debug("API Search: Received query", { query });
 
     // Construct the full API endpoint URL *inside* the handler
     const API_ENDPOINT = `${BASE_ENDPOINT}/${SERVING_CONFIG}:searchLite?key=${API_KEY}`;
@@ -75,9 +76,10 @@ export async function POST(request: Request) {
     // Handle potential errors from the Vertex AI API
     if (!response.ok) {
       const errorBody = await response.text();
-      console.error(
-        `[API Search Route] Vertex AI Error ${response.status}: ${errorBody}`,
-      );
+      apiLogger.error("Vertex AI Error", undefined, {
+        status: response.status,
+        errorBody,
+      });
       throw new Error(
         `Vertex AI Search API request failed with status ${response.status}`,
       );
@@ -103,15 +105,16 @@ export async function POST(request: Request) {
         "No snippet available.",
     }));
 
-    console.log(
-      `[API Search Route] Found ${formattedResults.length} results for query: "${query}"`,
-    );
+    apiLogger.debug("API Search: Results found", {
+      count: formattedResults.length,
+      query,
+    });
 
     // Return the formatted results to the client
     return NextResponse.json({ results: formattedResults });
   } catch (error) {
     // Log any unexpected errors during the process
-    console.error("[API Search Route] Error fetching search results:", error);
+    apiLogger.error("API Search: Error fetching search results", error);
     // Return a generic error response to the client
     return NextResponse.json(
       { error: "Failed to fetch search results." },

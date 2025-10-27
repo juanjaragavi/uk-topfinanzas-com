@@ -5,6 +5,8 @@
  * Based on proven Astro.js implementation patterns
  */
 
+import { logger } from "@/lib/logger";
+
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
@@ -36,14 +38,14 @@ class AnalyticsValidator {
    */
   async runValidation(): Promise<ValidationResult[]> {
     if (this.isValidating) {
-      console.warn("Analytics Validator: Validation already in progress");
+      logger.warn("Analytics Validator: Validation already in progress");
       return this.results;
     }
 
     this.isValidating = true;
     this.results = [];
 
-    console.log("Analytics Validator: Starting comprehensive validation...");
+    logger.info("Analytics Validator: Starting comprehensive validation...");
 
     const validationSuites: ValidationSuite[] = [
       {
@@ -150,7 +152,7 @@ class AnalyticsValidator {
 
     // Execute all validation suites
     for (const suite of validationSuites) {
-      console.log(`Analytics Validator: Running ${suite.name}...`);
+      logger.info(`Analytics Validator: Running ${suite.name}...`);
 
       for (const test of suite.tests) {
         try {
@@ -161,7 +163,7 @@ class AnalyticsValidator {
           });
 
           if (test.required && !result.passed) {
-            console.error(
+            logger.error(
               `Analytics Validator: Required test failed - ${test.name}`,
             );
           }
@@ -638,7 +640,7 @@ class AnalyticsValidator {
         servicesEnabled = typeof googletag.pubads === "function";
       });
     } catch (error) {
-      console.warn(
+      logger.warn(
         "[AnalyticsValidator] Error while verifying GAM services",
         error,
       );
@@ -766,12 +768,12 @@ class AnalyticsValidator {
       r.message.includes("Required test failed"),
     );
 
-    console.log(
+    logger.info(
       `Analytics Validator: Validation complete - ${passed}/${total} tests passed`,
     );
 
     if (requiredTests.length > 0) {
-      console.error(
+      logger.error(
         `Analytics Validator: ${requiredTests.length} required tests failed`,
       );
     }
@@ -780,7 +782,7 @@ class AnalyticsValidator {
     this.results
       .filter((r) => !r.passed)
       .forEach((result) => {
-        console.warn(`Analytics Validator: FAILED - ${result.message}`);
+        logger.warn(`Analytics Validator: FAILED - ${result.message}`);
       });
   }
 

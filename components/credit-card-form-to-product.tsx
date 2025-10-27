@@ -3,6 +3,7 @@
 import type React from "react";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { formLogger } from "@/lib/logger";
 import Cookies from "js-cookie"; // Import Cookies
 import Step1 from "./steps/step1";
 import Step2 from "./steps/step2";
@@ -105,7 +106,7 @@ export default function CreditCardFormToProduct() {
 
   const triggerConversionEvents = useCallback(() => {
     if (!GOOGLE_ADS_CONVERSION_LABEL) {
-      console.warn(
+      formLogger.warn(
         "[QUIZ] Google Ads conversion label is not configured; skipping Ad conversion event.",
       );
     } else {
@@ -118,7 +119,7 @@ export default function CreditCardFormToProduct() {
   const persistRegistrationCookies = useCallback(() => {
     const cookieConfig = getCookieConfig();
     if (!cookieConfig.VALIDATION_ENABLED) {
-      console.log(
+      formLogger.info(
         "[QUIZ] Cookie validation disabled; skipping cookie persistence",
       );
       return;
@@ -143,7 +144,7 @@ export default function CreditCardFormToProduct() {
         expires: cookieExpiration,
       });
 
-      console.log(
+      formLogger.info(
         `[QUIZ] Cookie validation: enabled, expiration: ${cookieExpiration} days`,
       );
     }
@@ -161,7 +162,7 @@ export default function CreditCardFormToProduct() {
     const cookieConfig = getCookieConfig();
     // Skip cookie validation entirely if disabled via environment variable
     if (!cookieConfig.VALIDATION_ENABLED) {
-      console.log("[QUIZ] Cookie validation temporarily disabled");
+      formLogger.info("[QUIZ] Cookie validation temporarily disabled");
       setIsRegisteredUser(false);
       return;
     }
@@ -183,7 +184,7 @@ export default function CreditCardFormToProduct() {
           });
         }
       } catch (error) {
-        console.error("Error parsing saved user data:", error);
+        formLogger.error("Error parsing saved user data:", error);
       }
     }
   }, [mounted, updateFormData]);
@@ -219,7 +220,7 @@ export default function CreditCardFormToProduct() {
         return;
       }
 
-      console.log("[QUIZ-to-product] Form submission attempt", formData);
+      formLogger.info("[QUIZ-to-product] Form submission attempt", formData);
       setIsSubmitting(true);
       setSubmissionStatus("idle");
       setSubmissionMessage(null);
@@ -341,7 +342,7 @@ export default function CreditCardFormToProduct() {
         const sheetsResult = await sheetsResponse.json().catch(() => ({}));
 
         if (sheetsResponse.status === 409) {
-          console.info("[QUIZ] Duplicate submission detected", sheetsResult);
+          formLogger.info("[QUIZ] Duplicate submission detected", sheetsResult);
           persistRegistrationCookies();
           setSubmissionStatus("duplicate");
           setSubmissionMessage(
@@ -375,7 +376,7 @@ export default function CreditCardFormToProduct() {
               const subscribeError = await subscribeResponse
                 .json()
                 .catch(() => null);
-              console.error(
+              formLogger.error(
                 "[QUIZ-to-product] Subscription API error",
                 subscribeError,
               );
@@ -383,10 +384,10 @@ export default function CreditCardFormToProduct() {
               const subscribeResult = await subscribeResponse
                 .json()
                 .catch(() => null);
-              console.log("Subscription API response:", subscribeResult);
+              formLogger.info("Subscription API response:", subscribeResult);
             }
           } catch (subscriptionError) {
-            console.error(
+            formLogger.error(
               "[QUIZ-to-product] Error calling subscription API",
               subscriptionError,
             );
@@ -404,7 +405,7 @@ export default function CreditCardFormToProduct() {
           redirectWithUtmParams("https://linkly.link/2ERav");
         }, 800);
       } catch (error) {
-        console.error("[QUIZ] Error handling submission", error);
+        formLogger.error("[QUIZ] Error handling submission", error);
         setSubmissionStatus("error");
         setSubmissionMessage(
           "We couldn’t confirm your registration. Please try again in a moment.",

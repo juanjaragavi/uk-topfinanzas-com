@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { logger } from "@/lib/logger";
 import { Menu, X, ChevronDown } from "lucide-react"; // Removed Search, Loader2
 // Removed Input, SearchResults, useDebouncedCallback
 
@@ -72,7 +73,7 @@ export function Header() {
   // Function to toggle mega menu
   const toggleMegaMenu = (menuId: string) => {
     // Removed search closing logic
-    console.log(`Toggling mega menu: ${menuId}`);
+    logger.info(`Toggling mega menu: ${menuId}`);
     setActiveMegaMenu((prevMenu) => (prevMenu === menuId ? null : menuId));
   };
 
@@ -80,7 +81,7 @@ export function Header() {
 
   // Function to toggle mobile menu
   const toggleMobileMenu = () => {
-    console.log("Toggling mobile menu");
+    logger.info("Toggling mobile menu");
     setIsOpen((prev) => !prev);
     // Removed search closing logic
   };

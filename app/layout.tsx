@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import fs from "fs";
 import path from "path";
 import "./globals.css";
+import { logger } from "@/lib/logger";
 import GoogleTagManager, {
   GoogleTagManagerNoScript,
 } from "@/components/analytics/gtm";
@@ -71,7 +72,7 @@ try {
     "utf8",
   );
 } catch (e) {
-  console.warn("Failed to read critical CSS:", e);
+  logger.warn("Failed to read critical CSS:", e);
 }
 
 // Add viewport configuration

@@ -1,3 +1,4 @@
+import { logger } from "@/lib/logger";
 export interface ConvertKitSubscriberPayload {
   email_address: string;
   first_name: string;
@@ -45,7 +46,7 @@ const parseJsonSafe = (raw: string) => {
   try {
     return JSON.parse(raw);
   } catch (error) {
-    console.warn("[ConvertKit API] Failed to parse JSON response", error);
+    logger.warn("[ConvertKit API] Failed to parse JSON response", error);
     return raw;
   }
 };
@@ -95,7 +96,7 @@ export async function subscribeToConvertKit(
       SUCCESS_STATUS_CODES.has(response.status) || response.ok;
 
     if (!isSuccessful) {
-      console.error("[ConvertKit API] Error response", {
+      logger.error("[ConvertKit API] Error response", {
         status: response.status,
         body: parsedBody,
       });
@@ -114,7 +115,7 @@ export async function subscribeToConvertKit(
       };
     }
 
-    console.log("[ConvertKit API] Subscriber processed", {
+    logger.info("[ConvertKit API] Subscriber processed", {
       status: response.status,
       email: payload.email_address,
     });
@@ -129,7 +130,7 @@ export async function subscribeToConvertKit(
     const durationMs = performance.now() - startedAt;
 
     if ((error as Error).name === "AbortError") {
-      console.error("[ConvertKit API] Request aborted due to timeout", {
+      logger.error("[ConvertKit API] Request aborted due to timeout", {
         timeoutMs: options.timeoutMs ?? DEFAULT_TIMEOUT_MS,
       });
 
@@ -144,7 +145,7 @@ export async function subscribeToConvertKit(
       };
     }
 
-    console.error("[ConvertKit API] Network or unexpected error", error);
+    logger.error("[ConvertKit API] Network or unexpected error", error);
 
     return {
       success: false,

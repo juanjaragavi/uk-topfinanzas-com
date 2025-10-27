@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { analyticsLogger } from "@/lib/logger";
 
 /**
  * AdZep Accessibility Fix
@@ -27,7 +28,7 @@ export default function AdZepAccessibilityFix() {
         document.body.removeAttribute("aria-hidden");
 
         if (process.env.NODE_ENV === "development") {
-          console.log(
+          analyticsLogger.info(
             "[AdZep Accessibility Fix] Removed aria-hidden from body element",
           );
         }

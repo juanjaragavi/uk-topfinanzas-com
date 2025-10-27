@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { useMDXComponents } from "@/mdx-components";
+import { logger } from "@/lib/logger";
 
 export const metadata = {
   title: "Cookie Policy - TopFinance UK",
@@ -24,7 +25,7 @@ export default async function CookiePolicyPage() {
       source = fs.readFileSync(filePath, "utf8");
     }
   } catch (error) {
-    console.error("Error loading cookie policy file:", error); // Updated error message
+    logger.error("Error loading cookie policy file:", error); // Updated error message
     source =
       "# Error Loading Content\n\nWe apologise, there was an error loading this content.";
   }

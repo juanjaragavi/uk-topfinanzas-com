@@ -324,7 +324,10 @@ export default function PersonalFinanceArchivePage() {
               key={index}
               className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col relative"
             >
-              <div className="relative h-48 w-full">
+              <div
+                className="relative h-48 w-full"
+                style={{ position: "relative" }}
+              >
                 <Image
                   src={post.image}
                   alt={post.title.split("|")[0].trim()} // Cleaner alt text

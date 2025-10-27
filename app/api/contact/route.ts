@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 import { BRAND_STATIC_FIELDS } from "@/lib/constants";
+import { apiLogger } from "@/lib/logger";
 
 const BREVO_API_BASE_URL = "https://api.brevo.com/v3";
 const CONTACT_LIST_IDS = [9, 5];
@@ -64,7 +65,9 @@ export async function POST(request: Request) {
       BRAND_STATIC_FIELDS.Marca;
 
     if (!name || !lastName || !email || !phone || !message || !acceptTerms) {
-      console.error("[Contact API] Missing required fields", body);
+      apiLogger.error("Contact API: Missing required fields", undefined, {
+        body,
+      });
       return NextResponse.json(
         { message: "Missing required fields" },
         { status: 400 },
@@ -72,7 +75,9 @@ export async function POST(request: Request) {
     }
 
     if (!emailRegex.test(email)) {
-      console.error("[Contact API] Invalid email format", email);
+      apiLogger.error("Contact API: Invalid email format", undefined, {
+        email,
+      });
       return NextResponse.json(
         { message: "Invalid email format" },
         { status: 400 },
@@ -82,7 +87,9 @@ export async function POST(request: Request) {
     const apiKey = process.env.BREVO_API_KEY;
 
     if (!apiKey) {
-      console.error("[Contact API] Missing BREVO_API_KEY environment variable");
+      apiLogger.error(
+        "Contact API: Missing BREVO_API_KEY environment variable",
+      );
       return NextResponse.json(
         { message: "Server configuration error. Please contact support." },
         { status: 500 },
@@ -135,7 +142,7 @@ export async function POST(request: Request) {
       listIds: CONTACT_LIST_IDS,
     };
 
-    console.log("[Contact API] Sending contact to Brevo", {
+    apiLogger.info("Contact API: Sending contact to Brevo", {
       email,
       listIds: CONTACT_LIST_IDS,
     });
@@ -152,7 +159,7 @@ export async function POST(request: Request) {
 
     if (!brevoResponse.ok) {
       const errorData = await brevoResponse.json().catch(() => ({}));
-      console.error("[Contact API] Brevo error", {
+      apiLogger.error("Contact API: Brevo error", undefined, {
         status: brevoResponse.status,
         error: errorData,
       });
@@ -166,7 +173,7 @@ export async function POST(request: Request) {
       );
     }
 
-    console.log("[Contact API] Contact synced with Brevo", {
+    apiLogger.info("Contact API: Contact synced with Brevo", {
       email,
       extId,
       listIds: CONTACT_LIST_IDS,
@@ -190,20 +197,27 @@ export async function POST(request: Request) {
 
         if (!noteResponse.ok) {
           const noteError = await noteResponse.json().catch(() => ({}));
-          console.error("[Contact API] Failed to attach Brevo note", {
-            status: noteResponse.status,
-            error: noteError,
-          });
+          apiLogger.error(
+            "Contact API: Failed to attach Brevo note",
+            undefined,
+            {
+              status: noteResponse.status,
+              error: noteError,
+            },
+          );
         } else {
-          console.log("[Contact API] Note stored in Brevo for contact", {
+          apiLogger.info("Contact API: Note stored in Brevo for contact", {
             email,
           });
         }
       } catch (noteError) {
-        console.error("[Contact API] Unexpected error storing Brevo note", {
-          email,
-          error: noteError,
-        });
+        apiLogger.error(
+          "Contact API: Unexpected error storing Brevo note",
+          noteError,
+          {
+            email,
+          },
+        );
       }
     }
 
@@ -212,7 +226,7 @@ export async function POST(request: Request) {
       { status: 200 },
     );
   } catch (error) {
-    console.error("[Contact API] Unexpected server error", error);
+    apiLogger.error("Contact API: Unexpected server error", error);
     return NextResponse.json(
       { message: "Failed to send message due to a server error." },
       { status: 500 },

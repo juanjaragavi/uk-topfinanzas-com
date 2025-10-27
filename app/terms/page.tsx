@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { useMDXComponents } from "@/mdx-components";
+import { logger } from "@/lib/logger";
 
 export const metadata = {
   title: "Terms and Conditions - TopFinance UK",
@@ -24,7 +25,7 @@ export default async function TermsPage() {
       source = fs.readFileSync(filePath, "utf8");
     }
   } catch (error) {
-    console.error("Error loading terms and conditions file:", error);
+    logger.error("Error loading terms and conditions file:", error);
     source =
       "# Error Loading Content\n\nWe apologise, there was an error loading this content.";
   }

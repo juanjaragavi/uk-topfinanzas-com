@@ -2,6 +2,8 @@
  * Generate placeholder URLs for optimized image loading
  */
 
+import { logger } from "@/lib/logger";
+
 /**
  * Generate a tiny placeholder image URL for fast loading
  * @param originalSrc Original image URL
@@ -27,7 +29,7 @@ export function generateTinyPlaceholder(
     return `${originalSrc}?w=${width}&q=${quality}`;
   } catch (error) {
     // If the URL is invalid, return the original
-    console.warn("Invalid URL for placeholder generation:", originalSrc, error);
+    logger.warn("Invalid URL for placeholder generation:", originalSrc, error);
     return originalSrc;
   }
 }

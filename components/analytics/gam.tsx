@@ -2,6 +2,7 @@
 
 import Script from "next/script";
 import { useEffect } from "react";
+import { analyticsLogger } from "@/lib/logger";
 
 const GAM_NETWORK_CODE = "21879825561";
 
@@ -44,7 +45,7 @@ export default function GoogleAdManager() {
 
       const googletag = window.googletag as unknown as GoogletagNamespace;
 
-      console.debug(
+      analyticsLogger.debug(
         `GAM: Initializing Google Ad Manager with network code ${GAM_NETWORK_CODE}`,
       );
 
@@ -78,7 +79,9 @@ export default function GoogleAdManager() {
             googletag.pubads().setTargeting("language", "en");
             googletag.pubads().setTargeting("site", "topfinanzas_uk");
 
-            console.debug("GAM: Services enabled and targeting configured");
+            analyticsLogger.debug(
+              "GAM: Services enabled and targeting configured",
+            );
           });
         } else {
           // Retry if script not loaded yet
@@ -167,9 +170,9 @@ export default function GoogleAdManager() {
                     ).addService(window.googletag.pubads());
                   }
                   
-                  console.debug('GAM: Ad slots defined for network ${GAM_NETWORK_CODE}');
+                  analyticsLogger.debug('GAM: Ad slots defined for network ${GAM_NETWORK_CODE}');
                 } catch (error) {
-                  console.error('GAM: Error defining ad slots:', error);
+                  analyticsLogger.error('GAM: Error defining ad slots:', error);
                 }
               });
             };
@@ -206,7 +209,7 @@ export function GAMAdSlot({
       googletag.cmd.push(() => {
         // Display the ad slot
         googletag.display(slotId);
-        console.debug(`GAM: Displaying ad slot ${slotId}`);
+        analyticsLogger.debug(`GAM: Displaying ad slot ${slotId}`);
       });
     }
   }, [slotId]);
@@ -245,12 +248,12 @@ export function refreshGAMads(slotIds?: string[]) {
 
         if (slotsToRefresh.length > 0) {
           pubads.refresh(slotsToRefresh);
-          console.debug("GAM: Refreshed specific ad slots", slotIds);
+          analyticsLogger.debug("GAM: Refreshed specific ad slots", slotIds);
         }
       } else {
         // Refresh all slots
         pubads.refresh();
-        console.debug("GAM: Refreshed all ad slots");
+        analyticsLogger.debug("GAM: Refreshed all ad slots");
       }
     });
   }

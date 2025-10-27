@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { analyticsLogger } from "@/lib/logger";
 
 /**
  * AdZep Backdrop Cleaner
@@ -139,7 +140,7 @@ export default function AdZepBackdropCleaner() {
           if (!hasAdContent(child)) {
             // This is an orphaned backdrop - remove it
             if (process.env.NODE_ENV === "development") {
-              console.log(
+              analyticsLogger.info(
                 "[AdZep Backdrop Cleaner] Removing orphaned backdrop:",
                 {
                   id: child.id,
@@ -168,7 +169,7 @@ export default function AdZepBackdropCleaner() {
         document.body.removeAttribute("aria-hidden");
 
         if (process.env.NODE_ENV === "development") {
-          console.log(
+          analyticsLogger.info(
             `[AdZep Backdrop Cleaner] Cleaned up ${removedCount} orphaned backdrop(s) and restored body overflow`,
           );
         }

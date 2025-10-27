@@ -2,6 +2,7 @@ import { google } from "googleapis";
 import { NextResponse } from "next/server";
 
 import { BRAND_STATIC_FIELDS } from "@/lib/constants";
+import { apiLogger } from "@/lib/logger";
 
 const pickString = (...values: unknown[]) => {
   for (const value of values) {
@@ -20,7 +21,7 @@ export async function POST(req: Request) {
   const body = await req.json();
 
   // Enhanced logging for production debugging
-  console.log("[Sheets API] Request received:", {
+  apiLogger.debug("Sheets API request received", {
     hasEmail: !!body.email,
     hasFirstName: !!body.firstName,
     hasPreferenceText: !!body.preferenceText,
@@ -51,7 +52,7 @@ export async function POST(req: Request) {
       typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
 
     if (!emailInput) {
-      console.log("[Sheets API] Validation failed: Missing email");
+      apiLogger.warn("Validation failed: Missing email");
       return NextResponse.json(
         {
           error: "Email is required to upsert quiz registration",
@@ -61,7 +62,7 @@ export async function POST(req: Request) {
     }
 
     // Environment check logging
-    console.log("[Sheets API] Environment check:", {
+    apiLogger.debug("Environment check", {
       hasServiceEmail: !!process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
       hasPrivateKey: !!process.env.GOOGLE_PRIVATE_KEY,
       hasSheetId: !!process.env.GOOGLE_SHEET_ID,
@@ -77,7 +78,7 @@ export async function POST(req: Request) {
       scopes: ["https://www.googleapis.com/auth/spreadsheets"],
     });
 
-    console.log("[Sheets API] Google Auth created successfully");
+    apiLogger.debug("Google Auth created successfully");
 
     const sheets = google.sheets({ version: "v4", auth });
 
@@ -228,10 +229,7 @@ export async function POST(req: Request) {
     );
   } catch (error) {
     // Enhanced error logging
-    console.error("[Sheets API] Error occurred:", {
-      errorMessage: error instanceof Error ? error.message : "Unknown error",
-      errorName: error instanceof Error ? error.name : "Unknown",
-      errorStack: error instanceof Error ? error.stack : undefined,
+    apiLogger.error("Sheets API error occurred", error, {
       hasUTMParams: !!(body.utm_source || body.utm_medium || body.utm_campaign),
       requestBodySize: JSON.stringify(body).length,
       requestFields: Object.keys(body),

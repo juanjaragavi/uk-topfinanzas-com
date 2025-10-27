@@ -1,3 +1,4 @@
+import { logger } from "@/lib/logger";
 export const RECOMMENDER_LOCK_COOKIE = "tf_recommender_lock";
 export const RECOMMENDER_LOCK_STORAGE_KEY = "tf_recommender_lock";
 export const RECOMMENDER_LOCK_MAX_AGE_SECONDS = 60 * 60 * 24 * 30; // 30 days
@@ -86,7 +87,7 @@ export function decodeRecommenderLock(
       version: LOCK_VERSION,
     };
   } catch (error) {
-    console.error("Failed to decode recommender lock payload", error);
+    logger.error("Failed to decode recommender lock payload", error);
     return null;
   }
 }
@@ -121,7 +122,7 @@ function safeGetLocalStorage(key: string): string | null {
   try {
     return window.localStorage.getItem(key);
   } catch (error) {
-    console.warn("Failed to access localStorage", error);
+    logger.warn("Failed to access localStorage", error);
     return null;
   }
 }
@@ -134,7 +135,7 @@ function safeSetLocalStorage(key: string, value: string) {
   try {
     window.localStorage.setItem(key, value);
   } catch (error) {
-    console.warn("Failed to write to localStorage", error);
+    logger.warn("Failed to write to localStorage", error);
   }
 }
 
@@ -146,7 +147,7 @@ function safeRemoveLocalStorage(key: string) {
   try {
     window.localStorage.removeItem(key);
   } catch (error) {
-    console.warn("Failed to remove item from localStorage", error);
+    logger.warn("Failed to remove item from localStorage", error);
   }
 }
 
