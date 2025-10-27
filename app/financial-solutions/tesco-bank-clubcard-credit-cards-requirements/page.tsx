@@ -643,19 +643,15 @@ export default function TescoBankClubcardCreditCardsRequirementsPage() {
                 </div>
 
                 <div className="text-left my-8">
-                  <Link href="/financial-solutions/tesco-bank-clubcard-credit-cards">
+                  <a
+                    href="https://www.tescobank.com/credit-cards/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button className="bg-[#00539f] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
-                      View Tesco Bank Clubcard Credit Cards Benefits
+                      Apply Now at Tesco Bank Official Website
                     </Button>
-                  </Link>
-                </div>
-
-                <div className="text-left my-8">
-                  <Link href="https://www.tescobank.com/credit-cards/eligibility-checker/">
-                    <Button className="bg-[#00539f] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
-                      Check Your Eligibility on Tesco Bank
-                    </Button>
-                  </Link>
+                  </a>
                 </div>
               </section>
 

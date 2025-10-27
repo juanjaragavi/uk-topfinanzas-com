@@ -726,11 +726,15 @@ export default function HSBCRewardsCreditCardRequirementsPage() {
             </div>
 
             <div className="text-left my-8">
-              <Link href="/financial-solutions/hsbc-rewards-credit-card">
+              <a
+                href="https://www.hsbc.co.uk/credit-cards/products/rewards/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button className="bg-[#db0011] hover:bg-red-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
-                  Learn More About HSBC Rewards Credit Card Benefits
+                  Apply Now at HSBC Official Website
                 </Button>
-              </Link>
+              </a>
             </div>
 
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 my-8">

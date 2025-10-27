@@ -630,11 +630,15 @@ export default function FluidCreditCardRequirementsPage() {
                 </div>
 
                 <div className="text-left my-8">
-                  <Link href="/financial-solutions/fluid-credit-card">
+                  <a
+                    href="https://www.fluid.co.uk/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button className="bg-[#642667] hover:bg-[#4f1e52] text-white font-medium text-md py-2 px-8 rounded-full w-full">
-                      View Card Benefits & Features
+                      Apply Now at Fluid Official Website
                     </Button>
-                  </Link>
+                  </a>
                 </div>
               </section>
             </div>

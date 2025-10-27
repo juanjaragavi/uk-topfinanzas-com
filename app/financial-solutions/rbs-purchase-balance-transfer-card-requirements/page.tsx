@@ -562,11 +562,15 @@ export default function RBSPurchaseBalanceTransferCardRequirementsPage() {
                 </div>
 
                 <div className="text-left my-8">
-                  <Link href="/financial-solutions/rbs-purchase-balance-transfer-card">
+                  <a
+                    href="https://www.rbs.co.uk/credit-cards/purchase-and-balance-transfer.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button className="bg-[#5a287d] hover:bg-purple-900 text-white font-medium text-md py-2 px-8 rounded-full w-full">
-                      View Card Benefits
+                      Apply Now at RBS Official Website
                     </Button>
-                  </Link>
+                  </a>
                 </div>
 
                 {/* AI Content Disclaimer */}

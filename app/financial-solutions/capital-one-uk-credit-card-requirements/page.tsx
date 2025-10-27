@@ -757,11 +757,15 @@ export default function CapitalOneUKCreditCardRequirementsPage() {
                 </p>
 
                 <div className="text-left my-8">
-                  <Link href="/financial-solutions/capital-one-uk-credit-card">
+                  <a
+                    href="https://www.capitalone.co.uk/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button className="bg-[#1E1F39] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
-                      View Card Benefits
+                      Apply Now at Capital One Official Website
                     </Button>
-                  </Link>
+                  </a>
                 </div>
                 {/* AI Content Disclaimer */}
                 <AIContentDisclaimer />

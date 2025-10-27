@@ -527,11 +527,15 @@ export default function BipCreditCardRequirementsPage() {
                 </div>
 
                 <div className="text-left my-8">
-                  <Link href="/financial-solutions/bip-credit-card">
+                  <a
+                    href="https://bip.credit/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button className="bg-[#8050f2] hover:bg-purple-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
-                      View Benefits
+                      Apply Now at Bip Official Website
                     </Button>
-                  </Link>
+                  </a>
                 </div>
 
                 {/* AI Content Disclaimer */}

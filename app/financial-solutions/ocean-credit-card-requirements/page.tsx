@@ -779,12 +779,15 @@ export default function OceanCreditCardRequirementsPage() {
             </section>
 
             <div className="my-12 text-center">
-              <Button
-                href="/financial-solutions/ocean-credit-card"
-                className="bg-[#0a629c] hover:bg-[#084a75] text-white text-lg px-8 py-6"
+              <a
+                href="https://www.oceanfinance.co.uk/credit-cards/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Learn More About the Ocean Credit Card
-              </Button>
+                <Button className="bg-[#0a629c] hover:bg-[#084a75] text-white text-lg px-8 py-6 w-full">
+                  Apply Now at Ocean Finance Official Website
+                </Button>
+              </a>
               <p className="text-sm text-gray-600 mt-4">
                 Use QuickCheck to see if you'll be accepted in 60 seconds
               </p>

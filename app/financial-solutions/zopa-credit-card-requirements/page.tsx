@@ -625,11 +625,15 @@ export default function ZopaCreditCardRequirementsPage() {
                 </div>
 
                 <div className="text-left my-8">
-                  <Link href="/financial-solutions/zopa-credit-card">
+                  <a
+                    href="https://www.zopa.com/credit-card"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button className="bg-[#6CE6B5] hover:bg-[#5BD5A4] text-white font-medium text-md py-2 px-8 rounded-full w-full">
-                      Learn More About Zopa Credit Card Benefits
+                      Apply Now at Zopa Official Website
                     </Button>
-                  </Link>
+                  </a>
                 </div>
 
                 <p className="text-sm text-gray-600 italic text-left leading-5 my-6">

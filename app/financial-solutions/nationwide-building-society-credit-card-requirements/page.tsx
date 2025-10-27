@@ -762,15 +762,19 @@ export default function NationwideBuildingSocietyCreditCardRequirementsPage() {
                   Ready to Learn More About the Benefits?
                 </h3>
                 <p className="mb-4 text-left">
-                  Now that you understand the requirements, explore the full
-                  benefits of the Nationwide Building Society Member Credit
-                  Card, including extended 0% periods and Section 75 protection.
+                  Now that you understand the requirements, you can apply for
+                  the Nationwide Building Society Member Credit Card and enjoy
+                  extended 0% periods and Section 75 protection.
                 </p>
-                <Link href="/financial-solutions/nationwide-building-society-credit-card">
-                  <Button className="bg-white text-[#011546] hover:bg-gray-100 font-semibold px-6 py-3">
-                    View Card Benefits & Features
+                <a
+                  href="https://www.nationwide.co.uk/credit-cards/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-white text-[#011546] hover:bg-gray-100 font-semibold px-6 py-3 w-full">
+                    Apply Now at Nationwide Official Website
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

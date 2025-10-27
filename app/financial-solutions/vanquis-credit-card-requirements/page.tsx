@@ -540,11 +540,15 @@ export default function VanquisCreditCardRequirementsPage() {
                 </p>
 
                 <div className="text-left my-8">
-                  <Link href="/financial-solutions/vanquis-credit-card">
+                  <a
+                    href="https://www.vanquis.com/credit-cards/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button className="bg-[#201F68] hover:bg-[#1A1853] text-white font-medium text-md py-2 px-8 rounded-full w-full">
-                      Learn About Benefits
+                      Apply Now at Vanquis Official Website
                     </Button>
-                  </Link>
+                  </a>
                 </div>
 
                 {/* AI Content Disclaimer */}

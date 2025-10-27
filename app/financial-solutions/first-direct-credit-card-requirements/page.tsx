@@ -663,11 +663,15 @@ export default function FirstDirectCreditCardRequirementsPage() {
                 </p>
 
                 <div className="text-left my-8">
-                  <Link href="/financial-solutions/first-direct-credit-card">
+                  <a
+                    href="https://www.firstdirect.com/loans-and-cards/credit-cards/for-purchases/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button className="bg-[#121212] hover:bg-gray-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
-                      View Card Benefits
+                      Apply Now at First Direct Official Website
                     </Button>
-                  </Link>
+                  </a>
                 </div>
               </section>
 

@@ -767,11 +767,15 @@ export default function AmexGoldRequirementsPage() {
               </div>
 
               <div className="text-left my-12">
-                <Link href="/financial-solutions/american-express-preferred-rewards-gold-credit-card">
+                <a
+                  href="https://www.americanexpress.com/en-gb/credit-cards/gold-credit-card/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button className="bg-[#180053] hover:bg-purple-900 text-white font-medium text-md py-2 px-8 rounded-full w-full">
-                    View Full Benefits & Features
+                    Apply Now at American Express Official Website
                   </Button>
-                </Link>
+                </a>
               </div>
 
               <AIContentDisclaimer />

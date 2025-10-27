@@ -676,11 +676,15 @@ export default function MSRewardsCreditCardRequirementsPage() {
                 </div>
 
                 <div className="text-left my-8">
-                  <Link href="/financial-solutions/ms-rewards-credit-card">
+                  <a
+                    href="https://bank.marksandspencer.com/credit-cards/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button className="bg-[#005640] hover:bg-[#003d2f] text-white font-medium text-md py-2 px-8 rounded-full w-full">
-                      View Full Benefits
+                      Apply Now at M&S Bank Official Website
                     </Button>
-                  </Link>
+                  </a>
                 </div>
 
                 {/* AI Content Disclaimer */}

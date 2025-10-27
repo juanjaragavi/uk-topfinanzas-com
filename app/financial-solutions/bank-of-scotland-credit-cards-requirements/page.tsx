@@ -727,11 +727,15 @@ export default function BankOfScotlandCreditCardsRequirementsPage() {
                 </p>
 
                 <div className="text-left my-8">
-                  <Link href="/financial-solutions/bank-of-scotland-credit-cards">
+                  <a
+                    href="https://www.bankofscotland.co.uk/creditcards.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button className="bg-[#0f70f0] hover:bg-blue-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
-                      View Card Benefits
+                      Apply Now at Bank of Scotland Official Website
                     </Button>
-                  </Link>
+                  </a>
                 </div>
               </section>
 

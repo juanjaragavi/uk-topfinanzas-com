@@ -596,11 +596,15 @@ export default function YonderCreditCardRequirementsPage() {
                 </div>
 
                 <div className="text-left my-8">
-                  <Link href="/financial-solutions/yonder-credit-card">
+                  <a
+                    href="https://www.yonder.com/credit-cards/free-credit-card"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button className="bg-[#e88267] hover:bg-orange-700 text-white font-medium text-md py-2 px-8 rounded-full w-full">
-                      View Benefits
+                      Apply Now at Yonder Official Website
                     </Button>
-                  </Link>
+                  </a>
                 </div>
               </section>
               {/* AI Content Disclaimer */}

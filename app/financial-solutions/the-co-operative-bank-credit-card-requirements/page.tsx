@@ -613,11 +613,15 @@ export default function CooperativeBankCreditCardRequirementsPage() {
                 </p>
 
                 <div className="text-left my-8">
-                  <Link href="/financial-solutions/the-co-operative-bank-credit-card">
+                  <a
+                    href="https://www.co-operativebank.co.uk/products/credit-cards/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button className="bg-[#007db8] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
-                      View Card Benefits
+                      Apply Now at Co-operative Bank Official Website
                     </Button>
-                  </Link>
+                  </a>
                 </div>
 
                 {/* AI Content Disclaimer */}

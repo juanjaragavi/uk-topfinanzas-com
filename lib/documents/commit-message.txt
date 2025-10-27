@@ -1,10 +1,9 @@
-feat(instructions): add credit-cards page integration to product generation workflow
+fix: normalize external CTA instructions and update requirements pages
 
-- Updated CREDIT_CARD_PRODUCT_GENERATION.instructions.md to require THREE file updates for credit cards
-- Credit card products must now be added to: Blog page + Financial Solutions page + Credit Cards page
-- Personal loan products remain at TWO files: Blog page + Financial Solutions page
-- Added explicit section in Step 8 for Credit Cards Main Category Page (/app/credit-cards/page.tsx)
-- Updated Quick Reference section to reflect new workflow requirements
-- Modified CRITICAL section to clarify different requirements for credit cards vs loans
-- Ensures new credit card products are visible on dedicated /credit-cards archive page
-- Improves content discoverability and user experience for credit card browsing
+- Normalized formatting in CREDIT_CARD_PRODUCT_GENERATION.instructions.md (removed CRITICAL/bold emphasis)
+- Updated 18 credit card requirements pages with external bank URLs
+- Replaced internal Link components with external anchor tags (target="_blank", rel="noopener noreferrer")
+- Added comprehensive documentation in INSTRUCTION_NORMALIZATION_SUMMARY.md
+- Ensured all CTA buttons link to official bank websites, not internal benefits pages
+- Fixed production bug where Requirements pages linked internally instead of to bank sites
+- Maintained FCA compliance and UK market standards

@@ -615,11 +615,15 @@ export default function AquaCreditCardRequirementsPage() {
                 </p>
 
                 <div className="text-left my-8">
-                  <Link href="/financial-solutions/aqua-credit-card">
+                  <a
+                    href="https://www.aquacard.co.uk/credit-cards"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button className="bg-[#7EDDDC] hover:bg-[#5ECCCB] text-white font-medium text-md py-2 px-8 rounded-full w-full">
-                      View Benefits
+                      Apply Now at Aqua Official Website
                     </Button>
-                  </Link>
+                  </a>
                 </div>
                 {/* AI Content Disclaimer */}
                 <AIContentDisclaimer />

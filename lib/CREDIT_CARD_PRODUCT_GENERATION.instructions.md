@@ -123,7 +123,7 @@ This page details eligibility criteria and application process:
    - Section: "Application Process" (step-by-step)
    - Section: "Frequently Asked Questions"
    - Important disclaimers and risk warnings
-   - Final CTA button (links back to main benefits page)
+   - Final CTA button (must link to official external bank/product URL, not internal benefits page)
    - AIContentDisclaimer component
    - CompactFooter component
 
@@ -140,6 +140,9 @@ This page details eligibility criteria and application process:
 - Include all mandatory FCA disclosures and representative examples
 - Highlight benefits while being transparent about risks and costs
 - Include clear CTAs with brand-colored buttons
+- The final CTA button on the Requirements page must link to the official external bank/product URL (provided in CSV or user request), not to the internal benefits page
+- The CTA button should use text like "Apply Now", "Visit Official Website", or "Check Your Eligibility" to indicate it's an external link
+- The external CTA link should open in a new tab using a standard HTML anchor tag with `target="_blank"` and `rel="noopener noreferrer"` attributes wrapping the Button component
 - Use UK-specific terminology and comply with FCA regulations
 - Images must use Next.js Image or ResponsiveImage components with proper attributes
 - All text alignment should be `text-left` for consistency
@@ -631,6 +634,47 @@ export default function ProductNameRequirementsPage() {
 - Ad container divs with IDs: `uk_topfinanzas_3` and `uk_topfinanzas_4`
 - AIContentDisclaimer at the end of article content
 - No WordPress blocks, no explanatory text, just pure Next.js code
+
+### External CTA Button on Requirements Page
+
+The final CTA button on the Requirements page must link to the official external bank/product URL.
+
+Correct Implementation Example:
+
+```typescript
+<div className="text-left my-8">
+  <a
+    href="https://www.bank-official-website.com/product-page"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button className="bg-[#BrandColor] hover:bg-[#HoverColor] text-white font-medium text-md py-2 px-8 rounded-full w-full">
+      Apply Now at Official Website
+    </Button>
+  </a>
+</div>
+```
+
+Incorrect Implementation (Do Not Use):
+
+```typescript
+<div className="text-left my-8">
+  <Link href="/financial-solutions/product-name">
+    <Button className="bg-[#BrandColor] hover:bg-[#HoverColor] text-white font-medium text-md py-2 px-8 rounded-full w-full">
+      View Card Benefits
+    </Button>
+  </Link>
+</div>
+```
+
+Implementation Requirements:
+
+- Use standard `<a>` tag with `href` attribute (not Next.js `Link` component for external URLs)
+- Include `target="_blank"` to open in new tab
+- Include `rel="noopener noreferrer"` for security
+- Button text should indicate external action: "Apply Now", "Visit Official Website", "Check Your Eligibility", etc.
+- The external URL must come from the CSV file's "Sitio Web (UK)" column or user-provided official product URL
+- This is a mandatory requirement for all requirements pages
 
 </OutputFormatting>
 
