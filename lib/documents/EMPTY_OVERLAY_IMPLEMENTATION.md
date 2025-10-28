@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 MD041 MD036 -->
+<!-- markdownlint-disable MD013 MD024 MD033 MD036 MD041 -->
 
 # Empty Overlay Fix Implementation Complete ✅
 
@@ -91,7 +91,7 @@ npm run dev
 
 **Watch Console For:**
 
-```
+```bash
 [AdZep Backdrop Cleaner] Removing orphaned backdrop: { id: "", className: "...", tagName: "DIV" }
 [AdZep Backdrop Cleaner] Cleaned up 1 orphaned backdrop(s) and restored body overflow
 [AdZep] Calling window.AdZepActivateAds()
@@ -162,7 +162,7 @@ Run through these scenarios:
 
 ### Component Architecture
 
-```
+```bash
 AdZepBackdropCleaner
 ├── useEffect (on pathname change)
 │   ├── cleanBackdrops() - Main cleanup function
@@ -256,11 +256,11 @@ Confirmed `window.AdZepActivateAds()` is called correctly:
 
 ## Troubleshooting
 
-### If empty overlays still appear:
+### If empty overlays still appear
 
 1. **Check console logs** (development mode)
 
-   ```
+   ```bash
    [AdZep Backdrop Cleaner] Component active
    ```
 
@@ -271,13 +271,8 @@ Confirmed `window.AdZepActivateAds()` is called correctly:
 
 3. **Adjust detection logic** if needed
    Edit `adzep-backdrop-cleaner.tsx`:
-   ```typescript
-   const hasBackdropName =
-     htmlElement.className?.toLowerCase().includes("your-pattern") ||
-     htmlElement.id?.toLowerCase().includes("your-pattern");
-   ```
 
-### If legitimate ads are removed:
+### If legitimate ads are removed
 
 1. **Add whitelist** for your ad network
 
@@ -288,6 +283,7 @@ Confirmed `window.AdZepActivateAds()` is called correctly:
    ```
 
 2. **Adjust content detection**
+
    ```typescript
    // Make detection more specific
    if (rect.width > 200 && rect.height > 200) {

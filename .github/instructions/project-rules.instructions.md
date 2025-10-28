@@ -264,6 +264,7 @@ When creating new blog articles, they must be integrated across multiple locatio
 - **Homepage**: Consider featuring on main page
 - **Sidebar**: Update recent articles in blog layout
 - **Navigation**: Add to header featured posts if standout content
+- **Mandatory Sync**: For every create, update, or delete in Personal Finance or Financial Solutions categories, immediately reflect the change in all `allPosts` arrays across the blog listing `page.tsx` files to keep rendered data accurate
 
 **Reference**: See `/.github/instructions/BLOG_POST_INTEGRATION.instructions.md` for detailed procedures.
 

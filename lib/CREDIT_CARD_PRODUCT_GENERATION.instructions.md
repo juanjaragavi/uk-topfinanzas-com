@@ -21,6 +21,10 @@ Each page must be:
 - Production-ready TypeScript code following Next.js 14+ App Router conventions
 - Based on accurate, up-to-date information from official product sources
 
+### Mandatory Listing Synchronization
+
+Any time you create, update, or delete blog content or listing entries for the **Financial Solutions** or **Personal Finance** categories, you must immediately replicate that change across every `allPosts` array in the blog listing `page.tsx` files (`app/blog/page.tsx`, `app/personal-finance/page.tsx`, `app/financial-solutions/page.tsx`, and any other listing pages). Add new entries for creations, adjust metadata for edits, and remove entries for deletions so these arrays always match the published content.
+
 ## Quick Reference
 
 **Input Required from User**:
@@ -46,7 +50,8 @@ Each page must be:
      - For personal loans: add to `allLoansContent` array with appropriate `type` ("personal", "sme_fintech", "neobank", "marketplace", or "guide")
    - **For credit cards ONLY**: Also add to `/app/credit-cards/page.tsx` in the `creditCardsContent` array
    - **DO NOT** add products to `/app/personal-finance/page.tsx` - that page is ONLY for educational guides and articles, NOT individual product pages
-   - Update all required arrays immediately after generating the page components
+
+- Update all required arrays immediately after generating the page components and keep them synchronized whenever edits or deletions occur
 
 **Key Tools**:
 
@@ -165,7 +170,7 @@ You will find the Schema in the `lib/documents/topfinanzas-us-topic-outline.csv`
 - **Content Focus:** Specific angle and unique selling points to emphasize
 - **SEO Intent Type:** Type of intent (e.g., Commercial, Transactional)
 - **CTA:** Primary call-to-action for the page
-- **Brand Color:** Hex color code for buttons and accents (e.g., #00395D)
+- **Brand Color:** Hex color code for buttons and accents (e.g., 00395D)
 - **Hero Image URL:** Full URL to the main product image
 - **Requirements Image URL:** Full URL to the requirements page image
 - **Loan Amount Range:** Minimum and maximum amounts (for loans)
@@ -630,7 +635,7 @@ export default function ProductNameRequirementsPage() {
 - Default export function with PascalCase component name
 - Complete JSX structure with all closing tags
 - Proper Tailwind CSS classes matching existing pages
-- Brand color in hex format for buttons (e.g., `bg-[#00395D]`)
+- Brand color in hex format for buttons (e.g., `bg-brandColor` with the exact shade defined in the design tokens)
 - Ad container divs with IDs: `uk_topfinanzas_3` and `uk_topfinanzas_4`
 - AIContentDisclaimer at the end of article content
 - No WordPress blocks, no explanatory text, just pure Next.js code
@@ -648,7 +653,7 @@ Correct Implementation Example:
     target="_blank"
     rel="noopener noreferrer"
   >
-    <Button className="bg-[#BrandColor] hover:bg-[#HoverColor] text-white font-medium text-md py-2 px-8 rounded-full w-full">
+  <Button className="bg-brandColor hover:bg-brandColorHover text-white font-medium text-md py-2 px-8 rounded-full w-full">
       Apply Now at Official Website
     </Button>
   </a>
@@ -660,7 +665,7 @@ Incorrect Implementation (Do Not Use):
 ```typescript
 <div className="text-left my-8">
   <Link href="/financial-solutions/product-name">
-    <Button className="bg-[#BrandColor] hover:bg-[#HoverColor] text-white font-medium text-md py-2 px-8 rounded-full w-full">
+  <Button className="bg-brandColor hover:bg-brandColorHover text-white font-medium text-md py-2 px-8 rounded-full w-full">
       View Card Benefits
     </Button>
   </Link>

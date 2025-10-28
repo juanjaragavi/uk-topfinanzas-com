@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 MD041 MD036 -->
+<!-- markdownlint-disable MD013 MD024 MD033 MD036 MD041 -->
 
 # Blog Article Generation Request - TOFU Content
 

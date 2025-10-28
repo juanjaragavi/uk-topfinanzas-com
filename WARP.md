@@ -144,6 +144,7 @@ NEXT_PUBLIC_COOKIE_SHORT_EXPIRATION    # days (default: 1)
 - Use UK-specific financial terminology
 - Comply with FCA advertising standards
 - Proper UK address and phone number formats
+- When creating, updating, or deleting blog posts in the **Personal Finance** or **Financial Solutions** categories, immediately synchronize the corresponding entries in every `allPosts` array within the blog listing `page.tsx` files so the listings stay accurate.
 
 ## Development Patterns
 

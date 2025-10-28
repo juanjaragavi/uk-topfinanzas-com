@@ -1,5 +1,5 @@
+docs: enforce blog listing sync in agent prompts
 fix: Complete final logger migration phase - migrate remaining UI and utility files
-
 This commit completes the console.log to Pino logger migration by updating
 the remaining UI components and utility files throughout the codebase.
 

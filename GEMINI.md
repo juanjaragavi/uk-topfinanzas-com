@@ -252,7 +252,11 @@ import { CustomComponent } from "./custom-component";
 - **Component Usage**: Embedded React components
 - **SEO**: Proper metadata for all content
 
-### 2. SEO Optimization
+### 2. Blog Content Synchronization (MANDATORY)
+
+- When performing any create, update, or delete operation on blog posts in the **Personal Finance** or **Financial Solutions** categories, you must immediately propagate the change to every `allPosts` array in the associated `page.tsx` files that power blog listing pages. Keep the content and listing data in lockstep.
+
+### 3. SEO Optimization
 
 - **Meta Tags**: Comprehensive metadata
 - **Schema Markup**: Structured data

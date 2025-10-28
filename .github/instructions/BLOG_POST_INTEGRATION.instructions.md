@@ -4,6 +4,10 @@
 
 When creating new blog articles, they must be added to multiple locations across the site to ensure proper visibility and discoverability. This document outlines all the places where blog posts are displayed and need to be updated.
 
+## Mandatory Listing Synchronization
+
+Any time you create, update, or delete a blog post in the **Personal Finance** or **Financial Solutions** categories, you must immediately mirror that change across every `allPosts` array in the blog listing `page.tsx` files (`app/blog/page.tsx`, `app/personal-finance/page.tsx`, `app/financial-solutions/page.tsx`, and any other listing views). Add new entries for creations, adjust metadata for edits, and remove entries for deletions so the rendered listings always align with the current content set.
+
 ## Required Locations for Blog Post Integration
 
 ### 1. Main Blog Listing Page (`app/blog/page.tsx`)
@@ -172,19 +176,21 @@ When creating new blog articles, they must be added to multiple locations across
 
 ## Step-by-Step Integration Process
 
-### When Creating a New Blog Post:
+### When Creating a New Blog Post (and Maintaining Existing Posts):
 
 1. **Create the article file**: `/app/personal-finance/[slug]/page.tsx` or `/app/financial-solutions/[slug]/page.tsx`
 
 2. **Update Blog Listing** (`app/blog/page.tsx`):
    - Add entry to `allPosts` array
    - Use current date to ensure it appears first
-   - Ensure slug matches directory name exactly
+
+- Ensure slug matches directory name exactly; for edits, update the existing entry; for deletions, remove the entry entirely
 
 3. **Update Category Archive** (Required for proper categorization):
    - **Personal Finance**: Add to `app/personal-finance/page.tsx` `allPosts` array
    - **Financial Solutions**: Add to `app/financial-solutions/page.tsx` if exists
-   - Choose appropriate category filter for filtering functionality
+
+- Choose appropriate category filter for filtering functionality; for edits, update the existing entry; for deletions, remove the entry entirely
 
 4. **Consider Homepage Feature** (`app/page.tsx`):
    - If it's a major/important article, replace the featured post on homepage

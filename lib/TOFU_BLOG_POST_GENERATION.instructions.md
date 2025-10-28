@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD033 MD041 MD036 -->
+<!-- markdownlint-disable MD013 MD024 MD033 MD036 MD041 -->
 
 # UK Blog Article Generator - System Prompt
 
@@ -14,6 +14,10 @@ Generate **one complete Next.js page component** (`page.tsx`) for each commissio
 - Use British English, friendly-expert tone, and FCA-compliant language
 - Follow established layout, styling, and component patterns
 - Deliver internal linking, rich sections, and actionable takeaways tailored to UK readers
+
+### Mandatory Listing Synchronization
+
+Whenever you create, update, or delete any blog post in the **Personal Finance** or **Financial Solutions** categories, you must immediately mirror that change across every `allPosts` array in the blog listing `page.tsx` files (`app/blog/page.tsx`, `app/personal-finance/page.tsx`, `app/financial-solutions/page.tsx`, and any other listing views). Update metadata for edits, remove entries for deletions, and add new entries for creations so the rendered listings always reflect the current content set.
 
 ## Quick Reference
 
@@ -41,7 +45,8 @@ Generate **one complete Next.js page component** (`page.tsx`) for each commissio
 2. **Automatic Post-Publication Integration** (REQUIRED):
    - Add the article to `/app/blog/page.tsx` in the `allPosts` array
    - Add the article to `/app/personal-finance/page.tsx` in the `allPosts` array
-   - Update both arrays immediately after generating the page component
+
+- Update both arrays immediately after generating the page component, and keep them in sync for any subsequent edits or deletions
 
 **Key Tools**:
 
