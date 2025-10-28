@@ -39,6 +39,19 @@ export default function BlogArchivePage() {
 
   // Combine posts from both categories
   const allPosts: PostItem[] = [
+    // Personal Finance - Latest Articles
+    {
+      title:
+        "The Hidden Costs of Homeownership That No One Talks About | Top Finance UK",
+      slug: "hidden-costs-of-homeownership",
+      description:
+        "Discover the unexpected expenses that catch UK homeowners off guard. From maintenance to insurance, learn how to budget for the hidden costs of owning a home.",
+      image:
+        "https://media.topfinanzas.com/images/uk/hidden-costs-homeownership.webp",
+      category: "Personal Finance",
+      categoryPath: "/personal-finance",
+      date: "28 October 2025",
+    },
     // Financial Solutions - Credit Cards
     {
       title:

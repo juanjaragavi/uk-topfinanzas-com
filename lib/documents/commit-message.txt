@@ -1,53 +1,17 @@
-docs: enforce blog listing sync in agent prompts
-fix: Complete final logger migration phase - migrate remaining UI and utility files
-This commit completes the console.log to Pino logger migration by updating
-the remaining UI components and utility files throughout the codebase.
+feat: Add comprehensive blog article on hidden costs of homeownership
 
-Files Migrated (11 files):
-- UI Components: ai-content-disclaimer.tsx, featured-post-card.tsx, optimized-image.tsx,
-  responsive-image.tsx, search-results.tsx
-- Utilities: activate-adzep.ts, analytics-validator.ts, convertkit-client.ts,
-  recommender-lock.ts, generate-blur-placeholder.ts, image-optimizer.ts
-
-Migration Details:
-- Replaced all console.log → logger.info
-- Replaced all console.warn → logger.warn  
-- Replaced all console.error → logger.error
-- Added appropriate scoped logger imports (analyticsLogger, adzepLogger, validationLogger, logger)
-- Maintained existing functionality and error handling
-- Preserved all log context and parameters
-
-Technical Changes:
-- Added pino and pino-pretty to package.json dependencies
-- Created comprehensive documentation (4 new docs files)
-- Established logging patterns for future development
-- All logging now environment-aware (disabled in production by default)
-
-Build Status: ✅ Verified - no TypeScript errors or build issues
-
-Documentation Added:
-- /docs/CONSOLE_LOG_MIGRATION_SUMMARY.md - Complete implementation details
-- /docs/LOGGER_MIGRATION_GUIDE.md - Usage guide for developers
-- /docs/LOGGER_QUICK_REFERENCE.md - Quick reference cheat sheet
-- /docs/LOGGER_TROUBLESHOOTING.md - Common issues and solutions
-- /docs/MIGRATION_COMPLETE.md - Final migration status report
-- /docs/README.md - Documentation index
-
-Migration Tools:
-- /scripts/analyze-console-usage.js - Console usage analyzer
-- /scripts/auto-migrate-logger.js - Automated migration script
-- /scripts/migrate-to-logger.sh - Migration status checker
-
-Migration Status: ✅ 100% COMPLETE
-- Total files migrated: 45+ TypeScript/TSX files
-- Total statements converted: 150+ console statements
-- Remaining console usage: 0 (except intentional in logger.ts and test scripts)
-
-Benefits:
-- 🔒 Security: No console output in production
-- ⚡ Performance: Zero overhead when disabled
-- 🛠️ DX: Structured logging with proper namespaces
-- 📊 Production: JSON format ready for log aggregation
+- Created new TOFU article at /app/personal-finance/hidden-costs-of-homeownership/page.tsx
+- Article covers property maintenance, insurance, service charges, utilities, moving costs, and budgeting strategies
+- Integrated article into blog listing page (/app/blog/page.tsx)
+- Integrated article into personal finance category page (/app/personal-finance/page.tsx)
+- Includes 900+ words of UK-focused, FCA-compliant content
+- Features internal links to money management, budgeting, and personal loans guides
+- Implements proper SEO metadata with complete generateMetadata() function
+- Includes two ad placeholders (uk_topfinanzas_3, uk_topfinanzas_4)
+- Added AIContentDisclaimer and CTA button components
+- Hero image ready for CDN upload: hidden-costs-homeownership.webp
+- Date: 28 October 2025
+- Category: Personal Finance (Guide)
 - ✅ Type-safe: Full TypeScript support
 
 Next Steps:

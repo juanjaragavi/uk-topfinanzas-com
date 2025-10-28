@@ -37,6 +37,17 @@ export default function PersonalFinanceArchivePage() {
   const allPosts: PostItem[] = [
     {
       title:
+        "The Hidden Costs of Homeownership That No One Talks About | Top Finance UK",
+      slug: "hidden-costs-of-homeownership",
+      description:
+        "Discover the unexpected expenses that catch UK homeowners off guard. From maintenance to insurance, learn how to budget for the hidden costs of owning a home.",
+      image:
+        "https://media.topfinanzas.com/images/uk/hidden-costs-homeownership.webp",
+      date: "28 October 2025",
+      category: "guide",
+    },
+    {
+      title:
         "Inflation-Proof Your Life: 7 Smart Money Moves to Make When Prices Are High | Top Finance UK",
       slug: "inflation-proof-your-life",
       description:
