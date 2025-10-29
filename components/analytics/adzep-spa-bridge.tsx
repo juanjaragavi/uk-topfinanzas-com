@@ -52,11 +52,28 @@ export default function AdZepSPABridge() {
         return; // Exit early - no ad activation
       }
 
+      // CRITICAL FIX: Wait for React hydration to complete before checking for containers
+      if (firstLoadRef.current && typeof document !== "undefined") {
+        // Ensure document is fully loaded
+        if (document.readyState !== "complete") {
+          await new Promise((resolve) => {
+            window.addEventListener("load", resolve, { once: true });
+          });
+        }
+
+        // Additional delay for React hydration (App Router specific)
+        await new Promise((resolve) => setTimeout(resolve, 500));
+
+        if (process.env.NODE_ENV === "development") {
+          adzepLogger.info("React hydration wait complete");
+        }
+      }
+
       const waitMs = firstLoadRef.current
         ? adZepConfig.initialContainerWaitMs
         : adZepConfig.navigationContainerWaitMs;
 
-      // No overlay logic - just wait for containers and activate
+      // Wait for containers to be present in DOM
       const containersPresent = await waitForContainers(waitMs);
 
       // Decide activation parameters with longer timeout for initial load
@@ -64,8 +81,20 @@ export default function AdZepSPABridge() {
         ? Math.max(adZepConfig.defaultActivationTimeoutMs, 12000)
         : adZepConfig.defaultActivationTimeoutMs;
 
-      // ALWAYS attempt activation on non-excluded pages (even if no containers detected yet)
-      // This ensures ads activate even if Offerwall or other ad units load after initial check
+      // Only activate if containers are present OR if this is first load (for Offerwall/Interstitials)
+      if (!containersPresent && !firstLoadRef.current) {
+        if (process.env.NODE_ENV === "development") {
+          adzepLogger.info(
+            "Skipping activation - no containers on navigation",
+            {
+              pathname: pathname || "unknown",
+            },
+          );
+        }
+        firstLoadRef.current = false;
+        return; // Exit early - no containers on subsequent navigation
+      }
+
       if (process.env.NODE_ENV === "development") {
         adzepLogger.info("Attempting activation", {
           containersPresent,

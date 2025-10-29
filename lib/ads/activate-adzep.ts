@@ -137,13 +137,25 @@ export async function activateAdZep(options?: ActivateOptions): Promise<{
   }
 
   if (state.activated && !options?.force) {
-    return {
-      success: true,
-      attempts: state.activationAttempts,
-      startedAt,
-      finishedAt: Date.now(),
-      reason: "already-activated",
-    };
+    // Check if enough time has passed for a new page navigation
+    const timeSinceLastActivation = Date.now() - state.lastActivation;
+    if (timeSinceLastActivation < 2000) {
+      // Within 2-second window - likely same page
+      return {
+        success: true,
+        attempts: state.activationAttempts,
+        startedAt,
+        finishedAt: Date.now(),
+        reason: "recently-activated",
+      };
+    }
+    // More than 2 seconds - allow re-activation for new page
+    if (process.env.NODE_ENV === "development") {
+      adzepLogger.info("Resetting activation state for new page", {
+        timeSinceLastActivation,
+      });
+    }
+    state.activated = false;
   }
 
   state.activationInProgress = true;
