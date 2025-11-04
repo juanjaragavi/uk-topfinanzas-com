@@ -268,7 +268,41 @@ When creating new blog articles, they must be integrated across multiple locatio
 
 **Reference**: See `/.github/instructions/BLOG_POST_INTEGRATION.instructions.md` for detailed procedures.
 
-### 3. SEO Optimization
+### 3. Financial Solutions Layout Standard
+
+**CRITICAL**: All Credit Card and Personal Loan product pages in `/app/financial-solutions/` MUST follow the exact standardized layout documented in:
+
+**`.github/instructions/FINANCIAL_SOLUTIONS_LAYOUT_STANDARD.instructions.md`**
+
+This layout standard is **mandatory and non-negotiable**. It has been validated against Google Analytics and Google Ads performance metrics. Any deviation from this standard:
+
+- Negatively impacts SEO performance
+- Reduces conversion rates
+- Creates maintenance complexity
+- Breaks analytics tracking
+
+**Key Requirements**:
+
+- Benefits and Requirements pages must be separate
+- Element ordering must match the standard exactly
+- NO colored background boxes (`bg-gray-50`, `bg-blue-50`, etc.)
+- NO grid layouts for related articles
+- NO `<ul>` tag bullet lists (use circular badge format)
+- Use `ResponsiveImage` for Benefits page hero images
+- Use `Image` for Requirements page hero images
+- Include both ad units: `uk_topfinanzas_3` and `uk_topfinanzas_4`
+- AI Content Disclaimer must appear before footer
+
+**Template Reference**: `/app/financial-solutions/barclaycard-avios-plus/` (both Benefits and Requirements pages)
+
+**Before creating or modifying any Financial Solutions page**:
+
+1. Read the complete layout standard document
+2. Review the template reference pages
+3. Follow the exact element order
+4. Validate compliance using the checklist
+
+### 4. SEO Optimization
 
 - **Meta Tags**: Comprehensive metadata
 - **Schema Markup**: Structured data

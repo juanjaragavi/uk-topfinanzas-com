@@ -70,89 +70,121 @@ Financial product pages in this Next.js project consist of **TWO separate page c
 
 #### Page 1: Main Product Benefits Page (`/financial-solutions/{product-slug}/page.tsx`)
 
-This page showcases the product's features and benefits with the following structure:
-
-1. **Imports Section**
-   - Next.js Image and Link components
-   - UI components (Button, ResponsiveImage)
-   - Layout components (Header, CompactFooter)
-   - AIContentDisclaimer component
-
-2. **Metadata Function** (`generateMetadata()`)
-   - Returns object with title, description, keywords
-   - Title format: "{Product Name}: {Value Prop} - Top Finance UK"
-   - Description: Compelling product description (150-160 characters)
-   - Keywords: Comma-separated relevant keywords
-
-3. **Main Component Structure**
-   - `<main>` with `data-category` attribute ("credit-cards" or "loans")
-   - Header component
-   - Article section with container and max-width wrapper
-   - H1 title (product name with value proposition)
-   - Opening paragraph (product overview)
-   - Ad container div (`id="uk_topfinanzas_3"`)
-   - Horizontal rule separator
-   - Key features list (4 bullet points with brand-colored icons)
-   - "View Requirements" CTA button (links to requirements page)
-   - Hero image (ResponsiveImage component)
-   - Detailed content sections with H2 headings
-   - Ad container div (`id="uk_topfinanzas_4"`)
-   - Related articles section (internal links box)
-   - Additional features list
-   - Final CTA button
-   - AIContentDisclaimer component
-   - CompactFooter component
-
 #### Page 2: Requirements Page (`/financial-solutions/{product-slug}-requirements/page.tsx`)
 
-This page details eligibility criteria and application process:
+**CRITICAL**: All Financial Solutions pages MUST follow the exact standardized layout documented in:
 
-1. **Imports Section** (same as benefits page)
+**`.github/instructions/FINANCIAL_SOLUTIONS_LAYOUT_STANDARD.instructions.md`**
 
-2. **Metadata Function**
-   - Title format: "{Product Name} Requirements: Everything You Need to Know - Top Finance UK"
-   - Description: Focus on eligibility and application
-   - Keywords: Include "requirements", "eligibility", "application"
+This layout standard is **mandatory and non-negotiable**. It has been validated against Google Analytics and Google Ads performance metrics. Any deviation from this standard negatively impacts SEO performance, conversion rates, and analytics tracking.
 
-3. **Main Component Structure**
-   - H1: "Requirements for the {Product Name}"
-   - Ad container div (`id="uk_topfinanzas_3"`)
-   - Opening paragraph
-   - Hero image
-   - Section: "How to Qualify" with bullet points
-   - Ad container div (`id="uk_topfinanzas_4"`)
-   - Section: "Required Documentation" with bullet points
-   - Section: "Understanding the Costs" (APR, fees, charges)
-   - Internal promotional image/link
-   - Section: "Benefits and Features" (summary of key benefits)
-   - Section: "Application Process" (step-by-step)
-   - Section: "Frequently Asked Questions"
-   - Important disclaimers and risk warnings
-   - Final CTA button (must link to official external bank/product URL, not internal benefits page)
-   - AIContentDisclaimer component
-   - CompactFooter component
+### Core Layout Requirements
 
-### Rules for Financial Product Pages
+Before generating any Financial Solutions page, you MUST:
 
-- Generate **TWO complete Next.js page components** (.tsx files) for each product
-- Use TypeScript with proper type definitions for metadata and props
-- Follow the exact component structure from existing pages (see templates below)
-- Add at least 2-3 internal links to existing pages on <https://uk.topfinanzas.com>
-- Internal links should point to related products, blog articles, or comparison pages
-- Use the brand's hex color code for buttons and accent elements
-- Include two ad container divs with IDs: `uk_topfinanzas_3` and `uk_topfinanzas_4`
-- Language must be clear, persuasive, and FCA-compliant
-- Include all mandatory FCA disclosures and representative examples
-- Highlight benefits while being transparent about risks and costs
-- Include clear CTAs with brand-colored buttons
-- The final CTA button on the Requirements page must link to the official external bank/product URL (provided in CSV or user request), not to the internal benefits page
-- The CTA button should use text like "Apply Now", "Visit Official Website", or "Check Your Eligibility" to indicate it's an external link
-- The external CTA link should open in a new tab using a standard HTML anchor tag with `target="_blank"` and `rel="noopener noreferrer"` attributes wrapping the Button component
-- Use UK-specific terminology and comply with FCA regulations
-- Images must use Next.js Image or ResponsiveImage components with proper attributes
-- All text alignment should be `text-left` for consistency
-- Use proper semantic HTML with `<article>`, `<section>`, `<h1>`, `<h2>` tags
-- Include `data-category` attribute on main element ("credit-cards" or "loans")
+1. **Read and understand** the complete layout standard document at `.github/instructions/FINANCIAL_SOLUTIONS_LAYOUT_STANDARD.instructions.md`
+2. **Follow the exact element order** specified for both Benefits and Requirements pages
+3. **Use ONLY the components and patterns** defined in the standard
+4. **Verify compliance** using the validation checklist before finalizing code
+
+### Key Structural Rules
+
+**Element Ordering (Benefits Page)**:
+
+1. Header → 2. H1 Title → 3. Opening Paragraph → 4. First Ad Unit → 5. HR Separator → 6. Key Features (4 bullets with circular badges) → 7. "View Requirements" Button → 8. Hero Image (ResponsiveImage) → 9. Content Sections with H2 headings → 10. Second Ad Unit → 11. HR Separator → 12. Additional Content → 13. Promotional Image → 14. Related Articles Box → 15. Additional Features → 16. Final CTA Button → 17. AI Disclaimer → 18. Footer
+
+**Element Ordering (Requirements Page)**:
+
+1. Header → 2. H1 Title → 3. First Ad Unit → 4. Opening Paragraph → 5. Hero Image (Image component) → 6. How to Qualify Section → 7. Second Ad Unit → 8. Required Documentation → 9. Understanding Costs → 10. Promotional Image → 11. Benefits and Features → 12. Target Audience (H3 subsections with "Learn more" links) → 13. Second Promotional Image → 14. "Is This Right for You?" Section → 15. Final External CTA → 16. AI Disclaimer → 17. Footer
+
+### FORBIDDEN ELEMENTS
+
+The following are **STRICTLY PROHIBITED** and must NEVER be included:
+
+❌ Colored background boxes (`bg-gray-50`, `bg-blue-50`, `bg-yellow-50`, `border-l-4`, etc.)
+❌ Grid layouts for related articles (`grid grid-cols-1 md:grid-cols-2`)
+❌ Special CTA boxes with colored backgrounds
+❌ SVG icons embedded in content
+❌ `<ul>` tag bullet lists (use circular badge format instead)
+❌ Representative example boxes with special styling
+
+**CORRECT ALTERNATIVES**:
+✅ Simple boxed list for related articles (`bg-gray-50 rounded-xl border border-gray-200`)
+✅ Circular badges with arrows for all bullet points
+✅ Regular paragraph format for representative examples
+✅ Standard button styling with brand colors
+
+### Component Usage Rules
+
+- **Benefits Page Images**: MUST use `ResponsiveImage` from `@/components/ui/responsive-image`
+- **Requirements Page Images**: MUST use `Image` from `next/image`
+- **Buttons**: Standard `Button` component with brand color and full-width styling
+- **Links**: Next.js `Link` component for all internal navigation
+- **Layout**: `Header`, `CompactFooter`, and `AIContentDisclaimer` components required
+
+### Mandatory Elements
+
+Every Financial Solutions page MUST include:
+
+- Two ad container divs: `uk_topfinanzas_3` and `uk_topfinanzas_4`
+- Minimum 3 internal links to related articles or products
+- Brand-specific hex color for buttons and circular badges
+- "View Requirements" button (Benefits page) linking to requirements page
+- "Visit Official Website" button (Requirements page) linking to official external URL
+- AI Content Disclaimer before footer on both pages
+- All text with `text-left` alignment
+- Proper `data-category` attribute ("credit-cards" or "loans")
+
+### Styling Standards
+
+**Typography Classes (MANDATORY)**:
+
+- H1: `text-3xl text-left sm:text-left md:text-4xl font-bold text-gray-800 mb-8 leading-8`
+- H2: `text-xl font-bold text-gray-800 mb-4 text-left`
+- H3 (Requirements only): `text-lg font-bold text-gray-800 mb-3 text-left`
+- Opening paragraph: `text-left text-lg text-gray-800 font-medium mb-8 leading-5`
+- Body text: `text-left text-gray-800 mb-4 text-md leading-5 font-light`
+- Small text: `text-sm leading-5 text-left`
+
+**Button Styling**:
+
+```typescript
+className =
+  "bg-[{BRAND_COLOR}] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full";
+```
+
+**Circular Badge Pattern**:
+
+```typescript
+<div className="flex items-start">
+  <div className="flex-shrink-0 size-5 rounded-full bg-[{BRAND_COLOR}] flex items-center justify-center mr-3">
+    <span className="text-white font-bold">➔</span>
+  </div>
+  <div className="text-md leading-5 text-left">
+    <span className="font-semibold">{Feature}:</span> {Description}
+  </div>
+</div>
+```
+
+### Pre-Generation Checklist
+
+Before generating any Financial Solutions page code, verify:
+
+- [ ] Layout standard document has been read and understood
+- [ ] Template reference page has been reviewed (`barclaycard-avios-plus`)
+- [ ] Element ordering matches the standard exactly
+- [ ] NO forbidden elements are being used
+- [ ] Component imports match the standard
+- [ ] Typography classes match the standard
+- [ ] Brand color is applied consistently
+- [ ] Both ad units are included in correct positions
+- [ ] Images use correct components (ResponsiveImage vs Image)
+- [ ] Internal links are formatted correctly
+- [ ] AI Disclaimer positioned before footer
+
+### Post-Generation Validation
+
+After generating page code, use the validation checklist in the layout standard document to ensure complete compliance before finalizing.
 
 ### Available Field Schema (Dataset Structure)
 

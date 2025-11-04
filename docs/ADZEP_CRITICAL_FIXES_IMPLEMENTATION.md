@@ -93,15 +93,15 @@ if (state.activated && !options?.force) {
 
 1. **Removed component usage:**
 
-    ```tsx
-    // REMOVED:
-    <AdZepCentralizedHandler />;
+   ```tsx
+   // REMOVED:
+   <AdZepCentralizedHandler />;
 
-    // REPLACED WITH COMMENT:
-    {
-    /* AdZep activation now handled exclusively by AdZepSPABridge */
-    }
-    ```
+   // REPLACED WITH COMMENT:
+   {
+     /* AdZep activation now handled exclusively by AdZepSPABridge */
+   }
+   ```
 
 2. **Removed import:**
 

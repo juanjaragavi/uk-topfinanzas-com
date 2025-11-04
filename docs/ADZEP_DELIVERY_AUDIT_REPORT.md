@@ -517,68 +517,68 @@ cleanupInterval = window.setInterval(cleanBackdrops, 2000);
 
 ```markdown
 User clicks blog post link
-    ↓
-T=0ms    Next.js router navigation starts
-    ↓
-T=50ms   pathname changes → triggers both handlers
-    ↓         ↓
-    ↓         └─→ AdZepCentralizedHandler schedules activation (1000ms)
-    ↓
-T=120ms  AdZepSPABridge starts
-    ↓     ├─ Checks for excluded paths
-    ↓     ├─ Calls waitForContainers(6000ms)
-    ↓     └─ MutationObserver watches DOM
-    ↓
-T=500ms  React begins hydration
-    ↓     └─ Blog post component mounts
-    ↓
+↓
+T=0ms Next.js router navigation starts
+↓
+T=50ms pathname changes → triggers both handlers
+↓ ↓
+↓ └─→ AdZepCentralizedHandler schedules activation (1000ms)
+↓
+T=120ms AdZepSPABridge starts
+↓ ├─ Checks for excluded paths
+↓ ├─ Calls waitForContainers(6000ms)
+↓ └─ MutationObserver watches DOM
+↓
+T=500ms React begins hydration
+↓ └─ Blog post component mounts
+↓
 T=1000ms **[ISSUE]** AdZepCentralizedHandler activates
-    ↓      ├─ Containers may not exist yet
-    ↓      └─ Call #1 to window.AdZepActivateAds()
-    ↓
+↓ ├─ Containers may not exist yet
+↓ └─ Call #1 to window.AdZepActivateAds()
+↓
 T=1200ms React hydration completes
-    ↓      └─ uk_topfinanzas_3, uk_topfinanzas_4 now in DOM
-    ↓
+↓ └─ uk_topfinanzas_3, uk_topfinanzas_4 now in DOM
+↓
 T=1500ms MutationObserver detects containers
-    ↓      └─ waitForContainers() resolves(true)
-    ↓
+↓ └─ waitForContainers() resolves(true)
+↓
 T=1520ms AdZepSPABridge attempts activation
-    ↓      └─ **[ISSUE]** state.activated = true (from Call #1)
-    ↓         └─ Returns "already-activated" (no actual call)
-    ↓
+↓ └─ **[ISSUE]** state.activated = true (from Call #1)
+↓ └─ Returns "already-activated" (no actual call)
+↓
 T=2000ms First backdrop cleanup runs
-    ↓      └─ **[ISSUE]** May remove valid ad elements
-    ↓
+↓ └─ **[ISSUE]** May remove valid ad elements
+↓
 T=3000ms verify() retry loop begins
-    ↓      └─ Checks for rendered ads (finds none)
-    ↓
+↓ └─ Checks for rendered ads (finds none)
+↓
 T=9000ms verify() gives up after 4 retries
-    ↓
-Result:  ❌ Ads never rendered
+↓
+Result: ❌ Ads never rendered
 ```
 
 ### Expected Flow (Without Issues)
 
 ```markdown
 User clicks blog post link
-    ↓
-T=0ms    Next.js router navigation starts
-    ↓
-T=500ms  React hydration begins
-    ↓      └─ Blog post component mounts
-    ↓         └─ uk_topfinanzas_3, uk_topfinanzas_4 in DOM
-    ↓
+↓
+T=0ms Next.js router navigation starts
+↓
+T=500ms React hydration begins
+↓ └─ Blog post component mounts
+↓ └─ uk_topfinanzas_3, uk_topfinanzas_4 in DOM
+↓
 T=1200ms Content fully loaded and hydrated
-    ↓      └─ MutationObserver detects containers
-    ↓
+↓ └─ MutationObserver detects containers
+↓
 T=1220ms **SINGLE** activation call
-    ↓      └─ window.AdZepActivateAds()
-    ↓         └─ Containers present ✅
-    ↓            └─ Content loaded ✅
-    ↓
+↓ └─ window.AdZepActivateAds()
+↓ └─ Containers present ✅
+↓ └─ Content loaded ✅
+↓
 T=2000ms AdZep renders ads
-    ↓
-Result:  ✅ Ads successfully rendered
+↓
+Result: ✅ Ads successfully rendered
 ```
 
 ---

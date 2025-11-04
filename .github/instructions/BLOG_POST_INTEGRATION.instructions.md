@@ -8,6 +8,34 @@ When creating new blog articles, they must be added to multiple locations across
 
 Any time you create, update, or delete a blog post in the **Personal Finance** or **Financial Solutions** categories, you must immediately mirror that change across every `allPosts` array in the blog listing `page.tsx` files (`app/blog/page.tsx`, `app/personal-finance/page.tsx`, `app/financial-solutions/page.tsx`, and any other listing views). Add new entries for creations, adjust metadata for edits, and remove entries for deletions so the rendered listings always align with the current content set.
 
+## Financial Solutions Layout Standard
+
+**CRITICAL**: All Financial Solutions product pages (credit cards and personal loans) MUST follow the exact standardized layout documented in:
+
+**`.github/instructions/FINANCIAL_SOLUTIONS_LAYOUT_STANDARD.instructions.md`**
+
+This layout standard is **mandatory and non-negotiable**. It has been validated against Google Analytics and Google Ads performance metrics. Before creating or modifying any Financial Solutions page:
+
+1. **Read the complete layout standard** at `.github/instructions/FINANCIAL_SOLUTIONS_LAYOUT_STANDARD.instructions.md`
+2. **Follow the exact element order** for both Benefits and Requirements pages
+3. **Use ONLY the components and patterns** defined in the standard
+4. **Avoid all forbidden elements** (colored boxes, grid layouts, SVG icons, etc.)
+5. **Validate compliance** using the checklist before publishing
+
+### Key Layout Requirements
+
+- Benefits and Requirements pages must be separate files
+- Element ordering must match the standard exactly
+- NO colored background boxes or special formatting
+- NO grid layouts for related articles
+- Use circular badges with arrows for all bullet points
+- Benefits page uses `ResponsiveImage`, Requirements page uses `Image`
+- Both pages must include `uk_topfinanzas_3` and `uk_topfinanzas_4` ad units
+- AI Content Disclaimer must appear before footer
+- All text must use `text-left` alignment
+
+**Template Reference**: `/app/financial-solutions/barclaycard-avios-plus/` (both pages)
+
 ## Required Locations for Blog Post Integration
 
 ### 1. Main Blog Listing Page (`app/blog/page.tsx`)
