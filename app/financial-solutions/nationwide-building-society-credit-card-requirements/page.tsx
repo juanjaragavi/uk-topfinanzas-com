@@ -73,9 +73,9 @@ export default function NationwideBuildingSocietyCreditCardRequirementsPage() {
                       <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5 text-left">
-                      <span className="font-semibold">Age Requirement:</span> You
-                      must be 18 years or older to apply for a credit card in
-                      the UK. This is a legal requirement that applies to all
+                      <span className="font-semibold">Age Requirement:</span>{" "}
+                      You must be 18 years or older to apply for a credit card
+                      in the UK. This is a legal requirement that applies to all
                       credit products.
                     </div>
                   </div>
@@ -307,9 +307,7 @@ export default function NationwideBuildingSocietyCreditCardRequirementsPage() {
                       <span className="text-white font-bold">➔</span>
                     </div>
                     <div className="text-sm leading-5 text-left">
-                      <span className="font-semibold">
-                        Extended 0% Period:
-                      </span>{" "}
+                      <span className="font-semibold">Extended 0% Period:</span>{" "}
                       Up to 24 months 0% on balance transfers or 15 months on
                       purchases and transfers, giving you extended breathing
                       room to pay off debt or spread purchase costs.
@@ -361,13 +359,14 @@ export default function NationwideBuildingSocietyCreditCardRequirementsPage() {
                 </div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
-                  Optimise Your Experience with the Nationwide Building Society Credit Card
+                  Optimise Your Experience with the Nationwide Building Society
+                  Credit Card
                 </h2>
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The Nationwide Building Society Member Credit Card is
-                  particularly well-suited for several types of consumers, thanks
-                  to its accessible features and member-focused benefits:
+                  particularly well-suited for several types of consumers,
+                  thanks to its accessible features and member-focused benefits:
                 </p>
 
                 <h3 className="text-lg font-bold text-gray-800 mb-3 text-left">
@@ -399,9 +398,9 @@ export default function NationwideBuildingSocietyCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The 15-month 0% purchase option allows you to make essential
                   purchases or investments and pay them off over time without
-                  accruing interest. This can be particularly valuable for larger
-                  one-time expenses like home improvements, appliances, or
-                  emergency repairs.
+                  accruing interest. This can be particularly valuable for
+                  larger one-time expenses like home improvements, appliances,
+                  or emergency repairs.
                 </p>
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
@@ -420,11 +419,11 @@ export default function NationwideBuildingSocietyCreditCardRequirementsPage() {
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   Unlike traditional banks, Nationwide is owned by its members,
-                  not shareholders. This means the focus is on providing value to
-                  members rather than maximising profits for external investors.
-                  If this member-focused approach appeals to you, the Nationwide
-                  credit card exemplifies this philosophy with competitive rates
-                  and transparent terms.
+                  not shareholders. This means the focus is on providing value
+                  to members rather than maximising profits for external
+                  investors. If this member-focused approach appeals to you, the
+                  Nationwide credit card exemplifies this philosophy with
+                  competitive rates and transparent terms.
                 </p>
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
@@ -458,17 +457,17 @@ export default function NationwideBuildingSocietyCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The Nationwide Building Society Member Credit Card is an
                   excellent choice if you're an existing Nationwide member
-                  looking for competitive introductory 0% offers backed by one of
-                  the UK's most trusted financial institutions. It's particularly
-                  suitable for existing Nationwide members who want to
-                  consolidate high-interest debt through balance transfers,
+                  looking for competitive introductory 0% offers backed by one
+                  of the UK's most trusted financial institutions. It's
+                  particularly suitable for existing Nationwide members who want
+                  to consolidate high-interest debt through balance transfers,
                   members who need extended interest-free periods to spread the
-                  cost of essential purchases, and customers who value the mutual
-                  ethos and member-focused approach of a building society over
-                  traditional banks. Before applying, ensure you understand all
-                  eligibility requirements, costs, and terms to make an informed
-                  decision about whether this card aligns with your financial
-                  goals and circumstances.
+                  cost of essential purchases, and customers who value the
+                  mutual ethos and member-focused approach of a building society
+                  over traditional banks. Before applying, ensure you understand
+                  all eligibility requirements, costs, and terms to make an
+                  informed decision about whether this card aligns with your
+                  financial goals and circumstances.
                 </p>
 
                 <div className="text-left my-8">
