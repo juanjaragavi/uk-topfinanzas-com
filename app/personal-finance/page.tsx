@@ -37,6 +37,17 @@ export default function PersonalFinanceArchivePage() {
   const allPosts: PostItem[] = [
     {
       title:
+        "The 5-Minute Financial Health Check: Where Does Your Money Go? - Top Finance UK",
+      slug: "financial-health-check-where-does-your-money-go",
+      description:
+        "Discover where your money really goes with our quick UK financial health check. Learn simple expense tracking methods that reveal spending patterns and help you take control in just minutes a day.",
+      image:
+        "https://media.topfinanzas.com/images/uk/financial-health-check-money-tracking.webp",
+      date: "5 November 2025",
+      category: "guide",
+    },
+    {
+      title:
         "The Hidden Costs of Homeownership That No One Talks About | Top Finance UK",
       slug: "hidden-costs-of-homeownership",
       description:
