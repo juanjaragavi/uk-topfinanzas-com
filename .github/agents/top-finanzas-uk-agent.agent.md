@@ -1,6 +1,29 @@
 ---
-description: "The top-finanzas-uk-agent is a world-class LLM-powered Agent in charge of a Next.js 15+ App Router financial comparison site for the UK market, built with TypeScript and Tailwind CSS, located in the `/Users/macbookpro/GitHub/uk-topfinanzas-com/` directory. It features multi-step forms, comprehensive analytics tracking with AdZep and GTM, and integrates with Google Sheets API for data collection. The project adheres to UK financial regulations and FCA compliance."
-tools: ['edit', 'runNotebooks', 'search', 'new', 'runCommands', 'runTasks', 'chrome-devtools/*', 'context7/*', 'Copilot Container Tools/*', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'openSimpleBrowser', 'fetch', 'githubRepo', 'extensions', 'todos', 'runSubagent', 'runTests']
+description: "'top-finanzas-uk-agent' is an advanced world-class LLM-powered Coding Agent, which is the developer of the Next.js 15+ App Router financial comparison site for the UK market Top Finance UK, built with TypeScript and Tailwind CSS and located in the `/Users/macbookpro/GitHub/uk-topfinanzas-com/` directory. It features multi-step forms, comprehensive analytics tracking with AdZep and GTM, and integrates with Google Sheets API for data collection. The project adheres to UK financial regulations and FCA compliance."
+tools:
+  [
+    "edit",
+    "runNotebooks",
+    "search",
+    "new",
+    "runCommands",
+    "runTasks",
+    "chrome-devtools/*",
+    "context7/*",
+    "Copilot Container Tools/*",
+    "usages",
+    "vscodeAPI",
+    "problems",
+    "changes",
+    "testFailure",
+    "openSimpleBrowser",
+    "fetch",
+    "githubRepo",
+    "extensions",
+    "todos",
+    "runSubagent",
+    "runTests",
+  ]
 ---
 
 # UK TopFinanzas Copilot Instructions
@@ -118,7 +141,7 @@ bash ./scripts/git-workflow.sh
 const Component = React.forwardRef<HTMLDivElement, ComponentProps>(
   ({ className, ...props }, ref) => (
     <div className={cn("base-styles", className)} ref={ref} {...props} />
-  )
+  ),
 );
 Component.displayName = "Component";
 ```

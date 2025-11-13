@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { testUtmPersistence } from "@/components/analytics/utm-test";
 import { Button } from "@/components/ui/button";
 import { utmLogger } from "@/lib/logger";
+import { TopAdsSquare } from "@/components/ads/topads-placement";
 
 // Client Component that uses useSearchParams
 function UtmTestContent() {
@@ -60,6 +61,9 @@ function UtmTestContent() {
         Check your browser console to see the logged UTM parameters.
       </p>
 
+      {/* TopAds Test Placement 1 */}
+      <TopAdsSquare id="square01" />
+
       <div className="flex flex-col gap-4">
         <p className="font-semibold">Navigate to different pages:</p>
 
@@ -83,6 +87,18 @@ function UtmTestContent() {
         <p className="mt-4 text-sm text-gray-600">
           Open your browser console (F12) to see the UTM parameter logs during
           navigation.
+        </p>
+      </div>
+
+      {/* TopAds Test Placement 2 */}
+      <TopAdsSquare id="square02" />
+
+      <div className="mt-8 p-4 bg-blue-50 rounded-lg">
+        <h2 className="text-xl font-semibold mb-2">TopAds Test</h2>
+        <p className="text-sm text-gray-700">
+          This page also includes TopAds placements (square01 and square02) for
+          testing. Open the browser console to see TopAds initialization and SPA
+          navigation logs.
         </p>
       </div>
     </div>

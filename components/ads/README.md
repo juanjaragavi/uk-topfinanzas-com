@@ -2,9 +2,32 @@
 
 ## Overview
 
-This directory contains advertisement management components for the application.
+This directory contains advertisement management components for the application, including TopAds integration and local advertisement content.
 
 ## Components
+
+### TopAds Integration
+
+#### `topads-placement.tsx`
+
+Reusable components for TopAds ad placements with pre-configured variants:
+
+- `TopAdsPlacement` - Generic component for custom ad placements
+- `TopAdsSquare` - Pre-configured square ad (300x250)
+- `TopAdsLeaderboard` - Pre-configured leaderboard ad (728x90)
+- `TopAdsBanner` - Pre-configured banner ad (320x50)
+
+**Example Usage:**
+
+```tsx
+import { TopAdsSquare } from "@/components/ads/topads-placement";
+
+<TopAdsSquare id="square01" />;
+```
+
+**See:** `/docs/TOPADS_IMPLEMENTATION.md` for comprehensive documentation.
+
+### Local Advertisement Components
 
 Currently available components handle local advertisement content and management.
 

@@ -21,6 +21,8 @@ import AdZepInterstitialBlocker from "@/components/analytics/adzep-interstitial-
 import AdZepAccessibilityFix from "@/components/analytics/adzep-accessibility-fix";
 import AdZepBackdropCleaner from "@/components/analytics/adzep-backdrop-cleaner";
 import AnalyticsValidationPanel from "@/components/analytics/validation-panel";
+import TopAds from "@/components/analytics/topads";
+import TopAdsSPAHandler from "@/components/analytics/topads-spa-handler";
 import ResourceHints from "@/components/resource-hints";
 import NavigationProvider from "@/components/providers/navigation-provider";
 {
@@ -202,6 +204,7 @@ export default function RootLayout({
           <GoogleAds />
           <GoogleAdManager />
           <AdZep />
+          <TopAds />
         </ClientOnly>
 
         <ResourceHints />
@@ -249,6 +252,7 @@ export default function RootLayout({
             <AdZepInterstitialBlocker />
             <AdZepAccessibilityFix />
             <AdZepBackdropCleaner />
+            <TopAdsSPAHandler />
             {process.env.NODE_ENV === "development" && <UtmMonitor />}
             {process.env.NODE_ENV === "development" && <AdZepTest />}
             {process.env.NODE_ENV === "development" && (
