@@ -42,6 +42,18 @@ export default function BlogArchivePage() {
     // Personal Finance - Latest Articles
     {
       title:
+        "Stop Living Paycheck to Paycheck: 3 Shifts to Break the Cycle Today - Top Finance UK",
+      slug: "stop-living-paycheck-to-paycheck",
+      description:
+        "Escape the paycheck-to-paycheck cycle with three practical cash flow shifts. Learn how UK families are building breathing room without dramatic sacrifices or extreme budgets.",
+      image:
+        "https://media.topfinanzas.com/images/budgetbee/stop-living-paycheck-to-paycheck.webp",
+      category: "Personal Finance",
+      categoryPath: "/personal-finance",
+      date: "13 November 2025",
+    },
+    {
+      title:
         "The 5-Minute Financial Health Check: Where Does Your Money Go? - Top Finance UK",
       slug: "financial-health-check-where-does-your-money-go",
       description:
