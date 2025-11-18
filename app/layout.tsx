@@ -65,6 +65,9 @@ const poppins = localFont({
 // Define base URL for metadata
 const baseUrl = "https://uk.topfinanzas.com";
 
+// Temporarily disable AdZep script to isolate TopAds testing
+const ENABLE_ADZEP = false;
+
 // Read critical CSS at build time to inline it
 let criticalCSS = "";
 try {
@@ -203,7 +206,7 @@ export default function RootLayout({
           <GoogleTagManager />
           <GoogleAds />
           <GoogleAdManager />
-          <AdZep />
+          {ENABLE_ADZEP && <AdZep />}
           <TopAds />
         </ClientOnly>
 
@@ -248,13 +251,15 @@ export default function RootLayout({
           <Suspense fallback={null}>
             <UtmPersister />
             <UtmLinkInjector />
-            <AdZepSPABridge />
-            <AdZepInterstitialBlocker />
-            <AdZepAccessibilityFix />
-            <AdZepBackdropCleaner />
+            {ENABLE_ADZEP && <AdZepSPABridge />}
+            {ENABLE_ADZEP && <AdZepInterstitialBlocker />}
+            {ENABLE_ADZEP && <AdZepAccessibilityFix />}
+            {ENABLE_ADZEP && <AdZepBackdropCleaner />}
             <TopAdsSPAHandler />
             {process.env.NODE_ENV === "development" && <UtmMonitor />}
-            {process.env.NODE_ENV === "development" && <AdZepTest />}
+            {process.env.NODE_ENV === "development" && ENABLE_ADZEP && (
+              <AdZepTest />
+            )}
             {process.env.NODE_ENV === "development" && (
               <AnalyticsValidationPanel />
             )}

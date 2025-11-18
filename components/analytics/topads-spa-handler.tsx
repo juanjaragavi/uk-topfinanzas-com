@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect } from "react";
-import { usePathname } from "next/navigation";
+import Router from "next/router";
 import { logger } from "@/lib/logger";
+
+type TopAdsConfig = Record<string, unknown>;
 
 /**
  * TopAds SPA Navigation Handler
@@ -13,8 +15,6 @@ import { logger } from "@/lib/logger";
  * Usage: Include this component in the root layout within NavigationProvider
  */
 export default function TopAdsSPAHandler() {
-  const pathname = usePathname();
-
   useEffect(() => {
     // Function to trigger TopAds SPA
     const triggerTopAdsSPA = () => {
@@ -34,16 +34,36 @@ export default function TopAdsSPAHandler() {
       }
     };
 
-    // Trigger on pathname change
-    if (pathname) {
-      // Small delay to ensure DOM is ready
-      const timeoutId = setTimeout(() => {
+    let timeoutId: number | null = null;
+
+    const scheduleTrigger = () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      timeoutId = window.setTimeout(() => {
         triggerTopAdsSPA();
       }, 100);
+    };
 
-      return () => clearTimeout(timeoutId);
-    }
-  }, [pathname]);
+    // Initial run on mount
+    scheduleTrigger();
+
+    const handleRouteChange = () => {
+      logger.info("[TopAds] Next.js route change detected");
+      scheduleTrigger();
+    };
+
+    Router.events.on("routeChangeComplete", handleRouteChange);
+    Router.events.on("routeChangeError", handleRouteChange);
+
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      Router.events.off("routeChangeComplete", handleRouteChange);
+      Router.events.off("routeChangeError", handleRouteChange);
+    };
+  }, []);
 
   // Also handle browser back/forward navigation
   useEffect(() => {
@@ -95,7 +115,7 @@ export function useTopAds() {
 declare global {
   interface Window {
     topAds?: {
-      config?: any;
+      config?: TopAdsConfig;
       spa?: () => void;
     };
   }

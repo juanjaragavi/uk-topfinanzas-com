@@ -1,39 +1,9 @@
-feat: TopAds integration complete with comprehensive implementation
+chore: isolate topads testing from adzep
 
-Complete TopAds advertising system integration:
-- Created main TopAds component with UK-specific configuration
-- Implemented SPA navigation handler for Next.js routing
-- Built reusable ad placement components (Square, Leaderboard, Banner)
-- Integrated components into app layout
-- Added comprehensive documentation and quick reference
-- Created test implementation on /utm-test page
-- Updated ads README with TopAds information
+- Gate AdZep script, bridge, and dev utilities behind a temporary flag so TopAds can be validated independently.
+- Refactor the TopAds SPA handler to listen to router events instead of pathname changes, preventing false triggers when the offer wall tweaks the URL.
+- Simplify TopAds configuration by removing the unused autoStart flag and generating the offer wall logo URL from the current origin to avoid 404s.
 
-Technical details:
-- Script loads with afterInteractive strategy for optimal performance
-- Automatic SPA navigation handling via usePathname hook
-- Browser back/forward navigation support
-- Performance monitoring with marks and measures
-- Comprehensive error handling and logging
-- Full TypeScript support with proper type declarations
-- Accessibility features with ARIA labels
-- UK market configuration (uk.topfinanzas.com)
-
-Files created:
-- /components/analytics/topads.tsx
-- /components/analytics/topads-spa-handler.tsx
-- /components/ads/topads-placement.tsx
-- /docs/TOPADS_IMPLEMENTATION.md
-- /docs/TOPADS_QUICK_REFERENCE.md
-- /docs/TOPADS_INTEGRATION_SUMMARY.md
-- /docs/TOPADS_CHECKLIST.md
-
-Files modified:
-- /app/layout.tsx (added TopAds and SPA handler)
-- /app/utm-test/page.tsx (added test placements)
-- /components/ads/README.md (updated documentation)
-- /.github/agents/top-finanzas-uk-agent.agent.md (formatting fix)
-
-All components follow project patterns and conventions.
-Ready for staging deployment and testing.
+Testing:
+- npm run lint
 

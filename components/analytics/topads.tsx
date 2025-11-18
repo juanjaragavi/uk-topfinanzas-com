@@ -30,11 +30,17 @@ export default function TopAds() {
         dangerouslySetInnerHTML={{
           __html: `
             window.topAds = window.topAds || {};
+            const topAdsLogoOrigin =
+              typeof window !== "undefined" &&
+              window.location &&
+              window.location.origin
+                ? window.location.origin
+                : "https://uk.topfinanzas.com";
+            const topAdsLogoUrl = topAdsLogoOrigin + "/images/logo-english.webp";
             
             topAds.config = {
               domain: "uk.topfinanzas.com",
               networkCode: "23062212598",
-              autoStart: false,
               lazyLoad: "hard",
               refresh: {
                 time: 30,
@@ -53,7 +59,7 @@ export default function TopAds() {
                 },
                 offerwall: {
                   status: "active",
-                  logoUrl: "https://uk.topfinanzas.com/apple-touch-icon.png",
+                  logoUrl: topAdsLogoUrl,
                   websiteName: "TopFinance UK",
                   cooldown: "12",
                   include: [],
