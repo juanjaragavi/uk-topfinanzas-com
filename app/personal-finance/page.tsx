@@ -37,6 +37,17 @@ export default function PersonalFinanceArchivePage() {
   const allPosts: PostItem[] = [
     {
       title:
+        "Automate Your Wealth: Setting Up the \"Set It and Forget It\" Finance System | Top Finance UK",
+      slug: "automate-your-wealth",
+      description:
+        "Learn how to automate your finances in the UK with our \"Set It and Forget It\" system. Save time, reduce stress, and build wealth effortlessly with practical tips.",
+      image:
+        "https://media.topfinanzas.com/images/uk/automate-your-wealth.webp",
+      date: "19 November 2025",
+      category: "guide",
+    },
+    {
+      title:
         "Stop Living Paycheck to Paycheck: 3 Shifts to Break the Cycle Today - Top Finance UK",
       slug: "stop-living-paycheck-to-paycheck",
       description:

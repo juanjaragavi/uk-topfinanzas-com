@@ -62,6 +62,30 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   <SidebarSeparator />
                   {/* Recent Articles - Updated */}
                   <SidebarRecentArticles>
+                    {/* Automate Your Wealth Article - NEW */}
+                    <div className="flex items-center gap-3">
+                      <Image
+                        src="https://media.topfinanzas.com/images/uk/automate-your-wealth.webp"
+                        alt="Automate Your Wealth: Setting Up the \"Set It and Forget It\" Finance System"
+                        width={50}
+                        height={50}
+                        loading="lazy"
+                        priority={false}
+                        className="rounded-md object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src =
+                            "https://media.topfinanzas.com/images/placeholder-image.webp";
+                        }}
+                      />
+                      <div>
+                        <Link
+                          href="/personal-finance/automate-your-wealth"
+                          className="text-sm font-medium hover:underline line-clamp-2"
+                        >
+                          Automate Your Wealth: Setting Up the "Set It and Forget It" Finance System
+                        </Link>
+                      </div>
+                    </div>
                     {/* Inflation-Proof Article - NEW */}
                     <div className="flex items-center gap-3">
                       <Image

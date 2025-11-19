@@ -1,9 +1,6 @@
-chore: isolate topads testing from adzep
+feat(content): add 'Automate Your Wealth' TOFU article
 
-- Gate AdZep script, bridge, and dev utilities behind a temporary flag so TopAds can be validated independently.
-- Refactor the TopAds SPA handler to listen to router events instead of pathname changes, preventing false triggers when the offer wall tweaks the URL.
-- Simplify TopAds configuration by removing the unused autoStart flag and generating the offer wall logo URL from the current origin to avoid 404s.
-
-Testing:
-- npm run lint
-
+- Create new article page at /app/personal-finance/automate-your-wealth/page.tsx
+- Update blog archive at /app/blog/page.tsx
+- Update personal finance archive at /app/personal-finance/page.tsx
+- Update sidebar recent articles in /components/mdx/blog-layout.tsx
