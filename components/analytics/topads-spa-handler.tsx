@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
-import Router from "next/router";
+import { useEffect, useRef } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
 import { logger } from "@/lib/logger";
 
 type TopAdsConfig = Record<string, unknown>;
@@ -15,7 +15,17 @@ type TopAdsConfig = Record<string, unknown>;
  * Usage: Include this component in the root layout within NavigationProvider
  */
 export default function TopAdsSPAHandler() {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const isInitialMount = useRef(true);
+
   useEffect(() => {
+    // Skip the first run (initial mount)
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+
     // Function to trigger TopAds SPA
     const triggerTopAdsSPA = () => {
       try {
@@ -34,55 +44,15 @@ export default function TopAdsSPAHandler() {
       }
     };
 
-    let timeoutId: number | null = null;
+    // Trigger on route change (pathname or searchParams change)
+    logger.info("[TopAds] Next.js route change detected");
+    // Small timeout to ensure DOM is ready
+    const timeoutId = setTimeout(() => {
+      triggerTopAdsSPA();
+    }, 100);
 
-    const scheduleTrigger = () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-      timeoutId = window.setTimeout(() => {
-        triggerTopAdsSPA();
-      }, 100);
-    };
-
-    // Initial run on mount
-    scheduleTrigger();
-
-    const handleRouteChange = () => {
-      logger.info("[TopAds] Next.js route change detected");
-      scheduleTrigger();
-    };
-
-    Router.events.on("routeChangeComplete", handleRouteChange);
-    Router.events.on("routeChangeError", handleRouteChange);
-
-    return () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-      Router.events.off("routeChangeComplete", handleRouteChange);
-      Router.events.off("routeChangeError", handleRouteChange);
-    };
-  }, []);
-
-  // Also handle browser back/forward navigation
-  useEffect(() => {
-    const handlePopState = () => {
-      logger.info("[TopAds] Browser navigation detected");
-      setTimeout(() => {
-        if (
-          typeof window !== "undefined" &&
-          window.topAds &&
-          typeof window.topAds.spa === "function"
-        ) {
-          window.topAds.spa();
-        }
-      }, 100);
-    };
-
-    window.addEventListener("popstate", handlePopState);
-    return () => window.removeEventListener("popstate", handlePopState);
-  }, []);
+    return () => clearTimeout(timeoutId);
+  }, [pathname, searchParams]);
 
   return null; // This component doesn't render anything
 }
