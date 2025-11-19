@@ -66,7 +66,7 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                     <div className="flex items-center gap-3">
                       <Image
                         src="https://media.topfinanzas.com/images/uk/automate-your-wealth.webp"
-                        alt="Automate Your Wealth: Setting Up the \"Set It and Forget It\" Finance System"
+                        alt="Automate Your Wealth: Setting Up the &quot;Set It and Forget It&quot; Finance System"
                         width={50}
                         height={50}
                         loading="lazy"
