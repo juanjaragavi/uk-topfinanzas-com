@@ -1,6 +1,1 @@
-feat(content): add 'Automate Your Wealth' TOFU article
-
-- Create new article page at /app/personal-finance/automate-your-wealth/page.tsx
-- Update blog archive at /app/blog/page.tsx
-- Update personal finance archive at /app/personal-finance/page.tsx
-- Update sidebar recent articles in /components/mdx/blog-layout.tsx
+fix(analytics): update TopAds SPA handler to use App Router hooks and suppress initial load
