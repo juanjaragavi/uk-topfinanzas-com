@@ -107,13 +107,6 @@ export default function MarblesCreditCardPage() {
                 </Link>
               </div>
 
-              <div
-                id="uk_topfinanzas_4"
-                className="items-center justify-center flex w-full my-8"
-              >
-                {/* Empty responsive, centered div */}
-              </div>
-
               <hr className="my-8" />
 
               <div className="my-8 text-left sm:text-left">

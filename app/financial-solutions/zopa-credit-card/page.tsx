@@ -159,13 +159,6 @@ export default function ZopaCreditCardPage() {
                   you are.
                 </p>
 
-                <div
-                  id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-8"
-                >
-                  {/* Empty responsive, centered div */}
-                </div>
-
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
                   The Credit Cushion: Your Financial Safety Net
                 </h2>

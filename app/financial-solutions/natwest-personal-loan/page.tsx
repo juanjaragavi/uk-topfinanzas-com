@@ -162,13 +162,6 @@ export default function NatWestPersonalLoanPage() {
                   Adaptable Repayment Schedules
                 </h2>
 
-                <div
-                  id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-8"
-                >
-                  {/* Empty responsive, centered div */}
-                </div>
-
                 <hr className="my-8" />
 
                 <p className="text-gray-800 mb-4 text-md leading-5 font-light text-left">

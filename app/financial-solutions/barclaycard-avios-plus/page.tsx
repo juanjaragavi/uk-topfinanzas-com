@@ -139,13 +139,6 @@ export default function BarclayCardAviosPlusPage() {
                   for your accumulated rewards.
                 </p>
 
-                <div
-                  id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-8"
-                >
-                  {/* Empty responsive, centered div */}
-                </div>
-
                 <hr className="my-8" />
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4 text-left">
