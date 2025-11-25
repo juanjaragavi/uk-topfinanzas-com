@@ -37,6 +37,17 @@ export default function PersonalFinanceArchivePage() {
   const allPosts: PostItem[] = [
     {
       title:
+        "The Psychology of Spending: How to Stop Impulse Buys | Top Finance UK",
+      slug: "the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving",
+      description:
+        "Discover why we impulse buy and learn practical strategies to master your money mindset. Start mindful saving today with our expert guide.",
+      image:
+        "https://media.topfinanzas.com/images/uk/the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving.webp",
+      date: "25 November 2025",
+      category: "guide",
+    },
+    {
+      title:
         'Automate Your Wealth: Setting Up the "Set It and Forget It" Finance System | Top Finance UK',
       slug: "automate-your-wealth",
       description:

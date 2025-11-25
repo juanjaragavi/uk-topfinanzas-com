@@ -1,5 +1,8 @@
-fix: update ad placeholders in personal finance pages
+Add new blog article: The Psychology of Spending
 
-- Replace empty ad divs with data-topads divs in personal finance pages
-- Update invit-credit-card-rec-uk page
-- Apply code formatting
+- Created new TOFU article on impulse buying and mindful saving
+- Added article to blog index (app/blog/page.tsx)
+- Added article to personal finance category page (app/personal-finance/page.tsx)
+- Updated sidebar recent articles (components/mdx/blog-layout.tsx)
+- Updated hero image references to use correct CDN path
+- Applied code formatting across modified files

@@ -42,6 +42,18 @@ export default function BlogArchivePage() {
     // Personal Finance - Latest Articles
     {
       title:
+        "The Psychology of Spending: How to Stop Impulse Buys | Top Finance UK",
+      slug: "the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving",
+      description:
+        "Discover why we impulse buy and learn practical strategies to master your money mindset. Start mindful saving today with our expert guide.",
+      image:
+        "https://media.topfinanzas.com/images/uk/the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving.webp",
+      category: "Personal Finance",
+      categoryPath: "/personal-finance",
+      date: "25 November 2025",
+    },
+    {
+      title:
         'Automate Your Wealth: Setting Up the "Set It and Forget It" Finance System | Top Finance UK',
       slug: "automate-your-wealth",
       description:

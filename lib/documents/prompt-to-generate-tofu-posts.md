@@ -79,7 +79,7 @@ Generate a blog article following these rules:
    - FCA-compliant disclaimers
    - SEO metadata (title, description, keywords)
    - Hero image from CSV or CDN
-   - Ad placeholders (`uk_topfinanzas_3`, `uk_topfinanzas_4`)
+   - Ad placeholders (`square01`, `square02`)
    - Internal links using Next.js `<Link>` component
    - CTA button with `className="cta-button-blue"`
    - `AIContentDisclaimer` component at the end

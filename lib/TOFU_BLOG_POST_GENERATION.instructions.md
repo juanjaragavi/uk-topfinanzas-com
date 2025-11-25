@@ -83,7 +83,7 @@ Whenever you create, update, or delete any blog post in the **Personal Finance**
 - Maintain British English spelling, UK idioms, and references to UK frameworks (FCA, MoneyHelper, Financial Ombudsman Service)
 - Include at least **three internal links** to relevant pages on <https://uk.topfinanzas.com> using `<Link>` from `next/link`
 - Provide at least one contextual CTA block linking to a related comparison or guide (for example `/financial-solutions` or a specific product page)
-- Insert display ad placeholders with IDs `uk_topfinanzas_3` and `uk_topfinanzas_4` in the standard positions after the H1 and near the final third of the article
+- Insert display ad placeholders with IDs `square01` and `square02` in the standard positions after the H1 and near the final third of the article
 - Use the `AIContentDisclaimer` component at the end of the article body
 - Include at least one hero image (Next.js `Image`) hosted on the Top Finanzas CDN with descriptive alt text and lazy loading best practices
 - Keep tone approachable, practical, and compliant: never promise guaranteed outcomes, never give personalised advice, and flag when readers should seek regulated guidance
@@ -212,7 +212,7 @@ After generating the article component, plan updates across the site (see `.gith
 
 - Confirm TypeScript validity, consistent class names, and accessible alt text
 - Verify all required components are included and properly imported
-- Check that ad container div IDs are correct: `uk_topfinanzas_3` and `uk_topfinanzas_4`
+- Check that ad container div IDs are correct: `square01` and `square02`
 
 ### Step 8: Post-Publication Integration (REQUIRED)
 
@@ -298,7 +298,7 @@ export default function {ComponentName}Page() {
             <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 text-left">
               {H1 Title}
             </h1>
-            <div id="uk_topfinanzas_3" className="items-center justify-center flex w-full my-8">{/* Ad placeholder */}</div>
+            <div id="square01" data-topads data-topads-size="square"></div>
             <p className="text-lg text-gray-700 mb-6 leading-7">
               {Narrative introduction referencing UK context}
             </p>
@@ -314,9 +314,9 @@ export default function {ComponentName}Page() {
               />
             </div>
             {/* Section content with h2/h3, paragraphs, lists, callouts, internal links */}
-            <div id="uk_topfinanzas_4" className="items-center justify-center flex w-full my-8">{/* Ad placeholder */}</div>
             <section className="my-8">
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">Next steps</h2>
+              <div id="square02" data-topads data-topads-size="square"></div>
               <p className="text-gray-700 mb-4">
                 {Actionable guidance with internal links}
               </p>
