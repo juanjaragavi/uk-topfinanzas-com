@@ -35,12 +35,7 @@ export default function LloydsBankPersonalLoanPage() {
                 banking institutions, helping you fund life's important moments.
               </p>
 
-              <div
-                id="uk_topfinanzas_3"
-                className="items-center justify-center flex w-full my-8"
-              >
-                {/* Empty responsive, centered div */}
-              </div>
+              <div id="square01" data-topads data-topads-size="square"></div>
 
               <hr className="my-8" />
 

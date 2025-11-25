@@ -337,7 +337,7 @@ export default function PersonalFinanceArchivePage() {
 
   const content = (
     <div data-category="personal-finance">
-      <h1 className="text-4xl font-bold mb-6">Personal Finance Guides</h1>
+      <h1 className="text-4xl font-bold mb-6 text-gray-800">Personal Finance Guides</h1>
       <p className="text-lg text-gray-700 mb-8 leading-tight">
         Explore our guides on credit cards, loans, debt management, and other
         personal finance topics to help you make informed decisions.
@@ -349,11 +349,10 @@ export default function PersonalFinanceArchivePage() {
           <button
             key={key}
             onClick={() => setActiveCategory(key)}
-            className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
-              activeCategory === key
+            className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${activeCategory === key
                 ? "bg-blue-600 text-white"
                 : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-            }`}
+              }`}
           >
             {value}
           </button>

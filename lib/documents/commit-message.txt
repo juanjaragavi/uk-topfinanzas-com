@@ -1,1 +1,20 @@
-fix(analytics): update TopAds SPA handler to use App Router hooks and suppress initial load
+Standardize ad unit containers and fix ESLint parsing errors
+
+This commit includes comprehensive refactoring of ad unit containers across
+the financial-solutions directory, replacing obsolete static containers with
+data-topads attribute-based targeting for improved ad serving capabilities.
+
+Major changes:
+- Standardized ad containers in 49 product pages (square01)
+- Standardized ad containers in 48 requirements pages (square02)
+- Fixed ESLint parsing error in blog-layout.tsx (smart quotes issue)
+- Updated personal-loans page styling (text-gray-800)
+- Minor TopAds configuration adjustments
+
+Files modified: 101 financial-solutions pages + 4 other files
+
+Benefits:
+✓ Attribute-based ad targeting enabled
+✓ Simplified container structure
+✓ Consistent implementation across all pages
+✓ Production-ready with zero lint errors

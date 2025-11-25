@@ -120,12 +120,7 @@ export default function MonzoCreditCardRequirementsPage() {
                   </div>
                 </div>
 
-                <div
-                  id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-6"
-                >
-                  {/* Empty responsive, centered div */}
-                </div>
+                <div id="square02" data-topads data-topads-size="square"></div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Digital Application Requirements:
