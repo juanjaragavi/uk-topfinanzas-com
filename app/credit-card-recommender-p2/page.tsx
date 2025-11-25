@@ -121,13 +121,6 @@ function CreditCardRecommenderContent() {
               with cards that suit your needs.
             </p>
 
-            <div
-              id="uk_topfinanzas_2"
-              className="items-center justify-center flex w-full my-8"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
-
             <p className="text-left text-sm leading-5 text-gray-800 mb-4">
               From cashback to travel rewards, we give you clear,
               easy-to-understand options so you can make informed decisions.

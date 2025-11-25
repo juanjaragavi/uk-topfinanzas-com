@@ -149,13 +149,6 @@ export default function TescoBankClubcardCreditCardsPage() {
                   credit limit of £1,200.
                 </p>
 
-                <div
-                  id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-8"
-                >
-                  {/* Empty responsive, centered div */}
-                </div>
-
                 <hr className="my-8" />
 
                 <p className="text-left text-gray-800 mb-4 text-md leading-5 font-light">
