@@ -16,12 +16,7 @@ export default function NoAnnualFeeCreditCards() {
           Top Credit Cards With No Annual Fees
         </h1>
         {/* Placeholder `<div>` for the Ad Unit 'square01' - centered and responsive */}
-        <div
-          id="uk_topfinanzas_3"
-          className="items-center justify-center flex w-full my-8"
-        >
-          {/* Empty responsive, centered div */}
-        </div>
+        <div id="square01" data-topads data-topads-size="square"></div>
         <p className="text-gray-800 mb-6 text-sm leading-5 font-light">
           Finding the right credit card can be a game-changer, especially when
           you want valuable rewards without the added expense of an annual fee.
@@ -241,12 +236,7 @@ export default function NoAnnualFeeCreditCards() {
 
         <section className="my-8">
           {/* Placeholder `<div>` for the Ad Unit 'square02' - centered and responsive */}
-          <div
-            id="uk_topfinanzas_4"
-            className="items-center justify-center flex w-full my-8"
-          >
-            {/* Empty responsive, centered div */}
-          </div>
+          <div id="square02" data-topads data-topads-size="square"></div>
 
           <h2 className="text-xl font-bold text-gray-900 mb-4">
             Maximize Rewards Without Extra Costs

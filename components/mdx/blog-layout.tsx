@@ -62,6 +62,30 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   <SidebarSeparator />
                   {/* Recent Articles - Updated */}
                   <SidebarRecentArticles>
+                    {/* Psychology of Spending Article - NEW */}
+                    <div className="flex items-center gap-3">
+                      <Image
+                        src="https://media.topfinanzas.com/images/uk/the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving.webp"
+                        alt="The Psychology of Spending: How to Stop Impulse Buys"
+                        width={50}
+                        height={50}
+                        loading="lazy"
+                        priority={false}
+                        className="rounded-md object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src =
+                            "https://media.topfinanzas.com/images/placeholder-image.webp";
+                        }}
+                      />
+                      <div>
+                        <Link
+                          href="/personal-finance/the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving"
+                          className="text-sm font-medium hover:underline line-clamp-2"
+                        >
+                          The Psychology of Spending: How to Stop Impulse Buys
+                        </Link>
+                      </div>
+                    </div>
                     {/* Automate Your Wealth Article - NEW */}
                     <div className="flex items-center gap-3">
                       <Image
