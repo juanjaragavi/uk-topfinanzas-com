@@ -298,7 +298,9 @@ export default function PersonalLoansArchivePage() {
 
   const pageContent = (
     <div>
-      <h1 className="text-4xl font-bold mb-6 text-gray-800">UK Personal & Business Loans</h1>
+      <h1 className="text-4xl font-bold mb-6 text-gray-800">
+        UK Personal & Business Loans
+      </h1>
       <p className="text-lg text-gray-700 mb-8 leading-tight">
         Explore detailed guides and reviews of personal and business loans
         available in the UK. Find the right financing solution for your needs.
