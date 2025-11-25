@@ -106,15 +106,18 @@ export default function InvitCreditCardRecUKPage() {
                 aria-expanded={openFaq === "benefits"}
               >
                 <h3
-                  className={`font-medium text-lg leading-5 ${openFaq === "benefits" ? "text-[#1A9C8F]" : "text-sky-600"
-                    }`}
+                  className={`font-medium text-lg leading-5 ${
+                    openFaq === "benefits" ? "text-[#1A9C8F]" : "text-sky-600"
+                  }`}
                 >
                   What are the benefits of a card with no annual fee?
                 </h3>
                 <span
-                  className={`text-xl transition-transform ${openFaq === "benefits" ? "transform rotate-180" : "" // Changed to rotate for better icon indication
-                    } ${openFaq === "benefits" ? "text-[#1A9C8F]" : "text-sky-700"
-                    }`}
+                  className={`text-xl transition-transform ${
+                    openFaq === "benefits" ? "transform rotate-180" : "" // Changed to rotate for better icon indication
+                  } ${
+                    openFaq === "benefits" ? "text-[#1A9C8F]" : "text-sky-700"
+                  }`}
                   aria-hidden="true" // Hide decorative icon from screen readers
                 >
                   ▼ {/* Use a consistent down arrow, rotation handled by CSS */}
@@ -138,15 +141,18 @@ export default function InvitCreditCardRecUKPage() {
                 aria-expanded={openFaq === "cashback"}
               >
                 <h3
-                  className={`font-medium text-lg leading-5 ${openFaq === "cashback" ? "text-[#1A9C8F]" : "text-sky-600"
-                    }`}
+                  className={`font-medium text-lg leading-5 ${
+                    openFaq === "cashback" ? "text-[#1A9C8F]" : "text-sky-600"
+                  }`}
                 >
                   How does cashback work?
                 </h3>
                 <span
-                  className={`text-xl transition-transform ${openFaq === "cashback" ? "transform rotate-180" : ""
-                    } ${openFaq === "cashback" ? "text-[#1A9C8F]" : "text-sky-700"
-                    }`}
+                  className={`text-xl transition-transform ${
+                    openFaq === "cashback" ? "transform rotate-180" : ""
+                  } ${
+                    openFaq === "cashback" ? "text-[#1A9C8F]" : "text-sky-700"
+                  }`}
                   aria-hidden="true"
                 >
                   ▼
@@ -169,15 +175,18 @@ export default function InvitCreditCardRecUKPage() {
                 aria-expanded={openFaq === "travelers"}
               >
                 <h3
-                  className={`font-medium text-lg leading-5 ${openFaq === "travelers" ? "text-[#1A9C8F]" : "text-sky-600"
-                    }`}
+                  className={`font-medium text-lg leading-5 ${
+                    openFaq === "travelers" ? "text-[#1A9C8F]" : "text-sky-600"
+                  }`}
                 >
                   What's the best option for travellers?
                 </h3>
                 <span
-                  className={`text-xl transition-transform ${openFaq === "travelers" ? "transform rotate-180" : ""
-                    } ${openFaq === "travelers" ? "text-[#1A9C8F]" : "text-sky-700"
-                    }`}
+                  className={`text-xl transition-transform ${
+                    openFaq === "travelers" ? "transform rotate-180" : ""
+                  } ${
+                    openFaq === "travelers" ? "text-[#1A9C8F]" : "text-sky-700"
+                  }`}
                   aria-hidden="true"
                 >
                   ▼
@@ -201,15 +210,18 @@ export default function InvitCreditCardRecUKPage() {
                 aria-expanded={openFaq === "online"}
               >
                 <h3
-                  className={`font-medium text-lg leading-6 ${openFaq === "online" ? "text-[#1A9C8F]" : "text-sky-600"
-                    }`}
+                  className={`font-medium text-lg leading-6 ${
+                    openFaq === "online" ? "text-[#1A9C8F]" : "text-sky-600"
+                  }`}
                 >
                   Is it safe to use credit cards online?
                 </h3>
                 <span
-                  className={`text-xl transition-transform ${openFaq === "online" ? "transform rotate-180" : ""
-                    } ${openFaq === "online" ? "text-[#1A9C8F]" : "text-sky-700"
-                    }`}
+                  className={`text-xl transition-transform ${
+                    openFaq === "online" ? "transform rotate-180" : ""
+                  } ${
+                    openFaq === "online" ? "text-[#1A9C8F]" : "text-sky-700"
+                  }`}
                   aria-hidden="true"
                 >
                   ▼
@@ -225,12 +237,7 @@ export default function InvitCreditCardRecUKPage() {
               )}
             </div>
 
-            <div
-              id="uk_topfinanzas_2"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
+            <div id="square02" data-topads data-topads-size="square"></div>
 
             {/* Stay Tuned panel (matching US layout copy, UK spelling) */}
             <section className="text-left mb-6">

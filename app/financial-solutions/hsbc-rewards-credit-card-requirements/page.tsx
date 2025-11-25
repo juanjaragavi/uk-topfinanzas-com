@@ -166,12 +166,7 @@ export default function HSBCRewardsCreditCardRequirementsPage() {
               </p>
             </section>
 
-            <div
-              id="uk_topfinanzas_4"
-              className="items-center justify-center flex w-full my-8"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
+            <div id="square02" data-topads data-topads-size="square"></div>
 
             <section className="my-12">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-left">

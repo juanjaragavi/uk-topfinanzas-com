@@ -28,7 +28,7 @@ export default function CurveCreditCardRequirementsPage() {
               Requirements for the Curve Card
             </h1>
 
-            <div id="square02" data-topads data-topads-size="square"></div>
+            <div id="square01" data-topads data-topads-size="square"></div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -98,11 +98,10 @@ export default function CurveCreditCardRequirementsPage() {
                   </div>
 
                   <div
-                    id="uk_topfinanzas_4"
-                    className="items-center justify-center flex w-full my-6"
-                  >
-                    {/* Empty responsive, centered div */}
-                  </div>
+                    id="square02"
+                    data-topads
+                    data-topads-size="square"
+                  ></div>
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#E33292] flex items-center justify-center mr-3 mt-0.5">

@@ -261,11 +261,10 @@ export default function CapifyPersonalLoanRequirementsPage() {
                   </div>
 
                   <div
-                    id="uk_topfinanzas_4"
-                    className="items-center justify-center flex w-full my-6"
-                  >
-                    {/* Empty responsive, centered div */}
-                  </div>
+                    id="square02"
+                    data-topads
+                    data-topads-size="square"
+                  ></div>
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#00AEEF] flex items-center justify-center mr-3 mt-0.5">
