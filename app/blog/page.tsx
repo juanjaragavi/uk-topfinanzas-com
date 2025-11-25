@@ -42,10 +42,10 @@ export default function BlogArchivePage() {
     // Personal Finance - Latest Articles
     {
       title:
-        "Automate Your Wealth: Setting Up the \"Set It and Forget It\" Finance System | Top Finance UK",
+        'Automate Your Wealth: Setting Up the "Set It and Forget It" Finance System | Top Finance UK',
       slug: "automate-your-wealth",
       description:
-        "Learn how to automate your finances in the UK with our \"Set It and Forget It\" system. Save time, reduce stress, and build wealth effortlessly with practical tips.",
+        'Learn how to automate your finances in the UK with our "Set It and Forget It" system. Save time, reduce stress, and build wealth effortlessly with practical tips.',
       image:
         "https://media.topfinanzas.com/images/uk/automate-your-wealth.webp",
       category: "Personal Finance",
@@ -635,7 +635,9 @@ export default function BlogArchivePage() {
 
   const content = (
     <div>
-      <h1 className="text-4xl font-bold mb-6 text-gray-800">TopFinance UK Blog</h1>
+      <h1 className="text-4xl font-bold mb-6 text-gray-800">
+        TopFinance UK Blog
+      </h1>
       <p className="text-lg text-gray-700 mb-8 leading-tight">
         Your source for insights on personal finance and financial solutions in
         the UK.
@@ -681,10 +683,11 @@ export default function BlogArchivePage() {
           <button
             key={key}
             onClick={() => setActiveCategory(key === "all" ? null : key)}
-            className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${(key === "all" && !activeCategory) || activeCategory === key
+            className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
+              (key === "all" && !activeCategory) || activeCategory === key
                 ? "bg-blue-600 text-white"
                 : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-              }`}
+            }`}
             data-category={key}
           >
             {value}
