@@ -38,12 +38,7 @@ export default function AmexGoldRequirementsPage() {
                 increases your chances of approval for this premium credit card.
               </p>
 
-              <div
-                id="uk_topfinanzas_3"
-                className="items-center justify-center flex w-full my-8"
-              >
-                {/* Empty responsive, centered div */}
-              </div>
+              <div id="square02" data-topads data-topads-size="square"></div>
 
               <div className="my-8 text-left sm:text-left">
                 <Image

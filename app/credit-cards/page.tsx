@@ -392,7 +392,7 @@ export default function CreditCardsArchivePage() {
 
   const pageContent = (
     <div>
-      <h1 className="text-4xl font-bold mb-6">UK Credit Card Solutions</h1>
+      <h1 className="text-4xl font-bold mb-6 text-gray-800">UK Credit Card Solutions</h1>
       <p className="text-lg text-gray-700 mb-8 leading-tight">
         Explore detailed guides and reviews of the best credit cards available
         in the UK. Find the right card based on rewards, fees, and your

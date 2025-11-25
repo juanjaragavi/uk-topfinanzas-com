@@ -127,12 +127,7 @@ export default function MarketFinancePersonalLoanRequirementsPage() {
                   Information & Documentation Needed:
                 </h2>
 
-                <div
-                  id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-6"
-                >
-                  {/* Empty responsive, centered div */}
-                </div>
+                <div id="square02" data-topads data-topads-size="square"></div>
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The online application is streamlined, but be prepared to

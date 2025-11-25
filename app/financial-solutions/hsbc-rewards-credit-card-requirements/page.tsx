@@ -31,12 +31,7 @@ export default function HSBCRewardsCreditCardRequirementsPage() {
               Requirements for the HSBC Rewards Credit Card
             </h1>
 
-            <div
-              id="uk_topfinanzas_3"
-              className="items-center justify-center flex w-full my-8"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
+            <div id="square02" data-topads data-topads-size="square"></div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-left text-lg text-gray-800 font-medium mb-8 leading-5">

@@ -36,12 +36,7 @@ export default function NationwidePersonalLoanPage() {
                 value and fair treatment to its members.
               </p>
 
-              <div
-                id="uk_topfinanzas_3"
-                className="items-center justify-center flex w-full my-8"
-              >
-                {/* Empty responsive, centered div */}
-              </div>
+              <div id="square01" data-topads data-topads-size="square"></div>
 
               <hr className="my-8" />
 

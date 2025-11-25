@@ -136,12 +136,7 @@ export default function HSBCPersonalLoanRequirementsPage() {
                   Required Documentation:
                 </h2>
 
-                <div
-                  id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-6"
-                >
-                  {/* Empty responsive, centered div */}
-                </div>
+                <div id="square02" data-topads data-topads-size="square"></div>
 
                 <div className="space-y-6 my-8">
                   <div className="flex items-start">
