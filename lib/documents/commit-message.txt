@@ -1,5 +1,5 @@
-fix: cleanup ad placeholders and format code
+fix: update ad placeholders in personal finance pages
 
-- Remove empty ad placeholder divs from financial solution pages
-- Revert formatting changes in invit-credit-card-rec-uk page
+- Replace empty ad divs with data-topads divs in personal finance pages
+- Update invit-credit-card-rec-uk page
 - Apply code formatting

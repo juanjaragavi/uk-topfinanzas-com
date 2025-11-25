@@ -28,13 +28,8 @@ export default function TravelCreditCardsPage() {
               Best Travel Credit Cards UK: Ultimate Guide for International
               Spending
             </h1>
-            {/* Placeholder `<div>` for the Ad Unit 'uk_topfinanzas_3' - centered and responsive */}
-            <div
-              id="uk_topfinanzas_3"
-              className="items-center justify-center flex w-full my-8"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
+            {/* Placeholder `<div>` for the Ad Unit 'square01' - centered and responsive */}
+            <div id="square01" data-topads data-topads-size="square"></div>
 
             <div className="prose max-w-none">
               <p className="text-lg text-gray-700 mb-6">
@@ -459,13 +454,8 @@ export default function TravelCreditCardsPage() {
                 </ul>
               </div>
 
-              {/* Placeholder `<div>` for the Ad Unit 'uk_topfinanzas_4' - centered and responsive */}
-              <div
-                id="uk_topfinanzas_4"
-                className="items-center justify-center flex w-full my-8"
-              >
-                {/* Empty responsive, centered div */}
-              </div>
+              {/* Placeholder `<div>` for the Ad Unit 'square02' - centered and responsive */}
+              <div id="square02" data-topads data-topads-size="square"></div>
 
               <h2 className="text-2xl font-bold text-gray-800 my-5">
                 Final Thoughts
