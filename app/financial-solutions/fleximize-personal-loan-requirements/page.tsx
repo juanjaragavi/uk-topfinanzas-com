@@ -29,12 +29,7 @@ export default function FleximizePersonalLoanRequirementsPage() {
               Requirements for Fleximize Business Loans (Flexiloan & Lite)
             </h1>
 
-            <div
-              id="uk_topfinanzas_3"
-              className="items-center justify-center flex w-full my-6"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
+            <div id="square01" data-topads data-topads-size="square"></div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">

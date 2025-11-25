@@ -161,12 +161,7 @@ export default function AmexGoldRequirementsPage() {
                 </div>
               </div>
 
-              <div
-                id="uk_topfinanzas_4"
-                className="items-center justify-center flex w-full my-8"
-              >
-                {/* Empty responsive, centered div */}
-              </div>
+              <div id="square02" data-topads data-topads-size="square"></div>
 
               <h2 className="text-2xl font-bold text-gray-800 mb-6 mt-12 text-left">
                 Required Documentation for Your Application
