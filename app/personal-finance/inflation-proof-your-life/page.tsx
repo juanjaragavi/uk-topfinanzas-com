@@ -19,13 +19,8 @@ export default function InflationProofYourLifePage() {
               Inflation-Proof Your Life: 7 Smart Money Moves to Make When Prices
               Are High
             </h1>
-            {/* Placeholder `<div>` for the Ad Unit 'uk_topfinanzas_3' - centered and responsive */}
-            <div
-              id="uk_topfinanzas_3"
-              className="items-center justify-center flex w-full my-8"
-            >
-              {/* Empty responsive, centered div */}
-            </div>
+            {/* Placeholder `<div>` for the Ad Unit 'square01' - centered and responsive */}
+            <div id="square01" data-topads data-topads-size="square"></div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-left sm:text-left text-lg text-gray-800 mb-4 leading-6">
@@ -353,13 +348,8 @@ export default function InflationProofYourLifePage() {
               </section>
 
               <section className="my-6">
-                {/* Placeholder `<div>` for the Ad Unit 'uk_topfinanzas_4' - centered and responsive */}
-                <div
-                  id="uk_topfinanzas_4"
-                  className="items-center justify-center flex w-full my-8"
-                >
-                  {/* Empty responsive, centered div */}
-                </div>
+                {/* Placeholder `<div>` for the Ad Unit 'square02' - centered and responsive */}
+                <div id="square02" data-topads data-topads-size="square"></div>
 
                 <h2 className="text-left sm:text-left text-xl font-bold text-gray-800 mb-4">
                   Practical example: protecting a £2,400 monthly budget
