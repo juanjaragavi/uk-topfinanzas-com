@@ -1,6 +1,7 @@
-Update TopAds script URL to production endpoint
+Add new TOFU blog article: How to Track Your Spending for 30 Days
 
-- Update script source in `components/analytics/topads.tsx`
-- Update script source in `lib/documents/config.js`
-- Update documentation in `docs/TOPADS_INTEGRATION_SUMMARY.md`
-- Switch from test endpoint to `https://topads.topnetworks.co/topAds.min.js`
+- Create new article at `/app/personal-finance/how-to-track-your-spending-for-30-days/page.tsx`
+- Add article to blog listing page (`app/blog/page.tsx`) allPosts array
+- Add article to personal finance category page (`app/personal-finance/page.tsx`) allPosts array
+- Article covers 30-day expense tracking method with practical UK-focused guidance
+- Includes internal links to money management, budgeting, and credit card guides
