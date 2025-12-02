@@ -1,8 +1,6 @@
-Add new blog article: The Psychology of Spending
+Update TopAds script URL to production endpoint
 
-- Created new TOFU article on impulse buying and mindful saving
-- Added article to blog index (app/blog/page.tsx)
-- Added article to personal finance category page (app/personal-finance/page.tsx)
-- Updated sidebar recent articles (components/mdx/blog-layout.tsx)
-- Updated hero image references to use correct CDN path
-- Applied code formatting across modified files
+- Update script source in `components/analytics/topads.tsx`
+- Update script source in `lib/documents/config.js`
+- Update documentation in `docs/TOPADS_INTEGRATION_SUMMARY.md`
+- Switch from test endpoint to `https://topads.topnetworks.co/topAds.min.js`

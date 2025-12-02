@@ -12,7 +12,7 @@ Successfully integrated TopAds advertising system into TopFinance UK Next.js pro
 
 - Main TopAds component for script loading
 - Loads configuration inline with UK-specific settings
-- Loads TopAds script from `//test-topads.tbytpm.easypanel.host/topAds.min.js`
+- Loads TopAds script from `https://topads.topnetworks.co/topAds.min.js`
 - Uses Next.js `Script` component with `afterInteractive` strategy
 - Includes performance monitoring and error handling
 - Comprehensive logging for debugging
