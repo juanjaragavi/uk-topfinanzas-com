@@ -37,6 +37,17 @@ export default function PersonalFinanceArchivePage() {
   const allPosts: PostItem[] = [
     {
       title:
+        "How to Track Your Spending for 30 Days and Finally Know Where Your Money Goes | Top Finance UK",
+      slug: "how-to-track-your-spending-for-30-days",
+      description:
+        "Stop guessing about your finances. Learn a simple 30-day expense tracking method to discover where your money really goes and build lasting money management habits.",
+      image:
+        "https://media.topfinanzas.com/images/uk/how-to-track-your-spending-for-30-days.webp",
+      date: "2 December 2025",
+      category: "guide",
+    },
+    {
+      title:
         "The Psychology of Spending: How to Stop Impulse Buys | Top Finance UK",
       slug: "the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving",
       description:
