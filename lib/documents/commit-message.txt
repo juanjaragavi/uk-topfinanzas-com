@@ -1,7 +1,6 @@
-Add new TOFU blog article: How to Track Your Spending for 30 Days
+chore(deps): update Next.js from 15.4.3 to 15.4.8
 
-- Create new article at `/app/personal-finance/how-to-track-your-spending-for-30-days/page.tsx`
-- Add article to blog listing page (`app/blog/page.tsx`) allPosts array
-- Add article to personal finance category page (`app/personal-finance/page.tsx`) allPosts array
-- Article covers 30-day expense tracking method with practical UK-focused guidance
-- Includes internal links to money management, budgeting, and credit card guides
+- Updated next package from version 15.4.3 to 15.4.8
+- Updated all @next/swc platform-specific binaries to 15.4.8
+- Updated @next/env to 15.4.8
+- Regenerated package-lock.json with new dependency versions
