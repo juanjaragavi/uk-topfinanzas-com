@@ -1,6 +1,1 @@
-chore(deps): update Next.js from 15.4.3 to 15.4.8
-
-- Updated next package from version 15.4.3 to 15.4.8
-- Updated all @next/swc platform-specific binaries to 15.4.8
-- Updated @next/env to 15.4.8
-- Regenerated package-lock.json with new dependency versions
+Add hreflang Link headers via middleware

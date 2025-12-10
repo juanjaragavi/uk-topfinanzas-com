@@ -5,11 +5,28 @@ import {
 } from "@/lib/navigation/recommender-lock";
 
 const QUIZ_PATHS = ["/quiz", "/quiz-2"];
+const SITE_BASE_URL = "https://uk.topfinanzas.com";
+const SUPPORTED_HREFLANGS = ["en-gb", "en"];
 
 function isRestrictedQuizPath(pathname: string): boolean {
   return QUIZ_PATHS.some(
     (basePath) => pathname === basePath || pathname.startsWith(`${basePath}/`),
   );
+}
+
+function buildHreflangHeader(pathname: string): string {
+  const normalizedPath = pathname || "/";
+  const absoluteUrl = new URL(normalizedPath, SITE_BASE_URL).toString();
+
+  const entries = [
+    `<${absoluteUrl}>; rel="canonical"`,
+    ...SUPPORTED_HREFLANGS.map(
+      (lang) => `<${absoluteUrl}>; rel="alternate"; hreflang="${lang}"`,
+    ),
+    `<${absoluteUrl}>; rel="alternate"; hreflang="x-default"`,
+  ];
+
+  return entries.join(", ");
 }
 
 export function middleware(request: NextRequest) {
@@ -42,7 +59,13 @@ export function middleware(request: NextRequest) {
   }
 
   // For other requests, continue normally
-  return NextResponse.next();
+  const response = NextResponse.next();
+  const hreflangHeader = buildHreflangHeader(pathname);
+
+  // Advertise locale variants for Google via HTTP Link headers
+  response.headers.set("Link", hreflangHeader);
+
+  return response;
 }
 
 export const config = {
