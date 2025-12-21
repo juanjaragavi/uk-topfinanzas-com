@@ -37,6 +37,17 @@ export default function PersonalFinanceArchivePage() {
   const allPosts: PostItem[] = [
     {
       title:
+        "The Emotional Side of Debt: How to Stay Motivated on Your Payoff Journey | TopFinanzas UK",
+      slug: "the-emotional-side-of-debt-how-to-stay-motivated",
+      description:
+        "Debt isn't just about numbers; it's emotional. Discover practical strategies to overcome debt anxiety, stay motivated, and build a healthier relationship with money.",
+      image:
+        "https://media.topfinanzas.com/images/uk/emotional-side-of-debt.webp",
+      date: "20 December 2025",
+      category: "debt",
+    },
+    {
+      title:
         "How to Track Your Spending for 30 Days and Finally Know Where Your Money Goes | Top Finance UK",
       slug: "how-to-track-your-spending-for-30-days",
       description:
