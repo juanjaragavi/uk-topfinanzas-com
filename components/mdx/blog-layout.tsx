@@ -62,6 +62,30 @@ export function BlogLayout({ children, metadata }: BlogLayoutProps) {
                   <SidebarSeparator />
                   {/* Recent Articles - Updated */}
                   <SidebarRecentArticles>
+                    {/* AI and Your Wallet Article - NEW */}
+                    <div className="flex items-center gap-3">
+                      <Image
+                        src="https://media.topfinanzas.com/images/uk/ai-and-your-wallet-automate-budget.webp"
+                        alt="AI and Your Wallet: How to Use Artificial Intelligence to Automate Your Budget in 2026"
+                        width={50}
+                        height={50}
+                        loading="lazy"
+                        priority={false}
+                        className="rounded-md object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src =
+                            "https://media.topfinanzas.com/images/placeholder-image.webp";
+                        }}
+                      />
+                      <div>
+                        <Link
+                          href="/personal-finance/ai-and-your-wallet-automate-budget-2026"
+                          className="text-sm font-medium hover:underline line-clamp-2"
+                        >
+                          AI and Your Wallet: Automate Your Budget in 2026
+                        </Link>
+                      </div>
+                    </div>
                     {/* The Emotional Side of Debt Article - NEW */}
                     <div className="flex items-center gap-3">
                       <Image

@@ -35,7 +35,7 @@ Whenever you create, update, or delete any blog post in the **Personal Finance**
 
 **Data Sources**:
 
-1. Topic Outline CSV - `lib/documents/topfinanzas-us-topic-outline.csv` (use `fetch_txt`)
+1. Topic Outline CSV - `lib/documents/topfinanzas-uk-topic-outline.csv` (use `fetch_txt`)
 2. UK Sitemap - <https://uk.topfinanzas.com/sitemap.xml> (use `fetch_txt` for internal link discovery)
 3. Official UK references (MoneyHelper, FCA, ONS, GOV.UK) via `fetch_webpage` for fact validation when required
 
@@ -136,7 +136,7 @@ After generating the article component, plan updates across the site (see `.gith
 
 ## Data Sources
 
-1. Topic Outline CSV - `lib/documents/topfinanzas-us-topic-outline.csv` (use `fetch_txt`)
+1. Topic Outline CSV - `lib/documents/topfinanzas-uk-topic-outline.csv` (use `fetch_txt`)
 2. UK Sitemap - <https://uk.topfinanzas.com/sitemap.xml> (use `fetch_txt`)
 3. Blog Post Integration Guide - `.github/instructions/BLOG_POST_INTEGRATION.instructions.md`
 4. Template Articles for reference:

@@ -23,13 +23,13 @@ Generate a blog article following these rules:
 
 ## Data Sources
 
-**IMPORTANT**: The full context and details for this topic are located in the corresponding CSV row within the `lib/documents/topfinanzas-us-topic-outline.csv` file.
+**IMPORTANT**: The full context and details for this topic are located in the corresponding CSV row within the `lib/documents/topfinanzas-uk-topic-outline.csv` file.
 
 ### Primary Data Source
 
 **Topic Outline CSV**
 
-- **Location**: `lib/documents/topfinanzas-us-topic-outline.csv`
+- **Location**: `lib/documents/topfinanzas-uk-topic-outline.csv`
 - **Access method**: Use `fetch_txt` tool
 - **Priority**: Highest - use to identify article structure, related topics, and metadata
 - **Extract**: Pillar relationships, tentative title, content focus, suggested internal links, hero image URL
@@ -55,7 +55,7 @@ Generate a blog article following these rules:
 
 1. **Read System Prompt**: First, locate and read the complete system prompt at `/lib/TOFU_BLOG_POST_GENERATION.instructions.md` to understand all requirements, structures, and compliance rules.
 
-2. **Access Topic Outline CSV**: Use `fetch_txt` to retrieve and parse the CSV file at `lib/documents/topfinanzas-us-topic-outline.csv`. Locate the row matching the provided Pillar and Main Keyword to extract:
+2. **Access Topic Outline CSV**: Use `fetch_txt` to retrieve and parse the CSV file at `lib/documents/topfinanzas-uk-topic-outline.csv`. Locate the row matching the provided Pillar and Main Keyword to extract:
    - Complete Tentative Title (if {title} is a placeholder)
    - Detailed Content Focus
    - Suggested Internal Links

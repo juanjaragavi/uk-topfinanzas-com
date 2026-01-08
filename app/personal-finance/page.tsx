@@ -37,6 +37,17 @@ export default function PersonalFinanceArchivePage() {
   const allPosts: PostItem[] = [
     {
       title:
+        "AI and Your Wallet: How to Use Artificial Intelligence to Automate Your Budget in 2026 | TopFinanzas UK",
+      slug: "ai-and-your-wallet-automate-budget-2026",
+      description:
+        "Learn how AI and open banking can revolutionize your personal finances. Discover smart budgeting apps, automated savings, and how to stay safe while letting technology handle the numbers.",
+      image:
+        "https://media.topfinanzas.com/images/uk/ai-and-your-wallet-automate-budget.webp",
+      date: "8 January 2026",
+      category: "guide",
+    },
+    {
+      title:
         "The Emotional Side of Debt: How to Stay Motivated on Your Payoff Journey | TopFinanzas UK",
       slug: "the-emotional-side-of-debt-how-to-stay-motivated",
       description:
