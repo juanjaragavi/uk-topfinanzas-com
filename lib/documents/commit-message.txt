@@ -1,5 +1,5 @@
-feat: add 'The Emotional Side of Debt' blog post
+chore: update robots.txt directives and add CLAUDE.md guidelines
 
-- Create new TOFU article in /app/personal-finance/
-- Update blog archive and category pages
-- Update sidebar recent articles
+- Update robots.txt to allow Google Mediapartners access to API
+- Remove restrictions on AI crawlers in robots.txt
+- Add CLAUDE.md with project overview and development commands
