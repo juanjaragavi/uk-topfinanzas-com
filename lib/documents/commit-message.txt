@@ -1,5 +1,6 @@
-chore: update robots.txt directives and add CLAUDE.md guidelines
+feat(seo): replace static sitemaps with dynamic generation
 
-- Update robots.txt to allow Google Mediapartners access to API
-- Remove restrictions on AI crawlers in robots.txt
-- Add CLAUDE.md with project overview and development commands
+- Removed malformed `public/sitemap.xml` and `app/sitemap.xml` that caused XML parse errors.
+- Implemented `app/sitemap.ts` using Next.js `MetadataRoute.Sitemap` API.
+- Programmatically traverse blog categories at build time via `fs` for dynamically discovering content routes.
+- Addressed TypeScript typing errors related to `changeFrequency` and mapped object types.
