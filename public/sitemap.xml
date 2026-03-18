@@ -1,21 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- 
-        UK TopFinanzas Sitemap
-        Total URLs: 604
-        Last Generated: 2025-10-23
-        
-        Note: Google ignores <priority> and <changefreq> tags, but they're included
-        for compatibility with other search engines (Bing, Yandex, etc.)
-        
-        Best Practices Applied:
-        - UTF-8 encoding
-        - W3C Datetime format for lastmod
-        - Fully-qualified absolute URLs
-        - Under 50,000 URL limit
-        - Under 50MB size limit
-    -->
-    <!-- Main Pages -->
     <url>
         <loc>https://uk.topfinanzas.com/</loc>
         <lastmod>2025-10-23</lastmod>
