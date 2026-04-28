@@ -6,7 +6,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/financial-solutions/rbs-purchase-balance-transfer-card");
+export const metadata = createRouteMetadata(
+  "/financial-solutions/rbs-purchase-balance-transfer-card",
+);
 
 export default function RBSPurchaseBalanceTransferCardPage() {
   return (
@@ -244,7 +246,7 @@ export default function RBSPurchaseBalanceTransferCardPage() {
                     </li>
                     <li>
                       <Link
-                        href="/personal-finance/balance-transfer-credit-cards/"
+                        href="/personal-finance/top-credit-cards-0-intro-apr/"
                         className="hover:underline hover:text-blue-900 transition-colors"
                       >
                         Balance Transfer Credit Cards Guide

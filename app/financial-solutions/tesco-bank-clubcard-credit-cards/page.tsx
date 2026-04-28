@@ -6,7 +6,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/financial-solutions/tesco-bank-clubcard-credit-cards");
+export const metadata = createRouteMetadata(
+  "/financial-solutions/tesco-bank-clubcard-credit-cards",
+);
 
 export default function TescoBankClubcardCreditCardsPage() {
   return (
@@ -224,7 +226,7 @@ export default function TescoBankClubcardCreditCardsPage() {
                     </li>
                     <li>
                       <Link
-                        href="/personal-finance/best-balance-transfer-credit-cards/"
+                        href="/personal-finance/top-credit-cards-0-intro-apr/"
                         className="hover:underline hover:text-blue-900 transition-colors"
                       >
                         Guide to Balance Transfer Credit Cards

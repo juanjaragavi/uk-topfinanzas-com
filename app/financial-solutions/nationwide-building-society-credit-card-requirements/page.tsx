@@ -6,7 +6,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/financial-solutions/nationwide-building-society-credit-card-requirements");
+export const metadata = createRouteMetadata(
+  "/financial-solutions/nationwide-building-society-credit-card-requirements",
+);
 
 export default function NationwideBuildingSocietyCreditCardRequirementsPage() {
   return (
@@ -453,7 +455,7 @@ export default function NationwideBuildingSocietyCreditCardRequirementsPage() {
                 </p>
 
                 <div className="text-left my-8">
-                  <Link href="https://www.nationwide.co.uk/products/credit-cards/our-credit-cards/">
+                  <Link href="https://www.nationwide.co.uk/credit-cards">
                     <Button className="bg-[#011546] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Visit Official Website
                     </Button>

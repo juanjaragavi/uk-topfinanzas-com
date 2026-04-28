@@ -6,7 +6,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/financial-solutions/nationwide-personal-loan-requirements");
+export const metadata = createRouteMetadata(
+  "/financial-solutions/nationwide-personal-loan-requirements",
+);
 
 export default function NationwidePersonalLoanRequirementsPage() {
   return (
@@ -460,7 +462,7 @@ export default function NationwidePersonalLoanRequirementsPage() {
                 </div>
 
                 <div className="text-left my-8">
-                  <Link href="https://www.nationwide.co.uk/personal-loans/">
+                  <Link href="https://www.nationwide.co.uk/loans/apply">
                     <Button className="bg-[#005A9E] hover:bg-blue-800 text-white font-medium text-md py-2 px-8 rounded-full w-full">
                       Visit Official Website
                     </Button>

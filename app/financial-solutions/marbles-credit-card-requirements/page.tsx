@@ -6,7 +6,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/financial-solutions/marbles-credit-card-requirements");
+export const metadata = createRouteMetadata(
+  "/financial-solutions/marbles-credit-card-requirements",
+);
 
 export default function MarblesCreditCardRequirementsPage() {
   return (
@@ -271,7 +273,7 @@ export default function MarblesCreditCardRequirementsPage() {
                 </div>
 
                 <div className="my-8 text-left sm:text-left">
-                  <Link href="/personal-finance/understanding-credit-scores/">
+                  <Link href="/personal-finance/credit-card-types-benefits/">
                     <Image
                       src="https://media.topfinanzas.com/images/ads/Top-Blog-Credit-Cards.webp"
                       alt="Understanding Credit Scores"
@@ -576,7 +578,7 @@ export default function MarblesCreditCardRequirementsPage() {
                 <p className="text-gray-800 mb-4 text-sm leading-5 text-left">
                   <span className="font-bold">Learn more:</span>{" "}
                   <Link
-                    href="/personal-finance/understanding-credit-scores/"
+                    href="/personal-finance/credit-card-types-benefits/"
                     className="text-blue-600 underline"
                   >
                     How to improve your credit score effectively

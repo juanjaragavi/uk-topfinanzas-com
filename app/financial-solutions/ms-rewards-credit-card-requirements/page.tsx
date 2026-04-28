@@ -6,7 +6,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/financial-solutions/ms-rewards-credit-card-requirements");
+export const metadata = createRouteMetadata(
+  "/financial-solutions/ms-rewards-credit-card-requirements",
+);
 
 export default function MSRewardsCreditCardRequirementsPage() {
   return (
@@ -663,7 +665,7 @@ export default function MSRewardsCreditCardRequirementsPage() {
 
                 <div className="text-left my-8">
                   <a
-                    href="https://bank.marksandspencer.com/credit-cards/"
+                    href="https://bank.marksandspencer.com/credit-card/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
