@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Barclays Personal Loan Requirements: Application Guide - Top Finance UK",
-    description:
-      "Learn about Barclays Personal Loan eligibility criteria, application process, and required documentation to maximize your chances of approval.",
-    keywords:
-      "Barclays Personal Loan requirements, UK loan application, loan eligibility, Barclays loan criteria, personal loan documentation, loan application process",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/barclays-personal-loan-requirements");
 
 export default function BarclaysPersonalLoanRequirementsPage() {
   return (

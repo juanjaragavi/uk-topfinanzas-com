@@ -5,17 +5,9 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import ResponsiveImage from "@/components/ui/responsive-image";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "The Co-operative Bank Credit Card Requirements: Everything You Need to Know - Top Finance UK",
-    description:
-      "Understand the eligibility criteria, documentation, and application process for The Co-operative Members Credit Card. Learn about income requirements, membership details, and costs.",
-    keywords:
-      "Co-operative Bank credit card requirements, Co-op Members credit card eligibility, credit card application, UK credit card requirements, Co-op membership, cashback card application",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/the-co-operative-bank-credit-card-requirements");
 
 export default function CooperativeBankCreditCardRequirementsPage() {
   return (

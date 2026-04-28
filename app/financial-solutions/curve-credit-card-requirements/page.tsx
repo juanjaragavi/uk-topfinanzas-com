@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Curve Card Requirements: Application and Eligibility Guide - Top Finance UK",
-    description:
-      "Discover the eligibility criteria, application process, and requirements for the Curve Card to maximize your chances of approval.",
-    keywords:
-      "Curve Card requirements, UK fintech application, all-in-one card, credit card consolidation, Curve Flex, card eligibility, time travel banking",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/curve-credit-card-requirements");
 
 export default function CurveCreditCardRequirementsPage() {
   return (

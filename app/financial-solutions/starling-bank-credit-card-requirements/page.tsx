@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Starling Bank Credit Card Requirements: Digital Application Guide - Top Finance UK",
-    description:
-      "Discover the eligibility criteria, application process, and requirements for the Starling Bank Credit Card to maximize your chances of approval.",
-    keywords:
-      "Starling Bank Credit Card requirements, UK neobank application, credit card eligibility, digital banking, ethical banking, transparent application",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/starling-bank-credit-card-requirements");
 
 export default function StarlingBankCreditCardRequirementsPage() {
   return (

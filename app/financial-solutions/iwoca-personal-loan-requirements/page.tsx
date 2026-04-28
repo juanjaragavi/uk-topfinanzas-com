@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "iwoca Flexi-Loan Requirements: SME Application Guide - Top Finance UK",
-    description:
-      "Learn about iwoca Flexi-Loan eligibility criteria for UK SMEs, the online application process, and required business information.",
-    keywords:
-      "iwoca requirements, Flexi-Loan eligibility, SME loan application UK, business finance criteria, fintech lending requirements, iwoca documentation",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/iwoca-personal-loan-requirements");
 
 export default function IwocaPersonalLoanRequirementsPage() {
   // Note: Adjusting component name and content for iwoca's Business Flexi-Loan focus

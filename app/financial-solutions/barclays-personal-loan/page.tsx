@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Barclays Personal Loan: Flexible Financial Solutions - Top Finance UK",
-    description:
-      "Explore Barclays Personal Loans with competitive rates, flexible terms, and a streamlined application process to fund your next big purchase or consolidate debt.",
-    keywords:
-      "Barclays Personal Loan, UK loans, personal finance, debt consolidation, home improvement loan, flexible repayment, Barclays banking, loan application",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/barclays-personal-loan");
 
 export default function BarclaysPersonalLoanPage() {
   return (

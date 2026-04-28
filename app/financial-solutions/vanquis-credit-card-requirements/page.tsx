@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Vanquis Credit Card Requirements: Complete Application Guide - Top Finance UK",
-    description:
-      "Learn about eligibility criteria, required documents, and the application process for Vanquis Credit Cards. Check requirements for both Credit Builder and Balance Transfer cards.",
-    keywords:
-      "Vanquis requirements, credit card eligibility, UK credit card application, Vanquis approval, credit builder requirements, balance transfer eligibility, how to apply Vanquis",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/vanquis-credit-card-requirements");
 
 export default function VanquisCreditCardRequirementsPage() {
   return (

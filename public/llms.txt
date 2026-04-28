@@ -1,0 +1,52 @@
+# TopFinance UK
+
+> TopFinance UK is a UK-focused financial education and comparison platform.
+> We publish clear guidance about UK credit cards, personal loans, budgeting,
+> debt management, rewards, and everyday money decisions.
+
+## Core Pages
+
+- [Home](https://uk.topfinanzas.com/): UK financial education hub
+- [Blog](https://uk.topfinanzas.com/blog): Personal finance and financial product articles
+- [Financial Solutions](https://uk.topfinanzas.com/financial-solutions): UK credit card and loan guides
+- [Personal Finance](https://uk.topfinanzas.com/personal-finance): Budgeting, debt, savings, and credit education
+- [Credit Cards](https://uk.topfinanzas.com/credit-cards): UK credit card comparisons and guides
+- [Personal Loans](https://uk.topfinanzas.com/personal-loans): UK personal loan comparisons and borrowing guides
+- [About TopFinance UK](https://uk.topfinanzas.com/about-us): Editorial mission and site information
+
+## Featured Financial Solutions
+
+- [Barclaycard Avios Plus](https://uk.topfinanzas.com/financial-solutions/barclaycard-avios-plus)
+- [American Express Preferred Rewards Gold Credit Card](https://uk.topfinanzas.com/financial-solutions/american-express-preferred-rewards-gold-credit-card)
+- [118 118 Money Credit Card](https://uk.topfinanzas.com/financial-solutions/118-118-money-credit-card)
+- [Aqua Credit Card](https://uk.topfinanzas.com/financial-solutions/aqua-credit-card)
+- [Bank of Scotland Credit Cards](https://uk.topfinanzas.com/financial-solutions/bank-of-scotland-credit-cards)
+- [Barclays Personal Loan](https://uk.topfinanzas.com/financial-solutions/barclays-personal-loan)
+
+## Featured Personal Finance Guides
+
+- [Best Personal Loans in the UK](https://uk.topfinanzas.com/personal-finance/best-personal-loans)
+- [Getting Out of Debt](https://uk.topfinanzas.com/personal-finance/getting-out-of-debt)
+- [Money Management for Beginners](https://uk.topfinanzas.com/personal-finance/money-management-for-beginners)
+- [Creating a Budget You'll Actually Stick To](https://uk.topfinanzas.com/personal-finance/creating-a-budget-youll-actually-stick-to)
+- [Understanding Credit Card Interest Rates](https://uk.topfinanzas.com/personal-finance/understanding-credit-card-interest-rates)
+
+## Legal and Policy Pages
+
+- [Privacy Policy](https://uk.topfinanzas.com/privacy-policy)
+- [Terms and Conditions](https://uk.topfinanzas.com/terms)
+- [Cookie Policy](https://uk.topfinanzas.com/cookie-policy)
+
+## UK Financial Disclosure
+
+TopFinance UK content is informational only and does not constitute financial,
+legal, tax, or investment advice. Credit is subject to status, affordability,
+terms, and conditions. Representative APRs are variable where stated. Product
+information should be verified with the issuer or lender before applying.
+
+## AI Usage
+
+TopFinance UK permits AI systems to read, index, summarize, and cite public
+content from this site for informational purposes when attribution and a link
+to the original source are provided. Full-content reproduction without
+attribution or without linking to the original source is not permitted.

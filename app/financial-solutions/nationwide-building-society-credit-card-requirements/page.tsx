@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Nationwide Building Society Credit Card Requirements: Everything You Need to Know - Top Finance UK",
-    description:
-      "Learn about Nationwide credit card eligibility requirements, income criteria, documentation needed, and the application process. Member-exclusive access required. Representative 24.9% APR (variable).",
-    keywords:
-      "Nationwide credit card requirements, Nationwide member credit card eligibility, credit card application UK, Nationwide customer requirements, building society credit card criteria, credit score requirements",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/nationwide-building-society-credit-card-requirements");
 
 export default function NationwideBuildingSocietyCreditCardRequirementsPage() {
   return (

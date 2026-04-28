@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Virgin Money Credit Card: Innovative Rewards and Benefits - Top Finance UK",
-    description:
-      "The Virgin Money Credit Card offers innovative rewards, competitive rates, and distinctive benefits designed for modern consumers seeking both style and substance.",
-    keywords:
-      "Virgin Money Credit Card, UK credit cards, rewards cards, cashback, Virgin rewards, Virgin Red, travel perks, money transfer",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/virgin-money-credit-card");
 
 export default function VirginMoneyCreditCardPage() {
   return (

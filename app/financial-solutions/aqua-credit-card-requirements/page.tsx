@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Aqua Credit Card Requirements: Everything You Need to Know - Top Finance UK",
-    description:
-      "Understand the eligibility criteria, documentation requirements, and application process for the Aqua Credit Card to maximise your chances of approval and start building better credit.",
-    keywords:
-      "Aqua Credit Card requirements, credit card application UK, Aqua eligibility, credit builder requirements, bad credit card application, UK credit card approval",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/aqua-credit-card-requirements");
 
 export default function AquaCreditCardRequirementsPage() {
   return (

@@ -4,16 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title: "NatWest Credit Card: Versatile Banking Solutions - Top Finance UK",
-    description:
-      "The NatWest Credit Card offers flexible rewards, secure spending, and practical features designed to support your everyday financial needs.",
-    keywords:
-      "NatWest Credit Card, UK credit cards, everyday spending, rewards programme, NatWest Bank, secure banking, contactless payments",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/natwest-credit-card");
 
 export default function NatWestCreditCardPage() {
   return (

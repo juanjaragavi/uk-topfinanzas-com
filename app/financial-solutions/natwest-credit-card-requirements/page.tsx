@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "NatWest Credit Card Requirements: Application Criteria - Top Finance UK",
-    description:
-      "Understand the eligibility requirements, application process, and documentation needed for the NatWest Credit Card to enhance your chances of approval.",
-    keywords:
-      "NatWest Credit Card requirements, UK credit card application, NatWest eligibility, credit score requirements, UK banking applications",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/natwest-credit-card-requirements");
 
 export default function NatWestCreditCardRequirementsPage() {
   return (

@@ -4,16 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title: "NatWest Personal Loan: Flexible Financing Options - Top Finance UK",
-    description:
-      "Explore NatWest Personal Loans with competitive rates, flexible repayment terms, and a straightforward application process from a trusted UK bank.",
-    keywords:
-      "NatWest Personal Loan, UK loans, personal finance, debt consolidation, home improvement loan, flexible repayment, NatWest banking, loan application",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/natwest-personal-loan");
 
 export default function NatWestPersonalLoanPage() {
   return (

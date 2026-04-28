@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Starling Bank Personal Loan Requirements: Application Guide - Top Finance UK",
-    description:
-      "Learn about Starling Bank Personal Loan eligibility criteria, the fully digital application process via the Starling app, and required information.",
-    keywords:
-      "Starling Bank Personal Loan requirements, UK neobank loan application, loan eligibility, Starling loan criteria, personal loan documentation, Starling app, ethical banking",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/starling-bank-personal-loan-requirements");
 
 export default function StarlingBankPersonalLoanRequirementsPage() {
   return (

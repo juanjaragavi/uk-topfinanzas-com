@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "TSB Credit Card: Practical Benefits for Everyday Banking - Top Finance UK",
-    description:
-      "The TSB Credit Card offers practical features, competitive rates, and straightforward benefits designed for everyday banking needs and financial management.",
-    keywords:
-      "TSB Credit Card, UK credit cards, everyday banking, cashback offers, balance transfers, TSB Bank, contactless payments",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/tsb-credit-card");
 
 export default function TSBCreditCardPage() {
   return (

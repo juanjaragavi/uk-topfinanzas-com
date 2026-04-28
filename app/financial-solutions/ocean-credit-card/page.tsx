@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Ocean Credit Card: Check Your Eligibility in 60 Seconds - Top Finance UK",
-    description:
-      "The Ocean Credit Card offers credit limits from £200 to £8,000 with no annual fee. Check your eligibility with QuickCheck without affecting your credit score. Representative 39.9% APR (variable).",
-    keywords:
-      "Ocean credit card, credit builder card, QuickCheck, bad credit credit card, UK credit cards, Ocean Finance, no annual fee credit card, credit score improvement",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/ocean-credit-card");
 
 export default function OceanCreditCardPage() {
   return (

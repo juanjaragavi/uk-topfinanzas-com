@@ -1,4 +1,10 @@
 import createMDX from "@next/mdx";
+const noindexHeaders = [
+  {
+    key: "X-Robots-Tag",
+    value: "noindex, nofollow",
+  },
+];
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -29,6 +35,38 @@ const nextConfig = {
   // Add cache headers for static assets
   async headers() {
     return [
+      {
+        source: "/credit-card-recommender-p1",
+        headers: noindexHeaders,
+      },
+      {
+        source: "/credit-card-recommender-p2",
+        headers: noindexHeaders,
+      },
+      {
+        source: "/credit-card-recommender-p3",
+        headers: noindexHeaders,
+      },
+      {
+        source: "/quiz",
+        headers: noindexHeaders,
+      },
+      {
+        source: "/quiz-2",
+        headers: noindexHeaders,
+      },
+      {
+        source: "/quiz-results",
+        headers: noindexHeaders,
+      },
+      {
+        source: "/invit-credit-card-rec-uk",
+        headers: noindexHeaders,
+      },
+      {
+        source: "/utm-test",
+        headers: noindexHeaders,
+      },
       {
         // Apply these headers to all static assets
         source:

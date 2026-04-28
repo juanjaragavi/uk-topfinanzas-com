@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "HSBC Personal Loan Requirements: Application Guide - Top Finance UK",
-    description:
-      "Learn about HSBC Personal Loan eligibility criteria, application process, and required documentation to maximize your chances of approval.",
-    keywords:
-      "HSBC Personal Loan requirements, UK loan application, loan eligibility, HSBC loan criteria, personal loan documentation, loan application process",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/hsbc-personal-loan-requirements");
 
 export default function HSBCPersonalLoanRequirementsPage() {
   return (

@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Starling Bank Personal Loan: Ethical & Transparent Lending - Top Finance UK",
-    description:
-      "Explore Starling Bank Personal Loans offering competitive rates, clear terms, and seamless management via the award-winning Starling app.",
-    keywords:
-      "Starling Bank Personal Loan, UK loans, neobank loan, ethical banking, personal finance, debt consolidation, flexible repayment, Starling app",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/starling-bank-personal-loan");
 
 export default function StarlingBankPersonalLoanPage() {
   return (

@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "iwoca Flexi-Loan: Fast Business Financing for SMEs - Top Finance UK",
-    description:
-      "Explore iwoca's Flexi-Loan, offering fast, flexible working capital solutions designed specifically for UK small and medium-sized businesses.",
-    keywords:
-      "iwoca, Flexi-Loan, SME loan, business finance UK, fintech lending, small business funding, working capital, flexible business loan",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/iwoca-personal-loan");
 
 export default function IwocaPersonalLoanPage() {
   // Note: iwoca provides business finance (Flexi-Loan), not personal loans.

@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Yonder Credit Card Requirements: Everything You Need to Know - Top Finance UK",
-    description:
-      "Understand the eligibility criteria, documentation, and application process for the Yonder Free Credit Card to maximise your chances of approval.",
-    keywords:
-      "Yonder Credit Card requirements, UK credit card application, Yonder eligibility, credit score requirements, free credit card application",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/yonder-credit-card-requirements");
 
 export default function YonderCreditCardRequirementsPage() {
   return (

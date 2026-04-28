@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Virgin Money Credit Card Requirements: Application Guide - Top Finance UK",
-    description:
-      "Discover the eligibility criteria, documentation, and application process for the Virgin Money Credit Card to improve your chances of approval.",
-    keywords:
-      "Virgin Money Credit Card requirements, UK credit card application, Virgin Money eligibility, credit score requirements, UK banking applications, Virgin Red",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/virgin-money-credit-card-requirements");
 
 export default function VirginMoneyCreditCardRequirementsPage() {
   return (

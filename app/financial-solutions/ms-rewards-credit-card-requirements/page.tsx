@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "M&S Rewards Credit Card Requirements: Eligibility & Application Guide - Top Finance UK",
-    description:
-      "Discover the eligibility criteria, required documentation, and step-by-step application process for the M&S Rewards Credit Card. Learn what you need to apply successfully.",
-    keywords:
-      "M&S credit card requirements, M&S credit card eligibility, Marks and Spencer credit card application, credit card requirements UK, M&S Bank credit card, how to apply M&S card",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/ms-rewards-credit-card-requirements");
 
 export default function MSRewardsCreditCardRequirementsPage() {
   return (

@@ -4,16 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title: "Bip Credit Card: Cardless Credit You Control - Top Finance UK",
-    description:
-      "Discover the Bip Credit Card - a revolutionary cardless credit solution with no hidden fees, spending caps, and instant balance updates. Representative APR 34.9% (variable). Apply today.",
-    keywords:
-      "Bip Credit Card, cardless credit, digital credit card, no hidden fees, spending caps, Apple Pay, Google Pay, NewDay credit, UK credit card",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/bip-credit-card");
 
 export default function BipCreditCardPage() {
   return (

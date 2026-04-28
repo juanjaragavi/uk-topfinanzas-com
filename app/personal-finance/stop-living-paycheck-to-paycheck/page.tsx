@@ -3,18 +3,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata(): Metadata {
-  return {
-    title:
-      "Stop Living Paycheck to Paycheck: 3 Shifts to Break the Cycle Today - Top Finance UK",
-    description:
-      "Escape the paycheck-to-paycheck cycle with three practical cash flow shifts. Learn how UK families are building breathing room without dramatic sacrifices or extreme budgets.",
-    keywords:
-      "personal finance, cash flow management, paycheck to paycheck, budgeting UK, money management, financial breathing room, expense control, UK personal finance",
-  };
-}
+export const metadata = createRouteMetadata("/personal-finance/stop-living-paycheck-to-paycheck");
 
 export default function StopLivingPaycheckToPaycheckPage() {
   return (

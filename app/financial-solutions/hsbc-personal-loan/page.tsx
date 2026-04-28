@@ -4,16 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title: "HSBC Personal Loan: Flexible Financing Solutions - Top Finance UK",
-    description:
-      "Discover HSBC Personal Loans with competitive rates, flexible repayment terms, and quick application process designed to help you achieve your financial goals.",
-    keywords:
-      "HSBC Personal Loan, UK loans, personal finance, debt consolidation, home improvement loan, flexible repayment, HSBC banking, loan application",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/hsbc-personal-loan");
 
 export default function HSBCPersonalLoanPage() {
   return (

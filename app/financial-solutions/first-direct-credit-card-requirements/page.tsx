@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "First Direct Credit Card Requirements: Everything You Need to Know - Top Finance UK",
-    description:
-      "Understand the eligibility criteria, documentation, and application process for the First Direct 1st Credit Card to maximise your chances of approval.",
-    keywords:
-      "First Direct Credit Card requirements, UK credit card application, First Direct eligibility, credit score requirements, 1st Credit Card application",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/first-direct-credit-card-requirements");
 
 export default function FirstDirectCreditCardRequirementsPage() {
   return (

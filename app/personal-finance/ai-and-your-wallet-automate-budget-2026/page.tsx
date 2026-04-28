@@ -4,27 +4,9 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Metadata } from "next";
+import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "AI and Your Wallet: How to Use Artificial Intelligence to Automate Your Budget in 2026 | TopFinanzas UK",
-  description: "Learn how AI and open banking can revolutionize your personal finances. Discover smart budgeting apps, automated savings, and how to stay safe while letting technology handle the numbers.",
-  keywords: "personal finance, AI budgeting, automate budget UK, artificial intelligence money management, open banking apps, smart savings UK, financial automation 2026",
-  openGraph: {
-    title: "AI and Your Wallet: How to Use Artificial Intelligence to Automate Your Budget in 2026",
-    description: "Learn how AI and open banking can revolutionize your personal finances. Discover smart budgeting apps, automated savings, and how to stay safe while letting technology handle the numbers.",
-    url: "https://uk.topfinanzas.com/personal-finance/ai-and-your-wallet-automate-budget-2026",
-    type: "article",
-    images: [
-      {
-        url: "https://media.topfinanzas.com/images/uk/ai-and-your-wallet-automate-budget.webp",
-        width: 1200,
-        height: 630,
-        alt: "AI and Your Wallet: Smart Money Management",
-      },
-    ],
-  },
-};
+export const metadata = createRouteMetadata("/personal-finance/ai-and-your-wallet-automate-budget-2026");
 
 export default function AiAndYourWalletPage() {
   return (

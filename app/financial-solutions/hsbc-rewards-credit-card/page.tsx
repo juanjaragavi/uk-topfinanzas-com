@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "HSBC Rewards Credit Card: Earn Points on Every Purchase - Top Finance UK",
-    description:
-      "The HSBC Rewards Credit Card offers reward points on everyday spending, 0% interest on purchases for 6 months, and a £25 welcome bonus. Representative 26.9% APR (variable).",
-    keywords:
-      "HSBC Rewards Credit Card, credit card rewards, Mastercard rewards, cashback credit card, pay with points, HSBC credit card, balance transfer credit card, rewards programme UK",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/hsbc-rewards-credit-card");
 
 export default function HSBCRewardsCreditCardPage() {
   return (

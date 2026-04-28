@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Revolut Personal Loan Requirements: Fintech Application Guide - Top Finance UK",
-    description:
-      "Learn about Revolut Personal Loan eligibility criteria, the fully digital application process, and required information for approval.",
-    keywords:
-      "Revolut Personal Loan requirements, UK fintech loan application, loan eligibility, Revolut loan criteria, personal loan documentation, Revolut app",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/revolut-personal-loan-requirements");
 
 export default function RevolutPersonalLoanRequirementsPage() {
   return (

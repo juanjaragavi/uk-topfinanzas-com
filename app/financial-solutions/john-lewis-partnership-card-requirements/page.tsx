@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "John Lewis Partnership Card Requirements: Everything You Need to Know - Top Finance UK",
-    description:
-      "Understand the eligibility criteria, documentation requirements, and application process for the John Lewis Partnership Credit Card to maximize your chances of approval.",
-    keywords:
-      "John Lewis Partnership Card requirements, John Lewis credit card application, eligibility criteria, credit card approval, UK credit cards, John Lewis Finance, application process",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/john-lewis-partnership-card-requirements");
 
 export default function JohnLewisPartnershipCardRequirementsPage() {
   return (

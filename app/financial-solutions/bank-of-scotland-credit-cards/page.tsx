@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Bank of Scotland Credit Cards: Flexible Options for Every Need - Top Finance UK",
-    description:
-      "Discover Bank of Scotland credit cards with options for everyday spending, balance transfers, large purchases, and credit building. Check eligibility without affecting your credit score. Representative APR varies by card type.",
-    keywords:
-      "Bank of Scotland Credit Cards, UK credit cards, balance transfer, everyday spending card, credit builder card, large purchase card, eligibility checker",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/bank-of-scotland-credit-cards");
 
 export default function BankOfScotlandCreditCardsPage() {
   return (

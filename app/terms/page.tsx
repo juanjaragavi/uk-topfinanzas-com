@@ -5,12 +5,9 @@ import { Footer } from "@/components/layout/footer";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { useMDXComponents } from "@/mdx-components";
 import { logger } from "@/lib/logger";
+import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Terms and Conditions - TopFinance UK",
-  description:
-    "Read the Terms and Conditions for the use of TopFinance UK services and website.",
-};
+export const metadata = createRouteMetadata("/terms");
 
 export default async function TermsPage() {
   // Read the MDX file

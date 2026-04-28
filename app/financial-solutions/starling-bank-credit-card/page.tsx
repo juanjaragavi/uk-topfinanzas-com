@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Starling Bank Credit Card: Digital Banking Excellence - Top Finance UK",
-    description:
-      "The Starling Bank Credit Card offers innovative digital features, transparent pricing, and exceptional customer service designed for modern, tech-savvy consumers.",
-    keywords:
-      "Starling Bank Credit Card, UK credit cards, digital banking, neobank, app-based banking, no foreign transaction fees, transparent fees, ethical banking",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/starling-bank-credit-card");
 
 export default function StarlingBankCreditCardPage() {
   return (

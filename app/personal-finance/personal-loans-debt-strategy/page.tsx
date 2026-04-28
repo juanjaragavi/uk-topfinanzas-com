@@ -3,6 +3,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image"; // Keep Image import in case it's needed later, though MDX didn't have one
 import Link from "next/link";
+import { createRouteMetadata } from "@/lib/seo";
+
+export const metadata = createRouteMetadata("/personal-finance/personal-loans-debt-strategy");
 
 export default function PersonalLoansDebtStrategyPage() {
   return (

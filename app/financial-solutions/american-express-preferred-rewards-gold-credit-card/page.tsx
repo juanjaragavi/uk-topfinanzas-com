@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "American Express Preferred Rewards Gold Credit Card: Exclusive Travel & Lifestyle Benefits - Top Finance UK",
-    description:
-      "The American Express Gold Card offers premium Membership Rewards points, comprehensive travel insurance, and exclusive lifestyle benefits with a £140 annual fee. Discover one of the UK's most prestigious credit cards.",
-    keywords:
-      "American Express Gold Card, Amex Gold, Membership Rewards, premium credit card, travel insurance, purchase protection, Amex benefits, gold credit card UK",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/american-express-preferred-rewards-gold-credit-card");
 
 export default function AmexGoldCardPage() {
   return (
