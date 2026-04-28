@@ -3,6 +3,9 @@ import { CompactFooter } from "@/components/layout/compact-footer"; // Corrected
 import { Header } from "@/components/layout/header"; // Corrected path and component
 import Image from "next/image";
 import Link from "next/link";
+import { createRouteMetadata } from "@/lib/seo";
+
+export const metadata = createRouteMetadata("/personal-finance/no-annual-fee-credit-cards");
 
 export default function NoAnnualFeeCreditCards() {
   return (

@@ -4,16 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title: "Funding Xchange: SME Finance Comparison Platform - Top Finance UK",
-    description:
-      "Explore Funding Xchange, a smart platform helping UK SMEs compare and access a wide range of business finance options from multiple lenders.",
-    keywords:
-      "Funding Xchange, SME finance comparison, business loan marketplace, UK business funding, alternative finance platform, asset finance, invoice finance",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/funding-xchange-personal-loan");
 
 export default function FundingXchangePersonalLoanPage() {
   // Note: Funding Xchange is a business finance comparison platform, not a direct personal loan provider.

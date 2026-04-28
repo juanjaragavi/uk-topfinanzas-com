@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Fluid Credit Card: Cut Your Credit Card Costs with Balance Transfers - Top Finance UK",
-    description:
-      "The Fluid Credit Card offers 0% interest on balance transfers for 9 months (3% fee), helping you save on interest charges and clear your credit card debt faster. Representative 34.9% APR (variable).",
-    keywords:
-      "Fluid credit card, balance transfer credit card, 0% balance transfer, UK credit cards, debt consolidation, NewDay credit card, cut credit costs",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/fluid-credit-card");
 
 export default function FluidCreditCardPage() {
   return (

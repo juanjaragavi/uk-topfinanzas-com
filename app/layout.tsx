@@ -25,6 +25,12 @@ import TopAds from "@/components/analytics/topads";
 import TopAdsSPAHandler from "@/components/analytics/topads-spa-handler";
 import ResourceHints from "@/components/resource-hints";
 import NavigationProvider from "@/components/providers/navigation-provider";
+import { JsonLd } from "@/components/seo/json-ld";
+import {
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+  SEO_SITE,
+} from "@/lib/seo";
 {
   /*import PreloaderProvider from "@/components/providers/preloader-provider";*/
 }
@@ -62,8 +68,6 @@ const poppins = localFont({
   ],
 });
 
-// Define base URL for metadata
-const baseUrl = "https://uk.topfinanzas.com";
 
 // Temporarily disable AdZep script to isolate TopAds testing
 const ENABLE_ADZEP = false;
@@ -84,59 +88,74 @@ try {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
   themeColor: "#ffffff",
 };
 
 export const metadata: Metadata = {
-  // Updated Title and Description for UK focus
-  title: "TopFinance UK - Your Guide to UK Credit Cards & Loans",
-  description:
-    "Compare the best UK credit cards, loans, and financial solutions with TopFinance UK. Expert guides and tools tailored for the UK market.",
-  keywords:
-    "credit cards UK, personal loans UK, compare credit cards, compare loans, financial advice UK, TopFinance UK", // Updated keywords
-  // Removed generator tag
-
-  // Added Open Graph Metadata
+  metadataBase: new URL(SEO_SITE.baseUrl),
+  title: {
+    template: SEO_SITE.titleTemplate,
+    default: SEO_SITE.defaultTitle,
+  },
+  description: SEO_SITE.description,
+  keywords: [
+    "credit cards UK",
+    "personal loans UK",
+    "compare credit cards",
+    "compare loans",
+    "financial education UK",
+    "TopFinance UK",
+  ],
+  alternates: {
+    canonical: SEO_SITE.baseUrl,
+    languages: {
+      [SEO_SITE.language]: SEO_SITE.baseUrl,
+      en: SEO_SITE.baseUrl,
+      "en-US": "https://us.topfinanzas.com",
+      "es-MX": "https://topfinanzas.com",
+      "x-default": SEO_SITE.baseUrl,
+    },
+  },
+  authors: [{ name: "TopFinance UK Editorial Team", url: SEO_SITE.baseUrl }],
+  publisher: SEO_SITE.name,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
-    title: "TopFinance UK - Your Guide to UK Credit Cards & Loans",
-    description:
-      "Compare the best UK credit cards, loans, and financial solutions with TopFinance UK.",
-    url: baseUrl,
-    siteName: "TopFinance UK",
+    title: SEO_SITE.defaultTitle,
+    description: SEO_SITE.description,
+    url: SEO_SITE.baseUrl,
+    siteName: SEO_SITE.name,
     images: [
       {
-        url: `https://media.topfinanzas.com/images/placeholder-image.webp`, // Using the provided image URL
-        width: 900, // Assuming standard OG image width
-        height: 600, // Assuming standard OG image height
-        alt: "TopFinance UK - Financial Guides and Solutions", // Updated Alt Text
+        url: SEO_SITE.defaultImage,
+        width: 1200,
+        height: 630,
+        alt: `${SEO_SITE.name} financial guides and solutions`,
       },
     ],
-    locale: "en_GB",
+    locale: SEO_SITE.locale,
     type: "website",
   },
-
-  // Added Twitter Card Metadata
   twitter: {
     card: "summary_large_image",
-    title: "TopFinance UK - Your Guide to UK Credit Cards & Loans",
-    description:
-      "Compare the best UK credit cards, loans, and financial solutions with TopFinance UK.",
-    // siteId: "[Optional Twitter ID]",
-    // creator: "[Optional Twitter Handle]",
-    // creatorId: "[Optional Twitter ID]",
-    images: [`https://media.topfinanzas.com/images/placeholder-image.webp`], // Using the provided image URL
+    title: SEO_SITE.defaultTitle,
+    description: SEO_SITE.description,
+    images: [SEO_SITE.defaultImage],
   },
-
-  // Use simplified favicon configuration
   icons: {
     icon: "/favicon.png",
     apple: "/apple-touch-icon.png",
   },
-  manifest: "/site.webmanifest", // Use relative path for local manifest
-
-  // Optional: Define metadataBase for resolving relative image URLs
-  metadataBase: new URL(baseUrl),
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -159,47 +178,12 @@ export default function RootLayout({
           content="public, max-age=31536000, immutable"
         />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {/* Preconnect to media domain to establish early connection */}
         <link
           rel="preconnect"
           href="https://media.topfinanzas.com"
           crossOrigin="anonymous"
-        />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              {
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                name: "TopFinance UK",
-                url: baseUrl,
-                logo: "https://media.topfinanzas.com/images/logo-english.webp",
-                address: {
-                  "@type": "PostalAddress",
-                  streetAddress: "PANAMA, PANAMA CITY",
-                  addressLocality: "AV. AQUILINO DE LA GUARDIA",
-                  postalCode: "OCEAN BUSINESS PLAZA BUILDING, FLOOR 12",
-                  addressCountry: "PA",
-                },
-                contactPoint: {
-                  "@type": "ContactPoint",
-                  telephone: "+44-20-1234-5678",
-                  contactType: "customer support",
-                  email: "info@topfinanzas.com",
-                },
-                sameAs: [
-                  "https://www.linkedin.com/company/top-networks-inc",
-                  "https://www.instagram.com/topfinance_en/",
-                ],
-              },
-              null,
-              2,
-            ),
-          }}
         />
 
         <ClientOnly>
@@ -236,6 +220,7 @@ export default function RootLayout({
       </head>
       <body className={`${poppins.variable} font-sans text-left sm:text-left`}>
         <GoogleTagManagerNoScript />
+        <JsonLd data={[generateOrganizationSchema(), generateWebSiteSchema()]} />
         {/*<PreloaderProvider
           defaultConfig={{
             duration: 4000,

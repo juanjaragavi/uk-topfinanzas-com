@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Capital One UK Classic Card Requirements: Everything You Need to Know - Top Finance UK",
-    description:
-      "Discover the eligibility criteria, required documentation, and application process for the Capital One UK Classic Card. Get a decision in 60 seconds without affecting your credit score.",
-    keywords:
-      "Capital One UK requirements, Classic Card eligibility, UK credit card application, credit score requirements, QuickCheck, Capital One application process",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/capital-one-uk-credit-card-requirements");
 
 export default function CapitalOneUKCreditCardRequirementsPage() {
   return (

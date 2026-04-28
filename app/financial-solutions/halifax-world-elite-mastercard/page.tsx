@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Halifax World Elite Mastercard: Premier Banking Benefits - Top Finance UK",
-    description:
-      "The Halifax World Elite Mastercard offers exceptional travel perks, premium concierge services, and exclusive lifestyle benefits to elevate your financial experience.",
-    keywords:
-      "Halifax World Elite Mastercard, premium credit card, UK banking, travel perks, concierge services, cashback, airport lounge access, Halifax credit card",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/halifax-world-elite-mastercard");
 
 export default function HalifaxWorldEliteMastercardPage() {
   return (

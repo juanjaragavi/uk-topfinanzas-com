@@ -4,16 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title: "Fleximize: Flexible Business Loans for UK SMEs - Top Finance UK",
-    description:
-      "Explore Fleximize's flexible business loans (Flexiloan & Flexiloan Lite) offering tailored repayment options and top-up facilities for UK SMEs.",
-    keywords:
-      "Fleximize, Flexiloan, SME loan, business finance UK, flexible business loan, fintech lending, working capital, growth funding",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/fleximize-personal-loan");
 
 export default function FleximizePersonalLoanPage() {
   // Note: Fleximize provides business finance (Flexiloan), not personal loans.

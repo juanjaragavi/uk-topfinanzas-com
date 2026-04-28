@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Nationwide Personal Loan: Member-Focused Financing - Top Finance UK",
-    description:
-      "Explore Nationwide Personal Loans with competitive rates, flexible terms, and benefits for existing members of the UK's largest building society.",
-    keywords:
-      "Nationwide Personal Loan, UK loans, building society loan, personal finance, debt consolidation, home improvement loan, member benefits, loan application",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/nationwide-personal-loan");
 
 export default function NationwidePersonalLoanPage() {
   return (

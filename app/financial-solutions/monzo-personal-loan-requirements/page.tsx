@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Monzo Personal Loan Requirements: Neobank Application Guide - Top Finance UK",
-    description:
-      "Learn about Monzo Personal Loan eligibility criteria, the fully digital application process via the Monzo app, and required information.",
-    keywords:
-      "Monzo Personal Loan requirements, UK neobank loan application, loan eligibility, Monzo loan criteria, personal loan documentation, Monzo app",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/monzo-personal-loan-requirements");
 
 export default function MonzoPersonalLoanRequirementsPage() {
   return (

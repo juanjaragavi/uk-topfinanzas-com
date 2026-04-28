@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Fluid Credit Card Requirements: Everything You Need to Know - Top Finance UK",
-    description:
-      "Understand the eligibility criteria, documentation requirements, and application process for the Fluid Credit Card to maximize your chances of approval for 0% balance transfers.",
-    keywords:
-      "Fluid credit card requirements, Fluid credit card application, eligibility criteria, balance transfer requirements, UK credit cards, credit card approval, NewDay credit card",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/fluid-credit-card-requirements");
 
 export default function FluidCreditCardRequirementsPage() {
   return (

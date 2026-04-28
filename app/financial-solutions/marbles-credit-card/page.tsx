@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Marbles Credit Card: Stay in Control of Your Finances - Top Finance UK",
-    description:
-      "The Marbles Credit Card helps you manage your finances with a manageable credit limit from £250 to £1,500, FastCheck eligibility checker, no annual fee, and flexible account management tools. Representative APR 34.9% (variable).",
-    keywords:
-      "Marbles Credit Card, credit building card, manageable credit limit, FastCheck, no annual fee, UK credit card, credit control tools, Digital Wallet compatible",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/marbles-credit-card");
 
 export default function MarblesCreditCardPage() {
   return (

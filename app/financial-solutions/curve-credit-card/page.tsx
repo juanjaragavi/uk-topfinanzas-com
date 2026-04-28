@@ -4,16 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title: "Curve Credit Card: All-In-One Financial Solution - Top Finance UK",
-    description:
-      "The Curve Credit Card offers a revolutionary 'all-in-one' approach, combining multiple cards in one, with advanced benefits like time-travel functionality and enhanced rewards.",
-    keywords:
-      "Curve Card, UK fintech, all-in-one card, card consolidation, Curve Flex, cashback, time travel banking, Go Back in Time, card management",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/curve-credit-card");
 
 export default function CurveCreditCardPage() {
   return (

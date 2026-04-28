@@ -3,6 +3,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image";
 import Link from "next/link";
+import { createRouteMetadata } from "@/lib/seo";
+
+export const metadata = createRouteMetadata("/personal-finance/combine-finances-after-marriage-or-moving-in");
 
 export default function CombineFinancesAfterMarriagePage() {
   return (

@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Lloyds Bank Credit Card Requirements: Eligibility Criteria - Top Finance UK",
-    description:
-      "Understand the eligibility requirements, application process, and documentation needed for the Lloyds Bank Credit Card to maximize your chances of approval.",
-    keywords:
-      "Lloyds Bank Credit Card requirements, UK credit card application, Lloyds credit card eligibility, credit score requirements, UK banking applications",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/lloyds-bank-credit-card-requirements");
 
 export default function LloydsBankCreditCardRequirementsPage() {
   return (

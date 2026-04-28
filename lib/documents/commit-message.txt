@@ -1,6 +1,5 @@
-feat(seo): replace static sitemaps with dynamic generation
+refactor(seo): centralize route metadata and structured data
 
-- Removed malformed `public/sitemap.xml` and `app/sitemap.xml` that caused XML parse errors.
-- Implemented `app/sitemap.ts` using Next.js `MetadataRoute.Sitemap` API.
-- Programmatically traverse blog categories at build time via `fs` for dynamically discovering content routes.
-- Addressed TypeScript typing errors related to `changeFrequency` and mapped object types.
+- Move large archive and marketing pages to dedicated client components.
+- Replace per-page metadata declarations with shared SEO helpers across key routes.
+- Add route-level JSON-LD coverage, sitemap generation updates, and noindex headers for quiz-style flows.

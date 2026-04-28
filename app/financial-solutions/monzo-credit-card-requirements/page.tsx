@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Monzo Credit Card Requirements: Digital Application Guide - Top Finance UK",
-    description:
-      "Learn about the eligibility criteria, digital application process, and approval requirements for the Monzo Credit Card to maximize your chances of success.",
-    keywords:
-      "Monzo Credit Card requirements, UK neobank applications, Monzo eligibility, credit score requirements, digital credit card application, mobile banking",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/monzo-credit-card-requirements");
 
 export default function MonzoCreditCardRequirementsPage() {
   return (

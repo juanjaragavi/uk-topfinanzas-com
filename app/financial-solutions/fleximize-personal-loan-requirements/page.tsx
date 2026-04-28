@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Fleximize Loan Requirements: Flexible SME Finance Guide - Top Finance UK",
-    description:
-      "Learn about Fleximize's eligibility criteria for UK SMEs seeking flexible business loans (Flexiloan & Flexiloan Lite), the application process, and required information.",
-    keywords:
-      "Fleximize requirements, Flexiloan eligibility, SME loan application UK, flexible business loan criteria, fintech lending requirements, Fleximize documentation",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/fleximize-personal-loan-requirements");
 
 export default function FleximizePersonalLoanRequirementsPage() {
   // Note: Adjusting component name and content for Fleximize's Business Loan focus

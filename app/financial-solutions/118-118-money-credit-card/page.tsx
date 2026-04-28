@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "118 118 Money Credit Card: Build Your Credit Score with Confidence - Top Finance UK",
-    description:
-      "The 118 118 Money Credit Card offers guaranteed personalised credit limits and transparent terms to help you build or rebuild your credit score with expert support.",
-    keywords:
-      "118 118 Money Credit Card, credit builder card, bad credit credit card, build credit score, UK credit cards, credit building, guaranteed credit limit",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/118-118-money-credit-card");
 
 export default function Money118118CreditCardPage() {
   return (

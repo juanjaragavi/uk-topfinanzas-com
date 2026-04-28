@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Virgin Money Personal Loan: Flexible Financing with Perks - Top Finance UK",
-    description:
-      "Explore Virgin Money Personal Loans with competitive rates, flexible terms, and potential benefits linked to the Virgin Red rewards program.",
-    keywords:
-      "Virgin Money Personal Loan, UK loans, personal finance, debt consolidation, home improvement loan, flexible repayment, Virgin Red, loan application",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/virgin-money-personal-loan");
 
 export default function VirginMoneyPersonalLoanPage() {
   return (

@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Zopa Credit Card Requirements: Everything You Need to Know - Top Finance UK",
-    description:
-      "Understand the eligibility criteria, documentation, and application process for the Zopa Credit Card to maximize your chances of approval and start enjoying award-winning card management.",
-    keywords:
-      "Zopa credit card requirements, UK credit card application, Zopa eligibility, credit card approval, instant eligibility check, credit score requirements",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/zopa-credit-card-requirements");
 
 export default function ZopaCreditCardRequirementsPage() {
   return (

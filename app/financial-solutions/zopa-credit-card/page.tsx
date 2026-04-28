@@ -4,16 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title: "Zopa Credit Card: Award-Winning Card Management - Top Finance UK",
-    description:
-      "The Zopa Credit Card offers effortless card management through a simple app, with instant notifications, Credit Cushion feature, no foreign fees, and award-winning customer service.",
-    keywords:
-      "Zopa credit card, UK credit cards, card management app, Credit Cushion, no foreign fees, award-winning credit card, British Bank Awards",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/zopa-credit-card");
 
 export default function ZopaCreditCardPage() {
   return (

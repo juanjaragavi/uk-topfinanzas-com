@@ -3,18 +3,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata(): Metadata {
-  return {
-    title:
-      "How to Track Your Spending for 30 Days and Finally Know Where Your Money Goes | Top Finance UK",
-    description:
-      "Stop guessing about your finances. Learn a simple 30-day expense tracking method to discover where your money really goes and build lasting money management habits.",
-    keywords:
-      "track spending, expense tracking, money management, personal finance, budgeting UK, where does my money go, spending habits, 30 day challenge, financial awareness",
-  };
-}
+export const metadata = createRouteMetadata("/personal-finance/how-to-track-your-spending-for-30-days");
 
 export default function TrackSpending30DaysPage() {
   return (

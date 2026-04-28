@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Monzo Credit Card: Digital-First Banking Solutions - Top Finance UK",
-    description:
-      "The Monzo Credit Card offers innovative digital features, real-time spending insights, and simplified financial management designed for the mobile-first generation.",
-    keywords:
-      "Monzo Credit Card, UK credit cards, digital banking, mobile-first banking, Monzo, neobank, spending insights, budgeting tools",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/monzo-credit-card");
 
 export default function MonzoCreditCardPage() {
   return (

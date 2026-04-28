@@ -3,18 +3,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata(): Metadata {
-  return {
-    title:
-      "The Hidden Costs of Homeownership That No One Talks About | Top Finance UK",
-    description:
-      "Discover the unexpected expenses that catch UK homeowners off guard. From maintenance to insurance, learn how to budget for the hidden costs of owning a home in the United Kingdom.",
-    keywords:
-      "hidden costs of homeownership, homeownership expenses UK, property maintenance costs, home insurance UK, unexpected homeowner expenses, first-time buyer costs, personal finance UK, money management",
-  };
-}
+export const metadata = createRouteMetadata("/personal-finance/hidden-costs-of-homeownership");
 
 export default function HiddenCostsHomeownershipPage() {
   return (

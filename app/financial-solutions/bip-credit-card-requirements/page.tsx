@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Bip Credit Card Requirements: Eligibility and Application Guide - Top Finance UK",
-    description:
-      "Discover the eligibility criteria, application process, and requirements for the Bip Credit Card. Check your eligibility with no impact on your credit score. Representative APR 34.9% (variable).",
-    keywords:
-      "Bip Credit Card requirements, cardless credit eligibility, digital credit card application, Bip credit criteria, NewDay credit, UK credit card application",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/bip-credit-card-requirements");
 
 export default function BipCreditCardRequirementsPage() {
   return (

@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Monzo Personal Loan: Simple, Transparent Neobank Lending - Top Finance UK",
-    description:
-      "Explore Monzo Personal Loans offering quick decisions, clear terms, and seamless management through the Monzo app.",
-    keywords:
-      "Monzo Personal Loan, UK loans, neobank loan, personal finance, debt consolidation, flexible repayment, Monzo app, loan application",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/monzo-personal-loan");
 
 export default function MonzoPersonalLoanPage() {
   return (

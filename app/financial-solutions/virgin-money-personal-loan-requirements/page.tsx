@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Virgin Money Personal Loan Requirements: Application Guide - Top Finance UK",
-    description:
-      "Learn about Virgin Money Personal Loan eligibility criteria, application process, and required documentation to maximize your chances of approval.",
-    keywords:
-      "Virgin Money Personal Loan requirements, UK loan application, loan eligibility, Virgin Money loan criteria, personal loan documentation, loan application process, Virgin Red",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/virgin-money-personal-loan-requirements");
 
 export default function VirginMoneyPersonalLoanRequirementsPage() {
   return (

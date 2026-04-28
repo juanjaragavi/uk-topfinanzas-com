@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Capify Finance Requirements: MCA & Business Loan Guide - Top Finance UK",
-    description:
-      "Learn about Capify's eligibility criteria for UK SMEs seeking Merchant Cash Advances or Business Loans, the application process, and required information.",
-    keywords:
-      "Capify requirements, SME finance eligibility, MCA criteria, business loan application UK, fintech lending requirements, Capify documentation",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/capify-personal-loan-requirements");
 
 export default function CapifyPersonalLoanRequirementsPage() {
   // Note: Adjusting component name and content for Capify's Business Finance focus (MCA & Loans)

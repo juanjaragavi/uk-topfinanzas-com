@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Lloyds Bank Credit Card: Flexible Everyday Rewards - Top Finance UK",
-    description:
-      "The Lloyds Bank Credit Card offers flexible rewards, competitive rates, and convenient features for everyday spending and financial management.",
-    keywords:
-      "Lloyds Bank Credit Card, UK credit cards, everyday spending, cashback rewards, Lloyds Bank, balance transfer, purchase card",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/lloyds-bank-credit-card");
 
 export default function LloydsBankCreditCardPage() {
   return (

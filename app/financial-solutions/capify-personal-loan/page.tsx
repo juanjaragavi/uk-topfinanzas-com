@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Capify: Fast Business Loans & Merchant Cash Advance for SMEs - Top Finance UK",
-    description:
-      "Explore Capify's financing solutions for UK SMEs, including flexible Business Loans and Merchant Cash Advances based on card sales.",
-    keywords:
-      "Capify, SME finance, business loan UK, merchant cash advance, MCA, fintech lending, small business funding, working capital",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/capify-personal-loan");
 
 export default function CapifyPersonalLoanPage() {
   // Note: Capify provides business finance (MCA, Loans), not personal loans.

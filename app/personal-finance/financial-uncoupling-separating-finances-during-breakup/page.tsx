@@ -3,18 +3,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata(): Metadata {
-  return {
-    title:
-      "Financial Uncoupling: A Compassionate Guide to Separating Finances During a Breakup - Top Finance UK",
-    description:
-      "Practical UK guidance on separating finances during a breakup. Learn how to untangle joint accounts, manage shared debts, protect your credit, and rebuild financial independence with clarity and confidence.",
-    keywords:
-      "personal finance, financial uncoupling, separating finances, breakup finances UK, joint account separation, shared debt breakup, divorce finances, financial independence after breakup",
-  };
-}
+export const metadata = createRouteMetadata("/personal-finance/financial-uncoupling-separating-finances-during-breakup");
 
 export default function FinancialUncouplingPage() {
   return (

@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Santander UK Credit Card: Flexible Rewards and Benefits - Top Finance UK",
-    description:
-      "The Santander UK Credit Card offers competitive cashback, flexible features, and robust digital banking tools for your everyday spending and financial management.",
-    keywords:
-      "Santander UK Credit Card, cashback rewards, UK credit cards, everyday spending, Santander Bank, contactless payments, mobile banking",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/santander-uk-credit-card");
 
 export default function SantanderUKCreditCardPage() {
   return (

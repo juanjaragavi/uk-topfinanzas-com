@@ -5,17 +5,9 @@ import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { Check } from "lucide-react";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "American Express Preferred Rewards Gold Credit Card Requirements: Everything You Need to Know - Top Finance UK",
-    description:
-      "Discover the eligibility requirements, application process, and documentation needed for the American Express Gold Card. Learn about income requirements, credit checks, and approval criteria.",
-    keywords:
-      "Amex Gold requirements, American Express eligibility, credit card application UK, Amex approval criteria, Gold Card qualifications, credit check, income requirements",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/american-express-preferred-rewards-gold-credit-card-requirements");
 
 export default function AmexGoldRequirementsPage() {
   return (

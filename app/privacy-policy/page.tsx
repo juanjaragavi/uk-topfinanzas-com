@@ -5,12 +5,9 @@ import { Footer } from "@/components/layout/footer";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { useMDXComponents } from "@/mdx-components";
 import { logger } from "@/lib/logger";
+import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Privacy Policy - TopFinance UK",
-  description:
-    "Learn how TopFinance UK protects your personal information and what rights you have over your data.",
-};
+export const metadata = createRouteMetadata("/privacy-policy");
 
 export default async function PrivacyPolicyPage() {
   // Read the MDX file

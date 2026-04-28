@@ -2,16 +2,9 @@ import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title: "Best Travel Credit Cards UK: Top Options for 2025 - Top Finance UK",
-    description:
-      "Compare the best travel credit cards in the UK with no foreign transaction fees, travel insurance, and rewards for international spending. Find the perfect travel companion card.",
-    keywords:
-      "travel credit cards UK, no foreign transaction fees, travel rewards, airline miles, hotel points, travel insurance, best travel cards",
-  };
-}
+export const metadata = createRouteMetadata("/personal-finance/travel-credit-cards");
 
 export default function TravelCreditCardsPage() {
   return (

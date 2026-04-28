@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Funding Circle Business Loan Requirements: SME Application Guide - Top Finance UK",
-    description:
-      "Learn about Funding Circle business loan eligibility criteria, the online application process, and required documentation for UK SMEs.",
-    keywords:
-      "Funding Circle requirements, SME loan application, business loan eligibility, UK business finance, fintech lending criteria, Funding Circle documentation",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/funding-circle-personal-loan-requirements");
 
 export default function FundingCirclePersonalLoanRequirementsPage() {
   // Note: Renaming component to reflect Business Loan focus
