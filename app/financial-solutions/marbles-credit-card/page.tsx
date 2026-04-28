@@ -6,7 +6,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/financial-solutions/marbles-credit-card");
+export const metadata = createRouteMetadata(
+  "/financial-solutions/marbles-credit-card",
+);
 
 export default function MarblesCreditCardPage() {
   return (
@@ -206,7 +208,7 @@ export default function MarblesCreditCardPage() {
                   <ul className="space-y-2 list-disc list-inside text-blue-700">
                     <li>
                       <Link
-                        href="/personal-finance/understanding-credit-scores/"
+                        href="/personal-finance/credit-card-types-benefits/"
                         className="hover:underline hover:text-blue-900 transition-colors"
                       >
                         Understanding Credit Scores and How to Improve Them
@@ -230,7 +232,7 @@ export default function MarblesCreditCardPage() {
                     </li>
                     <li>
                       <Link
-                        href="/personal-finance/avoiding-credit-card-fees/"
+                        href="/personal-finance/no-annual-fee-credit-cards/"
                         className="hover:underline hover:text-blue-900 transition-colors"
                       >
                         How to Avoid Common Credit Card Fees

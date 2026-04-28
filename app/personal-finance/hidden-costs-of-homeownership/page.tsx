@@ -5,7 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/personal-finance/hidden-costs-of-homeownership");
+export const metadata = createRouteMetadata(
+  "/personal-finance/hidden-costs-of-homeownership",
+);
 
 export default function HiddenCostsHomeownershipPage() {
   return (
@@ -326,7 +328,7 @@ export default function HiddenCostsHomeownershipPage() {
                     identify patterns and plan for future expenses. For
                     step-by-step guidance, see our article on{" "}
                     <Link
-                      href="/personal-finance/how-to-create-a-budget"
+                      href="/personal-finance/creating-a-budget-youll-actually-stick-to"
                       className="text-blue-600 hover:underline"
                     >
                       how to create a budget that actually works
