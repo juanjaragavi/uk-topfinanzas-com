@@ -14,7 +14,6 @@ interface PostItem {
 }
 
 export default function CreditCardsArchivePage() {
-
   // Complete list of credit card content (synchronized with financial-solutions/page.tsx)
   const creditCardsContent: PostItem[] = [
     // Latest Products (October 2025)
@@ -366,7 +365,6 @@ export default function CreditCardsArchivePage() {
 
   // No filtering needed, just display the sorted credit card content
   const filteredPosts = sortedCreditCards;
-
 
   const pageContent = (
     <article>

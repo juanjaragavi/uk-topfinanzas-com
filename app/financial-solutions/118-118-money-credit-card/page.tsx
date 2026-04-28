@@ -6,7 +6,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/financial-solutions/118-118-money-credit-card");
+export const metadata = createRouteMetadata(
+  "/financial-solutions/118-118-money-credit-card",
+);
 
 export default function Money118118CreditCardPage() {
   return (

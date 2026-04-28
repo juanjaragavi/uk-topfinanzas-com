@@ -2,7 +2,8 @@ import type { ReactNode } from "react";
 import { JsonLd } from "@/components/seo/json-ld";
 import { createRouteStructuredData } from "@/lib/seo";
 
-const routePath = "/financial-solutions/john-lewis-partnership-card-requirements";
+const routePath =
+  "/financial-solutions/john-lewis-partnership-card-requirements";
 
 export default function RouteLayout({ children }: { children: ReactNode }) {
   return (

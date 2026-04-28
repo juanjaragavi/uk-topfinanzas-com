@@ -14,7 +14,6 @@ interface PostItem {
 }
 
 export default function PersonalLoansArchivePage() {
-
   // Hardcoded list of loan content (copied from financial-solutions/page.tsx)
   const allLoansContent: PostItem[] = [
     // Personal Loans (Traditional Banks)
@@ -272,7 +271,6 @@ export default function PersonalLoansArchivePage() {
 
   // No filtering needed, just display the sorted loan content
   const filteredPosts = sortedLoans;
-
 
   const pageContent = (
     <article>

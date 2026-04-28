@@ -6,7 +6,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/financial-solutions/marketfinance-personal-loan");
+export const metadata = createRouteMetadata(
+  "/financial-solutions/marketfinance-personal-loan",
+);
 
 export default function MarketFinancePersonalLoanPage() {
   // Note: MarketFinance provides business finance (loans, invoice finance), not personal loans.

@@ -6,7 +6,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/financial-solutions/funding-options-personal-loan");
+export const metadata = createRouteMetadata(
+  "/financial-solutions/funding-options-personal-loan",
+);
 
 export default function FundingOptionsPersonalLoanPage() {
   // Note: Funding Options is a business finance marketplace, not a direct personal loan provider.

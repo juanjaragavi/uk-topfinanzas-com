@@ -400,9 +400,9 @@ export default function ContactUs() {
               </h2>
 
               <p className="text-gray-700">
-                If you&apos;re ready to embark on a transformative journey toward
-                financial stability and prosperity, we&apos;re here to accompany you.
-                Contact us through our email at{" "}
+                If you&apos;re ready to embark on a transformative journey
+                toward financial stability and prosperity, we&apos;re here to
+                accompany you. Contact us through our email at{" "}
                 <span className="font-semibold text-[#2E74B5]">
                   <a
                     href="mailto:info@topfinanzas.com"
@@ -439,8 +439,8 @@ export default function ContactUs() {
                   Thank You!
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Your message has been sent successfully. We&apos;ll get back to you
-                  shortly.
+                  Your message has been sent successfully. We&apos;ll get back
+                  to you shortly.
                 </p>
                 <button
                   onClick={() => setSubmitSuccess(false)}

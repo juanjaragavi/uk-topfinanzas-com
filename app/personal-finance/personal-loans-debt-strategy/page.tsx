@@ -5,7 +5,9 @@ import Image from "next/image"; // Keep Image import in case it's needed later, 
 import Link from "next/link";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/personal-finance/personal-loans-debt-strategy");
+export const metadata = createRouteMetadata(
+  "/personal-finance/personal-loans-debt-strategy",
+);
 
 export default function PersonalLoansDebtStrategyPage() {
   return (

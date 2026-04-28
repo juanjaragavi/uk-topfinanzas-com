@@ -7,7 +7,9 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { Check } from "lucide-react";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/financial-solutions/american-express-preferred-rewards-gold-credit-card-requirements");
+export const metadata = createRouteMetadata(
+  "/financial-solutions/american-express-preferred-rewards-gold-credit-card-requirements",
+);
 
 export default function AmexGoldRequirementsPage() {
   return (

@@ -5,7 +5,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/personal-finance/the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving");
+export const metadata = createRouteMetadata(
+  "/personal-finance/the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving",
+);
 
 export default function PsychologyOfSpendingPage() {
   return (

@@ -6,7 +6,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/financial-solutions/virgin-money-personal-loan");
+export const metadata = createRouteMetadata(
+  "/financial-solutions/virgin-money-personal-loan",
+);
 
 export default function VirginMoneyPersonalLoanPage() {
   return (

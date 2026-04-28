@@ -3,7 +3,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/personal-finance/top-credit-cards-0-intro-apr");
+export const metadata = createRouteMetadata(
+  "/personal-finance/top-credit-cards-0-intro-apr",
+);
 import Image from "next/image"; // Keep Image import
 import Link from "next/link"; // Keep Link import
 
