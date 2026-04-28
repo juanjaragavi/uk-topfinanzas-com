@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Tesco Bank Clubcard Credit Cards: Earn Points on Every Purchase - Top Finance UK",
-    description:
-      "Discover Tesco Bank Clubcard Credit Cards offering 0% introductory rates, low APR options, and Clubcard points on everyday spending. Representative 24.9% APR (variable). Build credit whilst earning rewards.",
-    keywords:
-      "Tesco Bank Clubcard credit cards, Tesco credit card, Clubcard points, balance transfer credit card, 0% purchases, UK credit cards, low APR credit card, Foundation credit card",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/tesco-bank-clubcard-credit-cards");
 
 export default function TescoBankClubcardCreditCardsPage() {
   return (

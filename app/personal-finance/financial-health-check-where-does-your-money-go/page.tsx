@@ -3,18 +3,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata(): Metadata {
-  return {
-    title:
-      "The 5-Minute Financial Health Check: Where Does Your Money Go? - Top Finance UK",
-    description:
-      "Discover where your money really goes with our quick UK financial health check. Learn simple expense tracking methods that reveal spending patterns and help you take control in just minutes a day.",
-    keywords:
-      "personal finance, money management, expense tracking, financial health check, budgeting UK, track spending, money habits",
-  };
-}
+export const metadata = createRouteMetadata("/personal-finance/financial-health-check-where-does-your-money-go");
 
 export default function FinancialHealthCheckPage() {
   return (

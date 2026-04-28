@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Tesco Bank Clubcard Credit Cards Requirements: Everything You Need to Know - Top Finance UK",
-    description:
-      "Understand the eligibility criteria, documentation requirements, and application process for Tesco Bank Clubcard Credit Cards. Check your eligibility in minutes without affecting your credit score.",
-    keywords:
-      "Tesco Bank credit card requirements, Clubcard credit card eligibility, Tesco Bank application, UK credit card requirements, credit score, balance transfer eligibility, Foundation credit card",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/tesco-bank-clubcard-credit-cards-requirements");
 
 export default function TescoBankClubcardCreditCardsRequirementsPage() {
   return (

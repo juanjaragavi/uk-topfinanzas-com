@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "RBS Purchase & Balance Transfer Card: Save on Interest with 0% Offers - Top Finance UK",
-    description:
-      "The RBS Purchase & Balance Transfer Card offers 0% interest on purchases for up to 20 months and 0% on balance transfers for up to 18 months. No annual fee. Representative 24.9% APR (variable).",
-    keywords:
-      "RBS credit card, purchase and balance transfer card, 0% interest, Royal Bank of Scotland, balance transfer, purchase offer, credit card UK, no annual fee, debt consolidation",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/rbs-purchase-balance-transfer-card");
 
 export default function RBSPurchaseBalanceTransferCardPage() {
   return (

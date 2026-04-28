@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Santander UK Credit Card Requirements: Application Guide - Top Finance UK",
-    description:
-      "Learn about the eligibility criteria, documentation, and application process for the Santander UK Credit Card to improve your chances of approval.",
-    keywords:
-      "Santander UK Credit Card requirements, UK credit card application, Santander eligibility, credit score requirements, UK banking applications",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/santander-uk-credit-card-requirements");
 
 export default function SantanderUKCreditCardRequirementsPage() {
   return (

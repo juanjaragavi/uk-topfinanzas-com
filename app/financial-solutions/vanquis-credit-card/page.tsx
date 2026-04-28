@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Vanquis Credit Card: Build Your Credit Score with Award-Winning Support - Top Finance UK",
-    description:
-      "The Vanquis Credit Card offers personalised credit limits from £250-£7,000, award-winning credit building features, and 24/7 account management. Representative 37.9% APR (variable).",
-    keywords:
-      "Vanquis Credit Card, credit builder card, balance transfer card, UK credit card, build credit score, Vanquis Bank, credit limit increase, bad credit card, 0% balance transfer",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/vanquis-credit-card");
 
 export default function VanquisCreditCardPage() {
   return (

@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "118 118 Money Credit Card Requirements: Everything You Need to Know - Top Finance UK",
-    description:
-      "Understand the eligibility criteria, documentation, and application process for the 118 118 Money Credit Card to start building your credit score today.",
-    keywords:
-      "118 118 Money requirements, credit card application, credit builder eligibility, UK credit card, bad credit card requirements, 118 118 Money apply",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/118-118-money-credit-card-requirements");
 
 export default function Money118118CreditCardRequirementsPage() {
   return (

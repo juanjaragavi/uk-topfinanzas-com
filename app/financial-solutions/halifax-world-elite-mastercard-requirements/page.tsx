@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Halifax World Elite Mastercard Requirements: Application Guide - Top Finance UK",
-    description:
-      "Learn about the eligibility criteria, documentation, and application process for the Halifax World Elite Mastercard to successfully obtain this premium banking product.",
-    keywords:
-      "Halifax World Elite Mastercard requirements, UK credit card application, Halifax premium card, credit score requirements, UK banking, premium card eligibility",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/halifax-world-elite-mastercard-requirements");
 
 export default function HalifaxWorldEliteMastercardRequirementsPage() {
   return (

@@ -4,16 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title: "Funding Circle Business Loan: Fast SME Financing - Top Finance UK",
-    description:
-      "Explore Funding Circle's business loans offering fast, flexible financing solutions designed specifically for UK Small and Medium-sized Enterprises (SMEs).",
-    keywords:
-      "Funding Circle, SME loan, business loan UK, fintech lending, small business finance, working capital loan, business expansion loan",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/funding-circle-personal-loan");
 
 export default function FundingCirclePersonalLoanPage() {
   // Note: While the CSV listed this under 'Personal Loan', Funding Circle primarily offers Business Loans.

@@ -5,12 +5,9 @@ import { Footer } from "@/components/layout/footer";
 import { compileMDX } from "next-mdx-remote/rsc";
 import { useMDXComponents } from "@/mdx-components";
 import { logger } from "@/lib/logger";
+import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Cookie Policy - TopFinance UK",
-  description:
-    "Learn about how TopFinance UK uses cookies and similar technologies on our website.",
-};
+export const metadata = createRouteMetadata("/cookie-policy");
 
 export default async function CookiePolicyPage() {
   // Read the MDX file

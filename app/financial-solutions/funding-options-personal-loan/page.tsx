@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Funding Options: Business Finance Marketplace for SMEs - Top Finance UK",
-    description:
-      "Explore Funding Options, a leading UK platform connecting SMEs with a wide range of business finance solutions from various lenders.",
-    keywords:
-      "Funding Options, SME finance, business loan marketplace, UK business funding, alternative finance, invoice finance, asset finance, commercial mortgage",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/funding-options-personal-loan");
 
 export default function FundingOptionsPersonalLoanPage() {
   // Note: Funding Options is a business finance marketplace, not a direct personal loan provider.

@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Bank of Scotland Credit Cards Requirements: Everything You Need to Know - Top Finance UK",
-    description:
-      "Understand the eligibility criteria, documentation, and application process for Bank of Scotland credit cards. Check eligibility online without affecting your credit score.",
-    keywords:
-      "Bank of Scotland credit card requirements, UK credit card application, eligibility checker, credit score requirements, One Check, balance transfer eligibility",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/bank-of-scotland-credit-cards-requirements");
 
 export default function BankOfScotlandCreditCardsRequirementsPage() {
   return (

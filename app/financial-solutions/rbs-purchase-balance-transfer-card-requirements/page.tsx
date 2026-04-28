@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "RBS Purchase & Balance Transfer Card Requirements: Complete Eligibility Guide - Top Finance UK",
-    description:
-      "Learn about eligibility criteria, required documents, and the application process for the RBS Purchase & Balance Transfer Card. UK residents aged 18+ with £10k+ annual income.",
-    keywords:
-      "RBS card requirements, eligibility criteria, credit card application, Royal Bank of Scotland, purchase balance transfer, how to apply, credit check, UK credit card",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/rbs-purchase-balance-transfer-card-requirements");
 
 export default function RBSPurchaseBalanceTransferCardRequirementsPage() {
   return (

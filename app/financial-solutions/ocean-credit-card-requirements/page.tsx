@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Ocean Credit Card Requirements: Everything You Need to Know - Top Finance UK",
-    description:
-      "Learn about Ocean Credit Card eligibility criteria, required documentation, and the application process. Check if you qualify with QuickCheck in 60 seconds without affecting your credit score.",
-    keywords:
-      "Ocean credit card requirements, credit card eligibility, QuickCheck, credit card application UK, Ocean Finance requirements, credit builder eligibility, bad credit card requirements",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/ocean-credit-card-requirements");
 
 export default function OceanCreditCardRequirementsPage() {
   return (

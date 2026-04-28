@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Marbles Credit Card Requirements: Everything You Need to Know - Top Finance UK",
-    description:
-      "Discover the eligibility criteria, application process, and requirements for the Marbles Credit Card. Learn how to maximise your chances of approval with FastCheck and responsible credit management.",
-    keywords:
-      "Marbles Card requirements, credit card eligibility, FastCheck, UK credit card application, credit building, manageable credit limit, NewDay Ltd",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/marbles-credit-card-requirements");
 
 export default function MarblesCreditCardRequirementsPage() {
   return (

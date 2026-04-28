@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Yonder Credit Card: Epic Rewards with No Foreign Transaction Fees - Top Finance UK",
-    description:
-      "The Yonder Free Credit Card earns 1 point per £1 spent with no fees abroad, plus a £10 welcome offer and 1,000 bonus points when you spend £1,000 in 30 days.",
-    keywords:
-      "Yonder Credit Card, free credit card, rewards credit card, no foreign fees, Avios alternative, UK credit cards, travel rewards, points credit card",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/yonder-credit-card");
 
 export default function YonderCreditCardPage() {
   return (

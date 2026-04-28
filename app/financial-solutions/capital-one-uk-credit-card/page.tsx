@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Capital One UK Classic Card: Build Your Credit Score - Top Finance UK",
-    description:
-      "The Capital One UK Classic Card helps you build your credit score with a starting credit limit of £200-£1,500, flexible payments, and no annual fee. Get a decision in 60 seconds.",
-    keywords:
-      "Capital One UK, Classic Card, credit builder card, UK credit cards, build credit score, no annual fee, QuickCheck eligibility",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/capital-one-uk-credit-card");
 
 export default function CapitalOneUKCreditCardPage() {
   return (

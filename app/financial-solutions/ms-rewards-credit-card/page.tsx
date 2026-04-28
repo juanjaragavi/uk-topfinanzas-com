@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "M&S Rewards Credit Card: Earn Points on Every Purchase - Top Finance UK",
-    description:
-      "Discover the M&S Rewards Credit Card offering reward points on all spending at M&S and beyond, exclusive member benefits, and competitive rates. Representative 23.9% APR (variable).",
-    keywords:
-      "M&S credit card, Marks and Spencer credit card, M&S Rewards, credit cards UK, rewards credit card, shopping credit card, retail credit card, M&S points",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/ms-rewards-credit-card");
 
 export default function MSRewardsCreditCardPage() {
   return (

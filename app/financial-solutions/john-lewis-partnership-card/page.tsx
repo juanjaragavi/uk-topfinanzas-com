@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "John Lewis Partnership Card: Earn Rewards on Everyday Shopping - Top Finance UK",
-    description:
-      "The John Lewis Partnership Credit Card lets you earn valuable points on everyday purchases at John Lewis, Waitrose, and beyond. Enjoy double points for 60 days and exclusive cardholder offers. Representative 29.9% APR (variable).",
-    keywords:
-      "John Lewis Partnership Card, John Lewis credit card, Waitrose credit card, rewards credit card, UK credit cards, shopping rewards, loyalty points, John Lewis Finance",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/john-lewis-partnership-card");
 
 export default function JohnLewisPartnershipCardPage() {
   return (

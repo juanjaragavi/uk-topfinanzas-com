@@ -3,16 +3,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image";
 import Link from "next/link";
-import { Metadata } from "next";
+import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title:
-    'Automate Your Wealth: Setting Up the "Set It and Forget It" Finance System | Top Finance UK',
-  description:
-    'Learn how to automate your finances in the UK with our "Set It and Forget It" system. Save time, reduce stress, and build wealth effortlessly with practical tips.',
-  keywords:
-    "personal finance, automate finances, money management, savings automation, UK finance tips, wealth building",
-};
+export const metadata = createRouteMetadata("/personal-finance/automate-your-wealth");
 
 export default function AutomateYourWealthPage() {
   return (

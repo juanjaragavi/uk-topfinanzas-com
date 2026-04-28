@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Aqua Credit Card: Build Better Credit with Smart Features - Top Finance UK",
-    description:
-      "The Aqua Credit Card offers personalised credit limits, expert support tools, and 24/7 fraud protection to help you build better credit with confidence and security.",
-    keywords:
-      "Aqua Credit Card, credit building card, UK credit cards, bad credit card, improve credit score, Aqua Classic, credit builder",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/aqua-credit-card");
 
 export default function AquaCreditCardPage() {
   return (

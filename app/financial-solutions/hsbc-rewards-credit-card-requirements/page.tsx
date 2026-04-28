@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "HSBC Rewards Credit Card Requirements: Everything You Need to Know - Top Finance UK",
-    description:
-      "Learn about HSBC Rewards Credit Card eligibility criteria, required documentation, and the application process. Check if you qualify for this rewards credit card with 0% introductory offers.",
-    keywords:
-      "HSBC Rewards Credit Card requirements, credit card eligibility UK, HSBC credit card application, rewards card eligibility, credit card requirements, how to apply for HSBC card",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/hsbc-rewards-credit-card-requirements");
 
 export default function HSBCRewardsCreditCardRequirementsPage() {
   return (

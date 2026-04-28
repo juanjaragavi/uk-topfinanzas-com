@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Funding Options Process & Eligibility: SME Finance Guide - Top Finance UK",
-    description:
-      "Learn how the Funding Options marketplace works, the general eligibility for UK SMEs, and the information needed to find business finance.",
-    keywords:
-      "Funding Options process, SME finance eligibility, business loan marketplace requirements, UK business funding criteria, alternative finance application",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/funding-options-personal-loan-requirements");
 
 export default function FundingOptionsPersonalLoanRequirementsPage() {
   // Note: Adjusting component name and content for Business Finance Marketplace focus

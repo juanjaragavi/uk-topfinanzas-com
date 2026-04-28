@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Barclaycard Avios Plus Credit Card: Premium Travel Rewards - Top Finance UK",
-    description:
-      "The Barclaycard Avios Plus Credit Card offers premium travel perks and generous Avios points to enhance your travel experience and reward your everyday spending.",
-    keywords:
-      "Barclaycard Avios Plus, travel credit card, Avios points, UK credit cards, premium credit card, travel perks, British Airways",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/barclaycard-avios-plus");
 
 export default function BarclayCardAviosPlusPage() {
   return (

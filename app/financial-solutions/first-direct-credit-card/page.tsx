@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "First Direct Credit Card: Straightforward Banking with Competitive Rates - Top Finance UK",
-    description:
-      "Discover the First Direct 1st Credit Card with 0% interest on purchases for the first 12 months, competitive rates, and the award-winning service First Direct is known for. Representative 24.9% APR (variable).",
-    keywords:
-      "First Direct Credit Card, 1st Credit Card, UK credit cards, 0% purchases, competitive APR, digital banking, First Direct",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/first-direct-credit-card");
 
 export default function FirstDirectCreditCardPage() {
   return (

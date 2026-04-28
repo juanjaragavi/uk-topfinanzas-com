@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Nationwide Building Society Credit Card: Member Benefits & 0% Offers - Top Finance UK",
-    description:
-      "Nationwide's Member Credit Card offers two introductory 0% options: up to 24 months on balance transfers or 15 months on purchases. Representative 24.9% APR (variable). Available exclusively to Nationwide members.",
-    keywords:
-      "Nationwide credit card, building society credit card, 0% balance transfer, 0% purchases, member credit card, balance transfer credit card, purchase credit card UK, Nationwide member benefits",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/nationwide-building-society-credit-card");
 
 export default function NationwideBuildingSocietyCreditCardPage() {
   return (

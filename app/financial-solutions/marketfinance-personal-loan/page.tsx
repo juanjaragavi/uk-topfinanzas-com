@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "MarketFinance: Business Loans & Invoice Finance for SMEs - Top Finance UK",
-    description:
-      "Explore MarketFinance's solutions for UK SMEs, including fast business loans and flexible invoice finance to improve cash flow and fund growth.",
-    keywords:
-      "MarketFinance, SME finance, business loan UK, invoice finance, fintech lending, cash flow solutions, working capital, business funding",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/marketfinance-personal-loan");
 
 export default function MarketFinancePersonalLoanPage() {
   // Note: MarketFinance provides business finance (loans, invoice finance), not personal loans.

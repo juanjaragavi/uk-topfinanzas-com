@@ -1,20 +1,11 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata(): Metadata {
-  return {
-    title:
-      "The Psychology of Spending: How to Stop Impulse Buys | Top Finance UK",
-    description:
-      "Discover why we impulse buy and learn practical strategies to master your money mindset. Start mindful saving today with our expert guide.",
-    keywords:
-      "psychology of spending, impulse buying, mindful saving, money mindset, financial well-being, personal finance UK, stop spending money",
-  };
-}
+export const metadata = createRouteMetadata("/personal-finance/the-psychology-of-spending-how-to-stop-impulse-buys-and-start-mindful-saving");
 
 export default function PsychologyOfSpendingPage() {
   return (

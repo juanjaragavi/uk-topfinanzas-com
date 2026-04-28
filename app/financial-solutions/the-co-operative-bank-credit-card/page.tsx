@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "The Co-operative Bank Credit Card: Ethical Banking with Cashback Rewards - Top Finance UK",
-    description:
-      "Discover The Co-operative Members Credit Card offering 0.5% cashback at Co-op stores, 0.3% everywhere else, with no annual fee. Join the UK's original ethical bank today.",
-    keywords:
-      "Co-operative Bank credit card, Co-op Members credit card, cashback credit card, ethical credit card, UK credit cards, no annual fee credit card, Co-op cashback",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/the-co-operative-bank-credit-card");
 
 export default function CooperativeBankCreditCardPage() {
   return (

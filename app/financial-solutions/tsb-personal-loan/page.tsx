@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "TSB Personal Loan: Simple and Straightforward Financing - Top Finance UK",
-    description:
-      "Explore TSB Personal Loans with competitive rates, flexible repayment options, and a focus on clear, simple banking solutions.",
-    keywords:
-      "TSB Personal Loan, UK loans, personal finance, debt consolidation, home improvement loan, flexible repayment, TSB banking, loan application",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/tsb-personal-loan");
 
 export default function TSBPersonalLoanPage() {
   return (

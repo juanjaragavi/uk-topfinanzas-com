@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "MarketFinance Requirements: Business Loan & Invoice Finance Guide - Top Finance UK",
-    description:
-      "Learn about MarketFinance eligibility criteria for UK SMEs seeking business loans or invoice finance, the application process, and required information.",
-    keywords:
-      "MarketFinance requirements, SME finance eligibility, business loan criteria UK, invoice finance requirements, fintech lending application, MarketFinance documentation",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/marketfinance-personal-loan-requirements");
 
 export default function MarketFinancePersonalLoanRequirementsPage() {
   // Note: Adjusting component name and content for MarketFinance's Business Finance focus

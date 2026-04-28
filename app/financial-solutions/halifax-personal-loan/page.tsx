@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Halifax Personal Loan: Flexible Financing Solutions - Top Finance UK",
-    description:
-      "Explore Halifax Personal Loans with competitive rates, flexible repayment options, and the trusted service of a major UK bank.",
-    keywords:
-      "Halifax Personal Loan, UK loans, personal finance, debt consolidation, home improvement loan, flexible repayment, Halifax banking, loan application",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/halifax-personal-loan");
 
 export default function HalifaxPersonalLoanPage() {
   return (

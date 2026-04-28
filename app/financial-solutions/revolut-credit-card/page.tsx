@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Revolut Credit Card: Global-First Fintech Solution - Top Finance UK",
-    description:
-      "The Revolut Credit Card offers multi-currency capabilities, powerful global features, and real-time control designed for international lifestyles and digital-first consumers.",
-    keywords:
-      "Revolut Credit Card, UK fintech, multi-currency card, global banking, Revolut, exchange rates, travel benefits, international spending",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/revolut-credit-card");
 
 export default function RevolutCreditCardPage() {
   return (

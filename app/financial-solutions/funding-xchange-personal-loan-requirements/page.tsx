@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Funding Xchange Process & Eligibility: SME Finance Guide - Top Finance UK",
-    description:
-      "Learn how the Funding Xchange platform works, general eligibility for UK SMEs, and the information needed to compare business finance options.",
-    keywords:
-      "Funding Xchange process, SME finance eligibility, business loan comparison requirements, UK business funding criteria, alternative finance platform application",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/funding-xchange-personal-loan-requirements");
 
 export default function FundingXchangePersonalLoanRequirementsPage() {
   // Note: Adjusting component name and content for Funding Xchange's Business Finance Platform focus

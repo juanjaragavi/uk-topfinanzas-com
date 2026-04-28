@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Revolut Personal Loan: Fast, Flexible Fintech Lending - Top Finance UK",
-    description:
-      "Explore Revolut Personal Loans offering quick decisions, flexible terms, and seamless management through the Revolut app.",
-    keywords:
-      "Revolut Personal Loan, UK loans, fintech loan, personal finance, debt consolidation, flexible repayment, Revolut app, loan application",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/revolut-personal-loan");
 
 export default function RevolutPersonalLoanPage() {
   return (

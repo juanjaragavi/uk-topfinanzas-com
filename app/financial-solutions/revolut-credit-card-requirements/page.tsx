@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Revolut Credit Card Requirements: Global Application Guide - Top Finance UK",
-    description:
-      "Discover the eligibility criteria, digital application process, and requirements for the Revolut Credit Card to maximize your chances of approval.",
-    keywords:
-      "Revolut Credit Card requirements, fintech application, global credit card, Revolut eligibility, credit score requirements, digital banking",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/revolut-credit-card-requirements");
 
 export default function RevolutCreditCardRequirementsPage() {
   return (

@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Santander UK Personal Loan: Flexible Financing Options - Top Finance UK",
-    description:
-      "Explore Santander UK Personal Loans with competitive rates, flexible repayment terms, and potential benefits for 1|2|3 World customers.",
-    keywords:
-      "Santander UK Personal Loan, UK loans, personal finance, debt consolidation, home improvement loan, flexible repayment, Santander banking, loan application",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/santander-uk-personal-loan");
 
 export default function SantanderUKPersonalLoanPage() {
   return (

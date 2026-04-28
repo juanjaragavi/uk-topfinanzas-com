@@ -4,17 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/layout/header";
 import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
+import { createRouteMetadata } from "@/lib/seo";
 
-export function generateMetadata() {
-  return {
-    title:
-      "Lloyds Bank Personal Loan: Reliable Financing Solutions - Top Finance UK",
-    description:
-      "Explore Lloyds Bank Personal Loans with competitive rates, flexible repayment options, and the trusted service of a leading UK bank.",
-    keywords:
-      "Lloyds Bank Personal Loan, UK loans, personal finance, debt consolidation, home improvement loan, flexible repayment, Lloyds banking, loan application",
-  };
-}
+export const metadata = createRouteMetadata("/financial-solutions/lloyds-bank-personal-loan");
 
 export default function LloydsBankPersonalLoanPage() {
   return (

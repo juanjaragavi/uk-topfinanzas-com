@@ -3,22 +3,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "The Emotional Side of Debt: How to Stay Motivated | TopFinanzas UK",
-  description:
-    "Debt isn't just about numbers; it's emotional. Discover practical strategies to overcome debt anxiety, stay motivated, and build a healthier relationship with money.",
-  keywords: [
-    "personal finance",
-    "debt motivation",
-    "debt anxiety",
-    "financial well-being",
-    "money mindset",
-    "getting out of debt uk",
-    "debt stress",
-  ],
-};
+export const metadata = createRouteMetadata("/personal-finance/the-emotional-side-of-debt-how-to-stay-motivated");
 
 export default function EmotionalSideOfDebtPage() {
   return (
