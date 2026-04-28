@@ -6,7 +6,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/financial-solutions/starling-bank-credit-card-requirements");
+export const metadata = createRouteMetadata(
+  "/financial-solutions/starling-bank-credit-card-requirements",
+);
 
 export default function StarlingBankCreditCardRequirementsPage() {
   return (

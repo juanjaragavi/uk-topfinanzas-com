@@ -5,7 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/personal-finance/inflation-proof-your-life");
+export const metadata = createRouteMetadata(
+  "/personal-finance/inflation-proof-your-life",
+);
 
 export default function InflationProofYourLifePage() {
   return (

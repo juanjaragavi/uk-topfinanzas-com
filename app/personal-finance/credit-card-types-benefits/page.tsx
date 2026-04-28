@@ -3,7 +3,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/personal-finance/credit-card-types-benefits");
+export const metadata = createRouteMetadata(
+  "/personal-finance/credit-card-types-benefits",
+);
 import Image from "next/image"; // Assuming you need Image for the future
 import Link from "next/link"; // Assuming you need Link for the future
 // Import Ad

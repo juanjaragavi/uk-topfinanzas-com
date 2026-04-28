@@ -3,7 +3,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/personal-finance/understanding-credit-card-interest-rates");
+export const metadata = createRouteMetadata(
+  "/personal-finance/understanding-credit-card-interest-rates",
+);
 import Image from "next/image"; // Keep Image import
 import Link from "next/link"; // Keep Link import
 

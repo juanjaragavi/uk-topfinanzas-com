@@ -5,7 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/personal-finance/stop-living-paycheck-to-paycheck");
+export const metadata = createRouteMetadata(
+  "/personal-finance/stop-living-paycheck-to-paycheck",
+);
 
 export default function StopLivingPaycheckToPaycheckPage() {
   return (

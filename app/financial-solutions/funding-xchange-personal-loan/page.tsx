@@ -6,7 +6,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/financial-solutions/funding-xchange-personal-loan");
+export const metadata = createRouteMetadata(
+  "/financial-solutions/funding-xchange-personal-loan",
+);
 
 export default function FundingXchangePersonalLoanPage() {
   // Note: Funding Xchange is a business finance comparison platform, not a direct personal loan provider.

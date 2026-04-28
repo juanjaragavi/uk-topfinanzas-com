@@ -68,7 +68,6 @@ const poppins = localFont({
   ],
 });
 
-
 // Temporarily disable AdZep script to isolate TopAds testing
 const ENABLE_ADZEP = false;
 
@@ -178,7 +177,6 @@ export default function RootLayout({
           content="public, max-age=31536000, immutable"
         />
 
-
         {/* Preconnect to media domain to establish early connection */}
         <link
           rel="preconnect"
@@ -220,7 +218,9 @@ export default function RootLayout({
       </head>
       <body className={`${poppins.variable} font-sans text-left sm:text-left`}>
         <GoogleTagManagerNoScript />
-        <JsonLd data={[generateOrganizationSchema(), generateWebSiteSchema()]} />
+        <JsonLd
+          data={[generateOrganizationSchema(), generateWebSiteSchema()]}
+        />
         {/*<PreloaderProvider
           defaultConfig={{
             duration: 4000,

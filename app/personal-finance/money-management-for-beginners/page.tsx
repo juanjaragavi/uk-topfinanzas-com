@@ -5,7 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/personal-finance/money-management-for-beginners");
+export const metadata = createRouteMetadata(
+  "/personal-finance/money-management-for-beginners",
+);
 
 export default function MoneyManagementBeginnersPage() {
   return (

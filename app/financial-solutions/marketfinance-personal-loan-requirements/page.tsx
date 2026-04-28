@@ -6,7 +6,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/financial-solutions/marketfinance-personal-loan-requirements");
+export const metadata = createRouteMetadata(
+  "/financial-solutions/marketfinance-personal-loan-requirements",
+);
 
 export default function MarketFinancePersonalLoanRequirementsPage() {
   // Note: Adjusting component name and content for MarketFinance's Business Finance focus

@@ -5,7 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/personal-finance/creating-a-budget-youll-actually-stick-to");
+export const metadata = createRouteMetadata(
+  "/personal-finance/creating-a-budget-youll-actually-stick-to",
+);
 
 export default function CreatingABudgetYoullActuallyStickToPage() {
   return (

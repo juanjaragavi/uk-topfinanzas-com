@@ -5,7 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/personal-finance/best-rewards-credit-cards");
+export const metadata = createRouteMetadata(
+  "/personal-finance/best-rewards-credit-cards",
+);
 
 export default function BestRewardsCreditCardsPage() {
   return (

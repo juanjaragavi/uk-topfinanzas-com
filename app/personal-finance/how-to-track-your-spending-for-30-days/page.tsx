@@ -5,7 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/personal-finance/how-to-track-your-spending-for-30-days");
+export const metadata = createRouteMetadata(
+  "/personal-finance/how-to-track-your-spending-for-30-days",
+);
 
 export default function TrackSpending30DaysPage() {
   return (

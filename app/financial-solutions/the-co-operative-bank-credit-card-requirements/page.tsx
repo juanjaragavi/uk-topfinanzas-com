@@ -7,7 +7,9 @@ import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import ResponsiveImage from "@/components/ui/responsive-image";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/financial-solutions/the-co-operative-bank-credit-card-requirements");
+export const metadata = createRouteMetadata(
+  "/financial-solutions/the-co-operative-bank-credit-card-requirements",
+);
 
 export default function CooperativeBankCreditCardRequirementsPage() {
   return (

@@ -298,9 +298,10 @@ export default function AboutUs() {
                   </h3>
                   <p>
                     Our focus is on helping you see concrete and practical
-                    improvements in your money management. Whether you&apos;re saving
-                    for a specific goal or improving your credit score, we&apos;re
-                    here to help you achieve tangible and beneficial results.
+                    improvements in your money management. Whether you&apos;re
+                    saving for a specific goal or improving your credit score,
+                    we&apos;re here to help you achieve tangible and beneficial
+                    results.
                   </p>
                 </div>
               </li>
@@ -313,13 +314,13 @@ export default function AboutUs() {
 
             <p className="mb-6">
               At Top Finanzas, we understand that every step in your financial
-              journey is important. Whether you&apos;re beginning to organise your
-              personal finances or exploring advanced investment strategies, our
-              content is meticulously designed to provide you with the
-              confidence and knowledge necessary to make prudent financial
-              decisions. We accompany you at every stage, from choosing the most
-              suitable credit card for your needs to offering strategies for
-              planning your retirement.
+              journey is important. Whether you&apos;re beginning to organise
+              your personal finances or exploring advanced investment
+              strategies, our content is meticulously designed to provide you
+              with the confidence and knowledge necessary to make prudent
+              financial decisions. We accompany you at every stage, from
+              choosing the most suitable credit card for your needs to offering
+              strategies for planning your retirement.
             </p>
           </section>
           <section className="mb-12">

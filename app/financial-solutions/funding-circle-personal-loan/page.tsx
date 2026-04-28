@@ -6,7 +6,9 @@ import { CompactFooter } from "@/components/layout/compact-footer";
 import { AIContentDisclaimer } from "@/components/ui/ai-content-disclaimer";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/financial-solutions/funding-circle-personal-loan");
+export const metadata = createRouteMetadata(
+  "/financial-solutions/funding-circle-personal-loan",
+);
 
 export default function FundingCirclePersonalLoanPage() {
   // Note: While the CSV listed this under 'Personal Loan', Funding Circle primarily offers Business Loans.

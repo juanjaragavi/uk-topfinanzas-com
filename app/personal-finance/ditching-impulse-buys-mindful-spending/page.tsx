@@ -5,7 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/personal-finance/ditching-impulse-buys-mindful-spending");
+export const metadata = createRouteMetadata(
+  "/personal-finance/ditching-impulse-buys-mindful-spending",
+);
 
 export default function DitchingImpulseBuysMindfulSpendingPage() {
   return (

@@ -5,7 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { createRouteMetadata } from "@/lib/seo";
 
-export const metadata = createRouteMetadata("/personal-finance/how-to-ask-for-a-raise");
+export const metadata = createRouteMetadata(
+  "/personal-finance/how-to-ask-for-a-raise",
+);
 
 export default function HowToAskForRaisePage() {
   return (
