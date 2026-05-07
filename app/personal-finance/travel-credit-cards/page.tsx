@@ -24,7 +24,7 @@ export default function TravelCreditCardsPage() {
               Spending
             </h1>
             {/* Placeholder `<div>` for the Ad Unit 'square01' - centered and responsive */}
-            <div id="square01" data-topads data-topads-size="square"></div>
+            <div id="av_top"></div>
 
             <div className="prose max-w-none">
               <p className="text-lg text-gray-700 mb-6">
@@ -450,7 +450,7 @@ export default function TravelCreditCardsPage() {
               </div>
 
               {/* Placeholder `<div>` for the Ad Unit 'square02' - centered and responsive */}
-              <div id="square02" data-topads data-topads-size="square"></div>
+              <div id="av_content_1"></div>
 
               <h2 className="text-2xl font-bold text-gray-800 my-5">
                 Final Thoughts

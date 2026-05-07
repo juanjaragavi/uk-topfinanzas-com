@@ -25,7 +25,7 @@ export default function SettingFinancialGoalsPage() {
               Finance Planning
             </h1>
             {/* Placeholder `<div>` for the Ad Unit 'square01' - centered and responsive */}
-            <div id="square01" data-topads data-topads-size="square"></div>
+            <div id="av_top"></div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-left sm:text-left text-lg text-gray-800 mb-4 leading-6">
@@ -231,7 +231,7 @@ export default function SettingFinancialGoalsPage() {
 
               <section className="my-6">
                 {/* Placeholder `<div>` for the Ad Unit 'square02' - centered and responsive */}
-                <div id="square02" data-topads data-topads-size="square"></div>
+                <div id="av_content_1"></div>
 
                 <h2 className="text-left sm:text-left text-xl font-bold text-gray-800 mb-4">
                   Ready to map your next step?

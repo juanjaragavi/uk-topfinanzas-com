@@ -35,7 +35,7 @@ export default function MSRewardsCreditCardPage() {
                 the M&S family of brands.
               </p>
 
-              <div id="square01" data-topads data-topads-size="square"></div>
+              <div id="av_top"></div>
 
               <hr className="my-8" />
 

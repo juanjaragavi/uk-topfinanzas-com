@@ -31,7 +31,7 @@ export default function MarblesCreditCardPage() {
                 account management tools—all with no annual fee.
               </p>
 
-              <div id="square01" data-topads data-topads-size="square"></div>
+              <div id="av_top"></div>
 
               <hr className="my-8" />
 

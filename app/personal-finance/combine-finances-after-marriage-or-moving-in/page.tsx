@@ -26,7 +26,7 @@ export default function CombineFinancesAfterMarriagePage() {
             </h1>
 
             {/* Ad unit placeholder (centered and responsive) */}
-            <div id="square01" data-topads data-topads-size="square"></div>
+            <div id="av_top"></div>
 
             <p className="text-left text-lg text-gray-800 mb-6 leading-7">
               Thinking about merging money with a partner? Whether you’ve just
@@ -233,7 +233,7 @@ export default function CombineFinancesAfterMarriagePage() {
             </section>
 
             {/* Mid-article ad placeholder */}
-            <div id="square02" data-topads data-topads-size="square"></div>
+            <div id="av_content_1"></div>
 
             <section className="my-6">
               <h2 className="text-xl font-bold text-gray-800 mb-3">

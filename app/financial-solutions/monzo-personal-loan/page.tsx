@@ -133,7 +133,7 @@ export default function MonzoPersonalLoanPage() {
                   Flexible Funding for Your Needs
                 </h2>
 
-                <div id="square01" data-topads data-topads-size="square"></div>
+                <div id="av_top"></div>
 
                 <hr className="my-8" />
 

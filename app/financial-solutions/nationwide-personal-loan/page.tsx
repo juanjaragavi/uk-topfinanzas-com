@@ -30,7 +30,7 @@ export default function NationwidePersonalLoanPage() {
                 value and fair treatment to its members.
               </p>
 
-              <div id="square01" data-topads data-topads-size="square"></div>
+              <div id="av_top"></div>
 
               <hr className="my-8" />
 
