@@ -72,7 +72,7 @@ function CreditCardRecommenderContent() {
               ideal card for you!
             </p>
 
-            <div id="square01" data-topads data-topads-size="square"></div>
+            <div id="av_top"></div>
 
             {/* Empty responsive, centered div */}
             {/* <div

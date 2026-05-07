@@ -23,7 +23,7 @@ export default function PsychologyOfSpendingPage() {
               The Psychology of Spending: How to Stop Impulse Buys and Start
               Mindful Saving
             </h1>
-            <div id="square01" data-topads data-topads-size="square"></div>
+            <div id="av_top"></div>
             <p className="text-lg text-gray-700 mb-6 leading-7">
               Have you ever walked into a shop for a pint of milk and walked out
               with a new kitchen gadget you didn’t know you needed? Or perhaps
@@ -75,7 +75,7 @@ export default function PsychologyOfSpendingPage() {
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                 Strategies to Curb Impulse Spending
               </h2>
-              <div id="square02" data-topads data-topads-size="square"></div>
+              <div id="av_content_1"></div>
               <p className="text-gray-700 mb-4 leading-7">
                 Breaking the cycle of impulse buying requires a mix of practical
                 barriers and mindset shifts. Here are some effective strategies

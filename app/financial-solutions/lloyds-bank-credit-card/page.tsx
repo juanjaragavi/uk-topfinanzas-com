@@ -32,7 +32,7 @@ export default function LloydsBankCreditCardPage() {
                 providing useful rewards and benefits.
               </p>
 
-              <div id="square01" data-topads data-topads-size="square"></div>
+              <div id="av_top"></div>
 
               <hr className="my-8" />
 

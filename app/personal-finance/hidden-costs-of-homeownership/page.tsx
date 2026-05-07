@@ -25,7 +25,7 @@ export default function HiddenCostsHomeownershipPage() {
             </h1>
 
             {/* Placeholder `<div>` for the Ad Unit 'square01' - centered and responsive */}
-            <div id="square01" data-topads data-topads-size="square"></div>
+            <div id="av_top"></div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-left sm:text-left text-lg text-gray-800 mb-4 leading-7">
@@ -212,7 +212,7 @@ export default function HiddenCostsHomeownershipPage() {
               </section>
 
               {/* Placeholder `<div>` for the Ad Unit 'square02' - centered and responsive */}
-              <div id="square02" data-topads data-topads-size="square"></div>
+              <div id="av_content_1"></div>
 
               <section className="my-8">
                 <h2 className="text-left sm:text-left text-2xl font-bold text-gray-800 mb-4">

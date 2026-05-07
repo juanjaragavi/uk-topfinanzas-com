@@ -22,7 +22,7 @@ export default function VirginMoneyCreditCardRequirementsPage() {
               Requirements for the Virgin Money Credit Card
             </h1>
 
-            <div id="square01" data-topads data-topads-size="square"></div>
+            <div id="av_top"></div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -109,7 +109,7 @@ export default function VirginMoneyCreditCardRequirementsPage() {
                   </div>
                 </div>
 
-                <div id="square02" data-topads data-topads-size="square"></div>
+                <div id="av_content_1"></div>
 
                 <h2 className="text-lg font-bold text-gray-800 mb-4 text-left">
                   Required Documentation:

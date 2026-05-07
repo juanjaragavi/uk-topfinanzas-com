@@ -22,7 +22,7 @@ export default function MonzoPersonalLoanRequirementsPage() {
               Requirements for Monzo Personal Loans
             </h1>
 
-            <div id="square01" data-topads data-topads-size="square"></div>
+            <div id="av_top"></div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -117,7 +117,7 @@ export default function MonzoPersonalLoanRequirementsPage() {
                   Required Information (In-App):
                 </h2>
 
-                <div id="square02" data-topads data-topads-size="square"></div>
+                <div id="av_content_1"></div>
 
                 <p className="text-gray-800 mb-4 text-sm leading-5 font-light text-left">
                   The application is fully digital within the Monzo app. You'll

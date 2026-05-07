@@ -30,7 +30,7 @@ export default function CurveCreditCardPage() {
                 financial management.
               </p>
 
-              <div id="square01" data-topads data-topads-size="square"></div>
+              <div id="av_top"></div>
 
               <hr className="my-8" />
 

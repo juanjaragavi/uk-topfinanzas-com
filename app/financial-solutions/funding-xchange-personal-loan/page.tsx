@@ -31,7 +31,7 @@ export default function FundingXchangePersonalLoanPage() {
                 diverse panel of lenders, simplifying the funding search.
               </p>
 
-              <div id="square01" data-topads data-topads-size="square"></div>
+              <div id="av_top"></div>
 
               <hr className="my-8" />
 

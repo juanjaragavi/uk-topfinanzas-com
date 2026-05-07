@@ -27,12 +27,7 @@ export default function AiAndYourWalletPage() {
             </h1>
 
             {/* Ad Unit 'square01' */}
-            <div
-              id="square01"
-              data-topads
-              data-topads-size="square"
-              className="my-6"
-            ></div>
+            <div id="av_top" className="my-6"></div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-left sm:text-left text-lg text-gray-700 mb-6 leading-relaxed">
@@ -223,12 +218,7 @@ export default function AiAndYourWalletPage() {
               </section>
 
               {/* Ad Unit 'square02' */}
-              <div
-                id="square02"
-                data-topads
-                data-topads-size="square"
-                className="my-8"
-              ></div>
+              <div id="av_content_1" className="my-8"></div>
 
               <div className="mt-12 border-t pt-8">
                 <AIContentDisclaimer />

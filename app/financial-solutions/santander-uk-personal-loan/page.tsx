@@ -29,7 +29,7 @@ export default function SantanderUKPersonalLoanPage() {
                 existing Santander customers, helping you fund your plans.
               </p>
 
-              <div id="square01" data-topads data-topads-size="square"></div>
+              <div id="av_top"></div>
 
               <hr className="my-8" />
 

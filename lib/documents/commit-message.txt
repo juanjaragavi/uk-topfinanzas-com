@@ -1,5 +1,1 @@
-refactor(seo): centralize route metadata and structured data
-
-- Move large archive and marketing pages to dedicated client components.
-- Replace per-page metadata declarations with shared SEO helpers across key routes.
-- Add route-level JSON-LD coverage, sitemap generation updates, and noindex headers for quiz-style flows.
+Refactor: Decommission TopAds and implement ActView global scripts

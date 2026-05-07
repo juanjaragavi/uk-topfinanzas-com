@@ -22,7 +22,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
               Requirements for NatWest Personal Loans
             </h1>
 
-            <div id="square02" data-topads data-topads-size="square"></div>
+            <div id="av_content_1"></div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5 text-left">
@@ -208,11 +208,7 @@ export default function NatWestPersonalLoanRequirementsPage() {
                     </div>
                   </div>
 
-                  <div
-                    id="square02"
-                    data-topads
-                    data-topads-size="square"
-                  ></div>
+                  <div id="av_content_1"></div>
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 size-5 rounded-full bg-[#42145F] flex items-center justify-center mr-3 mt-0.5">

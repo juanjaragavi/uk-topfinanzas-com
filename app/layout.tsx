@@ -21,8 +21,6 @@ import AdZepInterstitialBlocker from "@/components/analytics/adzep-interstitial-
 import AdZepAccessibilityFix from "@/components/analytics/adzep-accessibility-fix";
 import AdZepBackdropCleaner from "@/components/analytics/adzep-backdrop-cleaner";
 import AnalyticsValidationPanel from "@/components/analytics/validation-panel";
-import TopAds from "@/components/analytics/topads";
-import TopAdsSPAHandler from "@/components/analytics/topads-spa-handler";
 import ResourceHints from "@/components/resource-hints";
 import NavigationProvider from "@/components/providers/navigation-provider";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -165,6 +163,12 @@ export default function RootLayout({
   return (
     <html lang="en-gb">
       <head>
+        <link
+          rel="preload"
+          as="script"
+          href="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
+        />
+        <script async src="https://scr.actview.net/uktopfinanzas.js"></script>
         {/* Inline critical CSS for faster rendering */}
         <style
           dangerouslySetInnerHTML={{
@@ -189,7 +193,6 @@ export default function RootLayout({
           <GoogleAds />
           <GoogleAdManager />
           {ENABLE_ADZEP && <AdZep />}
-          <TopAds />
         </ClientOnly>
 
         <ResourceHints />
@@ -240,7 +243,7 @@ export default function RootLayout({
             {ENABLE_ADZEP && <AdZepInterstitialBlocker />}
             {ENABLE_ADZEP && <AdZepAccessibilityFix />}
             {ENABLE_ADZEP && <AdZepBackdropCleaner />}
-            <TopAdsSPAHandler />
+
             {process.env.NODE_ENV === "development" && <UtmMonitor />}
             {process.env.NODE_ENV === "development" && ENABLE_ADZEP && (
               <AdZepTest />

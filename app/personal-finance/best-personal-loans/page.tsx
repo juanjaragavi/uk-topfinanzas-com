@@ -25,7 +25,7 @@ export default function BestPersonalLoansPage() {
             </h1>
 
             {/* Placeholder `<div>` for the Ad Unit 'square01' - centered and responsive */}
-            <div id="square01" data-topads data-topads-size="square"></div>
+            <div id="av_top"></div>
 
             <hr className="my-8" />
 
@@ -358,7 +358,7 @@ export default function BestPersonalLoansPage() {
                 </ul>
 
                 {/* Placeholder `<div>` for the Ad Unit 'square02' - centered and responsive */}
-                <div id="square02" data-topads data-topads-size="square"></div>
+                <div id="av_content_1"></div>
 
                 <hr className="my-8" />
 

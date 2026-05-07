@@ -33,7 +33,7 @@ export default function RevolutCreditCardPage() {
                 real-time control.
               </p>
 
-              <div id="square01" data-topads data-topads-size="square"></div>
+              <div id="av_top"></div>
 
               <hr className="my-8" />
 

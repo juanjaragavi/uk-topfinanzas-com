@@ -29,7 +29,7 @@ export default function HalifaxPersonalLoanPage() {
                 recognized banking brands, part of the Lloyds Banking Group.
               </p>
 
-              <div id="square01" data-topads data-topads-size="square"></div>
+              <div id="av_top"></div>
 
               <hr className="my-8" />
 

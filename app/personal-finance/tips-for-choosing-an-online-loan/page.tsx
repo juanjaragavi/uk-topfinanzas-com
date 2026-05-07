@@ -25,7 +25,7 @@ export default function TipsForChoosingAnOnlineLoanPage() {
               5 Essential Tips for Choosing an Online Loan: Your Quick Guide
             </h1>
             {/* Placeholder `<div>` for the Ad Unit 'square01' - centered and responsive */}
-            <div id="square01" data-topads data-topads-size="square"></div>
+            <div id="av_top"></div>
 
             <div className="my-8 text-left sm:text-left">
               <p className="text-lg text-gray-800 mb-8 leading-5">
@@ -407,7 +407,7 @@ export default function TipsForChoosingAnOnlineLoanPage() {
                 </p>
 
                 {/* Placeholder `<div>` for the Ad Unit 'square02' - centered and responsive */}
-                <div id="square02" data-topads data-topads-size="square"></div>
+                <div id="av_content_1"></div>
 
                 <h2 className="text-xl font-bold text-gray-800 mb-4">
                   Navigating Online Loans with Confidence

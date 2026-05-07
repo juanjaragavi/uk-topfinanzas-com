@@ -31,7 +31,7 @@ export default function FundingOptionsPersonalLoanPage() {
                 solutions from a wide panel of lenders.
               </p>
 
-              <div id="square01" data-topads data-topads-size="square"></div>
+              <div id="av_top"></div>
 
               <hr className="my-8" />
 
