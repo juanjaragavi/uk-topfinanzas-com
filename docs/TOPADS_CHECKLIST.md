@@ -146,7 +146,7 @@ window.performance.getEntriesByName("topads-execution");
 
 ```bash
 # Start development server
-npm run dev
+pnpm dev
 
 # Visit test page
 # Open http://localhost:3004/utm-test
@@ -162,7 +162,7 @@ npm run dev
 
 ```bash
 # Build for production
-npm run build
+pnpm build
 
 # Should complete without errors ✅ (Already verified)
 ```

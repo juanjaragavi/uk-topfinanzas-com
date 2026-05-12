@@ -42,7 +42,7 @@ import AdZep, { AdZepNavigationHandler } from "@/components/analytics/adzep";
 
 // In the head section:
 <ClientOnly>
-  <GoogleTagManager />
+  {/* GTM snippet is hardcoded natively in <head> & <body> */}
   <AdZep />
 </ClientOnly>
 

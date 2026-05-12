@@ -21,7 +21,7 @@ echo "[3/6] Removing previous build directory (.next)..."
 sudo rm -rf .next
 
 echo "[4/6] Building the application..."
-sudo npm run build
+sudo env "PATH=$PATH" pnpm build
 
 echo "[5/6] Restarting PM2 process 'uk-topfinanzas-com'..."
 sudo -u juanjaramillo pm2 restart uk-topfinanzas-com

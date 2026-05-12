@@ -11,10 +11,10 @@ UK TopFinanzas is a Next.js 14+ financial services comparison website for the UK
 ### Development & Build
 
 ```bash
-npm run dev      # Start development server on port 3004 with Turbo
-npm run build    # Production build
-npm run start    # Start production server on port 3004
-npm run lint     # Run ESLint
+pnpm dev      # Start development server on port 3004 with Turbo
+pnpm build    # Production build
+pnpm start    # Start production server on port 3004
+pnpm lint     # Run ESLint
 ```
 
 ### Git Workflow (CRITICAL)
