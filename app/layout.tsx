@@ -160,7 +160,6 @@ export default function RootLayout({
   return (
     <html lang="en-gb">
       <head>
-
         <script
           dangerouslySetInnerHTML={{
             __html: `(function (w, d, s, l, i) {
