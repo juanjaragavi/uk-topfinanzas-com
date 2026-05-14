@@ -1,1 +1,5 @@
-chore: end-to-end sync for production deployment
+feat: add TopFinance UK codebase map skill
+
+Create a new repository skill at .github/skills/topfinance-uk-codebase-map/SKILL.md
+with architecture, workflows, guardrails, and explicit coordination contract
+with the TopNetworks sync orchestrator.
